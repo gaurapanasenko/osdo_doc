@@ -1,0 +1,295 @@
+\hypertarget{beziator_8cpp_source}{}\doxysubsection{beziator.\+cpp}
+\label{beziator_8cpp_source}\index{osdo/beziator.cpp@{osdo/beziator.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{beziator_8h}{beziator.h}}"{}}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{conf_8h}{conf.h}}"{}}}
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#include <cstring>}}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{\Hypertarget{beziator_8cpp_source_l00005}\mbox{\hyperlink{beziator_8cpp_a5c48d2df20ec6cfbc7bdcecfff134c7b}{00005}} \textcolor{preprocessor}{\#define BEZIER\_TANGENT\_INIT \{\(\backslash\)}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\{  0,  0,  0,  0\},\(\backslash\)}}
+\DoxyCodeLine{00007 \textcolor{preprocessor}{\{ -\/3,  9, -\/9,  3\},\(\backslash\)}}
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\{  6,-\/12,  6,  0\},\(\backslash\)}}
+\DoxyCodeLine{00009 \textcolor{preprocessor}{\{ -\/3,  3,  0,  0\},\}}}
+\DoxyCodeLine{00010 }
+\DoxyCodeLine{\Hypertarget{beziator_8cpp_source_l00011}\mbox{\hyperlink{beziator_8cpp_aaf0fd126ea86726aa206778ad2315f31}{00011}} \textcolor{preprocessor}{\#define ucast static\_cast<unsigned>}}
+\DoxyCodeLine{00012 }
+\DoxyCodeLine{00013 \textcolor{keyword}{static} mat4 BEZIER = GLM\_BEZIER\_MAT\_INIT;}
+\DoxyCodeLine{00014 \textcolor{keyword}{static} mat4 BEZIER\_TANGENT = \mbox{\hyperlink{beziator_8cpp_a5c48d2df20ec6cfbc7bdcecfff134c7b}{BEZIER\_TANGENT\_INIT}};}
+\DoxyCodeLine{00015 }
+\DoxyCodeLine{\Hypertarget{beziator_8cpp_source_l00016}\mbox{\hyperlink{beziator_8cpp_a1be679a80ddb401e60a4ae4a90a1eddf}{00016}} \textcolor{keyword}{typedef} \mbox{\hyperlink{structVertex}{Vertex}} *\mbox{\hyperlink{beziator_8cpp_a1be679a80ddb401e60a4ae4a90a1eddf}{surface\_t}}[4][4];}
+\DoxyCodeLine{00017 }
+\DoxyCodeLine{\Hypertarget{beziator_8cpp_source_l00018}\mbox{\hyperlink{classBeziator_a2e0cf1c9d9d89ed9772f1b5659845330}{00018}} \mbox{\hyperlink{classBeziator_a2e0cf1c9d9d89ed9772f1b5659845330}{Beziator::Beziator}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& path) : path(path) \{\}}
+\DoxyCodeLine{00019 }
+\DoxyCodeLine{\Hypertarget{beziator_8cpp_source_l00020}\mbox{\hyperlink{classBeziator_aeafb7d3607d064c7dfa7e1c4c6d698cb}{00020}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classBeziator_aeafb7d3607d064c7dfa7e1c4c6d698cb}{Beziator::init}}() \{}
+\DoxyCodeLine{00021     printf(\textcolor{stringliteral}{"{}\%s\(\backslash\)n"{}}, \mbox{\hyperlink{classBeziator_a982834e352be2e112b07d1f60a090a98}{path}}.c\_str());}
+\DoxyCodeLine{00022     FILE *file = fopen(\mbox{\hyperlink{classBeziator_a982834e352be2e112b07d1f60a090a98}{path}}.c\_str(), \textcolor{stringliteral}{"{}r"{}});}
+\DoxyCodeLine{00023     \textcolor{keywordflow}{if} (file == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{00024         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00025     \}}
+\DoxyCodeLine{00026 }
+\DoxyCodeLine{00027     \textcolor{keywordtype}{size\_t} points\_size, surfaces\_size;}
+\DoxyCodeLine{00028     fscanf(file, \textcolor{stringliteral}{"{}\%lu\%lu"{}}, \&points\_size, \&surfaces\_size);}
+\DoxyCodeLine{00029     vector<Vertex> \&points = \mbox{\hyperlink{classBeziator_ade482f00f5cb1ce4d594b4c132903313}{vertices}};}
+\DoxyCodeLine{00030     points.resize(points\_size);}
+\DoxyCodeLine{00031     \mbox{\hyperlink{classBeziator_aa885148677b1b0fd71850f2cd604af5e}{indices}}.resize(surfaces\_size * 16);}
+\DoxyCodeLine{00032     \mbox{\hyperlink{beziator_8h_adc91dd1f882e36615956dace902ac8a2}{surfacei\_t}} *surfaces = \textcolor{keyword}{reinterpret\_cast<}\mbox{\hyperlink{beziator_8h_adc91dd1f882e36615956dace902ac8a2}{surfacei\_t}}*\textcolor{keyword}{>}(\mbox{\hyperlink{classBeziator_aa885148677b1b0fd71850f2cd604af5e}{indices}}.data());}
+\DoxyCodeLine{00033 }
+\DoxyCodeLine{00034     points\_size = points.size();}
+\DoxyCodeLine{00035     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} color[4] = \{0, 255, 0, 255\};}
+\DoxyCodeLine{00036     surfaces\_size = \mbox{\hyperlink{classBeziator_aa885148677b1b0fd71850f2cd604af5e}{indices}}.size() / 16;}
+\DoxyCodeLine{00037     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < points\_size; i++) \{}
+\DoxyCodeLine{00038         vec4 \mbox{\hyperlink{classBeziator_aeafb7d3607d064c7dfa7e1c4c6d698cb}{init}} = GLM\_VEC4\_BLACK\_INIT;}
+\DoxyCodeLine{00039         vec4 \&point = points[i].position;}
+\DoxyCodeLine{00040         glm\_vec4\_copy(\mbox{\hyperlink{classBeziator_aeafb7d3607d064c7dfa7e1c4c6d698cb}{init}}, point);}
+\DoxyCodeLine{00041         fscanf(file, \textcolor{stringliteral}{"{}\%f\%f\%f"{}}, point, point + 1, point + 2);}
+\DoxyCodeLine{00042         memcpy(points[i].color, color, 4);}
+\DoxyCodeLine{00043         memcpy(points[i].normal, point, 3 * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}));}
+\DoxyCodeLine{00044     \}}
+\DoxyCodeLine{00045     \textcolor{keywordtype}{int} j, k;}
+\DoxyCodeLine{00046     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < surfaces\_size; i++) \{}
+\DoxyCodeLine{00047         \textcolor{keywordflow}{for} (j = 0; j < 4; j++)}
+\DoxyCodeLine{00048             \textcolor{keywordflow}{for} (k = 0; k < 4; k++) \{}
+\DoxyCodeLine{00049                 fscanf(file, \textcolor{stringliteral}{"{}\%u"{}}, surfaces[i][j] + k);}
+\DoxyCodeLine{00050             \}}
+\DoxyCodeLine{00051     \}}
+\DoxyCodeLine{00052     fclose(file);}
+\DoxyCodeLine{00053 }
+\DoxyCodeLine{00054     \mbox{\hyperlink{classMesh_aca2f681788fcbf90320d631d8c3428c9}{update}}(points.data(), points.size(), \mbox{\hyperlink{classBeziator_aa885148677b1b0fd71850f2cd604af5e}{indices}}.data(), \mbox{\hyperlink{classBeziator_aa885148677b1b0fd71850f2cd604af5e}{indices}}.size());}
+\DoxyCodeLine{00055     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00056 \}}
+\DoxyCodeLine{00057 }
+\DoxyCodeLine{\Hypertarget{beziator_8cpp_source_l00058}\mbox{\hyperlink{classBeziator_aec6c4b5d0cf86ae184b435432814fb25}{00058}} \mbox{\hyperlink{classBeziator_aec6c4b5d0cf86ae184b435432814fb25}{Beziator::\string~Beziator}}() \{}
+\DoxyCodeLine{00059 \}}
+\DoxyCodeLine{00060 }
+\DoxyCodeLine{\Hypertarget{beziator_8cpp_source_l00061}\mbox{\hyperlink{classBeziator_a9acccb22776bbbc76b9b886e96aa1d92}{00061}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classBeziator_a9acccb22776bbbc76b9b886e96aa1d92}{Beziator::draw}}(\mbox{\hyperlink{classShader}{Shader}} \&shader, \textcolor{keywordtype}{bool} pre\_generated) \{}
+\DoxyCodeLine{00062     \textcolor{keywordflow}{if} (pre\_generated) \{}
+\DoxyCodeLine{00063         this-\/>\mbox{\hyperlink{classBeziator_afc2e274334058f3b4c34f025156693f1}{mesh}}.\mbox{\hyperlink{classMesh_a93447b5a86c72070e7d6ad6118058351}{draw\_mode}}(GL\_TRIANGLES);}
+\DoxyCodeLine{00064     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00065         glPatchParameteri(GL\_PATCH\_VERTICES, 16);}
+\DoxyCodeLine{00066         \mbox{\hyperlink{classMesh_a93447b5a86c72070e7d6ad6118058351}{Mesh::draw\_mode}}(GL\_PATCHES);}
+\DoxyCodeLine{00067     \}}
+\DoxyCodeLine{00068 \}}
+\DoxyCodeLine{00069 }
+\DoxyCodeLine{00070 }
+\DoxyCodeLine{\Hypertarget{beziator_8cpp_source_l00071}\mbox{\hyperlink{beziator_8cpp_abff744cd88c5f344ef77ebcd6f2ec8a1}{00071}} \textcolor{keywordtype}{void} \mbox{\hyperlink{beziator_8cpp_abff744cd88c5f344ef77ebcd6f2ec8a1}{bezier\_curve}}(\textcolor{keywordtype}{float} a, mat4 points, vec4 dest) \{}
+\DoxyCodeLine{00072     mat4 matrix;}
+\DoxyCodeLine{00073     glm\_vec4\_cubic(a, dest);}
+\DoxyCodeLine{00074     glm\_mat4\_mul(points, BEZIER, matrix);}
+\DoxyCodeLine{00075     glm\_mat4\_mulv(matrix, dest, dest);}
+\DoxyCodeLine{00076 \}}
+\DoxyCodeLine{00077 }
+\DoxyCodeLine{\Hypertarget{beziator_8cpp_source_l00078}\mbox{\hyperlink{beziator_8cpp_a9441d014e907f9b43dbe11cebcfaf138}{00078}} \textcolor{keywordtype}{void} \mbox{\hyperlink{beziator_8cpp_a9441d014e907f9b43dbe11cebcfaf138}{bezier\_curve\_tangent}}(\textcolor{keywordtype}{float} a, mat4 points, vec4 dest) \{}
+\DoxyCodeLine{00079     mat4 matrix;}
+\DoxyCodeLine{00080     glm\_vec4\_cubic(a, dest);}
+\DoxyCodeLine{00081     glm\_mat4\_mul(points, BEZIER\_TANGENT, matrix);}
+\DoxyCodeLine{00082     glm\_mat4\_mulv(matrix, dest, dest);}
+\DoxyCodeLine{00083 \}}
+\DoxyCodeLine{00084 }
+\DoxyCodeLine{\Hypertarget{beziator_8cpp_source_l00085}\mbox{\hyperlink{beziator_8cpp_ac99c8d4702aa8184518428b26331873c}{00085}} \textcolor{keywordtype}{void} \mbox{\hyperlink{beziator_8cpp_ac99c8d4702aa8184518428b26331873c}{bezier\_surface}}(}
+\DoxyCodeLine{00086         \textcolor{keywordtype}{float} u, \textcolor{keywordtype}{float} v, \mbox{\hyperlink{beziator_8cpp_a1be679a80ddb401e60a4ae4a90a1eddf}{surface\_t}} points, vec4 dest, vec4 normal) \{}
+\DoxyCodeLine{00087     mat4 m, res1, res2, res3;}
+\DoxyCodeLine{00088 }
+\DoxyCodeLine{00089     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 4; i++) \{}
+\DoxyCodeLine{00090         glm\_vec4\_copy(points[0][i]-\/>position, m[0]);}
+\DoxyCodeLine{00091         glm\_vec4\_copy(points[1][i]-\/>position, m[1]);}
+\DoxyCodeLine{00092         glm\_vec4\_copy(points[2][i]-\/>position, m[2]);}
+\DoxyCodeLine{00093         glm\_vec4\_copy(points[3][i]-\/>position, m[3]);}
+\DoxyCodeLine{00094         \mbox{\hyperlink{beziator_8cpp_abff744cd88c5f344ef77ebcd6f2ec8a1}{bezier\_curve}}(u, m, res1[i]);}
+\DoxyCodeLine{00095 }
+\DoxyCodeLine{00096         glm\_vec4\_copy(points[i][0]-\/>position, m[0]);}
+\DoxyCodeLine{00097         glm\_vec4\_copy(points[i][1]-\/>position, m[1]);}
+\DoxyCodeLine{00098         glm\_vec4\_copy(points[i][2]-\/>position, m[2]);}
+\DoxyCodeLine{00099         glm\_vec4\_copy(points[i][3]-\/>position, m[3]);}
+\DoxyCodeLine{00100         \mbox{\hyperlink{beziator_8cpp_abff744cd88c5f344ef77ebcd6f2ec8a1}{bezier\_curve}}(v, m, res2[i]);}
+\DoxyCodeLine{00101     \}}
+\DoxyCodeLine{00102 }
+\DoxyCodeLine{00103     \mbox{\hyperlink{beziator_8cpp_abff744cd88c5f344ef77ebcd6f2ec8a1}{bezier\_curve}}(v, res1, dest);}
+\DoxyCodeLine{00104     \mbox{\hyperlink{beziator_8cpp_a9441d014e907f9b43dbe11cebcfaf138}{bezier\_curve\_tangent}}(v, res1, res3[1]);}
+\DoxyCodeLine{00105     \mbox{\hyperlink{beziator_8cpp_a9441d014e907f9b43dbe11cebcfaf138}{bezier\_curve\_tangent}}(u, res2, res3[3]);}
+\DoxyCodeLine{00106 }
+\DoxyCodeLine{00107     glm\_cross(res3[1], res3[3], normal);}
+\DoxyCodeLine{00108 \}}
+\DoxyCodeLine{00109 }
+\DoxyCodeLine{\Hypertarget{beziator_8cpp_source_l00110}\mbox{\hyperlink{classBeziator_af67a38badc29b8747f242bbde8a2ccdf}{00110}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classBeziator_af67a38badc29b8747f242bbde8a2ccdf}{Beziator::save}}() \{}
+\DoxyCodeLine{00111     FILE *file = fopen(this-\/>\mbox{\hyperlink{classBeziator_a982834e352be2e112b07d1f60a090a98}{path}}.c\_str(), \textcolor{stringliteral}{"{}w"{}});}
+\DoxyCodeLine{00112     \textcolor{keywordflow}{if} (file == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{00113         printf(\textcolor{stringliteral}{"{}ERROR: failed to open file \%s\(\backslash\)n"{}}, this-\/>\mbox{\hyperlink{classBeziator_a982834e352be2e112b07d1f60a090a98}{path}}.c\_str());}
+\DoxyCodeLine{00114         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00115     \}}
+\DoxyCodeLine{00116     \textcolor{keywordtype}{size\_t} surfaces\_size = this-\/>\mbox{\hyperlink{classBeziator_aa885148677b1b0fd71850f2cd604af5e}{indices}}.size() / 16;}
+\DoxyCodeLine{00117     \mbox{\hyperlink{beziator_8h_adc91dd1f882e36615956dace902ac8a2}{surfacei\_t}} *surfaces = \textcolor{keyword}{reinterpret\_cast<}\mbox{\hyperlink{beziator_8h_adc91dd1f882e36615956dace902ac8a2}{surfacei\_t}}*\textcolor{keyword}{>}(\mbox{\hyperlink{classBeziator_aa885148677b1b0fd71850f2cd604af5e}{indices}}.data());}
+\DoxyCodeLine{00118     fprintf(file, \textcolor{stringliteral}{"{}\%lu \%lu\(\backslash\)n"{}}, this-\/>\mbox{\hyperlink{classBeziator_ade482f00f5cb1ce4d594b4c132903313}{vertices}}.size(), this-\/>indices.size() / 16);}
+\DoxyCodeLine{00119     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < this-\/>\mbox{\hyperlink{classBeziator_ade482f00f5cb1ce4d594b4c132903313}{vertices}}.size(); i++) \{}
+\DoxyCodeLine{00120         vec4 \&point = this-\/>\mbox{\hyperlink{classBeziator_ade482f00f5cb1ce4d594b4c132903313}{vertices}}[i].position;}
+\DoxyCodeLine{00121         fprintf(file, \textcolor{stringliteral}{"{}\%f \%f \%f\(\backslash\)n"{}}, \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(point[0]),}
+\DoxyCodeLine{00122                 \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(point[1]), \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(point[2]));}
+\DoxyCodeLine{00123     \}}
+\DoxyCodeLine{00124     \textcolor{keywordtype}{int} j, k;}
+\DoxyCodeLine{00125     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < surfaces\_size; i++) \{}
+\DoxyCodeLine{00126         \textcolor{keywordflow}{for} (j = 0; j < 4; j++)}
+\DoxyCodeLine{00127             \textcolor{keywordflow}{for} (k = 0; k < 4; k++) \{}
+\DoxyCodeLine{00128                 fprintf(file, \textcolor{stringliteral}{"{}\%u "{}}, surfaces[i][j][k]);}
+\DoxyCodeLine{00129             \}}
+\DoxyCodeLine{00130         fprintf(file, \textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00131     \}}
+\DoxyCodeLine{00132     fclose(file);}
+\DoxyCodeLine{00133     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00134 \}}
+\DoxyCodeLine{00135 }
+\DoxyCodeLine{\Hypertarget{beziator_8cpp_source_l00136}\mbox{\hyperlink{classBeziator_a850797d7a346cd6f30405e21b0224a3e}{00136}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classBeziator_a850797d7a346cd6f30405e21b0224a3e}{Beziator::generate}}(\textcolor{keywordtype}{size\_t} d) \{}
+\DoxyCodeLine{00137     \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{int} controls\_lines[][2] = \{}
+\DoxyCodeLine{00138         \{0, 0\}, \{0, 1\}, \{0, 0\}, \{1, 1\}, \{0, 0\}, \{1, 0\},}
+\DoxyCodeLine{00139         \{0, 3\}, \{0, 2\}, \{0, 3\}, \{1, 2\}, \{0, 3\}, \{1, 3\},}
+\DoxyCodeLine{00140         \{3, 0\}, \{2, 0\}, \{3, 0\}, \{2, 1\}, \{3, 0\}, \{3, 1\},}
+\DoxyCodeLine{00141         \{3, 3\}, \{3, 2\}, \{3, 3\}, \{2, 2\}, \{3, 3\}, \{2, 3\},}
+\DoxyCodeLine{00142     \};}
+\DoxyCodeLine{00143     \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{int} ctrls\_size = \textcolor{keyword}{sizeof}(controls\_lines) / \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}[2]);}
+\DoxyCodeLine{00144     \textcolor{comment}{/* // Old variant of config, I leave it for several commits}}
+\DoxyCodeLine{00145 \textcolor{comment}{    static const uint8\_t ALL\_SQUARE\_LINES[][4] = \{}}
+\DoxyCodeLine{00146 \textcolor{comment}{        \{1, 0, 0, 0\}, \{0, 0, 0, 1\}, \{0, 1, 1, 1\}, \{1, 1, 1, 0\},}}
+\DoxyCodeLine{00147 \textcolor{comment}{        \{1, 1, 0, 0\}, \{0, 0, 1, 1\}, \{1, 0, 0, 1\}, \{0, 1, 1, 0\}}}
+\DoxyCodeLine{00148 \textcolor{comment}{    \};*/}}
+\DoxyCodeLine{00149     \textcolor{keyword}{static} \textcolor{keyword}{const} uint8\_t SQUARE\_TYPES[][10][2] = \{}
+\DoxyCodeLine{00150         \{\{0, 0\}, \{0, 1\}, \{1, 1\}, \{0, 0\}, \{8, 8\},}
+\DoxyCodeLine{00151          \{1, 1\}, \{1, 0\}, \{0, 0\}, \{1, 1\}, \{9, 9\}\},}
+\DoxyCodeLine{00152         \{\{0, 0\}, \{0, 1\}, \{1, 1\}, \{1, 0\}, \{0, 0\}, \{9, 9\}\},}
+\DoxyCodeLine{00153         \{\{1, 0\}, \{0, 0\}, \{0, 1\}, \{1, 0\}, \{8, 8\},}
+\DoxyCodeLine{00154          \{0, 1\}, \{1, 1\}, \{1, 0\}, \{0, 1\}, \{9, 9\}\},}
+\DoxyCodeLine{00155         \textcolor{comment}{/* // And again old variant of config}}
+\DoxyCodeLine{00156 \textcolor{comment}{        \{1, 2, 4, 1, 8, 0, 5, 3, 0, 9\},}}
+\DoxyCodeLine{00157 \textcolor{comment}{        \{0, 1, 2, 3, 0, 9\},}}
+\DoxyCodeLine{00158 \textcolor{comment}{        \{0, 1, 5, 0, 8, 2, 3, 5, 2, 9\},*/}}
+\DoxyCodeLine{00159     \};}
+\DoxyCodeLine{00160     \textcolor{keyword}{static} \textcolor{keyword}{const} uint8\_t BEZIER\_SQUARE\_TYPES[3][3] = \{}
+\DoxyCodeLine{00161         \{0, 1, 2\}, \{1, 1, 1\}, \{2, 1, 0\}}
+\DoxyCodeLine{00162     \};}
+\DoxyCodeLine{00163 }
+\DoxyCodeLine{00164     \textcolor{keywordtype}{size\_t} j, k, index;}
+\DoxyCodeLine{00165     \textcolor{keywordtype}{float} x, u, v;}
+\DoxyCodeLine{00166     vec4 *point, vertex, normal;}
+\DoxyCodeLine{00167     \mbox{\hyperlink{beziator_8cpp_a1be679a80ddb401e60a4ae4a90a1eddf}{surface\_t}} surface;}
+\DoxyCodeLine{00168     GLuint verts = 0, verts2 = 0;}
+\DoxyCodeLine{00169     \textcolor{comment}{//verts3 = 0;}}
+\DoxyCodeLine{00170     \textcolor{keyword}{const} \textcolor{keywordtype}{int} *c;}
+\DoxyCodeLine{00171     mat4 m4b;}
+\DoxyCodeLine{00172     uint8\_t si, sj;}
+\DoxyCodeLine{00173     \textcolor{keyword}{const} uint8\_t (*st)[2];}
+\DoxyCodeLine{00174 }
+\DoxyCodeLine{00175     \mbox{\hyperlink{classMesh}{Mesh}} *\mbox{\hyperlink{classBeziator_afc2e274334058f3b4c34f025156693f1}{mesh}} = \&this-\/>\mbox{\hyperlink{classBeziator_afc2e274334058f3b4c34f025156693f1}{mesh}};}
+\DoxyCodeLine{00176     \textcolor{comment}{// Mesh *mesh\_skel = \&this-\/>frame;}}
+\DoxyCodeLine{00177     \textcolor{comment}{// Mesh *mesh\_normals = \&this-\/>normals;}}
+\DoxyCodeLine{00178     x = 1.f / (d -\/ 1);}
+\DoxyCodeLine{00179 }
+\DoxyCodeLine{00180     \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} surfaces\_size = this-\/>\mbox{\hyperlink{classBeziator_aa885148677b1b0fd71850f2cd604af5e}{indices}}.size() / 16;}
+\DoxyCodeLine{00181     \mbox{\hyperlink{beziator_8h_adc91dd1f882e36615956dace902ac8a2}{surfacei\_t}} *surfaces = \textcolor{keyword}{reinterpret\_cast<}\mbox{\hyperlink{beziator_8h_adc91dd1f882e36615956dace902ac8a2}{surfacei\_t}}*\textcolor{keyword}{>}(\mbox{\hyperlink{classBeziator_aa885148677b1b0fd71850f2cd604af5e}{indices}}.data());}
+\DoxyCodeLine{00182     \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} size = 6 * 9 * d * d * surfaces\_size;}
+\DoxyCodeLine{00183     \textcolor{comment}{//const GLsizei sizei = static\_cast<GLsizei>(size);}}
+\DoxyCodeLine{00184     vector<Vertex> V(size);}
+\DoxyCodeLine{00185     vector<GLuint> E(size);}
+\DoxyCodeLine{00186     \textcolor{comment}{/*vector<Vertex> V2(size);}}
+\DoxyCodeLine{00187 \textcolor{comment}{    vector<GLuint> E2(size);}}
+\DoxyCodeLine{00188 \textcolor{comment}{    vector<Vertex> V3(this-\/>vertices.size());}}
+\DoxyCodeLine{00189 \textcolor{comment}{    vector<GLuint> E3(this-\/>vertices.size() * 4);*/}}
+\DoxyCodeLine{00190 }
+\DoxyCodeLine{00191     \textcolor{comment}{// Creator frame vertices}}
+\DoxyCodeLine{00192     \textcolor{comment}{/*for (size\_t i = 0; i < this-\/>vertices.size(); i++) \{}}
+\DoxyCodeLine{00193 \textcolor{comment}{        point = \&this-\/>vertices[i].position;}}
+\DoxyCodeLine{00194 \textcolor{comment}{        glm\_vec3\_copy(*point, V2[i].position);}}
+\DoxyCodeLine{00195 \textcolor{comment}{        V2[i].color[1] = 255;}}
+\DoxyCodeLine{00196 \textcolor{comment}{        V2[i].color[3] = 255;}}
+\DoxyCodeLine{00197 \textcolor{comment}{    \}*/}}
+\DoxyCodeLine{00198 }
+\DoxyCodeLine{00199     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < surfaces\_size; i++) \{}
+\DoxyCodeLine{00200         \textcolor{keywordflow}{for} (j = 0; j < 4; j++) \{}
+\DoxyCodeLine{00201             \textcolor{keywordflow}{for} (k = 0; k < 4; k++) \{}
+\DoxyCodeLine{00202                 surface[j][k] = \&(this-\/>\mbox{\hyperlink{classBeziator_ade482f00f5cb1ce4d594b4c132903313}{vertices}}[surfaces[i][j][k]]);}
+\DoxyCodeLine{00203             \}}
+\DoxyCodeLine{00204         \}}
+\DoxyCodeLine{00205         \textcolor{comment}{// Creator frame lines}}
+\DoxyCodeLine{00206         \textcolor{keywordflow}{for} (j = 0; j < ctrls\_size; j++) \{}
+\DoxyCodeLine{00207             c = controls\_lines[j];}
+\DoxyCodeLine{00208             \textcolor{comment}{//E2[verts2++] = ucast(surfaces[i][c[0]][c[1]]);}}
+\DoxyCodeLine{00209         \}}
+\DoxyCodeLine{00210 }
+\DoxyCodeLine{00211         \textcolor{comment}{// Create vertices}}
+\DoxyCodeLine{00212         \textcolor{keywordflow}{for} (j = 0; j < d; j++) \{}
+\DoxyCodeLine{00213             \textcolor{keywordflow}{for} (k = 0; k < d; k++) \{}
+\DoxyCodeLine{00214                 u = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(j)*x; v = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(k)*x;}
+\DoxyCodeLine{00215                 index = i * d * d + j * d + k;}
+\DoxyCodeLine{00216                 \mbox{\hyperlink{beziator_8cpp_ac99c8d4702aa8184518428b26331873c}{bezier\_surface}}(u, v, surface, vertex, normal);}
+\DoxyCodeLine{00217                 glm\_normalize(normal);}
+\DoxyCodeLine{00218                 glm\_vec3\_copy(vertex, V[index].position);}
+\DoxyCodeLine{00219                 glm\_vec3\_copy(normal, V[index].normal);}
+\DoxyCodeLine{00220                 V[index].color[0] = 0;}
+\DoxyCodeLine{00221                 V[index].color[1] = 255;}
+\DoxyCodeLine{00222                 V[index].color[2] = 0;}
+\DoxyCodeLine{00223                 \textcolor{comment}{/*glm\_vec3\_copy(vertex, V3[verts3].position);}}
+\DoxyCodeLine{00224 \textcolor{comment}{                E3[verts3] = verts3;}}
+\DoxyCodeLine{00225 \textcolor{comment}{                verts3++;}}
+\DoxyCodeLine{00226 \textcolor{comment}{                glm\_vec3\_add(normal, vertex, V3[verts3].position);}}
+\DoxyCodeLine{00227 \textcolor{comment}{                E3[verts3] = verts3;}}
+\DoxyCodeLine{00228 \textcolor{comment}{                verts3++;*/}}
+\DoxyCodeLine{00229             \}}
+\DoxyCodeLine{00230         \}}
+\DoxyCodeLine{00231 }
+\DoxyCodeLine{00232         \textcolor{comment}{// Create triangles}}
+\DoxyCodeLine{00233         \textcolor{keywordflow}{for} (j = 0; j < d -\/ 1; j++)}
+\DoxyCodeLine{00234             \textcolor{keywordflow}{for} (k = 0; k < d -\/ 1; k++) \{}
+\DoxyCodeLine{00235                 E[verts++] = \mbox{\hyperlink{beziator_8cpp_aaf0fd126ea86726aa206778ad2315f31}{ucast}}(i * d * d + (j + 1) * d + k);}
+\DoxyCodeLine{00236                 E[verts++] = \mbox{\hyperlink{beziator_8cpp_aaf0fd126ea86726aa206778ad2315f31}{ucast}}(i * d * d + j * d + k);}
+\DoxyCodeLine{00237                 E[verts++] = \mbox{\hyperlink{beziator_8cpp_aaf0fd126ea86726aa206778ad2315f31}{ucast}}(i * d * d + j * d + k + 1);}
+\DoxyCodeLine{00238 }
+\DoxyCodeLine{00239                 E[verts++] = \mbox{\hyperlink{beziator_8cpp_aaf0fd126ea86726aa206778ad2315f31}{ucast}}(i * d * d + j * d + k + 1);}
+\DoxyCodeLine{00240                 E[verts++] = \mbox{\hyperlink{beziator_8cpp_aaf0fd126ea86726aa206778ad2315f31}{ucast}}(i * d * d + (j + 1) * d + k + 1);}
+\DoxyCodeLine{00241                 E[verts++] = \mbox{\hyperlink{beziator_8cpp_aaf0fd126ea86726aa206778ad2315f31}{ucast}}(i * d * d + (j + 1) * d + k);}
+\DoxyCodeLine{00242             \}}
+\DoxyCodeLine{00243 }
+\DoxyCodeLine{00244         \textcolor{keywordflow}{for} (si = 0; si < 3; si++) \{}
+\DoxyCodeLine{00245             \textcolor{keywordflow}{for} (sj = 0; sj < 3; sj++) \{}
+\DoxyCodeLine{00246                 st = SQUARE\_TYPES[BEZIER\_SQUARE\_TYPES[si][sj]];}
+\DoxyCodeLine{00247                 \textcolor{keywordflow}{while} (st[2][0] != 9) \{}
+\DoxyCodeLine{00248                     \textcolor{keywordflow}{if} (st[2][0] == 8) \{}
+\DoxyCodeLine{00249                         st += 3;}
+\DoxyCodeLine{00250                     \}}
+\DoxyCodeLine{00251                     index = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}((surface)[si+st[1][0]][sj+st[1][1]] -\/ this-\/>\mbox{\hyperlink{classBeziator_ade482f00f5cb1ce4d594b4c132903313}{vertices}}.data());}
+\DoxyCodeLine{00252                     glm\_vec3\_sub(((surface)[si+st[1][0]][sj+st[1][1]])-\/>position,}
+\DoxyCodeLine{00253                             ((surface)[si+st[0][0]][sj+st[0][1]])-\/>position, m4b[0]);}
+\DoxyCodeLine{00254                     glm\_vec3\_sub(((surface)[si+st[1][0]][sj+st[1][1]])-\/>position,}
+\DoxyCodeLine{00255                             (surface[si+st[2][0]][sj+st[2][1]])-\/>position, m4b[1]);}
+\DoxyCodeLine{00256                     glm\_vec3\_cross(m4b[0], m4b[1], m4b[2]);}
+\DoxyCodeLine{00257                     \textcolor{comment}{//glm\_vec3\_add(V2[index].normal, m4b[2], V2[index].normal);}}
+\DoxyCodeLine{00258                     st++;}
+\DoxyCodeLine{00259                 \}}
+\DoxyCodeLine{00260             \}}
+\DoxyCodeLine{00261         \}}
+\DoxyCodeLine{00262     \}}
+\DoxyCodeLine{00263     \textcolor{comment}{/*}}
+\DoxyCodeLine{00264 \textcolor{comment}{    // Example drawing of normals for frame}}
+\DoxyCodeLine{00265 \textcolor{comment}{    for (size\_t i = 0; i < this-\/>points\_size; i++) \{}}
+\DoxyCodeLine{00266 \textcolor{comment}{        glm\_normalize(V2[i].normal);}}
+\DoxyCodeLine{00267 \textcolor{comment}{        glm\_vec3\_add(V2[i].position, V2[i].normal,}}
+\DoxyCodeLine{00268 \textcolor{comment}{                     V2[i+this-\/>points\_size].position);}}
+\DoxyCodeLine{00269 \textcolor{comment}{        E2[verts2++] = (unsigned)i;}}
+\DoxyCodeLine{00270 \textcolor{comment}{        E2[verts2++] = (unsigned)(i+this-\/>points\_size);}}
+\DoxyCodeLine{00271 \textcolor{comment}{    \}*/}}
+\DoxyCodeLine{00272     \mbox{\hyperlink{classBeziator_afc2e274334058f3b4c34f025156693f1}{mesh}}-\/>\mbox{\hyperlink{classMesh_aca2f681788fcbf90320d631d8c3428c9}{update}}(V.data(), V.size(), E.data(), E.size());}
+\DoxyCodeLine{00273     \textcolor{comment}{//mesh\_skel-\/>update(V2, E2);}}
+\DoxyCodeLine{00274     \textcolor{comment}{//mesh\_update(mesh\_normals, sizei, sizei, V3, E3);}}
+\DoxyCodeLine{00275 \}}
+\DoxyCodeLine{00276 }
+\DoxyCodeLine{\Hypertarget{beziator_8cpp_source_l00277}\mbox{\hyperlink{classBeziator_a17dc368875dfa7375eda7889c1fbd5e5}{00277}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classBeziator_a17dc368875dfa7375eda7889c1fbd5e5}{Beziator::rotate}}(\textcolor{keywordtype}{size\_t} i) \{}
+\DoxyCodeLine{00278     \mbox{\hyperlink{beziator_8h_adc91dd1f882e36615956dace902ac8a2}{surfacei\_t}} s;}
+\DoxyCodeLine{00279     \mbox{\hyperlink{beziator_8h_adc91dd1f882e36615956dace902ac8a2}{surfacei\_t}} *surfaces = \textcolor{keyword}{reinterpret\_cast<}\mbox{\hyperlink{beziator_8h_adc91dd1f882e36615956dace902ac8a2}{surfacei\_t}}*\textcolor{keyword}{>}(\mbox{\hyperlink{classBeziator_aa885148677b1b0fd71850f2cd604af5e}{indices}}.data());}
+\DoxyCodeLine{00280     memcpy(s, surfaces[i], \textcolor{keyword}{sizeof}(\mbox{\hyperlink{beziator_8h_adc91dd1f882e36615956dace902ac8a2}{surfacei\_t}}));}
+\DoxyCodeLine{00281     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k = 0; k < 4; k++)}
+\DoxyCodeLine{00282         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < 4; j++) \{}
+\DoxyCodeLine{00283             surfaces[i][k][j] = s[j][k];}
+\DoxyCodeLine{00284         \}}
+\DoxyCodeLine{00285 \}}
+\DoxyCodeLine{00286 }
+\DoxyCodeLine{\Hypertarget{beziator_8cpp_source_l00287}\mbox{\hyperlink{classBeziator_a961bc3acb296bbdd3c4b7fdf4c8c5511}{00287}} vector<Vertex> *\mbox{\hyperlink{classBeziator_a961bc3acb296bbdd3c4b7fdf4c8c5511}{Beziator::get\_vertices}}() \{}
+\DoxyCodeLine{00288     \textcolor{keywordflow}{return} \&\mbox{\hyperlink{classBeziator_ade482f00f5cb1ce4d594b4c132903313}{vertices}};}
+\DoxyCodeLine{00289 \}}
+
+\end{DoxyCode}

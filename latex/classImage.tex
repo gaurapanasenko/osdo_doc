@@ -1,0 +1,155 @@
+\hypertarget{classImage}{}\doxysubsection{Клас Image}
+\label{classImage}\index{Image@{Image}}
+
+
+Зберігає масив пікселів, ширину та висоту.  
+
+
+
+
+{\ttfamily \#include $<$image.\+h$>$}
+
+
+
+Діаграма зв\textquotesingle{}язків класу Image\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classImage__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Загальнодоступні елементи}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classImage_ac14349d3c13c9d8181f327cf97586a02}{Image}} (shared\+\_\+ptr$<$ const \mbox{\hyperlink{image_8h_a8e678b6802a89940a89c7343bec499f5}{pixel\+\_\+t}}\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{classImage_a0bff7334a9e45a84e0503448af829bbb}{data}}, const int \mbox{\hyperlink{classImage_a5be4b15e10ac6609ec9350e79e723246}{width}}, const int \mbox{\hyperlink{classImage_adf1e0c7ecb8f09929175b5d4229beaad}{height}})
+\begin{DoxyCompactList}\small\item\em Конструктор для зображення. Зберігає посилання на масив пікселів, а також висоту та ширину зображення. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Загальнодоступні статичні елементи}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classImage}{Image}} \mbox{\hyperlink{classImage_ac282669cfe2627b0feeadebeba74c35e}{from\+File}} (const char $\ast$path)
+\begin{DoxyCompactList}\small\item\em Зчитування зображення з файлу. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Загальнодоступні атрибути}
+\begin{DoxyCompactItemize}
+\item 
+shared\+\_\+ptr$<$ const \mbox{\hyperlink{image_8h_a8e678b6802a89940a89c7343bec499f5}{pixel\+\_\+t}}\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{classImage_a0bff7334a9e45a84e0503448af829bbb}{data}}
+\begin{DoxyCompactList}\small\item\em Константнний масив пікселів. Зберігає розумний вказівник на масив пікселів зображення розміром висота$\ast$ширина. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{classImage_a5be4b15e10ac6609ec9350e79e723246}{width}}
+\begin{DoxyCompactList}\small\item\em Ширина зображення. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{classImage_adf1e0c7ecb8f09929175b5d4229beaad}{height}}
+\begin{DoxyCompactList}\small\item\em Висота зображення. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Детальний опис}
+Зберігає масив пікселів, ширину та висоту. 
+
+Див. визначення в файлі \mbox{\hyperlink{image_8h_source}{image.\+h}}, рядок \mbox{\hyperlink{image_8h_source_l00036}{36}}
+
+
+
+\doxysubsubsection{Конструктор(и)}
+\mbox{\Hypertarget{classImage_ac14349d3c13c9d8181f327cf97586a02}\label{classImage_ac14349d3c13c9d8181f327cf97586a02}} 
+\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\doxyparagraph{\texorpdfstring{Image()}{Image()}}
+{\footnotesize\ttfamily Image\+::\+Image (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ const \mbox{\hyperlink{image_8h_a8e678b6802a89940a89c7343bec499f5}{pixel\+\_\+t}}\mbox{[}$\,$\mbox{]}$>$}]{data,  }\item[{const int}]{width,  }\item[{const int}]{height }\end{DoxyParamCaption})}
+
+
+
+Конструктор для зображення. Зберігає посилання на масив пікселів, а також висоту та ширину зображення. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em data} & Розумне посилання на масив пікселів, розмір повинен бути {\ttfamily висота $\ast$ ширина}. \\
+\hline
+{\em width} & Ширина зображення. \\
+\hline
+{\em height} & Висота зображення. \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{image_8cpp_source}{image.\+cpp}}, рядок \mbox{\hyperlink{image_8cpp_source_l00009}{9}}
+
+
+
+\doxysubsubsection{Опис методів компонент}
+\mbox{\Hypertarget{classImage_ac282669cfe2627b0feeadebeba74c35e}\label{classImage_ac282669cfe2627b0feeadebeba74c35e}} 
+\index{Image@{Image}!fromFile@{fromFile}}
+\index{fromFile@{fromFile}!Image@{Image}}
+\doxyparagraph{\texorpdfstring{fromFile()}{fromFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classImage}{Image}} Image\+::from\+File (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Зчитування зображення з файлу. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em path} & Шлях до файлу зображення. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Повертає}
+клас {\ttfamily \mbox{\hyperlink{classImage}{Image}}}, який посилається на пікселі. 
+\end{DoxyReturn}
+
+
+Див. визначення в файлі \mbox{\hyperlink{image_8cpp_source}{image.\+cpp}}, рядок \mbox{\hyperlink{image_8cpp_source_l00015}{15}}
+
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{classImage_ac282669cfe2627b0feeadebeba74c35e_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsubsection{Компонентні дані}
+\mbox{\Hypertarget{classImage_a0bff7334a9e45a84e0503448af829bbb}\label{classImage_a0bff7334a9e45a84e0503448af829bbb}} 
+\index{Image@{Image}!data@{data}}
+\index{data@{data}!Image@{Image}}
+\doxyparagraph{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$const \mbox{\hyperlink{image_8h_a8e678b6802a89940a89c7343bec499f5}{pixel\+\_\+t}}\mbox{[}$\,$\mbox{]}$>$ Image\+::data}
+
+
+
+Константнний масив пікселів. Зберігає розумний вказівник на масив пікселів зображення розміром висота$\ast$ширина. 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{image_8h_source}{image.\+h}}, рядок \mbox{\hyperlink{image_8h_source_l00044}{44}}
+
+\mbox{\Hypertarget{classImage_adf1e0c7ecb8f09929175b5d4229beaad}\label{classImage_adf1e0c7ecb8f09929175b5d4229beaad}} 
+\index{Image@{Image}!height@{height}}
+\index{height@{height}!Image@{Image}}
+\doxyparagraph{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily const int Image\+::height}
+
+
+
+Висота зображення. 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{image_8h_source}{image.\+h}}, рядок \mbox{\hyperlink{image_8h_source_l00052}{52}}
+
+\mbox{\Hypertarget{classImage_a5be4b15e10ac6609ec9350e79e723246}\label{classImage_a5be4b15e10ac6609ec9350e79e723246}} 
+\index{Image@{Image}!width@{width}}
+\index{width@{width}!Image@{Image}}
+\doxyparagraph{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily const int Image\+::width}
+
+
+
+Ширина зображення. 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{image_8h_source}{image.\+h}}, рядок \mbox{\hyperlink{image_8h_source_l00048}{48}}
+
+
+
+Документація цих класів була створена з файлів\+:\begin{DoxyCompactItemize}
+\item 
+osdo/\mbox{\hyperlink{image_8h}{image.\+h}}\item 
+osdo/\mbox{\hyperlink{image_8cpp}{image.\+cpp}}\end{DoxyCompactItemize}

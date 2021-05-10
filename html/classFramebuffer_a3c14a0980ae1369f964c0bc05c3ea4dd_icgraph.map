@@ -1,0 +1,4 @@
+<map id="Framebuffer::rb_depth_multisample" name="Framebuffer::rb_depth_multisample">
+<area shape="rect" id="node1" title="Підготовлює глибинний рендер буфер з згладжуванням." alt="" coords="180,5,331,47"/>
+<area shape="rect" id="node2" href="$classBuffer.html#a1fc0873aa0dd87e47da962f32110b03e" title="Підгодовка до рендеренгу." alt="" coords="5,13,132,39"/>
+</map>

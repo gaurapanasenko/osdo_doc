@@ -1,0 +1,429 @@
+\hypertarget{classOSDO_1_1vector}{}\doxysubsection{Шаблон класу OSDO\+::vector$<$ T $>$}
+\label{classOSDO_1_1vector}\index{OSDO::vector$<$ T $>$@{OSDO::vector$<$ T $>$}}
+
+
+Вектор що не змінює свій розмір.  
+
+
+
+
+{\ttfamily \#include $<$easyvector.\+h$>$}
+
+\doxysubsubsection*{Загальнодоступні елементи}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classOSDO_1_1vector_a23d62d868c798c02c6056b59f986a4c5}{vector}} (size\+\_\+t \mbox{\hyperlink{classOSDO_1_1vector_a53a792907045d4d573572c4ee22ebafe}{size}}=0)
+\begin{DoxyCompactList}\small\item\em Конструктор з параметром розміру масиву \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classOSDO_1_1vector_a1d00bc9f72a815219d77bb186c461695}{vector}} (\mbox{\hyperlink{classOSDO_1_1vector}{vector}} \&\&\mbox{\hyperlink{classOSDO_1_1vector}{vector}})
+\begin{DoxyCompactList}\small\item\em Конструктор переносу \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classOSDO_1_1vector_a3fd2a54ec52877d9036af6d69b3cdb87}{vector}} (const \mbox{\hyperlink{classOSDO_1_1vector}{vector}} \&\mbox{\hyperlink{classOSDO_1_1vector}{vector}})
+\begin{DoxyCompactList}\small\item\em Конструктор копіювання \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classOSDO_1_1vector_a226f310cd518da87ed699d62a39c89fe}{$\sim$vector}} ()
+\item 
+\mbox{\hyperlink{classOSDO_1_1vector}{vector}} \& \mbox{\hyperlink{classOSDO_1_1vector_ad51b577ece8931d6074012e9258fe399}{operator=}} (\mbox{\hyperlink{classOSDO_1_1vector}{vector}} \&\&\mbox{\hyperlink{classOSDO_1_1vector}{vector}})
+\item 
+\mbox{\hyperlink{classOSDO_1_1vector}{vector}} \& \mbox{\hyperlink{classOSDO_1_1vector_ad95e677cec3b613268414042e01797ef}{operator=}} (const \mbox{\hyperlink{classOSDO_1_1vector}{vector}} \&\mbox{\hyperlink{classOSDO_1_1vector}{vector}})
+\item 
+T \& \mbox{\hyperlink{classOSDO_1_1vector_a9c1cf8e3879e21042b07e92896741716}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t i)
+\item 
+size\+\_\+t \mbox{\hyperlink{classOSDO_1_1vector_a53a792907045d4d573572c4ee22ebafe}{size}} () const
+\item 
+T $\ast$ \mbox{\hyperlink{classOSDO_1_1vector_a6bb34ecff9d845d2ed40fd41584c3b6b}{data}} ()
+\item 
+const T $\ast$ \mbox{\hyperlink{classOSDO_1_1vector_a32d235a404975b405f85f5be45880fed}{data}} () const
+\item 
+void \mbox{\hyperlink{classOSDO_1_1vector_a0a5e04be2de5b09300bc29a34a8886ee}{clear}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Приватні елементи}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classOSDO_1_1vector_aec0eccb2296e433ed5f838f646c8b668}{\+\_\+allocate}} (size\+\_\+t \mbox{\hyperlink{classOSDO_1_1vector_a53a792907045d4d573572c4ee22ebafe}{size}})
+\begin{DoxyCompactList}\small\item\em Виділяє масив розміру {\ttfamily size} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classOSDO_1_1vector_af52bd53d2b8cb1c91279d7af33de0af3}{\+\_\+free}} ()
+\begin{DoxyCompactList}\small\item\em Звільнює пам\textquotesingle{}ять від масиву. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classOSDO_1_1vector_a1d511b6a07c22ee8ff471c73cc4ad808}{\+\_\+copy}} (const \mbox{\hyperlink{classOSDO_1_1vector}{vector}} \&\mbox{\hyperlink{classOSDO_1_1vector}{vector}})
+\begin{DoxyCompactList}\small\item\em Копіює масив. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classOSDO_1_1vector_a7c5eb8f8ad5a72cd1551152d8cb33061}{\+\_\+move}} (\mbox{\hyperlink{classOSDO_1_1vector}{vector}} \&\mbox{\hyperlink{classOSDO_1_1vector}{vector}})
+\begin{DoxyCompactList}\small\item\em Переміщює данні з іншого масиву. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Приватні дані}
+\begin{DoxyCompactItemize}
+\item 
+T $\ast$ \mbox{\hyperlink{classOSDO_1_1vector_a2e389a3e97a6a442cffbfc8cbf67338f}{arr}}
+\begin{DoxyCompactList}\small\item\em Масив із елементами типу {\ttfamily T} \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classOSDO_1_1vector_ab9f6230ec6f76d13bc65710b78275c66}{\+\_\+size}}
+\begin{DoxyCompactList}\small\item\em Поточний розмір масиву. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Детальний опис}
+\subsubsection*{template$<$class T$>$\newline
+class OSDO\+::vector$<$ T $>$}
+
+Вектор що не змінює свій розмір. 
+
+Див. визначення в файлі \mbox{\hyperlink{easyvector_8h_source}{easyvector.\+h}}, рядок \mbox{\hyperlink{easyvector_8h_source_l00019}{19}}
+
+
+
+\doxysubsubsection{Конструктор(и)}
+\mbox{\Hypertarget{classOSDO_1_1vector_a23d62d868c798c02c6056b59f986a4c5}\label{classOSDO_1_1vector_a23d62d868c798c02c6056b59f986a4c5}} 
+\index{OSDO::vector$<$ T $>$@{OSDO::vector$<$ T $>$}!vector@{vector}}
+\index{vector@{vector}!OSDO::vector$<$ T $>$@{OSDO::vector$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{vector()}{vector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classOSDO_1_1vector}{OSDO\+::vector}}$<$ T $>$\+::\mbox{\hyperlink{classOSDO_1_1vector}{vector}} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Конструктор з параметром розміру масиву 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em size} & розмір массиву \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{easyvector_8h_source}{easyvector.\+h}}, рядок \mbox{\hyperlink{easyvector_8h_source_l00071}{71}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOSDO_1_1vector_a23d62d868c798c02c6056b59f986a4c5_cgraph}
+\end{center}
+\end{figure}
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{classOSDO_1_1vector_a23d62d868c798c02c6056b59f986a4c5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classOSDO_1_1vector_a1d00bc9f72a815219d77bb186c461695}\label{classOSDO_1_1vector_a1d00bc9f72a815219d77bb186c461695}} 
+\index{OSDO::vector$<$ T $>$@{OSDO::vector$<$ T $>$}!vector@{vector}}
+\index{vector@{vector}!OSDO::vector$<$ T $>$@{OSDO::vector$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{vector()}{vector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classOSDO_1_1vector}{OSDO\+::vector}}$<$ T $>$\+::\mbox{\hyperlink{classOSDO_1_1vector}{vector}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classOSDO_1_1vector}{vector}}$<$ T $>$ \&\&}]{vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Конструктор переносу 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em vector} & інший масив \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{easyvector_8h_source}{easyvector.\+h}}, рядок \mbox{\hyperlink{easyvector_8h_source_l00078}{78}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOSDO_1_1vector_a1d00bc9f72a815219d77bb186c461695_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classOSDO_1_1vector_a3fd2a54ec52877d9036af6d69b3cdb87}\label{classOSDO_1_1vector_a3fd2a54ec52877d9036af6d69b3cdb87}} 
+\index{OSDO::vector$<$ T $>$@{OSDO::vector$<$ T $>$}!vector@{vector}}
+\index{vector@{vector}!OSDO::vector$<$ T $>$@{OSDO::vector$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{vector()}{vector()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classOSDO_1_1vector}{OSDO\+::vector}}$<$ T $>$\+::\mbox{\hyperlink{classOSDO_1_1vector}{vector}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classOSDO_1_1vector}{vector}}$<$ T $>$ \&}]{vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Конструктор копіювання 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em vector} & інший масив \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{easyvector_8h_source}{easyvector.\+h}}, рядок \mbox{\hyperlink{easyvector_8h_source_l00085}{85}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOSDO_1_1vector_a3fd2a54ec52877d9036af6d69b3cdb87_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classOSDO_1_1vector_a226f310cd518da87ed699d62a39c89fe}\label{classOSDO_1_1vector_a226f310cd518da87ed699d62a39c89fe}} 
+\index{OSDO::vector$<$ T $>$@{OSDO::vector$<$ T $>$}!````~vector@{$\sim$vector}}
+\index{````~vector@{$\sim$vector}!OSDO::vector$<$ T $>$@{OSDO::vector$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{$\sim$vector()}{~vector()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classOSDO_1_1vector}{OSDO\+::vector}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{classOSDO_1_1vector}{vector}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{easyvector_8h_source}{easyvector.\+h}}, рядок \mbox{\hyperlink{easyvector_8h_source_l00088}{88}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{classOSDO_1_1vector_a226f310cd518da87ed699d62a39c89fe_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsubsection{Опис методів компонент}
+\mbox{\Hypertarget{classOSDO_1_1vector_aec0eccb2296e433ed5f838f646c8b668}\label{classOSDO_1_1vector_aec0eccb2296e433ed5f838f646c8b668}} 
+\index{OSDO::vector$<$ T $>$@{OSDO::vector$<$ T $>$}!\_allocate@{\_allocate}}
+\index{\_allocate@{\_allocate}!OSDO::vector$<$ T $>$@{OSDO::vector$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{\_allocate()}{\_allocate()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classOSDO_1_1vector}{OSDO\+::vector}}$<$ T $>$\+::\+\_\+allocate (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Виділяє масив розміру {\ttfamily size} 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em size} & розмір масиву \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{easyvector_8h_source}{easyvector.\+h}}, рядок \mbox{\hyperlink{easyvector_8h_source_l00032}{32}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{classOSDO_1_1vector_aec0eccb2296e433ed5f838f646c8b668_cgraph}
+\end{center}
+\end{figure}
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOSDO_1_1vector_aec0eccb2296e433ed5f838f646c8b668_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classOSDO_1_1vector_a1d511b6a07c22ee8ff471c73cc4ad808}\label{classOSDO_1_1vector_a1d511b6a07c22ee8ff471c73cc4ad808}} 
+\index{OSDO::vector$<$ T $>$@{OSDO::vector$<$ T $>$}!\_copy@{\_copy}}
+\index{\_copy@{\_copy}!OSDO::vector$<$ T $>$@{OSDO::vector$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{\_copy()}{\_copy()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classOSDO_1_1vector}{OSDO\+::vector}}$<$ T $>$\+::\+\_\+copy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classOSDO_1_1vector}{vector}}$<$ T $>$ \&}]{vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Копіює масив. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em vector} & інший масив \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{easyvector_8h_source}{easyvector.\+h}}, рядок \mbox{\hyperlink{easyvector_8h_source_l00053}{53}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOSDO_1_1vector_a1d511b6a07c22ee8ff471c73cc4ad808_cgraph}
+\end{center}
+\end{figure}
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOSDO_1_1vector_a1d511b6a07c22ee8ff471c73cc4ad808_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classOSDO_1_1vector_af52bd53d2b8cb1c91279d7af33de0af3}\label{classOSDO_1_1vector_af52bd53d2b8cb1c91279d7af33de0af3}} 
+\index{OSDO::vector$<$ T $>$@{OSDO::vector$<$ T $>$}!\_free@{\_free}}
+\index{\_free@{\_free}!OSDO::vector$<$ T $>$@{OSDO::vector$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{\_free()}{\_free()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classOSDO_1_1vector}{OSDO\+::vector}}$<$ T $>$\+::\+\_\+free (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Звільнює пам\textquotesingle{}ять від масиву. 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{easyvector_8h_source}{easyvector.\+h}}, рядок \mbox{\hyperlink{easyvector_8h_source_l00043}{43}}
+
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{classOSDO_1_1vector_af52bd53d2b8cb1c91279d7af33de0af3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classOSDO_1_1vector_a7c5eb8f8ad5a72cd1551152d8cb33061}\label{classOSDO_1_1vector_a7c5eb8f8ad5a72cd1551152d8cb33061}} 
+\index{OSDO::vector$<$ T $>$@{OSDO::vector$<$ T $>$}!\_move@{\_move}}
+\index{\_move@{\_move}!OSDO::vector$<$ T $>$@{OSDO::vector$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{\_move()}{\_move()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classOSDO_1_1vector}{OSDO\+::vector}}$<$ T $>$\+::\+\_\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classOSDO_1_1vector}{vector}}$<$ T $>$ \&}]{vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Переміщює данні з іншого масиву. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em vector} & інший масив \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{easyvector_8h_source}{easyvector.\+h}}, рядок \mbox{\hyperlink{easyvector_8h_source_l00062}{62}}
+
+\mbox{\Hypertarget{classOSDO_1_1vector_a0a5e04be2de5b09300bc29a34a8886ee}\label{classOSDO_1_1vector_a0a5e04be2de5b09300bc29a34a8886ee}} 
+\index{OSDO::vector$<$ T $>$@{OSDO::vector$<$ T $>$}!clear@{clear}}
+\index{clear@{clear}!OSDO::vector$<$ T $>$@{OSDO::vector$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classOSDO_1_1vector}{OSDO\+::vector}}$<$ T $>$\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{easyvector_8h_source}{easyvector.\+h}}, рядок \mbox{\hyperlink{easyvector_8h_source_l00111}{111}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOSDO_1_1vector_a0a5e04be2de5b09300bc29a34a8886ee_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classOSDO_1_1vector_a6bb34ecff9d845d2ed40fd41584c3b6b}\label{classOSDO_1_1vector_a6bb34ecff9d845d2ed40fd41584c3b6b}} 
+\index{OSDO::vector$<$ T $>$@{OSDO::vector$<$ T $>$}!data@{data}}
+\index{data@{data}!OSDO::vector$<$ T $>$@{OSDO::vector$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T$\ast$ \mbox{\hyperlink{classOSDO_1_1vector}{OSDO\+::vector}}$<$ T $>$\+::data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{easyvector_8h_source}{easyvector.\+h}}, рядок \mbox{\hyperlink{easyvector_8h_source_l00105}{105}}
+
+\mbox{\Hypertarget{classOSDO_1_1vector_a32d235a404975b405f85f5be45880fed}\label{classOSDO_1_1vector_a32d235a404975b405f85f5be45880fed}} 
+\index{OSDO::vector$<$ T $>$@{OSDO::vector$<$ T $>$}!data@{data}}
+\index{data@{data}!OSDO::vector$<$ T $>$@{OSDO::vector$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+const T$\ast$ \mbox{\hyperlink{classOSDO_1_1vector}{OSDO\+::vector}}$<$ T $>$\+::data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{easyvector_8h_source}{easyvector.\+h}}, рядок \mbox{\hyperlink{easyvector_8h_source_l00108}{108}}
+
+\mbox{\Hypertarget{classOSDO_1_1vector_ad95e677cec3b613268414042e01797ef}\label{classOSDO_1_1vector_ad95e677cec3b613268414042e01797ef}} 
+\index{OSDO::vector$<$ T $>$@{OSDO::vector$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!OSDO::vector$<$ T $>$@{OSDO::vector$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classOSDO_1_1vector}{vector}}\& \mbox{\hyperlink{classOSDO_1_1vector}{OSDO\+::vector}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classOSDO_1_1vector}{vector}}$<$ T $>$ \&}]{vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{easyvector_8h_source}{easyvector.\+h}}, рядок \mbox{\hyperlink{easyvector_8h_source_l00094}{94}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOSDO_1_1vector_ad95e677cec3b613268414042e01797ef_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classOSDO_1_1vector_ad51b577ece8931d6074012e9258fe399}\label{classOSDO_1_1vector_ad51b577ece8931d6074012e9258fe399}} 
+\index{OSDO::vector$<$ T $>$@{OSDO::vector$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!OSDO::vector$<$ T $>$@{OSDO::vector$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classOSDO_1_1vector}{vector}}\& \mbox{\hyperlink{classOSDO_1_1vector}{OSDO\+::vector}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classOSDO_1_1vector}{vector}}$<$ T $>$ \&\&}]{vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{easyvector_8h_source}{easyvector.\+h}}, рядок \mbox{\hyperlink{easyvector_8h_source_l00089}{89}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOSDO_1_1vector_ad51b577ece8931d6074012e9258fe399_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classOSDO_1_1vector_a9c1cf8e3879e21042b07e92896741716}\label{classOSDO_1_1vector_a9c1cf8e3879e21042b07e92896741716}} 
+\index{OSDO::vector$<$ T $>$@{OSDO::vector$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!OSDO::vector$<$ T $>$@{OSDO::vector$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T\& \mbox{\hyperlink{classOSDO_1_1vector}{OSDO\+::vector}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{easyvector_8h_source}{easyvector.\+h}}, рядок \mbox{\hyperlink{easyvector_8h_source_l00099}{99}}
+
+\mbox{\Hypertarget{classOSDO_1_1vector_a53a792907045d4d573572c4ee22ebafe}\label{classOSDO_1_1vector_a53a792907045d4d573572c4ee22ebafe}} 
+\index{OSDO::vector$<$ T $>$@{OSDO::vector$<$ T $>$}!size@{size}}
+\index{size@{size}!OSDO::vector$<$ T $>$@{OSDO::vector$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+size\+\_\+t \mbox{\hyperlink{classOSDO_1_1vector}{OSDO\+::vector}}$<$ T $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{easyvector_8h_source}{easyvector.\+h}}, рядок \mbox{\hyperlink{easyvector_8h_source_l00102}{102}}
+
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOSDO_1_1vector_a53a792907045d4d573572c4ee22ebafe_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsubsection{Компонентні дані}
+\mbox{\Hypertarget{classOSDO_1_1vector_ab9f6230ec6f76d13bc65710b78275c66}\label{classOSDO_1_1vector_ab9f6230ec6f76d13bc65710b78275c66}} 
+\index{OSDO::vector$<$ T $>$@{OSDO::vector$<$ T $>$}!\_size@{\_size}}
+\index{\_size@{\_size}!OSDO::vector$<$ T $>$@{OSDO::vector$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{\_size}{\_size}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+size\+\_\+t \mbox{\hyperlink{classOSDO_1_1vector}{OSDO\+::vector}}$<$ T $>$\+::\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Поточний розмір масиву. 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{easyvector_8h_source}{easyvector.\+h}}, рядок \mbox{\hyperlink{easyvector_8h_source_l00027}{27}}
+
+\mbox{\Hypertarget{classOSDO_1_1vector_a2e389a3e97a6a442cffbfc8cbf67338f}\label{classOSDO_1_1vector_a2e389a3e97a6a442cffbfc8cbf67338f}} 
+\index{OSDO::vector$<$ T $>$@{OSDO::vector$<$ T $>$}!arr@{arr}}
+\index{arr@{arr}!OSDO::vector$<$ T $>$@{OSDO::vector$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{arr}{arr}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T$\ast$ \mbox{\hyperlink{classOSDO_1_1vector}{OSDO\+::vector}}$<$ T $>$\+::arr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Масив із елементами типу {\ttfamily T} 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{easyvector_8h_source}{easyvector.\+h}}, рядок \mbox{\hyperlink{easyvector_8h_source_l00023}{23}}
+
+
+
+Документація цього класу була створена з файлу\+:\begin{DoxyCompactItemize}
+\item 
+osdo/\mbox{\hyperlink{easyvector_8h}{easyvector.\+h}}\end{DoxyCompactItemize}

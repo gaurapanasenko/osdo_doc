@@ -1,0 +1,10 @@
+<map id="osdo/mesh.h" name="osdo/mesh.h">
+<area shape="rect" id="node1" title="Задає клас мешу, який зберігається на відеокарті." alt="" coords="123,5,221,32"/>
+<area shape="rect" id="node2" href="$osdo_8h.html" title=" " alt="" coords="132,155,193,181"/>
+<area shape="rect" id="node6" href="$model_8h.html" title="Задає інтерфейс моделі, яку можна відобразити." alt="" coords="231,80,299,107"/>
+<area shape="rect" id="node8" href="$vertex_8h.html" title="Задає cтруктуру вершини." alt="" coords="137,80,207,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,229,99,256"/>
+<area shape="rect" id="node4" title=" " alt="" coords="123,229,203,256"/>
+<area shape="rect" id="node5" title=" " alt="" coords="227,229,291,256"/>
+<area shape="rect" id="node7" title=" " alt="" coords="217,155,332,181"/>
+</map>

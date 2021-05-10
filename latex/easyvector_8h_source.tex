@@ -1,0 +1,123 @@
+\hypertarget{easyvector_8h_source}{}\doxysubsection{easyvector.\+h}
+\label{easyvector_8h_source}\index{osdo/easyvector.h@{osdo/easyvector.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/**}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * @file easyvector.h}}
+\DoxyCodeLine{00003 \textcolor{comment}{ * @brief Вектор що не змінює свій розмір.}}
+\DoxyCodeLine{00004 \textcolor{comment}{ */}}
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#ifndef EASYVECTOR\_H}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#define EASYVECTOR\_H}}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#include <cstring>}}
+\DoxyCodeLine{00009 \textcolor{preprocessor}{\#include <cstdlib>}}
+\DoxyCodeLine{00010 \textcolor{comment}{}}
+\DoxyCodeLine{00011 \textcolor{comment}{/**}}
+\DoxyCodeLine{00012 \textcolor{comment}{ * @brief Неймспейс бібліотеки `osdo`}}
+\DoxyCodeLine{00013 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{easyvector_8h_source_l00014}\mbox{\hyperlink{namespaceOSDO}{00014}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceOSDO}{OSDO}} \{\textcolor{comment}{}}
+\DoxyCodeLine{00015 \textcolor{comment}{/**}}
+\DoxyCodeLine{00016 \textcolor{comment}{ * @brief Вектор що не змінює свій розмір.}}
+\DoxyCodeLine{00017 \textcolor{comment}{ */}}
+\DoxyCodeLine{00018     \textcolor{keyword}{template}<\textcolor{keyword}{class} T>}
+\DoxyCodeLine{\Hypertarget{easyvector_8h_source_l00019}\mbox{\hyperlink{classOSDO_1_1vector}{00019}}     \textcolor{keyword}{class }\mbox{\hyperlink{classOSDO_1_1vector}{vector}} \{\textcolor{comment}{}}
+\DoxyCodeLine{00020 \textcolor{comment}{        /**}}
+\DoxyCodeLine{00021 \textcolor{comment}{         * @brief Масив із елементами типу `T`}}
+\DoxyCodeLine{00022 \textcolor{comment}{         */}}
+\DoxyCodeLine{\Hypertarget{easyvector_8h_source_l00023}\mbox{\hyperlink{classOSDO_1_1vector_a2e389a3e97a6a442cffbfc8cbf67338f}{00023}}         T * \mbox{\hyperlink{classOSDO_1_1vector_a2e389a3e97a6a442cffbfc8cbf67338f}{arr}};\textcolor{comment}{}}
+\DoxyCodeLine{00024 \textcolor{comment}{        /**}}
+\DoxyCodeLine{00025 \textcolor{comment}{         * @brief Поточний розмір масиву.}}
+\DoxyCodeLine{00026 \textcolor{comment}{         */}}
+\DoxyCodeLine{\Hypertarget{easyvector_8h_source_l00027}\mbox{\hyperlink{classOSDO_1_1vector_ab9f6230ec6f76d13bc65710b78275c66}{00027}}         \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{classOSDO_1_1vector_ab9f6230ec6f76d13bc65710b78275c66}{\_size}};\textcolor{comment}{}}
+\DoxyCodeLine{00028 \textcolor{comment}{        /**}}
+\DoxyCodeLine{00029 \textcolor{comment}{         * @brief Виділяє масив розміру `size`}}
+\DoxyCodeLine{00030 \textcolor{comment}{         * @param size розмір масиву}}
+\DoxyCodeLine{00031 \textcolor{comment}{         */}}
+\DoxyCodeLine{\Hypertarget{easyvector_8h_source_l00032}\mbox{\hyperlink{classOSDO_1_1vector_aec0eccb2296e433ed5f838f646c8b668}{00032}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classOSDO_1_1vector_aec0eccb2296e433ed5f838f646c8b668}{\_allocate}}(\textcolor{keywordtype}{size\_t} \mbox{\hyperlink{classOSDO_1_1vector_a53a792907045d4d573572c4ee22ebafe}{size}}) \{}
+\DoxyCodeLine{00033             \mbox{\hyperlink{classOSDO_1_1vector_ab9f6230ec6f76d13bc65710b78275c66}{\_size}} = 0;}
+\DoxyCodeLine{00034             \mbox{\hyperlink{classOSDO_1_1vector_a2e389a3e97a6a442cffbfc8cbf67338f}{arr}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00035             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classOSDO_1_1vector_a53a792907045d4d573572c4ee22ebafe}{size}})}
+\DoxyCodeLine{00036                 \mbox{\hyperlink{classOSDO_1_1vector_a2e389a3e97a6a442cffbfc8cbf67338f}{arr}} = \textcolor{keyword}{static\_cast<}T*\textcolor{keyword}{>}(calloc(\mbox{\hyperlink{classOSDO_1_1vector_a53a792907045d4d573572c4ee22ebafe}{size}}, \textcolor{keyword}{sizeof}(T)));}
+\DoxyCodeLine{00037             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classOSDO_1_1vector_a2e389a3e97a6a442cffbfc8cbf67338f}{arr}})}
+\DoxyCodeLine{00038                 \mbox{\hyperlink{classOSDO_1_1vector_ab9f6230ec6f76d13bc65710b78275c66}{\_size}} = \mbox{\hyperlink{classOSDO_1_1vector_a53a792907045d4d573572c4ee22ebafe}{size}};}
+\DoxyCodeLine{00039         \}\textcolor{comment}{}}
+\DoxyCodeLine{00040 \textcolor{comment}{        /**}}
+\DoxyCodeLine{00041 \textcolor{comment}{         * @brief Звільнює пам'ять від масиву.}}
+\DoxyCodeLine{00042 \textcolor{comment}{         */}}
+\DoxyCodeLine{\Hypertarget{easyvector_8h_source_l00043}\mbox{\hyperlink{classOSDO_1_1vector_af52bd53d2b8cb1c91279d7af33de0af3}{00043}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classOSDO_1_1vector_af52bd53d2b8cb1c91279d7af33de0af3}{\_free}}() \{}
+\DoxyCodeLine{00044             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classOSDO_1_1vector_a2e389a3e97a6a442cffbfc8cbf67338f}{arr}})}
+\DoxyCodeLine{00045                 free(\mbox{\hyperlink{classOSDO_1_1vector_a2e389a3e97a6a442cffbfc8cbf67338f}{arr}});}
+\DoxyCodeLine{00046             \mbox{\hyperlink{classOSDO_1_1vector_ab9f6230ec6f76d13bc65710b78275c66}{\_size}} = 0;}
+\DoxyCodeLine{00047             \mbox{\hyperlink{classOSDO_1_1vector_a2e389a3e97a6a442cffbfc8cbf67338f}{arr}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00048         \}\textcolor{comment}{}}
+\DoxyCodeLine{00049 \textcolor{comment}{        /**}}
+\DoxyCodeLine{00050 \textcolor{comment}{         * @brief Копіює масив.}}
+\DoxyCodeLine{00051 \textcolor{comment}{         * @param vector інший масив}}
+\DoxyCodeLine{00052 \textcolor{comment}{         */}}
+\DoxyCodeLine{\Hypertarget{easyvector_8h_source_l00053}\mbox{\hyperlink{classOSDO_1_1vector_a1d511b6a07c22ee8ff471c73cc4ad808}{00053}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classOSDO_1_1vector_a1d511b6a07c22ee8ff471c73cc4ad808}{\_copy}}(\textcolor{keyword}{const} \mbox{\hyperlink{classOSDO_1_1vector}{vector}}\& \mbox{\hyperlink{classOSDO_1_1vector}{vector}}) \{}
+\DoxyCodeLine{00054             \mbox{\hyperlink{classOSDO_1_1vector_aec0eccb2296e433ed5f838f646c8b668}{\_allocate}}(\mbox{\hyperlink{classOSDO_1_1vector}{vector}}.\mbox{\hyperlink{classOSDO_1_1vector_ab9f6230ec6f76d13bc65710b78275c66}{\_size}});}
+\DoxyCodeLine{00055             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classOSDO_1_1vector_ab9f6230ec6f76d13bc65710b78275c66}{\_size}})}
+\DoxyCodeLine{00056                 memcpy(\mbox{\hyperlink{classOSDO_1_1vector_a2e389a3e97a6a442cffbfc8cbf67338f}{arr}}, \mbox{\hyperlink{classOSDO_1_1vector}{vector}}.\mbox{\hyperlink{classOSDO_1_1vector_a2e389a3e97a6a442cffbfc8cbf67338f}{arr}}, \mbox{\hyperlink{classOSDO_1_1vector_ab9f6230ec6f76d13bc65710b78275c66}{\_size}} * \textcolor{keyword}{sizeof}(T));}
+\DoxyCodeLine{00057         \}\textcolor{comment}{}}
+\DoxyCodeLine{00058 \textcolor{comment}{        /**}}
+\DoxyCodeLine{00059 \textcolor{comment}{         * @brief Переміщює данні з іншого масиву.}}
+\DoxyCodeLine{00060 \textcolor{comment}{         * @param vector інший масив}}
+\DoxyCodeLine{00061 \textcolor{comment}{         */}}
+\DoxyCodeLine{\Hypertarget{easyvector_8h_source_l00062}\mbox{\hyperlink{classOSDO_1_1vector_a7c5eb8f8ad5a72cd1551152d8cb33061}{00062}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classOSDO_1_1vector_a7c5eb8f8ad5a72cd1551152d8cb33061}{\_move}}(\mbox{\hyperlink{classOSDO_1_1vector}{vector}}\& \mbox{\hyperlink{classOSDO_1_1vector}{vector}}) \{}
+\DoxyCodeLine{00063             \mbox{\hyperlink{classOSDO_1_1vector_a2e389a3e97a6a442cffbfc8cbf67338f}{arr}} = \mbox{\hyperlink{classOSDO_1_1vector}{vector}}.\mbox{\hyperlink{classOSDO_1_1vector_a2e389a3e97a6a442cffbfc8cbf67338f}{arr}};}
+\DoxyCodeLine{00064             \mbox{\hyperlink{classOSDO_1_1vector_ab9f6230ec6f76d13bc65710b78275c66}{\_size}} = \mbox{\hyperlink{classOSDO_1_1vector}{vector}}.\mbox{\hyperlink{classOSDO_1_1vector_ab9f6230ec6f76d13bc65710b78275c66}{\_size}};}
+\DoxyCodeLine{00065         \}}
+\DoxyCodeLine{00066     \textcolor{keyword}{public}:\textcolor{comment}{}}
+\DoxyCodeLine{00067 \textcolor{comment}{        /**}}
+\DoxyCodeLine{00068 \textcolor{comment}{         * @brief Конструктор з параметром розміру масиву}}
+\DoxyCodeLine{00069 \textcolor{comment}{         * @param size розмір массиву}}
+\DoxyCodeLine{00070 \textcolor{comment}{         */}}
+\DoxyCodeLine{\Hypertarget{easyvector_8h_source_l00071}\mbox{\hyperlink{classOSDO_1_1vector_a23d62d868c798c02c6056b59f986a4c5}{00071}}         \mbox{\hyperlink{classOSDO_1_1vector_a23d62d868c798c02c6056b59f986a4c5}{vector}}(\textcolor{keywordtype}{size\_t} \mbox{\hyperlink{classOSDO_1_1vector_a53a792907045d4d573572c4ee22ebafe}{size}} = 0) \{}
+\DoxyCodeLine{00072             \mbox{\hyperlink{classOSDO_1_1vector_aec0eccb2296e433ed5f838f646c8b668}{\_allocate}}(\mbox{\hyperlink{classOSDO_1_1vector_a53a792907045d4d573572c4ee22ebafe}{size}});}
+\DoxyCodeLine{00073         \}\textcolor{comment}{}}
+\DoxyCodeLine{00074 \textcolor{comment}{        /**}}
+\DoxyCodeLine{00075 \textcolor{comment}{         * @brief Конструктор переносу}}
+\DoxyCodeLine{00076 \textcolor{comment}{         * @param vector інший масив}}
+\DoxyCodeLine{00077 \textcolor{comment}{         */}}
+\DoxyCodeLine{\Hypertarget{easyvector_8h_source_l00078}\mbox{\hyperlink{classOSDO_1_1vector_a1d00bc9f72a815219d77bb186c461695}{00078}}         \mbox{\hyperlink{classOSDO_1_1vector_a1d00bc9f72a815219d77bb186c461695}{vector}}(\mbox{\hyperlink{classOSDO_1_1vector}{vector}}\&\& \mbox{\hyperlink{classOSDO_1_1vector}{vector}}) \{}
+\DoxyCodeLine{00079             \mbox{\hyperlink{classOSDO_1_1vector_a1d511b6a07c22ee8ff471c73cc4ad808}{\_copy}}(\mbox{\hyperlink{classOSDO_1_1vector}{vector}});}
+\DoxyCodeLine{00080         \}\textcolor{comment}{}}
+\DoxyCodeLine{00081 \textcolor{comment}{        /**}}
+\DoxyCodeLine{00082 \textcolor{comment}{         * @brief Конструктор копіювання}}
+\DoxyCodeLine{00083 \textcolor{comment}{         * @param vector інший масив}}
+\DoxyCodeLine{00084 \textcolor{comment}{         */}}
+\DoxyCodeLine{\Hypertarget{easyvector_8h_source_l00085}\mbox{\hyperlink{classOSDO_1_1vector_a3fd2a54ec52877d9036af6d69b3cdb87}{00085}}         \mbox{\hyperlink{classOSDO_1_1vector_a3fd2a54ec52877d9036af6d69b3cdb87}{vector}}(\textcolor{keyword}{const} \mbox{\hyperlink{classOSDO_1_1vector}{vector}}\& \mbox{\hyperlink{classOSDO_1_1vector}{vector}}) \{}
+\DoxyCodeLine{00086             \mbox{\hyperlink{classOSDO_1_1vector_a1d511b6a07c22ee8ff471c73cc4ad808}{\_copy}}(\mbox{\hyperlink{classOSDO_1_1vector}{vector}});}
+\DoxyCodeLine{00087         \}}
+\DoxyCodeLine{\Hypertarget{easyvector_8h_source_l00088}\mbox{\hyperlink{classOSDO_1_1vector_a226f310cd518da87ed699d62a39c89fe}{00088}}         \mbox{\hyperlink{classOSDO_1_1vector_a226f310cd518da87ed699d62a39c89fe}{\string~vector}}() \{\mbox{\hyperlink{classOSDO_1_1vector_af52bd53d2b8cb1c91279d7af33de0af3}{\_free}}();\}}
+\DoxyCodeLine{\Hypertarget{easyvector_8h_source_l00089}\mbox{\hyperlink{classOSDO_1_1vector_ad51b577ece8931d6074012e9258fe399}{00089}}         \mbox{\hyperlink{classOSDO_1_1vector}{vector}} \&\mbox{\hyperlink{classOSDO_1_1vector_ad51b577ece8931d6074012e9258fe399}{operator=}}(\mbox{\hyperlink{classOSDO_1_1vector}{vector}}\&\& \mbox{\hyperlink{classOSDO_1_1vector}{vector}}) \{}
+\DoxyCodeLine{00090             \mbox{\hyperlink{classOSDO_1_1vector_af52bd53d2b8cb1c91279d7af33de0af3}{\_free}}();}
+\DoxyCodeLine{00091             \mbox{\hyperlink{classOSDO_1_1vector_a1d511b6a07c22ee8ff471c73cc4ad808}{\_copy}}(\mbox{\hyperlink{classOSDO_1_1vector}{vector}});}
+\DoxyCodeLine{00092             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{00093         \}}
+\DoxyCodeLine{\Hypertarget{easyvector_8h_source_l00094}\mbox{\hyperlink{classOSDO_1_1vector_ad95e677cec3b613268414042e01797ef}{00094}}         \mbox{\hyperlink{classOSDO_1_1vector}{vector}} \&\mbox{\hyperlink{classOSDO_1_1vector_ad95e677cec3b613268414042e01797ef}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classOSDO_1_1vector}{vector}}\& \mbox{\hyperlink{classOSDO_1_1vector}{vector}}) \{}
+\DoxyCodeLine{00095             \mbox{\hyperlink{classOSDO_1_1vector_af52bd53d2b8cb1c91279d7af33de0af3}{\_free}}();}
+\DoxyCodeLine{00096             \mbox{\hyperlink{classOSDO_1_1vector_a1d511b6a07c22ee8ff471c73cc4ad808}{\_copy}}(\mbox{\hyperlink{classOSDO_1_1vector}{vector}});}
+\DoxyCodeLine{00097             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{00098         \}}
+\DoxyCodeLine{\Hypertarget{easyvector_8h_source_l00099}\mbox{\hyperlink{classOSDO_1_1vector_a9c1cf8e3879e21042b07e92896741716}{00099}}         T \&\mbox{\hyperlink{classOSDO_1_1vector_a9c1cf8e3879e21042b07e92896741716}{operator[]}}(\textcolor{keywordtype}{size\_t} i) \{}
+\DoxyCodeLine{00100             \textcolor{keywordflow}{return} \mbox{\hyperlink{classOSDO_1_1vector_a2e389a3e97a6a442cffbfc8cbf67338f}{arr}}[i];}
+\DoxyCodeLine{00101         \}}
+\DoxyCodeLine{\Hypertarget{easyvector_8h_source_l00102}\mbox{\hyperlink{classOSDO_1_1vector_a53a792907045d4d573572c4ee22ebafe}{00102}}         \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{classOSDO_1_1vector_a53a792907045d4d573572c4ee22ebafe}{size}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{00103             \textcolor{keywordflow}{return} \mbox{\hyperlink{classOSDO_1_1vector_ab9f6230ec6f76d13bc65710b78275c66}{\_size}};}
+\DoxyCodeLine{00104         \}}
+\DoxyCodeLine{\Hypertarget{easyvector_8h_source_l00105}\mbox{\hyperlink{classOSDO_1_1vector_a6bb34ecff9d845d2ed40fd41584c3b6b}{00105}}         T * \mbox{\hyperlink{classOSDO_1_1vector_a6bb34ecff9d845d2ed40fd41584c3b6b}{data}}() \{}
+\DoxyCodeLine{00106             \textcolor{keywordflow}{return} \mbox{\hyperlink{classOSDO_1_1vector_a2e389a3e97a6a442cffbfc8cbf67338f}{arr}};}
+\DoxyCodeLine{00107         \}}
+\DoxyCodeLine{\Hypertarget{easyvector_8h_source_l00108}\mbox{\hyperlink{classOSDO_1_1vector_a32d235a404975b405f85f5be45880fed}{00108}}         \textcolor{keyword}{const} T * \mbox{\hyperlink{classOSDO_1_1vector_a32d235a404975b405f85f5be45880fed}{data}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{00109             \textcolor{keywordflow}{return} \mbox{\hyperlink{classOSDO_1_1vector_a2e389a3e97a6a442cffbfc8cbf67338f}{arr}};}
+\DoxyCodeLine{00110         \}}
+\DoxyCodeLine{\Hypertarget{easyvector_8h_source_l00111}\mbox{\hyperlink{classOSDO_1_1vector_a0a5e04be2de5b09300bc29a34a8886ee}{00111}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classOSDO_1_1vector_a0a5e04be2de5b09300bc29a34a8886ee}{clear}}() \{}
+\DoxyCodeLine{00112             *\textcolor{keyword}{this} = \mbox{\hyperlink{classOSDO_1_1vector_a23d62d868c798c02c6056b59f986a4c5}{vector}}(0);}
+\DoxyCodeLine{00113         \}}
+\DoxyCodeLine{00114     \};}
+\DoxyCodeLine{00115 \}}
+\DoxyCodeLine{00116 }
+\DoxyCodeLine{00117 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// EASYVECTOR\_H}}
+
+\end{DoxyCode}

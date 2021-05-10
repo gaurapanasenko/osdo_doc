@@ -1,0 +1,4 @@
+<map id="Shader::set_mat3" name="Shader::set_mat3">
+<area shape="rect" id="node1" title="Задати поле шейдеру типу mat3" alt="" coords="5,5,131,32"/>
+<area shape="rect" id="node2" href="$classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7" title="Повертає індекс об&#39;єкту OpenGL." alt="" coords="179,5,307,32"/>
+</map>

@@ -1,0 +1,80 @@
+\hypertarget{image_8h_source}{}\doxysubsection{image.\+h}
+\label{image_8h_source}\index{osdo/image.h@{osdo/image.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/**}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * @file image.h}}
+\DoxyCodeLine{00003 \textcolor{comment}{ * @brief Задає клас, який зберігає масив пікселів, ширину та висоту.}}
+\DoxyCodeLine{00004 \textcolor{comment}{ */}}
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#ifndef IMAGE\_H}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#define IMAGE\_H}}
+\DoxyCodeLine{00007 \textcolor{preprocessor}{\#include <EASTL/shared\_ptr.h>}}
+\DoxyCodeLine{00008 \textcolor{comment}{}}
+\DoxyCodeLine{00009 \textcolor{comment}{/**}}
+\DoxyCodeLine{00010 \textcolor{comment}{ * Розмір пікселя у байтах}}
+\DoxyCodeLine{00011 \textcolor{comment}{ *}}
+\DoxyCodeLine{00012 \textcolor{comment}{ * Назва означає "{}компоненти"{} та взято з бібліотеки файлів заголовка `stb\_image.h`.}}
+\DoxyCodeLine{00013 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{image_8h_source_l00014}\mbox{\hyperlink{image_8h_a076912543697dbe4c46b79e8e44ad2fb}{00014}} \textcolor{preprocessor}{\#define COMP 4}}
+\DoxyCodeLine{00015 }
+\DoxyCodeLine{00016 \textcolor{keyword}{using} eastl::shared\_ptr;}
+\DoxyCodeLine{00017 \textcolor{comment}{}}
+\DoxyCodeLine{00018 \textcolor{comment}{/**}}
+\DoxyCodeLine{00019 \textcolor{comment}{ * @brief Тип каналу зображення.}}
+\DoxyCodeLine{00020 \textcolor{comment}{ * Використовується `unsigned char`, оскільки значення нашого каналу}}
+\DoxyCodeLine{00021 \textcolor{comment}{ * знаходяться в діапазоні [0, 255], таким чином канал займає 8-\/біт.}}
+\DoxyCodeLine{00022 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{image_8h_source_l00023}\mbox{\hyperlink{image_8h_ab508346f18b7af159376771cf584c4ba}{00023}} \textcolor{keyword}{typedef} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{image_8h_ab508346f18b7af159376771cf584c4ba}{channel\_t}};}
+\DoxyCodeLine{00024 \textcolor{comment}{}}
+\DoxyCodeLine{00025 \textcolor{comment}{/**}}
+\DoxyCodeLine{00026 \textcolor{comment}{ * @brief Тип пікселя.}}
+\DoxyCodeLine{00027 \textcolor{comment}{ * Один піксель має `COMP` каналів і канал визначений типом `channel\_t`.}}
+\DoxyCodeLine{00028 \textcolor{comment}{ * Використовується 8-\/бітний канал зі значеннями, що знаходяться в діапазоні [0, 255].}}
+\DoxyCodeLine{00029 \textcolor{comment}{ * Піксель має 4 канали (червоний, зелений, синій та альфа), тому займає 4 байти.}}
+\DoxyCodeLine{00030 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{image_8h_source_l00031}\mbox{\hyperlink{image_8h_a8e678b6802a89940a89c7343bec499f5}{00031}} \textcolor{keyword}{typedef} \mbox{\hyperlink{image_8h_ab508346f18b7af159376771cf584c4ba}{channel\_t}} \mbox{\hyperlink{image_8h_a8e678b6802a89940a89c7343bec499f5}{pixel\_t}}[\mbox{\hyperlink{image_8h_a076912543697dbe4c46b79e8e44ad2fb}{COMP}}];}
+\DoxyCodeLine{00032 \textcolor{comment}{}}
+\DoxyCodeLine{00033 \textcolor{comment}{/**}}
+\DoxyCodeLine{00034 \textcolor{comment}{ * @brief Зберігає масив пікселів, ширину та висоту.}}
+\DoxyCodeLine{00035 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{image_8h_source_l00036}\mbox{\hyperlink{classImage}{00036}} \textcolor{keyword}{class }\mbox{\hyperlink{classImage}{Image}}}
+\DoxyCodeLine{00037 \{}
+\DoxyCodeLine{00038 \textcolor{keyword}{public}:\textcolor{comment}{}}
+\DoxyCodeLine{00039 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00040 \textcolor{comment}{     * @brief Константнний масив пікселів.}}
+\DoxyCodeLine{00041 \textcolor{comment}{     * Зберігає розумний вказівник на масив пікселів зображення}}
+\DoxyCodeLine{00042 \textcolor{comment}{     * розміром висота*ширина.}}
+\DoxyCodeLine{00043 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{image_8h_source_l00044}\mbox{\hyperlink{classImage_a0bff7334a9e45a84e0503448af829bbb}{00044}}     shared\_ptr<const pixel\_t[]> \mbox{\hyperlink{classImage_a0bff7334a9e45a84e0503448af829bbb}{data}};\textcolor{comment}{}}
+\DoxyCodeLine{00045 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00046 \textcolor{comment}{     * @brief Ширина зображення.}}
+\DoxyCodeLine{00047 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{image_8h_source_l00048}\mbox{\hyperlink{classImage_a5be4b15e10ac6609ec9350e79e723246}{00048}}     \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{classImage_a5be4b15e10ac6609ec9350e79e723246}{width}};\textcolor{comment}{}}
+\DoxyCodeLine{00049 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00050 \textcolor{comment}{     * @brief Висота зображення.}}
+\DoxyCodeLine{00051 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{image_8h_source_l00052}\mbox{\hyperlink{classImage_adf1e0c7ecb8f09929175b5d4229beaad}{00052}}     \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{classImage_adf1e0c7ecb8f09929175b5d4229beaad}{height}};}
+\DoxyCodeLine{00053 \textcolor{comment}{}}
+\DoxyCodeLine{00054 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00055 \textcolor{comment}{     * @brief Конструктор для зображення.}}
+\DoxyCodeLine{00056 \textcolor{comment}{     * Зберігає посилання на масив пікселів,}}
+\DoxyCodeLine{00057 \textcolor{comment}{     * а також висоту та ширину зображення.}}
+\DoxyCodeLine{00058 \textcolor{comment}{     * @param data Розумне посилання на масив пікселів,}}
+\DoxyCodeLine{00059 \textcolor{comment}{     * розмір повинен бути `висота * ширина`.}}
+\DoxyCodeLine{00060 \textcolor{comment}{     * @param width Ширина зображення.}}
+\DoxyCodeLine{00061 \textcolor{comment}{     * @param height Висота зображення.}}
+\DoxyCodeLine{00062 \textcolor{comment}{     */}}
+\DoxyCodeLine{00063     \mbox{\hyperlink{classImage_ac14349d3c13c9d8181f327cf97586a02}{Image}}(shared\_ptr<\textcolor{keyword}{const} \mbox{\hyperlink{image_8h_a8e678b6802a89940a89c7343bec499f5}{pixel\_t}}[]> \mbox{\hyperlink{classImage_a0bff7334a9e45a84e0503448af829bbb}{data}},}
+\DoxyCodeLine{00064           \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{classImage_a5be4b15e10ac6609ec9350e79e723246}{width}}, \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{classImage_adf1e0c7ecb8f09929175b5d4229beaad}{height}});\textcolor{comment}{}}
+\DoxyCodeLine{00065 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00066 \textcolor{comment}{     * @brief Зчитування зображення з файлу.}}
+\DoxyCodeLine{00067 \textcolor{comment}{     * @param path Шлях до файлу зображення.}}
+\DoxyCodeLine{00068 \textcolor{comment}{     * @return клас `Image`, який посилається на пікселі.}}
+\DoxyCodeLine{00069 \textcolor{comment}{     */}}
+\DoxyCodeLine{00070     \textcolor{keyword}{static} \mbox{\hyperlink{classImage}{Image}} \mbox{\hyperlink{classImage_ac282669cfe2627b0feeadebeba74c35e}{fromFile}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *path);}
+\DoxyCodeLine{00071 \};}
+\DoxyCodeLine{00072 }
+\DoxyCodeLine{00073 }
+\DoxyCodeLine{00074 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// IMAGE\_H}}
+
+\end{DoxyCode}

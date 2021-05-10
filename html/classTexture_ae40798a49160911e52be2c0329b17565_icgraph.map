@@ -1,0 +1,4 @@
+<map id="Texture::make_2d_multisample" name="Texture::make_2d_multisample">
+<area shape="rect" id="node1" title="Створює текстуру з згладжуванням." alt="" coords="192,13,395,39"/>
+<area shape="rect" id="node2" href="$classFramebuffer.html#a0d90533a9cd82dd33ad45d7e49a722e0" title="Підготовлює текстуру з згладжуванням" alt="" coords="5,5,144,47"/>
+</map>

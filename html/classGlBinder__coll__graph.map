@@ -1,0 +1,4 @@
+<map id="GlBinder" name="GlBinder">
+<area shape="rect" id="node1" title="Клас який прив&#39;язує контексту до деякого об&#39;єкту OpenGL." alt="" coords="12,95,84,121"/>
+<area shape="rect" id="node2" href="$classGlBindable.html" title="Абстрактний клас, який виконує роль генерації та прив&#39;язки об&#39;єктів OpenGL." alt="" coords="5,5,91,32"/>
+</map>

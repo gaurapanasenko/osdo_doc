@@ -1,0 +1,56 @@
+\hypertarget{osdo_8h_source}{}\doxysubsection{osdo.\+h}
+\label{osdo_8h_source}\index{osdo/osdo.h@{osdo/osdo.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#ifndef OSDO\_H}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#define OSDO\_H}}
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{00004 \textcolor{preprocessor}{\#include <cglm/cglm.h>}}
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#include <GL/glew.h>}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#include <GL/gl.h>}}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 \textcolor{comment}{/*\#define max(a,b) \(\backslash\)}}
+\DoxyCodeLine{00009 \textcolor{comment}{  (\{ \_\_typeof\_\_ (a) \_a = (a); \(\backslash\)}}
+\DoxyCodeLine{00010 \textcolor{comment}{      \_\_typeof\_\_ (b) \_b = (b); \(\backslash\)}}
+\DoxyCodeLine{00011 \textcolor{comment}{    \_a > \_b ? \_a : \_b; \})*/}}
+\DoxyCodeLine{00012 \textcolor{comment}{}}
+\DoxyCodeLine{00013 \textcolor{comment}{/**}}
+\DoxyCodeLine{00014 \textcolor{comment}{ * @brief Координатні осі.}}
+\DoxyCodeLine{00015 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{osdo_8h_source_l00016}\mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ff}{00016}} \textcolor{keyword}{enum} \mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ff}{coord\_enum}} \{}
+\DoxyCodeLine{\Hypertarget{osdo_8h_source_l00017}\mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ffa58833a3110c570fb05130d40c365d1e4}{00017}}     \mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ffa58833a3110c570fb05130d40c365d1e4}{X}} = 0, \textcolor{comment}{/**< Ввісь X */}}
+\DoxyCodeLine{\Hypertarget{osdo_8h_source_l00018}\mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ffa5596231eabd6cf29050967d5ac83ad84}{00018}}     \mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ffa5596231eabd6cf29050967d5ac83ad84}{Y}} = 1, \textcolor{comment}{/**< Ввісь Y */}}
+\DoxyCodeLine{\Hypertarget{osdo_8h_source_l00019}\mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ffaa70478ce277ffc322f8e1e3418e07355}{00019}}     \mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ffaa70478ce277ffc322f8e1e3418e07355}{Z}} = 2, \textcolor{comment}{/**< Ввісь Z */}}
+\DoxyCodeLine{00020 \};}
+\DoxyCodeLine{00021 }
+\DoxyCodeLine{00022 \textcolor{preprocessor}{\#ifdef \_\_GNUC\_\_}}
+\DoxyCodeLine{00023 \textcolor{preprocessor}{\#define UNUSED \_\_attribute\_\_ ((unused))}}
+\DoxyCodeLine{00024 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{osdo_8h_source_l00025}\mbox{\hyperlink{osdo_8h_addf5ec070e9499d36b7f2009ce736076}{00025}} \textcolor{preprocessor}{\#define UNUSED}}
+\DoxyCodeLine{00026 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00027 \textcolor{comment}{}}
+\DoxyCodeLine{00028 \textcolor{comment}{/**}}
+\DoxyCodeLine{00029 \textcolor{comment}{ * @brief Перевантажений оператор `new` для EASTL}}
+\DoxyCodeLine{00030 \textcolor{comment}{ */}}
+\DoxyCodeLine{00031 \textcolor{keywordtype}{void}* \textcolor{keyword}{operator} \textcolor{keyword}{new}[](\textcolor{keywordtype}{size\_t} size, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* name, \textcolor{keywordtype}{int} flags,}
+\DoxyCodeLine{00032 \textcolor{keywordtype}{unsigned} debugFlags, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* file, \textcolor{keywordtype}{int} line);}
+\DoxyCodeLine{00033 \textcolor{comment}{}}
+\DoxyCodeLine{00034 \textcolor{comment}{/**}}
+\DoxyCodeLine{00035 \textcolor{comment}{ * @brief Перевантажений оператор `new` для EASTL}}
+\DoxyCodeLine{00036 \textcolor{comment}{ */}}
+\DoxyCodeLine{00037 \textcolor{keywordtype}{void}* \textcolor{keyword}{operator} \textcolor{keyword}{new}[](\textcolor{keywordtype}{size\_t} size, \textcolor{keywordtype}{size\_t} alignment, \textcolor{keywordtype}{size\_t} alignmentOffset,}
+\DoxyCodeLine{00038 \textcolor{keyword}{const} \textcolor{keywordtype}{char}* pName, \textcolor{keywordtype}{int} flags, \textcolor{keywordtype}{unsigned} debugFlags, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* file, \textcolor{keywordtype}{int} line);}
+\DoxyCodeLine{00039 \textcolor{comment}{}}
+\DoxyCodeLine{00040 \textcolor{comment}{/**}}
+\DoxyCodeLine{00041 \textcolor{comment}{ * @brief Початкова позиція камери.}}
+\DoxyCodeLine{00042 \textcolor{comment}{ */}}
+\DoxyCodeLine{00043 \textcolor{keyword}{extern} vec3 \mbox{\hyperlink{osdo_8h_a8027f0f98c35ea23923f0db84b86c05a}{BASIS0POS}};}
+\DoxyCodeLine{00044 \textcolor{comment}{//extern vec3 BASIS1POS;}}
+\DoxyCodeLine{00045 \textcolor{comment}{//extern vec3 BASIS2POS;}}
+\DoxyCodeLine{00046 }
+\DoxyCodeLine{00047 \textcolor{comment}{//extern vec3 BASIS1ROT;}}
+\DoxyCodeLine{00048 \textcolor{comment}{//extern vec3 BASIS2ROT;}}
+\DoxyCodeLine{00049 }
+\DoxyCodeLine{00050 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// OSDO\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Дипломна робота: Текст програми osdo/context.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Дипломна робота
+   </div>
+   <div id="projectbrief">студента групи ПА-17-2 Панасенка Єгора Сергійовича</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e0c7de59e470a6e6d29babac2e4befdd.html">osdo</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">context.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="context_8h.html">Див. документацію.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * @file context.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * @brief Контекст, який зберігає усі завантажені у пам&#39;ять ресурси.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef CONTEXT_H</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define CONTEXT_H</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="osdo_8h.html">osdo.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="object_8h.html">object.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;EASTL/hash_map.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;EASTL/string.h&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;EASTL/shared_ptr.h&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">using</span> eastl::hash_map;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">using</span> eastl::string;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using</span> eastl::shared_ptr;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">using</span> eastl::pair;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">using</span> eastl::make_shared;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">class </span><a class="code" href="classShader.html">Shader</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">class </span><a class="code" href="classTexture.html">Texture</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> * @brief Контекст, який зберігає усі завантажені у пам&#39;ять ресурси.</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structContext.html">   26</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structContext.html">Context</a></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{<span class="comment"></span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">     * @brief Тип для зберігання моделей.</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structContext.html#a0fb5343f40542412aa4089d22627f232">   31</a></span>&#160;    <span class="keyword">typedef</span> hash_map&lt;string, Object&gt; <a class="code" href="structContext.html#a0fb5343f40542412aa4089d22627f232">Models</a>;<span class="comment"></span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">     * @brief Тип для зберігання текстур.</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structContext.html#a6538db926f05f632413d3e83d02ba16d">   35</a></span>&#160;    <span class="keyword">typedef</span> hash_map&lt;string, shared_ptr&lt;Texture&gt;&gt; <a class="code" href="structContext.html#a6538db926f05f632413d3e83d02ba16d">Textures</a>;<span class="comment"></span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">     * @brief Завантажені моделі.</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structContext.html#adf5341866d506e12dca716c71367fdcf">   39</a></span>&#160;    <a class="code" href="structContext.html#a0fb5343f40542412aa4089d22627f232">Models</a> <a class="code" href="structContext.html#adf5341866d506e12dca716c71367fdcf">models</a>;<span class="comment"></span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">     * @brief Зкомпіловані шейдери.</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="structContext.html#ae6fcb1cace574a21fb21ccd678473d17">   43</a></span>&#160;    hash_map&lt;string, shared_ptr&lt;Shader&gt;&gt; <a class="code" href="structContext.html#ae6fcb1cace574a21fb21ccd678473d17">shaders</a>;<span class="comment"></span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">     * @brief Завантажені текстури.</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="structContext.html#acc023c5c78fc019ae50fac056ddf7226">   47</a></span>&#160;    <a class="code" href="structContext.html#a6538db926f05f632413d3e83d02ba16d">Textures</a> <a class="code" href="structContext.html#acc023c5c78fc019ae50fac056ddf7226">textures</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">     * @brief Вибрана модель для редагування.</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="structContext.html#a2495f12fa2a7e55cb4d6e7d514e58735">   52</a></span>&#160;    Models::iterator <a class="code" href="structContext.html#a2495f12fa2a7e55cb4d6e7d514e58735">active</a>;<span class="comment"></span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">     * @brief Вибрана текстура для відображення.</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="structContext.html#af6e358ab9890652b7c0accf7fcd1fc85">   56</a></span>&#160;    Textures::iterator <a class="code" href="structContext.html#af6e358ab9890652b7c0accf7fcd1fc85">active_texture</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="structContext.html#a652cdcd2eedc8dbd9110bd284c5d5cf0">Context</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">     * @brief перехід до наступної моделі для редагування.</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">     * @return ітератор моделі</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    Models::iterator &amp;<a class="code" href="structContext.html#ad93eb2d9c753907a173f0c534eb534ad">next_active</a>();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">     * @brief Завантажує текстуру у пам&#39;ять.</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">     * @param[in] path шлях до файлу з текстурою</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structContext.html#ae9498eceb6dd3257ac2e5e8fc904370c">load_texture</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *path);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">     * @brief Завантажує та компілює шейдер.</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">     * @param name назва шейдеру</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">     * @param shaders массив до файлів шейдеру</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">     * @return статус успішності завантаження та компіляції шейдеру</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structContext.html#a6b8babb597ca6c92a2ce8f9b62626a27">load_shader</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keyword">const</span> <a class="code" href="classShader.html#a37c1d8b706d1bc83800419d8776eeb23">Shader::shader_map</a>&amp; <a class="code" href="structContext.html#ae6fcb1cace574a21fb21ccd678473d17">shaders</a>);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">     * @brief Завантажує модель з поверхнями Безье</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">     * @param path шлях до файлу з моделлю</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">     * @return статус успішності завантаження моделі</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="structContext.html#a56633326b4d4430a41803dcb34f97ec2">   86</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structContext.html#a56633326b4d4430a41803dcb34f97ec2">load_model</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; path);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// CONTEXT_H</span></div>
+<div class="ttc" id="aclassShader_html"><div class="ttname"><a href="classShader.html">Shader</a></div><div class="ttdoc">Клас взаємодії з шейдером у видеокарті.</div><div class="ttdef"><b>Definition:</b> <a href="shader_8h_source.html#l00031">shader.h:31</a></div></div>
+<div class="ttc" id="aclassShader_html_a37c1d8b706d1bc83800419d8776eeb23"><div class="ttname"><a href="classShader.html#a37c1d8b706d1bc83800419d8776eeb23">Shader::shader_map</a></div><div class="ttdeci">hash_map&lt; ShaderType, string &gt; shader_map</div><div class="ttdoc">тип для зберігання шляхів файлів шейдеру по їх типам.</div><div class="ttdef"><b>Definition:</b> <a href="shader_8h_source.html#l00042">shader.h:42</a></div></div>
+<div class="ttc" id="aclassTexture_html"><div class="ttname"><a href="classTexture.html">Texture</a></div><div class="ttdoc">Клас текстури, що зберігаэться у відеокарті.</div><div class="ttdef"><b>Definition:</b> <a href="texture_8h_source.html#l00016">texture.h:17</a></div></div>
+<div class="ttc" id="aobject_8h_html"><div class="ttname"><a href="object_8h.html">object.h</a></div><div class="ttdoc">Задає клас об'єкту моделі.</div></div>
+<div class="ttc" id="aosdo_8h_html"><div class="ttname"><a href="osdo_8h.html">osdo.h</a></div></div>
+<div class="ttc" id="astructContext_html"><div class="ttname"><a href="structContext.html">Context</a></div><div class="ttdoc">Контекст, який зберігає усі завантажені у пам'ять ресурси.</div><div class="ttdef"><b>Definition:</b> <a href="context_8h_source.html#l00026">context.h:27</a></div></div>
+<div class="ttc" id="astructContext_html_a0fb5343f40542412aa4089d22627f232"><div class="ttname"><a href="structContext.html#a0fb5343f40542412aa4089d22627f232">Context::Models</a></div><div class="ttdeci">hash_map&lt; string, Object &gt; Models</div><div class="ttdoc">Тип для зберігання моделей.</div><div class="ttdef"><b>Definition:</b> <a href="context_8h_source.html#l00031">context.h:31</a></div></div>
+<div class="ttc" id="astructContext_html_a2495f12fa2a7e55cb4d6e7d514e58735"><div class="ttname"><a href="structContext.html#a2495f12fa2a7e55cb4d6e7d514e58735">Context::active</a></div><div class="ttdeci">Models::iterator active</div><div class="ttdoc">Вибрана модель для редагування.</div><div class="ttdef"><b>Definition:</b> <a href="context_8h_source.html#l00052">context.h:52</a></div></div>
+<div class="ttc" id="astructContext_html_a56633326b4d4430a41803dcb34f97ec2"><div class="ttname"><a href="structContext.html#a56633326b4d4430a41803dcb34f97ec2">Context::load_model</a></div><div class="ttdeci">bool load_model(const string &amp;path)</div><div class="ttdoc">Завантажує модель з поверхнями Безье</div></div>
+<div class="ttc" id="astructContext_html_a652cdcd2eedc8dbd9110bd284c5d5cf0"><div class="ttname"><a href="structContext.html#a652cdcd2eedc8dbd9110bd284c5d5cf0">Context::Context</a></div><div class="ttdeci">Context()</div><div class="ttdef"><b>Definition:</b> <a href="context_8cpp_source.html#l00006">context.cpp:6</a></div></div>
+<div class="ttc" id="astructContext_html_a6538db926f05f632413d3e83d02ba16d"><div class="ttname"><a href="structContext.html#a6538db926f05f632413d3e83d02ba16d">Context::Textures</a></div><div class="ttdeci">hash_map&lt; string, shared_ptr&lt; Texture &gt; &gt; Textures</div><div class="ttdoc">Тип для зберігання текстур.</div><div class="ttdef"><b>Definition:</b> <a href="context_8h_source.html#l00035">context.h:35</a></div></div>
+<div class="ttc" id="astructContext_html_a6b8babb597ca6c92a2ce8f9b62626a27"><div class="ttname"><a href="structContext.html#a6b8babb597ca6c92a2ce8f9b62626a27">Context::load_shader</a></div><div class="ttdeci">bool load_shader(const char *name, const Shader::shader_map &amp;shaders)</div><div class="ttdoc">Завантажує та компілює шейдер.</div><div class="ttdef"><b>Definition:</b> <a href="context_8cpp_source.html#l00026">context.cpp:26</a></div></div>
+<div class="ttc" id="astructContext_html_acc023c5c78fc019ae50fac056ddf7226"><div class="ttname"><a href="structContext.html#acc023c5c78fc019ae50fac056ddf7226">Context::textures</a></div><div class="ttdeci">Textures textures</div><div class="ttdoc">Завантажені текстури.</div><div class="ttdef"><b>Definition:</b> <a href="context_8h_source.html#l00047">context.h:47</a></div></div>
+<div class="ttc" id="astructContext_html_ad93eb2d9c753907a173f0c534eb534ad"><div class="ttname"><a href="structContext.html#ad93eb2d9c753907a173f0c534eb534ad">Context::next_active</a></div><div class="ttdeci">Models::iterator &amp; next_active()</div><div class="ttdoc">перехід до наступної моделі для редагування.</div><div class="ttdef"><b>Definition:</b> <a href="context_8cpp_source.html#l00010">context.cpp:10</a></div></div>
+<div class="ttc" id="astructContext_html_adf5341866d506e12dca716c71367fdcf"><div class="ttname"><a href="structContext.html#adf5341866d506e12dca716c71367fdcf">Context::models</a></div><div class="ttdeci">Models models</div><div class="ttdoc">Завантажені моделі.</div><div class="ttdef"><b>Definition:</b> <a href="context_8h_source.html#l00039">context.h:39</a></div></div>
+<div class="ttc" id="astructContext_html_ae6fcb1cace574a21fb21ccd678473d17"><div class="ttname"><a href="structContext.html#ae6fcb1cace574a21fb21ccd678473d17">Context::shaders</a></div><div class="ttdeci">hash_map&lt; string, shared_ptr&lt; Shader &gt; &gt; shaders</div><div class="ttdoc">Зкомпіловані шейдери.</div><div class="ttdef"><b>Definition:</b> <a href="context_8h_source.html#l00043">context.h:43</a></div></div>
+<div class="ttc" id="astructContext_html_ae9498eceb6dd3257ac2e5e8fc904370c"><div class="ttname"><a href="structContext.html#ae9498eceb6dd3257ac2e5e8fc904370c">Context::load_texture</a></div><div class="ttdeci">void load_texture(const char *path)</div><div class="ttdoc">Завантажує текстуру у пам'ять.</div><div class="ttdef"><b>Definition:</b> <a href="context_8cpp_source.html#l00017">context.cpp:17</a></div></div>
+<div class="ttc" id="astructContext_html_af6e358ab9890652b7c0accf7fcd1fc85"><div class="ttname"><a href="structContext.html#af6e358ab9890652b7c0accf7fcd1fc85">Context::active_texture</a></div><div class="ttdeci">Textures::iterator active_texture</div><div class="ttdoc">Вибрана текстура для відображення.</div><div class="ttdef"><b>Definition:</b> <a href="context_8h_source.html#l00056">context.h:56</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

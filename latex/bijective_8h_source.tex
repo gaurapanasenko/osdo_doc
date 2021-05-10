@@ -1,0 +1,90 @@
+\hypertarget{bijective_8h_source}{}\doxysubsection{bijective.\+h}
+\label{bijective_8h_source}\index{osdo/bijective.h@{osdo/bijective.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/**}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * @file bijective.h}}
+\DoxyCodeLine{00003 \textcolor{comment}{ * @brief Інтерфейс до об'єктів, що можуть можуть бути переміщені та повернуті у просторі.}}
+\DoxyCodeLine{00004 \textcolor{comment}{ */}}
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#ifndef BIJECTIVE\_H}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#define BIJECTIVE\_H}}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{osdo_8h}{osdo.h}}"{}}}
+\DoxyCodeLine{00009 \textcolor{comment}{}}
+\DoxyCodeLine{00010 \textcolor{comment}{/**}}
+\DoxyCodeLine{00011 \textcolor{comment}{ * @brief Інтерфейс до об'єктів, що можуть можуть бути переміщені та повернуті у просторі.}}
+\DoxyCodeLine{00012 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{bijective_8h_source_l00013}\mbox{\hyperlink{classBijective}{00013}} \textcolor{keyword}{class }\mbox{\hyperlink{classBijective}{Bijective}} \{}
+\DoxyCodeLine{00014 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{bijective_8h_source_l00015}\mbox{\hyperlink{classBijective_ab67be719c16f877c554f622567e878b4}{00015}}     \textcolor{keyword}{virtual} \mbox{\hyperlink{classBijective_ab67be719c16f877c554f622567e878b4}{\string~Bijective}}() \{\}}
+\DoxyCodeLine{00016 \textcolor{comment}{}}
+\DoxyCodeLine{00017 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00018 \textcolor{comment}{     * @brief Забирає поточну позицію об'єкта у просторі.}}
+\DoxyCodeLine{00019 \textcolor{comment}{     * @param[out] position поточна позицію об'єкта}}
+\DoxyCodeLine{00020 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{bijective_8h_source_l00021}\mbox{\hyperlink{classBijective_af0939112acd564a7c51728a222246a45}{00021}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classBijective_af0939112acd564a7c51728a222246a45}{get\_position}}(vec4 position) \{\}\textcolor{comment}{}}
+\DoxyCodeLine{00022 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00023 \textcolor{comment}{     * @brief Задає нову позицію об'єкта у просторі.}}
+\DoxyCodeLine{00024 \textcolor{comment}{     * @param[in] position нова позиція об'єкта у просторі}}
+\DoxyCodeLine{00025 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{bijective_8h_source_l00026}\mbox{\hyperlink{classBijective_ad91ff8fb9810bf530e9d393f99428130}{00026}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classBijective_ad91ff8fb9810bf530e9d393f99428130}{set\_position}}(vec4 position) \{\}}
+\DoxyCodeLine{00027 \textcolor{comment}{}}
+\DoxyCodeLine{00028 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00029 \textcolor{comment}{     * @brief Забирає поточний нахил об'єкта.}}
+\DoxyCodeLine{00030 \textcolor{comment}{     * @param[out] rotation поточний нахил  об'єкта}}
+\DoxyCodeLine{00031 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{bijective_8h_source_l00032}\mbox{\hyperlink{classBijective_a86168faf15a3a96e925fcd7e8b808b01}{00032}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classBijective_a86168faf15a3a96e925fcd7e8b808b01}{get\_rotation}}(vec3 rotation) \{\}\textcolor{comment}{}}
+\DoxyCodeLine{00033 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00034 \textcolor{comment}{     * @brief Задає новий нахил об'єкта.}}
+\DoxyCodeLine{00035 \textcolor{comment}{     * @param[in] rotation новий нахил об'єкта}}
+\DoxyCodeLine{00036 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{bijective_8h_source_l00037}\mbox{\hyperlink{classBijective_a41b82ac3c2ef05fa7c63913d4dac3e86}{00037}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classBijective_a41b82ac3c2ef05fa7c63913d4dac3e86}{set\_rotation}}(vec3 rotation) \{\}}
+\DoxyCodeLine{00038 \textcolor{comment}{}}
+\DoxyCodeLine{00039 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00040 \textcolor{comment}{     * @brief Забирає поточну анімацію обернення об'єкта.}}
+\DoxyCodeLine{00041 \textcolor{comment}{     * @param[out] rotation поточна анімація обернення об'єкта}}
+\DoxyCodeLine{00042 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{bijective_8h_source_l00043}\mbox{\hyperlink{classBijective_ae2901f2c23f284cacc1c4d20ca3e04b9}{00043}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classBijective_ae2901f2c23f284cacc1c4d20ca3e04b9}{get\_animation}}(vec3 rotation) \{\}\textcolor{comment}{}}
+\DoxyCodeLine{00044 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00045 \textcolor{comment}{     * @brief Задає нову анімацію обернення об'єкта.}}
+\DoxyCodeLine{00046 \textcolor{comment}{     * @param[in] rotation нова анімація обернення об'єкта.}}
+\DoxyCodeLine{00047 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{bijective_8h_source_l00048}\mbox{\hyperlink{classBijective_a4791c5545451015a1b7e099517430ca4}{00048}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classBijective_a4791c5545451015a1b7e099517430ca4}{set\_animation}}(vec3 rotation) \{\}}
+\DoxyCodeLine{00049 \textcolor{comment}{}}
+\DoxyCodeLine{00050 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00051 \textcolor{comment}{     * @brief Забирає матрицю лінійних перетворень над об'єктом.}}
+\DoxyCodeLine{00052 \textcolor{comment}{     * @param[out] matrix матриця лінійних перетворень}}
+\DoxyCodeLine{00053 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{bijective_8h_source_l00054}\mbox{\hyperlink{classBijective_ada286887158f78c0d1ad6cf2b18b9993}{00054}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classBijective_ada286887158f78c0d1ad6cf2b18b9993}{get\_mat4}}(mat4 matrix) \{\}}
+\DoxyCodeLine{00055 \textcolor{comment}{}}
+\DoxyCodeLine{00056 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00057 \textcolor{comment}{     * @brief Переміщує об'єкт у просторі.}}
+\DoxyCodeLine{00058 \textcolor{comment}{     *}}
+\DoxyCodeLine{00059 \textcolor{comment}{     * Переміщує об'єкт у просторі на відстані з аргументу `distances`,}}
+\DoxyCodeLine{00060 \textcolor{comment}{     * де кожне значення вектору позначає відстань відповідної осі.}}
+\DoxyCodeLine{00061 \textcolor{comment}{     * @param[in] distances відстані переміщення по осям}}
+\DoxyCodeLine{00062 \textcolor{comment}{     * @param[in] delta\_time скільки часу пройшло з останнього кадру}}
+\DoxyCodeLine{00063 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{bijective_8h_source_l00064}\mbox{\hyperlink{classBijective_a00595de58fb9732439f4b5f1ea3d9c6c}{00064}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classBijective_a00595de58fb9732439f4b5f1ea3d9c6c}{translate}}(vec3 distances, \textcolor{keywordtype}{float} delta\_time) \{\}\textcolor{comment}{}}
+\DoxyCodeLine{00065 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00066 \textcolor{comment}{     * @brief Обертає об'єкт.}}
+\DoxyCodeLine{00067 \textcolor{comment}{     * @param[in] coord позначає координатну вісь навколо якої обертати}}
+\DoxyCodeLine{00068 \textcolor{comment}{     * @param[in] delta\_time скільки часу пройшло з останнього кадру}}
+\DoxyCodeLine{00069 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{bijective_8h_source_l00070}\mbox{\hyperlink{classBijective_ad59a2e843e9805ffd902baf7185f4622}{00070}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classBijective_ad59a2e843e9805ffd902baf7185f4622}{rotate}}(\textcolor{keyword}{enum} \mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ff}{coord\_enum}} coord, \textcolor{keywordtype}{float} delta\_time) \{\}\textcolor{comment}{}}
+\DoxyCodeLine{00071 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00072 \textcolor{comment}{     * @brief Обернути об'єкт по всім осям.}}
+\DoxyCodeLine{00073 \textcolor{comment}{     * @param[in] angles вектор кутів у радіанах на кожну вісь}}
+\DoxyCodeLine{00074 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{bijective_8h_source_l00075}\mbox{\hyperlink{classBijective_abef32f8b820e8f12a1bc856fb85c1654}{00075}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classBijective_abef32f8b820e8f12a1bc856fb85c1654}{rotate\_all}}(vec3 angles) \{\}\textcolor{comment}{}}
+\DoxyCodeLine{00076 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00077 \textcolor{comment}{     * @brief Додає швидкість анімації обертання об'єкту.}}
+\DoxyCodeLine{00078 \textcolor{comment}{     * @param[in] angles вектор швидкостей анімацій обертання по трьом осям}}
+\DoxyCodeLine{00079 \textcolor{comment}{     * @param[in] delta\_time скільки часу пройшло з останнього кадру}}
+\DoxyCodeLine{00080 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{bijective_8h_source_l00081}\mbox{\hyperlink{classBijective_a193af7a2ea46d86fb32e5e86d2710940}{00081}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classBijective_a193af7a2ea46d86fb32e5e86d2710940}{add\_animation}}(vec3 angles, \textcolor{keywordtype}{float} delta\_time) \{\}}
+\DoxyCodeLine{00082 \};}
+\DoxyCodeLine{00083 }
+\DoxyCodeLine{00084 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// BIJECTIVE\_H}}
+
+\end{DoxyCode}

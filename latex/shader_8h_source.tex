@@ -1,0 +1,139 @@
+\hypertarget{shader_8h_source}{}\doxysubsection{shader.\+h}
+\label{shader_8h_source}\index{osdo/shader.h@{osdo/shader.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/**}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * @file shader.h}}
+\DoxyCodeLine{00003 \textcolor{comment}{ * @brief Задає клас шейдеру.}}
+\DoxyCodeLine{00004 \textcolor{comment}{ */}}
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#ifndef SHADER\_H}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#define SHADER\_H}}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{osdo_8h}{osdo.h}}"{}}}
+\DoxyCodeLine{00009 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{glbindable_8h}{glbindable.h}}"{}}}
+\DoxyCodeLine{00010 \textcolor{preprocessor}{\#include "{}EASTL/string.h"{}}}
+\DoxyCodeLine{00011 \textcolor{preprocessor}{\#include "{}EASTL/hash\_map.h"{}}}
+\DoxyCodeLine{00012 \textcolor{preprocessor}{\#include "{}EASTL/shared\_ptr.h"{}}}
+\DoxyCodeLine{00013 \textcolor{keyword}{using} eastl::string;}
+\DoxyCodeLine{00014 \textcolor{keyword}{using} eastl::hash\_map;}
+\DoxyCodeLine{00015 \textcolor{keyword}{using} eastl::shared\_ptr;}
+\DoxyCodeLine{00016 \textcolor{comment}{}}
+\DoxyCodeLine{00017 \textcolor{comment}{/**}}
+\DoxyCodeLine{00018 \textcolor{comment}{ * @brief Тип шейдеру}}
+\DoxyCodeLine{00019 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{shader_8h_source_l00020}\mbox{\hyperlink{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46}{00020}} \textcolor{keyword}{enum} \mbox{\hyperlink{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46}{ShaderType}} \{}
+\DoxyCodeLine{\Hypertarget{shader_8h_source_l00021}\mbox{\hyperlink{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46a5ba20b6e8c97b8dbd2b240a0a6c62036}{00021}}     \mbox{\hyperlink{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46a5ba20b6e8c97b8dbd2b240a0a6c62036}{VERT\_SHADER}}, \textcolor{comment}{/**< вершинний шейдер */}}
+\DoxyCodeLine{\Hypertarget{shader_8h_source_l00022}\mbox{\hyperlink{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46acbfaee266881f615c5ef456a906f51bf}{00022}}     \mbox{\hyperlink{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46acbfaee266881f615c5ef456a906f51bf}{TESC\_SHADER}}, \textcolor{comment}{/**< теселяційний контрольний шейдер */}}
+\DoxyCodeLine{\Hypertarget{shader_8h_source_l00023}\mbox{\hyperlink{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46a40f4e8253f67098f84518f2c9c7a94e8}{00023}}     \mbox{\hyperlink{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46a40f4e8253f67098f84518f2c9c7a94e8}{TESE\_SHADER}}, \textcolor{comment}{/**< теселяційний обчислювальний шейдер */}}
+\DoxyCodeLine{\Hypertarget{shader_8h_source_l00024}\mbox{\hyperlink{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46a4d347b773747cda93e76787970f93620}{00024}}     \mbox{\hyperlink{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46a4d347b773747cda93e76787970f93620}{GEOM\_SHADER}}, \textcolor{comment}{/**< геометричний шейдер */}}
+\DoxyCodeLine{\Hypertarget{shader_8h_source_l00025}\mbox{\hyperlink{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46a099050644e08e3ab6619bb1fb8c8164e}{00025}}     \mbox{\hyperlink{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46a099050644e08e3ab6619bb1fb8c8164e}{FRAG\_SHADER}}, \textcolor{comment}{/**< фрагмнтний шейдер */}}
+\DoxyCodeLine{00026 \};}
+\DoxyCodeLine{00027 \textcolor{comment}{}}
+\DoxyCodeLine{00028 \textcolor{comment}{/**}}
+\DoxyCodeLine{00029 \textcolor{comment}{ * @brief Клас взаємодії з шейдером у видеокарті.}}
+\DoxyCodeLine{00030 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{shader_8h_source_l00031}\mbox{\hyperlink{classShader}{00031}} \textcolor{keyword}{class }\mbox{\hyperlink{classShader}{Shader}} : \textcolor{keyword}{public} \mbox{\hyperlink{classGlBindable}{GlBindable}} \{\textcolor{comment}{}}
+\DoxyCodeLine{00032 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00033 \textcolor{comment}{     * @brief Віртуальний метод, що прив'язує контекст OpenGL до шейдеру.}}
+\DoxyCodeLine{00034 \textcolor{comment}{     * @param id індекс шейдеру OpenGL}}
+\DoxyCodeLine{00035 \textcolor{comment}{     * @param target не використовується, реалізован для інтерфейсу `GlBindable::\_bind`}}
+\DoxyCodeLine{00036 \textcolor{comment}{     */}}
+\DoxyCodeLine{00037     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classShader_ad4ef4f54ecb6c7950867d4f091ffbec9}{\_bind}}(\textcolor{keyword}{const} GLuint \textcolor{keywordtype}{id}, GLenum target) \textcolor{keyword}{const override};}
+\DoxyCodeLine{00038 \textcolor{keyword}{public}:\textcolor{comment}{}}
+\DoxyCodeLine{00039 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00040 \textcolor{comment}{     * @brief тип для зберігання шляхів файлів шейдеру по їх типам.}}
+\DoxyCodeLine{00041 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{shader_8h_source_l00042}\mbox{\hyperlink{classShader_a37c1d8b706d1bc83800419d8776eeb23}{00042}}     \textcolor{keyword}{typedef} hash\_map<ShaderType, string> \mbox{\hyperlink{classShader_a37c1d8b706d1bc83800419d8776eeb23}{shader\_map}};}
+\DoxyCodeLine{00043     \mbox{\hyperlink{classShader_af878abbd5ebf1a17e1df35dd9933f4e8}{Shader}}(\textcolor{keyword}{const} GLuint shader);}
+\DoxyCodeLine{00044     \mbox{\hyperlink{classShader_ad3825ce04340dcb4c3fe7eea5a1c46d2}{\string~Shader}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{00045 \textcolor{comment}{}}
+\DoxyCodeLine{00046 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00047 \textcolor{comment}{     * @brief Створює об'єкт шейдеру за заданими шляхами файлів шейдерів.}}
+\DoxyCodeLine{00048 \textcolor{comment}{     * @param shaders\_paths шляхи файлів шейдеру по їх типам}}
+\DoxyCodeLine{00049 \textcolor{comment}{     * @return розумний вказівник на об'єкт шейдеру}}
+\DoxyCodeLine{00050 \textcolor{comment}{     */}}
+\DoxyCodeLine{00051     \textcolor{keyword}{static} shared\_ptr<Shader> \mbox{\hyperlink{classShader_aea711ca1659af57fe4124ea318aa59c1}{create}}(\textcolor{keyword}{const} \mbox{\hyperlink{classShader_a37c1d8b706d1bc83800419d8776eeb23}{shader\_map}}\& shaders\_paths);}
+\DoxyCodeLine{00052 \textcolor{comment}{}}
+\DoxyCodeLine{00053 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00054 \textcolor{comment}{     * @brief Задати поле шейдеру типу `bool`}}
+\DoxyCodeLine{00055 \textcolor{comment}{     * @param name ім'я поля}}
+\DoxyCodeLine{00056 \textcolor{comment}{     * @param value значення поля}}
+\DoxyCodeLine{00057 \textcolor{comment}{     */}}
+\DoxyCodeLine{00058     \textcolor{keywordtype}{void} \mbox{\hyperlink{classShader_a4581e5cba0fa25ab7080a6848543dc58}{set\_bool}} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name, \textcolor{keywordtype}{bool} value);\textcolor{comment}{}}
+\DoxyCodeLine{00059 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00060 \textcolor{comment}{     * @brief Задати поле шейдеру типу `int`}}
+\DoxyCodeLine{00061 \textcolor{comment}{     * @param name ім'я поля}}
+\DoxyCodeLine{00062 \textcolor{comment}{     * @param value значення поля}}
+\DoxyCodeLine{00063 \textcolor{comment}{     */}}
+\DoxyCodeLine{00064     \textcolor{keywordtype}{void} \mbox{\hyperlink{classShader_a5544845a48d60515371b5cb71c7bcb8f}{set\_int}}  (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name, \textcolor{keywordtype}{int} value);\textcolor{comment}{}}
+\DoxyCodeLine{00065 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00066 \textcolor{comment}{     * @brief Задати поле шейдеру типу `float`}}
+\DoxyCodeLine{00067 \textcolor{comment}{     * @param name ім'я поля}}
+\DoxyCodeLine{00068 \textcolor{comment}{     * @param value значення поля}}
+\DoxyCodeLine{00069 \textcolor{comment}{     */}}
+\DoxyCodeLine{00070     \textcolor{keywordtype}{void} \mbox{\hyperlink{classShader_a6e686eb1dd9e36aa617397520b669497}{set\_float}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name, \textcolor{keywordtype}{float} value);\textcolor{comment}{}}
+\DoxyCodeLine{00071 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00072 \textcolor{comment}{     * @brief Задати поле шейдеру типу `vec2`}}
+\DoxyCodeLine{00073 \textcolor{comment}{     * @param name ім'я поля}}
+\DoxyCodeLine{00074 \textcolor{comment}{     * @param value значення поля}}
+\DoxyCodeLine{00075 \textcolor{comment}{     */}}
+\DoxyCodeLine{00076     \textcolor{keywordtype}{void} \mbox{\hyperlink{classShader_aec16390e257fd63c173336869cda6488}{set\_vec2}} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name, vec2 value);\textcolor{comment}{}}
+\DoxyCodeLine{00077 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00078 \textcolor{comment}{     * @brief Задати вектор-\/поле шейдеру типу `vec2`}}
+\DoxyCodeLine{00079 \textcolor{comment}{     * @param name ім'я поля}}
+\DoxyCodeLine{00080 \textcolor{comment}{     * @param x значення першого элементу вектор-\/поля}}
+\DoxyCodeLine{00081 \textcolor{comment}{     * @param y значення другого элементу вектор-\/поля}}
+\DoxyCodeLine{00082 \textcolor{comment}{     */}}
+\DoxyCodeLine{00083     \textcolor{keywordtype}{void} \mbox{\hyperlink{classShader_a9c15d92dae60d9bebc5a8e05e7e16771}{set\_vec2f}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name, \textcolor{keywordtype}{float} x, \textcolor{keywordtype}{float} y);\textcolor{comment}{}}
+\DoxyCodeLine{00084 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00085 \textcolor{comment}{     * @brief Задати поле шейдеру типу `vec3`}}
+\DoxyCodeLine{00086 \textcolor{comment}{     * @param name ім'я поля}}
+\DoxyCodeLine{00087 \textcolor{comment}{     * @param value значення поля}}
+\DoxyCodeLine{00088 \textcolor{comment}{     */}}
+\DoxyCodeLine{00089     \textcolor{keywordtype}{void} \mbox{\hyperlink{classShader_a5da8dde2a4756ce7f5da98f4e3dd9990}{set\_vec3}} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name, vec3 value);\textcolor{comment}{}}
+\DoxyCodeLine{00090 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00091 \textcolor{comment}{     * @brief Задати вектор-\/поле шейдеру типу `vec3`}}
+\DoxyCodeLine{00092 \textcolor{comment}{     * @param name ім'я поля}}
+\DoxyCodeLine{00093 \textcolor{comment}{     * @param x значення першого элементу вектор-\/поля}}
+\DoxyCodeLine{00094 \textcolor{comment}{     * @param y значення другого элементу вектор-\/поля}}
+\DoxyCodeLine{00095 \textcolor{comment}{     * @param z значення третього элементу вектор-\/поля}}
+\DoxyCodeLine{00096 \textcolor{comment}{     */}}
+\DoxyCodeLine{00097     \textcolor{keywordtype}{void} \mbox{\hyperlink{classShader_a8ab6219e3f760caa7a586061a9894096}{set\_vec3f}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name, \textcolor{keywordtype}{float} x, \textcolor{keywordtype}{float} y, \textcolor{keywordtype}{float} z);\textcolor{comment}{}}
+\DoxyCodeLine{00098 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00099 \textcolor{comment}{     * @brief Задати поле шейдеру типу `vec4`}}
+\DoxyCodeLine{00100 \textcolor{comment}{     * @param name ім'я поля}}
+\DoxyCodeLine{00101 \textcolor{comment}{     * @param value значення поля}}
+\DoxyCodeLine{00102 \textcolor{comment}{     */}}
+\DoxyCodeLine{00103     \textcolor{keywordtype}{void} \mbox{\hyperlink{classShader_a77c606dadf7b56b825fa02621f13fac3}{set\_vec4}} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name, vec4 value);\textcolor{comment}{}}
+\DoxyCodeLine{00104 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00105 \textcolor{comment}{     * @brief Задати вектор-\/поле шейдеру типу `vec4`}}
+\DoxyCodeLine{00106 \textcolor{comment}{     * @param name ім'я поля}}
+\DoxyCodeLine{00107 \textcolor{comment}{     * @param x значення першого элементу вектор-\/поля}}
+\DoxyCodeLine{00108 \textcolor{comment}{     * @param y значення другого элементу вектор-\/поля}}
+\DoxyCodeLine{00109 \textcolor{comment}{     * @param z значення третього элементу вектор-\/поля}}
+\DoxyCodeLine{00110 \textcolor{comment}{     * @param w значення четвертого элементу вектор-\/поля}}
+\DoxyCodeLine{00111 \textcolor{comment}{     */}}
+\DoxyCodeLine{00112     \textcolor{keywordtype}{void} \mbox{\hyperlink{classShader_a52615fe5f2d1528baa909dcbeab6fcb3}{set\_vec4f}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name, \textcolor{keywordtype}{float} x, \textcolor{keywordtype}{float} y, \textcolor{keywordtype}{float} z, \textcolor{keywordtype}{float} w);\textcolor{comment}{}}
+\DoxyCodeLine{00113 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00114 \textcolor{comment}{     * @brief Задати поле шейдеру типу `mat2`}}
+\DoxyCodeLine{00115 \textcolor{comment}{     * @param name ім'я поля}}
+\DoxyCodeLine{00116 \textcolor{comment}{     * @param mat значення поля}}
+\DoxyCodeLine{00117 \textcolor{comment}{     */}}
+\DoxyCodeLine{00118     \textcolor{keywordtype}{void} \mbox{\hyperlink{classShader_a249093af915275a1e25d21ab70bfc4f9}{set\_mat2}} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name, mat2 mat);\textcolor{comment}{}}
+\DoxyCodeLine{00119 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00120 \textcolor{comment}{     * @brief Задати поле шейдеру типу `mat3`}}
+\DoxyCodeLine{00121 \textcolor{comment}{     * @param name ім'я поля}}
+\DoxyCodeLine{00122 \textcolor{comment}{     * @param mat значення поля}}
+\DoxyCodeLine{00123 \textcolor{comment}{     */}}
+\DoxyCodeLine{00124     \textcolor{keywordtype}{void} \mbox{\hyperlink{classShader_a9d871b7a0436c84096f1b294083a3ed7}{set\_mat3}} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name, mat3 mat);\textcolor{comment}{}}
+\DoxyCodeLine{00125 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00126 \textcolor{comment}{     * @brief Задати поле шейдеру типу `mat4`}}
+\DoxyCodeLine{00127 \textcolor{comment}{     * @param name ім'я поля}}
+\DoxyCodeLine{00128 \textcolor{comment}{     * @param mat значення поля}}
+\DoxyCodeLine{00129 \textcolor{comment}{     */}}
+\DoxyCodeLine{00130     \textcolor{keywordtype}{void} \mbox{\hyperlink{classShader_a34d5548a520489bd132f5bfbc46bb3a9}{set\_mat4}} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name, mat4 mat);}
+\DoxyCodeLine{00131 \};}
+\DoxyCodeLine{00132 }
+\DoxyCodeLine{00133 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// SHADER\_H}}
+
+\end{DoxyCode}

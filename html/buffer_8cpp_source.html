@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Дипломна робота: Текст програми osdo/buffer.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Дипломна робота
+   </div>
+   <div id="projectbrief">студента групи ПА-17-2 Панасенка Єгора Сергійовича</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e0c7de59e470a6e6d29babac2e4befdd.html">osdo</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">buffer.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="buffer_8cpp.html">Див. документацію.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="buffer_8h.html">buffer.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="glbinder_8h.html">glbinder.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//static GLenum DRAW_BUFFERS[] = {GL_COLOR_ATTACHMENT0};</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classBuffer.html#a1fc0873aa0dd87e47da962f32110b03e">    6</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classBuffer.html#a1fc0873aa0dd87e47da962f32110b03e">Buffer::pre_render</a>(GLsizei size[2]) {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    this-&gt;<a class="code" href="classBuffer.html#a4dfc88865a8457c1ac0e590239c8d109">ms_fb</a>.<a class="code" href="classGlBindable.html#a221cf1ca728041bc2545f27a5e3004e0">bind</a>();</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    this-&gt;<a class="code" href="classBuffer.html#a4dfc88865a8457c1ac0e590239c8d109">ms_fb</a>.<a class="code" href="classFramebuffer.html#a28bda5ab4a57e13e49280d745dbf35b0">rb_color_multisample</a>(size, this-&gt;<a class="code" href="classBuffer.html#a2f3e346b7f027511c34983936f57a360">color_rb</a>);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    this-&gt;<a class="code" href="classBuffer.html#a4dfc88865a8457c1ac0e590239c8d109">ms_fb</a>.<a class="code" href="classFramebuffer.html#a3c14a0980ae1369f964c0bc05c3ea4dd">rb_depth_multisample</a>(size, this-&gt;<a class="code" href="classBuffer.html#a1fa066668c11e375e09b3ac05575af86">depth_rb</a>);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">if</span> (!this-&gt;<a class="code" href="classBuffer.html#a4dfc88865a8457c1ac0e590239c8d109">ms_fb</a>.<a class="code" href="classFramebuffer.html#afa8771e517776fde7edf0a0b07b6e91b">check</a>()) {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    }</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    glEnable(GL_DEPTH_TEST);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    glViewport(0, 0, size[0], size[1]);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classBuffer.html#a2546d46567336e00cb66d53585ebbbd7">   21</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classBuffer.html#a2546d46567336e00cb66d53585ebbbd7">Buffer::post_render</a>(GLsizei size[2]) {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    this-&gt;<a class="code" href="classBuffer.html#a4dfc88865a8457c1ac0e590239c8d109">ms_fb</a>.<a class="code" href="classGlBindable.html#a6ddfcf2b3f3b34872005ca281a9573eb">unbind</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="classGlBinder.html">GlBinder</a> b = this-&gt;<a class="code" href="classBuffer.html#a0e59570248c5a6195f5c9e88201c7d5d">fb</a>.<a class="code" href="classGlBindable.html#ad3194126ecaf5285842cee0e7d28c951">binder</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        this-&gt;<a class="code" href="classBuffer.html#a0e59570248c5a6195f5c9e88201c7d5d">fb</a>.<a class="code" href="classFramebuffer.html#a2d6e0ef178e7199df8149d53b12d93e0">tex_2d</a>(size, this-&gt;<a class="code" href="classBuffer.html#a0f6f91cd8ed9970868265d7e85b76d8b">tex</a>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classGlBinder.html">GlBinder</a> b1 = this-&gt;<a class="code" href="classBuffer.html#a4dfc88865a8457c1ac0e590239c8d109">ms_fb</a>.<a class="code" href="classGlBindable.html#ad3194126ecaf5285842cee0e7d28c951">binder</a>(GL_READ_FRAMEBUFFER),</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            b2 = this-&gt;<a class="code" href="classBuffer.html#a0e59570248c5a6195f5c9e88201c7d5d">fb</a>.<a class="code" href="classGlBindable.html#ad3194126ecaf5285842cee0e7d28c951">binder</a>(GL_DRAW_FRAMEBUFFER);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    glBlitFramebuffer(0, 0, size[0], size[1], 0, 0, size[0], size[1],</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            GL_COLOR_BUFFER_BIT, GL_NEAREST);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classBuffer.html#a83f8f07b7743b697cc5d0d78dfc0b9db">   35</a></span>&#160;<span class="keyword">const</span> <a class="code" href="classTexture.html">Texture</a> &amp;<a class="code" href="classBuffer.html#a83f8f07b7743b697cc5d0d78dfc0b9db">Buffer::get_tex</a>() {<span class="keywordflow">return</span> <a class="code" href="classBuffer.html#a0f6f91cd8ed9970868265d7e85b76d8b">tex</a>;}</div>
+<div class="ttc" id="abuffer_8h_html"><div class="ttname"><a href="buffer_8h.html">buffer.h</a></div><div class="ttdoc">Буфер, у якому відбувається рендеринг у текстуру.</div></div>
+<div class="ttc" id="aclassBuffer_html_a0e59570248c5a6195f5c9e88201c7d5d"><div class="ttname"><a href="classBuffer.html#a0e59570248c5a6195f5c9e88201c7d5d">Buffer::fb</a></div><div class="ttdeci">Framebuffer fb</div><div class="ttdoc">Кінцевий буфер утвореного кадру.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00036">buffer.h:36</a></div></div>
+<div class="ttc" id="aclassBuffer_html_a0f6f91cd8ed9970868265d7e85b76d8b"><div class="ttname"><a href="classBuffer.html#a0f6f91cd8ed9970868265d7e85b76d8b">Buffer::tex</a></div><div class="ttdeci">Texture tex</div><div class="ttdoc">Текстура у яку відбувається рендеринг.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00020">buffer.h:20</a></div></div>
+<div class="ttc" id="aclassBuffer_html_a1fa066668c11e375e09b3ac05575af86"><div class="ttname"><a href="classBuffer.html#a1fa066668c11e375e09b3ac05575af86">Buffer::depth_rb</a></div><div class="ttdeci">Renderbuffer depth_rb</div><div class="ttdoc">Глибинний буфер для рендеренгу.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00028">buffer.h:28</a></div></div>
+<div class="ttc" id="aclassBuffer_html_a1fc0873aa0dd87e47da962f32110b03e"><div class="ttname"><a href="classBuffer.html#a1fc0873aa0dd87e47da962f32110b03e">Buffer::pre_render</a></div><div class="ttdeci">bool pre_render(GLsizei size[2])</div><div class="ttdoc">Підгодовка до рендеренгу.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8cpp_source.html#l00006">buffer.cpp:6</a></div></div>
+<div class="ttc" id="aclassBuffer_html_a2546d46567336e00cb66d53585ebbbd7"><div class="ttname"><a href="classBuffer.html#a2546d46567336e00cb66d53585ebbbd7">Buffer::post_render</a></div><div class="ttdeci">void post_render(GLsizei size[2])</div><div class="ttdoc">Генерація текстури з утвореного кадру.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8cpp_source.html#l00021">buffer.cpp:21</a></div></div>
+<div class="ttc" id="aclassBuffer_html_a2f3e346b7f027511c34983936f57a360"><div class="ttname"><a href="classBuffer.html#a2f3e346b7f027511c34983936f57a360">Buffer::color_rb</a></div><div class="ttdeci">Renderbuffer color_rb</div><div class="ttdoc">Буфер кольорів для рендеренгу.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00024">buffer.h:24</a></div></div>
+<div class="ttc" id="aclassBuffer_html_a4dfc88865a8457c1ac0e590239c8d109"><div class="ttname"><a href="classBuffer.html#a4dfc88865a8457c1ac0e590239c8d109">Buffer::ms_fb</a></div><div class="ttdeci">Framebuffer ms_fb</div><div class="ttdoc">Буфер утвореного кадру рендеренгу із згладжуванням.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00032">buffer.h:32</a></div></div>
+<div class="ttc" id="aclassBuffer_html_a83f8f07b7743b697cc5d0d78dfc0b9db"><div class="ttname"><a href="classBuffer.html#a83f8f07b7743b697cc5d0d78dfc0b9db">Buffer::get_tex</a></div><div class="ttdeci">const Texture &amp; get_tex()</div><div class="ttdoc">Забирає текстуру у яку проводився рендеринг.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8cpp_source.html#l00035">buffer.cpp:35</a></div></div>
+<div class="ttc" id="aclassFramebuffer_html_a28bda5ab4a57e13e49280d745dbf35b0"><div class="ttname"><a href="classFramebuffer.html#a28bda5ab4a57e13e49280d745dbf35b0">Framebuffer::rb_color_multisample</a></div><div class="ttdeci">void rb_color_multisample(GLsizei size[2], const Renderbuffer &amp;rb) const</div><div class="ttdoc">Підготовлює рендер буфер з згладжуванням для зберігання кольорів.</div><div class="ttdef"><b>Definition:</b> <a href="framebuffer_8cpp_source.html#l00049">framebuffer.cpp:49</a></div></div>
+<div class="ttc" id="aclassFramebuffer_html_a2d6e0ef178e7199df8149d53b12d93e0"><div class="ttname"><a href="classFramebuffer.html#a2d6e0ef178e7199df8149d53b12d93e0">Framebuffer::tex_2d</a></div><div class="ttdeci">void tex_2d(GLsizei size[2], const Texture &amp;texture)</div><div class="ttdoc">Підготовлює звичайну текстуру</div><div class="ttdef"><b>Definition:</b> <a href="framebuffer_8cpp_source.html#l00038">framebuffer.cpp:38</a></div></div>
+<div class="ttc" id="aclassFramebuffer_html_a3c14a0980ae1369f964c0bc05c3ea4dd"><div class="ttname"><a href="classFramebuffer.html#a3c14a0980ae1369f964c0bc05c3ea4dd">Framebuffer::rb_depth_multisample</a></div><div class="ttdeci">void rb_depth_multisample(GLsizei size[2], const Renderbuffer &amp;rb) const</div><div class="ttdoc">Підготовлює глибинний рендер буфер з згладжуванням.</div><div class="ttdef"><b>Definition:</b> <a href="framebuffer_8cpp_source.html#l00055">framebuffer.cpp:55</a></div></div>
+<div class="ttc" id="aclassFramebuffer_html_afa8771e517776fde7edf0a0b07b6e91b"><div class="ttname"><a href="classFramebuffer.html#afa8771e517776fde7edf0a0b07b6e91b">Framebuffer::check</a></div><div class="ttdeci">bool check(GLenum target=GL_FRAMEBUFFER)</div><div class="ttdoc">Перевіряє, чи готовий буфер до рендеренгу.</div><div class="ttdef"><b>Definition:</b> <a href="framebuffer_8cpp_source.html#l00028">framebuffer.cpp:28</a></div></div>
+<div class="ttc" id="aclassGlBindable_html_a221cf1ca728041bc2545f27a5e3004e0"><div class="ttname"><a href="classGlBindable.html#a221cf1ca728041bc2545f27a5e3004e0">GlBindable::bind</a></div><div class="ttdeci">void bind() const</div><div class="ttdoc">Прив'язує контекст до об'єкту із ціллю за замовчуванням.</div><div class="ttdef"><b>Definition:</b> <a href="glbindable_8cpp_source.html#l00030">glbindable.cpp:30</a></div></div>
+<div class="ttc" id="aclassGlBindable_html_a6ddfcf2b3f3b34872005ca281a9573eb"><div class="ttname"><a href="classGlBindable.html#a6ddfcf2b3f3b34872005ca281a9573eb">GlBindable::unbind</a></div><div class="ttdeci">void unbind() const</div><div class="ttdoc">Відв'язує контекст до об'єкту із ціллю за замовчуванням.</div><div class="ttdef"><b>Definition:</b> <a href="glbindable_8cpp_source.html#l00040">glbindable.cpp:40</a></div></div>
+<div class="ttc" id="aclassGlBindable_html_ad3194126ecaf5285842cee0e7d28c951"><div class="ttname"><a href="classGlBindable.html#ad3194126ecaf5285842cee0e7d28c951">GlBindable::binder</a></div><div class="ttdeci">GlBinder binder() const</div><div class="ttdoc">Повертає об'єкт прив'язки контексту із ціллю за замовчуванням</div><div class="ttdef"><b>Definition:</b> <a href="glbindable_8cpp_source.html#l00050">glbindable.cpp:50</a></div></div>
+<div class="ttc" id="aclassGlBinder_html"><div class="ttname"><a href="classGlBinder.html">GlBinder</a></div><div class="ttdoc">Клас який прив'язує контексту до деякого об'єкту OpenGL.</div><div class="ttdef"><b>Definition:</b> <a href="glbinder_8h_source.html#l00015">glbinder.h:16</a></div></div>
+<div class="ttc" id="aclassTexture_html"><div class="ttname"><a href="classTexture.html">Texture</a></div><div class="ttdoc">Клас текстури, що зберігаэться у відеокарті.</div><div class="ttdef"><b>Definition:</b> <a href="texture_8h_source.html#l00016">texture.h:17</a></div></div>
+<div class="ttc" id="aglbinder_8h_html"><div class="ttname"><a href="glbinder_8h.html">glbinder.h</a></div><div class="ttdoc">Клас який прив'язує контексту до деякого об'єкту OpenGL.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,4 @@
+<map id="Shader::set_int" name="Shader::set_int">
+<area shape="rect" id="node1" title="Задати поле шейдеру типу int" alt="" coords="5,5,116,32"/>
+<area shape="rect" id="node2" href="$classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7" title="Повертає індекс об&#39;єкту OpenGL." alt="" coords="164,5,292,32"/>
+</map>

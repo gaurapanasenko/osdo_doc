@@ -1,0 +1,4 @@
+<map id="Shader::set_vec4f" name="Shader::set_vec4f">
+<area shape="rect" id="node1" title="Задати вектор&#45;поле шейдеру типу vec4" alt="" coords="5,5,132,32"/>
+<area shape="rect" id="node2" href="$classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7" title="Повертає індекс об&#39;єкту OpenGL." alt="" coords="180,5,308,32"/>
+</map>

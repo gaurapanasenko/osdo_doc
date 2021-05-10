@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Дипломна робота: Текст програми druidengine/subwindow.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Дипломна робота
+   </div>
+   <div id="projectbrief">студента групи ПА-17-2 Панасенка Єгора Сергійовича</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_949b4dac30c9b4f92191601f9632f3ff.html">druidengine</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">subwindow.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="subwindow_8h.html">Див. документацію.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef SUBWINDOW_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define SUBWINDOW_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="camera_8h.html">camera.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="context_8h.html">context.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="scene_8h.html">scene.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="buffer_8h.html">buffer.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="window_8h.html">window.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classSubWindow.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSubWindow.html">SubWindow</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classSubWindow.html#a598ffb4ca0f7561841bd93cbaae69836">   12</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classSubWindow.html#a598ffb4ca0f7561841bd93cbaae69836">wireframe</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classSubWindow.html#a735eb6ad8bba8ae950916a71892479d0">   13</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classSubWindow.html#a735eb6ad8bba8ae950916a71892479d0">light_mode</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classSubWindow.html#a6471350dcb826ee19b90e17681dbfa5a">   14</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classSubWindow.html#a6471350dcb826ee19b90e17681dbfa5a">culling</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classSubWindow.html#a9343928126f200cea5f7e670ddda4a49">   15</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classSubWindow.html#a9343928126f200cea5f7e670ddda4a49">transparency</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classSubWindow.html#a99279028421377e4764a0177f198d90b">   16</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classSubWindow.html#a99279028421377e4764a0177f198d90b">camera_mode</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classSubWindow.html#a84e719afe4b9cdcd9762d74eadce5fec">   17</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classSubWindow.html#a84e719afe4b9cdcd9762d74eadce5fec">textured</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classSubWindow.html#a6540a161c2cb9d24703c2841f98d9659">   18</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classSubWindow.html#a6540a161c2cb9d24703c2841f98d9659">pre_generated</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classSubWindow.html#a9680efc0a8e34ddaa9fdd42f658f2a09">   19</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classSubWindow.html#a9680efc0a8e34ddaa9fdd42f658f2a09">level</a>[2];</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classSubWindow.html#a888cbbc96e72b6268107d09481dff262">   20</a></span>&#160;    <a class="code" href="classCamera.html">Camera</a> <a class="code" href="classSubWindow.html#a888cbbc96e72b6268107d09481dff262">camera</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classSubWindow.html#a1a30bdfafe71c986b7040192d5405d09">   21</a></span>&#160;    <a class="code" href="structContext.html">Context</a> &amp;<a class="code" href="classSubWindow.html#a1a30bdfafe71c986b7040192d5405d09">context</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classSubWindow.html#a039dc3e93af2abf807d16dcc16bd2568">   22</a></span>&#160;    <a class="code" href="classeastl_1_1shared__ptr.html">shared_ptr&lt;Scene&gt;</a> <a class="code" href="classSubWindow.html#a039dc3e93af2abf807d16dcc16bd2568">scene</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classSubWindow.html#ab701da6251cc8b6b6e8284db477759dd">   23</a></span>&#160;    <a class="code" href="classBuffer.html">Buffer</a> <a class="code" href="classSubWindow.html#ab701da6251cc8b6b6e8284db477759dd">buffer</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classSubWindow.html#a6ac44ab4dcd4058e1c43167b0d58db4a">   24</a></span>&#160;    <a class="code" href="classWindow.html">Window</a> &amp;<a class="code" href="classSubWindow.html#a6ac44ab4dcd4058e1c43167b0d58db4a">window</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classSubWindow.html#ae3d03f0b0c9e6b2077eaf42e4a21b08d">   26</a></span>&#160;    mat4 <a class="code" href="classSubWindow.html#a7c2016e2374e5f3025a43fe07ddcdbfe">projection</a>, <a class="code" href="classSubWindow.html#ae3d03f0b0c9e6b2077eaf42e4a21b08d">last_camera</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classSubWindow.html#a43045574e72b59e2ad533145ff428a0d">SubWindow</a>(<a class="code" href="classWindow.html">Window</a> &amp;<a class="code" href="classSubWindow.html#a6ac44ab4dcd4058e1c43167b0d58db4a">window</a>, <a class="code" href="structContext.html">Context</a> &amp;<a class="code" href="classSubWindow.html#a1a30bdfafe71c986b7040192d5405d09">context</a>, <a class="code" href="classeastl_1_1shared__ptr.html">shared_ptr&lt;Scene&gt;</a> <a class="code" href="classSubWindow.html#a039dc3e93af2abf807d16dcc16bd2568">scene</a>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classSubWindow.html#aa69a4e9aeada4c9c6755b348a70c3ab6">params_window</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classSubWindow.html#acbfb789831e20841fe7cc7ee8a8a9c4d">render_window</a>(<span class="keywordtype">double</span> delta_time);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classSubWindow.html#a3f96bc1981aeedb209fdf3168e41d924">loop</a>(<span class="keywordtype">size_t</span> <span class="keywordtype">id</span>, <span class="keywordtype">double</span> delta_time);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="classeastl_1_1shared__ptr.html">shared_ptr&lt;Scene&gt;</a>&amp; <a class="code" href="classSubWindow.html#a4920e96742d73540eaeb692249a662a6">get_scene</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// SUBWINDOW_H</span></div>
+<div class="ttc" id="abuffer_8h_html"><div class="ttname"><a href="buffer_8h.html">buffer.h</a></div></div>
+<div class="ttc" id="acamera_8h_html"><div class="ttname"><a href="camera_8h.html">camera.h</a></div></div>
+<div class="ttc" id="aclassBuffer_html"><div class="ttname"><a href="classBuffer.html">Buffer</a></div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00009">buffer.h:9</a></div></div>
+<div class="ttc" id="aclassCamera_html"><div class="ttname"><a href="classCamera.html">Camera</a></div><div class="ttdef"><b>Definition:</b> <a href="camera_8h_source.html#l00010">camera.h:10</a></div></div>
+<div class="ttc" id="aclassSubWindow_html"><div class="ttname"><a href="classSubWindow.html">SubWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8h_source.html#l00010">subwindow.h:11</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_a039dc3e93af2abf807d16dcc16bd2568"><div class="ttname"><a href="classSubWindow.html#a039dc3e93af2abf807d16dcc16bd2568">SubWindow::scene</a></div><div class="ttdeci">shared_ptr&lt; Scene &gt; scene</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8h_source.html#l00022">subwindow.h:22</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_a1a30bdfafe71c986b7040192d5405d09"><div class="ttname"><a href="classSubWindow.html#a1a30bdfafe71c986b7040192d5405d09">SubWindow::context</a></div><div class="ttdeci">Context &amp; context</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8h_source.html#l00021">subwindow.h:21</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_a3f96bc1981aeedb209fdf3168e41d924"><div class="ttname"><a href="classSubWindow.html#a3f96bc1981aeedb209fdf3168e41d924">SubWindow::loop</a></div><div class="ttdeci">bool loop(size_t id, double delta_time)</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8cpp_source.html#l00220">subwindow.cpp:220</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_a43045574e72b59e2ad533145ff428a0d"><div class="ttname"><a href="classSubWindow.html#a43045574e72b59e2ad533145ff428a0d">SubWindow::SubWindow</a></div><div class="ttdeci">SubWindow(Window &amp;window, Context &amp;context, shared_ptr&lt; Scene &gt; scene)</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8cpp_source.html#l00007">subwindow.cpp:7</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_a4920e96742d73540eaeb692249a662a6"><div class="ttname"><a href="classSubWindow.html#a4920e96742d73540eaeb692249a662a6">SubWindow::get_scene</a></div><div class="ttdeci">shared_ptr&lt; Scene &gt; &amp; get_scene()</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8cpp_source.html#l00240">subwindow.cpp:240</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_a598ffb4ca0f7561841bd93cbaae69836"><div class="ttname"><a href="classSubWindow.html#a598ffb4ca0f7561841bd93cbaae69836">SubWindow::wireframe</a></div><div class="ttdeci">bool wireframe</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8h_source.html#l00012">subwindow.h:12</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_a6471350dcb826ee19b90e17681dbfa5a"><div class="ttname"><a href="classSubWindow.html#a6471350dcb826ee19b90e17681dbfa5a">SubWindow::culling</a></div><div class="ttdeci">bool culling</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8h_source.html#l00014">subwindow.h:14</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_a6540a161c2cb9d24703c2841f98d9659"><div class="ttname"><a href="classSubWindow.html#a6540a161c2cb9d24703c2841f98d9659">SubWindow::pre_generated</a></div><div class="ttdeci">bool pre_generated</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8h_source.html#l00018">subwindow.h:18</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_a6ac44ab4dcd4058e1c43167b0d58db4a"><div class="ttname"><a href="classSubWindow.html#a6ac44ab4dcd4058e1c43167b0d58db4a">SubWindow::window</a></div><div class="ttdeci">Window &amp; window</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8h_source.html#l00024">subwindow.h:24</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_a735eb6ad8bba8ae950916a71892479d0"><div class="ttname"><a href="classSubWindow.html#a735eb6ad8bba8ae950916a71892479d0">SubWindow::light_mode</a></div><div class="ttdeci">bool light_mode</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8h_source.html#l00013">subwindow.h:13</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_a7c2016e2374e5f3025a43fe07ddcdbfe"><div class="ttname"><a href="classSubWindow.html#a7c2016e2374e5f3025a43fe07ddcdbfe">SubWindow::projection</a></div><div class="ttdeci">mat4 projection</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8h_source.html#l00026">subwindow.h:26</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_a84e719afe4b9cdcd9762d74eadce5fec"><div class="ttname"><a href="classSubWindow.html#a84e719afe4b9cdcd9762d74eadce5fec">SubWindow::textured</a></div><div class="ttdeci">bool textured</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8h_source.html#l00017">subwindow.h:17</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_a888cbbc96e72b6268107d09481dff262"><div class="ttname"><a href="classSubWindow.html#a888cbbc96e72b6268107d09481dff262">SubWindow::camera</a></div><div class="ttdeci">Camera camera</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8h_source.html#l00020">subwindow.h:20</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_a9343928126f200cea5f7e670ddda4a49"><div class="ttname"><a href="classSubWindow.html#a9343928126f200cea5f7e670ddda4a49">SubWindow::transparency</a></div><div class="ttdeci">bool transparency</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8h_source.html#l00015">subwindow.h:15</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_a9680efc0a8e34ddaa9fdd42f658f2a09"><div class="ttname"><a href="classSubWindow.html#a9680efc0a8e34ddaa9fdd42f658f2a09">SubWindow::level</a></div><div class="ttdeci">int level[2]</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8h_source.html#l00019">subwindow.h:19</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_a99279028421377e4764a0177f198d90b"><div class="ttname"><a href="classSubWindow.html#a99279028421377e4764a0177f198d90b">SubWindow::camera_mode</a></div><div class="ttdeci">bool camera_mode</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8h_source.html#l00016">subwindow.h:16</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_aa69a4e9aeada4c9c6755b348a70c3ab6"><div class="ttname"><a href="classSubWindow.html#aa69a4e9aeada4c9c6755b348a70c3ab6">SubWindow::params_window</a></div><div class="ttdeci">bool params_window()</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8cpp_source.html#l00023">subwindow.cpp:23</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_ab701da6251cc8b6b6e8284db477759dd"><div class="ttname"><a href="classSubWindow.html#ab701da6251cc8b6b6e8284db477759dd">SubWindow::buffer</a></div><div class="ttdeci">Buffer buffer</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8h_source.html#l00023">subwindow.h:23</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_acbfb789831e20841fe7cc7ee8a8a9c4d"><div class="ttname"><a href="classSubWindow.html#acbfb789831e20841fe7cc7ee8a8a9c4d">SubWindow::render_window</a></div><div class="ttdeci">bool render_window(double delta_time)</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8cpp_source.html#l00053">subwindow.cpp:53</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_ae3d03f0b0c9e6b2077eaf42e4a21b08d"><div class="ttname"><a href="classSubWindow.html#ae3d03f0b0c9e6b2077eaf42e4a21b08d">SubWindow::last_camera</a></div><div class="ttdeci">mat4 last_camera</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8h_source.html#l00026">subwindow.h:26</a></div></div>
+<div class="ttc" id="aclassWindow_html"><div class="ttname"><a href="classWindow.html">Window</a></div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00051">window.h:51</a></div></div>
+<div class="ttc" id="aclasseastl_1_1shared__ptr_html"><div class="ttname"><a href="classeastl_1_1shared__ptr.html">eastl::shared_ptr</a></div><div class="ttdef"><b>Definition:</b> <a href="shader_8h_source.html#l00012">shader.h:12</a></div></div>
+<div class="ttc" id="acontext_8h_html"><div class="ttname"><a href="context_8h.html">context.h</a></div></div>
+<div class="ttc" id="ascene_8h_html"><div class="ttname"><a href="scene_8h.html">scene.h</a></div></div>
+<div class="ttc" id="astructContext_html"><div class="ttname"><a href="structContext.html">Context</a></div><div class="ttdef"><b>Definition:</b> <a href="context_8h_source.html#l00019">context.h:20</a></div></div>
+<div class="ttc" id="awindow_8h_html"><div class="ttname"><a href="window_8h.html">window.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

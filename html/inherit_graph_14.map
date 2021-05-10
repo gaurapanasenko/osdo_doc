@@ -1,0 +1,6 @@
+<map id="Графічна ієрархія класів" name="Графічна ієрархія класів">
+<area shape="rect" id="node1" href="$classModel.html" title=" " alt="" coords="5,5,63,32"/>
+<area shape="rect" id="node2" href="$classMesh.html" title=" " alt="" coords="111,5,165,32"/>
+<area shape="rect" id="node3" href="$classBeziator.html" title="Клас який зберігає та оброблює модель утвореню через поверхні Безьє." alt="" coords="213,5,284,32"/>
+<area shape="rect" id="node4" href="$classBeziatorPanel.html" title=" " alt="" coords="332,5,435,32"/>
+</map>

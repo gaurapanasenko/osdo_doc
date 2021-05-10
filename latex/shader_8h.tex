@@ -1,0 +1,91 @@
+\hypertarget{shader_8h}{}\doxysubsection{Файл osdo/shader.h}
+\label{shader_8h}\index{osdo/shader.h@{osdo/shader.h}}
+
+
+Задає клас шейдеру.  
+
+
+{\ttfamily \#include \char`\"{}osdo.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}glbindable.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}EASTL/string.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}EASTL/hash\+\_\+map.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}EASTL/shared\+\_\+ptr.\+h\char`\"{}}\newline
+Діаграма включених заголовочних файлів для shader.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shader_8h__incl}
+\end{center}
+\end{figure}
+Граф файлів, які включають цей файл\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shader_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Класи}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classShader}{Shader}}
+\begin{DoxyCompactList}\small\item\em Клас взаємодії з шейдером у видеокарті. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Переліки}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46}{Shader\+Type}} \{ \newline
+\mbox{\hyperlink{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46a5ba20b6e8c97b8dbd2b240a0a6c62036}{VERT\+\_\+\+SHADER}}
+, \mbox{\hyperlink{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46acbfaee266881f615c5ef456a906f51bf}{TESC\+\_\+\+SHADER}}
+, \mbox{\hyperlink{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46a40f4e8253f67098f84518f2c9c7a94e8}{TESE\+\_\+\+SHADER}}
+, \mbox{\hyperlink{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46a4d347b773747cda93e76787970f93620}{GEOM\+\_\+\+SHADER}}
+, \newline
+\mbox{\hyperlink{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46a099050644e08e3ab6619bb1fb8c8164e}{FRAG\+\_\+\+SHADER}}
+ \}
+\begin{DoxyCompactList}\small\item\em Тип шейдеру \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Детальний опис}
+Задає клас шейдеру. 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{shader_8h_source}{shader.\+h}}
+
+
+
+\doxysubsubsection{Опис переліків}
+\mbox{\Hypertarget{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46}\label{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46}} 
+\index{shader.h@{shader.h}!ShaderType@{ShaderType}}
+\index{ShaderType@{ShaderType}!shader.h@{shader.h}}
+\doxyparagraph{\texorpdfstring{ShaderType}{ShaderType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46}{Shader\+Type}}}
+
+
+
+Тип шейдеру 
+
+\begin{DoxyEnumFields}{Елементи переліків}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VERT\_SHADER@{VERT\_SHADER}!shader.h@{shader.h}}\index{shader.h@{shader.h}!VERT\_SHADER@{VERT\_SHADER}}}\mbox{\Hypertarget{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46a5ba20b6e8c97b8dbd2b240a0a6c62036}\label{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46a5ba20b6e8c97b8dbd2b240a0a6c62036}} 
+VERT\+\_\+\+SHADER&вершинний шейдер \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESC\_SHADER@{TESC\_SHADER}!shader.h@{shader.h}}\index{shader.h@{shader.h}!TESC\_SHADER@{TESC\_SHADER}}}\mbox{\Hypertarget{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46acbfaee266881f615c5ef456a906f51bf}\label{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46acbfaee266881f615c5ef456a906f51bf}} 
+TESC\+\_\+\+SHADER&теселяційний контрольний шейдер \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESE\_SHADER@{TESE\_SHADER}!shader.h@{shader.h}}\index{shader.h@{shader.h}!TESE\_SHADER@{TESE\_SHADER}}}\mbox{\Hypertarget{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46a40f4e8253f67098f84518f2c9c7a94e8}\label{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46a40f4e8253f67098f84518f2c9c7a94e8}} 
+TESE\+\_\+\+SHADER&теселяційний обчислювальний шейдер \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GEOM\_SHADER@{GEOM\_SHADER}!shader.h@{shader.h}}\index{shader.h@{shader.h}!GEOM\_SHADER@{GEOM\_SHADER}}}\mbox{\Hypertarget{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46a4d347b773747cda93e76787970f93620}\label{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46a4d347b773747cda93e76787970f93620}} 
+GEOM\+\_\+\+SHADER&геометричний шейдер \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FRAG\_SHADER@{FRAG\_SHADER}!shader.h@{shader.h}}\index{shader.h@{shader.h}!FRAG\_SHADER@{FRAG\_SHADER}}}\mbox{\Hypertarget{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46a099050644e08e3ab6619bb1fb8c8164e}\label{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46a099050644e08e3ab6619bb1fb8c8164e}} 
+FRAG\+\_\+\+SHADER&фрагмнтний шейдер \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Див. визначення в файлі \mbox{\hyperlink{shader_8h_source}{shader.\+h}}, рядок \mbox{\hyperlink{shader_8h_source_l00020}{20}}
+

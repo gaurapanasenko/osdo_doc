@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Дипломна робота: Текст програми osdo/image.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Дипломна робота
+   </div>
+   <div id="projectbrief">студента групи ПА-17-2 Панасенка Єгора Сергійовича</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e0c7de59e470a6e6d29babac2e4befdd.html">osdo</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">image.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="image_8cpp.html">Див. документацію.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="image_8cpp.html#a18372412ad2fc3ce1e3240b3cf0efe78">    1</a></span>&#160;<span class="preprocessor">#define STB_IMAGE_IMPLEMENTATION</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;stb_image.h&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;EASTL/algorithm.h&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="image_8h.html">image.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> eastl::min;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using</span> eastl::max;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classImage.html#ac14349d3c13c9d8181f327cf97586a02">    9</a></span>&#160;<a class="code" href="classImage.html#ac14349d3c13c9d8181f327cf97586a02">Image::Image</a>(shared_ptr&lt;<span class="keyword">const</span> <a class="code" href="image_8h.html#a8e678b6802a89940a89c7343bec499f5">pixel_t</a>[]&gt; data,</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;             <span class="keyword">const</span> <span class="keywordtype">int</span> width, <span class="keyword">const</span> <span class="keywordtype">int</span> height)</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    : data(data), width(width), height(height)</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classImage.html#ac282669cfe2627b0feeadebeba74c35e">   15</a></span>&#160;<a class="code" href="classImage.html">Image</a> <a class="code" href="classImage.html#ac282669cfe2627b0feeadebeba74c35e">Image::fromFile</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *path)</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classImage.html#a5be4b15e10ac6609ec9350e79e723246">width</a> = 0, <a class="code" href="classImage.html#adf1e0c7ecb8f09929175b5d4229beaad">height</a> = 0;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="image_8h.html#a8e678b6802a89940a89c7343bec499f5">pixel_t</a> (*<a class="code" href="classImage.html#a0bff7334a9e45a84e0503448af829bbb">data</a>)[] = (<a class="code" href="image_8h.html#a8e678b6802a89940a89c7343bec499f5">pixel_t</a> (*)[])stbi_load(path, &amp;<a class="code" href="classImage.html#a5be4b15e10ac6609ec9350e79e723246">width</a>, &amp;<a class="code" href="classImage.html#adf1e0c7ecb8f09929175b5d4229beaad">height</a>, <span class="keyword">nullptr</span>, <a class="code" href="image_8h.html#a076912543697dbe4c46b79e8e44ad2fb">COMP</a>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classImage.html#a0bff7334a9e45a84e0503448af829bbb">data</a>) {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        shared_ptr&lt;pixel_t[]&gt; ptr(<a class="code" href="classImage.html#a0bff7334a9e45a84e0503448af829bbb">data</a>, stbi_image_free);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordflow">return</span> {ptr, <a class="code" href="classImage.html#a5be4b15e10ac6609ec9350e79e723246">width</a>, <a class="code" href="classImage.html#adf1e0c7ecb8f09929175b5d4229beaad">height</a>};</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">return</span> {<span class="keyword">nullptr</span>, 0, 0};</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<div class="ttc" id="aclassImage_html"><div class="ttname"><a href="classImage.html">Image</a></div><div class="ttdoc">Зберігає масив пікселів, ширину та висоту.</div><div class="ttdef"><b>Definition:</b> <a href="image_8h_source.html#l00036">image.h:37</a></div></div>
+<div class="ttc" id="aclassImage_html_a0bff7334a9e45a84e0503448af829bbb"><div class="ttname"><a href="classImage.html#a0bff7334a9e45a84e0503448af829bbb">Image::data</a></div><div class="ttdeci">shared_ptr&lt; const pixel_t[]&gt; data</div><div class="ttdoc">Константнний масив пікселів. Зберігає розумний вказівник на масив пікселів зображення розміром висота...</div><div class="ttdef"><b>Definition:</b> <a href="image_8h_source.html#l00044">image.h:44</a></div></div>
+<div class="ttc" id="aclassImage_html_a5be4b15e10ac6609ec9350e79e723246"><div class="ttname"><a href="classImage.html#a5be4b15e10ac6609ec9350e79e723246">Image::width</a></div><div class="ttdeci">const int width</div><div class="ttdoc">Ширина зображення.</div><div class="ttdef"><b>Definition:</b> <a href="image_8h_source.html#l00048">image.h:48</a></div></div>
+<div class="ttc" id="aclassImage_html_ac14349d3c13c9d8181f327cf97586a02"><div class="ttname"><a href="classImage.html#ac14349d3c13c9d8181f327cf97586a02">Image::Image</a></div><div class="ttdeci">Image(shared_ptr&lt; const pixel_t[]&gt; data, const int width, const int height)</div><div class="ttdoc">Конструктор для зображення. Зберігає посилання на масив пікселів, а також висоту та ширину зображення...</div><div class="ttdef"><b>Definition:</b> <a href="image_8cpp_source.html#l00009">image.cpp:9</a></div></div>
+<div class="ttc" id="aclassImage_html_ac282669cfe2627b0feeadebeba74c35e"><div class="ttname"><a href="classImage.html#ac282669cfe2627b0feeadebeba74c35e">Image::fromFile</a></div><div class="ttdeci">static Image fromFile(const char *path)</div><div class="ttdoc">Зчитування зображення з файлу.</div><div class="ttdef"><b>Definition:</b> <a href="image_8cpp_source.html#l00015">image.cpp:15</a></div></div>
+<div class="ttc" id="aclassImage_html_adf1e0c7ecb8f09929175b5d4229beaad"><div class="ttname"><a href="classImage.html#adf1e0c7ecb8f09929175b5d4229beaad">Image::height</a></div><div class="ttdeci">const int height</div><div class="ttdoc">Висота зображення.</div><div class="ttdef"><b>Definition:</b> <a href="image_8h_source.html#l00052">image.h:52</a></div></div>
+<div class="ttc" id="aimage_8h_html"><div class="ttname"><a href="image_8h.html">image.h</a></div><div class="ttdoc">Задає клас, який зберігає масив пікселів, ширину та висоту.</div></div>
+<div class="ttc" id="aimage_8h_html_a076912543697dbe4c46b79e8e44ad2fb"><div class="ttname"><a href="image_8h.html#a076912543697dbe4c46b79e8e44ad2fb">COMP</a></div><div class="ttdeci">#define COMP</div><div class="ttdef"><b>Definition:</b> <a href="image_8h_source.html#l00014">image.h:14</a></div></div>
+<div class="ttc" id="aimage_8h_html_a8e678b6802a89940a89c7343bec499f5"><div class="ttname"><a href="image_8h.html#a8e678b6802a89940a89c7343bec499f5">pixel_t</a></div><div class="ttdeci">channel_t pixel_t[COMP]</div><div class="ttdoc">Тип пікселя. Один піксель має COMP каналів і канал визначений типом channel_t. Використовується 8-біт...</div><div class="ttdef"><b>Definition:</b> <a href="image_8h_source.html#l00031">image.h:31</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,278 @@
+\hypertarget{structContext}{}\doxysubsection{Структура Context}
+\label{structContext}\index{Context@{Context}}
+
+
+Контекст, який зберігає усі завантажені у пам\textquotesingle{}ять ресурси.  
+
+
+
+
+{\ttfamily \#include $<$context.\+h$>$}
+
+
+
+Діаграма зв\textquotesingle{}язків класу Context\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{structContext__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Загальнодоступні типи}
+\begin{DoxyCompactItemize}
+\item 
+typedef hash\+\_\+map$<$ string, \mbox{\hyperlink{classObject}{Object}} $>$ \mbox{\hyperlink{structContext_a0fb5343f40542412aa4089d22627f232}{Models}}
+\begin{DoxyCompactList}\small\item\em Тип для зберігання моделей. \end{DoxyCompactList}\item 
+typedef hash\+\_\+map$<$ string, shared\+\_\+ptr$<$ \mbox{\hyperlink{classTexture}{Texture}} $>$ $>$ \mbox{\hyperlink{structContext_a6538db926f05f632413d3e83d02ba16d}{Textures}}
+\begin{DoxyCompactList}\small\item\em Тип для зберігання текстур. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Загальнодоступні елементи}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structContext_a652cdcd2eedc8dbd9110bd284c5d5cf0}{Context}} ()
+\item 
+Models\+::iterator \& \mbox{\hyperlink{structContext_ad93eb2d9c753907a173f0c534eb534ad}{next\+\_\+active}} ()
+\begin{DoxyCompactList}\small\item\em перехід до наступної моделі для редагування. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structContext_ae9498eceb6dd3257ac2e5e8fc904370c}{load\+\_\+texture}} (const char $\ast$path)
+\begin{DoxyCompactList}\small\item\em Завантажує текстуру у пам\textquotesingle{}ять. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structContext_a6b8babb597ca6c92a2ce8f9b62626a27}{load\+\_\+shader}} (const char $\ast$name, const \mbox{\hyperlink{classShader_a37c1d8b706d1bc83800419d8776eeb23}{Shader\+::shader\+\_\+map}} \&\mbox{\hyperlink{structContext_ae6fcb1cace574a21fb21ccd678473d17}{shaders}})
+\begin{DoxyCompactList}\small\item\em Завантажує та компілює шейдер. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structContext_a56633326b4d4430a41803dcb34f97ec2}{load\+\_\+model}} (const string \&path)
+\begin{DoxyCompactList}\small\item\em Завантажує модель з поверхнями Безье \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Загальнодоступні атрибути}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structContext_a0fb5343f40542412aa4089d22627f232}{Models}} \mbox{\hyperlink{structContext_adf5341866d506e12dca716c71367fdcf}{models}}
+\begin{DoxyCompactList}\small\item\em Завантажені моделі. \end{DoxyCompactList}\item 
+hash\+\_\+map$<$ string, shared\+\_\+ptr$<$ \mbox{\hyperlink{classShader}{Shader}} $>$ $>$ \mbox{\hyperlink{structContext_ae6fcb1cace574a21fb21ccd678473d17}{shaders}}
+\begin{DoxyCompactList}\small\item\em Зкомпіловані шейдери. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structContext_a6538db926f05f632413d3e83d02ba16d}{Textures}} \mbox{\hyperlink{structContext_acc023c5c78fc019ae50fac056ddf7226}{textures}}
+\begin{DoxyCompactList}\small\item\em Завантажені текстури. \end{DoxyCompactList}\item 
+Models\+::iterator \mbox{\hyperlink{structContext_a2495f12fa2a7e55cb4d6e7d514e58735}{active}}
+\begin{DoxyCompactList}\small\item\em Вибрана модель для редагування. \end{DoxyCompactList}\item 
+Textures\+::iterator \mbox{\hyperlink{structContext_af6e358ab9890652b7c0accf7fcd1fc85}{active\+\_\+texture}}
+\begin{DoxyCompactList}\small\item\em Вибрана текстура для відображення. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Детальний опис}
+Контекст, який зберігає усі завантажені у пам\textquotesingle{}ять ресурси. 
+
+Див. визначення в файлі \mbox{\hyperlink{context_8h_source}{context.\+h}}, рядок \mbox{\hyperlink{context_8h_source_l00026}{26}}
+
+
+
+\doxysubsubsection{Опис типів користувача}
+\mbox{\Hypertarget{structContext_a0fb5343f40542412aa4089d22627f232}\label{structContext_a0fb5343f40542412aa4089d22627f232}} 
+\index{Context@{Context}!Models@{Models}}
+\index{Models@{Models}!Context@{Context}}
+\doxyparagraph{\texorpdfstring{Models}{Models}}
+{\footnotesize\ttfamily typedef hash\+\_\+map$<$string, \mbox{\hyperlink{classObject}{Object}}$>$ \mbox{\hyperlink{structContext_a0fb5343f40542412aa4089d22627f232}{Context\+::\+Models}}}
+
+
+
+Тип для зберігання моделей. 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{context_8h_source}{context.\+h}}, рядок \mbox{\hyperlink{context_8h_source_l00031}{31}}
+
+\mbox{\Hypertarget{structContext_a6538db926f05f632413d3e83d02ba16d}\label{structContext_a6538db926f05f632413d3e83d02ba16d}} 
+\index{Context@{Context}!Textures@{Textures}}
+\index{Textures@{Textures}!Context@{Context}}
+\doxyparagraph{\texorpdfstring{Textures}{Textures}}
+{\footnotesize\ttfamily typedef hash\+\_\+map$<$string, shared\+\_\+ptr$<$\mbox{\hyperlink{classTexture}{Texture}}$>$ $>$ \mbox{\hyperlink{structContext_a6538db926f05f632413d3e83d02ba16d}{Context\+::\+Textures}}}
+
+
+
+Тип для зберігання текстур. 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{context_8h_source}{context.\+h}}, рядок \mbox{\hyperlink{context_8h_source_l00035}{35}}
+
+
+
+\doxysubsubsection{Конструктор(и)}
+\mbox{\Hypertarget{structContext_a652cdcd2eedc8dbd9110bd284c5d5cf0}\label{structContext_a652cdcd2eedc8dbd9110bd284c5d5cf0}} 
+\index{Context@{Context}!Context@{Context}}
+\index{Context@{Context}!Context@{Context}}
+\doxyparagraph{\texorpdfstring{Context()}{Context()}}
+{\footnotesize\ttfamily Context\+::\+Context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{context_8cpp_source}{context.\+cpp}}, рядок \mbox{\hyperlink{context_8cpp_source_l00006}{6}}
+
+
+
+\doxysubsubsection{Опис методів компонент}
+\mbox{\Hypertarget{structContext_a56633326b4d4430a41803dcb34f97ec2}\label{structContext_a56633326b4d4430a41803dcb34f97ec2}} 
+\index{Context@{Context}!load\_model@{load\_model}}
+\index{load\_model@{load\_model}!Context@{Context}}
+\doxyparagraph{\texorpdfstring{load\_model()}{load\_model()}}
+{\footnotesize\ttfamily bool Context\+::load\+\_\+model (\begin{DoxyParamCaption}\item[{const string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Завантажує модель з поверхнями Безье 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em path} & шлях до файлу з моделлю \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Повертає}
+статус успішності завантаження моделі 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structContext_a6b8babb597ca6c92a2ce8f9b62626a27}\label{structContext_a6b8babb597ca6c92a2ce8f9b62626a27}} 
+\index{Context@{Context}!load\_shader@{load\_shader}}
+\index{load\_shader@{load\_shader}!Context@{Context}}
+\doxyparagraph{\texorpdfstring{load\_shader()}{load\_shader()}}
+{\footnotesize\ttfamily bool Context\+::load\+\_\+shader (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const \mbox{\hyperlink{classShader_a37c1d8b706d1bc83800419d8776eeb23}{Shader\+::shader\+\_\+map}} \&}]{shaders }\end{DoxyParamCaption})}
+
+
+
+Завантажує та компілює шейдер. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em name} & назва шейдеру \\
+\hline
+{\em shaders} & массив до файлів шейдеру \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Повертає}
+статус успішності завантаження та компіляції шейдеру 
+\end{DoxyReturn}
+
+
+Див. визначення в файлі \mbox{\hyperlink{context_8cpp_source}{context.\+cpp}}, рядок \mbox{\hyperlink{context_8cpp_source_l00026}{26}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structContext_a6b8babb597ca6c92a2ce8f9b62626a27_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structContext_ae9498eceb6dd3257ac2e5e8fc904370c}\label{structContext_ae9498eceb6dd3257ac2e5e8fc904370c}} 
+\index{Context@{Context}!load\_texture@{load\_texture}}
+\index{load\_texture@{load\_texture}!Context@{Context}}
+\doxyparagraph{\texorpdfstring{load\_texture()}{load\_texture()}}
+{\footnotesize\ttfamily void Context\+::load\+\_\+texture (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+
+
+Завантажує текстуру у пам\textquotesingle{}ять. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\texttt{ in}}  & {\em path} & шлях до файлу з текстурою \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{context_8cpp_source}{context.\+cpp}}, рядок \mbox{\hyperlink{context_8cpp_source_l00017}{17}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{structContext_ae9498eceb6dd3257ac2e5e8fc904370c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structContext_ad93eb2d9c753907a173f0c534eb534ad}\label{structContext_ad93eb2d9c753907a173f0c534eb534ad}} 
+\index{Context@{Context}!next\_active@{next\_active}}
+\index{next\_active@{next\_active}!Context@{Context}}
+\doxyparagraph{\texorpdfstring{next\_active()}{next\_active()}}
+{\footnotesize\ttfamily Context\+::\+Models\+::iterator \& Context\+::next\+\_\+active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+перехід до наступної моделі для редагування. 
+
+\begin{DoxyReturn}{Повертає}
+ітератор моделі 
+\end{DoxyReturn}
+
+
+Див. визначення в файлі \mbox{\hyperlink{context_8cpp_source}{context.\+cpp}}, рядок \mbox{\hyperlink{context_8cpp_source_l00010}{10}}
+
+
+
+\doxysubsubsection{Компонентні дані}
+\mbox{\Hypertarget{structContext_a2495f12fa2a7e55cb4d6e7d514e58735}\label{structContext_a2495f12fa2a7e55cb4d6e7d514e58735}} 
+\index{Context@{Context}!active@{active}}
+\index{active@{active}!Context@{Context}}
+\doxyparagraph{\texorpdfstring{active}{active}}
+{\footnotesize\ttfamily Models\+::iterator Context\+::active}
+
+
+
+Вибрана модель для редагування. 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{context_8h_source}{context.\+h}}, рядок \mbox{\hyperlink{context_8h_source_l00052}{52}}
+
+\mbox{\Hypertarget{structContext_af6e358ab9890652b7c0accf7fcd1fc85}\label{structContext_af6e358ab9890652b7c0accf7fcd1fc85}} 
+\index{Context@{Context}!active\_texture@{active\_texture}}
+\index{active\_texture@{active\_texture}!Context@{Context}}
+\doxyparagraph{\texorpdfstring{active\_texture}{active\_texture}}
+{\footnotesize\ttfamily Textures\+::iterator Context\+::active\+\_\+texture}
+
+
+
+Вибрана текстура для відображення. 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{context_8h_source}{context.\+h}}, рядок \mbox{\hyperlink{context_8h_source_l00056}{56}}
+
+\mbox{\Hypertarget{structContext_adf5341866d506e12dca716c71367fdcf}\label{structContext_adf5341866d506e12dca716c71367fdcf}} 
+\index{Context@{Context}!models@{models}}
+\index{models@{models}!Context@{Context}}
+\doxyparagraph{\texorpdfstring{models}{models}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structContext_a0fb5343f40542412aa4089d22627f232}{Models}} Context\+::models}
+
+
+
+Завантажені моделі. 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{context_8h_source}{context.\+h}}, рядок \mbox{\hyperlink{context_8h_source_l00039}{39}}
+
+\mbox{\Hypertarget{structContext_ae6fcb1cace574a21fb21ccd678473d17}\label{structContext_ae6fcb1cace574a21fb21ccd678473d17}} 
+\index{Context@{Context}!shaders@{shaders}}
+\index{shaders@{shaders}!Context@{Context}}
+\doxyparagraph{\texorpdfstring{shaders}{shaders}}
+{\footnotesize\ttfamily hash\+\_\+map$<$string, shared\+\_\+ptr$<$\mbox{\hyperlink{classShader}{Shader}}$>$ $>$ Context\+::shaders}
+
+
+
+Зкомпіловані шейдери. 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{context_8h_source}{context.\+h}}, рядок \mbox{\hyperlink{context_8h_source_l00043}{43}}
+
+\mbox{\Hypertarget{structContext_acc023c5c78fc019ae50fac056ddf7226}\label{structContext_acc023c5c78fc019ae50fac056ddf7226}} 
+\index{Context@{Context}!textures@{textures}}
+\index{textures@{textures}!Context@{Context}}
+\doxyparagraph{\texorpdfstring{textures}{textures}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structContext_a6538db926f05f632413d3e83d02ba16d}{Textures}} Context\+::textures}
+
+
+
+Завантажені текстури. 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{context_8h_source}{context.\+h}}, рядок \mbox{\hyperlink{context_8h_source_l00047}{47}}
+
+
+
+Документація цих структур була створена з файлів\+:\begin{DoxyCompactItemize}
+\item 
+osdo/\mbox{\hyperlink{context_8h}{context.\+h}}\item 
+osdo/\mbox{\hyperlink{context_8cpp}{context.\+cpp}}\end{DoxyCompactItemize}

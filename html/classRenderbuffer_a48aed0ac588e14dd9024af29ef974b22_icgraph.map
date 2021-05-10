@@ -1,0 +1,5 @@
+<map id="Renderbuffer::make" name="Renderbuffer::make">
+<area shape="rect" id="node1" title="Створює буфер рендеренгу." alt="" coords="204,31,339,57"/>
+<area shape="rect" id="node2" href="$classFramebuffer.html#aa22bed74c24a765257806ed4693e7005" title="Підготовлює рендер буфер для зберігання кольорів." alt="" coords="7,5,154,32"/>
+<area shape="rect" id="node3" href="$classFramebuffer.html#ac47980bdb179418e6ed3c8ff18d0fb2b" title="Підготовлює глибинний рендер буфер." alt="" coords="5,56,156,83"/>
+</map>

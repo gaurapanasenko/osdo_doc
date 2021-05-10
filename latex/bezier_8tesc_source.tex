@@ -1,0 +1,37 @@
+\hypertarget{bezier_8tesc_source}{}\doxysubsection{bezier.\+tesc}
+\label{bezier_8tesc_source}\index{res/bezier.tesc@{res/bezier.tesc}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \#version 420 core}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 struct Data \{}
+\DoxyCodeLine{00004     vec4 color;}
+\DoxyCodeLine{00005     vec2 uv;}
+\DoxyCodeLine{00006     vec3 normal;}
+\DoxyCodeLine{00007     vec3 frag\_pos;}
+\DoxyCodeLine{00008 \};}
+\DoxyCodeLine{00009 }
+\DoxyCodeLine{00010 layout(location = 0) in Data inData[];}
+\DoxyCodeLine{00011 layout(location = 0) out Data outData[];}
+\DoxyCodeLine{00012 }
+\DoxyCodeLine{00013 uniform int inner;}
+\DoxyCodeLine{00014 uniform int outer;}
+\DoxyCodeLine{00015 }
+\DoxyCodeLine{00016 layout(vertices = 16) out;}
+\DoxyCodeLine{00017 }
+\DoxyCodeLine{00018 void main(void) \{}
+\DoxyCodeLine{00019     gl\_TessLevelInner[0] = inner;}
+\DoxyCodeLine{00020     gl\_TessLevelInner[1] = inner;}
+\DoxyCodeLine{00021     gl\_TessLevelOuter[0] = outer;}
+\DoxyCodeLine{00022     gl\_TessLevelOuter[1] = outer;}
+\DoxyCodeLine{00023     gl\_TessLevelOuter[2] = outer;}
+\DoxyCodeLine{00024     gl\_TessLevelOuter[3] = outer;}
+\DoxyCodeLine{00025 }
+\DoxyCodeLine{00026     gl\_out[gl\_InvocationID].gl\_Position = gl\_in[gl\_InvocationID].gl\_Position;}
+\DoxyCodeLine{00027     outData[gl\_InvocationID].color = inData[gl\_InvocationID].color;}
+\DoxyCodeLine{00028     outData[gl\_InvocationID].uv = inData[gl\_InvocationID].uv;}
+\DoxyCodeLine{00029     outData[gl\_InvocationID].normal = inData[gl\_InvocationID].normal;}
+\DoxyCodeLine{00030     outData[gl\_InvocationID].frag\_pos = inData[gl\_InvocationID].frag\_pos;}
+\DoxyCodeLine{00031 \}}
+
+\end{DoxyCode}

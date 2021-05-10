@@ -1,0 +1,50 @@
+\hypertarget{model_8h_source}{}\doxysubsection{model.\+h}
+\label{model_8h_source}\index{osdo/model.h@{osdo/model.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/**}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * @file model.h}}
+\DoxyCodeLine{00003 \textcolor{comment}{ * @brief Задає інтерфейс моделі, яку можна відобразити.}}
+\DoxyCodeLine{00004 \textcolor{comment}{ */}}
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#ifndef MODEL\_H}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#define MODEL\_H}}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#include <EASTL/vector.h>}}
+\DoxyCodeLine{00009 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{osdo_8h}{osdo.h}}"{}}}
+\DoxyCodeLine{00010 }
+\DoxyCodeLine{00011 \textcolor{keyword}{struct }\mbox{\hyperlink{structVertex}{Vertex}};}
+\DoxyCodeLine{00012 \textcolor{keyword}{class }\mbox{\hyperlink{classShader}{Shader}};}
+\DoxyCodeLine{00013 \textcolor{keyword}{using} eastl::vector;}
+\DoxyCodeLine{00014 \textcolor{comment}{}}
+\DoxyCodeLine{00015 \textcolor{comment}{/**}}
+\DoxyCodeLine{00016 \textcolor{comment}{ * @brief Інтерфейс до деякої моделі, яку можна відобразити.}}
+\DoxyCodeLine{00017 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00018}\mbox{\hyperlink{classModel}{00018}} \textcolor{keyword}{class }\mbox{\hyperlink{classModel}{Model}} \{}
+\DoxyCodeLine{00019 \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020     \textcolor{keyword}{virtual} \mbox{\hyperlink{classModel_ad6ebd2062a0b823db841a0b88baac4c0}{\string~Model}}();\textcolor{comment}{}}
+\DoxyCodeLine{00021 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00022 \textcolor{comment}{     * @brief Відображує модель.}}
+\DoxyCodeLine{00023 \textcolor{comment}{     * @param shader Шейдер який використовуєтсья для відображення моделі.}}
+\DoxyCodeLine{00024 \textcolor{comment}{     * @param pre\_generated флаг, який позначає яким чином відображати модель.}}
+\DoxyCodeLine{00025 \textcolor{comment}{     */}}
+\DoxyCodeLine{00026     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classModel_a13ff51c6cdc364c49a5bb76dc76f409f}{draw}}(\mbox{\hyperlink{classShader}{Shader}} \&shader, \textcolor{keywordtype}{bool} pre\_generated = \textcolor{keyword}{false});\textcolor{comment}{}}
+\DoxyCodeLine{00027 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00028 \textcolor{comment}{     * @brief Генерує деталізований меш моделі.}}
+\DoxyCodeLine{00029 \textcolor{comment}{     * Див. `Beziator::generate`}}
+\DoxyCodeLine{00030 \textcolor{comment}{     * @param d ступінь деталізації.}}
+\DoxyCodeLine{00031 \textcolor{comment}{     */}}
+\DoxyCodeLine{00032     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classModel_a50fc76140d00753bc503817cdef39a92}{generate}}(\textcolor{keywordtype}{size\_t} d = 8);\textcolor{comment}{}}
+\DoxyCodeLine{00033 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00034 \textcolor{comment}{     * @brief Видає список вершин моделі.}}
+\DoxyCodeLine{00035 \textcolor{comment}{     * @return Вказівник на поле `vertices`.}}
+\DoxyCodeLine{00036 \textcolor{comment}{     */}}
+\DoxyCodeLine{00037     \textcolor{keyword}{virtual} vector<Vertex> *\mbox{\hyperlink{classModel_a59f773de2939fc7c8613c0323a5907e0}{get\_vertices}}();\textcolor{comment}{}}
+\DoxyCodeLine{00038 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00039 \textcolor{comment}{     * @brief Створює вікно редагування моделі.}}
+\DoxyCodeLine{00040 \textcolor{comment}{     */}}
+\DoxyCodeLine{00041     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classModel_a36d4969ac196d8e5e02f112aa73d54d7}{edit\_panel}}();}
+\DoxyCodeLine{00042 \};}
+\DoxyCodeLine{00043 }
+\DoxyCodeLine{00044 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// MODEL\_H}}
+
+\end{DoxyCode}

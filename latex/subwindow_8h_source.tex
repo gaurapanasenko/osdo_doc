@@ -1,0 +1,44 @@
+\hypertarget{subwindow_8h_source}{}\doxysubsection{subwindow.\+h}
+\label{subwindow_8h_source}\index{druidengine/subwindow.h@{druidengine/subwindow.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#ifndef SUBWINDOW\_H}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#define SUBWINDOW\_H}}
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{00004 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{camera_8h}{camera.h}}"{}}}
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{context_8h}{context.h}}"{}}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{scene_8h}{scene.h}}"{}}}
+\DoxyCodeLine{00007 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{buffer_8h}{buffer.h}}"{}}}
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{window_8h}{window.h}}"{}}}
+\DoxyCodeLine{00009 }
+\DoxyCodeLine{\Hypertarget{subwindow_8h_source_l00010}\mbox{\hyperlink{classSubWindow}{00010}} \textcolor{keyword}{class }\mbox{\hyperlink{classSubWindow}{SubWindow}}}
+\DoxyCodeLine{00011 \{}
+\DoxyCodeLine{\Hypertarget{subwindow_8h_source_l00012}\mbox{\hyperlink{classSubWindow_a598ffb4ca0f7561841bd93cbaae69836}{00012}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classSubWindow_a598ffb4ca0f7561841bd93cbaae69836}{wireframe}};}
+\DoxyCodeLine{\Hypertarget{subwindow_8h_source_l00013}\mbox{\hyperlink{classSubWindow_a735eb6ad8bba8ae950916a71892479d0}{00013}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classSubWindow_a735eb6ad8bba8ae950916a71892479d0}{light\_mode}};}
+\DoxyCodeLine{\Hypertarget{subwindow_8h_source_l00014}\mbox{\hyperlink{classSubWindow_a6471350dcb826ee19b90e17681dbfa5a}{00014}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classSubWindow_a6471350dcb826ee19b90e17681dbfa5a}{culling}};}
+\DoxyCodeLine{\Hypertarget{subwindow_8h_source_l00015}\mbox{\hyperlink{classSubWindow_a9343928126f200cea5f7e670ddda4a49}{00015}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classSubWindow_a9343928126f200cea5f7e670ddda4a49}{transparency}};}
+\DoxyCodeLine{\Hypertarget{subwindow_8h_source_l00016}\mbox{\hyperlink{classSubWindow_a99279028421377e4764a0177f198d90b}{00016}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classSubWindow_a99279028421377e4764a0177f198d90b}{camera\_mode}};}
+\DoxyCodeLine{\Hypertarget{subwindow_8h_source_l00017}\mbox{\hyperlink{classSubWindow_a84e719afe4b9cdcd9762d74eadce5fec}{00017}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classSubWindow_a84e719afe4b9cdcd9762d74eadce5fec}{textured}};}
+\DoxyCodeLine{\Hypertarget{subwindow_8h_source_l00018}\mbox{\hyperlink{classSubWindow_a6540a161c2cb9d24703c2841f98d9659}{00018}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classSubWindow_a6540a161c2cb9d24703c2841f98d9659}{pre\_generated}};}
+\DoxyCodeLine{\Hypertarget{subwindow_8h_source_l00019}\mbox{\hyperlink{classSubWindow_a9680efc0a8e34ddaa9fdd42f658f2a09}{00019}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{classSubWindow_a9680efc0a8e34ddaa9fdd42f658f2a09}{level}}[2];}
+\DoxyCodeLine{\Hypertarget{subwindow_8h_source_l00020}\mbox{\hyperlink{classSubWindow_a888cbbc96e72b6268107d09481dff262}{00020}}     \mbox{\hyperlink{classCamera}{Camera}} \mbox{\hyperlink{classSubWindow_a888cbbc96e72b6268107d09481dff262}{camera}};}
+\DoxyCodeLine{\Hypertarget{subwindow_8h_source_l00021}\mbox{\hyperlink{classSubWindow_a1a30bdfafe71c986b7040192d5405d09}{00021}}     \mbox{\hyperlink{structContext}{Context}} \&\mbox{\hyperlink{classSubWindow_a1a30bdfafe71c986b7040192d5405d09}{context}};}
+\DoxyCodeLine{\Hypertarget{subwindow_8h_source_l00022}\mbox{\hyperlink{classSubWindow_a039dc3e93af2abf807d16dcc16bd2568}{00022}}     \mbox{\hyperlink{classeastl_1_1shared__ptr}{shared\_ptr<Scene>}} \mbox{\hyperlink{classSubWindow_a039dc3e93af2abf807d16dcc16bd2568}{scene}};}
+\DoxyCodeLine{\Hypertarget{subwindow_8h_source_l00023}\mbox{\hyperlink{classSubWindow_ab701da6251cc8b6b6e8284db477759dd}{00023}}     \mbox{\hyperlink{classBuffer}{Buffer}} \mbox{\hyperlink{classSubWindow_ab701da6251cc8b6b6e8284db477759dd}{buffer}};}
+\DoxyCodeLine{\Hypertarget{subwindow_8h_source_l00024}\mbox{\hyperlink{classSubWindow_a6ac44ab4dcd4058e1c43167b0d58db4a}{00024}}     \mbox{\hyperlink{classWindow}{Window}} \&\mbox{\hyperlink{classSubWindow_a6ac44ab4dcd4058e1c43167b0d58db4a}{window}};}
+\DoxyCodeLine{00025 }
+\DoxyCodeLine{\Hypertarget{subwindow_8h_source_l00026}\mbox{\hyperlink{classSubWindow_ae3d03f0b0c9e6b2077eaf42e4a21b08d}{00026}}     mat4 \mbox{\hyperlink{classSubWindow_a7c2016e2374e5f3025a43fe07ddcdbfe}{projection}}, \mbox{\hyperlink{classSubWindow_ae3d03f0b0c9e6b2077eaf42e4a21b08d}{last\_camera}};}
+\DoxyCodeLine{00027 \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028     \mbox{\hyperlink{classSubWindow_a43045574e72b59e2ad533145ff428a0d}{SubWindow}}(\mbox{\hyperlink{classWindow}{Window}} \&\mbox{\hyperlink{classSubWindow_a6ac44ab4dcd4058e1c43167b0d58db4a}{window}}, \mbox{\hyperlink{structContext}{Context}} \&\mbox{\hyperlink{classSubWindow_a1a30bdfafe71c986b7040192d5405d09}{context}}, \mbox{\hyperlink{classeastl_1_1shared__ptr}{shared\_ptr<Scene>}} \mbox{\hyperlink{classSubWindow_a039dc3e93af2abf807d16dcc16bd2568}{scene}});}
+\DoxyCodeLine{00029 }
+\DoxyCodeLine{00030     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classSubWindow_aa69a4e9aeada4c9c6755b348a70c3ab6}{params\_window}}();}
+\DoxyCodeLine{00031 }
+\DoxyCodeLine{00032     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classSubWindow_acbfb789831e20841fe7cc7ee8a8a9c4d}{render\_window}}(\textcolor{keywordtype}{double} delta\_time);}
+\DoxyCodeLine{00033 }
+\DoxyCodeLine{00034     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classSubWindow_a3f96bc1981aeedb209fdf3168e41d924}{loop}}(\textcolor{keywordtype}{size\_t} \textcolor{keywordtype}{id}, \textcolor{keywordtype}{double} delta\_time);}
+\DoxyCodeLine{00035     \mbox{\hyperlink{classeastl_1_1shared__ptr}{shared\_ptr<Scene>}}\& \mbox{\hyperlink{classSubWindow_a4920e96742d73540eaeb692249a662a6}{get\_scene}}();}
+\DoxyCodeLine{00036 \};}
+\DoxyCodeLine{00037 }
+\DoxyCodeLine{00038 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// SUBWINDOW\_H}}
+
+\end{DoxyCode}

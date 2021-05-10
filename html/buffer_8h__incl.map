@@ -1,0 +1,11 @@
+<map id="osdo/buffer.h" name="osdo/buffer.h">
+<area shape="rect" id="node1" title="Буфер, у якому відбувається рендеринг у текстуру." alt="" coords="119,5,217,32"/>
+<area shape="rect" id="node2" href="$osdo_8h.html" title=" " alt="" coords="132,229,193,256"/>
+<area shape="rect" id="node6" href="$texture_8h.html" title="Задає клас текстури." alt="" coords="75,80,149,107"/>
+<area shape="rect" id="node8" href="$renderbuffer_8h.html" title="Задає клас буфера рендеренгу (для зберігання кольорів або глибини)." alt="" coords="173,80,275,107"/>
+<area shape="rect" id="node9" href="$framebuffer_8h.html" title="Буфер кадру, що використовується для рендеренгу." alt="" coords="300,80,399,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,304,99,331"/>
+<area shape="rect" id="node4" title=" " alt="" coords="123,304,203,331"/>
+<area shape="rect" id="node5" title=" " alt="" coords="227,304,291,331"/>
+<area shape="rect" id="node7" href="$glbindable_8h.html" title="Абстрактний клас, який виконує роль генерації та прив&#39;язки об&#39;єктів OpenGL." alt="" coords="200,155,291,181"/>
+</map>

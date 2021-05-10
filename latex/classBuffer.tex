@@ -1,0 +1,203 @@
+\hypertarget{classBuffer}{}\doxysubsection{Клас Buffer}
+\label{classBuffer}\index{Buffer@{Buffer}}
+
+
+Буфер, у якому відбувається рендеринг у текстуру.  
+
+
+
+
+{\ttfamily \#include $<$buffer.\+h$>$}
+
+
+
+Діаграма зв\textquotesingle{}язків класу Buffer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{classBuffer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Загальнодоступні елементи}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classBuffer_a1fc0873aa0dd87e47da962f32110b03e}{pre\+\_\+render}} (GLsizei size\mbox{[}2\mbox{]})
+\begin{DoxyCompactList}\small\item\em Підгодовка до рендеренгу. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBuffer_a2546d46567336e00cb66d53585ebbbd7}{post\+\_\+render}} (GLsizei size\mbox{[}2\mbox{]})
+\begin{DoxyCompactList}\small\item\em Генерація текстури з утвореного кадру. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classTexture}{Texture}} \& \mbox{\hyperlink{classBuffer_a83f8f07b7743b697cc5d0d78dfc0b9db}{get\+\_\+tex}} ()
+\begin{DoxyCompactList}\small\item\em Забирає текстуру у яку проводився рендеринг. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Приватні дані}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTexture}{Texture}} \mbox{\hyperlink{classBuffer_a0f6f91cd8ed9970868265d7e85b76d8b}{tex}}
+\begin{DoxyCompactList}\small\item\em Текстура у яку відбувається рендеринг. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRenderbuffer}{Renderbuffer}} \mbox{\hyperlink{classBuffer_a2f3e346b7f027511c34983936f57a360}{color\+\_\+rb}}
+\begin{DoxyCompactList}\small\item\em Буфер кольорів для рендеренгу. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRenderbuffer}{Renderbuffer}} \mbox{\hyperlink{classBuffer_a1fa066668c11e375e09b3ac05575af86}{depth\+\_\+rb}}
+\begin{DoxyCompactList}\small\item\em Глибинний буфер для рендеренгу. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classFramebuffer}{Framebuffer}} \mbox{\hyperlink{classBuffer_a4dfc88865a8457c1ac0e590239c8d109}{ms\+\_\+fb}}
+\begin{DoxyCompactList}\small\item\em Буфер утвореного кадру рендеренгу із згладжуванням. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classFramebuffer}{Framebuffer}} \mbox{\hyperlink{classBuffer_a0e59570248c5a6195f5c9e88201c7d5d}{fb}}
+\begin{DoxyCompactList}\small\item\em Кінцевий буфер утвореного кадру. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Детальний опис}
+Буфер, у якому відбувається рендеринг у текстуру. 
+
+Див. визначення в файлі \mbox{\hyperlink{buffer_8h_source}{buffer.\+h}}, рядок \mbox{\hyperlink{buffer_8h_source_l00016}{16}}
+
+
+
+\doxysubsubsection{Опис методів компонент}
+\mbox{\Hypertarget{classBuffer_a83f8f07b7743b697cc5d0d78dfc0b9db}\label{classBuffer_a83f8f07b7743b697cc5d0d78dfc0b9db}} 
+\index{Buffer@{Buffer}!get\_tex@{get\_tex}}
+\index{get\_tex@{get\_tex}!Buffer@{Buffer}}
+\doxyparagraph{\texorpdfstring{get\_tex()}{get\_tex()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classTexture}{Texture}} \& Buffer\+::get\+\_\+tex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Забирає текстуру у яку проводився рендеринг. 
+
+\begin{DoxyReturn}{Повертає}
+текстура у яку проводився рендеринг 
+\end{DoxyReturn}
+
+
+Див. визначення в файлі \mbox{\hyperlink{buffer_8cpp_source}{buffer.\+cpp}}, рядок \mbox{\hyperlink{buffer_8cpp_source_l00035}{35}}
+
+\mbox{\Hypertarget{classBuffer_a2546d46567336e00cb66d53585ebbbd7}\label{classBuffer_a2546d46567336e00cb66d53585ebbbd7}} 
+\index{Buffer@{Buffer}!post\_render@{post\_render}}
+\index{post\_render@{post\_render}!Buffer@{Buffer}}
+\doxyparagraph{\texorpdfstring{post\_render()}{post\_render()}}
+{\footnotesize\ttfamily void Buffer\+::post\+\_\+render (\begin{DoxyParamCaption}\item[{GLsizei}]{size\mbox{[}2\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Генерація текстури з утвореного кадру. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\texttt{ in}}  & {\em size} & ширина та висота кадру. \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{buffer_8cpp_source}{buffer.\+cpp}}, рядок \mbox{\hyperlink{buffer_8cpp_source_l00021}{21}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBuffer_a2546d46567336e00cb66d53585ebbbd7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBuffer_a1fc0873aa0dd87e47da962f32110b03e}\label{classBuffer_a1fc0873aa0dd87e47da962f32110b03e}} 
+\index{Buffer@{Buffer}!pre\_render@{pre\_render}}
+\index{pre\_render@{pre\_render}!Buffer@{Buffer}}
+\doxyparagraph{\texorpdfstring{pre\_render()}{pre\_render()}}
+{\footnotesize\ttfamily bool Buffer\+::pre\+\_\+render (\begin{DoxyParamCaption}\item[{GLsizei}]{size\mbox{[}2\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Підгодовка до рендеренгу. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\texttt{ in}}  & {\em size} & ширина та висота кадру. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Повертає}
+статус успішності підготовки буферів до рендеренгу. 
+\end{DoxyReturn}
+
+
+Див. визначення в файлі \mbox{\hyperlink{buffer_8cpp_source}{buffer.\+cpp}}, рядок \mbox{\hyperlink{buffer_8cpp_source_l00006}{6}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBuffer_a1fc0873aa0dd87e47da962f32110b03e_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsubsection{Компонентні дані}
+\mbox{\Hypertarget{classBuffer_a2f3e346b7f027511c34983936f57a360}\label{classBuffer_a2f3e346b7f027511c34983936f57a360}} 
+\index{Buffer@{Buffer}!color\_rb@{color\_rb}}
+\index{color\_rb@{color\_rb}!Buffer@{Buffer}}
+\doxyparagraph{\texorpdfstring{color\_rb}{color\_rb}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRenderbuffer}{Renderbuffer}} Buffer\+::color\+\_\+rb\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Буфер кольорів для рендеренгу. 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{buffer_8h_source}{buffer.\+h}}, рядок \mbox{\hyperlink{buffer_8h_source_l00024}{24}}
+
+\mbox{\Hypertarget{classBuffer_a1fa066668c11e375e09b3ac05575af86}\label{classBuffer_a1fa066668c11e375e09b3ac05575af86}} 
+\index{Buffer@{Buffer}!depth\_rb@{depth\_rb}}
+\index{depth\_rb@{depth\_rb}!Buffer@{Buffer}}
+\doxyparagraph{\texorpdfstring{depth\_rb}{depth\_rb}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRenderbuffer}{Renderbuffer}} Buffer\+::depth\+\_\+rb\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Глибинний буфер для рендеренгу. 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{buffer_8h_source}{buffer.\+h}}, рядок \mbox{\hyperlink{buffer_8h_source_l00028}{28}}
+
+\mbox{\Hypertarget{classBuffer_a0e59570248c5a6195f5c9e88201c7d5d}\label{classBuffer_a0e59570248c5a6195f5c9e88201c7d5d}} 
+\index{Buffer@{Buffer}!fb@{fb}}
+\index{fb@{fb}!Buffer@{Buffer}}
+\doxyparagraph{\texorpdfstring{fb}{fb}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classFramebuffer}{Framebuffer}} Buffer\+::fb\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Кінцевий буфер утвореного кадру. 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{buffer_8h_source}{buffer.\+h}}, рядок \mbox{\hyperlink{buffer_8h_source_l00036}{36}}
+
+\mbox{\Hypertarget{classBuffer_a4dfc88865a8457c1ac0e590239c8d109}\label{classBuffer_a4dfc88865a8457c1ac0e590239c8d109}} 
+\index{Buffer@{Buffer}!ms\_fb@{ms\_fb}}
+\index{ms\_fb@{ms\_fb}!Buffer@{Buffer}}
+\doxyparagraph{\texorpdfstring{ms\_fb}{ms\_fb}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classFramebuffer}{Framebuffer}} Buffer\+::ms\+\_\+fb\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Буфер утвореного кадру рендеренгу із згладжуванням. 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{buffer_8h_source}{buffer.\+h}}, рядок \mbox{\hyperlink{buffer_8h_source_l00032}{32}}
+
+\mbox{\Hypertarget{classBuffer_a0f6f91cd8ed9970868265d7e85b76d8b}\label{classBuffer_a0f6f91cd8ed9970868265d7e85b76d8b}} 
+\index{Buffer@{Buffer}!tex@{tex}}
+\index{tex@{tex}!Buffer@{Buffer}}
+\doxyparagraph{\texorpdfstring{tex}{tex}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTexture}{Texture}} Buffer\+::tex\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Текстура у яку відбувається рендеринг. 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{buffer_8h_source}{buffer.\+h}}, рядок \mbox{\hyperlink{buffer_8h_source_l00020}{20}}
+
+
+
+Документація цих класів була створена з файлів\+:\begin{DoxyCompactItemize}
+\item 
+osdo/\mbox{\hyperlink{buffer_8h}{buffer.\+h}}\item 
+osdo/\mbox{\hyperlink{buffer_8cpp}{buffer.\+cpp}}\end{DoxyCompactItemize}

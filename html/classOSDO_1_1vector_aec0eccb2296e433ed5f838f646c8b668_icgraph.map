@@ -1,0 +1,8 @@
+<map id="OSDO::vector::_allocate" name="OSDO::vector::_allocate">
+<area shape="rect" id="node1" title="Виділяє масив розміру size" alt="" coords="415,81,579,108"/>
+<area shape="rect" id="node2" href="$classOSDO_1_1vector.html#a1d511b6a07c22ee8ff471c73cc4ad808" title="Копіює масив." alt="" coords="220,56,367,83"/>
+<area shape="rect" id="node5" href="$classOSDO_1_1vector.html#a23d62d868c798c02c6056b59f986a4c5" title="Конструктор з параметром розміру масиву" alt="" coords="220,107,367,133"/>
+<area shape="rect" id="node3" href="$classOSDO_1_1vector.html#ad51b577ece8931d6074012e9258fe399" title=" " alt="" coords="5,5,172,32"/>
+<area shape="rect" id="node4" href="$classOSDO_1_1vector.html#a1d00bc9f72a815219d77bb186c461695" title="Конструктор переносу" alt="" coords="15,56,162,83"/>
+<area shape="rect" id="node6" href="$classOSDO_1_1vector.html#a0a5e04be2de5b09300bc29a34a8886ee" title=" " alt="" coords="19,107,159,133"/>
+</map>

@@ -1,0 +1,3440 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/TeX Live for SUSE Linux) (preloaded format=pdflatex 2021.3.24)  10 MAY 2021 13:23
+entering extended mode
+ \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**refman.tex
+(./refman.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-04-06> (/usr/share/texmf/tex/latex/base/article.cls
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/size10.clo
+File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@section=\count168
+\c@subsection=\count169
+\c@subsubsection=\count170
+\c@paragraph=\count171
+\c@subparagraph=\count172
+\c@figure=\count173
+\c@table=\count174
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+)
+(/usr/share/texmf/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texmf/tex/latex/tools/array.sty
+Rollback for package 'array' requested -> date 2016-10-06.
+         Best approximation is the release introduced on 2016-10-06.
+
+(/usr/share/texmf/tex/latex/tools/array-2016-10-06.sty
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
+\col@sep=\dimen135
+\extrarowheight=\dimen136
+\NC@list=\toks15
+\extratabsurround=\skip49
+\backup@length=\skip50
+))
+(/usr/share/texmf/tex/latex/base/fixltx2e.sty
+Package: fixltx2e 2016/12/29 v2.1a fixes to LaTeX (obsolete)
+Applying: [2015/01/01] Old fixltx2e package on input line 46.
+
+
+Package fixltx2e Warning: fixltx2e is not required with releases after 2015
+(fixltx2e)                All fixes are now in the LaTeX kernel.
+(fixltx2e)                See the latexrelease package for details.
+
+Already applied: [0000/00/00] Old fixltx2e package on input line 53.
+) (./doxygen.sty
+Package: doxygen 
+ (/usr/share/texmf/tex/latex/base/alltt.sty
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+)
+(/usr/share/texmf/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count175
+\calc@Bcount=\count176
+\calc@Adimen=\dimen137
+\calc@Bdimen=\dimen138
+\calc@Askip=\skip51
+\calc@Bskip=\skip52
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count177
+\calc@Cskip=\skip53
+)
+(/usr/share/texmf/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count178
+\float@exts=\toks16
+\float@box=\box45
+\@float@everytoks=\toks17
+\@floatcapt=\box46
+)
+(/usr/share/texmf/tex/latex/tools/verbatim.sty
+Package: verbatim 2019/11/10 v1.5r LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks18
+\verbatim@line=\toks19
+\verbatim@in@stream=\read2
+)
+(/usr/share/texmf/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/share/texmf/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(/usr/share/texmf/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+)
+(/usr/share/texmf/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+\everycr=\toks20
+\minrowclearance=\skip54
+)
+\rownum=\count179
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+) (./longtable_doxygen.sty
+Package: longtable_doxygen 2014/10/28 v4.11 Multi-page Table package (DPC) - fr
+ozen version for doxygen
+\LTleft=\skip55
+\LTright=\skip56
+\LTpre=\skip57
+\LTpost=\skip58
+\LTchunksize=\count180
+\LTcapwidth=\dimen139
+\LT@head=\box47
+\LT@firsthead=\box48
+\LT@foot=\box49
+\LT@lastfoot=\box50
+\LT@cols=\count181
+\LT@rows=\count182
+\c@LT@tables=\count183
+\c@LT@chunks=\count184
+\LT@p@ftn=\toks21
+)
+(./tabu_doxygen.sty
+Package: tabu_doxygen 2011/02/26 v2.8 - flexible LaTeX tabulars (FC), frozen ve
+rsion for doxygen
+ (/usr/share/texmf/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box51
+\sift@deathcycles=\count185
+\@vwid@loff=\dimen140
+\@vwid@roff=\dimen141
+)
+\c@taburow=\count186
+\tabu@nbcols=\count187
+\tabu@cnt=\count188
+\tabu@Xcol=\count189
+\tabu@alloc=\count190
+\tabu@nested=\count191
+\tabu@target=\dimen142
+\tabu@spreadtarget=\dimen143
+\tabu@naturalX=\dimen144
+\tabucolX=\dimen145
+\tabu@Xsum=\dimen146
+\extrarowdepth=\dimen147
+\abovetabulinesep=\dimen148
+\belowtabulinesep=\dimen149
+\tabustrutrule=\dimen150
+\tabu@thebody=\toks22
+\tabu@footnotes=\toks23
+\tabu@box=\box52
+\tabu@arstrutbox=\box53
+\tabu@hleads=\box54
+\tabu@vleads=\box55
+\tabu@cellskip=\skip59
+)
+(/usr/share/texmf/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2020/01/13 v3.5 verbatim text (tvz,hv)
+
+(/usr/share/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks24
+)
+\FV@CodeLineNo=\count192
+\FV@InFile=\read3
+\FV@TabBox=\box56
+\c@FancyVerbLine=\count193
+\FV@StepNumber=\count194
+\FV@OutFile=\write3
+)
+(/usr/share/texmf/tex/latex/tools/tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+\TX@col@width=\dimen151
+\TX@old@table=\dimen152
+\TX@old@col=\dimen153
+\TX@target=\dimen154
+\TX@delta=\dimen155
+\TX@cols=\count195
+\TX@ftn=\toks25
+)
+(/usr/share/texmf/tex/latex/tools/multicol.sty
+Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
+\c@tracingmulticols=\count196
+\mult@box=\box57
+\multicol@leftmargin=\dimen156
+\c@unbalance=\count197
+\c@collectmore=\count198
+\doublecol@number=\count199
+\multicoltolerance=\count266
+\multicolpretolerance=\count267
+\full@width=\dimen157
+\page@free=\dimen158
+\premulticols=\dimen159
+\postmulticols=\dimen160
+\multicolsep=\skip60
+\multicolbaselineskip=\skip61
+\partial@page=\box58
+\last@line=\box59
+\maxbalancingoverflow=\dimen161
+\mult@rightbox=\box60
+\mult@grightbox=\box61
+\mult@gfirstbox=\box62
+\mult@firstbox=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\c@minrows=\count268
+\c@columnbadness=\count269
+\c@finalcolumnbadness=\count270
+\last@try=\dimen162
+\multicolovershoot=\dimen163
+\multicolundershoot=\dimen164
+\mult@nat@firstbox=\box101
+\colbreak@box=\box102
+\mc@col@check@num=\count271
+)
+(/usr/share/texmf/tex/latex/multirow/multirow.sty
+Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
+\multirow@colwidth=\skip62
+\multirow@cntb=\count272
+\multirow@dima=\skip63
+\bigstrutjot=\dimen165
+)
+(/usr/share/texmf/tex/latex/hanging/hanging.sty
+Package: hanging 2009/09/02 v1.2b hanging paragraphs and punctuation
+\h@ngcommawd=\skip64
+\h@ngfstopwd=\skip65
+\h@ngquotewd=\skip66
+\h@ngdquotewd=\skip67
+\h@ngquerywd=\skip68
+\h@ngexclwd=\skip69
+\h@ngcolonwd=\skip70
+\h@ngscolonwd=\skip71
+)
+(/usr/share/texmf/tex/generic/iftex/ifpdf.sty
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+
+(/usr/share/texmf/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+(/usr/share/texmf/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2019/01/04 v1.2 Adjusting TeX boxes (trim, clip, ...)
+
+(/usr/share/texmf/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(/usr/share/texmf/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texmf/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks26
+\XKV@tempa@toks=\toks27
+)
+\XKV@depth=\count273
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/share/texmf/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(/usr/share/texmf/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2018/04/08 v1.1 Trim and clip general TeX material
+
+(/usr/share/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texmf/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+)
+\Gin@req@height=\dimen166
+\Gin@req@width=\dimen167
+)
+(/usr/share/texmf/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box103
+)
+\tc@llx=\dimen168
+\tc@lly=\dimen169
+\tc@urx=\dimen170
+\tc@ury=\dimen171
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+(/usr/share/texmf/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen172
+\adjbox@Height=\dimen173
+\adjbox@Depth=\dimen174
+\adjbox@Totalheight=\dimen175
+\adjbox@pwidth=\dimen176
+\adjbox@pheight=\dimen177
+\adjbox@pdepth=\dimen178
+\adjbox@ptotalheight=\dimen179
+
+(/usr/share/texmf/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count274
+))
+(/usr/share/texmf/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texmf/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks28
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texmf/tex/latex/stackengine/stackengine.sty
+Package: stackengine 2017/02/13 v4.01\ Stacking text and objects in convenient 
+ways
+
+(/usr/share/texmf/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count275
+)
+(/usr/share/texmf/tex/generic/listofitems/listofitems.sty
+(/usr/share/texmf/tex/generic/listofitems/listofitems.tex
+\loi_cnt_foreach_nest=\count276
+\loi_nestcnt=\count277
+)
+Package: listofitems 2019/08/21 v1.63 Grab items in lists using user-specified 
+sep char (CT)
+)
+\c@@stackindex=\count278
+\@boxshift=\skip72
+\stack@tmplength=\skip73
+\temp@stkl=\skip74
+\@stackedboxwidth=\skip75
+\@addedbox=\box104
+\@anchorbox=\box105
+\stackedbox=\box106
+\@centerbox=\box107
+\c@ROWcellindex@=\count279
+)
+(/usr/share/texmf/tex/generic/ulem/ulem.sty
+\UL@box=\box108
+\UL@hyphenbox=\box109
+\UL@skip=\skip76
+\UL@hook=\toks29
+\UL@height=\dimen180
+\UL@pe=\count280
+\UL@pixel=\dimen181
+\ULC@box=\box110
+Package: ulem 2019/11/18
+\ULdepth=\dimen182
+)
+\xrefbox=\box111
+\xreflength=\skip77
+\CodeWidthChar=\skip78
+\CodeHeightChar=\skip79
+\DoxyCodeWidth=\skip80
+)
+(/usr/share/texmf/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks30
+\inpenc@posthook=\toks31
+)
+(/usr/share/texmf/tex/latex/base/makeidx.sty
+Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
+)
+(/usr/share/texmf/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+(/usr/share/texmf/tex/latex/wasysym/wasysym.sty
+Package: wasysym 2020/01/19 v2.4 Wasy-2 symbol support package
+\symwasy=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
+(Font)                  U/wasy/m/n --> U/wasy/b/n on input line 93.
+)
+(/usr/share/texmf/tex/generic/iftex/ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+)
+(/usr/share/texmf/tex/latex/base/fontenc.sty
+Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
+
+(/usr/share/texmf/tex/latex/cyrillic/t2aenc.def
+File: t2aenc.def 2005/09/27 v1.0i Cyrillic encoding definition file
+Now handling font encoding T2A ...
+... processing UTF-8 mapping file for font encoding T2A
+
+(/usr/share/texmf/tex/latex/base/t2aenc.dfu
+File: t2aenc.dfu 2019/11/14 v1.2k UTF-8 support for inputenc
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0237 (decimal 567)
+   defining Unicode char U+0400 (decimal 1024)
+   defining Unicode char U+0401 (decimal 1025)
+   defining Unicode char U+0402 (decimal 1026)
+   defining Unicode char U+0403 (decimal 1027)
+   defining Unicode char U+0404 (decimal 1028)
+   defining Unicode char U+0405 (decimal 1029)
+   defining Unicode char U+0406 (decimal 1030)
+   defining Unicode char U+0407 (decimal 1031)
+   defining Unicode char U+0408 (decimal 1032)
+   defining Unicode char U+0409 (decimal 1033)
+   defining Unicode char U+040A (decimal 1034)
+   defining Unicode char U+040B (decimal 1035)
+   defining Unicode char U+040C (decimal 1036)
+   defining Unicode char U+040D (decimal 1037)
+   defining Unicode char U+040E (decimal 1038)
+   defining Unicode char U+040F (decimal 1039)
+   defining Unicode char U+0410 (decimal 1040)
+   defining Unicode char U+0411 (decimal 1041)
+   defining Unicode char U+0412 (decimal 1042)
+   defining Unicode char U+0413 (decimal 1043)
+   defining Unicode char U+0414 (decimal 1044)
+   defining Unicode char U+0415 (decimal 1045)
+   defining Unicode char U+0416 (decimal 1046)
+   defining Unicode char U+0417 (decimal 1047)
+   defining Unicode char U+0418 (decimal 1048)
+   defining Unicode char U+0419 (decimal 1049)
+   defining Unicode char U+041A (decimal 1050)
+   defining Unicode char U+041B (decimal 1051)
+   defining Unicode char U+041C (decimal 1052)
+   defining Unicode char U+041D (decimal 1053)
+   defining Unicode char U+041E (decimal 1054)
+   defining Unicode char U+041F (decimal 1055)
+   defining Unicode char U+0420 (decimal 1056)
+   defining Unicode char U+0421 (decimal 1057)
+   defining Unicode char U+0422 (decimal 1058)
+   defining Unicode char U+0423 (decimal 1059)
+   defining Unicode char U+0424 (decimal 1060)
+   defining Unicode char U+0425 (decimal 1061)
+   defining Unicode char U+0426 (decimal 1062)
+   defining Unicode char U+0427 (decimal 1063)
+   defining Unicode char U+0428 (decimal 1064)
+   defining Unicode char U+0429 (decimal 1065)
+   defining Unicode char U+042A (decimal 1066)
+   defining Unicode char U+042B (decimal 1067)
+   defining Unicode char U+042C (decimal 1068)
+   defining Unicode char U+042D (decimal 1069)
+   defining Unicode char U+042E (decimal 1070)
+   defining Unicode char U+042F (decimal 1071)
+   defining Unicode char U+0430 (decimal 1072)
+   defining Unicode char U+0431 (decimal 1073)
+   defining Unicode char U+0432 (decimal 1074)
+   defining Unicode char U+0433 (decimal 1075)
+   defining Unicode char U+0434 (decimal 1076)
+   defining Unicode char U+0435 (decimal 1077)
+   defining Unicode char U+0436 (decimal 1078)
+   defining Unicode char U+0437 (decimal 1079)
+   defining Unicode char U+0438 (decimal 1080)
+   defining Unicode char U+0439 (decimal 1081)
+   defining Unicode char U+043A (decimal 1082)
+   defining Unicode char U+043B (decimal 1083)
+   defining Unicode char U+043C (decimal 1084)
+   defining Unicode char U+043D (decimal 1085)
+   defining Unicode char U+043E (decimal 1086)
+   defining Unicode char U+043F (decimal 1087)
+   defining Unicode char U+0440 (decimal 1088)
+   defining Unicode char U+0441 (decimal 1089)
+   defining Unicode char U+0442 (decimal 1090)
+   defining Unicode char U+0443 (decimal 1091)
+   defining Unicode char U+0444 (decimal 1092)
+   defining Unicode char U+0445 (decimal 1093)
+   defining Unicode char U+0446 (decimal 1094)
+   defining Unicode char U+0447 (decimal 1095)
+   defining Unicode char U+0448 (decimal 1096)
+   defining Unicode char U+0449 (decimal 1097)
+   defining Unicode char U+044A (decimal 1098)
+   defining Unicode char U+044B (decimal 1099)
+   defining Unicode char U+044C (decimal 1100)
+   defining Unicode char U+044D (decimal 1101)
+   defining Unicode char U+044E (decimal 1102)
+   defining Unicode char U+044F (decimal 1103)
+   defining Unicode char U+0450 (decimal 1104)
+   defining Unicode char U+0451 (decimal 1105)
+   defining Unicode char U+0452 (decimal 1106)
+   defining Unicode char U+0453 (decimal 1107)
+   defining Unicode char U+0454 (decimal 1108)
+   defining Unicode char U+0455 (decimal 1109)
+   defining Unicode char U+0456 (decimal 1110)
+   defining Unicode char U+0457 (decimal 1111)
+   defining Unicode char U+0458 (decimal 1112)
+   defining Unicode char U+0459 (decimal 1113)
+   defining Unicode char U+045A (decimal 1114)
+   defining Unicode char U+045B (decimal 1115)
+   defining Unicode char U+045C (decimal 1116)
+   defining Unicode char U+045D (decimal 1117)
+   defining Unicode char U+045E (decimal 1118)
+   defining Unicode char U+045F (decimal 1119)
+   defining Unicode char U+0490 (decimal 1168)
+   defining Unicode char U+0491 (decimal 1169)
+   defining Unicode char U+0492 (decimal 1170)
+   defining Unicode char U+0493 (decimal 1171)
+   defining Unicode char U+0496 (decimal 1174)
+   defining Unicode char U+0497 (decimal 1175)
+   defining Unicode char U+0498 (decimal 1176)
+   defining Unicode char U+0499 (decimal 1177)
+   defining Unicode char U+049A (decimal 1178)
+   defining Unicode char U+049B (decimal 1179)
+   defining Unicode char U+049C (decimal 1180)
+   defining Unicode char U+049D (decimal 1181)
+   defining Unicode char U+04A0 (decimal 1184)
+   defining Unicode char U+04A1 (decimal 1185)
+   defining Unicode char U+04A2 (decimal 1186)
+   defining Unicode char U+04A3 (decimal 1187)
+   defining Unicode char U+04A4 (decimal 1188)
+   defining Unicode char U+04A5 (decimal 1189)
+   defining Unicode char U+04AA (decimal 1194)
+   defining Unicode char U+04AB (decimal 1195)
+   defining Unicode char U+04AE (decimal 1198)
+   defining Unicode char U+04AF (decimal 1199)
+   defining Unicode char U+04B0 (decimal 1200)
+   defining Unicode char U+04B1 (decimal 1201)
+   defining Unicode char U+04B2 (decimal 1202)
+   defining Unicode char U+04B3 (decimal 1203)
+   defining Unicode char U+04B6 (decimal 1206)
+   defining Unicode char U+04B7 (decimal 1207)
+   defining Unicode char U+04B8 (decimal 1208)
+   defining Unicode char U+04B9 (decimal 1209)
+   defining Unicode char U+04BA (decimal 1210)
+   defining Unicode char U+04BB (decimal 1211)
+   defining Unicode char U+04C0 (decimal 1216)
+   defining Unicode char U+04C1 (decimal 1217)
+   defining Unicode char U+04C2 (decimal 1218)
+   defining Unicode char U+04D0 (decimal 1232)
+   defining Unicode char U+04D1 (decimal 1233)
+   defining Unicode char U+04D2 (decimal 1234)
+   defining Unicode char U+04D3 (decimal 1235)
+   defining Unicode char U+04D4 (decimal 1236)
+   defining Unicode char U+04D5 (decimal 1237)
+   defining Unicode char U+04D6 (decimal 1238)
+   defining Unicode char U+04D7 (decimal 1239)
+   defining Unicode char U+04D8 (decimal 1240)
+   defining Unicode char U+04D9 (decimal 1241)
+   defining Unicode char U+04DA (decimal 1242)
+   defining Unicode char U+04DB (decimal 1243)
+   defining Unicode char U+04DC (decimal 1244)
+   defining Unicode char U+04DD (decimal 1245)
+   defining Unicode char U+04DE (decimal 1246)
+   defining Unicode char U+04DF (decimal 1247)
+   defining Unicode char U+04E2 (decimal 1250)
+   defining Unicode char U+04E3 (decimal 1251)
+   defining Unicode char U+04E4 (decimal 1252)
+   defining Unicode char U+04E5 (decimal 1253)
+   defining Unicode char U+04E6 (decimal 1254)
+   defining Unicode char U+04E7 (decimal 1255)
+   defining Unicode char U+04E8 (decimal 1256)
+   defining Unicode char U+04E9 (decimal 1257)
+   defining Unicode char U+04EC (decimal 1260)
+   defining Unicode char U+04ED (decimal 1261)
+   defining Unicode char U+04EE (decimal 1262)
+   defining Unicode char U+04EF (decimal 1263)
+   defining Unicode char U+04F0 (decimal 1264)
+   defining Unicode char U+04F1 (decimal 1265)
+   defining Unicode char U+04F2 (decimal 1266)
+   defining Unicode char U+04F3 (decimal 1267)
+   defining Unicode char U+04F4 (decimal 1268)
+   defining Unicode char U+04F5 (decimal 1269)
+   defining Unicode char U+04F8 (decimal 1272)
+   defining Unicode char U+04F9 (decimal 1273)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2423 (decimal 9251)
+   defining Unicode char U+27E8 (decimal 10216)
+   defining Unicode char U+27E9 (decimal 10217)
+   defining Unicode char U+FB00 (decimal 64256)
+   defining Unicode char U+FB01 (decimal 64257)
+   defining Unicode char U+FB02 (decimal 64258)
+   defining Unicode char U+FB03 (decimal 64259)
+   defining Unicode char U+FB04 (decimal 64260)
+   defining Unicode char U+FB05 (decimal 64261)
+   defining Unicode char U+FB06 (decimal 64262)
+))
+LaTeX Font Info:    Trying to load font information for T2A+cmr on input line 1
+12.
+
+(/usr/share/texmf/tex/latex/cyrillic/t2acmr.fd
+File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
+))
+(/usr/share/texmf/tex/generic/babel/babel.sty
+Package: babel 2020/03/22 3.42 The Babel package
+
+(/usr/share/texmf/tex/generic/babel/switch.def
+File: switch.def 2020/03/22 3.42 Babel switching mechanism
+)
+(/usr/share/texmf/tex/generic/babel-ukrainian/ukraineb.ldf
+Language: ukraineb 2018/04/11 1.4c Ukrainian support for the Babel system
+
+(/usr/share/texmf/tex/generic/babel/babel.def
+File: babel.def 2020/03/22 3.42 Babel common definitions
+\babel@savecnt=\count281
+\U@D=\dimen183
+
+(/usr/share/texmf/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read4
+\bbl@dirlevel=\count282
+)
+Package babel Info: Making " an active character on input line 118.
+Package babel Info: Default for \cyrdash is provided on input line 161.
+))
+(/usr/share/texmf/tex/latex/base/fontenc.sty
+Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
+)
+(/usr/share/texmf/tex/latex/psnfss/helvet.sty
+Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS) 
+)
+(/usr/share/texmf/tex/latex/psnfss/courier.sty
+Package: courier 2020/03/25 PSNFSS-v9.3 (WaS) 
+)
+(/usr/share/texmf/tex/latex/sectsty/sectsty.sty
+Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
+les
+
+
+LaTeX Warning: Command \underbar  has changed.
+               Check if current package is valid.
+
+
+LaTeX Warning: Command \underline  has changed.
+               Check if current package is valid.
+
+) (/usr/share/texmf/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/share/texmf/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count283
+\Gm@cntv=\count284
+\c@Gm@tempcnt=\count285
+\Gm@bindingoffset=\dimen184
+\Gm@wd@mp=\dimen185
+\Gm@odd@mp=\dimen186
+\Gm@even@mp=\dimen187
+\Gm@layoutwidth=\dimen188
+\Gm@layoutheight=\dimen189
+\Gm@layouthoffset=\dimen190
+\Gm@layoutvoffset=\dimen191
+\Gm@dimlist=\toks32
+)
+(/usr/share/texmf/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip81
+\f@nch@O@elh=\skip82
+\f@nch@O@erh=\skip83
+\f@nch@O@olh=\skip84
+\f@nch@O@orh=\skip85
+\f@nch@O@elf=\skip86
+\f@nch@O@erf=\skip87
+\f@nch@O@olf=\skip88
+\f@nch@O@orf=\skip89
+)
+(/usr/share/texmf/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip90
+\bibsep=\skip91
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count286
+)
+(/usr/share/texmf/tex/latex/tocloft/tocloft.sty
+Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
+Package tocloft Info: The document has section divisions on input line 51.
+\cftparskip=\skip92
+\cftbeforetoctitleskip=\skip93
+\cftaftertoctitleskip=\skip94
+\cftbeforepartskip=\skip95
+\cftpartnumwidth=\skip96
+\cftpartindent=\skip97
+\cftbeforesecskip=\skip98
+\cftsecindent=\skip99
+\cftsecnumwidth=\skip100
+\cftbeforesubsecskip=\skip101
+\cftsubsecindent=\skip102
+\cftsubsecnumwidth=\skip103
+\cftbeforesubsubsecskip=\skip104
+\cftsubsubsecindent=\skip105
+\cftsubsubsecnumwidth=\skip106
+\cftbeforeparaskip=\skip107
+\cftparaindent=\skip108
+\cftparanumwidth=\skip109
+\cftbeforesubparaskip=\skip110
+\cftsubparaindent=\skip111
+\cftsubparanumwidth=\skip112
+\cftbeforeloftitleskip=\skip113
+\cftafterloftitleskip=\skip114
+\cftbeforefigskip=\skip115
+\cftfigindent=\skip116
+\cftfignumwidth=\skip117
+\c@lofdepth=\count287
+\c@lotdepth=\count288
+\cftbeforelottitleskip=\skip118
+\cftafterlottitleskip=\skip119
+\cftbeforetabskip=\skip120
+\cfttabindent=\skip121
+\cfttabnumwidth=\skip122
+)
+\@indexfile=\write4
+\openout4 = `refman.idx'.
+
+
+Writing index file refman.idx
+(/usr/share/texmf/tex/latex/psnfss/times.sty
+Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
+)
+(/usr/share/texmf/tex/latex/newunicodechar/newunicodechar.sty
+Package: newunicodechar 2018/04/08 v1.2 Defining Unicode characters
+)
+
+Package newunicodechar Warning: Redefining Unicode character on input line 119.
+
+
+
+Package newunicodechar Warning: Redefining Unicode character on input line 120.
+
+
+(/usr/share/texmf/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
+
+(/usr/share/texmf/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texmf/tex/latex/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texmf/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texmf/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)
+(/usr/share/texmf/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/share/texmf/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/usr/share/texmf/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texmf/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/usr/share/texmf/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(/usr/share/texmf/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+)
+\@linkdim=\dimen192
+\Hy@linkcounter=\count289
+\Hy@pagecounter=\count290
+
+(/usr/share/texmf/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2020/01/14 v7.00d Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/usr/share/texmf/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/usr/share/texmf/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count291
+Package hyperref Info: Hyper figures OFF on input line 4547.
+Package hyperref Info: Link nesting OFF on input line 4552.
+Package hyperref Info: Hyper index ON on input line 4555.
+Package hyperref Info: Plain pages OFF on input line 4562.
+Package hyperref Info: Backreferencing ON on input line 4565.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4800.
+
+(/usr/share/texmf/tex/latex/hyperref/backref.sty
+Package: backref 2020/01/14 v1.40 Bibliographical back referencing
+
+(/usr/share/texmf/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(/usr/share/texmf/tex/latex/atveryend/atveryend.sty
+Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
+)
+(/usr/share/texmf/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+
+(/usr/share/texmf/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+))
+\c@Hy@tempcnt=\count292
+
+(/usr/share/texmf/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5159.
+\XeTeXLinkMargin=\dimen193
+
+(/usr/share/texmf/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+)
+\Fld@menulength=\count293
+\Field@Width=\dimen194
+\Fld@charsize=\dimen195
+Package hyperref Info: Hyper figures OFF on input line 6430.
+Package hyperref Info: Link nesting OFF on input line 6435.
+Package hyperref Info: Hyper index ON on input line 6438.
+Package hyperref Info: backreferencing ON on input line 6443.
+Package hyperref Info: Link coloring OFF on input line 6450.
+Package hyperref Info: Link coloring with OCG OFF on input line 6455.
+Package hyperref Info: PDF/A mode OFF on input line 6460.
+LaTeX Info: Redefining \ref on input line 6500.
+LaTeX Info: Redefining \pageref on input line 6504.
+
+(/usr/share/texmf/tex/generic/atbegshi/atbegshi.sty
+Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+)
+\Hy@abspage=\count294
+\c@Item=\count295
+\c@Hfootnote=\count296
+)
+Package hyperref Info: Driver: hpdftex.
+
+(/usr/share/texmf/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2020/01/14 v7.00d Hyperref driver for pdfTeX
+\Fld@listcount=\count297
+\c@bookmark@seq@number=\count298
+\Hy@SectionHShift=\skip123
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 138.
+Package hyperref Info: Option `unicode' set `true' on input line 138.
+
+(/usr/share/texmf/tex/latex/hyperref/puenc.def
+File: puenc.def 2020/01/14 v7.00d Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+(/usr/share/texmf/tex/latex/caption/caption.sty
+Package: caption 2020/01/03 v3.4h Customizing captions (AR)
+
+(/usr/share/texmf/tex/latex/caption/caption3.sty
+Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+\captionmargin=\dimen196
+\captionmargin@=\dimen197
+\captionwidth=\dimen198
+\caption@tempdima=\dimen199
+\caption@indent=\dimen256
+\caption@parindent=\dimen257
+\caption@hangindent=\dimen258
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count299
+\c@continuedfloat=\count300
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: longtable package is loaded.
+
+(/usr/share/texmf/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2018/08/26 v1.4a longtable captions (AR)
+))
+(/usr/share/texmf/tex/latex/etoc/etoc.sty
+Package: etoc 2019/11/17 v1.09b Completely customisable TOCs (JFB)
+\Etoc@toctoks=\toks33
+\c@etoc@tocid=\count301
+\c@etoc@tocdepth=\count302
+\etoc@framed@titlebox=\box112
+\etoc@framed@contentsbox=\box113
+)
+(/usr/share/texmf/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count303
+\l__pdf_internal_box=\box114
+) (./refman.aux)
+\openout1 = `refman.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 153.
+LaTeX Font Info:    ... okay on input line 153.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 153.
+LaTeX Font Info:    ... okay on input line 153.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 153.
+LaTeX Font Info:    ... okay on input line 153.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 153.
+LaTeX Font Info:    ... okay on input line 153.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 153.
+LaTeX Font Info:    ... okay on input line 153.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 153.
+LaTeX Font Info:    ... okay on input line 153.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 153.
+LaTeX Font Info:    ... okay on input line 153.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 153.
+LaTeX Font Info:    ... okay on input line 153.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 153.
+LaTeX Font Info:    ... okay on input line 153.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 153.
+LaTeX Font Info:    ... okay on input line 153.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 15
+3.
+
+(/usr/share/texmf/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 153.
+
+(/usr/share/texmf/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count304
+\scratchdimen=\dimen259
+\scratchbox=\box115
+\nofMPsegments=\count305
+\nofMParguments=\count306
+\everyMPshowfont=\toks34
+\MPscratchCnt=\count307
+\MPscratchDim=\dimen260
+\MPnumerator=\count308
+\makeMPintoPDFobject=\count309
+\everyMPtoPDFconversion=\toks35
+) (/usr/share/texmf/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texmf/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    Trying to load font information for T2A+phv on input line 1
+53.
+LaTeX Font Info:    No file T2Aphv.fd. on input line 153.
+
+
+LaTeX Font Warning: Font shape `T2A/phv/m/n' undefined
+(Font)              using `T2A/cmr/m/n' instead on input line 153.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24411pt
+* \textheight=702.78308pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-38.1381pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=121.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package backref Info: ** backref set up for natbib ** on input line 153.
+\AtBeginShipoutBox=\box116
+Package hyperref Info: Link coloring ON on input line 153.
+(/usr/share/texmf/tex/latex/hyperref/nameref.sty
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+
+(/usr/share/texmf/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/share/texmf/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count310
+)
+LaTeX Info: Redefining \ref on input line 153.
+LaTeX Info: Redefining \pageref on input line 153.
+LaTeX Info: Redefining \nameref on input line 153.
+ (./refman.out) (./refman.out)
+\@outlinefile=\write5
+\openout5 = `refman.out'.
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+\Etoc@tf=\read5
+Package hyperref Info: Option `pageanchor' set `false' on input line 160.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 160.
+
+Package hyperref Info: Option `unicode' set `true' on input line 160.
+ [1
+
+{/usr/share/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+\tf@toc=\write6
+\openout6 = `refman.toc'.
+
+
+
+LaTeX Font Warning: Font shape `T2A/phv/b/n' undefined
+(Font)              using `T2A/phv/m/n' instead on input line 172.
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 172
+.
+(/usr/share/texmf/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 172
+.
+
+(/usr/share/texmf/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 17
+2.
+
+(/usr/share/texmf/tex/latex/wasysym/uwasy.fd
+File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
+) [1] [2] [3] [4] [5]
+Package hyperref Info: Option `pageanchor' set `true' on input line 173.
+
+(./md_LICENSE.tex
+LaTeX Font Info:    Trying to load font information for T2A+pcr on input line 3
+.
+LaTeX Font Info:    No file T2Apcr.fd. on input line 3.
+
+
+LaTeX Font Warning: Font shape `T2A/pcr/m/n' undefined
+(Font)              using `T2A/cmr/m/n' instead on input line 3.
+
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 2
+4.
+(/usr/share/texmf/tex/latex/psnfss/ts1phv.fd
+File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
+)
+LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 24.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 8.99994pt on input line 33.
+ [1] [2]) (./namespaces.tex
+
+LaTeX Font Warning: Font shape `T2A/pcr/b/n' undefined
+(Font)              using `T2A/pcr/m/n' instead on input line 3.
+
+) (./hierarchy.tex [3]) (./annotated.tex
+LaTeX Font Info:    Font shape `TS1/phv/b/n' will be
+(Font)              scaled to size 8.99994pt on input line 4.
+ [4]) (./files.tex [5]
+
+LaTeX Warning: Reference `bezier_8frag' on page 6 undefined on input line 39.
+
+
+LaTeX Warning: Reference `bezier_8geom' on page 6 undefined on input line 40.
+
+
+LaTeX Warning: Reference `bezier_8tesc' on page 6 undefined on input line 41.
+
+
+LaTeX Warning: Reference `bezier_8tese' on page 6 undefined on input line 42.
+
+
+LaTeX Warning: Reference `bezier_8vert' on page 6 undefined on input line 43.
+
+[6]) (./namespaceOSDO.tex
+
+LaTeX Font Warning: Font shape `T2A/phv/m/it' undefined
+(Font)              using `T2A/phv/m/n' instead on input line 12.
+
+) (./classBeziator.tex <./classBeziator__inherit__graph.pdf
+
+pdfTeX warning: pdflatex (file ./classBeziator__inherit__graph.pdf): PDF inclus
+ion: multiple pdfs with page group included in a single page
+>
+<classBeziator__inherit__graph.pdf, id=1342, 133.49875pt x 212.795pt>
+File: classBeziator__inherit__graph.pdf Graphic file (type pdf)
+<use classBeziator__inherit__graph.pdf>
+Package pdftex.def Info: classBeziator__inherit__graph.pdf  used on input line 
+18.
+(pdftex.def)             Requested size: 133.0pt x 212.02167pt.
+ <./classBeziator__coll__graph.pdf
+
+pdfTeX warning: pdflatex (file ./classBeziator__coll__graph.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+>
+<classBeziator__coll__graph.pdf, id=1350, 396.48125pt x 224.84pt>
+File: classBeziator__coll__graph.pdf Graphic file (type pdf)
+<use classBeziator__coll__graph.pdf>
+Package pdftex.def Info: classBeziator__coll__graph.pdf  used on input line 27.
+
+(pdftex.def)             Requested size: 350.0pt x 198.4842pt.
+ [7]
+LaTeX Font Info:    Font shape `TS1/phv/m/it' in size <9> not available
+(Font)              Font shape `TS1/phv/m/sl' tried instead on input line 43.
+LaTeX Font Info:    Font shape `TS1/phv/m/sl' will be
+(Font)              scaled to size 8.09995pt on input line 43.
+
+
+LaTeX Font Warning: Font shape `T2A/pcr/m/it' undefined
+(Font)              using `T2A/pcr/m/n' instead on input line 49.
+
+[8] [9] [10] <./classBeziator_a9acccb22776bbbc76b9b886e96aa1d92_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classBeziator_a9acccb22776bbbc76b9b886e96aa1d9
+2_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a singl
+e page
+>
+<classBeziator_a9acccb22776bbbc76b9b886e96aa1d92_cgraph.pdf, id=1451, 294.09875
+pt x 100.375pt>
+File: classBeziator_a9acccb22776bbbc76b9b886e96aa1d92_cgraph.pdf Graphic file (
+type pdf)
+<use classBeziator_a9acccb22776bbbc76b9b886e96aa1d92_cgraph.pdf>
+Package pdftex.def Info: classBeziator_a9acccb22776bbbc76b9b886e96aa1d92_cgraph
+.pdf  used on input line 153.
+(pdftex.def)             Requested size: 293.0pt x 100.00102pt.
+ <./classBeziator_a850797d7a346cd6f30405e21b0224a3e_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classBeziator_a850797d7a346cd6f30405e21b0224a3
+e_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a singl
+e page
+>
+<classBeziator_a850797d7a346cd6f30405e21b0224a3e_cgraph.pdf, id=1462, 440.64626
+pt x 157.58875pt>
+File: classBeziator_a850797d7a346cd6f30405e21b0224a3e_cgraph.pdf Graphic file (
+type pdf)
+<use classBeziator_a850797d7a346cd6f30405e21b0224a3e_cgraph.pdf>
+Package pdftex.def Info: classBeziator_a850797d7a346cd6f30405e21b0224a3e_cgraph
+.pdf  used on input line 183.
+(pdftex.def)             Requested size: 350.0pt x 125.17424pt.
+ [11]
+Underfull \hbox (badness 10000) detected at line 196
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 217
+[][][]
+ []
+
+ <./classBeziator_aeafb7d3607d064c7dfa7e1c4c6d698cb_cgraph.pdf>
+<classBeziator_aeafb7d3607d064c7dfa7e1c4c6d698cb_cgraph.pdf, id=1490, 263.98625
+pt x 100.375pt>
+File: classBeziator_aeafb7d3607d064c7dfa7e1c4c6d698cb_cgraph.pdf Graphic file (
+type pdf)
+<use classBeziator_aeafb7d3607d064c7dfa7e1c4c6d698cb_cgraph.pdf>
+Package pdftex.def Info: classBeziator_aeafb7d3607d064c7dfa7e1c4c6d698cb_cgraph
+.pdf  used on input line 228.
+(pdftex.def)             Requested size: 263.0pt x 100.00562pt.
+ [12]
+Underfull \hbox (badness 10000) detected at line 260
+[][][]
+ []
+
+) (./classBijective.tex <./classBijective__inherit__graph.pdf>
+<classBijective__inherit__graph.pdf, id=1529, 194.7275pt x 156.585pt>
+File: classBijective__inherit__graph.pdf Graphic file (type pdf)
+<use classBijective__inherit__graph.pdf>
+Package pdftex.def Info: classBijective__inherit__graph.pdf  used on input line
+ 18.
+(pdftex.def)             Requested size: 194.0pt x 156.0064pt.
+ [13] [14]
+[15]
+Overfull \vbox (7.17456pt too high) has occurred while \output is active []
+
+
+[16] [17]) (./classBuffer.tex <./classBuffer__coll__graph.pdf
+
+pdfTeX warning: pdflatex (file ./classBuffer__coll__graph.pdf): PDF inclusion: 
+multiple pdfs with page group included in a single page
+>
+<classBuffer__coll__graph.pdf, id=1705, 308.15125pt x 235.88126pt>
+File: classBuffer__coll__graph.pdf Graphic file (type pdf)
+<use classBuffer__coll__graph.pdf>
+Package pdftex.def Info: classBuffer__coll__graph.pdf  used on input line 18.
+(pdftex.def)             Requested size: 307.0pt x 235.01685pt.
+ [18] [19]
+Underfull \hbox (badness 10000) detected at line 63
+[][][]
+ []
+
+ <./classBuffer_a2546d46567336e00cb66d53585ebbbd7_cgraph.pdf>
+<classBuffer_a2546d46567336e00cb66d53585ebbbd7_cgraph.pdf, id=1767, 726.715pt x
+ 236.885pt>
+File: classBuffer_a2546d46567336e00cb66d53585ebbbd7_cgraph.pdf Graphic file (ty
+pe pdf)
+<use classBuffer_a2546d46567336e00cb66d53585ebbbd7_cgraph.pdf>
+Package pdftex.def Info: classBuffer_a2546d46567336e00cb66d53585ebbbd7_cgraph.p
+df  used on input line 93.
+(pdftex.def)             Requested size: 350.0pt x 114.09026pt.
+
+Overfull \vbox (5.83694pt too high) has occurred while \output is active []
+
+
+[20]
+Underfull \hbox (badness 10000) detected at line 111
+[][][]
+ []
+
+ <./classBuffer_a1fc0873aa0dd87e47da962f32110b03e_cgraph.pdf>
+<classBuffer_a1fc0873aa0dd87e47da962f32110b03e_cgraph.pdf, id=1791, 761.84625pt
+ x 274.02374pt>
+File: classBuffer_a1fc0873aa0dd87e47da962f32110b03e_cgraph.pdf Graphic file (ty
+pe pdf)
+<use classBuffer_a1fc0873aa0dd87e47da962f32110b03e_cgraph.pdf>
+Package pdftex.def Info: classBuffer_a1fc0873aa0dd87e47da962f32110b03e_cgraph.p
+df  used on input line 122.
+(pdftex.def)             Requested size: 350.0pt x 125.88937pt.
+)
+(./classCamera.tex [21] <./classCamera__inherit__graph.pdf>
+<classCamera__inherit__graph.pdf, id=1832, 133.49875pt x 156.585pt>
+File: classCamera__inherit__graph.pdf Graphic file (type pdf)
+<use classCamera__inherit__graph.pdf>
+Package pdftex.def Info: classCamera__inherit__graph.pdf  used on input line 18
+.
+(pdftex.def)             Requested size: 133.0pt x 156.01595pt.
+ <./classCamera__coll__graph.pdf
+
+pdfTeX warning: pdflatex (file ./classCamera__coll__graph.pdf): PDF inclusion: 
+multiple pdfs with page group included in a single page
+>
+<classCamera__coll__graph.pdf, id=1847, 133.49875pt x 156.585pt>
+File: classCamera__coll__graph.pdf Graphic file (type pdf)
+<use classCamera__coll__graph.pdf>
+Package pdftex.def Info: classCamera__coll__graph.pdf  used on input line 27.
+(pdftex.def)             Requested size: 133.0pt x 156.01595pt.
+ [22] [23]
+Overfull \vbox (4.88715pt too high) has occurred while \output is active []
+
+
+[24] <./classCamera_afda6bcc513fd95c22985ba078d47b2a3_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classCamera_afda6bcc513fd95c22985ba078d47b2a3_
+cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a single 
+page
+>
+<classCamera_afda6bcc513fd95c22985ba078d47b2a3_cgraph.pdf, id=1954, 338.26375pt
+ x 111.41624pt>
+File: classCamera_afda6bcc513fd95c22985ba078d47b2a3_cgraph.pdf Graphic file (ty
+pe pdf)
+<use classCamera_afda6bcc513fd95c22985ba078d47b2a3_cgraph.pdf>
+Package pdftex.def Info: classCamera_afda6bcc513fd95c22985ba078d47b2a3_cgraph.p
+df  used on input line 162.
+(pdftex.def)             Requested size: 337.0pt x 111.00284pt.
+ <./classCamera_ab82dd66e529cd5da7f61bd0efe7cfed2_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classCamera_ab82dd66e529cd5da7f61bd0efe7cfed2_
+cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a single 
+page
+>
+<classCamera_ab82dd66e529cd5da7f61bd0efe7cfed2_cgraph.pdf, id=1965, 350.30875pt
+ x 100.375pt>
+File: classCamera_ab82dd66e529cd5da7f61bd0efe7cfed2_cgraph.pdf Graphic file (ty
+pe pdf)
+<use classCamera_ab82dd66e529cd5da7f61bd0efe7cfed2_cgraph.pdf>
+Package pdftex.def Info: classCamera_ab82dd66e529cd5da7f61bd0efe7cfed2_cgraph.p
+df  used on input line 192.
+(pdftex.def)             Requested size: 349.0pt x 100.00716pt.
+
+Overfull \vbox (6.79411pt too high) has occurred while \output is active []
+
+
+[25] <./classCamera_a9ad7a34ba72c1dd1a4cef1e0cc896d6f_icgraph.pdf>
+<classCamera_a9ad7a34ba72c1dd1a4cef1e0cc896d6f_icgraph.pdf, id=1993, 338.26375p
+t x 138.5175pt>
+File: classCamera_a9ad7a34ba72c1dd1a4cef1e0cc896d6f_icgraph.pdf Graphic file (t
+ype pdf)
+<use classCamera_a9ad7a34ba72c1dd1a4cef1e0cc896d6f_icgraph.pdf>
+Package pdftex.def Info: classCamera_a9ad7a34ba72c1dd1a4cef1e0cc896d6f_icgraph.
+pdf  used on input line 260.
+(pdftex.def)             Requested size: 337.0pt x 138.00354pt.
+ [26] <./classCamera_ac88148998eeb829c8ba8143831b7ced0_icgraph.pdf>
+<classCamera_ac88148998eeb829c8ba8143831b7ced0_icgraph.pdf, id=2016, 350.30875p
+t x 100.375pt>
+File: classCamera_ac88148998eeb829c8ba8143831b7ced0_icgraph.pdf Graphic file (t
+ype pdf)
+<use classCamera_ac88148998eeb829c8ba8143831b7ced0_icgraph.pdf>
+Package pdftex.def Info: classCamera_ac88148998eeb829c8ba8143831b7ced0_icgraph.
+pdf  used on input line 286.
+(pdftex.def)             Requested size: 349.0pt x 100.00716pt.
+ <./classCamera_aefe16d03f63e29639110b3fe9afa0e3c_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classCamera_aefe16d03f63e29639110b3fe9afa0e3c_
+cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a single 
+page
+>
+<classCamera_aefe16d03f63e29639110b3fe9afa0e3c_cgraph.pdf, id=2028, 318.18875pt
+ x 100.375pt>
+File: classCamera_aefe16d03f63e29639110b3fe9afa0e3c_cgraph.pdf Graphic file (ty
+pe pdf)
+<use classCamera_aefe16d03f63e29639110b3fe9afa0e3c_cgraph.pdf>
+Package pdftex.def Info: classCamera_aefe16d03f63e29639110b3fe9afa0e3c_cgraph.p
+df  used on input line 318.
+(pdftex.def)             Requested size: 317.0pt x 99.9995pt.
+ [27] <./classCamera_a5e17cbaf3c595058ebf596ca612f4428_cgraph.pdf>
+<classCamera_a5e17cbaf3c595058ebf596ca612f4428_cgraph.pdf, id=2052, 333.245pt x
+ 100.375pt>
+File: classCamera_a5e17cbaf3c595058ebf596ca612f4428_cgraph.pdf Graphic file (ty
+pe pdf)
+<use classCamera_a5e17cbaf3c595058ebf596ca612f4428_cgraph.pdf>
+Package pdftex.def Info: classCamera_a5e17cbaf3c595058ebf596ca612f4428_cgraph.p
+df  used on input line 348.
+(pdftex.def)             Requested size: 332.0pt x 100.00716pt.
+ <./classCamera_a5e17cbaf3c595058ebf596ca612f4428_icgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classCamera_a5e17cbaf3c595058ebf596ca612f4428_
+icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a single
+ page
+>
+<classCamera_a5e17cbaf3c595058ebf596ca612f4428_icgraph.pdf, id=2060, 311.1625pt
+ x 111.41624pt>
+File: classCamera_a5e17cbaf3c595058ebf596ca612f4428_icgraph.pdf Graphic file (t
+ype pdf)
+<use classCamera_a5e17cbaf3c595058ebf596ca612f4428_icgraph.pdf>
+Package pdftex.def Info: classCamera_a5e17cbaf3c595058ebf596ca612f4428_icgraph.
+pdf  used on input line 355.
+(pdftex.def)             Requested size: 310.0pt x 111.00114pt.
+ <./classCamera_ac56fb9a7adad365cae4c0238b8d1e39a_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classCamera_ac56fb9a7adad365cae4c0238b8d1e39a_
+cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a single 
+page
+>
+<classCamera_ac56fb9a7adad365cae4c0238b8d1e39a_cgraph.pdf, id=2071, 466.74374pt
+ x 111.41624pt>
+File: classCamera_ac56fb9a7adad365cae4c0238b8d1e39a_cgraph.pdf Graphic file (ty
+pe pdf)
+<use classCamera_ac56fb9a7adad365cae4c0238b8d1e39a_cgraph.pdf>
+Package pdftex.def Info: classCamera_ac56fb9a7adad365cae4c0238b8d1e39a_cgraph.p
+df  used on input line 381.
+(pdftex.def)             Requested size: 350.0pt x 83.55177pt.
+ [28] <./classCamera_af2e2e8d296575d210a75c3ca88647a67_icgraph.pdf>
+<classCamera_af2e2e8d296575d210a75c3ca88647a67_icgraph.pdf, id=2097, 466.74374p
+t x 144.54pt>
+File: classCamera_af2e2e8d296575d210a75c3ca88647a67_icgraph.pdf Graphic file (t
+ype pdf)
+<use classCamera_af2e2e8d296575d210a75c3ca88647a67_icgraph.pdf>
+Package pdftex.def Info: classCamera_af2e2e8d296575d210a75c3ca88647a67_icgraph.
+pdf  used on input line 428.
+(pdftex.def)             Requested size: 350.0pt x 108.39148pt.
+ [29]
+[30] <./classCamera_a264f13ea514a68eb440a6e20b975470d_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classCamera_a264f13ea514a68eb440a6e20b975470d_
+cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a single 
+page
+>
+<classCamera_a264f13ea514a68eb440a6e20b975470d_cgraph.pdf, id=2144, 320.19624pt
+ x 111.41624pt>
+File: classCamera_a264f13ea514a68eb440a6e20b975470d_cgraph.pdf Graphic file (ty
+pe pdf)
+<use classCamera_a264f13ea514a68eb440a6e20b975470d_cgraph.pdf>
+Package pdftex.def Info: classCamera_a264f13ea514a68eb440a6e20b975470d_cgraph.p
+df  used on input line 524.
+(pdftex.def)             Requested size: 319.0pt x 111.00114pt.
+ [31]) (./structContext.tex <./structContext__coll__graph.pdf>
+<structContext__coll__graph.pdf, id=2177, 345.29pt x 199.74625pt>
+File: structContext__coll__graph.pdf Graphic file (type pdf)
+<use structContext__coll__graph.pdf>
+Package pdftex.def Info: structContext__coll__graph.pdf  used on input line 18.
+
+(pdftex.def)             Requested size: 344.0pt x 199.00208pt.
+ [32] [33]
+Underfull \hbox (badness 10000) detected at line 123
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 143
+[][][]
+ []
+
+ <./structContext_a6b8babb597ca6c92a2ce8f9b62626a27_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./structContext_a6b8babb597ca6c92a2ce8f9b62626a2
+7_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a singl
+e page
+>
+<structContext_a6b8babb597ca6c92a2ce8f9b62626a27_cgraph.pdf, id=2256, 732.7375p
+t x 138.5175pt>
+File: structContext_a6b8babb597ca6c92a2ce8f9b62626a27_cgraph.pdf Graphic file (
+type pdf)
+<use structContext_a6b8babb597ca6c92a2ce8f9b62626a27_cgraph.pdf>
+Package pdftex.def Info: structContext_a6b8babb597ca6c92a2ce8f9b62626a27_cgraph
+.pdf  used on input line 154.
+(pdftex.def)             Requested size: 350.0pt x 66.16425pt.
+ [34] <./structContext_ae9498eceb6dd3257ac2e5e8fc904370c_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./structContext_ae9498eceb6dd3257ac2e5e8fc904370
+c_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a singl
+e page
+>
+<structContext_ae9498eceb6dd3257ac2e5e8fc904370c_cgraph.pdf, id=2285, 312.16624
+pt x 100.375pt>
+File: structContext_ae9498eceb6dd3257ac2e5e8fc904370c_cgraph.pdf Graphic file (
+type pdf)
+<use structContext_ae9498eceb6dd3257ac2e5e8fc904370c_cgraph.pdf>
+Package pdftex.def Info: structContext_ae9498eceb6dd3257ac2e5e8fc904370c_cgraph
+.pdf  used on input line 180.
+(pdftex.def)             Requested size: 311.0pt x 100.00255pt.
+
+Underfull \hbox (badness 10000) detected at line 193
+[][][]
+ []
+
+[35]) (./classFramebuffer.tex <./classFramebuffer__inherit__graph.pdf>
+<classFramebuffer__inherit__graph.pdf, id=2323, 149.55875pt x 156.585pt>
+File: classFramebuffer__inherit__graph.pdf Graphic file (type pdf)
+<use classFramebuffer__inherit__graph.pdf>
+Package pdftex.def Info: classFramebuffer__inherit__graph.pdf  used on input li
+ne 18.
+(pdftex.def)             Requested size: 149.0pt x 156.01117pt.
+ <./classFramebuffer__coll__graph.pdf
+
+pdfTeX warning: pdflatex (file ./classFramebuffer__coll__graph.pdf): PDF inclus
+ion: multiple pdfs with page group included in a single page
+>
+<classFramebuffer__coll__graph.pdf, id=2331, 149.55875pt x 156.585pt>
+File: classFramebuffer__coll__graph.pdf Graphic file (type pdf)
+<use classFramebuffer__coll__graph.pdf>
+Package pdftex.def Info: classFramebuffer__coll__graph.pdf  used on input line 
+27.
+(pdftex.def)             Requested size: 149.0pt x 156.01117pt.
+ [36] [37] <./classFramebuffer_a64dae662375f670e5757612e972de62f_cgraph.pdf>
+<classFramebuffer_a64dae662375f670e5757612e972de62f_cgraph.pdf, id=2396, 347.29
+75pt x 100.375pt>
+File: classFramebuffer_a64dae662375f670e5757612e972de62f_cgraph.pdf Graphic fil
+e (type pdf)
+<use classFramebuffer_a64dae662375f670e5757612e972de62f_cgraph.pdf>
+Package pdftex.def Info: classFramebuffer_a64dae662375f670e5757612e972de62f_cgr
+aph.pdf  used on input line 97.
+(pdftex.def)             Requested size: 346.0pt x 100.00409pt.
+
+[38] [39]
+Underfull \hbox (badness 10000) detected at line 138
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 159
+[][][]
+ []
+
+[40]
+Underfull \hbox (badness 10000) detected at line 185
+[][][]
+ []
+
+ <./classFramebuffer_afa8771e517776fde7edf0a0b07b6e91b_icgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classFramebuffer_afa8771e517776fde7edf0a0b07b6
+e91b_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a s
+ingle page
+>
+<classFramebuffer_afa8771e517776fde7edf0a0b07b6e91b_icgraph.pdf, id=2458, 313.1
+7pt x 100.375pt>
+File: classFramebuffer_afa8771e517776fde7edf0a0b07b6e91b_icgraph.pdf Graphic fi
+le (type pdf)
+<use classFramebuffer_afa8771e517776fde7edf0a0b07b6e91b_icgraph.pdf>
+Package pdftex.def Info: classFramebuffer_afa8771e517776fde7edf0a0b07b6e91b_icg
+raph.pdf  used on input line 196.
+(pdftex.def)             Requested size: 312.0pt x 100.00409pt.
+ <./classFramebuffer_aa22bed74c24a765257806ed4693e7005_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classFramebuffer_aa22bed74c24a765257806ed4693e
+7005_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a si
+ngle page
+>
+<classFramebuffer_aa22bed74c24a765257806ed4693e7005_cgraph.pdf, id=2469, 627.34
+375pt x 138.5175pt>
+File: classFramebuffer_aa22bed74c24a765257806ed4693e7005_cgraph.pdf Graphic fil
+e (type pdf)
+<use classFramebuffer_aa22bed74c24a765257806ed4693e7005_cgraph.pdf>
+Package pdftex.def Info: classFramebuffer_aa22bed74c24a765257806ed4693e7005_cgr
+aph.pdf  used on input line 224.
+(pdftex.def)             Requested size: 350.0pt x 77.28181pt.
+ [41] <./classFramebuffer_a28bda5ab4a57e13e49280d745dbf35b0_cgraph.pdf>
+<classFramebuffer_a28bda5ab4a57e13e49280d745dbf35b0_cgraph.pdf, id=2492, 627.34
+375pt x 150.5625pt>
+File: classFramebuffer_a28bda5ab4a57e13e49280d745dbf35b0_cgraph.pdf Graphic fil
+e (type pdf)
+<use classFramebuffer_a28bda5ab4a57e13e49280d745dbf35b0_cgraph.pdf>
+Package pdftex.def Info: classFramebuffer_a28bda5ab4a57e13e49280d745dbf35b0_cgr
+aph.pdf  used on input line 252.
+(pdftex.def)             Requested size: 350.0pt x 84.00197pt.
+ <./classFramebuffer_a28bda5ab4a57e13e49280d745dbf35b0_icgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classFramebuffer_a28bda5ab4a57e13e49280d745dbf
+35b0_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a s
+ingle page
+>
+<classFramebuffer_a28bda5ab4a57e13e49280d745dbf35b0_icgraph.pdf, id=2500, 322.2
+0375pt x 111.41624pt>
+File: classFramebuffer_a28bda5ab4a57e13e49280d745dbf35b0_icgraph.pdf Graphic fi
+le (type pdf)
+<use classFramebuffer_a28bda5ab4a57e13e49280d745dbf35b0_icgraph.pdf>
+Package pdftex.def Info: classFramebuffer_a28bda5ab4a57e13e49280d745dbf35b0_icg
+raph.pdf  used on input line 259.
+(pdftex.def)             Requested size: 321.0pt x 111.00455pt.
+ <./classFramebuffer_ac47980bdb179418e6ed3c8ff18d0fb2b_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classFramebuffer_ac47980bdb179418e6ed3c8ff18d0
+fb2b_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a si
+ngle page
+>
+<classFramebuffer_ac47980bdb179418e6ed3c8ff18d0fb2b_cgraph.pdf, id=2511, 630.35
+5pt x 138.5175pt>
+File: classFramebuffer_ac47980bdb179418e6ed3c8ff18d0fb2b_cgraph.pdf Graphic fil
+e (type pdf)
+<use classFramebuffer_ac47980bdb179418e6ed3c8ff18d0fb2b_cgraph.pdf>
+Package pdftex.def Info: classFramebuffer_ac47980bdb179418e6ed3c8ff18d0fb2b_cgr
+aph.pdf  used on input line 287.
+(pdftex.def)             Requested size: 350.0pt x 76.91193pt.
+ [42] <./classFramebuffer_a3c14a0980ae1369f964c0bc05c3ea4dd_cgraph.pdf>
+<classFramebuffer_a3c14a0980ae1369f964c0bc05c3ea4dd_cgraph.pdf, id=2534, 630.35
+5pt x 150.5625pt>
+File: classFramebuffer_a3c14a0980ae1369f964c0bc05c3ea4dd_cgraph.pdf Graphic fil
+e (type pdf)
+<use classFramebuffer_a3c14a0980ae1369f964c0bc05c3ea4dd_cgraph.pdf>
+Package pdftex.def Info: classFramebuffer_a3c14a0980ae1369f964c0bc05c3ea4dd_cgr
+aph.pdf  used on input line 315.
+(pdftex.def)             Requested size: 350.0pt x 83.59991pt.
+ <./classFramebuffer_a3c14a0980ae1369f964c0bc05c3ea4dd_icgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classFramebuffer_a3c14a0980ae1369f964c0bc05c3e
+a4dd_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a s
+ingle page
+>
+<classFramebuffer_a3c14a0980ae1369f964c0bc05c3ea4dd_icgraph.pdf, id=2542, 325.2
+15pt x 111.41624pt>
+File: classFramebuffer_a3c14a0980ae1369f964c0bc05c3ea4dd_icgraph.pdf Graphic fi
+le (type pdf)
+<use classFramebuffer_a3c14a0980ae1369f964c0bc05c3ea4dd_icgraph.pdf>
+Package pdftex.def Info: classFramebuffer_a3c14a0980ae1369f964c0bc05c3ea4dd_icg
+raph.pdf  used on input line 322.
+(pdftex.def)             Requested size: 324.0pt x 111.00795pt.
+ [43] <./classFramebuffer_a0f0dce697d4107c9e6ea39fe11df6d29_cgraph.pdf>
+<classFramebuffer_a0f0dce697d4107c9e6ea39fe11df6d29_cgraph.pdf, id=2565, 340.27
+126pt x 100.375pt>
+File: classFramebuffer_a0f0dce697d4107c9e6ea39fe11df6d29_cgraph.pdf Graphic fil
+e (type pdf)
+<use classFramebuffer_a0f0dce697d4107c9e6ea39fe11df6d29_cgraph.pdf>
+Package pdftex.def Info: classFramebuffer_a0f0dce697d4107c9e6ea39fe11df6d29_cgr
+aph.pdf  used on input line 350.
+(pdftex.def)             Requested size: 339.0pt x 100.00562pt.
+ <./classFramebuffer_a0f0dce697d4107c9e6ea39fe11df6d29_icgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classFramebuffer_a0f0dce697d4107c9e6ea39fe11df
+6d29_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a s
+ingle page
+>
+<classFramebuffer_a0f0dce697d4107c9e6ea39fe11df6d29_icgraph.pdf, id=2574, 488.8
+2625pt x 238.8925pt>
+File: classFramebuffer_a0f0dce697d4107c9e6ea39fe11df6d29_icgraph.pdf Graphic fi
+le (type pdf)
+<use classFramebuffer_a0f0dce697d4107c9e6ea39fe11df6d29_icgraph.pdf>
+Package pdftex.def Info: classFramebuffer_a0f0dce697d4107c9e6ea39fe11df6d29_icg
+raph.pdf  used on input line 357.
+(pdftex.def)             Requested size: 350.0pt x 171.05106pt.
+ [44] <./classFramebuffer_a2d6e0ef178e7199df8149d53b12d93e0_cgraph.pdf>
+<classFramebuffer_a2d6e0ef178e7199df8149d53b12d93e0_cgraph.pdf, id=2596, 590.20
+5pt x 138.5175pt>
+File: classFramebuffer_a2d6e0ef178e7199df8149d53b12d93e0_cgraph.pdf Graphic fil
+e (type pdf)
+<use classFramebuffer_a2d6e0ef178e7199df8149d53b12d93e0_cgraph.pdf>
+Package pdftex.def Info: classFramebuffer_a2d6e0ef178e7199df8149d53b12d93e0_cgr
+aph.pdf  used on input line 385.
+(pdftex.def)             Requested size: 350.0pt x 82.1431pt.
+ <./classFramebuffer_a2d6e0ef178e7199df8149d53b12d93e0_icgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classFramebuffer_a2d6e0ef178e7199df8149d53b12d
+93e0_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a s
+ingle page
+>
+<classFramebuffer_a2d6e0ef178e7199df8149d53b12d93e0_icgraph.pdf, id=2604, 321.2
+pt x 100.375pt>
+File: classFramebuffer_a2d6e0ef178e7199df8149d53b12d93e0_icgraph.pdf Graphic fi
+le (type pdf)
+<use classFramebuffer_a2d6e0ef178e7199df8149d53b12d93e0_icgraph.pdf>
+Package pdftex.def Info: classFramebuffer_a2d6e0ef178e7199df8149d53b12d93e0_icg
+raph.pdf  used on input line 392.
+(pdftex.def)             Requested size: 320.0pt x 100.00255pt.
+ <./classFramebuffer_a0d90533a9cd82dd33ad45d7e49a722e0_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classFramebuffer_a0d90533a9cd82dd33ad45d7e49a7
+22e0_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a si
+ngle page
+>
+<classFramebuffer_a0d90533a9cd82dd33ad45d7e49a722e0_cgraph.pdf, id=2615, 646.41
+5pt x 138.5175pt>
+File: classFramebuffer_a0d90533a9cd82dd33ad45d7e49a722e0_cgraph.pdf Graphic fil
+e (type pdf)
+<use classFramebuffer_a0d90533a9cd82dd33ad45d7e49a722e0_cgraph.pdf>
+Package pdftex.def Info: classFramebuffer_a0d90533a9cd82dd33ad45d7e49a722e0_cgr
+aph.pdf  used on input line 420.
+(pdftex.def)             Requested size: 350.0pt x 74.99911pt.
+ [45]) (./classGlBindable.tex <./classGlBindable__inherit__graph.pdf>
+<classGlBindable__inherit__graph.pdf, id=2637, 373.395pt x 156.585pt>
+File: classGlBindable__inherit__graph.pdf Graphic file (type pdf)
+<use classGlBindable__inherit__graph.pdf>
+Package pdftex.def Info: classGlBindable__inherit__graph.pdf  used on input lin
+e 18.
+(pdftex.def)             Requested size: 350.0pt x 146.78134pt.
+ [46]
+[47] <./classGlBindable_ae3213a00db0e6f6dfc356a06a5b1e6d6_icgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classGlBindable_ae3213a00db0e6f6dfc356a06a5b1e
+6d6_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a si
+ngle page
+>
+<classGlBindable_ae3213a00db0e6f6dfc356a06a5b1e6d6_icgraph.pdf, id=2727, 448.67
+625pt x 214.8025pt>
+File: classGlBindable_ae3213a00db0e6f6dfc356a06a5b1e6d6_icgraph.pdf Graphic fil
+e (type pdf)
+<use classGlBindable_ae3213a00db0e6f6dfc356a06a5b1e6d6_icgraph.pdf>
+Package pdftex.def Info: classGlBindable_ae3213a00db0e6f6dfc356a06a5b1e6d6_icgr
+aph.pdf  used on input line 161.
+(pdftex.def)             Requested size: 350.0pt x 167.5682pt.
+ [48]
+Underfull \hbox (badness 10000) detected at line 174
+[][][]
+ []
+
+ <./classGlBindable_a99e6c236fadee7211e721dd8b0d57598_icgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classGlBindable_a99e6c236fadee7211e721dd8b0d57
+598_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a si
+ngle page
+>
+<classGlBindable_a99e6c236fadee7211e721dd8b0d57598_icgraph.pdf, id=2756, 793.96
+625pt x 459.7175pt>
+File: classGlBindable_a99e6c236fadee7211e721dd8b0d57598_icgraph.pdf Graphic fil
+e (type pdf)
+<use classGlBindable_a99e6c236fadee7211e721dd8b0d57598_icgraph.pdf>
+Package pdftex.def Info: classGlBindable_a99e6c236fadee7211e721dd8b0d57598_icgr
+aph.pdf  used on input line 189.
+(pdftex.def)             Requested size: 350.0pt x 202.6551pt.
+ [49]
+Underfull \hbox (badness 10000) detected at line 202
+[][][]
+ []
+
+ <./classGlBindable_a221cf1ca728041bc2545f27a5e3004e0_cgraph.pdf>
+<classGlBindable_a221cf1ca728041bc2545f27a5e3004e0_cgraph.pdf, id=2783, 309.155
+pt x 138.5175pt>
+File: classGlBindable_a221cf1ca728041bc2545f27a5e3004e0_cgraph.pdf Graphic file
+ (type pdf)
+<use classGlBindable_a221cf1ca728041bc2545f27a5e3004e0_cgraph.pdf>
+Package pdftex.def Info: classGlBindable_a221cf1ca728041bc2545f27a5e3004e0_cgra
+ph.pdf  used on input line 231.
+(pdftex.def)             Requested size: 308.0pt x 138.012pt.
+ <./classGlBindable_a221cf1ca728041bc2545f27a5e3004e0_icgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classGlBindable_a221cf1ca728041bc2545f27a5e300
+4e0_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a si
+ngle page
+>
+<classGlBindable_a221cf1ca728041bc2545f27a5e3004e0_icgraph.pdf, id=2791, 303.13
+25pt x 138.5175pt>
+File: classGlBindable_a221cf1ca728041bc2545f27a5e3004e0_icgraph.pdf Graphic fil
+e (type pdf)
+<use classGlBindable_a221cf1ca728041bc2545f27a5e3004e0_icgraph.pdf>
+Package pdftex.def Info: classGlBindable_a221cf1ca728041bc2545f27a5e3004e0_icgr
+aph.pdf  used on input line 238.
+(pdftex.def)             Requested size: 302.0pt x 138.00142pt.
+ [50] <./classGlBindable_a1509aad02d36265d0a42a56ca6d33211_cgraph.pdf>
+<classGlBindable_a1509aad02d36265d0a42a56ca6d33211_cgraph.pdf, id=2815, 298.113
+75pt x 100.375pt>
+File: classGlBindable_a1509aad02d36265d0a42a56ca6d33211_cgraph.pdf Graphic file
+ (type pdf)
+<use classGlBindable_a1509aad02d36265d0a42a56ca6d33211_cgraph.pdf>
+Package pdftex.def Info: classGlBindable_a1509aad02d36265d0a42a56ca6d33211_cgra
+ph.pdf  used on input line 264.
+(pdftex.def)             Requested size: 297.0pt x 100.00562pt.
+
+Underfull \hbox (badness 10000) detected at line 277
+[][][]
+ []
+
+ <./classGlBindable_ad3194126ecaf5285842cee0e7d28c951_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classGlBindable_ad3194126ecaf5285842cee0e7d28c
+951_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a sin
+gle page
+>
+<classGlBindable_ad3194126ecaf5285842cee0e7d28c951_cgraph.pdf, id=2826, 317.185
+pt x 100.375pt>
+File: classGlBindable_ad3194126ecaf5285842cee0e7d28c951_cgraph.pdf Graphic file
+ (type pdf)
+<use classGlBindable_ad3194126ecaf5285842cee0e7d28c951_cgraph.pdf>
+Package pdftex.def Info: classGlBindable_ad3194126ecaf5285842cee0e7d28c951_cgra
+ph.pdf  used on input line 288.
+(pdftex.def)             Requested size: 316.0pt x 100.00868pt.
+ <./classGlBindable_ad3194126ecaf5285842cee0e7d28c951_icgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classGlBindable_ad3194126ecaf5285842cee0e7d28c
+951_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a si
+ngle page
+>
+<classGlBindable_ad3194126ecaf5285842cee0e7d28c951_icgraph.pdf, id=2834, 651.43
+375pt x 363.3575pt>
+File: classGlBindable_ad3194126ecaf5285842cee0e7d28c951_icgraph.pdf Graphic fil
+e (type pdf)
+<use classGlBindable_ad3194126ecaf5285842cee0e7d28c951_icgraph.pdf>
+Package pdftex.def Info: classGlBindable_ad3194126ecaf5285842cee0e7d28c951_icgr
+aph.pdf  used on input line 295.
+(pdftex.def)             Requested size: 350.0pt x 195.22876pt.
+ [51]
+Underfull \hbox (badness 10000) detected at line 313
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 330
+[][][]
+ []
+
+ <./classGlBindable_a5a7e0bbde3d01e24a83e0f0122402ab7_icgraph.pdf>
+<classGlBindable_a5a7e0bbde3d01e24a83e0f0122402ab7_icgraph.pdf, id=2859, 634.37
+pt x 903.375pt>
+File: classGlBindable_a5a7e0bbde3d01e24a83e0f0122402ab7_icgraph.pdf Graphic fil
+e (type pdf)
+<use classGlBindable_a5a7e0bbde3d01e24a83e0f0122402ab7_icgraph.pdf>
+Package pdftex.def Info: classGlBindable_a5a7e0bbde3d01e24a83e0f0122402ab7_icgr
+aph.pdf  used on input line 341.
+(pdftex.def)             Requested size: 350.0pt x 498.42921pt.
+ [52]
+Underfull \hbox (badness 10000) detected at line 354
+[][][]
+ []
+
+[53] <./classGlBindable_a6ddfcf2b3f3b34872005ca281a9573eb_cgraph.pdf>
+<classGlBindable_a6ddfcf2b3f3b34872005ca281a9573eb_cgraph.pdf, id=2901, 319.192
+5pt x 138.5175pt>
+File: classGlBindable_a6ddfcf2b3f3b34872005ca281a9573eb_cgraph.pdf Graphic file
+ (type pdf)
+<use classGlBindable_a6ddfcf2b3f3b34872005ca281a9573eb_cgraph.pdf>
+Package pdftex.def Info: classGlBindable_a6ddfcf2b3f3b34872005ca281a9573eb_cgra
+ph.pdf  used on input line 391.
+(pdftex.def)             Requested size: 318.0pt x 138.00142pt.
+ <./classGlBindable_a6ddfcf2b3f3b34872005ca281a9573eb_icgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classGlBindable_a6ddfcf2b3f3b34872005ca281a957
+3eb_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a si
+ngle page
+>
+<classGlBindable_a6ddfcf2b3f3b34872005ca281a9573eb_icgraph.pdf, id=2909, 319.19
+25pt x 138.5175pt>
+File: classGlBindable_a6ddfcf2b3f3b34872005ca281a9573eb_icgraph.pdf Graphic fil
+e (type pdf)
+<use classGlBindable_a6ddfcf2b3f3b34872005ca281a9573eb_icgraph.pdf>
+Package pdftex.def Info: classGlBindable_a6ddfcf2b3f3b34872005ca281a9573eb_icgr
+aph.pdf  used on input line 398.
+(pdftex.def)             Requested size: 318.0pt x 138.00142pt.
+ [54] <./classGlBindable_a3f192025460eb6510b281cdc69b9a731_cgraph.pdf>
+<classGlBindable_a3f192025460eb6510b281cdc69b9a731_cgraph.pdf, id=2931, 308.151
+25pt x 100.375pt>
+File: classGlBindable_a3f192025460eb6510b281cdc69b9a731_cgraph.pdf Graphic file
+ (type pdf)
+<use classGlBindable_a3f192025460eb6510b281cdc69b9a731_cgraph.pdf>
+Package pdftex.def Info: classGlBindable_a3f192025460eb6510b281cdc69b9a731_cgra
+ph.pdf  used on input line 424.
+(pdftex.def)             Requested size: 307.0pt x 100.00716pt.
+)
+(./classGlBinder.tex <./classGlBinder__coll__graph.pdf
+
+pdfTeX warning: pdflatex (file ./classGlBinder__coll__graph.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+>
+<classGlBinder__coll__graph.pdf, id=2943, 152.57pt x 167.62625pt>
+File: classGlBinder__coll__graph.pdf Graphic file (type pdf)
+<use classGlBinder__coll__graph.pdf>
+Package pdftex.def Info: classGlBinder__coll__graph.pdf  used on input line 18.
+
+(pdftex.def)             Requested size: 152.0pt x 167.00684pt.
+ [55] <./classGlBinder_a08572e5ea0ea17c146c1ed90425d13c1_cgraph.pdf>
+<classGlBinder_a08572e5ea0ea17c146c1ed90425d13c1_cgraph.pdf, id=2977, 443.6575p
+t x 138.5175pt>
+File: classGlBinder_a08572e5ea0ea17c146c1ed90425d13c1_cgraph.pdf Graphic file (
+type pdf)
+<use classGlBinder_a08572e5ea0ea17c146c1ed90425d13c1_cgraph.pdf>
+Package pdftex.def Info: classGlBinder_a08572e5ea0ea17c146c1ed90425d13c1_cgraph
+.pdf  used on input line 70.
+(pdftex.def)             Requested size: 350.0pt x 109.27544pt.
+ [56] <./classGlBinder_ae60129365fcbd5c9f20a3c2bb6ca98fa_cgraph.pdf>
+<classGlBinder_ae60129365fcbd5c9f20a3c2bb6ca98fa_cgraph.pdf, id=3005, 459.7175p
+t x 138.5175pt>
+File: classGlBinder_ae60129365fcbd5c9f20a3c2bb6ca98fa_cgraph.pdf Graphic file (
+type pdf)
+<use classGlBinder_ae60129365fcbd5c9f20a3c2bb6ca98fa_cgraph.pdf>
+Package pdftex.def Info: classGlBinder_ae60129365fcbd5c9f20a3c2bb6ca98fa_cgraph
+.pdf  used on input line 87.
+(pdftex.def)             Requested size: 350.0pt x 105.4646pt.
+) (./classImage.tex <./classImage__coll__graph.pdf
+
+pdfTeX warning: pdflatex (file ./classImage__coll__graph.pdf): PDF inclusion: m
+ultiple pdfs with page group included in a single page
+>
+<classImage__coll__graph.pdf, id=3020, 218.8175pt x 167.62625pt>
+File: classImage__coll__graph.pdf Graphic file (type pdf)
+<use classImage__coll__graph.pdf>
+Package pdftex.def Info: classImage__coll__graph.pdf  used on input line 18.
+(pdftex.def)             Requested size: 218.0pt x 167.00172pt.
+ [57] [58]
+Underfull \hbox (badness 10000) detected at line 91
+[][][]
+ []
+
+ <./classImage_ac282669cfe2627b0feeadebeba74c35e_icgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classImage_ac282669cfe2627b0feeadebeba74c35e_i
+cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a single 
+page
+>
+<classImage_ac282669cfe2627b0feeadebeba74c35e_icgraph.pdf, id=3080, 312.16624pt
+ x 100.375pt>
+File: classImage_ac282669cfe2627b0feeadebeba74c35e_icgraph.pdf Graphic file (ty
+pe pdf)
+<use classImage_ac282669cfe2627b0feeadebeba74c35e_icgraph.pdf>
+Package pdftex.def Info: classImage_ac282669cfe2627b0feeadebeba74c35e_icgraph.p
+df  used on input line 102.
+(pdftex.def)             Requested size: 311.0pt x 100.00255pt.
+ [59]) (./classMesh.tex <./classMesh__inherit__graph.pdf>
+<classMesh__inherit__graph.pdf, id=3111, 133.49875pt x 212.795pt>
+File: classMesh__inherit__graph.pdf Graphic file (type pdf)
+<use classMesh__inherit__graph.pdf>
+Package pdftex.def Info: classMesh__inherit__graph.pdf  used on input line 18.
+(pdftex.def)             Requested size: 133.0pt x 212.02167pt.
+ <./classMesh__coll__graph.pdf
+
+pdfTeX warning: pdflatex (file ./classMesh__coll__graph.pdf): PDF inclusion: mu
+ltiple pdfs with page group included in a single page
+>
+<classMesh__coll__graph.pdf, id=3119, 123.46124pt x 156.585pt>
+File: classMesh__coll__graph.pdf Graphic file (type pdf)
+<use classMesh__coll__graph.pdf>
+Package pdftex.def Info: classMesh__coll__graph.pdf  used on input line 27.
+(pdftex.def)             Requested size: 123.0pt x 156.00879pt.
+ [60] [61] <./classMesh_a19faf1bd2a71c1ca74cc2821d9d592d2_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classMesh_a19faf1bd2a71c1ca74cc2821d9d592d2_cg
+raph.pdf): PDF inclusion: multiple pdfs with page group included in a single pa
+ge
+>
+<classMesh_a19faf1bd2a71c1ca74cc2821d9d592d2_cgraph.pdf, id=3201, 282.05376pt x
+ 100.375pt>
+File: classMesh_a19faf1bd2a71c1ca74cc2821d9d592d2_cgraph.pdf Graphic file (type
+ pdf)
+<use classMesh_a19faf1bd2a71c1ca74cc2821d9d592d2_cgraph.pdf>
+Package pdftex.def Info: classMesh_a19faf1bd2a71c1ca74cc2821d9d592d2_cgraph.pdf
+  used on input line 152.
+(pdftex.def)             Requested size: 281.0pt x 100.00716pt.
+ [62] <./classMesh_a93447b5a86c72070e7d6ad6118058351_icgraph.pdf>
+<classMesh_a93447b5a86c72070e7d6ad6118058351_icgraph.pdf, id=3226, 294.09875pt 
+x 138.5175pt>
+File: classMesh_a93447b5a86c72070e7d6ad6118058351_icgraph.pdf Graphic file (typ
+e pdf)
+<use classMesh_a93447b5a86c72070e7d6ad6118058351_icgraph.pdf>
+Package pdftex.def Info: classMesh_a93447b5a86c72070e7d6ad6118058351_icgraph.pd
+f  used on input line 178.
+(pdftex.def)             Requested size: 293.0pt x 138.00142pt.
+
+Overfull \vbox (40.53082pt too high) has occurred while \output is active []
+
+
+[63] <./classMesh_aca2f681788fcbf90320d631d8c3428c9_icgraph.pdf>
+<classMesh_aca2f681788fcbf90320d631d8c3428c9_icgraph.pdf, id=3256, 289.08pt x 1
+38.5175pt>
+File: classMesh_aca2f681788fcbf90320d631d8c3428c9_icgraph.pdf Graphic file (typ
+e pdf)
+<use classMesh_aca2f681788fcbf90320d631d8c3428c9_icgraph.pdf>
+Package pdftex.def Info: classMesh_aca2f681788fcbf90320d631d8c3428c9_icgraph.pd
+f  used on input line 222.
+(pdftex.def)             Requested size: 288.0pt x 138.00777pt.
+)
+(./classModel.tex <./classModel__inherit__graph.pdf
+
+pdfTeX warning: pdflatex (file ./classModel__inherit__graph.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+>
+<classModel__inherit__graph.pdf, id=3274, 133.49875pt x 212.795pt>
+File: classModel__inherit__graph.pdf Graphic file (type pdf)
+<use classModel__inherit__graph.pdf>
+Package pdftex.def Info: classModel__inherit__graph.pdf  used on input line 18.
+
+(pdftex.def)             Requested size: 133.0pt x 212.02167pt.
+ [64] [65]
+Underfull \hbox (badness 10000) detected at line 129
+[][][]
+ []
+
+[66]) (./classObject.tex <./classObject__inherit__graph.pdf
+
+pdfTeX warning: pdflatex (file ./classObject__inherit__graph.pdf): PDF inclusio
+n: multiple pdfs with page group included in a single page
+>
+<classObject__inherit__graph.pdf, id=3354, 133.49875pt x 156.585pt>
+File: classObject__inherit__graph.pdf Graphic file (type pdf)
+<use classObject__inherit__graph.pdf>
+Package pdftex.def Info: classObject__inherit__graph.pdf  used on input line 18
+.
+(pdftex.def)             Requested size: 133.0pt x 156.01595pt.
+ <./classObject__coll__graph.pdf
+
+pdfTeX warning: pdflatex (file ./classObject__coll__graph.pdf): PDF inclusion: 
+multiple pdfs with page group included in a single page
+>
+<classObject__coll__graph.pdf, id=3369, 258.9675pt x 167.62625pt>
+File: classObject__coll__graph.pdf Graphic file (type pdf)
+<use classObject__coll__graph.pdf>
+Package pdftex.def Info: classObject__coll__graph.pdf  used on input line 27.
+(pdftex.def)             Requested size: 258.0pt x 167.01707pt.
+ [67] [68] [69] <./classObject_ad0997e94d29fff7b70940ce862ea0827_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classObject_ad0997e94d29fff7b70940ce862ea0827_
+cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a single 
+page
+>
+<classObject_ad0997e94d29fff7b70940ce862ea0827_cgraph.pdf, id=3472, 562.1pt x 1
+11.41624pt>
+File: classObject_ad0997e94d29fff7b70940ce862ea0827_cgraph.pdf Graphic file (ty
+pe pdf)
+<use classObject_ad0997e94d29fff7b70940ce862ea0827_cgraph.pdf>
+Package pdftex.def Info: classObject_ad0997e94d29fff7b70940ce862ea0827_cgraph.p
+df  used on input line 172.
+(pdftex.def)             Requested size: 350.0pt x 69.37486pt.
+ <./classObject_ad0997e94d29fff7b70940ce862ea0827_icgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classObject_ad0997e94d29fff7b70940ce862ea0827_
+icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a single
+ page
+>
+<classObject_ad0997e94d29fff7b70940ce862ea0827_icgraph.pdf, id=3480, 273.02pt x
+ 100.375pt>
+File: classObject_ad0997e94d29fff7b70940ce862ea0827_icgraph.pdf Graphic file (t
+ype pdf)
+<use classObject_ad0997e94d29fff7b70940ce862ea0827_icgraph.pdf>
+Package pdftex.def Info: classObject_ad0997e94d29fff7b70940ce862ea0827_icgraph.
+pdf  used on input line 179.
+(pdftex.def)             Requested size: 272.0pt x 100.00562pt.
+ <./classObject_aa23e007d3b922a56f11510c5481a3e07_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classObject_aa23e007d3b922a56f11510c5481a3e07_
+cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a single 
+page
+>
+<classObject_aa23e007d3b922a56f11510c5481a3e07_cgraph.pdf, id=3491, 684.5575pt 
+x 182.6825pt>
+File: classObject_aa23e007d3b922a56f11510c5481a3e07_cgraph.pdf Graphic file (ty
+pe pdf)
+<use classObject_aa23e007d3b922a56f11510c5481a3e07_cgraph.pdf>
+Package pdftex.def Info: classObject_aa23e007d3b922a56f11510c5481a3e07_cgraph.p
+df  used on input line 211.
+(pdftex.def)             Requested size: 350.0pt x 93.40376pt.
+ [70] <./classObject_afff370408e02f6886c5bba0406e2073d_icgraph.pdf>
+<classObject_afff370408e02f6886c5bba0406e2073d_icgraph.pdf, id=3518, 279.0425pt
+ x 100.375pt>
+File: classObject_afff370408e02f6886c5bba0406e2073d_icgraph.pdf Graphic file (t
+ype pdf)
+<use classObject_afff370408e02f6886c5bba0406e2073d_icgraph.pdf>
+Package pdftex.def Info: classObject_afff370408e02f6886c5bba0406e2073d_icgraph.
+pdf  used on input line 264.
+(pdftex.def)             Requested size: 278.0pt x 100.00255pt.
+ [71]
+Underfull \hbox (badness 10000) detected at line 277
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 340
+[][][]
+ []
+
+[72] <./classObject_a485bd8b8aa5fb4ca6d0dd9c6701c4948_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classObject_a485bd8b8aa5fb4ca6d0dd9c6701c4948_
+cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a single 
+page
+>
+<classObject_a485bd8b8aa5fb4ca6d0dd9c6701c4948_cgraph.pdf, id=3567, 299.1175pt 
+x 100.375pt>
+File: classObject_a485bd8b8aa5fb4ca6d0dd9c6701c4948_cgraph.pdf Graphic file (ty
+pe pdf)
+<use classObject_a485bd8b8aa5fb4ca6d0dd9c6701c4948_cgraph.pdf>
+Package pdftex.def Info: classObject_a485bd8b8aa5fb4ca6d0dd9c6701c4948_cgraph.p
+df  used on input line 376.
+(pdftex.def)             Requested size: 298.0pt x 100.00716pt.
+ <./classObject_add3dce565f65cf4e74329dd3ed987f73_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classObject_add3dce565f65cf4e74329dd3ed987f73_
+cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a single 
+page
+>
+<classObject_add3dce565f65cf4e74329dd3ed987f73_cgraph.pdf, id=3579, 440.64626pt
+ x 111.41624pt>
+File: classObject_add3dce565f65cf4e74329dd3ed987f73_cgraph.pdf Graphic file (ty
+pe pdf)
+<use classObject_add3dce565f65cf4e74329dd3ed987f73_cgraph.pdf>
+Package pdftex.def Info: classObject_add3dce565f65cf4e74329dd3ed987f73_cgraph.p
+df  used on input line 406.
+(pdftex.def)             Requested size: 350.0pt x 88.49898pt.
+ [73] <./classObject_add3dce565f65cf4e74329dd3ed987f73_icgraph.pdf>
+<classObject_add3dce565f65cf4e74329dd3ed987f73_icgraph.pdf, id=3601, 399.4925pt
+ x 100.375pt>
+File: classObject_add3dce565f65cf4e74329dd3ed987f73_icgraph.pdf Graphic file (t
+ype pdf)
+<use classObject_add3dce565f65cf4e74329dd3ed987f73_icgraph.pdf>
+Package pdftex.def Info: classObject_add3dce565f65cf4e74329dd3ed987f73_icgraph.
+pdf  used on input line 413.
+(pdftex.def)             Requested size: 350.0pt x 87.94429pt.
+ <./classObject_a2c5ac1f0bcbd1583ac4fc28bcac70811_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classObject_a2c5ac1f0bcbd1583ac4fc28bcac70811_
+cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a single 
+page
+>
+<classObject_a2c5ac1f0bcbd1583ac4fc28bcac70811_cgraph.pdf, id=3611, 314.17375pt
+ x 111.41624pt>
+File: classObject_a2c5ac1f0bcbd1583ac4fc28bcac70811_cgraph.pdf Graphic file (ty
+pe pdf)
+<use classObject_a2c5ac1f0bcbd1583ac4fc28bcac70811_cgraph.pdf>
+Package pdftex.def Info: classObject_a2c5ac1f0bcbd1583ac4fc28bcac70811_cgraph.p
+df  used on input line 439.
+(pdftex.def)             Requested size: 313.0pt x 111.00455pt.
+ <./classObject_a2c5ac1f0bcbd1583ac4fc28bcac70811_icgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classObject_a2c5ac1f0bcbd1583ac4fc28bcac70811_
+icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a single
+ page
+>
+<classObject_a2c5ac1f0bcbd1583ac4fc28bcac70811_icgraph.pdf, id=3619, 525.965pt 
+x 111.41624pt>
+File: classObject_a2c5ac1f0bcbd1583ac4fc28bcac70811_icgraph.pdf Graphic file (t
+ype pdf)
+<use classObject_a2c5ac1f0bcbd1583ac4fc28bcac70811_icgraph.pdf>
+Package pdftex.def Info: classObject_a2c5ac1f0bcbd1583ac4fc28bcac70811_icgraph.
+pdf  used on input line 446.
+(pdftex.def)             Requested size: 350.0pt x 74.14357pt.
+ [74] <./classObject_a9dcb8961e7f0d5cbaaba5eaf826b741a_icgraph.pdf>
+<classObject_a9dcb8961e7f0d5cbaaba5eaf826b741a_icgraph.pdf, id=3641, 669.50125p
+t x 150.5625pt>
+File: classObject_a9dcb8961e7f0d5cbaaba5eaf826b741a_icgraph.pdf Graphic file (t
+ype pdf)
+<use classObject_a9dcb8961e7f0d5cbaaba5eaf826b741a_icgraph.pdf>
+Package pdftex.def Info: classObject_a9dcb8961e7f0d5cbaaba5eaf826b741a_icgraph.
+pdf  used on input line 474.
+(pdftex.def)             Requested size: 350.0pt x 78.71336pt.
+ [75]
+[76]) (./classRenderbuffer.tex [77] <./classRenderbuffer__inherit__graph.pdf
+
+pdfTeX warning: pdflatex (file ./classRenderbuffer__inherit__graph.pdf): PDF in
+clusion: multiple pdfs with page group included in a single page
+>
+<classRenderbuffer__inherit__graph.pdf, id=3719, 152.57pt x 156.585pt>
+File: classRenderbuffer__inherit__graph.pdf Graphic file (type pdf)
+<use classRenderbuffer__inherit__graph.pdf>
+Package pdftex.def Info: classRenderbuffer__inherit__graph.pdf  used on input l
+ine 18.
+(pdftex.def)             Requested size: 152.0pt x 156.0064pt.
+ <./classRenderbuffer__coll__graph.pdf
+
+pdfTeX warning: pdflatex (file ./classRenderbuffer__coll__graph.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+>
+<classRenderbuffer__coll__graph.pdf, id=3727, 152.57pt x 156.585pt>
+File: classRenderbuffer__coll__graph.pdf Graphic file (type pdf)
+<use classRenderbuffer__coll__graph.pdf>
+Package pdftex.def Info: classRenderbuffer__coll__graph.pdf  used on input line
+ 27.
+(pdftex.def)             Requested size: 152.0pt x 156.0064pt.
+ [78] <./classRenderbuffer_a82819f82255c09136ca71d7d8bb9a40d_cgraph.pdf>
+<classRenderbuffer_a82819f82255c09136ca71d7d8bb9a40d_cgraph.pdf, id=3758, 353.3
+2pt x 100.375pt>
+File: classRenderbuffer_a82819f82255c09136ca71d7d8bb9a40d_cgraph.pdf Graphic fi
+le (type pdf)
+<use classRenderbuffer_a82819f82255c09136ca71d7d8bb9a40d_cgraph.pdf>
+Package pdftex.def Info: classRenderbuffer_a82819f82255c09136ca71d7d8bb9a40d_cg
+raph.pdf  used on input line 89.
+(pdftex.def)             Requested size: 350.0pt x 99.4328pt.
+
+[79]
+Underfull \hbox (badness 10000) detected at line 130
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 151
+[][][]
+ []
+
+[80] <./classRenderbuffer_a48aed0ac588e14dd9024af29ef974b22_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classRenderbuffer_a48aed0ac588e14dd9024af29ef9
+74b22_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a s
+ingle page
+>
+<classRenderbuffer_a48aed0ac588e14dd9024af29ef974b22_cgraph.pdf, id=3811, 454.6
+9875pt x 100.375pt>
+File: classRenderbuffer_a48aed0ac588e14dd9024af29ef974b22_cgraph.pdf Graphic fi
+le (type pdf)
+<use classRenderbuffer_a48aed0ac588e14dd9024af29ef974b22_cgraph.pdf>
+Package pdftex.def Info: classRenderbuffer_a48aed0ac588e14dd9024af29ef974b22_cg
+raph.pdf  used on input line 187.
+(pdftex.def)             Requested size: 350.0pt x 77.26294pt.
+ <./classRenderbuffer_a48aed0ac588e14dd9024af29ef974b22_icgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classRenderbuffer_a48aed0ac588e14dd9024af29ef9
+74b22_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a 
+single page
+>
+<classRenderbuffer_a48aed0ac588e14dd9024af29ef974b22_icgraph.pdf, id=3819, 331.
+2375pt x 138.5175pt>
+File: classRenderbuffer_a48aed0ac588e14dd9024af29ef974b22_icgraph.pdf Graphic f
+ile (type pdf)
+<use classRenderbuffer_a48aed0ac588e14dd9024af29ef974b22_icgraph.pdf>
+Package pdftex.def Info: classRenderbuffer_a48aed0ac588e14dd9024af29ef974b22_ic
+graph.pdf  used on input line 194.
+(pdftex.def)             Requested size: 330.0pt x 138.00565pt.
+ <./classRenderbuffer_a492da8fc565ab9ae05f8aae2effdd4e7_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classRenderbuffer_a492da8fc565ab9ae05f8aae2eff
+dd4e7_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a s
+ingle page
+>
+<classRenderbuffer_a492da8fc565ab9ae05f8aae2effdd4e7_cgraph.pdf, id=3829, 454.6
+9875pt x 111.41624pt>
+File: classRenderbuffer_a492da8fc565ab9ae05f8aae2effdd4e7_cgraph.pdf Graphic fi
+le (type pdf)
+<use classRenderbuffer_a492da8fc565ab9ae05f8aae2effdd4e7_cgraph.pdf>
+Package pdftex.def Info: classRenderbuffer_a492da8fc565ab9ae05f8aae2effdd4e7_cg
+raph.pdf  used on input line 222.
+(pdftex.def)             Requested size: 350.0pt x 85.76187pt.
+ [81] <./classRenderbuffer_a492da8fc565ab9ae05f8aae2effdd4e7_icgraph.pdf>
+<classRenderbuffer_a492da8fc565ab9ae05f8aae2effdd4e7_icgraph.pdf, id=3849, 462.
+72874pt x 160.6pt>
+File: classRenderbuffer_a492da8fc565ab9ae05f8aae2effdd4e7_icgraph.pdf Graphic f
+ile (type pdf)
+<use classRenderbuffer_a492da8fc565ab9ae05f8aae2effdd4e7_icgraph.pdf>
+Package pdftex.def Info: classRenderbuffer_a492da8fc565ab9ae05f8aae2effdd4e7_ic
+graph.pdf  used on input line 229.
+(pdftex.def)             Requested size: 350.0pt x 121.47647pt.
+)
+(./structScene.tex <./structScene__coll__graph.pdf
+
+pdfTeX warning: pdflatex (file ./structScene__coll__graph.pdf): PDF inclusion: 
+multiple pdfs with page group included in a single page
+>
+<structScene__coll__graph.pdf, id=3859, 218.8175pt x 167.62625pt>
+File: structScene__coll__graph.pdf Graphic file (type pdf)
+<use structScene__coll__graph.pdf>
+Package pdftex.def Info: structScene__coll__graph.pdf  used on input line 18.
+(pdftex.def)             Requested size: 218.0pt x 167.00172pt.
+ [82] [83]
+Underfull \hbox (badness 10000) detected at line 83
+[][][]
+ []
+
+) (./classShader.tex <./classShader__inherit__graph.pdf
+
+pdfTeX warning: pdflatex (file ./classShader__inherit__graph.pdf): PDF inclusio
+n: multiple pdfs with page group included in a single page
+>
+<classShader__inherit__graph.pdf, id=3915, 144.54pt x 156.585pt>
+File: classShader__inherit__graph.pdf Graphic file (type pdf)
+<use classShader__inherit__graph.pdf>
+Package pdftex.def Info: classShader__inherit__graph.pdf  used on input line 18
+.
+(pdftex.def)             Requested size: 144.0pt x 156.00879pt.
+ <./classShader__coll__graph.pdf
+
+pdfTeX warning: pdflatex (file ./classShader__coll__graph.pdf): PDF inclusion: 
+multiple pdfs with page group included in a single page
+>
+<classShader__coll__graph.pdf, id=3923, 144.54pt x 156.585pt>
+File: classShader__coll__graph.pdf Graphic file (type pdf)
+<use classShader__coll__graph.pdf>
+Package pdftex.def Info: classShader__coll__graph.pdf  used on input line 27.
+(pdftex.def)             Requested size: 144.0pt x 156.00879pt.
+ [84] [85] <./classShader_ad3825ce04340dcb4c3fe7eea5a1c46d2_cgraph.pdf>
+<classShader_ad3825ce04340dcb4c3fe7eea5a1c46d2_cgraph.pdf, id=3997, 303.1325pt 
+x 100.375pt>
+File: classShader_ad3825ce04340dcb4c3fe7eea5a1c46d2_cgraph.pdf Graphic file (ty
+pe pdf)
+<use classShader_ad3825ce04340dcb4c3fe7eea5a1c46d2_cgraph.pdf>
+Package pdftex.def Info: classShader_ad3825ce04340dcb4c3fe7eea5a1c46d2_cgraph.p
+df  used on input line 128.
+(pdftex.def)             Requested size: 302.0pt x 100.00102pt.
+
+[86]
+Underfull \hbox (badness 10000) detected at line 174
+[][][]
+ []
+
+ <./classShader_aea711ca1659af57fe4124ea318aa59c1_cgraph.pdf>
+<classShader_aea711ca1659af57fe4124ea318aa59c1_cgraph.pdf, id=4034, 587.19376pt
+ x 138.5175pt>
+File: classShader_aea711ca1659af57fe4124ea318aa59c1_cgraph.pdf Graphic file (ty
+pe pdf)
+<use classShader_aea711ca1659af57fe4124ea318aa59c1_cgraph.pdf>
+Package pdftex.def Info: classShader_aea711ca1659af57fe4124ea318aa59c1_cgraph.p
+df  used on input line 185.
+(pdftex.def)             Requested size: 350.0pt x 82.5637pt.
+ <./classShader_aea711ca1659af57fe4124ea318aa59c1_icgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classShader_aea711ca1659af57fe4124ea318aa59c1_
+icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a single
+ page
+>
+<classShader_aea711ca1659af57fe4124ea318aa59c1_icgraph.pdf, id=4049, 306.14375p
+t x 100.375pt>
+File: classShader_aea711ca1659af57fe4124ea318aa59c1_icgraph.pdf Graphic file (t
+ype pdf)
+<use classShader_aea711ca1659af57fe4124ea318aa59c1_icgraph.pdf>
+Package pdftex.def Info: classShader_aea711ca1659af57fe4124ea318aa59c1_icgraph.
+pdf  used on input line 192.
+(pdftex.def)             Requested size: 305.0pt x 100.00562pt.
+ [87] <./classShader_a4581e5cba0fa25ab7080a6848543dc58_cgraph.pdf>
+<classShader_a4581e5cba0fa25ab7080a6848543dc58_cgraph.pdf, id=4072, 303.1325pt 
+x 100.375pt>
+File: classShader_a4581e5cba0fa25ab7080a6848543dc58_cgraph.pdf Graphic file (ty
+pe pdf)
+<use classShader_a4581e5cba0fa25ab7080a6848543dc58_cgraph.pdf>
+Package pdftex.def Info: classShader_a4581e5cba0fa25ab7080a6848543dc58_cgraph.p
+df  used on input line 220.
+(pdftex.def)             Requested size: 302.0pt x 100.00102pt.
+ [88] <./classShader_a6e686eb1dd9e36aa617397520b669497_cgraph.pdf>
+<classShader_a6e686eb1dd9e36aa617397520b669497_cgraph.pdf, id=4094, 304.13625pt
+ x 100.375pt>
+File: classShader_a6e686eb1dd9e36aa617397520b669497_cgraph.pdf Graphic file (ty
+pe pdf)
+<use classShader_a6e686eb1dd9e36aa617397520b669497_cgraph.pdf>
+Package pdftex.def Info: classShader_a6e686eb1dd9e36aa617397520b669497_cgraph.p
+df  used on input line 248.
+(pdftex.def)             Requested size: 303.0pt x 100.00255pt.
+ <./classShader_a5544845a48d60515371b5cb71c7bcb8f_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classShader_a5544845a48d60515371b5cb71c7bcb8f_
+cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a single 
+page
+>
+<classShader_a5544845a48d60515371b5cb71c7bcb8f_cgraph.pdf, id=4111, 296.10625pt
+ x 100.375pt>
+File: classShader_a5544845a48d60515371b5cb71c7bcb8f_cgraph.pdf Graphic file (ty
+pe pdf)
+<use classShader_a5544845a48d60515371b5cb71c7bcb8f_cgraph.pdf>
+Package pdftex.def Info: classShader_a5544845a48d60515371b5cb71c7bcb8f_cgraph.p
+df  used on input line 276.
+(pdftex.def)             Requested size: 295.0pt x 100.00255pt.
+
+Overfull \vbox (19.27995pt too high) has occurred while \output is active []
+
+
+[89] <./classShader_a249093af915275a1e25d21ab70bfc4f9_cgraph.pdf>
+<classShader_a249093af915275a1e25d21ab70bfc4f9_cgraph.pdf, id=4134, 307.1475pt 
+x 100.375pt>
+File: classShader_a249093af915275a1e25d21ab70bfc4f9_cgraph.pdf Graphic file (ty
+pe pdf)
+<use classShader_a249093af915275a1e25d21ab70bfc4f9_cgraph.pdf>
+Package pdftex.def Info: classShader_a249093af915275a1e25d21ab70bfc4f9_cgraph.p
+df  used on input line 304.
+(pdftex.def)             Requested size: 306.0pt x 100.00562pt.
+ <./classShader_a9d871b7a0436c84096f1b294083a3ed7_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classShader_a9d871b7a0436c84096f1b294083a3ed7_
+cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a single 
+page
+>
+<classShader_a9d871b7a0436c84096f1b294083a3ed7_cgraph.pdf, id=4144, 307.1475pt 
+x 100.375pt>
+File: classShader_a9d871b7a0436c84096f1b294083a3ed7_cgraph.pdf Graphic file (ty
+pe pdf)
+<use classShader_a9d871b7a0436c84096f1b294083a3ed7_cgraph.pdf>
+Package pdftex.def Info: classShader_a9d871b7a0436c84096f1b294083a3ed7_cgraph.p
+df  used on input line 332.
+(pdftex.def)             Requested size: 306.0pt x 100.00562pt.
+
+Overfull \vbox (18.49265pt too high) has occurred while \output is active []
+
+
+[90] <./classShader_a34d5548a520489bd132f5bfbc46bb3a9_cgraph.pdf>
+<classShader_a34d5548a520489bd132f5bfbc46bb3a9_cgraph.pdf, id=4167, 307.1475pt 
+x 100.375pt>
+File: classShader_a34d5548a520489bd132f5bfbc46bb3a9_cgraph.pdf Graphic file (ty
+pe pdf)
+<use classShader_a34d5548a520489bd132f5bfbc46bb3a9_cgraph.pdf>
+Package pdftex.def Info: classShader_a34d5548a520489bd132f5bfbc46bb3a9_cgraph.p
+df  used on input line 360.
+(pdftex.def)             Requested size: 306.0pt x 100.00562pt.
+ <./classShader_a34d5548a520489bd132f5bfbc46bb3a9_icgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classShader_a34d5548a520489bd132f5bfbc46bb3a9_
+icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a single
+ page
+>
+<classShader_a34d5548a520489bd132f5bfbc46bb3a9_icgraph.pdf, id=4175, 282.05376p
+t x 100.375pt>
+File: classShader_a34d5548a520489bd132f5bfbc46bb3a9_icgraph.pdf Graphic file (t
+ype pdf)
+<use classShader_a34d5548a520489bd132f5bfbc46bb3a9_icgraph.pdf>
+Package pdftex.def Info: classShader_a34d5548a520489bd132f5bfbc46bb3a9_icgraph.
+pdf  used on input line 367.
+(pdftex.def)             Requested size: 281.0pt x 100.00716pt.
+ <./classShader_aec16390e257fd63c173336869cda6488_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classShader_aec16390e257fd63c173336869cda6488_
+cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a single 
+page
+>
+<classShader_aec16390e257fd63c173336869cda6488_cgraph.pdf, id=4185, 305.14pt x 
+100.375pt>
+File: classShader_aec16390e257fd63c173336869cda6488_cgraph.pdf Graphic file (ty
+pe pdf)
+<use classShader_aec16390e257fd63c173336869cda6488_cgraph.pdf>
+Package pdftex.def Info: classShader_aec16390e257fd63c173336869cda6488_cgraph.p
+df  used on input line 395.
+(pdftex.def)             Requested size: 304.0pt x 100.00409pt.
+ [91] <./classShader_a9c15d92dae60d9bebc5a8e05e7e16771_cgraph.pdf>
+<classShader_a9c15d92dae60d9bebc5a8e05e7e16771_cgraph.pdf, id=4209, 308.15125pt
+ x 100.375pt>
+File: classShader_a9c15d92dae60d9bebc5a8e05e7e16771_cgraph.pdf Graphic file (ty
+pe pdf)
+<use classShader_a9c15d92dae60d9bebc5a8e05e7e16771_cgraph.pdf>
+Package pdftex.def Info: classShader_a9c15d92dae60d9bebc5a8e05e7e16771_cgraph.p
+df  used on input line 425.
+(pdftex.def)             Requested size: 307.0pt x 100.00716pt.
+ <./classShader_a5da8dde2a4756ce7f5da98f4e3dd9990_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classShader_a5da8dde2a4756ce7f5da98f4e3dd9990_
+cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a single 
+page
+>
+<classShader_a5da8dde2a4756ce7f5da98f4e3dd9990_cgraph.pdf, id=4219, 305.14pt x 
+100.375pt>
+File: classShader_a5da8dde2a4756ce7f5da98f4e3dd9990_cgraph.pdf Graphic file (ty
+pe pdf)
+<use classShader_a5da8dde2a4756ce7f5da98f4e3dd9990_cgraph.pdf>
+Package pdftex.def Info: classShader_a5da8dde2a4756ce7f5da98f4e3dd9990_cgraph.p
+df  used on input line 453.
+(pdftex.def)             Requested size: 304.0pt x 100.00409pt.
+ [92] <./classShader_a8ab6219e3f760caa7a586061a9894096_cgraph.pdf>
+<classShader_a8ab6219e3f760caa7a586061a9894096_cgraph.pdf, id=4242, 308.15125pt
+ x 100.375pt>
+File: classShader_a8ab6219e3f760caa7a586061a9894096_cgraph.pdf Graphic file (ty
+pe pdf)
+<use classShader_a8ab6219e3f760caa7a586061a9894096_cgraph.pdf>
+Package pdftex.def Info: classShader_a8ab6219e3f760caa7a586061a9894096_cgraph.p
+df  used on input line 485.
+(pdftex.def)             Requested size: 307.0pt x 100.00716pt.
+ <./classShader_a77c606dadf7b56b825fa02621f13fac3_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classShader_a77c606dadf7b56b825fa02621f13fac3_
+cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a single 
+page
+>
+<classShader_a77c606dadf7b56b825fa02621f13fac3_cgraph.pdf, id=4252, 305.14pt x 
+100.375pt>
+File: classShader_a77c606dadf7b56b825fa02621f13fac3_cgraph.pdf Graphic file (ty
+pe pdf)
+<use classShader_a77c606dadf7b56b825fa02621f13fac3_cgraph.pdf>
+Package pdftex.def Info: classShader_a77c606dadf7b56b825fa02621f13fac3_cgraph.p
+df  used on input line 513.
+(pdftex.def)             Requested size: 304.0pt x 100.00409pt.
+ [93] <./classShader_a52615fe5f2d1528baa909dcbeab6fcb3_cgraph.pdf>
+<classShader_a52615fe5f2d1528baa909dcbeab6fcb3_cgraph.pdf, id=4274, 308.15125pt
+ x 100.375pt>
+File: classShader_a52615fe5f2d1528baa909dcbeab6fcb3_cgraph.pdf Graphic file (ty
+pe pdf)
+<use classShader_a52615fe5f2d1528baa909dcbeab6fcb3_cgraph.pdf>
+Package pdftex.def Info: classShader_a52615fe5f2d1528baa909dcbeab6fcb3_cgraph.p
+df  used on input line 547.
+(pdftex.def)             Requested size: 307.0pt x 100.00716pt.
+)
+(./classShaderSource.tex [94] <./classShaderSource_a992c5f061e5448ee1d35bdc272f
+b5702_cgraph.pdf>
+<classShaderSource_a992c5f061e5448ee1d35bdc272fb5702_cgraph.pdf, id=4312, 305.1
+4pt x 100.375pt>
+File: classShaderSource_a992c5f061e5448ee1d35bdc272fb5702_cgraph.pdf Graphic fi
+le (type pdf)
+<use classShaderSource_a992c5f061e5448ee1d35bdc272fb5702_cgraph.pdf>
+Package pdftex.def Info: classShaderSource_a992c5f061e5448ee1d35bdc272fb5702_cg
+raph.pdf  used on input line 71.
+(pdftex.def)             Requested size: 304.0pt x 100.00409pt.
+ <./classShaderSource_a992c5f061e5448ee1d35bdc272fb5702_icgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classShaderSource_a992c5f061e5448ee1d35bdc272f
+b5702_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a 
+single page
+>
+<classShaderSource_a992c5f061e5448ee1d35bdc272fb5702_icgraph.pdf, id=4320, 619.
+31375pt x 100.375pt>
+File: classShaderSource_a992c5f061e5448ee1d35bdc272fb5702_icgraph.pdf Graphic f
+ile (type pdf)
+<use classShaderSource_a992c5f061e5448ee1d35bdc272fb5702_icgraph.pdf>
+Package pdftex.def Info: classShaderSource_a992c5f061e5448ee1d35bdc272fb5702_ic
+graph.pdf  used on input line 78.
+(pdftex.def)             Requested size: 350.0pt x 56.72882pt.
+ [95] <./classShaderSource_a40a8e5a541a0f30dacad32b75b995586_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classShaderSource_a40a8e5a541a0f30dacad32b75b9
+95586_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a s
+ingle page
+>
+<classShaderSource_a40a8e5a541a0f30dacad32b75b995586_cgraph.pdf, id=4357, 470.7
+5874pt x 138.5175pt>
+File: classShaderSource_a40a8e5a541a0f30dacad32b75b995586_cgraph.pdf Graphic fi
+le (type pdf)
+<use classShaderSource_a40a8e5a541a0f30dacad32b75b995586_cgraph.pdf>
+Package pdftex.def Info: classShaderSource_a40a8e5a541a0f30dacad32b75b995586_cg
+raph.pdf  used on input line 95.
+(pdftex.def)             Requested size: 350.0pt x 102.98535pt.
+ <./classShaderSource_a40a8e5a541a0f30dacad32b75b995586_icgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classShaderSource_a40a8e5a541a0f30dacad32b75b9
+95586_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a 
+single page
+>
+<classShaderSource_a40a8e5a541a0f30dacad32b75b995586_icgraph.pdf, id=4372, 471.
+7625pt x 100.375pt>
+File: classShaderSource_a40a8e5a541a0f30dacad32b75b995586_icgraph.pdf Graphic f
+ile (type pdf)
+<use classShaderSource_a40a8e5a541a0f30dacad32b75b995586_icgraph.pdf>
+Package pdftex.def Info: classShaderSource_a40a8e5a541a0f30dacad32b75b995586_ic
+graph.pdf  used on input line 102.
+(pdftex.def)             Requested size: 350.0pt x 74.4693pt.
+ [96]) (./classTexture.tex <./classTexture__inherit__graph.pdf>
+<classTexture__inherit__graph.pdf, id=4405, 144.54pt x 156.585pt>
+File: classTexture__inherit__graph.pdf Graphic file (type pdf)
+<use classTexture__inherit__graph.pdf>
+Package pdftex.def Info: classTexture__inherit__graph.pdf  used on input line 1
+8.
+(pdftex.def)             Requested size: 144.0pt x 156.00879pt.
+ <./classTexture__coll__graph.pdf
+
+pdfTeX warning: pdflatex (file ./classTexture__coll__graph.pdf): PDF inclusion:
+ multiple pdfs with page group included in a single page
+>
+<classTexture__coll__graph.pdf, id=4413, 144.54pt x 156.585pt>
+File: classTexture__coll__graph.pdf Graphic file (type pdf)
+<use classTexture__coll__graph.pdf>
+Package pdftex.def Info: classTexture__coll__graph.pdf  used on input line 27.
+(pdftex.def)             Requested size: 144.0pt x 156.00879pt.
+ [97] <./classTexture_ac8942e677bb3b5c06a3be96568d89fa8_cgraph.pdf>
+<classTexture_ac8942e677bb3b5c06a3be96568d89fa8_cgraph.pdf, id=4449, 306.14375p
+t x 100.375pt>
+File: classTexture_ac8942e677bb3b5c06a3be96568d89fa8_cgraph.pdf Graphic file (t
+ype pdf)
+<use classTexture_ac8942e677bb3b5c06a3be96568d89fa8_cgraph.pdf>
+Package pdftex.def Info: classTexture_ac8942e677bb3b5c06a3be96568d89fa8_cgraph.
+pdf  used on input line 87.
+(pdftex.def)             Requested size: 305.0pt x 100.00562pt.
+ [98]
+Underfull \hbox (badness 10000) detected at line 128
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 149
+[][][]
+ []
+
+[99] <./classTexture_a08252c0058235586ddce388f6ac81b79_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classTexture_a08252c0058235586ddce388f6ac81b79
+_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a single
+ page
+>
+<classTexture_a08252c0058235586ddce388f6ac81b79_cgraph.pdf, id=4502, 447.6725pt
+ x 100.375pt>
+File: classTexture_a08252c0058235586ddce388f6ac81b79_cgraph.pdf Graphic file (t
+ype pdf)
+<use classTexture_a08252c0058235586ddce388f6ac81b79_cgraph.pdf>
+Package pdftex.def Info: classTexture_a08252c0058235586ddce388f6ac81b79_cgraph.
+pdf  used on input line 183.
+(pdftex.def)             Requested size: 350.0pt x 78.4775pt.
+ <./classTexture_a08252c0058235586ddce388f6ac81b79_icgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classTexture_a08252c0058235586ddce388f6ac81b79
+_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a singl
+e page
+>
+<classTexture_a08252c0058235586ddce388f6ac81b79_icgraph.pdf, id=4510, 451.6875p
+t x 100.375pt>
+File: classTexture_a08252c0058235586ddce388f6ac81b79_icgraph.pdf Graphic file (
+type pdf)
+<use classTexture_a08252c0058235586ddce388f6ac81b79_icgraph.pdf>
+Package pdftex.def Info: classTexture_a08252c0058235586ddce388f6ac81b79_icgraph
+.pdf  used on input line 190.
+(pdftex.def)             Requested size: 350.0pt x 77.78215pt.
+ <./classTexture_ae40798a49160911e52be2c0329b17565_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classTexture_ae40798a49160911e52be2c0329b17565
+_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a single
+ page
+>
+<classTexture_ae40798a49160911e52be2c0329b17565_cgraph.pdf, id=4520, 505.89pt x
+ 100.375pt>
+File: classTexture_ae40798a49160911e52be2c0329b17565_cgraph.pdf Graphic file (t
+ype pdf)
+<use classTexture_ae40798a49160911e52be2c0329b17565_cgraph.pdf>
+Package pdftex.def Info: classTexture_ae40798a49160911e52be2c0329b17565_cgraph.
+pdf  used on input line 216.
+(pdftex.def)             Requested size: 350.0pt x 69.44566pt.
+ <./classTexture_ae40798a49160911e52be2c0329b17565_icgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classTexture_ae40798a49160911e52be2c0329b17565
+_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a singl
+e page
+>
+<classTexture_ae40798a49160911e52be2c0329b17565_icgraph.pdf, id=4528, 373.395pt
+ x 111.41624pt>
+File: classTexture_ae40798a49160911e52be2c0329b17565_icgraph.pdf Graphic file (
+type pdf)
+<use classTexture_ae40798a49160911e52be2c0329b17565_icgraph.pdf>
+Package pdftex.def Info: classTexture_ae40798a49160911e52be2c0329b17565_icgraph
+.pdf  used on input line 223.
+(pdftex.def)             Requested size: 350.0pt x 104.44057pt.
+ [100] <./classTexture_af6e54c3a29e5187163e433217516e8d2_cgraph.pdf>
+<classTexture_af6e54c3a29e5187163e433217516e8d2_cgraph.pdf, id=4552, 309.155pt 
+x 138.5175pt>
+File: classTexture_af6e54c3a29e5187163e433217516e8d2_cgraph.pdf Graphic file (t
+ype pdf)
+<use classTexture_af6e54c3a29e5187163e433217516e8d2_cgraph.pdf>
+Package pdftex.def Info: classTexture_af6e54c3a29e5187163e433217516e8d2_cgraph.
+pdf  used on input line 249.
+(pdftex.def)             Requested size: 308.0pt x 138.012pt.
+)
+(./classOSDO_1_1vector.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
+
+[101] [102] <./classOSDO_1_1vector_a23d62d868c798c02c6056b59f986a4c5_cgraph.pdf
+
+
+pdfTeX warning: pdflatex (file ./classOSDO_1_1vector_a23d62d868c798c02c6056b59f
+986a4c5_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a
+ single page
+>
+<classOSDO_1_1vector_a23d62d868c798c02c6056b59f986a4c5_cgraph.pdf, id=4641, 488
+.82625pt x 119.44624pt>
+File: classOSDO_1_1vector_a23d62d868c798c02c6056b59f986a4c5_cgraph.pdf Graphic 
+file (type pdf)
+<use classOSDO_1_1vector_a23d62d868c798c02c6056b59f986a4c5_cgraph.pdf>
+Package pdftex.def Info: classOSDO_1_1vector_a23d62d868c798c02c6056b59f986a4c5_
+cgraph.pdf  used on input line 92.
+(pdftex.def)             Requested size: 350.0pt x 85.52551pt.
+ <./classOSDO_1_1vector_a23d62d868c798c02c6056b59f986a4c5_icgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classOSDO_1_1vector_a23d62d868c798c02c6056b59f
+986a4c5_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in 
+a single page
+>
+<classOSDO_1_1vector_a23d62d868c798c02c6056b59f986a4c5_icgraph.pdf, id=4649, 33
+2.24126pt x 100.375pt>
+File: classOSDO_1_1vector_a23d62d868c798c02c6056b59f986a4c5_icgraph.pdf Graphic
+ file (type pdf)
+<use classOSDO_1_1vector_a23d62d868c798c02c6056b59f986a4c5_icgraph.pdf>
+Package pdftex.def Info: classOSDO_1_1vector_a23d62d868c798c02c6056b59f986a4c5_
+icgraph.pdf  used on input line 99.
+(pdftex.def)             Requested size: 331.0pt x 100.00562pt.
+ <./classOSDO_1_1vector_a1d00bc9f72a815219d77bb186c461695_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classOSDO_1_1vector_a1d00bc9f72a815219d77bb186
+c461695_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a
+ single page
+>
+<classOSDO_1_1vector_a1d00bc9f72a815219d77bb186c461695_cgraph.pdf, id=4662, 635
+.37375pt x 100.375pt>
+File: classOSDO_1_1vector_a1d00bc9f72a815219d77bb186c461695_cgraph.pdf Graphic 
+file (type pdf)
+<use classOSDO_1_1vector_a1d00bc9f72a815219d77bb186c461695_cgraph.pdf>
+Package pdftex.def Info: classOSDO_1_1vector_a1d00bc9f72a815219d77bb186c461695_
+cgraph.pdf  used on input line 126.
+(pdftex.def)             Requested size: 350.0pt x 55.2937pt.
+ [103] <./classOSDO_1_1vector_a3fd2a54ec52877d9036af6d69b3cdb87_cgraph.pdf>
+<classOSDO_1_1vector_a3fd2a54ec52877d9036af6d69b3cdb87_cgraph.pdf, id=4689, 635
+.37375pt x 100.375pt>
+File: classOSDO_1_1vector_a3fd2a54ec52877d9036af6d69b3cdb87_cgraph.pdf Graphic 
+file (type pdf)
+<use classOSDO_1_1vector_a3fd2a54ec52877d9036af6d69b3cdb87_cgraph.pdf>
+Package pdftex.def Info: classOSDO_1_1vector_a3fd2a54ec52877d9036af6d69b3cdb87_
+cgraph.pdf  used on input line 153.
+(pdftex.def)             Requested size: 350.0pt x 55.2937pt.
+ <./classOSDO_1_1vector_a226f310cd518da87ed699d62a39c89fe_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classOSDO_1_1vector_a226f310cd518da87ed699d62a
+39c89fe_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a
+ single page
+>
+<classOSDO_1_1vector_a226f310cd518da87ed699d62a39c89fe_cgraph.pdf, id=4701, 339
+.2675pt x 100.375pt>
+File: classOSDO_1_1vector_a226f310cd518da87ed699d62a39c89fe_cgraph.pdf Graphic 
+file (type pdf)
+<use classOSDO_1_1vector_a226f310cd518da87ed699d62a39c89fe_cgraph.pdf>
+Package pdftex.def Info: classOSDO_1_1vector_a226f310cd518da87ed699d62a39c89fe_
+cgraph.pdf  used on input line 171.
+(pdftex.def)             Requested size: 338.0pt x 100.00409pt.
+ [104] <./classOSDO_1_1vector_aec0eccb2296e433ed5f838f646c8b668_cgraph.pdf>
+<classOSDO_1_1vector_aec0eccb2296e433ed5f838f646c8b668_cgraph.pdf, id=4726, 342
+.27875pt x 100.375pt>
+File: classOSDO_1_1vector_aec0eccb2296e433ed5f838f646c8b668_cgraph.pdf Graphic 
+file (type pdf)
+<use classOSDO_1_1vector_aec0eccb2296e433ed5f838f646c8b668_cgraph.pdf>
+Package pdftex.def Info: classOSDO_1_1vector_aec0eccb2296e433ed5f838f646c8b668_
+cgraph.pdf  used on input line 201.
+(pdftex.def)             Requested size: 341.0pt x 100.00716pt.
+ <./classOSDO_1_1vector_aec0eccb2296e433ed5f838f646c8b668_icgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classOSDO_1_1vector_aec0eccb2296e433ed5f838f64
+6c8b668_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in 
+a single page
+>
+<classOSDO_1_1vector_aec0eccb2296e433ed5f838f646c8b668_icgraph.pdf, id=4734, 51
+1.9125pt x 176.66pt>
+File: classOSDO_1_1vector_aec0eccb2296e433ed5f838f646c8b668_icgraph.pdf Graphic
+ file (type pdf)
+<use classOSDO_1_1vector_aec0eccb2296e433ed5f838f646c8b668_icgraph.pdf>
+Package pdftex.def Info: classOSDO_1_1vector_aec0eccb2296e433ed5f838f646c8b668_
+icgraph.pdf  used on input line 208.
+(pdftex.def)             Requested size: 350.0pt x 120.78493pt.
+ <./classOSDO_1_1vector_a1d511b6a07c22ee8ff471c73cc4ad808_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classOSDO_1_1vector_a1d511b6a07c22ee8ff471c73c
+c4ad808_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a
+ single page
+>
+<classOSDO_1_1vector_a1d511b6a07c22ee8ff471c73cc4ad808_cgraph.pdf, id=4746, 488
+.82625pt x 100.375pt>
+File: classOSDO_1_1vector_a1d511b6a07c22ee8ff471c73cc4ad808_cgraph.pdf Graphic 
+file (type pdf)
+<use classOSDO_1_1vector_a1d511b6a07c22ee8ff471c73cc4ad808_cgraph.pdf>
+Package pdftex.def Info: classOSDO_1_1vector_a1d511b6a07c22ee8ff471c73cc4ad808_
+cgraph.pdf  used on input line 235.
+(pdftex.def)             Requested size: 350.0pt x 71.87018pt.
+ [105] <./classOSDO_1_1vector_a1d511b6a07c22ee8ff471c73cc4ad808_icgraph.pdf>
+<classOSDO_1_1vector_a1d511b6a07c22ee8ff471c73cc4ad808_icgraph.pdf, id=4766, 35
+2.31625pt x 138.5175pt>
+File: classOSDO_1_1vector_a1d511b6a07c22ee8ff471c73cc4ad808_icgraph.pdf Graphic
+ file (type pdf)
+<use classOSDO_1_1vector_a1d511b6a07c22ee8ff471c73cc4ad808_icgraph.pdf>
+Package pdftex.def Info: classOSDO_1_1vector_a1d511b6a07c22ee8ff471c73cc4ad808_
+icgraph.pdf  used on input line 242.
+(pdftex.def)             Requested size: 350.0pt x 137.60619pt.
+ <./classOSDO_1_1vector_af52bd53d2b8cb1c91279d7af33de0af3_icgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classOSDO_1_1vector_af52bd53d2b8cb1c91279d7af3
+3de0af3_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in 
+a single page
+>
+<classOSDO_1_1vector_af52bd53d2b8cb1c91279d7af33de0af3_icgraph.pdf, id=4777, 34
+8.30125pt x 138.5175pt>
+File: classOSDO_1_1vector_af52bd53d2b8cb1c91279d7af33de0af3_icgraph.pdf Graphic
+ file (type pdf)
+<use classOSDO_1_1vector_af52bd53d2b8cb1c91279d7af33de0af3_icgraph.pdf>
+Package pdftex.def Info: classOSDO_1_1vector_af52bd53d2b8cb1c91279d7af33de0af3_
+icgraph.pdf  used on input line 264.
+(pdftex.def)             Requested size: 347.0pt x 138.00565pt.
+ [106] <./classOSDO_1_1vector_a0a5e04be2de5b09300bc29a34a8886ee_cgraph.pdf>
+<classOSDO_1_1vector_a0a5e04be2de5b09300bc29a34a8886ee_cgraph.pdf, id=4803, 630
+.355pt x 119.44624pt>
+File: classOSDO_1_1vector_a0a5e04be2de5b09300bc29a34a8886ee_cgraph.pdf Graphic 
+file (type pdf)
+<use classOSDO_1_1vector_a0a5e04be2de5b09300bc29a34a8886ee_cgraph.pdf>
+Package pdftex.def Info: classOSDO_1_1vector_a0a5e04be2de5b09300bc29a34a8886ee_
+cgraph.pdf  used on input line 302.
+(pdftex.def)             Requested size: 350.0pt x 66.3226pt.
+ <./classOSDO_1_1vector_ad95e677cec3b613268414042e01797ef_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classOSDO_1_1vector_ad95e677cec3b613268414042e
+01797ef_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a
+ single page
+>
+<classOSDO_1_1vector_ad95e677cec3b613268414042e01797ef_cgraph.pdf, id=4822, 650
+.43pt x 138.5175pt>
+File: classOSDO_1_1vector_ad95e677cec3b613268414042e01797ef_cgraph.pdf Graphic 
+file (type pdf)
+<use classOSDO_1_1vector_ad95e677cec3b613268414042e01797ef_cgraph.pdf>
+Package pdftex.def Info: classOSDO_1_1vector_ad95e677cec3b613268414042e01797ef_
+cgraph.pdf  used on input line 342.
+(pdftex.def)             Requested size: 350.0pt x 74.53835pt.
+ <./classOSDO_1_1vector_ad51b577ece8931d6074012e9258fe399_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./classOSDO_1_1vector_ad51b577ece8931d6074012e92
+58fe399_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a
+ single page
+>
+<classOSDO_1_1vector_ad51b577ece8931d6074012e9258fe399_cgraph.pdf, id=4835, 650
+.43pt x 138.5175pt>
+File: classOSDO_1_1vector_ad51b577ece8931d6074012e9258fe399_cgraph.pdf Graphic 
+file (type pdf)
+<use classOSDO_1_1vector_ad51b577ece8931d6074012e9258fe399_cgraph.pdf>
+Package pdftex.def Info: classOSDO_1_1vector_ad51b577ece8931d6074012e9258fe399_
+cgraph.pdf  used on input line 360.
+(pdftex.def)             Requested size: 350.0pt x 74.53835pt.
+ [107] <./classOSDO_1_1vector_a53a792907045d4d573572c4ee22ebafe_icgraph.pdf>
+<classOSDO_1_1vector_a53a792907045d4d573572c4ee22ebafe_icgraph.pdf, id=4867, 65
+0.43pt x 176.66pt>
+File: classOSDO_1_1vector_a53a792907045d4d573572c4ee22ebafe_icgraph.pdf Graphic
+ file (type pdf)
+<use classOSDO_1_1vector_a53a792907045d4d573572c4ee22ebafe_icgraph.pdf>
+Package pdftex.def Info: classOSDO_1_1vector_a53a792907045d4d573572c4ee22ebafe_
+icgraph.pdf  used on input line 389.
+(pdftex.def)             Requested size: 350.0pt x 95.06342pt.
+
+[108]) (./structVertex.tex [109]) (./LICENSE_8md.tex) (./beziator_8cpp.tex <./b
+eziator_8cpp__incl.pdf
+
+pdfTeX warning: pdflatex (file ./beziator_8cpp__incl.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+>
+<beziator_8cpp__incl.pdf, id=4928, 397.485pt x 381.425pt>
+File: beziator_8cpp__incl.pdf Graphic file (type pdf)
+<use beziator_8cpp__incl.pdf>
+Package pdftex.def Info: beziator_8cpp__incl.pdf  used on input line 10.
+(pdftex.def)             Requested size: 350.0pt x 335.87036pt.
+ [110] [111] <./beziator_8cpp_abff744cd88c5f344ef77ebcd6f2ec8a1_icgraph.pdf>
+<beziator_8cpp_abff744cd88c5f344ef77ebcd6f2ec8a1_icgraph.pdf, id=4980, 402.5037
+5pt x 100.375pt>
+File: beziator_8cpp_abff744cd88c5f344ef77ebcd6f2ec8a1_icgraph.pdf Graphic file 
+(type pdf)
+<use beziator_8cpp_abff744cd88c5f344ef77ebcd6f2ec8a1_icgraph.pdf>
+Package pdftex.def Info: beziator_8cpp_abff744cd88c5f344ef77ebcd6f2ec8a1_icgrap
+h.pdf  used on input line 96.
+(pdftex.def)             Requested size: 350.0pt x 87.28111pt.
+ <./beziator_8cpp_a9441d014e907f9b43dbe11cebcfaf138_icgraph.pdf
+
+pdfTeX warning: pdflatex (file ./beziator_8cpp_a9441d014e907f9b43dbe11cebcfaf13
+8_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+>
+<beziator_8cpp_a9441d014e907f9b43dbe11cebcfaf138_icgraph.pdf, id=4990, 440.6462
+6pt x 100.375pt>
+File: beziator_8cpp_a9441d014e907f9b43dbe11cebcfaf138_icgraph.pdf Graphic file 
+(type pdf)
+<use beziator_8cpp_a9441d014e907f9b43dbe11cebcfaf138_icgraph.pdf>
+Package pdftex.def Info: beziator_8cpp_a9441d014e907f9b43dbe11cebcfaf138_icgrap
+h.pdf  used on input line 113.
+(pdftex.def)             Requested size: 350.0pt x 79.7288pt.
+ [112] <./beziator_8cpp_ac99c8d4702aa8184518428b26331873c_cgraph.pdf>
+<beziator_8cpp_ac99c8d4702aa8184518428b26331873c_cgraph.pdf, id=5015, 308.15125
+pt x 138.5175pt>
+File: beziator_8cpp_ac99c8d4702aa8184518428b26331873c_cgraph.pdf Graphic file (
+type pdf)
+<use beziator_8cpp_ac99c8d4702aa8184518428b26331873c_cgraph.pdf>
+Package pdftex.def Info: beziator_8cpp_ac99c8d4702aa8184518428b26331873c_cgraph
+.pdf  used on input line 130.
+(pdftex.def)             Requested size: 307.0pt x 138.00987pt.
+ <./beziator_8cpp_ac99c8d4702aa8184518428b26331873c_icgraph.pdf
+
+pdfTeX warning: pdflatex (file ./beziator_8cpp_ac99c8d4702aa8184518428b26331873
+c_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+>
+<beziator_8cpp_ac99c8d4702aa8184518428b26331873c_icgraph.pdf, id=5023, 294.0987
+5pt x 100.375pt>
+File: beziator_8cpp_ac99c8d4702aa8184518428b26331873c_icgraph.pdf Graphic file 
+(type pdf)
+<use beziator_8cpp_ac99c8d4702aa8184518428b26331873c_icgraph.pdf>
+Package pdftex.def Info: beziator_8cpp_ac99c8d4702aa8184518428b26331873c_icgrap
+h.pdf  used on input line 137.
+(pdftex.def)             Requested size: 293.0pt x 100.00102pt.
+) (./beziator_8cpp_source.tex [113] [114] [115] [116]) (./beziator_8h.tex <./be
+ziator_8h__incl.pdf
+
+pdfTeX warning: pdflatex (file ./beziator_8h__incl.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+>
+<beziator_8h__incl.pdf, id=5144, 398.48875pt x 325.215pt>
+File: beziator_8h__incl.pdf Graphic file (type pdf)
+<use beziator_8h__incl.pdf>
+Package pdftex.def Info: beziator_8h__incl.pdf  used on input line 15.
+(pdftex.def)             Requested size: 350.0pt x 285.65414pt.
+ <./beziator_8h__dep__incl.pdf
+
+pdfTeX warning: pdflatex (file ./beziator_8h__dep__incl.pdf): PDF inclusion: mu
+ltiple pdfs with page group included in a single page
+>
+<beziator_8h__dep__incl.pdf, id=5152, 174.6525pt x 156.585pt>
+File: beziator_8h__dep__incl.pdf Graphic file (type pdf)
+<use beziator_8h__dep__incl.pdf>
+Package pdftex.def Info: beziator_8h__dep__incl.pdf  used on input line 22.
+(pdftex.def)             Requested size: 174.0pt x 156.00879pt.
+ [117]) (./beziator_8h_source.tex [118] [119]) (./bijective_8h.tex <./bijective
+_8h__incl.pdf
+
+pdfTeX warning: pdflatex (file ./bijective_8h__incl.pdf): PDF inclusion: multip
+le pdfs with page group included in a single page
+>
+<bijective_8h__incl.pdf, id=5215, 295.1025pt x 212.795pt>
+File: bijective_8h__incl.pdf Graphic file (type pdf)
+<use bijective_8h__incl.pdf>
+Package pdftex.def Info: bijective_8h__incl.pdf  used on input line 13.
+(pdftex.def)             Requested size: 294.0pt x 212.00543pt.
+ <./bijective_8h__dep__incl.pdf
+
+pdfTeX warning: pdflatex (file ./bijective_8h__dep__incl.pdf): PDF inclusion: m
+ultiple pdfs with page group included in a single page
+>
+<bijective_8h__dep__incl.pdf, id=5230, 415.5525pt x 325.215pt>
+File: bijective_8h__dep__incl.pdf Graphic file (type pdf)
+<use bijective_8h__dep__incl.pdf>
+Package pdftex.def Info: bijective_8h__dep__incl.pdf  used on input line 20.
+(pdftex.def)             Requested size: 350.0pt x 273.92308pt.
+ [120]) (./bijective_8h_source.tex [121]) (./buffer_8cpp.tex <./buffer_8cpp__in
+cl.pdf>
+<buffer_8cpp__incl.pdf, id=5290, 440.64626pt x 381.425pt>
+File: buffer_8cpp__incl.pdf Graphic file (type pdf)
+<use buffer_8cpp__incl.pdf>
+Package pdftex.def Info: buffer_8cpp__incl.pdf  used on input line 9.
+(pdftex.def)             Requested size: 350.0pt x 302.96951pt.
+) (./buffer_8cpp_source.tex [122]) (./buffer_8h.tex [123] <./buffer_8h__incl.pd
+f>
+<buffer_8h__incl.pdf, id=5341, 376.40625pt x 325.215pt>
+File: buffer_8h__incl.pdf Graphic file (type pdf)
+<use buffer_8h__incl.pdf>
+Package pdftex.def Info: buffer_8h__incl.pdf  used on input line 16.
+(pdftex.def)             Requested size: 350.0pt x 302.42201pt.
+ <./buffer_8h__dep__incl.pdf
+
+pdfTeX warning: pdflatex (file ./buffer_8h__dep__incl.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+>
+<buffer_8h__dep__incl.pdf, id=5349, 164.615pt x 156.585pt>
+File: buffer_8h__dep__incl.pdf Graphic file (type pdf)
+<use buffer_8h__dep__incl.pdf>
+Package pdftex.def Info: buffer_8h__dep__incl.pdf  used on input line 23.
+(pdftex.def)             Requested size: 164.0pt x 156.004pt.
+ [124]) (./buffer_8h_source.tex) (./camera_8cpp.tex <./camera_8cpp__incl.pdf>
+<camera_8cpp__incl.pdf, id=5393, 308.15125pt x 325.215pt>
+File: camera_8cpp__incl.pdf Graphic file (type pdf)
+<use camera_8cpp__incl.pdf>
+Package pdftex.def Info: camera_8cpp__incl.pdf  used on input line 9.
+(pdftex.def)             Requested size: 307.0pt x 324.02322pt.
+
+[125]) (./camera_8cpp_source.tex [126] [127]) (./camera_8h.tex <./camera_8h__in
+cl.pdf
+
+pdfTeX warning: pdflatex (file ./camera_8h__incl.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+>
+<camera_8h__incl.pdf, id=5528, 295.1025pt x 269.005pt>
+File: camera_8h__incl.pdf Graphic file (type pdf)
+<use camera_8h__incl.pdf>
+Package pdftex.def Info: camera_8h__incl.pdf  used on input line 14.
+(pdftex.def)             Requested size: 294.0pt x 268.00688pt.
+ <./camera_8h__dep__incl.pdf
+
+pdfTeX warning: pdflatex (file ./camera_8h__dep__incl.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+>
+<camera_8h__dep__incl.pdf, id=5543, 172.645pt x 156.585pt>
+File: camera_8h__dep__incl.pdf Graphic file (type pdf)
+<use camera_8h__dep__incl.pdf>
+Package pdftex.def Info: camera_8h__dep__incl.pdf  used on input line 21.
+(pdftex.def)             Requested size: 172.0pt x 156.00162pt.
+ [128]) (./camera_8h_source.tex [129] [130]) (./conf_8h.tex <./conf_8h__incl.pd
+f
+
+pdfTeX warning: pdflatex (file ./conf_8h__incl.pdf): PDF inclusion: multiple pd
+fs with page group included in a single page
+>
+<conf_8h__incl.pdf, id=5618, 295.1025pt x 269.005pt>
+File: conf_8h__incl.pdf Graphic file (type pdf)
+<use conf_8h__incl.pdf>
+Package pdftex.def Info: conf_8h__incl.pdf  used on input line 14.
+(pdftex.def)             Requested size: 294.0pt x 268.00688pt.
+ [131] <./conf_8h__dep__incl.pdf
+
+pdfTeX warning: pdflatex (file ./conf_8h__dep__incl.pdf): PDF inclusion: multip
+le pdfs with page group included in a single page
+>
+<conf_8h__dep__incl.pdf, id=5630, 704.6325pt x 156.585pt>
+File: conf_8h__dep__incl.pdf Graphic file (type pdf)
+<use conf_8h__dep__incl.pdf>
+Package pdftex.def Info: conf_8h__dep__incl.pdf  used on input line 21.
+(pdftex.def)             Requested size: 350.0pt x 77.77621pt.
+ [132] [133] [134]) (./conf_8h_source.tex [135] [136]) (./context_8cpp.tex
+[137] <./context_8cpp__incl.pdf
+
+pdfTeX warning: pdflatex (file ./context_8cpp__incl.pdf): PDF inclusion: multip
+le pdfs with page group included in a single page
+>
+<context_8cpp__incl.pdf, id=5797, 840.13875pt x 437.635pt>
+File: context_8cpp__incl.pdf Graphic file (type pdf)
+<use context_8cpp__incl.pdf>
+Package pdftex.def Info: context_8cpp__incl.pdf  used on input line 11.
+(pdftex.def)             Requested size: 350.0pt x 182.3163pt.
+) (./context_8cpp_source.tex) (./context_8h.tex <./context_8h__incl.pdf
+
+pdfTeX warning: pdflatex (file ./context_8h__incl.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+>
+<context_8h__incl.pdf, id=5837, 779.91376pt x 381.425pt>
+File: context_8h__incl.pdf Graphic file (type pdf)
+<use context_8h__incl.pdf>
+Package pdftex.def Info: context_8h__incl.pdf  used on input line 17.
+(pdftex.def)             Requested size: 350.0pt x 171.16823pt.
+ [138] <./context_8h__dep__incl.pdf>
+<context_8h__dep__incl.pdf, id=5859, 272.01625pt x 212.795pt>
+File: context_8h__dep__incl.pdf Graphic file (type pdf)
+<use context_8h__dep__incl.pdf>
+Package pdftex.def Info: context_8h__dep__incl.pdf  used on input line 24.
+(pdftex.def)             Requested size: 271.0pt x 212.01193pt.
+) (./context_8h_source.tex [139] [140])
+(./easyvector_8h.tex <./easyvector_8h__incl.pdf
+
+pdfTeX warning: pdflatex (file ./easyvector_8h__incl.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+>
+<easyvector_8h__incl.pdf, id=5912, 190.7125pt x 156.585pt>
+File: easyvector_8h__incl.pdf Graphic file (type pdf)
+<use easyvector_8h__incl.pdf>
+Package pdftex.def Info: easyvector_8h__incl.pdf  used on input line 14.
+(pdftex.def)             Requested size: 190.0pt x 156.0064pt.
+) (./easyvector_8h_source.tex [141] [142]) (./framebuffer_8cpp.tex <./framebuff
+er_8cpp__incl.pdf
+
+pdfTeX warning: pdflatex (file ./framebuffer_8cpp__incl.pdf): PDF inclusion: mu
+ltiple pdfs with page group included in a single page
+>
+<framebuffer_8cpp__incl.pdf, id=6036, 324.21124pt x 325.215pt>
+File: framebuffer_8cpp__incl.pdf Graphic file (type pdf)
+<use framebuffer_8cpp__incl.pdf>
+Package pdftex.def Info: framebuffer_8cpp__incl.pdf  used on input line 10.
+(pdftex.def)             Requested size: 323.0pt x 324.01826pt.
+) (./framebuffer_8cpp_source.tex [143]) (./framebuffer_8h.tex <./framebuffer_8h
+__incl.pdf>
+<framebuffer_8h__incl.pdf, id=6104, 295.1025pt x 269.005pt>
+File: framebuffer_8h__incl.pdf Graphic file (type pdf)
+<use framebuffer_8h__incl.pdf>
+Package pdftex.def Info: framebuffer_8h__incl.pdf  used on input line 14.
+(pdftex.def)             Requested size: 294.0pt x 268.00688pt.
+ [144] <./framebuffer_8h__dep__incl.pdf
+
+pdfTeX warning: pdflatex (file ./framebuffer_8h__dep__incl.pdf): PDF inclusion:
+ multiple pdfs with page group included in a single page
+>
+<framebuffer_8h__dep__incl.pdf, id=6116, 288.07625pt x 212.795pt>
+File: framebuffer_8h__dep__incl.pdf Graphic file (type pdf)
+<use framebuffer_8h__dep__incl.pdf>
+Package pdftex.def Info: framebuffer_8h__dep__incl.pdf  used on input line 21.
+(pdftex.def)             Requested size: 287.0pt x 212.00868pt.
+) (./framebuffer_8h_source.tex [145] [146]) (./glbindable_8cpp.tex <./glbindabl
+e_8cpp__incl.pdf
+
+pdfTeX warning: pdflatex (file ./glbindable_8cpp__incl.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+>
+<glbindable_8cpp__incl.pdf, id=6167, 295.1025pt x 269.005pt>
+File: glbindable_8cpp__incl.pdf Graphic file (type pdf)
+<use glbindable_8cpp__incl.pdf>
+Package pdftex.def Info: glbindable_8cpp__incl.pdf  used on input line 9.
+(pdftex.def)             Requested size: 294.0pt x 268.00688pt.
+) (./glbindable_8cpp_source.tex [147]) (./glbindable_8h.tex <./glbindable_8h__i
+ncl.pdf>
+<glbindable_8h__incl.pdf, id=6222, 295.1025pt x 212.795pt>
+File: glbindable_8h__incl.pdf Graphic file (type pdf)
+<use glbindable_8h__incl.pdf>
+Package pdftex.def Info: glbindable_8h__incl.pdf  used on input line 13.
+(pdftex.def)             Requested size: 294.0pt x 212.00543pt.
+ <./glbindable_8h__dep__incl.pdf
+
+pdfTeX warning: pdflatex (file ./glbindable_8h__dep__incl.pdf): PDF inclusion: 
+multiple pdfs with page group included in a single page
+>
+<glbindable_8h__dep__incl.pdf, id=6230, 864.22874pt x 381.425pt>
+File: glbindable_8h__dep__incl.pdf Graphic file (type pdf)
+<use glbindable_8h__dep__incl.pdf>
+Package pdftex.def Info: glbindable_8h__dep__incl.pdf  used on input line 20.
+(pdftex.def)             Requested size: 350.0pt x 154.47044pt.
+ [148]) (./glbindable_8h_source.tex [149]) (./glbinder_8cpp.tex <./glbinder_8cp
+p__incl.pdf>
+<glbinder_8cpp__incl.pdf, id=6290, 295.1025pt x 269.005pt>
+File: glbinder_8cpp__incl.pdf Graphic file (type pdf)
+<use glbinder_8cpp__incl.pdf>
+Package pdftex.def Info: glbinder_8cpp__incl.pdf  used on input line 9.
+(pdftex.def)             Requested size: 294.0pt x 268.00688pt.
+) (./glbinder_8cpp_source.tex [150]) (./glbinder_8h.tex <./glbinder_8h__incl.pd
+f
+
+pdfTeX warning: pdflatex (file ./glbinder_8h__incl.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+>
+<glbinder_8h__incl.pdf, id=6319, 295.1025pt x 212.795pt>
+File: glbinder_8h__incl.pdf Graphic file (type pdf)
+<use glbinder_8h__incl.pdf>
+Package pdftex.def Info: glbinder_8h__incl.pdf  used on input line 13.
+(pdftex.def)             Requested size: 294.0pt x 212.00543pt.
+ [151] <./glbinder_8h__dep__incl.pdf>
+<glbinder_8h__dep__incl.pdf, id=6335, 745.78625pt x 156.585pt>
+File: glbinder_8h__dep__incl.pdf Graphic file (type pdf)
+<use glbinder_8h__dep__incl.pdf>
+Package pdftex.def Info: glbinder_8h__dep__incl.pdf  used on input line 20.
+(pdftex.def)             Requested size: 350.0pt x 73.48505pt.
+) (./glbinder_8h_source.tex [152])
+(./image_8cpp.tex <./image_8cpp__incl.pdf>
+<image_8cpp__incl.pdf, id=6367, 365.365pt x 212.795pt>
+File: image_8cpp__incl.pdf Graphic file (type pdf)
+<use image_8cpp__incl.pdf>
+Package pdftex.def Info: image_8cpp__incl.pdf  used on input line 10.
+(pdftex.def)             Requested size: 350.0pt x 203.8555pt.
+) (./image_8cpp_source.tex [153])
+(./image_8h.tex <./image_8h__incl.pdf>
+<image_8h__incl.pdf, id=6408, 185.69376pt x 156.585pt>
+File: image_8h__incl.pdf Graphic file (type pdf)
+<use image_8h__incl.pdf>
+Package pdftex.def Info: image_8h__incl.pdf  used on input line 13.
+(pdftex.def)             Requested size: 185.0pt x 156.004pt.
+ <./image_8h__dep__incl.pdf
+
+pdfTeX warning: pdflatex (file ./image_8h__dep__incl.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+>
+<image_8h__dep__incl.pdf, id=6416, 385.44pt x 156.585pt>
+File: image_8h__dep__incl.pdf Graphic file (type pdf)
+<use image_8h__dep__incl.pdf>
+Package pdftex.def Info: image_8h__dep__incl.pdf  used on input line 20.
+(pdftex.def)             Requested size: 350.0pt x 142.18674pt.
+ [154]) (./image_8h_source.tex [155]) (./mesh_8cpp.tex <./mesh_8cpp__incl.pdf
+
+pdfTeX warning: pdflatex (file ./mesh_8cpp__incl.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+>
+<mesh_8cpp__incl.pdf, id=6483, 316.18124pt x 325.215pt>
+File: mesh_8cpp__incl.pdf Graphic file (type pdf)
+<use mesh_8cpp__incl.pdf>
+Package pdftex.def Info: mesh_8cpp__incl.pdf  used on input line 10.
+(pdftex.def)             Requested size: 315.0pt x 324.02322pt.
+ [156]) (./mesh_8cpp_source.tex [157]) (./mesh_8h.tex <./mesh_8h__incl.pdf>
+<mesh_8h__incl.pdf, id=6551, 326.21875pt x 269.005pt>
+File: mesh_8h__incl.pdf Graphic file (type pdf)
+<use mesh_8h__incl.pdf>
+Package pdftex.def Info: mesh_8h__incl.pdf  used on input line 15.
+(pdftex.def)             Requested size: 325.0pt x 268.0233pt.
+
+[158] <./mesh_8h__dep__incl.pdf
+
+pdfTeX warning: pdflatex (file ./mesh_8h__dep__incl.pdf): PDF inclusion: multip
+le pdfs with page group included in a single page
+>
+<mesh_8h__dep__incl.pdf, id=6563, 271.0125pt x 212.795pt>
+File: mesh_8h__dep__incl.pdf Graphic file (type pdf)
+<use mesh_8h__dep__incl.pdf>
+Package pdftex.def Info: mesh_8h__dep__incl.pdf  used on input line 22.
+(pdftex.def)             Requested size: 270.0pt x 212.00868pt.
+) (./mesh_8h_source.tex [159]) (./model_8cpp.tex <./model_8cpp__incl.pdf>
+<model_8cpp__incl.pdf, id=6617, 304.13625pt x 269.005pt>
+File: model_8cpp__incl.pdf Graphic file (type pdf)
+<use model_8cpp__incl.pdf>
+Package pdftex.def Info: model_8cpp__incl.pdf  used on input line 9.
+(pdftex.def)             Requested size: 303.0pt x 268.00688pt.
+)
+(./model_8cpp_source.tex [160]) (./model_8h.tex <./model_8h__incl.pdf
+
+pdfTeX warning: pdflatex (file ./model_8h__incl.pdf): PDF inclusion: multiple p
+dfs with page group included in a single page
+>
+<model_8h__incl.pdf, id=6647, 304.13625pt x 212.795pt>
+File: model_8h__incl.pdf Graphic file (type pdf)
+<use model_8h__incl.pdf>
+Package pdftex.def Info: model_8h__incl.pdf  used on input line 14.
+(pdftex.def)             Requested size: 303.0pt x 212.00543pt.
+ [161] <./model_8h__dep__incl.pdf>
+<model_8h__dep__incl.pdf, id=6661, 526.96875pt x 325.215pt>
+File: model_8h__dep__incl.pdf Graphic file (type pdf)
+<use model_8h__dep__incl.pdf>
+Package pdftex.def Info: model_8h__dep__incl.pdf  used on input line 21.
+(pdftex.def)             Requested size: 350.0pt x 216.01218pt.
+) (./model_8h_source.tex [162])
+(./object_8cpp.tex <./object_8cpp__incl.pdf>
+<object_8cpp__incl.pdf, id=6690, 838.13126pt x 381.425pt>
+File: object_8cpp__incl.pdf Graphic file (type pdf)
+<use object_8cpp__incl.pdf>
+Package pdftex.def Info: object_8cpp__incl.pdf  used on input line 11.
+(pdftex.def)             Requested size: 350.0pt x 159.27783pt.
+) (./object_8cpp_source.tex
+[163] [164]) (./object_8h.tex <./object_8h__incl.pdf
+
+pdfTeX warning: pdflatex (file ./object_8h__incl.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+>
+<object_8h__incl.pdf, id=6801, 786.94pt x 325.215pt>
+File: object_8h__incl.pdf Graphic file (type pdf)
+<use object_8h__incl.pdf>
+Package pdftex.def Info: object_8h__incl.pdf  used on input line 17.
+(pdftex.def)             Requested size: 350.0pt x 144.63834pt.
+ <./object_8h__dep__incl.pdf
+
+pdfTeX warning: pdflatex (file ./object_8h__dep__incl.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+>
+<object_8h__dep__incl.pdf, id=6816, 343.2825pt x 269.005pt>
+File: object_8h__dep__incl.pdf Graphic file (type pdf)
+<use object_8h__dep__incl.pdf>
+Package pdftex.def Info: object_8h__dep__incl.pdf  used on input line 24.
+(pdftex.def)             Requested size: 342.0pt x 267.99867pt.
+ [165]) (./object_8h_source.tex [166] [167]) (./osdo_8cpp.tex <./osdo_8cpp__inc
+l.pdf
+
+pdfTeX warning: pdflatex (file ./osdo_8cpp__incl.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+>
+<osdo_8cpp__incl.pdf, id=6889, 295.1025pt x 212.795pt>
+File: osdo_8cpp__incl.pdf Graphic file (type pdf)
+<use osdo_8cpp__incl.pdf>
+Package pdftex.def Info: osdo_8cpp__incl.pdf  used on input line 8.
+(pdftex.def)             Requested size: 294.0pt x 212.00543pt.
+ [168] [169]) (./osdo_8cpp_source.tex) (./osdo_8h.tex <./osdo_8h__incl.pdf>
+<osdo_8h__incl.pdf, id=6931, 295.1025pt x 156.585pt>
+File: osdo_8h__incl.pdf Graphic file (type pdf)
+<use osdo_8h__incl.pdf>
+Package pdftex.def Info: osdo_8h__incl.pdf  used on input line 10.
+(pdftex.def)             Requested size: 294.0pt x 156.004pt.
+
+[170] <./osdo_8h__dep__incl.pdf
+
+pdfTeX warning: pdflatex (file ./osdo_8h__dep__incl.pdf): PDF inclusion: multip
+le pdfs with page group included in a single page
+>
+<osdo_8h__dep__incl.pdf, id=6947, 1630.09pt x 437.635pt>
+File: osdo_8h__dep__incl.pdf Graphic file (type pdf)
+<use osdo_8h__dep__incl.pdf>
+Package pdftex.def Info: osdo_8h__dep__incl.pdf  used on input line 17.
+(pdftex.def)             Requested size: 350.0pt x 93.9628pt.
+ [171] [172]) (./osdo_8h_source.tex) (./renderbuffer_8cpp.tex <./renderbuffer_8
+cpp__incl.pdf
+
+pdfTeX warning: pdflatex (file ./renderbuffer_8cpp__incl.pdf): PDF inclusion: m
+ultiple pdfs with page group included in a single page
+>
+<renderbuffer_8cpp__incl.pdf, id=7016, 311.1625pt x 325.215pt>
+File: renderbuffer_8cpp__incl.pdf Graphic file (type pdf)
+<use renderbuffer_8cpp__incl.pdf>
+Package pdftex.def Info: renderbuffer_8cpp__incl.pdf  used on input line 9.
+(pdftex.def)             Requested size: 310.0pt x 324.00337pt.
+ [173]) (./renderbuffer_8cpp_source.tex [174]) (./renderbuffer_8h.tex <./render
+buffer_8h__incl.pdf>
+<renderbuffer_8h__incl.pdf, id=7061, 295.1025pt x 269.005pt>
+File: renderbuffer_8h__incl.pdf Graphic file (type pdf)
+<use renderbuffer_8h__incl.pdf>
+Package pdftex.def Info: renderbuffer_8h__incl.pdf  used on input line 14.
+(pdftex.def)             Requested size: 294.0pt x 268.00688pt.
+ <./renderbuffer_8h__dep__incl.pdf
+
+pdfTeX warning: pdflatex (file ./renderbuffer_8h__dep__incl.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+>
+<renderbuffer_8h__dep__incl.pdf, id=7069, 417.56pt x 212.795pt>
+File: renderbuffer_8h__dep__incl.pdf Graphic file (type pdf)
+<use renderbuffer_8h__dep__incl.pdf>
+Package pdftex.def Info: renderbuffer_8h__dep__incl.pdf  used on input line 21.
+
+(pdftex.def)             Requested size: 350.0pt x 178.3764pt.
+ [175]) (./renderbuffer_8h_source.tex) (./scene_8cpp.tex <./scene_8cpp__incl.pd
+f>
+<scene_8cpp__incl.pdf, id=7102, 979.66pt x 493.845pt>
+File: scene_8cpp__incl.pdf Graphic file (type pdf)
+<use scene_8cpp__incl.pdf>
+Package pdftex.def Info: scene_8cpp__incl.pdf  used on input line 10.
+(pdftex.def)             Requested size: 350.0pt x 176.42767pt.
+) (./scene_8cpp_source.tex [176]) (./scene_8h.tex <./scene_8h__incl.pdf
+
+pdfTeX warning: pdflatex (file ./scene_8h__incl.pdf): PDF inclusion: multiple p
+dfs with page group included in a single page
+>
+<scene_8h__incl.pdf, id=7132, 809.0225pt x 437.635pt>
+File: scene_8h__incl.pdf Graphic file (type pdf)
+<use scene_8h__incl.pdf>
+Package pdftex.def Info: scene_8h__incl.pdf  used on input line 15.
+(pdftex.def)             Requested size: 350.0pt x 189.33463pt.
+ [177] <./scene_8h__dep__incl.pdf>
+<scene_8h__dep__incl.pdf, id=7153, 166.6225pt x 156.585pt>
+File: scene_8h__dep__incl.pdf Graphic file (type pdf)
+<use scene_8h__dep__incl.pdf>
+Package pdftex.def Info: scene_8h__dep__incl.pdf  used on input line 22.
+(pdftex.def)             Requested size: 166.0pt x 156.01117pt.
+) (./scene_8h_source.tex [178])
+(./shader_8cpp.tex <./shader_8cpp__incl.pdf>
+<shader_8cpp__incl.pdf, id=7184, 668.4975pt x 325.215pt>
+File: shader_8cpp__incl.pdf Graphic file (type pdf)
+<use shader_8cpp__incl.pdf>
+Package pdftex.def Info: shader_8cpp__incl.pdf  used on input line 14.
+(pdftex.def)             Requested size: 350.0pt x 170.27396pt.
+ [179] <./shader_8cpp_a9ab6260d9d6a7ad27211ba2dde544a8d_icgraph.pdf>
+<shader_8cpp_a9ab6260d9d6a7ad27211ba2dde544a8d_icgraph.pdf, id=7207, 732.7375pt
+ x 138.5175pt>
+File: shader_8cpp_a9ab6260d9d6a7ad27211ba2dde544a8d_icgraph.pdf Graphic file (t
+ype pdf)
+<use shader_8cpp_a9ab6260d9d6a7ad27211ba2dde544a8d_icgraph.pdf>
+Package pdftex.def Info: shader_8cpp_a9ab6260d9d6a7ad27211ba2dde544a8d_icgraph.
+pdf  used on input line 48.
+(pdftex.def)             Requested size: 350.0pt x 66.16425pt.
+ <./shader_8cpp_a0f3ac031e18245c27d4bcdd6731f7520_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./shader_8cpp_a0f3ac031e18245c27d4bcdd6731f7520_
+cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a single 
+page
+>
+<shader_8cpp_a0f3ac031e18245c27d4bcdd6731f7520_cgraph.pdf, id=7227, 243.91125pt
+ x 100.375pt>
+File: shader_8cpp_a0f3ac031e18245c27d4bcdd6731f7520_cgraph.pdf Graphic file (ty
+pe pdf)
+<use shader_8cpp_a0f3ac031e18245c27d4bcdd6731f7520_cgraph.pdf>
+Package pdftex.def Info: shader_8cpp_a0f3ac031e18245c27d4bcdd6731f7520_cgraph.p
+df  used on input line 65.
+(pdftex.def)             Requested size: 243.0pt x 100.00102pt.
+ <./shader_8cpp_a4bfab66f3e39943f6389bb854900e17b_icgraph.pdf
+
+pdfTeX warning: pdflatex (file ./shader_8cpp_a4bfab66f3e39943f6389bb854900e17b_
+icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a single
+ page
+>
+<shader_8cpp_a4bfab66f3e39943f6389bb854900e17b_icgraph.pdf, id=7237, 582.175pt 
+x 100.375pt>
+File: shader_8cpp_a4bfab66f3e39943f6389bb854900e17b_icgraph.pdf Graphic file (t
+ype pdf)
+<use shader_8cpp_a4bfab66f3e39943f6389bb854900e17b_icgraph.pdf>
+Package pdftex.def Info: shader_8cpp_a4bfab66f3e39943f6389bb854900e17b_icgraph.
+pdf  used on input line 82.
+(pdftex.def)             Requested size: 350.0pt x 60.34645pt.
+) (./shader_8cpp_source.tex [180] [181] [182]) (./shader_8h.tex <./shader_8h__i
+ncl.pdf
+
+pdfTeX warning: pdflatex (file ./shader_8h__incl.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+>
+<shader_8h__incl.pdf, id=7370, 613.29124pt x 269.005pt>
+File: shader_8h__incl.pdf Graphic file (type pdf)
+<use shader_8h__incl.pdf>
+Package pdftex.def Info: shader_8h__incl.pdf  used on input line 17.
+(pdftex.def)             Requested size: 350.0pt x 153.51915pt.
+ <./shader_8h__dep__incl.pdf
+
+pdfTeX warning: pdflatex (file ./shader_8h__dep__incl.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+>
+<shader_8h__dep__incl.pdf, id=7378, 362.35374pt x 325.215pt>
+File: shader_8h__dep__incl.pdf Graphic file (type pdf)
+<use shader_8h__dep__incl.pdf>
+Package pdftex.def Info: shader_8h__dep__incl.pdf  used on input line 24.
+(pdftex.def)             Requested size: 350.0pt x 314.13321pt.
+ [183] [184]) (./shader_8h_source.tex [185]) (./texture_8cpp.tex <./texture_8cp
+p__incl.pdf
+
+pdfTeX warning: pdflatex (file ./texture_8cpp__incl.pdf): PDF inclusion: multip
+le pdfs with page group included in a single page
+>
+<texture_8cpp__incl.pdf, id=7460, 434.62375pt x 325.215pt>
+File: texture_8cpp__incl.pdf Graphic file (type pdf)
+<use texture_8cpp__incl.pdf>
+Package pdftex.def Info: texture_8cpp__incl.pdf  used on input line 10.
+(pdftex.def)             Requested size: 350.0pt x 261.90918pt.
+ [186] <./texture_8cpp_a111df5e7a747cd89978fee5d19fa7e22_icgraph.pdf
+
+pdfTeX warning: pdflatex (file ./texture_8cpp_a111df5e7a747cd89978fee5d19fa7e22
+_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a singl
+e page
+>
+<texture_8cpp_a111df5e7a747cd89978fee5d19fa7e22_icgraph.pdf, id=7477, 309.155pt
+ x 100.375pt>
+File: texture_8cpp_a111df5e7a747cd89978fee5d19fa7e22_icgraph.pdf Graphic file (
+type pdf)
+<use texture_8cpp_a111df5e7a747cd89978fee5d19fa7e22_icgraph.pdf>
+Package pdftex.def Info: texture_8cpp_a111df5e7a747cd89978fee5d19fa7e22_icgraph
+.pdf  used on input line 35.
+(pdftex.def)             Requested size: 308.0pt x 100.00868pt.
+) (./texture_8cpp_source.tex [187]) (./texture_8h.tex <./texture_8h__incl.pdf>
+<texture_8h__incl.pdf, id=7530, 295.1025pt x 269.005pt>
+File: texture_8h__incl.pdf Graphic file (type pdf)
+<use texture_8h__incl.pdf>
+Package pdftex.def Info: texture_8h__incl.pdf  used on input line 14.
+(pdftex.def)             Requested size: 294.0pt x 268.00688pt.
+[188] <./texture_8h__dep__incl.pdf
+
+pdfTeX warning: pdflatex (file ./texture_8h__dep__incl.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+>
+<texture_8h__dep__incl.pdf, id=7543, 505.89pt x 212.795pt>
+File: texture_8h__dep__incl.pdf Graphic file (type pdf)
+<use texture_8h__dep__incl.pdf>
+Package pdftex.def Info: texture_8h__dep__incl.pdf  used on input line 21.
+(pdftex.def)             Requested size: 350.0pt x 147.22482pt.
+) (./texture_8h_source.tex [189]) (./vertex_8h.tex <./vertex_8h__incl.pdf>
+<vertex_8h__incl.pdf, id=7579, 295.1025pt x 212.795pt>
+File: vertex_8h__incl.pdf Graphic file (type pdf)
+<use vertex_8h__incl.pdf>
+Package pdftex.def Info: vertex_8h__incl.pdf  used on input line 13.
+(pdftex.def)             Requested size: 294.0pt x 212.00543pt.
+
+[190] <./vertex_8h__dep__incl.pdf
+
+pdfTeX warning: pdflatex (file ./vertex_8h__dep__incl.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+>
+<vertex_8h__dep__incl.pdf, id=7591, 705.63625pt x 269.005pt>
+File: vertex_8h__dep__incl.pdf Graphic file (type pdf)
+<use vertex_8h__dep__incl.pdf>
+Package pdftex.def Info: vertex_8h__dep__incl.pdf  used on input line 20.
+(pdftex.def)             Requested size: 350.0pt x 133.42673pt.
+) (./vertex_8h_source.tex [191]) (./bezier_8frag.tex)
+(./bezier_8frag_source.tex [192]) (./bezier_8geom.tex)
+(./bezier_8geom_source.tex) (./bezier_8tesc.tex) (./bezier_8tesc_source.tex)
+(./bezier_8tese.tex) (./bezier_8tese_source.tex [193]) (./bezier_8vert.tex)
+(./bezier_8vert_source.tex [194]) [195] [196
+
+]
+No file refman.ind.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 303.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 303.
+(./refman.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 303.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 303.
+
+
+Package rerunfilecheck Warning: File `refman.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `refman.out':
+(rerunfilecheck)             Before: 9C7A8121413EB697CF20F5783E132B64;43360
+(rerunfilecheck)             After:  3C68C8E1DD11F0E39FFA2DB1CD776D68;45090.
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 21628 strings out of 481128
+ 374548 string characters out of 5922469
+ 666933 words of memory out of 5000000
+ 35086 multiletter control sequences out of 15000+600000
+ 555259 words of font info for 79 fonts, out of 8000000 for 9000
+ 891 hyphenation exceptions out of 8191
+ 55i,16n,96p,942b,666s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t2a.enc}{/usr/share/texmf
+/fonts/enc/dvips/base/8r.enc}</usr/share/texmf/fonts/type1/public/amsfonts/cm/c
+mmi10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/sha
+re/texmf/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf/fonts/type1
+/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/
+cmmi9.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/shar
+e/texmf/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf/fonts/type1/p
+ublic/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/c
+msy7.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share
+/texmf/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf/fonts/type1/p
+ublic/cm-super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0
+800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/
+texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/pu
+blic/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm14
+40.pfb></usr/share/texmf/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf/
+fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf/fonts/type1/urw/helvetic/
+uhvro8a.pfb>
+Output written on refman.pdf (202 pages, 1387767 bytes).
+PDF statistics:
+ 8084 PDF objects out of 8907 (max. 8388607)
+ 7125 compressed objects within 72 object streams
+ 1722 named destinations out of 1728 (max. 500000)
+ 2650 words of extra memory for PDF output out of 10000 (max. 10000000)
+

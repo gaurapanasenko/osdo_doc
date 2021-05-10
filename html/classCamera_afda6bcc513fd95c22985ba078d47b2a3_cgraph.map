@@ -1,0 +1,4 @@
+<map id="Camera::get_direction" name="Camera::get_direction">
+<area shape="rect" id="node1" title="Обчислює напрямок перегляду камери." alt="" coords="5,13,156,39"/>
+<area shape="rect" id="node2" href="$classCamera.html#a9ad7a34ba72c1dd1a4cef1e0cc896d6f" title="Забирає інвертовану матрицю обертання камери." alt="" coords="204,5,348,47"/>
+</map>

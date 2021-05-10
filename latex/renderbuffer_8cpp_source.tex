@@ -1,0 +1,42 @@
+\hypertarget{renderbuffer_8cpp_source}{}\doxysubsection{renderbuffer.\+cpp}
+\label{renderbuffer_8cpp_source}\index{osdo/renderbuffer.cpp@{osdo/renderbuffer.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{renderbuffer_8h}{renderbuffer.h}}"{}}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{glbinder_8h}{glbinder.h}}"{}}}
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{\Hypertarget{renderbuffer_8cpp_source_l00004}\mbox{\hyperlink{classRenderbuffer_a95f7ce01633b7b0bd75a475a11f4acc3}{00004}} GLuint \mbox{\hyperlink{classRenderbuffer_a95f7ce01633b7b0bd75a475a11f4acc3}{Renderbuffer::\_generate}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{00005 \textcolor{keyword}{}\{}
+\DoxyCodeLine{00006     GLuint \mbox{\hyperlink{classGlBindable_a299d9182805eb4c6b7e9e8cc9d5b4577}{id}};}
+\DoxyCodeLine{00007     glGenRenderbuffers(1, \&\textcolor{keywordtype}{id});}
+\DoxyCodeLine{00008     \textcolor{keywordflow}{return} \mbox{\hyperlink{classGlBindable_a299d9182805eb4c6b7e9e8cc9d5b4577}{id}};}
+\DoxyCodeLine{00009 \}}
+\DoxyCodeLine{00010 }
+\DoxyCodeLine{\Hypertarget{renderbuffer_8cpp_source_l00011}\mbox{\hyperlink{classRenderbuffer_af13806e5fa5089d38b59a4210b8b0325}{00011}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classRenderbuffer_af13806e5fa5089d38b59a4210b8b0325}{Renderbuffer::\_bind}}(\textcolor{keyword}{const} GLuint \textcolor{keywordtype}{id}, GLenum target)\textcolor{keyword}{ const}}
+\DoxyCodeLine{00012 \textcolor{keyword}{}\{}
+\DoxyCodeLine{00013     glBindRenderbuffer(target, \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00014 \}}
+\DoxyCodeLine{00015 }
+\DoxyCodeLine{\Hypertarget{renderbuffer_8cpp_source_l00016}\mbox{\hyperlink{classRenderbuffer_ac93dafa9269f474ebfccdc1480c4a0f8}{00016}} GLenum \mbox{\hyperlink{classRenderbuffer_ac93dafa9269f474ebfccdc1480c4a0f8}{Renderbuffer::\_default}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{00017 \textcolor{keyword}{}\{}
+\DoxyCodeLine{00018     \textcolor{keywordflow}{return} GL\_RENDERBUFFER;}
+\DoxyCodeLine{00019 \}}
+\DoxyCodeLine{00020 }
+\DoxyCodeLine{\Hypertarget{renderbuffer_8cpp_source_l00021}\mbox{\hyperlink{classRenderbuffer_a82819f82255c09136ca71d7d8bb9a40d}{00021}} \mbox{\hyperlink{classRenderbuffer_a82819f82255c09136ca71d7d8bb9a40d}{Renderbuffer::\string~Renderbuffer}}() \{}
+\DoxyCodeLine{00022     glDeleteRenderbuffers(1, \&\mbox{\hyperlink{classGlBindable_a5a7e0bbde3d01e24a83e0f0122402ab7}{get\_id}}());}
+\DoxyCodeLine{00023 \}}
+\DoxyCodeLine{00024 }
+\DoxyCodeLine{\Hypertarget{renderbuffer_8cpp_source_l00025}\mbox{\hyperlink{classRenderbuffer_a492da8fc565ab9ae05f8aae2effdd4e7}{00025}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classRenderbuffer_a492da8fc565ab9ae05f8aae2effdd4e7}{Renderbuffer::make\_multisample}}(GLsizei size[2], GLenum target)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{00026     \mbox{\hyperlink{classGlBinder}{GlBinder}} b = \mbox{\hyperlink{classGlBindable_ad3194126ecaf5285842cee0e7d28c951}{binder}}();}
+\DoxyCodeLine{00027     glRenderbufferStorageMultisample(}
+\DoxyCodeLine{00028                 GL\_RENDERBUFFER, 4, target, size[0], size[1]);}
+\DoxyCodeLine{00029 \}}
+\DoxyCodeLine{00030 }
+\DoxyCodeLine{\Hypertarget{renderbuffer_8cpp_source_l00031}\mbox{\hyperlink{classRenderbuffer_a48aed0ac588e14dd9024af29ef974b22}{00031}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classRenderbuffer_a48aed0ac588e14dd9024af29ef974b22}{Renderbuffer::make}}(GLsizei size[2], GLenum target)\textcolor{keyword}{ const}}
+\DoxyCodeLine{00032 \textcolor{keyword}{}\{}
+\DoxyCodeLine{00033     \mbox{\hyperlink{classGlBinder}{GlBinder}} b = \mbox{\hyperlink{classGlBindable_ad3194126ecaf5285842cee0e7d28c951}{binder}}();}
+\DoxyCodeLine{00034     glRenderbufferStorage(GL\_RENDERBUFFER, target, size[0], size[1]);}
+\DoxyCodeLine{00035 }
+\DoxyCodeLine{00036 \}}
+
+\end{DoxyCode}

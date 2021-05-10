@@ -1,0 +1,10 @@
+<map id="osdo/shader.h" name="osdo/shader.h">
+<area shape="rect" id="node1" title="Задає клас шейдеру." alt="" coords="135,5,239,32"/>
+<area shape="rect" id="node2" href="$object_8cpp.html" title=" " alt="" coords="5,155,120,181"/>
+<area shape="rect" id="node3" href="$object_8h.html" title="Задає клас об&#39;єкту моделі." alt="" coords="137,80,237,107"/>
+<area shape="rect" id="node8" href="$shader_8cpp.html" title=" " alt="" coords="261,80,379,107"/>
+<area shape="rect" id="node4" href="$context_8h.html" title="Контекст, який зберігає усі завантажені у пам&#39;ять ресурси." alt="" coords="145,155,253,181"/>
+<area shape="rect" id="node6" href="$scene_8h.html" title="Задає клас сцени із об&#39;єктами." alt="" coords="241,229,341,256"/>
+<area shape="rect" id="node5" href="$context_8cpp.html" title=" " alt="" coords="93,229,216,256"/>
+<area shape="rect" id="node7" href="$scene_8cpp.html" title=" " alt="" coords="233,304,348,331"/>
+</map>

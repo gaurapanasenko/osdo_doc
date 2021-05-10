@@ -1,0 +1,84 @@
+\hypertarget{shader_8cpp}{}\doxysubsection{Файл osdo/shader.cpp}
+\label{shader_8cpp}\index{osdo/shader.cpp@{osdo/shader.cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include \char`\"{}shader.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}conf.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}EASTL/hash\+\_\+map.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}EASTL/shared\+\_\+ptr.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}EASTL/vector.\+h\char`\"{}}\newline
+Діаграма включених заголовочних файлів для shader.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shader_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Класи}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classShaderSource}{Shader\+Source}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Функції}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{shader_8cpp_a4bfab66f3e39943f6389bb854900e17b}{read\+From\+File}} (const char $\ast$path)
+\item 
+bool \mbox{\hyperlink{shader_8cpp_a9ab6260d9d6a7ad27211ba2dde544a8d}{check\+\_\+shader}} (GLuint shader, const int type)
+\item 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classShader}{Shader}} $>$ \mbox{\hyperlink{shader_8cpp_a0f3ac031e18245c27d4bcdd6731f7520}{compile}} (vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{classShaderSource}{Shader\+Source}} $>$$>$ shaders)
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Опис функцій}
+\mbox{\Hypertarget{shader_8cpp_a9ab6260d9d6a7ad27211ba2dde544a8d}\label{shader_8cpp_a9ab6260d9d6a7ad27211ba2dde544a8d}} 
+\index{shader.cpp@{shader.cpp}!check\_shader@{check\_shader}}
+\index{check\_shader@{check\_shader}!shader.cpp@{shader.cpp}}
+\doxyparagraph{\texorpdfstring{check\_shader()}{check\_shader()}}
+{\footnotesize\ttfamily bool check\+\_\+shader (\begin{DoxyParamCaption}\item[{GLuint}]{shader,  }\item[{const int}]{type }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{shader_8cpp_source}{shader.\+cpp}}, рядок \mbox{\hyperlink{shader_8cpp_source_l00040}{40}}
+
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shader_8cpp_a9ab6260d9d6a7ad27211ba2dde544a8d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{shader_8cpp_a0f3ac031e18245c27d4bcdd6731f7520}\label{shader_8cpp_a0f3ac031e18245c27d4bcdd6731f7520}} 
+\index{shader.cpp@{shader.cpp}!compile@{compile}}
+\index{compile@{compile}!shader.cpp@{shader.cpp}}
+\doxyparagraph{\texorpdfstring{compile()}{compile()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$\mbox{\hyperlink{classShader}{Shader}}$>$ compile (\begin{DoxyParamCaption}\item[{vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{classShaderSource}{Shader\+Source}} $>$$>$}]{shaders }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{shader_8cpp_source}{shader.\+cpp}}, рядок \mbox{\hyperlink{shader_8cpp_source_l00095}{95}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{shader_8cpp_a0f3ac031e18245c27d4bcdd6731f7520_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{shader_8cpp_a4bfab66f3e39943f6389bb854900e17b}\label{shader_8cpp_a4bfab66f3e39943f6389bb854900e17b}} 
+\index{shader.cpp@{shader.cpp}!readFromFile@{readFromFile}}
+\index{readFromFile@{readFromFile}!shader.cpp@{shader.cpp}}
+\doxyparagraph{\texorpdfstring{readFromFile()}{readFromFile()}}
+{\footnotesize\ttfamily char$\ast$ read\+From\+File (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{shader_8cpp_source}{shader.\+cpp}}, рядок \mbox{\hyperlink{shader_8cpp_source_l00021}{21}}
+
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shader_8cpp_a4bfab66f3e39943f6389bb854900e17b_icgraph}
+\end{center}
+\end{figure}

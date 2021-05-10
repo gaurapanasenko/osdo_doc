@@ -1,0 +1,476 @@
+\hypertarget{classDE_1_1vector}{}\doxysubsection{Шаблон класу DE\+::vector$<$ T $>$}
+\label{classDE_1_1vector}\index{DE::vector$<$ T $>$@{DE::vector$<$ T $>$}}
+
+
+{\ttfamily \#include $<$easyvector.\+h$>$}
+
+\doxysubsubsection*{Загальнодоступні елементи}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDE_1_1vector_aa0fab403a43107cd965a4d7e92c210e6}{vector}} (size\+\_\+t \mbox{\hyperlink{classDE_1_1vector_a0812ecf6a337b662015028d1e02ea064}{size}}=0)
+\item 
+\mbox{\hyperlink{classDE_1_1vector_a5c054a0bb372d1f6147acd01b7959231}{vector}} (\mbox{\hyperlink{classDE_1_1vector}{vector}} \&\&\mbox{\hyperlink{classDE_1_1vector}{vector}})
+\item 
+\mbox{\hyperlink{classDE_1_1vector_a624350e1635d9351e3d601f738bb5e75}{vector}} (const \mbox{\hyperlink{classDE_1_1vector}{vector}} \&\mbox{\hyperlink{classDE_1_1vector}{vector}})
+\item 
+\mbox{\hyperlink{classDE_1_1vector_aba6271eb7da189e0c596c9f4da02187f}{$\sim$vector}} ()
+\item 
+\mbox{\hyperlink{classDE_1_1vector}{vector}} \& \mbox{\hyperlink{classDE_1_1vector_a3263139f7bc445dd528de7372c7f6548}{operator=}} (\mbox{\hyperlink{classDE_1_1vector}{vector}} \&\&\mbox{\hyperlink{classDE_1_1vector}{vector}})
+\item 
+\mbox{\hyperlink{classDE_1_1vector}{vector}} \& \mbox{\hyperlink{classDE_1_1vector_a8d6ea9ecf5a952d7b789675092134500}{operator=}} (const \mbox{\hyperlink{classDE_1_1vector}{vector}} \&\mbox{\hyperlink{classDE_1_1vector}{vector}})
+\item 
+T \& \mbox{\hyperlink{classDE_1_1vector_ac802f963ebf4424277850eb09c06402b}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t i)
+\item 
+size\+\_\+t \mbox{\hyperlink{classDE_1_1vector_a0812ecf6a337b662015028d1e02ea064}{size}} () const
+\item 
+T $\ast$ \mbox{\hyperlink{classDE_1_1vector_a875c868764bd7327b5d0ed425e2f9e99}{data}} ()
+\item 
+const T $\ast$ \mbox{\hyperlink{classDE_1_1vector_a2f8f1764cc25ba738c69c5e930001ed7}{data}} () const
+\item 
+void \mbox{\hyperlink{classDE_1_1vector_a88efbd2e3e7d8a5d5d2309a212458924}{clear}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Приватні елементи}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classDE_1_1vector_a1aee976bc2517964d43ea89187a823ba}{\+\_\+allocate}} (size\+\_\+t \mbox{\hyperlink{classDE_1_1vector_a0812ecf6a337b662015028d1e02ea064}{size}})
+\item 
+void \mbox{\hyperlink{classDE_1_1vector_aedd1bdad4bfcf614b2c217afae2e7f0d}{\+\_\+free}} ()
+\item 
+void \mbox{\hyperlink{classDE_1_1vector_a36fbf7d6edef57e98ae28918b48ef1f8}{\+\_\+copy}} (const \mbox{\hyperlink{classDE_1_1vector}{vector}} \&\mbox{\hyperlink{classDE_1_1vector}{vector}})
+\item 
+void \mbox{\hyperlink{classDE_1_1vector_ab6541ef42bdc54d13d8f19c96a1ca517}{\+\_\+move}} (\mbox{\hyperlink{classDE_1_1vector}{vector}} \&\mbox{\hyperlink{classDE_1_1vector}{vector}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Приватні дані}
+\begin{DoxyCompactItemize}
+\item 
+T $\ast$ \mbox{\hyperlink{classDE_1_1vector_ac72bde8d797842e8a7f5e22a458f9063}{arr}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classDE_1_1vector_a1bb935d0fc35a314d761768f6e53d863}{\+\_\+size}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Детальний опис}
+\subsubsection*{template$<$class T$>$\newline
+class DE\+::vector$<$ T $>$}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{easyvector_8h_source}{easyvector.\+h}}, рядок \mbox{\hyperlink{easyvector_8h_source_l00013}{13}}
+
+
+
+\doxysubsubsection{Конструктор(и)}
+\mbox{\Hypertarget{classDE_1_1vector_aa0fab403a43107cd965a4d7e92c210e6}\label{classDE_1_1vector_aa0fab403a43107cd965a4d7e92c210e6}} 
+\index{DE::vector$<$ T $>$@{DE::vector$<$ T $>$}!vector@{vector}}
+\index{vector@{vector}!DE::vector$<$ T $>$@{DE::vector$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{vector()}{vector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classDE_1_1vector}{DE\+::vector}}$<$ T $>$\+::\mbox{\hyperlink{classDE_1_1vector}{vector}} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{easyvector_8h_source}{easyvector.\+h}}, рядок \mbox{\hyperlink{easyvector_8h_source_l00040}{40}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040                                 \{}
+\DoxyCodeLine{00041             \mbox{\hyperlink{classDE_1_1vector_a1aee976bc2517964d43ea89187a823ba}{\_allocate}}(\mbox{\hyperlink{classDE_1_1vector_a0812ecf6a337b662015028d1e02ea064}{size}});}
+\DoxyCodeLine{00042         \}}
+
+\end{DoxyCode}
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDE_1_1vector_aa0fab403a43107cd965a4d7e92c210e6_cgraph}
+\end{center}
+\end{figure}
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{classDE_1_1vector_aa0fab403a43107cd965a4d7e92c210e6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classDE_1_1vector_a5c054a0bb372d1f6147acd01b7959231}\label{classDE_1_1vector_a5c054a0bb372d1f6147acd01b7959231}} 
+\index{DE::vector$<$ T $>$@{DE::vector$<$ T $>$}!vector@{vector}}
+\index{vector@{vector}!DE::vector$<$ T $>$@{DE::vector$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{vector()}{vector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classDE_1_1vector}{DE\+::vector}}$<$ T $>$\+::\mbox{\hyperlink{classDE_1_1vector}{vector}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDE_1_1vector}{vector}}$<$ T $>$ \&\&}]{vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{easyvector_8h_source}{easyvector.\+h}}, рядок \mbox{\hyperlink{easyvector_8h_source_l00043}{43}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043                                 \{}
+\DoxyCodeLine{00044             \mbox{\hyperlink{classDE_1_1vector_a36fbf7d6edef57e98ae28918b48ef1f8}{\_copy}}(\mbox{\hyperlink{classDE_1_1vector_aa0fab403a43107cd965a4d7e92c210e6}{vector}});}
+\DoxyCodeLine{00045         \}}
+
+\end{DoxyCode}
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDE_1_1vector_a5c054a0bb372d1f6147acd01b7959231_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classDE_1_1vector_a624350e1635d9351e3d601f738bb5e75}\label{classDE_1_1vector_a624350e1635d9351e3d601f738bb5e75}} 
+\index{DE::vector$<$ T $>$@{DE::vector$<$ T $>$}!vector@{vector}}
+\index{vector@{vector}!DE::vector$<$ T $>$@{DE::vector$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{vector()}{vector()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classDE_1_1vector}{DE\+::vector}}$<$ T $>$\+::\mbox{\hyperlink{classDE_1_1vector}{vector}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDE_1_1vector}{vector}}$<$ T $>$ \&}]{vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{easyvector_8h_source}{easyvector.\+h}}, рядок \mbox{\hyperlink{easyvector_8h_source_l00046}{46}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00046                                      \{}
+\DoxyCodeLine{00047             \mbox{\hyperlink{classDE_1_1vector_a36fbf7d6edef57e98ae28918b48ef1f8}{\_copy}}(\mbox{\hyperlink{classDE_1_1vector_aa0fab403a43107cd965a4d7e92c210e6}{vector}});}
+\DoxyCodeLine{00048         \}}
+
+\end{DoxyCode}
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDE_1_1vector_a624350e1635d9351e3d601f738bb5e75_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classDE_1_1vector_aba6271eb7da189e0c596c9f4da02187f}\label{classDE_1_1vector_aba6271eb7da189e0c596c9f4da02187f}} 
+\index{DE::vector$<$ T $>$@{DE::vector$<$ T $>$}!````~vector@{$\sim$vector}}
+\index{````~vector@{$\sim$vector}!DE::vector$<$ T $>$@{DE::vector$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{$\sim$vector()}{~vector()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classDE_1_1vector}{DE\+::vector}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{classDE_1_1vector}{vector}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{easyvector_8h_source}{easyvector.\+h}}, рядок \mbox{\hyperlink{easyvector_8h_source_l00049}{49}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00049 \{\mbox{\hyperlink{classDE_1_1vector_aedd1bdad4bfcf614b2c217afae2e7f0d}{\_free}}();\}}
+
+\end{DoxyCode}
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{classDE_1_1vector_aba6271eb7da189e0c596c9f4da02187f_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsubsection{Опис методів компонент}
+\mbox{\Hypertarget{classDE_1_1vector_a1aee976bc2517964d43ea89187a823ba}\label{classDE_1_1vector_a1aee976bc2517964d43ea89187a823ba}} 
+\index{DE::vector$<$ T $>$@{DE::vector$<$ T $>$}!\_allocate@{\_allocate}}
+\index{\_allocate@{\_allocate}!DE::vector$<$ T $>$@{DE::vector$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{\_allocate()}{\_allocate()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classDE_1_1vector}{DE\+::vector}}$<$ T $>$\+::\+\_\+allocate (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{easyvector_8h_source}{easyvector.\+h}}, рядок \mbox{\hyperlink{easyvector_8h_source_l00016}{16}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016                                     \{}
+\DoxyCodeLine{00017             \mbox{\hyperlink{classDE_1_1vector_a1bb935d0fc35a314d761768f6e53d863}{\_size}} = 0;}
+\DoxyCodeLine{00018             \mbox{\hyperlink{classDE_1_1vector_ac72bde8d797842e8a7f5e22a458f9063}{arr}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00019             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classDE_1_1vector_a0812ecf6a337b662015028d1e02ea064}{size}})}
+\DoxyCodeLine{00020                 \mbox{\hyperlink{classDE_1_1vector_ac72bde8d797842e8a7f5e22a458f9063}{arr}} = \textcolor{keyword}{static\_cast<}T*\textcolor{keyword}{>}(calloc(\mbox{\hyperlink{classDE_1_1vector_a0812ecf6a337b662015028d1e02ea064}{size}}, \textcolor{keyword}{sizeof}(T)));}
+\DoxyCodeLine{00021             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classDE_1_1vector_ac72bde8d797842e8a7f5e22a458f9063}{arr}})}
+\DoxyCodeLine{00022                 \mbox{\hyperlink{classDE_1_1vector_a1bb935d0fc35a314d761768f6e53d863}{\_size}} = \mbox{\hyperlink{classDE_1_1vector_a0812ecf6a337b662015028d1e02ea064}{size}};}
+\DoxyCodeLine{00023         \}}
+
+\end{DoxyCode}
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{classDE_1_1vector_a1aee976bc2517964d43ea89187a823ba_cgraph}
+\end{center}
+\end{figure}
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDE_1_1vector_a1aee976bc2517964d43ea89187a823ba_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classDE_1_1vector_a36fbf7d6edef57e98ae28918b48ef1f8}\label{classDE_1_1vector_a36fbf7d6edef57e98ae28918b48ef1f8}} 
+\index{DE::vector$<$ T $>$@{DE::vector$<$ T $>$}!\_copy@{\_copy}}
+\index{\_copy@{\_copy}!DE::vector$<$ T $>$@{DE::vector$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{\_copy()}{\_copy()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classDE_1_1vector}{DE\+::vector}}$<$ T $>$\+::\+\_\+copy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDE_1_1vector}{vector}}$<$ T $>$ \&}]{vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{easyvector_8h_source}{easyvector.\+h}}, рядок \mbox{\hyperlink{easyvector_8h_source_l00030}{30}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030                                          \{}
+\DoxyCodeLine{00031             \mbox{\hyperlink{classDE_1_1vector_a1aee976bc2517964d43ea89187a823ba}{\_allocate}}(\mbox{\hyperlink{classDE_1_1vector_aa0fab403a43107cd965a4d7e92c210e6}{vector}}.\_size);}
+\DoxyCodeLine{00032             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classDE_1_1vector_a1bb935d0fc35a314d761768f6e53d863}{\_size}})}
+\DoxyCodeLine{00033                 memcpy(\mbox{\hyperlink{classDE_1_1vector_ac72bde8d797842e8a7f5e22a458f9063}{arr}}, \mbox{\hyperlink{classDE_1_1vector_aa0fab403a43107cd965a4d7e92c210e6}{vector}}.arr, \mbox{\hyperlink{classDE_1_1vector_a1bb935d0fc35a314d761768f6e53d863}{\_size}} * \textcolor{keyword}{sizeof}(T));}
+\DoxyCodeLine{00034         \}}
+
+\end{DoxyCode}
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDE_1_1vector_a36fbf7d6edef57e98ae28918b48ef1f8_cgraph}
+\end{center}
+\end{figure}
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{classDE_1_1vector_a36fbf7d6edef57e98ae28918b48ef1f8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classDE_1_1vector_aedd1bdad4bfcf614b2c217afae2e7f0d}\label{classDE_1_1vector_aedd1bdad4bfcf614b2c217afae2e7f0d}} 
+\index{DE::vector$<$ T $>$@{DE::vector$<$ T $>$}!\_free@{\_free}}
+\index{\_free@{\_free}!DE::vector$<$ T $>$@{DE::vector$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{\_free()}{\_free()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classDE_1_1vector}{DE\+::vector}}$<$ T $>$\+::\+\_\+free (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{easyvector_8h_source}{easyvector.\+h}}, рядок \mbox{\hyperlink{easyvector_8h_source_l00024}{24}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024                      \{}
+\DoxyCodeLine{00025             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classDE_1_1vector_ac72bde8d797842e8a7f5e22a458f9063}{arr}})}
+\DoxyCodeLine{00026                 free(\mbox{\hyperlink{classDE_1_1vector_ac72bde8d797842e8a7f5e22a458f9063}{arr}});}
+\DoxyCodeLine{00027             \mbox{\hyperlink{classDE_1_1vector_a1bb935d0fc35a314d761768f6e53d863}{\_size}} = 0;}
+\DoxyCodeLine{00028             \mbox{\hyperlink{classDE_1_1vector_ac72bde8d797842e8a7f5e22a458f9063}{arr}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00029         \}}
+
+\end{DoxyCode}
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{classDE_1_1vector_aedd1bdad4bfcf614b2c217afae2e7f0d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classDE_1_1vector_ab6541ef42bdc54d13d8f19c96a1ca517}\label{classDE_1_1vector_ab6541ef42bdc54d13d8f19c96a1ca517}} 
+\index{DE::vector$<$ T $>$@{DE::vector$<$ T $>$}!\_move@{\_move}}
+\index{\_move@{\_move}!DE::vector$<$ T $>$@{DE::vector$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{\_move()}{\_move()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classDE_1_1vector}{DE\+::vector}}$<$ T $>$\+::\+\_\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDE_1_1vector}{vector}}$<$ T $>$ \&}]{vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{easyvector_8h_source}{easyvector.\+h}}, рядок \mbox{\hyperlink{easyvector_8h_source_l00035}{35}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035                                    \{}
+\DoxyCodeLine{00036             \mbox{\hyperlink{classDE_1_1vector_ac72bde8d797842e8a7f5e22a458f9063}{arr}} = \mbox{\hyperlink{classDE_1_1vector_aa0fab403a43107cd965a4d7e92c210e6}{vector}}.arr;}
+\DoxyCodeLine{00037             \mbox{\hyperlink{classDE_1_1vector_a1bb935d0fc35a314d761768f6e53d863}{\_size}} = \mbox{\hyperlink{classDE_1_1vector_aa0fab403a43107cd965a4d7e92c210e6}{vector}}.\_size;}
+\DoxyCodeLine{00038         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classDE_1_1vector_a88efbd2e3e7d8a5d5d2309a212458924}\label{classDE_1_1vector_a88efbd2e3e7d8a5d5d2309a212458924}} 
+\index{DE::vector$<$ T $>$@{DE::vector$<$ T $>$}!clear@{clear}}
+\index{clear@{clear}!DE::vector$<$ T $>$@{DE::vector$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classDE_1_1vector}{DE\+::vector}}$<$ T $>$\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{easyvector_8h_source}{easyvector.\+h}}, рядок \mbox{\hyperlink{easyvector_8h_source_l00072}{72}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00072                      \{}
+\DoxyCodeLine{00073             *\textcolor{keyword}{this} = \mbox{\hyperlink{classDE_1_1vector_aa0fab403a43107cd965a4d7e92c210e6}{vector}}(0);}
+\DoxyCodeLine{00074         \}}
+
+\end{DoxyCode}
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDE_1_1vector_a88efbd2e3e7d8a5d5d2309a212458924_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classDE_1_1vector_a875c868764bd7327b5d0ed425e2f9e99}\label{classDE_1_1vector_a875c868764bd7327b5d0ed425e2f9e99}} 
+\index{DE::vector$<$ T $>$@{DE::vector$<$ T $>$}!data@{data}}
+\index{data@{data}!DE::vector$<$ T $>$@{DE::vector$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T$\ast$ \mbox{\hyperlink{classDE_1_1vector}{DE\+::vector}}$<$ T $>$\+::data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{easyvector_8h_source}{easyvector.\+h}}, рядок \mbox{\hyperlink{easyvector_8h_source_l00066}{66}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00066                    \{}
+\DoxyCodeLine{00067             \textcolor{keywordflow}{return} \mbox{\hyperlink{classDE_1_1vector_ac72bde8d797842e8a7f5e22a458f9063}{arr}};}
+\DoxyCodeLine{00068         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classDE_1_1vector_a2f8f1764cc25ba738c69c5e930001ed7}\label{classDE_1_1vector_a2f8f1764cc25ba738c69c5e930001ed7}} 
+\index{DE::vector$<$ T $>$@{DE::vector$<$ T $>$}!data@{data}}
+\index{data@{data}!DE::vector$<$ T $>$@{DE::vector$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+const T$\ast$ \mbox{\hyperlink{classDE_1_1vector}{DE\+::vector}}$<$ T $>$\+::data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{easyvector_8h_source}{easyvector.\+h}}, рядок \mbox{\hyperlink{easyvector_8h_source_l00069}{69}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00069                                \{}
+\DoxyCodeLine{00070             \textcolor{keywordflow}{return} \mbox{\hyperlink{classDE_1_1vector_ac72bde8d797842e8a7f5e22a458f9063}{arr}};}
+\DoxyCodeLine{00071         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classDE_1_1vector_a8d6ea9ecf5a952d7b789675092134500}\label{classDE_1_1vector_a8d6ea9ecf5a952d7b789675092134500}} 
+\index{DE::vector$<$ T $>$@{DE::vector$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!DE::vector$<$ T $>$@{DE::vector$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classDE_1_1vector}{vector}}\& \mbox{\hyperlink{classDE_1_1vector}{DE\+::vector}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDE_1_1vector}{vector}}$<$ T $>$ \&}]{vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{easyvector_8h_source}{easyvector.\+h}}, рядок \mbox{\hyperlink{easyvector_8h_source_l00055}{55}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00055                                                 \{}
+\DoxyCodeLine{00056             \mbox{\hyperlink{classDE_1_1vector_aedd1bdad4bfcf614b2c217afae2e7f0d}{\_free}}();}
+\DoxyCodeLine{00057             \mbox{\hyperlink{classDE_1_1vector_a36fbf7d6edef57e98ae28918b48ef1f8}{\_copy}}(\mbox{\hyperlink{classDE_1_1vector_aa0fab403a43107cd965a4d7e92c210e6}{vector}});}
+\DoxyCodeLine{00058             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{00059         \}}
+
+\end{DoxyCode}
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDE_1_1vector_a8d6ea9ecf5a952d7b789675092134500_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classDE_1_1vector_a3263139f7bc445dd528de7372c7f6548}\label{classDE_1_1vector_a3263139f7bc445dd528de7372c7f6548}} 
+\index{DE::vector$<$ T $>$@{DE::vector$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!DE::vector$<$ T $>$@{DE::vector$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classDE_1_1vector}{vector}}\& \mbox{\hyperlink{classDE_1_1vector}{DE\+::vector}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDE_1_1vector}{vector}}$<$ T $>$ \&\&}]{vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{easyvector_8h_source}{easyvector.\+h}}, рядок \mbox{\hyperlink{easyvector_8h_source_l00050}{50}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00050                                            \{}
+\DoxyCodeLine{00051             \mbox{\hyperlink{classDE_1_1vector_aedd1bdad4bfcf614b2c217afae2e7f0d}{\_free}}();}
+\DoxyCodeLine{00052             \mbox{\hyperlink{classDE_1_1vector_a36fbf7d6edef57e98ae28918b48ef1f8}{\_copy}}(\mbox{\hyperlink{classDE_1_1vector_aa0fab403a43107cd965a4d7e92c210e6}{vector}});}
+\DoxyCodeLine{00053             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{00054         \}}
+
+\end{DoxyCode}
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDE_1_1vector_a3263139f7bc445dd528de7372c7f6548_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classDE_1_1vector_ac802f963ebf4424277850eb09c06402b}\label{classDE_1_1vector_ac802f963ebf4424277850eb09c06402b}} 
+\index{DE::vector$<$ T $>$@{DE::vector$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!DE::vector$<$ T $>$@{DE::vector$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T\& \mbox{\hyperlink{classDE_1_1vector}{DE\+::vector}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{easyvector_8h_source}{easyvector.\+h}}, рядок \mbox{\hyperlink{easyvector_8h_source_l00060}{60}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00060                                 \{}
+\DoxyCodeLine{00061             \textcolor{keywordflow}{return} \mbox{\hyperlink{classDE_1_1vector_ac72bde8d797842e8a7f5e22a458f9063}{arr}}[i];}
+\DoxyCodeLine{00062         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classDE_1_1vector_a0812ecf6a337b662015028d1e02ea064}\label{classDE_1_1vector_a0812ecf6a337b662015028d1e02ea064}} 
+\index{DE::vector$<$ T $>$@{DE::vector$<$ T $>$}!size@{size}}
+\index{size@{size}!DE::vector$<$ T $>$@{DE::vector$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+size\+\_\+t \mbox{\hyperlink{classDE_1_1vector}{DE\+::vector}}$<$ T $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{easyvector_8h_source}{easyvector.\+h}}, рядок \mbox{\hyperlink{easyvector_8h_source_l00063}{63}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063                             \{}
+\DoxyCodeLine{00064             \textcolor{keywordflow}{return} \mbox{\hyperlink{classDE_1_1vector_a1bb935d0fc35a314d761768f6e53d863}{\_size}};}
+\DoxyCodeLine{00065         \}}
+
+\end{DoxyCode}
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDE_1_1vector_a0812ecf6a337b662015028d1e02ea064_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsubsection{Компонентні дані}
+\mbox{\Hypertarget{classDE_1_1vector_a1bb935d0fc35a314d761768f6e53d863}\label{classDE_1_1vector_a1bb935d0fc35a314d761768f6e53d863}} 
+\index{DE::vector$<$ T $>$@{DE::vector$<$ T $>$}!\_size@{\_size}}
+\index{\_size@{\_size}!DE::vector$<$ T $>$@{DE::vector$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{\_size}{\_size}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+size\+\_\+t \mbox{\hyperlink{classDE_1_1vector}{DE\+::vector}}$<$ T $>$\+::\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{easyvector_8h_source}{easyvector.\+h}}, рядок \mbox{\hyperlink{easyvector_8h_source_l00015}{15}}
+
+\mbox{\Hypertarget{classDE_1_1vector_ac72bde8d797842e8a7f5e22a458f9063}\label{classDE_1_1vector_ac72bde8d797842e8a7f5e22a458f9063}} 
+\index{DE::vector$<$ T $>$@{DE::vector$<$ T $>$}!arr@{arr}}
+\index{arr@{arr}!DE::vector$<$ T $>$@{DE::vector$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{arr}{arr}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T$\ast$ \mbox{\hyperlink{classDE_1_1vector}{DE\+::vector}}$<$ T $>$\+::arr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{easyvector_8h_source}{easyvector.\+h}}, рядок \mbox{\hyperlink{easyvector_8h_source_l00014}{14}}
+
+
+
+Документація цього класу була створена з файлу\+:\begin{DoxyCompactItemize}
+\item 
+osdo/\mbox{\hyperlink{easyvector_8h}{easyvector.\+h}}\end{DoxyCompactItemize}

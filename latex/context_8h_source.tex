@@ -1,0 +1,95 @@
+\hypertarget{context_8h_source}{}\doxysubsection{context.\+h}
+\label{context_8h_source}\index{osdo/context.h@{osdo/context.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/**}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * @file context.h}}
+\DoxyCodeLine{00003 \textcolor{comment}{ * @brief Контекст, який зберігає усі завантажені у пам'ять ресурси.}}
+\DoxyCodeLine{00004 \textcolor{comment}{ */}}
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#ifndef CONTEXT\_H}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#define CONTEXT\_H}}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{osdo_8h}{osdo.h}}"{}}}
+\DoxyCodeLine{00009 }
+\DoxyCodeLine{00010 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{object_8h}{object.h}}"{}}}
+\DoxyCodeLine{00011 \textcolor{preprocessor}{\#include "{}EASTL/hash\_map.h"{}}}
+\DoxyCodeLine{00012 \textcolor{preprocessor}{\#include "{}EASTL/string.h"{}}}
+\DoxyCodeLine{00013 \textcolor{preprocessor}{\#include "{}EASTL/shared\_ptr.h"{}}}
+\DoxyCodeLine{00014 \textcolor{keyword}{using} eastl::hash\_map;}
+\DoxyCodeLine{00015 \textcolor{keyword}{using} eastl::string;}
+\DoxyCodeLine{00016 \textcolor{keyword}{using} eastl::shared\_ptr;}
+\DoxyCodeLine{00017 \textcolor{keyword}{using} eastl::pair;}
+\DoxyCodeLine{00018 \textcolor{keyword}{using} eastl::make\_shared;}
+\DoxyCodeLine{00019 }
+\DoxyCodeLine{00020 \textcolor{keyword}{class }\mbox{\hyperlink{classShader}{Shader}};}
+\DoxyCodeLine{00021 \textcolor{keyword}{class }\mbox{\hyperlink{classTexture}{Texture}};}
+\DoxyCodeLine{00022 \textcolor{comment}{}}
+\DoxyCodeLine{00023 \textcolor{comment}{/**}}
+\DoxyCodeLine{00024 \textcolor{comment}{ * @brief Контекст, який зберігає усі завантажені у пам'ять ресурси.}}
+\DoxyCodeLine{00025 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{context_8h_source_l00026}\mbox{\hyperlink{structContext}{00026}} \textcolor{keyword}{struct }\mbox{\hyperlink{structContext}{Context}}}
+\DoxyCodeLine{00027 \{\textcolor{comment}{}}
+\DoxyCodeLine{00028 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00029 \textcolor{comment}{     * @brief Тип для зберігання моделей.}}
+\DoxyCodeLine{00030 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{context_8h_source_l00031}\mbox{\hyperlink{structContext_a0fb5343f40542412aa4089d22627f232}{00031}}     \textcolor{keyword}{typedef} hash\_map<string, Object> \mbox{\hyperlink{structContext_a0fb5343f40542412aa4089d22627f232}{Models}};\textcolor{comment}{}}
+\DoxyCodeLine{00032 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00033 \textcolor{comment}{     * @brief Тип для зберігання текстур.}}
+\DoxyCodeLine{00034 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{context_8h_source_l00035}\mbox{\hyperlink{structContext_a6538db926f05f632413d3e83d02ba16d}{00035}}     \textcolor{keyword}{typedef} hash\_map<string, shared\_ptr<Texture>> \mbox{\hyperlink{structContext_a6538db926f05f632413d3e83d02ba16d}{Textures}};\textcolor{comment}{}}
+\DoxyCodeLine{00036 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00037 \textcolor{comment}{     * @brief Завантажені моделі.}}
+\DoxyCodeLine{00038 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{context_8h_source_l00039}\mbox{\hyperlink{structContext_adf5341866d506e12dca716c71367fdcf}{00039}}     \mbox{\hyperlink{structContext_a0fb5343f40542412aa4089d22627f232}{Models}} \mbox{\hyperlink{structContext_adf5341866d506e12dca716c71367fdcf}{models}};\textcolor{comment}{}}
+\DoxyCodeLine{00040 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00041 \textcolor{comment}{     * @brief Зкомпіловані шейдери.}}
+\DoxyCodeLine{00042 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{context_8h_source_l00043}\mbox{\hyperlink{structContext_ae6fcb1cace574a21fb21ccd678473d17}{00043}}     hash\_map<string, shared\_ptr<Shader>> \mbox{\hyperlink{structContext_ae6fcb1cace574a21fb21ccd678473d17}{shaders}};\textcolor{comment}{}}
+\DoxyCodeLine{00044 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00045 \textcolor{comment}{     * @brief Завантажені текстури.}}
+\DoxyCodeLine{00046 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{context_8h_source_l00047}\mbox{\hyperlink{structContext_acc023c5c78fc019ae50fac056ddf7226}{00047}}     \mbox{\hyperlink{structContext_a6538db926f05f632413d3e83d02ba16d}{Textures}} \mbox{\hyperlink{structContext_acc023c5c78fc019ae50fac056ddf7226}{textures}};}
+\DoxyCodeLine{00048 \textcolor{comment}{}}
+\DoxyCodeLine{00049 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00050 \textcolor{comment}{     * @brief Вибрана модель для редагування.}}
+\DoxyCodeLine{00051 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{context_8h_source_l00052}\mbox{\hyperlink{structContext_a2495f12fa2a7e55cb4d6e7d514e58735}{00052}}     Models::iterator \mbox{\hyperlink{structContext_a2495f12fa2a7e55cb4d6e7d514e58735}{active}};\textcolor{comment}{}}
+\DoxyCodeLine{00053 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00054 \textcolor{comment}{     * @brief Вибрана текстура для відображення.}}
+\DoxyCodeLine{00055 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{context_8h_source_l00056}\mbox{\hyperlink{structContext_af6e358ab9890652b7c0accf7fcd1fc85}{00056}}     Textures::iterator \mbox{\hyperlink{structContext_af6e358ab9890652b7c0accf7fcd1fc85}{active\_texture}};}
+\DoxyCodeLine{00057 }
+\DoxyCodeLine{00058 \textcolor{keyword}{public}:}
+\DoxyCodeLine{00059     \mbox{\hyperlink{structContext_a652cdcd2eedc8dbd9110bd284c5d5cf0}{Context}}();}
+\DoxyCodeLine{00060 \textcolor{comment}{}}
+\DoxyCodeLine{00061 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00062 \textcolor{comment}{     * @brief перехід до наступної моделі для редагування.}}
+\DoxyCodeLine{00063 \textcolor{comment}{     * @return ітератор моделі}}
+\DoxyCodeLine{00064 \textcolor{comment}{     */}}
+\DoxyCodeLine{00065     Models::iterator \&\mbox{\hyperlink{structContext_ad93eb2d9c753907a173f0c534eb534ad}{next\_active}}();}
+\DoxyCodeLine{00066 \textcolor{comment}{}}
+\DoxyCodeLine{00067 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00068 \textcolor{comment}{     * @brief Завантажує текстуру у пам'ять.}}
+\DoxyCodeLine{00069 \textcolor{comment}{     * @param[in] path шлях до файлу з текстурою}}
+\DoxyCodeLine{00070 \textcolor{comment}{     */}}
+\DoxyCodeLine{00071     \textcolor{keywordtype}{void} \mbox{\hyperlink{structContext_ae9498eceb6dd3257ac2e5e8fc904370c}{load\_texture}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *path);}
+\DoxyCodeLine{00072 \textcolor{comment}{}}
+\DoxyCodeLine{00073 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00074 \textcolor{comment}{     * @brief Завантажує та компілює шейдер.}}
+\DoxyCodeLine{00075 \textcolor{comment}{     * @param name назва шейдеру}}
+\DoxyCodeLine{00076 \textcolor{comment}{     * @param shaders массив до файлів шейдеру}}
+\DoxyCodeLine{00077 \textcolor{comment}{     * @return статус успішності завантаження та компіляції шейдеру}}
+\DoxyCodeLine{00078 \textcolor{comment}{     */}}
+\DoxyCodeLine{00079     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structContext_a6b8babb597ca6c92a2ce8f9b62626a27}{load\_shader}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name, \textcolor{keyword}{const} \mbox{\hyperlink{classShader_a37c1d8b706d1bc83800419d8776eeb23}{Shader::shader\_map}}\& \mbox{\hyperlink{structContext_ae6fcb1cace574a21fb21ccd678473d17}{shaders}});}
+\DoxyCodeLine{00080 \textcolor{comment}{}}
+\DoxyCodeLine{00081 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00082 \textcolor{comment}{     * @brief Завантажує модель з поверхнями Безье}}
+\DoxyCodeLine{00083 \textcolor{comment}{     * @param path шлях до файлу з моделлю}}
+\DoxyCodeLine{00084 \textcolor{comment}{     * @return статус успішності завантаження моделі}}
+\DoxyCodeLine{00085 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{context_8h_source_l00086}\mbox{\hyperlink{structContext_a56633326b4d4430a41803dcb34f97ec2}{00086}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structContext_a56633326b4d4430a41803dcb34f97ec2}{load\_model}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& path);}
+\DoxyCodeLine{00087 \};}
+\DoxyCodeLine{00088 }
+\DoxyCodeLine{00089 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// CONTEXT\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,429 @@
+\hypertarget{app_8cpp_source}{}\doxysubsection{app.\+cpp}
+\label{app_8cpp_source}\index{druidengine/app.cpp@{druidengine/app.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{app_8h}{app.h}}"{}}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{conf_8h}{conf.h}}"{}}}
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{shader_8h}{shader.h}}"{}}}
+\DoxyCodeLine{00004 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{beziatorpanel_8h}{beziatorpanel.h}}"{}}}
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#include <imgui.h>}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{buffer_8h}{buffer.h}}"{}}}
+\DoxyCodeLine{00007 \textcolor{preprocessor}{\#include "{}ImGuiFileDialog.h"{}}}
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{image_8h}{image.h}}"{}}}
+\DoxyCodeLine{00009 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{scene_8h}{scene.h}}"{}}}
+\DoxyCodeLine{00010 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{subwindow_8h}{subwindow.h}}"{}}}
+\DoxyCodeLine{00011 }
+\DoxyCodeLine{00012 \textcolor{preprocessor}{\#include <EASTL/algorithm.h>}}
+\DoxyCodeLine{00013 \textcolor{keyword}{using} eastl::max;}
+\DoxyCodeLine{00014 }
+\DoxyCodeLine{\Hypertarget{app_8cpp_source_l00015}\mbox{\hyperlink{classApp_a734e41fc893a74403a725cb1df3403dc}{00015}} \textcolor{keywordtype}{int} \mbox{\hyperlink{classApp_a734e41fc893a74403a725cb1df3403dc}{App::init}}() \{}
+\DoxyCodeLine{00016     this-\/>\mbox{\hyperlink{classApp_aa481132fcfaf7b94263b01656b445d12}{interactive\_mode}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{00017     \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{classApp_abf4802385f7f2460656ea82c2522b511}{window}}.\mbox{\hyperlink{classWindow_a9b8185b7661ce79e9b02b0c1fec94e93}{init}}())}
+\DoxyCodeLine{00018         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{00019     memset(this-\/>\mbox{\hyperlink{classApp_a3ae0a45fca199be672ed234afac60190}{trans}}, 0, \textcolor{keyword}{sizeof}(this-\/>\mbox{\hyperlink{classApp_a3ae0a45fca199be672ed234afac60190}{trans}}));}
+\DoxyCodeLine{00020 }
+\DoxyCodeLine{00021     this-\/>\mbox{\hyperlink{classApp_abf4802385f7f2460656ea82c2522b511}{window}}.\mbox{\hyperlink{classWindow_ad7b04e6a6caa522ed351d0725db3983b}{set\_user\_pointer}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00022     this-\/>\mbox{\hyperlink{classApp_abf4802385f7f2460656ea82c2522b511}{window}}.\mbox{\hyperlink{classWindow_aa045a4694443b28f22adc959b5182de7}{set\_scroll\_cb}}(\mbox{\hyperlink{classApp_a2a41e9de9a671887184fc4572286431c}{App::scroll}});}
+\DoxyCodeLine{00023     this-\/>\mbox{\hyperlink{classApp_abf4802385f7f2460656ea82c2522b511}{window}}.\mbox{\hyperlink{classWindow_a79d68098adb64801b168d992a1bf760f}{set\_mouse\_motion\_cb}}(\mbox{\hyperlink{classApp_aaddce08fc56135f09a674fb2a6088335}{App::mouse}});}
+\DoxyCodeLine{00024     this-\/>\mbox{\hyperlink{classApp_abf4802385f7f2460656ea82c2522b511}{window}}.\mbox{\hyperlink{classWindow_a5e4136232d0f0239f7e74a9db1466b44}{set\_char\_cb}}(\mbox{\hyperlink{classApp_a931e5f593b06d3aff27e5a96566f1d41}{App::char\_callback}});}
+\DoxyCodeLine{00025     this-\/>\mbox{\hyperlink{classApp_abf4802385f7f2460656ea82c2522b511}{window}}.\mbox{\hyperlink{classWindow_a58445ba372624ec8b17ec80d6c2ff64a}{set\_mouse\_button\_cb}}(\mbox{\hyperlink{classApp_a9a45736060031d4e064c531bf95702af}{App::mouse\_button\_callback}});}
+\DoxyCodeLine{00026     this-\/>\mbox{\hyperlink{classApp_abf4802385f7f2460656ea82c2522b511}{window}}.\mbox{\hyperlink{classWindow_a087e87ad86a9f8b8a3ffe2d1727fb2bc}{set\_key\_cb}}(\mbox{\hyperlink{classApp_a350119beab82886447687d7b2634f7ad}{App::key}});}
+\DoxyCodeLine{00027 }
+\DoxyCodeLine{00028     \textcolor{keyword}{auto} shader\_paths = \mbox{\hyperlink{classApp_ad22f4e601a3a6ab235d1d4ab81c07f98}{create\_shader\_paths}}(\textcolor{stringliteral}{"{}bezier"{}});}
+\DoxyCodeLine{00029     \textcolor{keyword}{auto} shader\_adv\_paths = \mbox{\hyperlink{classApp_a5fc51a0a78ceb038c9679d2af5d28834}{create\_adv\_shader\_paths}}(\textcolor{stringliteral}{"{}bezier"{}});}
+\DoxyCodeLine{00030     \textcolor{keywordflow}{if} (!this-\/>\mbox{\hyperlink{classApp_aa1619caa7bf1e312d237796feff40bdf}{context}}.\mbox{\hyperlink{structContext_a6b8babb597ca6c92a2ce8f9b62626a27}{load\_shader}}(\textcolor{stringliteral}{"{}main"{}}, shader\_paths) ||}
+\DoxyCodeLine{00031             !this-\/>context.load\_shader(\textcolor{stringliteral}{"{}main\_adv"{}}, shader\_adv\_paths)) \{}
+\DoxyCodeLine{00032         printf(\textcolor{stringliteral}{"{}Failed to compile shaders.\(\backslash\)n"{}});}
+\DoxyCodeLine{00033         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{00034     \}}
+\DoxyCodeLine{00035 }
+\DoxyCodeLine{00036     \{}
+\DoxyCodeLine{00037         \textcolor{keywordtype}{string} path = \mbox{\hyperlink{classApp_abd80502050c99609309e176eb5496ae7}{create\_model\_paths}}(\textcolor{stringliteral}{"{}car"{}});}
+\DoxyCodeLine{00038         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classApp_acda294904bf8e856f8707e3fad0be950}{load\_model}}(path)) \{}
+\DoxyCodeLine{00039             \textcolor{keyword}{auto}\& \textcolor{keywordtype}{object} = this-\/>\mbox{\hyperlink{classApp_aa1619caa7bf1e312d237796feff40bdf}{context}}.\mbox{\hyperlink{structContext_adf5341866d506e12dca716c71367fdcf}{models}}[path];}
+\DoxyCodeLine{00040             vec3 tr = \{-\/5, 5, 0\}, sc = \{4, 4, 4\};}
+\DoxyCodeLine{00041             \textcolor{keywordtype}{object}.translate\_object(tr);}
+\DoxyCodeLine{00042             \textcolor{keywordtype}{object}.scale(sc);}
+\DoxyCodeLine{00043             \textcolor{keywordtype}{object}.rotate\_object(\mbox{\hyperlink{conf_8h_ab9c3c609e1d02430671de0a109410ac8}{M\_PI\_F}} / 1.1f, \mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ffa58833a3110c570fb05130d40c365d1e4}{X}});}
+\DoxyCodeLine{00044         \}}
+\DoxyCodeLine{00045     \}}
+\DoxyCodeLine{00046     \mbox{\hyperlink{classApp_a284f6e8cff9c0fa03a0a1906d2d435f9}{scenes}}.emplace\_back(\mbox{\hyperlink{structScene_ac9d55f5bebb962cd4aedc86ec5bf3269}{Scene::create}}(\mbox{\hyperlink{classApp_aa1619caa7bf1e312d237796feff40bdf}{context}}.\mbox{\hyperlink{structContext_adf5341866d506e12dca716c71367fdcf}{models}}));}
+\DoxyCodeLine{00047     \mbox{\hyperlink{classApp_a389257925cb999235efb3129598a87df}{add\_subwindow}}(\mbox{\hyperlink{classApp_a284f6e8cff9c0fa03a0a1906d2d435f9}{scenes}}.back());}
+\DoxyCodeLine{00048 }
+\DoxyCodeLine{00049     this-\/>\mbox{\hyperlink{classApp_a4db7433ed8624e034e502a806c866938}{deimgui}}.\mbox{\hyperlink{classDeImgui_a1fac4c02b6787f23343f6d3bf795060b}{init}}(\&this-\/>\mbox{\hyperlink{classApp_abf4802385f7f2460656ea82c2522b511}{window}});}
+\DoxyCodeLine{00050 }
+\DoxyCodeLine{00051     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00052 \}}
+\DoxyCodeLine{00053 }
+\DoxyCodeLine{\Hypertarget{app_8cpp_source_l00054}\mbox{\hyperlink{classApp_abc276203f1e1403b35bb3d41739a37c4}{00054}} \textcolor{keywordtype}{int} \mbox{\hyperlink{classApp_abc276203f1e1403b35bb3d41739a37c4}{App::loop}}() \{}
+\DoxyCodeLine{00055     \textcolor{comment}{// render loop}}
+\DoxyCodeLine{00056     \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00057     \textcolor{keywordflow}{while}(this-\/>\mbox{\hyperlink{classApp_abf4802385f7f2460656ea82c2522b511}{window}}.\mbox{\hyperlink{classWindow_a282eee1c73fe157a5c4bc1c0999654ac}{alive}}()) \{}
+\DoxyCodeLine{00058         this-\/>\mbox{\hyperlink{classApp_abf4802385f7f2460656ea82c2522b511}{window}}.\mbox{\hyperlink{classWindow_afc092c266a1f943d498d37ee88da7d47}{pre\_loop}}();}
+\DoxyCodeLine{00059         this-\/>\mbox{\hyperlink{classApp_a4db7433ed8624e034e502a806c866938}{deimgui}}.\mbox{\hyperlink{classDeImgui_a85d0b29799dec3904a59e2282f49e3a3}{update}}();}
+\DoxyCodeLine{00060 }
+\DoxyCodeLine{00061         \textcolor{comment}{// render}}
+\DoxyCodeLine{00062         \textcolor{comment}{// -\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00063         glClearColor(1,1,1,1);}
+\DoxyCodeLine{00064         glClearDepth(1.0);}
+\DoxyCodeLine{00065         glClear(GL\_COLOR\_BUFFER\_BIT | GL\_DEPTH\_BUFFER\_BIT);}
+\DoxyCodeLine{00066 }
+\DoxyCodeLine{00067         \textcolor{comment}{// input}}
+\DoxyCodeLine{00068         \textcolor{comment}{// -\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00069         \mbox{\hyperlink{classApp_a2d0db695e3c389d834dc95420cf41711}{App::process\_input}}();}
+\DoxyCodeLine{00070 }
+\DoxyCodeLine{00071         \textcolor{keywordflow}{if} (ImGuiFileDialog::Instance()-\/>Display(\textcolor{stringliteral}{"{}ModelOpenDialog"{}})) \{}
+\DoxyCodeLine{00072             \textcolor{keywordflow}{if} (ImGuiFileDialog::Instance()-\/>IsOk()) \{}
+\DoxyCodeLine{00073                 \textcolor{keyword}{auto} s = ImGuiFileDialog::Instance()-\/>GetFilePathName();}
+\DoxyCodeLine{00074                 \textcolor{keywordtype}{string} res = s.c\_str();}
+\DoxyCodeLine{00075                 \mbox{\hyperlink{classApp_acda294904bf8e856f8707e3fad0be950}{load\_model}}(res);}
+\DoxyCodeLine{00076             \}}
+\DoxyCodeLine{00077             ImGuiFileDialog::Instance()-\/>Close();}
+\DoxyCodeLine{00078         \}}
+\DoxyCodeLine{00079 }
+\DoxyCodeLine{00080         \textcolor{keywordflow}{if} (ImGuiFileDialog::Instance()-\/>Display(\textcolor{stringliteral}{"{}TextureOpenDialog"{}})) \{}
+\DoxyCodeLine{00081             \textcolor{keywordflow}{if} (ImGuiFileDialog::Instance()-\/>IsOk()) \{}
+\DoxyCodeLine{00082                 \textcolor{keyword}{auto} res = ImGuiFileDialog::Instance()-\/>GetFilePathName();}
+\DoxyCodeLine{00083                 \mbox{\hyperlink{classApp_aa1619caa7bf1e312d237796feff40bdf}{context}}.\mbox{\hyperlink{structContext_ae9498eceb6dd3257ac2e5e8fc904370c}{load\_texture}}(res.c\_str());}
+\DoxyCodeLine{00084             \}}
+\DoxyCodeLine{00085             ImGuiFileDialog::Instance()-\/>Close();}
+\DoxyCodeLine{00086         \}}
+\DoxyCodeLine{00087 }
+\DoxyCodeLine{00088         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classApp_aa1619caa7bf1e312d237796feff40bdf}{context}}.\mbox{\hyperlink{structContext_a2495f12fa2a7e55cb4d6e7d514e58735}{active}} != \mbox{\hyperlink{classApp_aa1619caa7bf1e312d237796feff40bdf}{context}}.\mbox{\hyperlink{structContext_adf5341866d506e12dca716c71367fdcf}{models}}.end()) \{}
+\DoxyCodeLine{00089             \mbox{\hyperlink{classApp_aa1619caa7bf1e312d237796feff40bdf}{context}}.\mbox{\hyperlink{structContext_a2495f12fa2a7e55cb4d6e7d514e58735}{active}}-\/>second.get\_model()-\/>edit\_panel();}
+\DoxyCodeLine{00090         \}}
+\DoxyCodeLine{00091 }
+\DoxyCodeLine{00092         ImGui::SetNextWindowPos(ImVec2\{4, 4\}, ImGuiCond\_FirstUseEver, ImVec2\{0,0\});}
+\DoxyCodeLine{00093         ImGui::SetNextWindowSize(ImVec2\{300, 512\}, ImGuiCond\_FirstUseEver);}
+\DoxyCodeLine{00094 }
+\DoxyCodeLine{00095         \textcolor{keywordflow}{if} (ImGui::Begin(\textcolor{stringliteral}{"{}Textures"{}})) \{}
+\DoxyCodeLine{00096             \textcolor{keywordflow}{if} (ImGui::Button(\textcolor{stringliteral}{"{}Open texture"{}})) \{}
+\DoxyCodeLine{00097                 ImGuiFileDialog::Instance()-\/>OpenDialog(}
+\DoxyCodeLine{00098                             \textcolor{stringliteral}{"{}TextureOpenDialog"{}}, \textcolor{stringliteral}{"{}Open a texture"{}},}
+\DoxyCodeLine{00099                             \textcolor{stringliteral}{"{}.png,.jpg,.jpeg,.bmp,.tga,.*"{}}, \textcolor{stringliteral}{"{}."{}});}
+\DoxyCodeLine{00100             \}}
+\DoxyCodeLine{00101             \textcolor{keyword}{auto} flags = ImGuiTableFlags\_SizingStretchProp;}
+\DoxyCodeLine{00102             \textcolor{keywordflow}{if} (ImGui::BeginTable(\textcolor{stringliteral}{"{}textures\_table"{}}, 2, flags)) \{}
+\DoxyCodeLine{00103                 ImGui::TableSetupColumn(\textcolor{stringliteral}{"{}Texture name"{}}, ImGuiTableColumnFlags\_WidthStretch);}
+\DoxyCodeLine{00104                 ImGui::TableSetupColumn(\textcolor{stringliteral}{"{}Texture action"{}}, ImGuiTableColumnFlags\_WidthFixed, -\/1);}
+\DoxyCodeLine{00105                 ImGui::TableNextRow();}
+\DoxyCodeLine{00106                 ImGui::TableNextColumn();}
+\DoxyCodeLine{00107                 \textcolor{keyword}{auto} \&textures = \mbox{\hyperlink{classApp_aa1619caa7bf1e312d237796feff40bdf}{context}}.\mbox{\hyperlink{structContext_acc023c5c78fc019ae50fac056ddf7226}{textures}};}
+\DoxyCodeLine{00108                 \textcolor{keywordflow}{if} (ImGui::Selectable(\textcolor{stringliteral}{"{}None"{}}, \mbox{\hyperlink{classApp_aa1619caa7bf1e312d237796feff40bdf}{context}}.\mbox{\hyperlink{structContext_af6e358ab9890652b7c0accf7fcd1fc85}{active\_texture}} == textures.end()))}
+\DoxyCodeLine{00109                     \mbox{\hyperlink{classApp_aa1619caa7bf1e312d237796feff40bdf}{context}}.\mbox{\hyperlink{structContext_af6e358ab9890652b7c0accf7fcd1fc85}{active\_texture}} = textures.end();}
+\DoxyCodeLine{00110                 ImGui::TableNextColumn();}
+\DoxyCodeLine{00111                 \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} it = textures.begin(), end = textures.end(); it != end;) \{}
+\DoxyCodeLine{00112                     ImGui::PushID(\&*it);}
+\DoxyCodeLine{00113                     \textcolor{keywordtype}{char} buf[256];}
+\DoxyCodeLine{00114                     snprintf(buf, 256, \textcolor{stringliteral}{"{}Texture: \(\backslash\)"{}\%s\(\backslash\)"{}"{}}, it-\/>first.c\_str());}
+\DoxyCodeLine{00115                     ImGui::TableNextRow();}
+\DoxyCodeLine{00116                     ImGui::TableNextColumn();}
+\DoxyCodeLine{00117                     \textcolor{keywordflow}{if} (ImGui::Selectable(buf, \mbox{\hyperlink{classApp_aa1619caa7bf1e312d237796feff40bdf}{context}}.\mbox{\hyperlink{structContext_af6e358ab9890652b7c0accf7fcd1fc85}{active\_texture}} == it))}
+\DoxyCodeLine{00118                        \mbox{\hyperlink{classApp_aa1619caa7bf1e312d237796feff40bdf}{context}}.\mbox{\hyperlink{structContext_af6e358ab9890652b7c0accf7fcd1fc85}{active\_texture}} = it;}
+\DoxyCodeLine{00119                     ImGui::TableNextColumn();}
+\DoxyCodeLine{00120                     \textcolor{keywordtype}{bool} erase = ImGui::SmallButton(\textcolor{stringliteral}{"{}-\/"{}});}
+\DoxyCodeLine{00121                     \textcolor{keywordflow}{if} (erase) \{}
+\DoxyCodeLine{00122                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classApp_aa1619caa7bf1e312d237796feff40bdf}{context}}.\mbox{\hyperlink{structContext_af6e358ab9890652b7c0accf7fcd1fc85}{active\_texture}} == it)}
+\DoxyCodeLine{00123                             \mbox{\hyperlink{classApp_aa1619caa7bf1e312d237796feff40bdf}{context}}.\mbox{\hyperlink{structContext_af6e358ab9890652b7c0accf7fcd1fc85}{active\_texture}} = textures.end();}
+\DoxyCodeLine{00124                         it = textures.erase(it);}
+\DoxyCodeLine{00125                     \}  \textcolor{keywordflow}{else} ++it;}
+\DoxyCodeLine{00126                     ImGui::PopID();}
+\DoxyCodeLine{00127                 \}}
+\DoxyCodeLine{00128                 ImGui::EndTable();}
+\DoxyCodeLine{00129             \}}
+\DoxyCodeLine{00130         \}}
+\DoxyCodeLine{00131         ImGui::End();}
+\DoxyCodeLine{00132 }
+\DoxyCodeLine{00133         \textcolor{keywordflow}{if} (ImGui::Begin(\textcolor{stringliteral}{"{}Models"{}})) \{}
+\DoxyCodeLine{00134             \textcolor{keywordflow}{if} (ImGui::Button(\textcolor{stringliteral}{"{}Next"{}}))}
+\DoxyCodeLine{00135                 \mbox{\hyperlink{classApp_aa1619caa7bf1e312d237796feff40bdf}{context}}.\mbox{\hyperlink{structContext_ad93eb2d9c753907a173f0c534eb534ad}{next\_active}}();}
+\DoxyCodeLine{00136             ImGui::SameLine();}
+\DoxyCodeLine{00137             \textcolor{keywordflow}{if} (ImGui::Button(\textcolor{stringliteral}{"{}Add cube"{}})) \{}
+\DoxyCodeLine{00138                 \textcolor{keyword}{auto} cube\_model = make\_shared<Mesh>();}
+\DoxyCodeLine{00139                 cube\_model-\/>cube\_update();}
+\DoxyCodeLine{00140                 this-\/>\mbox{\hyperlink{classApp_aa1619caa7bf1e312d237796feff40bdf}{context}}.\mbox{\hyperlink{structContext_adf5341866d506e12dca716c71367fdcf}{models}}[\textcolor{stringliteral}{"{}cube"{}}] = \mbox{\hyperlink{classObject}{Object}}(cube\_model);}
+\DoxyCodeLine{00141             \}}
+\DoxyCodeLine{00142             \textcolor{keyword}{auto}\& models = \mbox{\hyperlink{classApp_aa1619caa7bf1e312d237796feff40bdf}{context}}.\mbox{\hyperlink{structContext_adf5341866d506e12dca716c71367fdcf}{models}};}
+\DoxyCodeLine{00143             \textcolor{keyword}{auto} flags = ImGuiTableFlags\_SizingStretchProp;}
+\DoxyCodeLine{00144             \textcolor{keywordflow}{if} (ImGui::BeginTable(\textcolor{stringliteral}{"{}models\_table"{}}, 2, flags)) \{}
+\DoxyCodeLine{00145                 ImGui::TableSetupColumn(\textcolor{stringliteral}{"{}Model name"{}}, ImGuiTableColumnFlags\_WidthStretch);}
+\DoxyCodeLine{00146                 ImGui::TableSetupColumn(\textcolor{stringliteral}{"{}Model action"{}}, ImGuiTableColumnFlags\_WidthFixed, -\/1);}
+\DoxyCodeLine{00147                 ImGui::TableNextRow();}
+\DoxyCodeLine{00148                 ImGui::TableNextColumn();}
+\DoxyCodeLine{00149                 \textcolor{keywordflow}{if} (ImGui::Selectable(\textcolor{stringliteral}{"{}None"{}}, \mbox{\hyperlink{classApp_aa1619caa7bf1e312d237796feff40bdf}{context}}.\mbox{\hyperlink{structContext_a2495f12fa2a7e55cb4d6e7d514e58735}{active}} == models.end()))}
+\DoxyCodeLine{00150                     \mbox{\hyperlink{classApp_aa1619caa7bf1e312d237796feff40bdf}{context}}.\mbox{\hyperlink{structContext_a2495f12fa2a7e55cb4d6e7d514e58735}{active}} = \mbox{\hyperlink{classApp_aa1619caa7bf1e312d237796feff40bdf}{context}}.\mbox{\hyperlink{structContext_adf5341866d506e12dca716c71367fdcf}{models}}.end();}
+\DoxyCodeLine{00151                 ImGui::TableNextColumn();}
+\DoxyCodeLine{00152                 \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} it = models.begin(), end = models.end(); it != end;) \{}
+\DoxyCodeLine{00153                     ImGui::PushID(\&*it);}
+\DoxyCodeLine{00154                     \textcolor{keywordtype}{char} buf[256];}
+\DoxyCodeLine{00155                     snprintf(buf, 256, \textcolor{stringliteral}{"{}Model: \(\backslash\)"{}\%s\(\backslash\)"{}"{}}, it-\/>first.c\_str());}
+\DoxyCodeLine{00156                     ImGui::TableNextRow();}
+\DoxyCodeLine{00157                     ImGui::TableNextColumn();}
+\DoxyCodeLine{00158                     \textcolor{keywordflow}{if} (ImGui::Selectable(buf, \mbox{\hyperlink{classApp_aa1619caa7bf1e312d237796feff40bdf}{context}}.\mbox{\hyperlink{structContext_a2495f12fa2a7e55cb4d6e7d514e58735}{active}} == it))}
+\DoxyCodeLine{00159                        \mbox{\hyperlink{classApp_aa1619caa7bf1e312d237796feff40bdf}{context}}.\mbox{\hyperlink{structContext_a2495f12fa2a7e55cb4d6e7d514e58735}{active}} = it;}
+\DoxyCodeLine{00160                     ImGui::TableNextColumn();}
+\DoxyCodeLine{00161                     \textcolor{keywordtype}{bool} erase = ImGui::SmallButton(\textcolor{stringliteral}{"{}-\/"{}});}
+\DoxyCodeLine{00162                     ImGui::SameLine();}
+\DoxyCodeLine{00163                     \textcolor{keywordflow}{if} (ImGui::SmallButton(\textcolor{stringliteral}{"{}+"{}})) \{}
+\DoxyCodeLine{00164                         \textcolor{keyword}{auto} s = \mbox{\hyperlink{structScene_ac9d55f5bebb962cd4aedc86ec5bf3269}{Scene::create}}(}
+\DoxyCodeLine{00165                                     \mbox{\hyperlink{structContext_a0fb5343f40542412aa4089d22627f232}{Context::Models}} \{\{it-\/>first, it-\/>second\}\});}
+\DoxyCodeLine{00166                         \mbox{\hyperlink{classApp_a284f6e8cff9c0fa03a0a1906d2d435f9}{scenes}}.emplace\_back(s);}
+\DoxyCodeLine{00167                         \mbox{\hyperlink{classApp_a389257925cb999235efb3129598a87df}{add\_subwindow}}(\mbox{\hyperlink{classApp_a284f6e8cff9c0fa03a0a1906d2d435f9}{scenes}}.back());}
+\DoxyCodeLine{00168                     \}}
+\DoxyCodeLine{00169                     \textcolor{keywordflow}{if} (erase)}
+\DoxyCodeLine{00170                        it = models.erase(it);}
+\DoxyCodeLine{00171                     \textcolor{keywordflow}{else} ++it;}
+\DoxyCodeLine{00172                     ImGui::PopID();}
+\DoxyCodeLine{00173                 \}}
+\DoxyCodeLine{00174                 ImGui::EndTable();}
+\DoxyCodeLine{00175             \}}
+\DoxyCodeLine{00176         \}}
+\DoxyCodeLine{00177         ImGui::End();}
+\DoxyCodeLine{00178         \textcolor{keywordflow}{if} (ImGui::Begin(\textcolor{stringliteral}{"{}Scenes"{}})) \{}
+\DoxyCodeLine{00179             \textcolor{keyword}{auto} flags = ImGuiTableFlags\_SizingStretchProp;}
+\DoxyCodeLine{00180             \textcolor{keywordflow}{if} (ImGui::BeginTable(\textcolor{stringliteral}{"{}scenes\_table"{}}, 2, flags)) \{}
+\DoxyCodeLine{00181                 ImGui::TableSetupColumn(\textcolor{stringliteral}{"{}Scene name"{}}, ImGuiTableColumnFlags\_WidthStretch);}
+\DoxyCodeLine{00182                 ImGui::TableSetupColumn(\textcolor{stringliteral}{"{}Scene action"{}}, ImGuiTableColumnFlags\_WidthFixed, -\/1);}
+\DoxyCodeLine{00183                 \textcolor{keywordtype}{int} i = 0, j;}
+\DoxyCodeLine{00184                 \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} it = \mbox{\hyperlink{classApp_a284f6e8cff9c0fa03a0a1906d2d435f9}{scenes}}.begin(), end = \mbox{\hyperlink{classApp_a284f6e8cff9c0fa03a0a1906d2d435f9}{scenes}}.end(); it != end;) \{}
+\DoxyCodeLine{00185                     ImGui::PushID(\&*it);}
+\DoxyCodeLine{00186                     \textcolor{keywordtype}{char} buf[256];}
+\DoxyCodeLine{00187                     snprintf(buf, 256, \textcolor{stringliteral}{"{}Scene \%i"{}}, i++);}
+\DoxyCodeLine{00188                     ImGui::TableNextRow();}
+\DoxyCodeLine{00189                     ImGui::TableNextColumn();}
+\DoxyCodeLine{00190                     \textcolor{keywordflow}{if} (ImGui::TreeNode(buf)) \{}
+\DoxyCodeLine{00191                         j = 0;}
+\DoxyCodeLine{00192                         \textcolor{keyword}{auto}\& objects = (*it)-\/>objects;}
+\DoxyCodeLine{00193                         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} i = objects.begin(), endi = objects.end(); i != endi;) \{}
+\DoxyCodeLine{00194                             ImGui::PushID(\&*i);}
+\DoxyCodeLine{00195                             \mbox{\hyperlink{classObject}{Object}} \&obj = i-\/>second;}
+\DoxyCodeLine{00196                             snprintf(buf, 256, \textcolor{stringliteral}{"{}Object: \(\backslash\)"{}\%s\(\backslash\)"{}"{}}, i-\/>first.c\_str());}
+\DoxyCodeLine{00197                             \textcolor{keywordtype}{bool} erase = \textcolor{keyword}{false};}
+\DoxyCodeLine{00198                             \textcolor{keywordflow}{if} (ImGui::TreeNode(buf)) \{}
+\DoxyCodeLine{00199                                 erase = ImGui::SmallButton(\textcolor{stringliteral}{"{}-\/"{}});}
+\DoxyCodeLine{00200                                 \mbox{\hyperlink{classApp_a82b7712b81ea2e3172efb59cd285da7c}{object\_edit}}(obj);}
+\DoxyCodeLine{00201                                 ImGui::TreePop();}
+\DoxyCodeLine{00202                             \}}
+\DoxyCodeLine{00203                             \textcolor{keywordflow}{if} (erase)}
+\DoxyCodeLine{00204                                 i = objects.erase(i);}
+\DoxyCodeLine{00205                             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00206                                 ++i;}
+\DoxyCodeLine{00207                             ImGui::PopID();}
+\DoxyCodeLine{00208                         \}}
+\DoxyCodeLine{00209                         ImGui::TreePop();}
+\DoxyCodeLine{00210                     \}}
+\DoxyCodeLine{00211                     ImGui::TableNextColumn();}
+\DoxyCodeLine{00212                     \textcolor{keywordtype}{bool} erase = ImGui::SmallButton(\textcolor{stringliteral}{"{}-\/"{}});}
+\DoxyCodeLine{00213                     ImGui::SameLine();}
+\DoxyCodeLine{00214                     \textcolor{keywordflow}{if} (ImGui::SmallButton(\textcolor{stringliteral}{"{}+"{}})) \{}
+\DoxyCodeLine{00215                         \mbox{\hyperlink{classApp_a389257925cb999235efb3129598a87df}{add\_subwindow}}(*it);}
+\DoxyCodeLine{00216                     \}}
+\DoxyCodeLine{00217                     \textcolor{keywordflow}{if} (erase)}
+\DoxyCodeLine{00218                         it = \mbox{\hyperlink{classApp_a87c2fa6a1bb79dc2f59ed7bc15400a15}{close\_scene}}(it);}
+\DoxyCodeLine{00219                     \textcolor{keywordflow}{else} ++it;}
+\DoxyCodeLine{00220                     ImGui::PopID();}
+\DoxyCodeLine{00221                 \}}
+\DoxyCodeLine{00222                 ImGui::EndTable();}
+\DoxyCodeLine{00223             \}}
+\DoxyCodeLine{00224         \}}
+\DoxyCodeLine{00225         ImGui::End();}
+\DoxyCodeLine{00226 }
+\DoxyCodeLine{00227         \textcolor{keywordtype}{size\_t} \textcolor{keywordtype}{id} = 0;}
+\DoxyCodeLine{00228 }
+\DoxyCodeLine{00229         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} i = \mbox{\hyperlink{classApp_a7502165713243e73c8773825e039f063}{subwindows}}.begin(), end = \mbox{\hyperlink{classApp_a7502165713243e73c8773825e039f063}{subwindows}}.end(); i != end;) \{}
+\DoxyCodeLine{00230             \textcolor{keywordtype}{id}++;}
+\DoxyCodeLine{00231             \textcolor{keywordflow}{if} (!(*i)-\/>loop(\textcolor{keywordtype}{id}, \mbox{\hyperlink{classApp_abf4802385f7f2460656ea82c2522b511}{window}}.\mbox{\hyperlink{classWindow_abebd53575e0294950631146b64188012}{get\_delta\_time}}()))}
+\DoxyCodeLine{00232                 i = \mbox{\hyperlink{classApp_a7502165713243e73c8773825e039f063}{subwindows}}.erase(i);}
+\DoxyCodeLine{00233             \textcolor{keywordflow}{else} i++;}
+\DoxyCodeLine{00234         \}}
+\DoxyCodeLine{00235 }
+\DoxyCodeLine{00236         this-\/>\mbox{\hyperlink{classApp_a4db7433ed8624e034e502a806c866938}{deimgui}}.\mbox{\hyperlink{classDeImgui_a3650b15446ef07b693ba050642a8f0e6}{render}}();}
+\DoxyCodeLine{00237         this-\/>\mbox{\hyperlink{classApp_abf4802385f7f2460656ea82c2522b511}{window}}.\mbox{\hyperlink{classWindow_a6e155310c3b36f40c586cc7a5c1000e8}{post\_loop}}();}
+\DoxyCodeLine{00238     \}}
+\DoxyCodeLine{00239     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00240 \}}
+\DoxyCodeLine{00241 }
+\DoxyCodeLine{\Hypertarget{app_8cpp_source_l00242}\mbox{\hyperlink{app_8cpp_a4095f1f91eb1ec5c63d581a94823a967}{00242}} \textcolor{keywordtype}{string} \mbox{\hyperlink{app_8cpp_a4095f1f91eb1ec5c63d581a94823a967}{get\_path\_from\_name}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *pattern) \{}
+\DoxyCodeLine{00243     \textcolor{keywordtype}{string} s;}
+\DoxyCodeLine{00244     s.resize(strlen(name) + strlen(pattern));}
+\DoxyCodeLine{00245     snprintf(\&s[0], s.size(), pattern, name);}
+\DoxyCodeLine{00246     \textcolor{keywordflow}{return} s;}
+\DoxyCodeLine{00247 \}}
+\DoxyCodeLine{00248 }
+\DoxyCodeLine{\Hypertarget{app_8cpp_source_l00249}\mbox{\hyperlink{classApp_ad22f4e601a3a6ab235d1d4ab81c07f98}{00249}} \mbox{\hyperlink{classShader_a37c1d8b706d1bc83800419d8776eeb23}{Shader::shader\_map}} \mbox{\hyperlink{classApp_ad22f4e601a3a6ab235d1d4ab81c07f98}{App::create\_shader\_paths}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name) \{}
+\DoxyCodeLine{00250     \textcolor{keywordflow}{return} \{}
+\DoxyCodeLine{00251         \{\mbox{\hyperlink{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46a5ba20b6e8c97b8dbd2b240a0a6c62036}{VERT\_SHADER}}, \mbox{\hyperlink{app_8cpp_a4095f1f91eb1ec5c63d581a94823a967}{get\_path\_from\_name}}(name, \mbox{\hyperlink{conf_8h_aca6c962ce78e3e65d1380575565492c8}{VERTEX\_PATH}})\},}
+\DoxyCodeLine{00252         \{\mbox{\hyperlink{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46a099050644e08e3ab6619bb1fb8c8164e}{FRAG\_SHADER}}, \mbox{\hyperlink{app_8cpp_a4095f1f91eb1ec5c63d581a94823a967}{get\_path\_from\_name}}(name, \mbox{\hyperlink{conf_8h_a40cefafac4a15acca8875dcdf07c9f8e}{FRAGMENT\_PATH}})\},}
+\DoxyCodeLine{00253     \};}
+\DoxyCodeLine{00254 \}}
+\DoxyCodeLine{00255 }
+\DoxyCodeLine{\Hypertarget{app_8cpp_source_l00256}\mbox{\hyperlink{classApp_a5fc51a0a78ceb038c9679d2af5d28834}{00256}} \mbox{\hyperlink{classShader_a37c1d8b706d1bc83800419d8776eeb23}{Shader::shader\_map}} \mbox{\hyperlink{classApp_a5fc51a0a78ceb038c9679d2af5d28834}{App::create\_adv\_shader\_paths}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name) \{}
+\DoxyCodeLine{00257     \textcolor{keywordflow}{return} \{}
+\DoxyCodeLine{00258         \{\mbox{\hyperlink{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46a5ba20b6e8c97b8dbd2b240a0a6c62036}{VERT\_SHADER}}, \mbox{\hyperlink{app_8cpp_a4095f1f91eb1ec5c63d581a94823a967}{get\_path\_from\_name}}(name, \mbox{\hyperlink{conf_8h_aca6c962ce78e3e65d1380575565492c8}{VERTEX\_PATH}})\},}
+\DoxyCodeLine{00259         \{\mbox{\hyperlink{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46acbfaee266881f615c5ef456a906f51bf}{TESC\_SHADER}}, \mbox{\hyperlink{app_8cpp_a4095f1f91eb1ec5c63d581a94823a967}{get\_path\_from\_name}}(name, \mbox{\hyperlink{conf_8h_ab6f0ec5d8551ddbce25d6448a3cac812}{TESC\_PATH}})\},}
+\DoxyCodeLine{00260         \{\mbox{\hyperlink{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46a40f4e8253f67098f84518f2c9c7a94e8}{TESE\_SHADER}}, \mbox{\hyperlink{app_8cpp_a4095f1f91eb1ec5c63d581a94823a967}{get\_path\_from\_name}}(name, \mbox{\hyperlink{conf_8h_a53b04c9d7d0c9171478c06f525098864}{TESE\_PATH}})\},}
+\DoxyCodeLine{00261         \{\mbox{\hyperlink{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46a099050644e08e3ab6619bb1fb8c8164e}{FRAG\_SHADER}}, \mbox{\hyperlink{app_8cpp_a4095f1f91eb1ec5c63d581a94823a967}{get\_path\_from\_name}}(name, \mbox{\hyperlink{conf_8h_a40cefafac4a15acca8875dcdf07c9f8e}{FRAGMENT\_PATH}})\},}
+\DoxyCodeLine{00262     \};}
+\DoxyCodeLine{00263 \}}
+\DoxyCodeLine{00264 }
+\DoxyCodeLine{\Hypertarget{app_8cpp_source_l00265}\mbox{\hyperlink{classApp_abd80502050c99609309e176eb5496ae7}{00265}} \textcolor{keywordtype}{string} \mbox{\hyperlink{classApp_abd80502050c99609309e176eb5496ae7}{App::create\_model\_paths}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name)}
+\DoxyCodeLine{00266 \{}
+\DoxyCodeLine{00267     \textcolor{keywordflow}{return} \mbox{\hyperlink{app_8cpp_a4095f1f91eb1ec5c63d581a94823a967}{get\_path\_from\_name}}(name, \mbox{\hyperlink{conf_8h_a3caf02891d20571ad2bc81ce139ed549}{BEZIATOR\_PATH}});}
+\DoxyCodeLine{00268 \}}
+\DoxyCodeLine{00269 }
+\DoxyCodeLine{\Hypertarget{app_8cpp_source_l00270}\mbox{\hyperlink{classApp_acda294904bf8e856f8707e3fad0be950}{00270}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classApp_acda294904bf8e856f8707e3fad0be950}{App::load\_model}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} \&path) \{}
+\DoxyCodeLine{00271     \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{classApp_aa1619caa7bf1e312d237796feff40bdf}{context}}.\mbox{\hyperlink{structContext_adf5341866d506e12dca716c71367fdcf}{models}}.find(path) != this-\/>context.models.end())}
+\DoxyCodeLine{00272         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00273 }
+\DoxyCodeLine{00274     \textcolor{keyword}{auto} beziator = make\_shared<BeziatorPanel>(path);}
+\DoxyCodeLine{00275 }
+\DoxyCodeLine{00276     \textcolor{keywordflow}{if} (!beziator || !beziator-\/>init())}
+\DoxyCodeLine{00277         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00278 }
+\DoxyCodeLine{00279     beziator-\/>generate();}
+\DoxyCodeLine{00280 }
+\DoxyCodeLine{00281     \mbox{\hyperlink{classObject}{Object}} object(beziator);}
+\DoxyCodeLine{00282     this-\/>\mbox{\hyperlink{classApp_aa1619caa7bf1e312d237796feff40bdf}{context}}.\mbox{\hyperlink{structContext_adf5341866d506e12dca716c71367fdcf}{models}}[path] = object;}
+\DoxyCodeLine{00283     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00284 \}}
+\DoxyCodeLine{00285 }
+\DoxyCodeLine{\Hypertarget{app_8cpp_source_l00286}\mbox{\hyperlink{classApp_a389257925cb999235efb3129598a87df}{00286}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classApp_a389257925cb999235efb3129598a87df}{App::add\_subwindow}}(\mbox{\hyperlink{classeastl_1_1shared__ptr}{shared\_ptr<Scene>}}\& scene) \{}
+\DoxyCodeLine{00287     \textcolor{keyword}{auto} win = make\_shared<SubWindow>(\mbox{\hyperlink{classApp_abf4802385f7f2460656ea82c2522b511}{window}}, \mbox{\hyperlink{classApp_aa1619caa7bf1e312d237796feff40bdf}{context}}, scene);}
+\DoxyCodeLine{00288     \mbox{\hyperlink{classApp_a7502165713243e73c8773825e039f063}{subwindows}}.emplace\_back(win);}
+\DoxyCodeLine{00289     \mbox{\hyperlink{classApp_afc8f7aba8daa634c0d20dbb9dab5364f}{winmap}}[scene].emplace(make\_pair(\&\mbox{\hyperlink{classApp_a7502165713243e73c8773825e039f063}{subwindows}}.back(), -\/-\/\mbox{\hyperlink{classApp_a7502165713243e73c8773825e039f063}{subwindows}}.end()));}
+\DoxyCodeLine{00290 \}}
+\DoxyCodeLine{00291 }
+\DoxyCodeLine{\Hypertarget{app_8cpp_source_l00292}\mbox{\hyperlink{classApp_a12ea246a72eab2f8bc2c849855e25c9a}{00292}} \mbox{\hyperlink{classApp_ae794f9b64a3178583adb15964dd0f3d3}{App::SubWinIter}} \mbox{\hyperlink{classApp_a12ea246a72eab2f8bc2c849855e25c9a}{App::remove\_subwindow}}(\mbox{\hyperlink{classApp_ae794f9b64a3178583adb15964dd0f3d3}{SubWinIter}} it) \{}
+\DoxyCodeLine{00293     \mbox{\hyperlink{classApp_afc8f7aba8daa634c0d20dbb9dab5364f}{winmap}}[(*it)-\/>get\_scene()].erase(\&*it);}
+\DoxyCodeLine{00294     \textcolor{keywordflow}{return} \mbox{\hyperlink{classApp_a7502165713243e73c8773825e039f063}{subwindows}}.erase(it);}
+\DoxyCodeLine{00295 \}}
+\DoxyCodeLine{00296 }
+\DoxyCodeLine{00297 list<shared\_ptr<Scene>>::iterator}
+\DoxyCodeLine{\Hypertarget{app_8cpp_source_l00298}\mbox{\hyperlink{classApp_a87c2fa6a1bb79dc2f59ed7bc15400a15}{00298}} \mbox{\hyperlink{classApp_a87c2fa6a1bb79dc2f59ed7bc15400a15}{App::close\_scene}}(list<\mbox{\hyperlink{classeastl_1_1shared__ptr}{shared\_ptr<Scene>}}>::iterator it) \{}
+\DoxyCodeLine{00299     \textcolor{keyword}{auto} wins = \mbox{\hyperlink{classApp_afc8f7aba8daa634c0d20dbb9dab5364f}{winmap}}[*it];}
+\DoxyCodeLine{00300     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& i : wins) \{}
+\DoxyCodeLine{00301         \mbox{\hyperlink{classApp_a12ea246a72eab2f8bc2c849855e25c9a}{remove\_subwindow}}(i.second);}
+\DoxyCodeLine{00302     \}}
+\DoxyCodeLine{00303     \textcolor{keywordflow}{return} \mbox{\hyperlink{classApp_a284f6e8cff9c0fa03a0a1906d2d435f9}{scenes}}.erase(it);}
+\DoxyCodeLine{00304 \}}
+\DoxyCodeLine{00305 }
+\DoxyCodeLine{\Hypertarget{app_8cpp_source_l00306}\mbox{\hyperlink{classApp_a82b7712b81ea2e3172efb59cd285da7c}{00306}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classApp_a82b7712b81ea2e3172efb59cd285da7c}{App::object\_edit}}(\mbox{\hyperlink{classObject}{Object}} \&\textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{00307     vec4 vector;}
+\DoxyCodeLine{00308 }
+\DoxyCodeLine{00309     \textcolor{keywordtype}{object}.get\_position(vector);}
+\DoxyCodeLine{00310     \textcolor{keywordflow}{if} (ImGui::DragFloat3(\textcolor{stringliteral}{"{}Potision"{}}, vector, 0.1f, 0, 0)) \{}
+\DoxyCodeLine{00311         \textcolor{keywordtype}{object}.set\_position(vector);}
+\DoxyCodeLine{00312     \}}
+\DoxyCodeLine{00313 }
+\DoxyCodeLine{00314     \textcolor{keywordtype}{object}.get\_rotation(vector);}
+\DoxyCodeLine{00315     \textcolor{keywordflow}{if} (ImGui::DragFloat3(\textcolor{stringliteral}{"{}Rotation"{}}, vector, 0.01f, 0, 0)) \{}
+\DoxyCodeLine{00316         \textcolor{keywordtype}{object}.set\_rotation(vector);}
+\DoxyCodeLine{00317     \}}
+\DoxyCodeLine{00318 }
+\DoxyCodeLine{00319     \textcolor{keywordtype}{object}.get\_animation(vector);}
+\DoxyCodeLine{00320     \textcolor{keywordflow}{if} (ImGui::DragFloat3(\textcolor{stringliteral}{"{}Animation"{}}, vector, 0.01f, 0, 0)) \{}
+\DoxyCodeLine{00321         \textcolor{keywordtype}{object}.set\_animation(vector);}
+\DoxyCodeLine{00322     \}}
+\DoxyCodeLine{00323 \}}
+\DoxyCodeLine{00324 }
+\DoxyCodeLine{\Hypertarget{app_8cpp_source_l00325}\mbox{\hyperlink{classApp_a2a41e9de9a671887184fc4572286431c}{00325}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classApp_a2a41e9de9a671887184fc4572286431c}{App::scroll}}(\mbox{\hyperlink{osdo_8h_addf5ec070e9499d36b7f2009ce736076}{UNUSED}} \mbox{\hyperlink{classWindow}{Window}}* window, \mbox{\hyperlink{osdo_8h_addf5ec070e9499d36b7f2009ce736076}{UNUSED}} GLdouble xoffset,}
+\DoxyCodeLine{00326                  \mbox{\hyperlink{osdo_8h_addf5ec070e9499d36b7f2009ce736076}{UNUSED}} GLdouble yoffset) \{\}}
+\DoxyCodeLine{00327 }
+\DoxyCodeLine{\Hypertarget{app_8cpp_source_l00328}\mbox{\hyperlink{classApp_aaddce08fc56135f09a674fb2a6088335}{00328}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classApp_aaddce08fc56135f09a674fb2a6088335}{App::mouse}}(\mbox{\hyperlink{classWindow}{Window}}* window, \mbox{\hyperlink{osdo_8h_addf5ec070e9499d36b7f2009ce736076}{UNUSED}} vec2 pos, vec2 offset) \{}
+\DoxyCodeLine{00329     \mbox{\hyperlink{classApp}{App}} *app = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{classApp}{App}}*\textcolor{keyword}{>}(\mbox{\hyperlink{classApp_abf4802385f7f2460656ea82c2522b511}{window}}-\/>\mbox{\hyperlink{classWindow_a22c6ec1d375e4e11ee6550faddfc15de}{get\_user\_pointer}}());}
+\DoxyCodeLine{00330 }
+\DoxyCodeLine{00331     \textcolor{keywordflow}{if} (app-\/>\mbox{\hyperlink{classApp_aa481132fcfaf7b94263b01656b445d12}{interactive\_mode}}) \{}
+\DoxyCodeLine{00332         vec2 offset\_sens = GLM\_VEC2\_ZERO\_INIT;}
+\DoxyCodeLine{00333         glm\_vec2\_muladds(offset, -\/SENSITIVITY, offset\_sens);}
+\DoxyCodeLine{00334         \textcolor{comment}{//offset\_sens[0] *= -\/1;}}
+\DoxyCodeLine{00335 }
+\DoxyCodeLine{00338     \}}
+\DoxyCodeLine{00339 \}}
+\DoxyCodeLine{00340 }
+\DoxyCodeLine{\Hypertarget{app_8cpp_source_l00341}\mbox{\hyperlink{classApp_a931e5f593b06d3aff27e5a96566f1d41}{00341}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classApp_a931e5f593b06d3aff27e5a96566f1d41}{App::char\_callback}}(\mbox{\hyperlink{osdo_8h_addf5ec070e9499d36b7f2009ce736076}{UNUSED}} \mbox{\hyperlink{classWindow}{Window}}* window, \mbox{\hyperlink{osdo_8h_addf5ec070e9499d36b7f2009ce736076}{UNUSED}} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} codepoint) \{\}}
+\DoxyCodeLine{00342 }
+\DoxyCodeLine{\Hypertarget{app_8cpp_source_l00343}\mbox{\hyperlink{classApp_a9a45736060031d4e064c531bf95702af}{00343}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classApp_a9a45736060031d4e064c531bf95702af}{App::mouse\_button\_callback}}(}
+\DoxyCodeLine{00344         \mbox{\hyperlink{osdo_8h_addf5ec070e9499d36b7f2009ce736076}{UNUSED}} \mbox{\hyperlink{classWindow}{Window}} *window, \mbox{\hyperlink{osdo_8h_addf5ec070e9499d36b7f2009ce736076}{UNUSED}} \textcolor{keyword}{enum} \mbox{\hyperlink{window_8h_a13dc1bbe931fd8c6b75fed89f1e23256}{BUTTONS}} button,}
+\DoxyCodeLine{00345         \mbox{\hyperlink{osdo_8h_addf5ec070e9499d36b7f2009ce736076}{UNUSED}} \textcolor{keywordtype}{bool} pressed) \{\}}
+\DoxyCodeLine{00346 }
+\DoxyCodeLine{\Hypertarget{app_8cpp_source_l00347}\mbox{\hyperlink{classApp_a350119beab82886447687d7b2634f7ad}{00347}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classApp_a350119beab82886447687d7b2634f7ad}{App::key}}(\mbox{\hyperlink{classWindow}{Window}}* window, \textcolor{keyword}{enum} \mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211}{KEYS}} key, \textcolor{keywordtype}{bool} pressed) \{}
+\DoxyCodeLine{00348     \mbox{\hyperlink{classApp}{App}} *app = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{classApp}{App}}*\textcolor{keyword}{>}(\mbox{\hyperlink{classApp_abf4802385f7f2460656ea82c2522b511}{window}}-\/>\mbox{\hyperlink{classWindow_a22c6ec1d375e4e11ee6550faddfc15de}{get\_user\_pointer}}());}
+\DoxyCodeLine{00349     \textcolor{keywordtype}{int} t = pressed ? 1 : -\/1;}
+\DoxyCodeLine{00350     \textcolor{keywordflow}{if} (pressed) \{}
+\DoxyCodeLine{00351         \textcolor{keywordflow}{switch} (\mbox{\hyperlink{classApp_a350119beab82886447687d7b2634f7ad}{key}}) \{}
+\DoxyCodeLine{00352         \textcolor{keywordflow}{case} \mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a10072b5ee7aa1faf316434ecc9e2bb3a}{KEY\_B}}:}
+\DoxyCodeLine{00353         \{}
+\DoxyCodeLine{00354             app-\/>\mbox{\hyperlink{classApp_aa481132fcfaf7b94263b01656b445d12}{interactive\_mode}} = !app-\/>\mbox{\hyperlink{classApp_aa481132fcfaf7b94263b01656b445d12}{interactive\_mode}};}
+\DoxyCodeLine{00355             \textcolor{keywordflow}{if} (!app-\/>\mbox{\hyperlink{classApp_aa481132fcfaf7b94263b01656b445d12}{interactive\_mode}})}
+\DoxyCodeLine{00356                 \mbox{\hyperlink{classApp_abf4802385f7f2460656ea82c2522b511}{window}}-\/>\mbox{\hyperlink{classWindow_aa76f6ed874afa60591c9eafdd4ad6e0f}{grab\_mouse}}(\textcolor{keyword}{false});}
+\DoxyCodeLine{00357             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00358                 \mbox{\hyperlink{classApp_abf4802385f7f2460656ea82c2522b511}{window}}-\/>\mbox{\hyperlink{classWindow_aa76f6ed874afa60591c9eafdd4ad6e0f}{grab\_mouse}}( \textcolor{keyword}{true});}
+\DoxyCodeLine{00359         \}}
+\DoxyCodeLine{00360             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00361         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00362             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00363         \}}
+\DoxyCodeLine{00364     \}}
+\DoxyCodeLine{00365     \textcolor{keywordflow}{switch} (\mbox{\hyperlink{classApp_a350119beab82886447687d7b2634f7ad}{key}}) \{}
+\DoxyCodeLine{00366     \textcolor{keywordflow}{case} \mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211ac8234231b36474d3666ad56752fe6f5e}{KEY\_Q}}: app-\/>\mbox{\hyperlink{classApp_a3ae0a45fca199be672ed234afac60190}{trans}}[\mbox{\hyperlink{app_8h_abe0b71fc7c17456ad9addcb03f4dbbdfabc6501410409b0638909b580970b35f7}{TRANSLATE}}][\mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ffa5596231eabd6cf29050967d5ac83ad84}{Y}}] -\/= t; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00367     \textcolor{keywordflow}{case} \mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211aa7b3a3d0503a46bec51c6e3da95747cc}{KEY\_A}}: app-\/>\mbox{\hyperlink{classApp_a3ae0a45fca199be672ed234afac60190}{trans}}[\mbox{\hyperlink{app_8h_abe0b71fc7c17456ad9addcb03f4dbbdfabc6501410409b0638909b580970b35f7}{TRANSLATE}}][\mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ffa58833a3110c570fb05130d40c365d1e4}{X}}] -\/= t; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00368     \textcolor{keywordflow}{case} \mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a2e6a652ccd7afc5ce75ac4d902b6a60a}{KEY\_W}}: app-\/>\mbox{\hyperlink{classApp_a3ae0a45fca199be672ed234afac60190}{trans}}[\mbox{\hyperlink{app_8h_abe0b71fc7c17456ad9addcb03f4dbbdfabc6501410409b0638909b580970b35f7}{TRANSLATE}}][\mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ffaa70478ce277ffc322f8e1e3418e07355}{Z}}] -\/= t; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00369     \textcolor{keywordflow}{case} \mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211abb2f0ce8efc3067757dbf091437f89f5}{KEY\_S}}: app-\/>\mbox{\hyperlink{classApp_a3ae0a45fca199be672ed234afac60190}{trans}}[\mbox{\hyperlink{app_8h_abe0b71fc7c17456ad9addcb03f4dbbdfabc6501410409b0638909b580970b35f7}{TRANSLATE}}][\mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ffaa70478ce277ffc322f8e1e3418e07355}{Z}}] += t; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00370     \textcolor{keywordflow}{case} \mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a2af9840d90c49239339bfd42f9f32868}{KEY\_E}}: app-\/>\mbox{\hyperlink{classApp_a3ae0a45fca199be672ed234afac60190}{trans}}[\mbox{\hyperlink{app_8h_abe0b71fc7c17456ad9addcb03f4dbbdfabc6501410409b0638909b580970b35f7}{TRANSLATE}}][\mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ffa5596231eabd6cf29050967d5ac83ad84}{Y}}] += t; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00371     \textcolor{keywordflow}{case} \mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a2fd73a4d527efe137e8f259db2092766}{KEY\_D}}: app-\/>\mbox{\hyperlink{classApp_a3ae0a45fca199be672ed234afac60190}{trans}}[\mbox{\hyperlink{app_8h_abe0b71fc7c17456ad9addcb03f4dbbdfabc6501410409b0638909b580970b35f7}{TRANSLATE}}][\mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ffa58833a3110c570fb05130d40c365d1e4}{X}}] += t; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00372     \textcolor{keywordflow}{case} \mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211ad4961a6c7ea9d008812aaaa8c4ea9730}{KEY\_U}}: app-\/>\mbox{\hyperlink{classApp_a3ae0a45fca199be672ed234afac60190}{trans}}[\mbox{\hyperlink{app_8h_abe0b71fc7c17456ad9addcb03f4dbbdfa3dcfe0046eb5876e287dbf0914819b16}{ROTATE}}   ][\mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ffaa70478ce277ffc322f8e1e3418e07355}{Z}}] += t; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00373     \textcolor{keywordflow}{case} \mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211abb3108883bee68e265b554542484c5d7}{KEY\_J}}: app-\/>\mbox{\hyperlink{classApp_a3ae0a45fca199be672ed234afac60190}{trans}}[\mbox{\hyperlink{app_8h_abe0b71fc7c17456ad9addcb03f4dbbdfa3dcfe0046eb5876e287dbf0914819b16}{ROTATE}}   ][\mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ffa5596231eabd6cf29050967d5ac83ad84}{Y}}] -\/= t; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00374     \textcolor{keywordflow}{case} \mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a2c98fd67709a9fd5409498d4f7175877}{KEY\_I}}: app-\/>\mbox{\hyperlink{classApp_a3ae0a45fca199be672ed234afac60190}{trans}}[\mbox{\hyperlink{app_8h_abe0b71fc7c17456ad9addcb03f4dbbdfa3dcfe0046eb5876e287dbf0914819b16}{ROTATE}}   ][\mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ffa58833a3110c570fb05130d40c365d1e4}{X}}] -\/= t; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00375     \textcolor{keywordflow}{case} \mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a6b0799a9923c55f8a73550a371ea69f6}{KEY\_K}}: app-\/>\mbox{\hyperlink{classApp_a3ae0a45fca199be672ed234afac60190}{trans}}[\mbox{\hyperlink{app_8h_abe0b71fc7c17456ad9addcb03f4dbbdfa3dcfe0046eb5876e287dbf0914819b16}{ROTATE}}   ][\mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ffa58833a3110c570fb05130d40c365d1e4}{X}}] += t; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00376     \textcolor{keywordflow}{case} \mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211ae7edd672641b587364ea4a0c89388290}{KEY\_O}}: app-\/>\mbox{\hyperlink{classApp_a3ae0a45fca199be672ed234afac60190}{trans}}[\mbox{\hyperlink{app_8h_abe0b71fc7c17456ad9addcb03f4dbbdfa3dcfe0046eb5876e287dbf0914819b16}{ROTATE}}   ][\mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ffaa70478ce277ffc322f8e1e3418e07355}{Z}}] -\/= t; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00377     \textcolor{keywordflow}{case} \mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211aece16de35a5ea11f9b228c9376bebc62}{KEY\_L}}: app-\/>\mbox{\hyperlink{classApp_a3ae0a45fca199be672ed234afac60190}{trans}}[\mbox{\hyperlink{app_8h_abe0b71fc7c17456ad9addcb03f4dbbdfa3dcfe0046eb5876e287dbf0914819b16}{ROTATE}}   ][\mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ffa5596231eabd6cf29050967d5ac83ad84}{Y}}] += t; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00378     \textcolor{keywordflow}{case} \mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211aa3ec8a2ffd5b0e200db5ebe7b65515ff}{KEY\_R}}: app-\/>\mbox{\hyperlink{classApp_a3ae0a45fca199be672ed234afac60190}{trans}}[\mbox{\hyperlink{app_8h_abe0b71fc7c17456ad9addcb03f4dbbdfa47310f1cfc88e61d7ff5a0d09534b4a1}{ANIMATE}}  ][\mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ffaa70478ce277ffc322f8e1e3418e07355}{Z}}] += t; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00379     \textcolor{keywordflow}{case} \mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a3c069efeb1638c2ab0d2a50ff45b529f}{KEY\_F}}: app-\/>\mbox{\hyperlink{classApp_a3ae0a45fca199be672ed234afac60190}{trans}}[\mbox{\hyperlink{app_8h_abe0b71fc7c17456ad9addcb03f4dbbdfa47310f1cfc88e61d7ff5a0d09534b4a1}{ANIMATE}}  ][\mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ffa5596231eabd6cf29050967d5ac83ad84}{Y}}] -\/= t; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00380     \textcolor{keywordflow}{case} \mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a6167a8727e73df1eb96f19c2460766c9}{KEY\_T}}: app-\/>\mbox{\hyperlink{classApp_a3ae0a45fca199be672ed234afac60190}{trans}}[\mbox{\hyperlink{app_8h_abe0b71fc7c17456ad9addcb03f4dbbdfa47310f1cfc88e61d7ff5a0d09534b4a1}{ANIMATE}}  ][\mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ffa58833a3110c570fb05130d40c365d1e4}{X}}] -\/= t; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00381     \textcolor{keywordflow}{case} \mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a4ec980867be1d5bded2bccdee2ebd601}{KEY\_G}}: app-\/>\mbox{\hyperlink{classApp_a3ae0a45fca199be672ed234afac60190}{trans}}[\mbox{\hyperlink{app_8h_abe0b71fc7c17456ad9addcb03f4dbbdfa47310f1cfc88e61d7ff5a0d09534b4a1}{ANIMATE}}  ][\mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ffa58833a3110c570fb05130d40c365d1e4}{X}}] += t; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00382     \textcolor{keywordflow}{case} \mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a5d44524b2a6090fa97aa9353d69f67a3}{KEY\_Y}}: app-\/>\mbox{\hyperlink{classApp_a3ae0a45fca199be672ed234afac60190}{trans}}[\mbox{\hyperlink{app_8h_abe0b71fc7c17456ad9addcb03f4dbbdfa47310f1cfc88e61d7ff5a0d09534b4a1}{ANIMATE}}  ][\mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ffaa70478ce277ffc322f8e1e3418e07355}{Z}}] -\/= t; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00383     \textcolor{keywordflow}{case} \mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a41d1aa573d29ca6a9eb429a680dc53cd}{KEY\_H}}: app-\/>\mbox{\hyperlink{classApp_a3ae0a45fca199be672ed234afac60190}{trans}}[\mbox{\hyperlink{app_8h_abe0b71fc7c17456ad9addcb03f4dbbdfa47310f1cfc88e61d7ff5a0d09534b4a1}{ANIMATE}}  ][\mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ffa5596231eabd6cf29050967d5ac83ad84}{Y}}] += t; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00384     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00385         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00386 }
+\DoxyCodeLine{00387     \}}
+\DoxyCodeLine{00388 \}}
+\DoxyCodeLine{00389 }
+\DoxyCodeLine{00390 \textcolor{comment}{//static mat3 m3i = GLM\_MAT3\_IDENTITY\_INIT;}}
+\DoxyCodeLine{00391 }
+\DoxyCodeLine{\Hypertarget{app_8cpp_source_l00392}\mbox{\hyperlink{classApp_a2d0db695e3c389d834dc95420cf41711}{00392}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classApp_a2d0db695e3c389d834dc95420cf41711}{App::process\_input}}() \{}
+\DoxyCodeLine{00393     \textcolor{comment}{/*Window *window = \&this-\/>window;}}
+\DoxyCodeLine{00394 \textcolor{comment}{    Scene *scene = \&this-\/>scene;}}
+\DoxyCodeLine{00395 \textcolor{comment}{    Bijective *bijective;}}
+\DoxyCodeLine{00396 \textcolor{comment}{    float t;}}
+\DoxyCodeLine{00397 \textcolor{comment}{    GLfloat delta\_time = (GLfloat)window-\/>get\_delta\_time();}}
+\DoxyCodeLine{00398 \textcolor{comment}{    if (scene-\/>active) \{}}
+\DoxyCodeLine{00399 \textcolor{comment}{        bijective = \&scene-\/>objects[scene-\/>active -\/ 1];}}
+\DoxyCodeLine{00400 \textcolor{comment}{    \} else \{}}
+\DoxyCodeLine{00401 \textcolor{comment}{        bijective = \&this-\/>camera;}}
+\DoxyCodeLine{00402 \textcolor{comment}{    \}}}
+\DoxyCodeLine{00403 \textcolor{comment}{}}
+\DoxyCodeLine{00404 \textcolor{comment}{    if (window-\/>is\_key\_pressed(KEY\_LEFT\_CONTROL))}}
+\DoxyCodeLine{00405 \textcolor{comment}{        delta\_time *= 10;}}
+\DoxyCodeLine{00406 \textcolor{comment}{}}
+\DoxyCodeLine{00407 \textcolor{comment}{    for (int i = 0; i < 3; i++) \{}}
+\DoxyCodeLine{00408 \textcolor{comment}{        for (int j = 0; j < 3; j++) \{}}
+\DoxyCodeLine{00409 \textcolor{comment}{            if (this-\/>trans[i][j]) \{}}
+\DoxyCodeLine{00410 \textcolor{comment}{                t = (float)this-\/>trans[i][j] * delta\_time;}}
+\DoxyCodeLine{00411 \textcolor{comment}{                switch (i) \{}}
+\DoxyCodeLine{00412 \textcolor{comment}{                case TRANSLATE:}}
+\DoxyCodeLine{00413 \textcolor{comment}{                    bijective-\/>translate(m3i[j], t);}}
+\DoxyCodeLine{00414 \textcolor{comment}{                    break;}}
+\DoxyCodeLine{00415 \textcolor{comment}{                case ROTATE:}}
+\DoxyCodeLine{00416 \textcolor{comment}{                    bijective-\/>rotate((enum coord\_enum)j, t);}}
+\DoxyCodeLine{00417 \textcolor{comment}{                    break;}}
+\DoxyCodeLine{00418 \textcolor{comment}{                case ANIMATE:}}
+\DoxyCodeLine{00419 \textcolor{comment}{                    bijective-\/>set\_animation(m3i[j], t);}}
+\DoxyCodeLine{00420 \textcolor{comment}{                    break;}}
+\DoxyCodeLine{00421 \textcolor{comment}{                \}}}
+\DoxyCodeLine{00422 \textcolor{comment}{            \}}}
+\DoxyCodeLine{00423 \textcolor{comment}{        \}}}
+\DoxyCodeLine{00424 \textcolor{comment}{    \}*/}}
+\DoxyCodeLine{00425 \}}
+
+\end{DoxyCode}

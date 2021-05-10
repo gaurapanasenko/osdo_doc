@@ -1,0 +1,63 @@
+\hypertarget{buffer_8h_source}{}\doxysubsection{buffer.\+h}
+\label{buffer_8h_source}\index{osdo/buffer.h@{osdo/buffer.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/**}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * @file buffer.h}}
+\DoxyCodeLine{00003 \textcolor{comment}{ * @brief Буфер, у якому відбувається рендеринг у текстуру.}}
+\DoxyCodeLine{00004 \textcolor{comment}{ */}}
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#ifndef BUFFER\_H}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#define BUFFER\_H}}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{osdo_8h}{osdo.h}}"{}}}
+\DoxyCodeLine{00009 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{texture_8h}{texture.h}}"{}}}
+\DoxyCodeLine{00010 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{renderbuffer_8h}{renderbuffer.h}}"{}}}
+\DoxyCodeLine{00011 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{framebuffer_8h}{framebuffer.h}}"{}}}
+\DoxyCodeLine{00012 \textcolor{comment}{}}
+\DoxyCodeLine{00013 \textcolor{comment}{/**}}
+\DoxyCodeLine{00014 \textcolor{comment}{ * @brief Буфер, у якому відбувається рендеринг у текстуру.}}
+\DoxyCodeLine{00015 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{buffer_8h_source_l00016}\mbox{\hyperlink{classBuffer}{00016}} \textcolor{keyword}{class }\mbox{\hyperlink{classBuffer}{Buffer}} \{\textcolor{comment}{}}
+\DoxyCodeLine{00017 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00018 \textcolor{comment}{     * @brief Текстура у яку відбувається рендеринг.}}
+\DoxyCodeLine{00019 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{buffer_8h_source_l00020}\mbox{\hyperlink{classBuffer_a0f6f91cd8ed9970868265d7e85b76d8b}{00020}}     \mbox{\hyperlink{classTexture}{Texture}} \mbox{\hyperlink{classBuffer_a0f6f91cd8ed9970868265d7e85b76d8b}{tex}};\textcolor{comment}{}}
+\DoxyCodeLine{00021 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00022 \textcolor{comment}{     * @brief Буфер кольорів для рендеренгу.}}
+\DoxyCodeLine{00023 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{buffer_8h_source_l00024}\mbox{\hyperlink{classBuffer_a2f3e346b7f027511c34983936f57a360}{00024}}     \mbox{\hyperlink{classRenderbuffer}{Renderbuffer}} \mbox{\hyperlink{classBuffer_a2f3e346b7f027511c34983936f57a360}{color\_rb}};\textcolor{comment}{}}
+\DoxyCodeLine{00025 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00026 \textcolor{comment}{     * @brief Глибинний буфер для рендеренгу.}}
+\DoxyCodeLine{00027 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{buffer_8h_source_l00028}\mbox{\hyperlink{classBuffer_a1fa066668c11e375e09b3ac05575af86}{00028}}     \mbox{\hyperlink{classRenderbuffer}{Renderbuffer}} \mbox{\hyperlink{classBuffer_a1fa066668c11e375e09b3ac05575af86}{depth\_rb}};\textcolor{comment}{}}
+\DoxyCodeLine{00029 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00030 \textcolor{comment}{     * @brief Буфер утвореного кадру рендеренгу із згладжуванням.}}
+\DoxyCodeLine{00031 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{buffer_8h_source_l00032}\mbox{\hyperlink{classBuffer_a4dfc88865a8457c1ac0e590239c8d109}{00032}}     \mbox{\hyperlink{classFramebuffer}{Framebuffer}} \mbox{\hyperlink{classBuffer_a4dfc88865a8457c1ac0e590239c8d109}{ms\_fb}};\textcolor{comment}{}}
+\DoxyCodeLine{00033 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00034 \textcolor{comment}{     * @brief Кінцевий буфер утвореного кадру.}}
+\DoxyCodeLine{00035 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{buffer_8h_source_l00036}\mbox{\hyperlink{classBuffer_a0e59570248c5a6195f5c9e88201c7d5d}{00036}}     \mbox{\hyperlink{classFramebuffer}{Framebuffer}} \mbox{\hyperlink{classBuffer_a0e59570248c5a6195f5c9e88201c7d5d}{fb}};}
+\DoxyCodeLine{00037 \textcolor{keyword}{public}:\textcolor{comment}{}}
+\DoxyCodeLine{00038 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00039 \textcolor{comment}{     * @brief Підгодовка до рендеренгу.}}
+\DoxyCodeLine{00040 \textcolor{comment}{     * @param[in] size ширина та висота кадру.}}
+\DoxyCodeLine{00041 \textcolor{comment}{     * @return статус успішності підготовки буферів до рендеренгу.}}
+\DoxyCodeLine{00042 \textcolor{comment}{     */}}
+\DoxyCodeLine{00043     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classBuffer_a1fc0873aa0dd87e47da962f32110b03e}{pre\_render}}(GLsizei size[2]);\textcolor{comment}{}}
+\DoxyCodeLine{00044 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00045 \textcolor{comment}{     * @brief Генерація текстури з утвореного кадру.}}
+\DoxyCodeLine{00046 \textcolor{comment}{     * @param[in] size ширина та висота кадру.}}
+\DoxyCodeLine{00047 \textcolor{comment}{     */}}
+\DoxyCodeLine{00048     \textcolor{keywordtype}{void} \mbox{\hyperlink{classBuffer_a2546d46567336e00cb66d53585ebbbd7}{post\_render}}(GLsizei size[2]);}
+\DoxyCodeLine{00049 \textcolor{comment}{}}
+\DoxyCodeLine{00050 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00051 \textcolor{comment}{     * @brief Забирає текстуру у яку проводився рендеринг.}}
+\DoxyCodeLine{00052 \textcolor{comment}{     * @return текстура у яку проводився рендеринг}}
+\DoxyCodeLine{00053 \textcolor{comment}{     */}}
+\DoxyCodeLine{00054     \textcolor{keyword}{const} \mbox{\hyperlink{classTexture}{Texture}}\& \mbox{\hyperlink{classBuffer_a83f8f07b7743b697cc5d0d78dfc0b9db}{get\_tex}}();}
+\DoxyCodeLine{00055 \};}
+\DoxyCodeLine{00056 }
+\DoxyCodeLine{00057 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// BUFFER\_H}}
+
+\end{DoxyCode}

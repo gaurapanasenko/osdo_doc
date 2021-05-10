@@ -1,0 +1,428 @@
+\hypertarget{classFramebuffer}{}\doxysubsection{Клас Framebuffer}
+\label{classFramebuffer}\index{Framebuffer@{Framebuffer}}
+
+
+Буфер кадру, що використовується для рендеренгу.  
+
+
+
+
+{\ttfamily \#include $<$framebuffer.\+h$>$}
+
+
+
+Схема успадкувань для Framebuffer\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=149pt]{classFramebuffer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Діаграма зв\textquotesingle{}язків класу Framebuffer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=149pt]{classFramebuffer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Загальнодоступні елементи}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFramebuffer_a4f10f2020d414add1ea0e6553908c86b}{Framebuffer}} ()
+\item 
+\mbox{\hyperlink{classFramebuffer_a64dae662375f670e5757612e972de62f}{$\sim$\+Framebuffer}} () override
+\item 
+bool \mbox{\hyperlink{classFramebuffer_afa8771e517776fde7edf0a0b07b6e91b}{check}} (GLenum target=GL\+\_\+\+FRAMEBUFFER)
+\begin{DoxyCompactList}\small\item\em Перевіряє, чи готовий буфер до рендеренгу. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFramebuffer_a0d90533a9cd82dd33ad45d7e49a722e0}{tex\+\_\+2d\+\_\+multisample}} (GLsizei size\mbox{[}2\mbox{]}, const \mbox{\hyperlink{classTexture}{Texture}} \&texture)
+\begin{DoxyCompactList}\small\item\em Підготовлює текстуру з згладжуванням \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFramebuffer_a2d6e0ef178e7199df8149d53b12d93e0}{tex\+\_\+2d}} (GLsizei size\mbox{[}2\mbox{]}, const \mbox{\hyperlink{classTexture}{Texture}} \&texture)
+\begin{DoxyCompactList}\small\item\em Підготовлює звичайну текстуру \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFramebuffer_a0f0dce697d4107c9e6ea39fe11df6d29}{renderbuffer}} (const \mbox{\hyperlink{classRenderbuffer}{Renderbuffer}} \&rb, GLenum target) const
+\begin{DoxyCompactList}\small\item\em Підготовлює рендер буфер {\ttfamily rb} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFramebuffer_a28bda5ab4a57e13e49280d745dbf35b0}{rb\+\_\+color\+\_\+multisample}} (GLsizei size\mbox{[}2\mbox{]}, const \mbox{\hyperlink{classRenderbuffer}{Renderbuffer}} \&rb) const
+\begin{DoxyCompactList}\small\item\em Підготовлює рендер буфер з згладжуванням для зберігання кольорів. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFramebuffer_a3c14a0980ae1369f964c0bc05c3ea4dd}{rb\+\_\+depth\+\_\+multisample}} (GLsizei size\mbox{[}2\mbox{]}, const \mbox{\hyperlink{classRenderbuffer}{Renderbuffer}} \&rb) const
+\begin{DoxyCompactList}\small\item\em Підготовлює глибинний рендер буфер з згладжуванням. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFramebuffer_aa22bed74c24a765257806ed4693e7005}{rb\+\_\+color}} (GLsizei size\mbox{[}2\mbox{]}, const \mbox{\hyperlink{classRenderbuffer}{Renderbuffer}} \&rb) const
+\begin{DoxyCompactList}\small\item\em Підготовлює рендер буфер для зберігання кольорів. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFramebuffer_ac47980bdb179418e6ed3c8ff18d0fb2b}{rb\+\_\+depth}} (GLsizei size\mbox{[}2\mbox{]}, const \mbox{\hyperlink{classRenderbuffer}{Renderbuffer}} \&rb) const
+\begin{DoxyCompactList}\small\item\em Підготовлює глибинний рендер буфер. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Приватні елементи}
+\begin{DoxyCompactItemize}
+\item 
+GLuint \mbox{\hyperlink{classFramebuffer_adb84d4f813bc52460bde7ce62ccfa150}{\+\_\+generate}} () const override
+\begin{DoxyCompactList}\small\item\em Віртуальний метод що створює буфер кадру. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classFramebuffer_a5b4e690288f3283c9d9967ed29bfb1b1}{\+\_\+bind}} (const GLuint \mbox{\hyperlink{classGlBindable_a299d9182805eb4c6b7e9e8cc9d5b4577}{id}}, GLenum target) const override
+\begin{DoxyCompactList}\small\item\em Віртуальний метод, що прив\textquotesingle{}язує контекст до буферу кадру. \end{DoxyCompactList}\item 
+virtual GLenum \mbox{\hyperlink{classFramebuffer_a33d174278da3c420e01f371b727eced6}{\+\_\+default}} () const override
+\begin{DoxyCompactList}\small\item\em Віртуальний метод, що задає ціль прив\textquotesingle{}язки за замовчуванням. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Додаткові успадковані елементи}
+
+
+\doxysubsubsection{Детальний опис}
+Буфер кадру, що використовується для рендеренгу. 
+
+Див. визначення в файлі \mbox{\hyperlink{framebuffer_8h_source}{framebuffer.\+h}}, рядок \mbox{\hyperlink{framebuffer_8h_source_l00017}{17}}
+
+
+
+\doxysubsubsection{Конструктор(и)}
+\mbox{\Hypertarget{classFramebuffer_a4f10f2020d414add1ea0e6553908c86b}\label{classFramebuffer_a4f10f2020d414add1ea0e6553908c86b}} 
+\index{Framebuffer@{Framebuffer}!Framebuffer@{Framebuffer}}
+\index{Framebuffer@{Framebuffer}!Framebuffer@{Framebuffer}}
+\doxyparagraph{\texorpdfstring{Framebuffer()}{Framebuffer()}}
+{\footnotesize\ttfamily Framebuffer\+::\+Framebuffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{framebuffer_8cpp_source}{framebuffer.\+cpp}}, рядок \mbox{\hyperlink{framebuffer_8cpp_source_l00022}{22}}
+
+\mbox{\Hypertarget{classFramebuffer_a64dae662375f670e5757612e972de62f}\label{classFramebuffer_a64dae662375f670e5757612e972de62f}} 
+\index{Framebuffer@{Framebuffer}!````~Framebuffer@{$\sim$Framebuffer}}
+\index{````~Framebuffer@{$\sim$Framebuffer}!Framebuffer@{Framebuffer}}
+\doxyparagraph{\texorpdfstring{$\sim$Framebuffer()}{~Framebuffer()}}
+{\footnotesize\ttfamily Framebuffer\+::$\sim$\+Framebuffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{framebuffer_8cpp_source}{framebuffer.\+cpp}}, рядок \mbox{\hyperlink{framebuffer_8cpp_source_l00024}{24}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{classFramebuffer_a64dae662375f670e5757612e972de62f_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsubsection{Опис методів компонент}
+\mbox{\Hypertarget{classFramebuffer_a5b4e690288f3283c9d9967ed29bfb1b1}\label{classFramebuffer_a5b4e690288f3283c9d9967ed29bfb1b1}} 
+\index{Framebuffer@{Framebuffer}!\_bind@{\_bind}}
+\index{\_bind@{\_bind}!Framebuffer@{Framebuffer}}
+\doxyparagraph{\texorpdfstring{\_bind()}{\_bind()}}
+{\footnotesize\ttfamily void Framebuffer\+::\+\_\+bind (\begin{DoxyParamCaption}\item[{const GLuint}]{id,  }\item[{GLenum}]{target }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Віртуальний метод, що прив\textquotesingle{}язує контекст до буферу кадру. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em id} & індекс буфера кадру \\
+\hline
+{\em target} & ціль буфера кадру \\
+\hline
+\end{DoxyParams}
+
+
+Переозначення з \mbox{\hyperlink{classGlBindable_ae3213a00db0e6f6dfc356a06a5b1e6d6}{Gl\+Bindable}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{framebuffer_8cpp_source}{framebuffer.\+cpp}}, рядок \mbox{\hyperlink{framebuffer_8cpp_source_l00012}{12}}
+
+\mbox{\Hypertarget{classFramebuffer_a33d174278da3c420e01f371b727eced6}\label{classFramebuffer_a33d174278da3c420e01f371b727eced6}} 
+\index{Framebuffer@{Framebuffer}!\_default@{\_default}}
+\index{\_default@{\_default}!Framebuffer@{Framebuffer}}
+\doxyparagraph{\texorpdfstring{\_default()}{\_default()}}
+{\footnotesize\ttfamily GLenum Framebuffer\+::\+\_\+default (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Віртуальний метод, що задає ціль прив\textquotesingle{}язки за замовчуванням. 
+
+\begin{DoxyReturn}{Повертає}
+тип ціль прив\textquotesingle{}язки за замовчуванням 
+\end{DoxyReturn}
+
+
+Переозначення з \mbox{\hyperlink{classGlBindable_a99e6c236fadee7211e721dd8b0d57598}{Gl\+Bindable}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{framebuffer_8cpp_source}{framebuffer.\+cpp}}, рядок \mbox{\hyperlink{framebuffer_8cpp_source_l00017}{17}}
+
+\mbox{\Hypertarget{classFramebuffer_adb84d4f813bc52460bde7ce62ccfa150}\label{classFramebuffer_adb84d4f813bc52460bde7ce62ccfa150}} 
+\index{Framebuffer@{Framebuffer}!\_generate@{\_generate}}
+\index{\_generate@{\_generate}!Framebuffer@{Framebuffer}}
+\doxyparagraph{\texorpdfstring{\_generate()}{\_generate()}}
+{\footnotesize\ttfamily GLuint Framebuffer\+::\+\_\+generate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Віртуальний метод що створює буфер кадру. 
+
+\begin{DoxyReturn}{Повертає}
+індекс буфера кадру 
+\end{DoxyReturn}
+
+
+Переозначення з \mbox{\hyperlink{classGlBindable_adeae77f0e91e38fbd0685df3d45bf240}{Gl\+Bindable}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{framebuffer_8cpp_source}{framebuffer.\+cpp}}, рядок \mbox{\hyperlink{framebuffer_8cpp_source_l00005}{5}}
+
+\mbox{\Hypertarget{classFramebuffer_afa8771e517776fde7edf0a0b07b6e91b}\label{classFramebuffer_afa8771e517776fde7edf0a0b07b6e91b}} 
+\index{Framebuffer@{Framebuffer}!check@{check}}
+\index{check@{check}!Framebuffer@{Framebuffer}}
+\doxyparagraph{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily bool Framebuffer\+::check (\begin{DoxyParamCaption}\item[{GLenum}]{target = {\ttfamily GL\+\_\+FRAMEBUFFER} }\end{DoxyParamCaption})}
+
+
+
+Перевіряє, чи готовий буфер до рендеренгу. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em target} & тип буфера \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Повертає}
+статус буфера 
+\end{DoxyReturn}
+
+
+Див. визначення в файлі \mbox{\hyperlink{framebuffer_8cpp_source}{framebuffer.\+cpp}}, рядок \mbox{\hyperlink{framebuffer_8cpp_source_l00028}{28}}
+
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{classFramebuffer_afa8771e517776fde7edf0a0b07b6e91b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFramebuffer_aa22bed74c24a765257806ed4693e7005}\label{classFramebuffer_aa22bed74c24a765257806ed4693e7005}} 
+\index{Framebuffer@{Framebuffer}!rb\_color@{rb\_color}}
+\index{rb\_color@{rb\_color}!Framebuffer@{Framebuffer}}
+\doxyparagraph{\texorpdfstring{rb\_color()}{rb\_color()}}
+{\footnotesize\ttfamily void Framebuffer\+::rb\+\_\+color (\begin{DoxyParamCaption}\item[{GLsizei}]{size\mbox{[}2\mbox{]},  }\item[{const \mbox{\hyperlink{classRenderbuffer}{Renderbuffer}} \&}]{rb }\end{DoxyParamCaption}) const}
+
+
+
+Підготовлює рендер буфер для зберігання кольорів. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em size} & ширина та висота кадру \\
+\hline
+{\em rb} & рендер буфер \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{framebuffer_8cpp_source}{framebuffer.\+cpp}}, рядок \mbox{\hyperlink{framebuffer_8cpp_source_l00061}{61}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFramebuffer_aa22bed74c24a765257806ed4693e7005_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFramebuffer_a28bda5ab4a57e13e49280d745dbf35b0}\label{classFramebuffer_a28bda5ab4a57e13e49280d745dbf35b0}} 
+\index{Framebuffer@{Framebuffer}!rb\_color\_multisample@{rb\_color\_multisample}}
+\index{rb\_color\_multisample@{rb\_color\_multisample}!Framebuffer@{Framebuffer}}
+\doxyparagraph{\texorpdfstring{rb\_color\_multisample()}{rb\_color\_multisample()}}
+{\footnotesize\ttfamily void Framebuffer\+::rb\+\_\+color\+\_\+multisample (\begin{DoxyParamCaption}\item[{GLsizei}]{size\mbox{[}2\mbox{]},  }\item[{const \mbox{\hyperlink{classRenderbuffer}{Renderbuffer}} \&}]{rb }\end{DoxyParamCaption}) const}
+
+
+
+Підготовлює рендер буфер з згладжуванням для зберігання кольорів. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em size} & ширина та висота кадру \\
+\hline
+{\em rb} & рендер буфер \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{framebuffer_8cpp_source}{framebuffer.\+cpp}}, рядок \mbox{\hyperlink{framebuffer_8cpp_source_l00049}{49}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFramebuffer_a28bda5ab4a57e13e49280d745dbf35b0_cgraph}
+\end{center}
+\end{figure}
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{classFramebuffer_a28bda5ab4a57e13e49280d745dbf35b0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFramebuffer_ac47980bdb179418e6ed3c8ff18d0fb2b}\label{classFramebuffer_ac47980bdb179418e6ed3c8ff18d0fb2b}} 
+\index{Framebuffer@{Framebuffer}!rb\_depth@{rb\_depth}}
+\index{rb\_depth@{rb\_depth}!Framebuffer@{Framebuffer}}
+\doxyparagraph{\texorpdfstring{rb\_depth()}{rb\_depth()}}
+{\footnotesize\ttfamily void Framebuffer\+::rb\+\_\+depth (\begin{DoxyParamCaption}\item[{GLsizei}]{size\mbox{[}2\mbox{]},  }\item[{const \mbox{\hyperlink{classRenderbuffer}{Renderbuffer}} \&}]{rb }\end{DoxyParamCaption}) const}
+
+
+
+Підготовлює глибинний рендер буфер. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em size} & ширина та висота кадру \\
+\hline
+{\em rb} & рендер буфер \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{framebuffer_8cpp_source}{framebuffer.\+cpp}}, рядок \mbox{\hyperlink{framebuffer_8cpp_source_l00067}{67}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFramebuffer_ac47980bdb179418e6ed3c8ff18d0fb2b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFramebuffer_a3c14a0980ae1369f964c0bc05c3ea4dd}\label{classFramebuffer_a3c14a0980ae1369f964c0bc05c3ea4dd}} 
+\index{Framebuffer@{Framebuffer}!rb\_depth\_multisample@{rb\_depth\_multisample}}
+\index{rb\_depth\_multisample@{rb\_depth\_multisample}!Framebuffer@{Framebuffer}}
+\doxyparagraph{\texorpdfstring{rb\_depth\_multisample()}{rb\_depth\_multisample()}}
+{\footnotesize\ttfamily void Framebuffer\+::rb\+\_\+depth\+\_\+multisample (\begin{DoxyParamCaption}\item[{GLsizei}]{size\mbox{[}2\mbox{]},  }\item[{const \mbox{\hyperlink{classRenderbuffer}{Renderbuffer}} \&}]{rb }\end{DoxyParamCaption}) const}
+
+
+
+Підготовлює глибинний рендер буфер з згладжуванням. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em size} & ширина та висота кадру \\
+\hline
+{\em rb} & рендер буфер \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{framebuffer_8cpp_source}{framebuffer.\+cpp}}, рядок \mbox{\hyperlink{framebuffer_8cpp_source_l00055}{55}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFramebuffer_a3c14a0980ae1369f964c0bc05c3ea4dd_cgraph}
+\end{center}
+\end{figure}
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{classFramebuffer_a3c14a0980ae1369f964c0bc05c3ea4dd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFramebuffer_a0f0dce697d4107c9e6ea39fe11df6d29}\label{classFramebuffer_a0f0dce697d4107c9e6ea39fe11df6d29}} 
+\index{Framebuffer@{Framebuffer}!renderbuffer@{renderbuffer}}
+\index{renderbuffer@{renderbuffer}!Framebuffer@{Framebuffer}}
+\doxyparagraph{\texorpdfstring{renderbuffer()}{renderbuffer()}}
+{\footnotesize\ttfamily void Framebuffer\+::renderbuffer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRenderbuffer}{Renderbuffer}} \&}]{rb,  }\item[{GLenum}]{target }\end{DoxyParamCaption}) const}
+
+
+
+Підготовлює рендер буфер {\ttfamily rb} 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em rb} & рендер буфер \\
+\hline
+{\em target} & тип буфера \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{framebuffer_8cpp_source}{framebuffer.\+cpp}}, рядок \mbox{\hyperlink{framebuffer_8cpp_source_l00044}{44}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{classFramebuffer_a0f0dce697d4107c9e6ea39fe11df6d29_cgraph}
+\end{center}
+\end{figure}
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFramebuffer_a0f0dce697d4107c9e6ea39fe11df6d29_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFramebuffer_a2d6e0ef178e7199df8149d53b12d93e0}\label{classFramebuffer_a2d6e0ef178e7199df8149d53b12d93e0}} 
+\index{Framebuffer@{Framebuffer}!tex\_2d@{tex\_2d}}
+\index{tex\_2d@{tex\_2d}!Framebuffer@{Framebuffer}}
+\doxyparagraph{\texorpdfstring{tex\_2d()}{tex\_2d()}}
+{\footnotesize\ttfamily void Framebuffer\+::tex\+\_\+2d (\begin{DoxyParamCaption}\item[{GLsizei}]{size\mbox{[}2\mbox{]},  }\item[{const \mbox{\hyperlink{classTexture}{Texture}} \&}]{texture }\end{DoxyParamCaption})}
+
+
+
+Підготовлює звичайну текстуру 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em size} & ширина та висота кадру \\
+\hline
+{\em texture} & текстура у яку зберігають кадр \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{framebuffer_8cpp_source}{framebuffer.\+cpp}}, рядок \mbox{\hyperlink{framebuffer_8cpp_source_l00038}{38}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFramebuffer_a2d6e0ef178e7199df8149d53b12d93e0_cgraph}
+\end{center}
+\end{figure}
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{classFramebuffer_a2d6e0ef178e7199df8149d53b12d93e0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFramebuffer_a0d90533a9cd82dd33ad45d7e49a722e0}\label{classFramebuffer_a0d90533a9cd82dd33ad45d7e49a722e0}} 
+\index{Framebuffer@{Framebuffer}!tex\_2d\_multisample@{tex\_2d\_multisample}}
+\index{tex\_2d\_multisample@{tex\_2d\_multisample}!Framebuffer@{Framebuffer}}
+\doxyparagraph{\texorpdfstring{tex\_2d\_multisample()}{tex\_2d\_multisample()}}
+{\footnotesize\ttfamily void Framebuffer\+::tex\+\_\+2d\+\_\+multisample (\begin{DoxyParamCaption}\item[{GLsizei}]{size\mbox{[}2\mbox{]},  }\item[{const \mbox{\hyperlink{classTexture}{Texture}} \&}]{texture }\end{DoxyParamCaption})}
+
+
+
+Підготовлює текстуру з згладжуванням 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em size} & ширина та висота кадру \\
+\hline
+{\em texture} & текстура у яку зберігають кадр з згладжуванням \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{framebuffer_8cpp_source}{framebuffer.\+cpp}}, рядок \mbox{\hyperlink{framebuffer_8cpp_source_l00032}{32}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFramebuffer_a0d90533a9cd82dd33ad45d7e49a722e0_cgraph}
+\end{center}
+\end{figure}
+
+
+Документація цих класів була створена з файлів\+:\begin{DoxyCompactItemize}
+\item 
+osdo/\mbox{\hyperlink{framebuffer_8h}{framebuffer.\+h}}\item 
+osdo/\mbox{\hyperlink{framebuffer_8cpp}{framebuffer.\+cpp}}\end{DoxyCompactItemize}

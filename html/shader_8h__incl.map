@@ -1,0 +1,11 @@
+<map id="osdo/shader.h" name="osdo/shader.h">
+<area shape="rect" id="node1" title="Задає клас шейдеру." alt="" coords="277,5,381,32"/>
+<area shape="rect" id="node2" href="$osdo_8h.html" title=" " alt="" coords="132,155,193,181"/>
+<area shape="rect" id="node6" href="$glbindable_8h.html" title="Абстрактний клас, який виконує роль генерації та прив&#39;язки об&#39;єктів OpenGL." alt="" coords="159,80,249,107"/>
+<area shape="rect" id="node7" title=" " alt="" coords="274,80,385,107"/>
+<area shape="rect" id="node8" title=" " alt="" coords="409,80,548,107"/>
+<area shape="rect" id="node9" title=" " alt="" coords="573,80,713,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,229,99,256"/>
+<area shape="rect" id="node4" title=" " alt="" coords="123,229,203,256"/>
+<area shape="rect" id="node5" title=" " alt="" coords="227,229,291,256"/>
+</map>

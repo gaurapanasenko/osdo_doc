@@ -1,0 +1,112 @@
+\hypertarget{structScene}{}\doxysubsection{Структура Scene}
+\label{structScene}\index{Scene@{Scene}}
+
+
+Сцена із об\textquotesingle{}єктами.  
+
+
+
+
+{\ttfamily \#include $<$scene.\+h$>$}
+
+
+
+Діаграма зв\textquotesingle{}язків класу Scene\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{structScene__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Загальнодоступні елементи}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structScene_a45d36f98829eeb0b89d458f6f7f5ee9b}{Scene}} (const \mbox{\hyperlink{structContext_a0fb5343f40542412aa4089d22627f232}{Context\+::\+Models}} \&\mbox{\hyperlink{structScene_a295dfaa5202a61abfc8cf32f58d2fdd5}{objects}})
+\begin{DoxyCompactList}\small\item\em Конструктор, що створює об\textquotesingle{}єкти у сцені за заготовленими у агрументі {\ttfamily objects} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Загальнодоступні статичні елементи}
+\begin{DoxyCompactItemize}
+\item 
+static shared\+\_\+ptr$<$ \mbox{\hyperlink{structScene}{Scene}} $>$ \mbox{\hyperlink{structScene_ac9d55f5bebb962cd4aedc86ec5bf3269}{create}} (const \mbox{\hyperlink{structContext_a0fb5343f40542412aa4089d22627f232}{Context\+::\+Models}} \&\mbox{\hyperlink{structScene_a295dfaa5202a61abfc8cf32f58d2fdd5}{objects}})
+\begin{DoxyCompactList}\small\item\em Створює сцену \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Загальнодоступні атрибути}
+\begin{DoxyCompactItemize}
+\item 
+hash\+\_\+map$<$ string, \mbox{\hyperlink{classObject}{Object}} $>$ \mbox{\hyperlink{structScene_a295dfaa5202a61abfc8cf32f58d2fdd5}{objects}}
+\begin{DoxyCompactList}\small\item\em Об\textquotesingle{}єкти у сцені. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Детальний опис}
+Сцена із об\textquotesingle{}єктами. 
+
+Див. визначення в файлі \mbox{\hyperlink{scene_8h_source}{scene.\+h}}, рядок \mbox{\hyperlink{scene_8h_source_l00016}{16}}
+
+
+
+\doxysubsubsection{Конструктор(и)}
+\mbox{\Hypertarget{structScene_a45d36f98829eeb0b89d458f6f7f5ee9b}\label{structScene_a45d36f98829eeb0b89d458f6f7f5ee9b}} 
+\index{Scene@{Scene}!Scene@{Scene}}
+\index{Scene@{Scene}!Scene@{Scene}}
+\doxyparagraph{\texorpdfstring{Scene()}{Scene()}}
+{\footnotesize\ttfamily Scene\+::\+Scene (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structContext_a0fb5343f40542412aa4089d22627f232}{Context\+::\+Models}} \&}]{objects }\end{DoxyParamCaption})}
+
+
+
+Конструктор, що створює об\textquotesingle{}єкти у сцені за заготовленими у агрументі {\ttfamily objects} 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em objects} & заготовлені об\textquotesingle{}єкти для додавання у сцену \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{scene_8cpp_source}{scene.\+cpp}}, рядок \mbox{\hyperlink{scene_8cpp_source_l00007}{7}}
+
+
+
+\doxysubsubsection{Опис методів компонент}
+\mbox{\Hypertarget{structScene_ac9d55f5bebb962cd4aedc86ec5bf3269}\label{structScene_ac9d55f5bebb962cd4aedc86ec5bf3269}} 
+\index{Scene@{Scene}!create@{create}}
+\index{create@{create}!Scene@{Scene}}
+\doxyparagraph{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{structScene}{Scene}} $>$ Scene\+::create (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structContext_a0fb5343f40542412aa4089d22627f232}{Context\+::\+Models}} \&}]{objects }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Створює сцену 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em objects} & заготовлені об\textquotesingle{}єкти для додавання у сцену \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Повертає}
+Розумний вказівник на об\textquotesingle{}єкт сцени. 
+\end{DoxyReturn}
+
+
+Див. визначення в файлі \mbox{\hyperlink{scene_8cpp_source}{scene.\+cpp}}, рядок \mbox{\hyperlink{scene_8cpp_source_l00010}{10}}
+
+
+
+\doxysubsubsection{Компонентні дані}
+\mbox{\Hypertarget{structScene_a295dfaa5202a61abfc8cf32f58d2fdd5}\label{structScene_a295dfaa5202a61abfc8cf32f58d2fdd5}} 
+\index{Scene@{Scene}!objects@{objects}}
+\index{objects@{objects}!Scene@{Scene}}
+\doxyparagraph{\texorpdfstring{objects}{objects}}
+{\footnotesize\ttfamily hash\+\_\+map$<$string, \mbox{\hyperlink{classObject}{Object}}$>$ Scene\+::objects}
+
+
+
+Об\textquotesingle{}єкти у сцені. 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{scene_8h_source}{scene.\+h}}, рядок \mbox{\hyperlink{scene_8h_source_l00020}{20}}
+
+
+
+Документація цих структур була створена з файлів\+:\begin{DoxyCompactItemize}
+\item 
+osdo/\mbox{\hyperlink{scene_8h}{scene.\+h}}\item 
+osdo/\mbox{\hyperlink{scene_8cpp}{scene.\+cpp}}\end{DoxyCompactItemize}

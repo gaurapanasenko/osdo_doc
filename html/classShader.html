@@ -1,0 +1,1035 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Дипломна робота: Клас Shader</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Дипломна робота
+   </div>
+   <div id="projectbrief">студента групи ПА-17-2 Панасенка Єгора Сергійовича</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Загальнодоступні типи</a> &#124;
+<a href="#pub-methods">Загальнодоступні елементи</a> &#124;
+<a href="#pub-static-methods">Загальнодоступні статичні елементи</a> &#124;
+<a href="#pri-methods">Приватні елементи</a> &#124;
+<a href="classShader-members.html">Список всіх елементів</a>  </div>
+  <div class="headertitle">
+<div class="title">Клас Shader</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Клас взаємодії з шейдером у видеокарті.  
+ <a href="classShader.html#details">Детальніше...</a></p>
+
+<p><code>#include &lt;<a class="el" href="shader_8h_source.html">shader.h</a>&gt;</code></p>
+<div class="dynheader">
+Схема успадкувань для Shader</div>
+<div class="dyncontent">
+<div class="center"><img src="classShader__inherit__graph.png" border="0" usemap="#aShader_inherit__map" alt="Inheritance graph"/></div>
+<map name="aShader_inherit__map" id="aShader_inherit__map">
+<area shape="rect" title="Клас взаємодії з шейдером у видеокарті." alt="" coords="17,80,79,107"/>
+<area shape="rect" href="classGlBindable.html" title="Абстрактний клас, який виконує роль генерації та прив&#39;язки об&#39;єктів OpenGL." alt="" coords="5,5,91,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">див. легенду</a>]</span></center></div>
+<div class="dynheader">
+Діаграма зв'язків класу Shader:</div>
+<div class="dyncontent">
+<div class="center"><img src="classShader__coll__graph.png" border="0" usemap="#aShader_coll__map" alt="Collaboration graph"/></div>
+<map name="aShader_coll__map" id="aShader_coll__map">
+<area shape="rect" title="Клас взаємодії з шейдером у видеокарті." alt="" coords="17,80,79,107"/>
+<area shape="rect" href="classGlBindable.html" title="Абстрактний клас, який виконує роль генерації та прив&#39;язки об&#39;єктів OpenGL." alt="" coords="5,5,91,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">див. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Загальнодоступні типи</h2></td></tr>
+<tr class="memitem:a37c1d8b706d1bc83800419d8776eeb23"><td class="memItemLeft" align="right" valign="top">typedef hash_map&lt; <a class="el" href="shader_8h.html#a6230e1b9ecbf2d82d10856fd7e1fde46">ShaderType</a>, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShader.html#a37c1d8b706d1bc83800419d8776eeb23">shader_map</a></td></tr>
+<tr class="memdesc:a37c1d8b706d1bc83800419d8776eeb23"><td class="mdescLeft">&#160;</td><td class="mdescRight">тип для зберігання шляхів файлів шейдеру по їх типам.  <a href="classShader.html#a37c1d8b706d1bc83800419d8776eeb23">Детальніше...</a><br /></td></tr>
+<tr class="separator:a37c1d8b706d1bc83800419d8776eeb23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Загальнодоступні елементи</h2></td></tr>
+<tr class="memitem:af878abbd5ebf1a17e1df35dd9933f4e8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShader.html#af878abbd5ebf1a17e1df35dd9933f4e8">Shader</a> (const GLuint shader)</td></tr>
+<tr class="separator:af878abbd5ebf1a17e1df35dd9933f4e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3825ce04340dcb4c3fe7eea5a1c46d2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShader.html#ad3825ce04340dcb4c3fe7eea5a1c46d2">~Shader</a> () override</td></tr>
+<tr class="separator:ad3825ce04340dcb4c3fe7eea5a1c46d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4581e5cba0fa25ab7080a6848543dc58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShader.html#a4581e5cba0fa25ab7080a6848543dc58">set_bool</a> (const char *name, bool value)</td></tr>
+<tr class="memdesc:a4581e5cba0fa25ab7080a6848543dc58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Задати поле шейдеру типу <code>bool</code>  <a href="classShader.html#a4581e5cba0fa25ab7080a6848543dc58">Детальніше...</a><br /></td></tr>
+<tr class="separator:a4581e5cba0fa25ab7080a6848543dc58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5544845a48d60515371b5cb71c7bcb8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShader.html#a5544845a48d60515371b5cb71c7bcb8f">set_int</a> (const char *name, int value)</td></tr>
+<tr class="memdesc:a5544845a48d60515371b5cb71c7bcb8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Задати поле шейдеру типу <code>int</code>  <a href="classShader.html#a5544845a48d60515371b5cb71c7bcb8f">Детальніше...</a><br /></td></tr>
+<tr class="separator:a5544845a48d60515371b5cb71c7bcb8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e686eb1dd9e36aa617397520b669497"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShader.html#a6e686eb1dd9e36aa617397520b669497">set_float</a> (const char *name, float value)</td></tr>
+<tr class="memdesc:a6e686eb1dd9e36aa617397520b669497"><td class="mdescLeft">&#160;</td><td class="mdescRight">Задати поле шейдеру типу <code>float</code>  <a href="classShader.html#a6e686eb1dd9e36aa617397520b669497">Детальніше...</a><br /></td></tr>
+<tr class="separator:a6e686eb1dd9e36aa617397520b669497"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec16390e257fd63c173336869cda6488"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShader.html#aec16390e257fd63c173336869cda6488">set_vec2</a> (const char *name, vec2 value)</td></tr>
+<tr class="memdesc:aec16390e257fd63c173336869cda6488"><td class="mdescLeft">&#160;</td><td class="mdescRight">Задати поле шейдеру типу <code>vec2</code>  <a href="classShader.html#aec16390e257fd63c173336869cda6488">Детальніше...</a><br /></td></tr>
+<tr class="separator:aec16390e257fd63c173336869cda6488"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c15d92dae60d9bebc5a8e05e7e16771"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShader.html#a9c15d92dae60d9bebc5a8e05e7e16771">set_vec2f</a> (const char *name, float x, float y)</td></tr>
+<tr class="memdesc:a9c15d92dae60d9bebc5a8e05e7e16771"><td class="mdescLeft">&#160;</td><td class="mdescRight">Задати вектор-поле шейдеру типу <code>vec2</code>  <a href="classShader.html#a9c15d92dae60d9bebc5a8e05e7e16771">Детальніше...</a><br /></td></tr>
+<tr class="separator:a9c15d92dae60d9bebc5a8e05e7e16771"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5da8dde2a4756ce7f5da98f4e3dd9990"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShader.html#a5da8dde2a4756ce7f5da98f4e3dd9990">set_vec3</a> (const char *name, vec3 value)</td></tr>
+<tr class="memdesc:a5da8dde2a4756ce7f5da98f4e3dd9990"><td class="mdescLeft">&#160;</td><td class="mdescRight">Задати поле шейдеру типу <code>vec3</code>  <a href="classShader.html#a5da8dde2a4756ce7f5da98f4e3dd9990">Детальніше...</a><br /></td></tr>
+<tr class="separator:a5da8dde2a4756ce7f5da98f4e3dd9990"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ab6219e3f760caa7a586061a9894096"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShader.html#a8ab6219e3f760caa7a586061a9894096">set_vec3f</a> (const char *name, float x, float y, float z)</td></tr>
+<tr class="memdesc:a8ab6219e3f760caa7a586061a9894096"><td class="mdescLeft">&#160;</td><td class="mdescRight">Задати вектор-поле шейдеру типу <code>vec3</code>  <a href="classShader.html#a8ab6219e3f760caa7a586061a9894096">Детальніше...</a><br /></td></tr>
+<tr class="separator:a8ab6219e3f760caa7a586061a9894096"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77c606dadf7b56b825fa02621f13fac3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShader.html#a77c606dadf7b56b825fa02621f13fac3">set_vec4</a> (const char *name, vec4 value)</td></tr>
+<tr class="memdesc:a77c606dadf7b56b825fa02621f13fac3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Задати поле шейдеру типу <code>vec4</code>  <a href="classShader.html#a77c606dadf7b56b825fa02621f13fac3">Детальніше...</a><br /></td></tr>
+<tr class="separator:a77c606dadf7b56b825fa02621f13fac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52615fe5f2d1528baa909dcbeab6fcb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShader.html#a52615fe5f2d1528baa909dcbeab6fcb3">set_vec4f</a> (const char *name, float x, float y, float z, float w)</td></tr>
+<tr class="memdesc:a52615fe5f2d1528baa909dcbeab6fcb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Задати вектор-поле шейдеру типу <code>vec4</code>  <a href="classShader.html#a52615fe5f2d1528baa909dcbeab6fcb3">Детальніше...</a><br /></td></tr>
+<tr class="separator:a52615fe5f2d1528baa909dcbeab6fcb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a249093af915275a1e25d21ab70bfc4f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShader.html#a249093af915275a1e25d21ab70bfc4f9">set_mat2</a> (const char *name, mat2 mat)</td></tr>
+<tr class="memdesc:a249093af915275a1e25d21ab70bfc4f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Задати поле шейдеру типу <code>mat2</code>  <a href="classShader.html#a249093af915275a1e25d21ab70bfc4f9">Детальніше...</a><br /></td></tr>
+<tr class="separator:a249093af915275a1e25d21ab70bfc4f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d871b7a0436c84096f1b294083a3ed7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShader.html#a9d871b7a0436c84096f1b294083a3ed7">set_mat3</a> (const char *name, mat3 mat)</td></tr>
+<tr class="memdesc:a9d871b7a0436c84096f1b294083a3ed7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Задати поле шейдеру типу <code>mat3</code>  <a href="classShader.html#a9d871b7a0436c84096f1b294083a3ed7">Детальніше...</a><br /></td></tr>
+<tr class="separator:a9d871b7a0436c84096f1b294083a3ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34d5548a520489bd132f5bfbc46bb3a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShader.html#a34d5548a520489bd132f5bfbc46bb3a9">set_mat4</a> (const char *name, mat4 mat)</td></tr>
+<tr class="memdesc:a34d5548a520489bd132f5bfbc46bb3a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Задати поле шейдеру типу <code>mat4</code>  <a href="classShader.html#a34d5548a520489bd132f5bfbc46bb3a9">Детальніше...</a><br /></td></tr>
+<tr class="separator:a34d5548a520489bd132f5bfbc46bb3a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classGlBindable"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classGlBindable')"><img src="closed.png" alt="-"/>&#160;Загальнодоступні елементи успадковано з <a class="el" href="classGlBindable.html">GlBindable</a></td></tr>
+<tr class="memitem:a7099d57d5e30d61d3dd8c3578bef2369 inherit pub_methods_classGlBindable"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGlBindable.html#a7099d57d5e30d61d3dd8c3578bef2369">~GlBindable</a> ()</td></tr>
+<tr class="separator:a7099d57d5e30d61d3dd8c3578bef2369 inherit pub_methods_classGlBindable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a480ce669f04f132cdbcc576fcd5d47c3 inherit pub_methods_classGlBindable"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGlBindable.html#a480ce669f04f132cdbcc576fcd5d47c3">GlBindable</a> (const <a class="el" href="classGlBindable.html">GlBindable</a> &amp;)=delete</td></tr>
+<tr class="separator:a480ce669f04f132cdbcc576fcd5d47c3 inherit pub_methods_classGlBindable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a02a06024506fcb207432ac82cc5af7 inherit pub_methods_classGlBindable"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGlBindable.html#a2a02a06024506fcb207432ac82cc5af7">GlBindable</a> (<a class="el" href="classGlBindable.html">GlBindable</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a2a02a06024506fcb207432ac82cc5af7 inherit pub_methods_classGlBindable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53277dbd34048cff234f9633d8e1b4ac inherit pub_methods_classGlBindable"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGlBindable.html">GlBindable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGlBindable.html#a53277dbd34048cff234f9633d8e1b4ac">operator=</a> (const <a class="el" href="classGlBindable.html">GlBindable</a> &amp;)=delete</td></tr>
+<tr class="separator:a53277dbd34048cff234f9633d8e1b4ac inherit pub_methods_classGlBindable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4aa0fada538cc49d5f248ef9693fc18 inherit pub_methods_classGlBindable"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGlBindable.html">GlBindable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGlBindable.html#aa4aa0fada538cc49d5f248ef9693fc18">operator=</a> (<a class="el" href="classGlBindable.html">GlBindable</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:aa4aa0fada538cc49d5f248ef9693fc18 inherit pub_methods_classGlBindable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a7e0bbde3d01e24a83e0f0122402ab7 inherit pub_methods_classGlBindable"><td class="memItemLeft" align="right" valign="top">const GLuint &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7">get_id</a> () const</td></tr>
+<tr class="memdesc:a5a7e0bbde3d01e24a83e0f0122402ab7 inherit pub_methods_classGlBindable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Повертає індекс об'єкту OpenGL.  <a href="classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7">Детальніше...</a><br /></td></tr>
+<tr class="separator:a5a7e0bbde3d01e24a83e0f0122402ab7 inherit pub_methods_classGlBindable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a998a690af84360cd283e49f6a32ae4fd inherit pub_methods_classGlBindable"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGlBindable.html#a998a690af84360cd283e49f6a32ae4fd">get_vid</a> () const</td></tr>
+<tr class="memdesc:a998a690af84360cd283e49f6a32ae4fd inherit pub_methods_classGlBindable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Повертає індекс об'єкту OpenGL у типі <code>void*</code>  <a href="classGlBindable.html#a998a690af84360cd283e49f6a32ae4fd">Детальніше...</a><br /></td></tr>
+<tr class="separator:a998a690af84360cd283e49f6a32ae4fd inherit pub_methods_classGlBindable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a221cf1ca728041bc2545f27a5e3004e0 inherit pub_methods_classGlBindable"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGlBindable.html#a221cf1ca728041bc2545f27a5e3004e0">bind</a> () const</td></tr>
+<tr class="memdesc:a221cf1ca728041bc2545f27a5e3004e0 inherit pub_methods_classGlBindable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Прив'язує контекст до об'єкту із ціллю за замовчуванням.  <a href="classGlBindable.html#a221cf1ca728041bc2545f27a5e3004e0">Детальніше...</a><br /></td></tr>
+<tr class="separator:a221cf1ca728041bc2545f27a5e3004e0 inherit pub_methods_classGlBindable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1509aad02d36265d0a42a56ca6d33211 inherit pub_methods_classGlBindable"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGlBindable.html#a1509aad02d36265d0a42a56ca6d33211">bind</a> (GLenum target) const</td></tr>
+<tr class="memdesc:a1509aad02d36265d0a42a56ca6d33211 inherit pub_methods_classGlBindable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Прив'язує контекст до об'єкту із ціллю <code>target</code>  <a href="classGlBindable.html#a1509aad02d36265d0a42a56ca6d33211">Детальніше...</a><br /></td></tr>
+<tr class="separator:a1509aad02d36265d0a42a56ca6d33211 inherit pub_methods_classGlBindable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ddfcf2b3f3b34872005ca281a9573eb inherit pub_methods_classGlBindable"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGlBindable.html#a6ddfcf2b3f3b34872005ca281a9573eb">unbind</a> () const</td></tr>
+<tr class="memdesc:a6ddfcf2b3f3b34872005ca281a9573eb inherit pub_methods_classGlBindable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Відв'язує контекст до об'єкту із ціллю за замовчуванням.  <a href="classGlBindable.html#a6ddfcf2b3f3b34872005ca281a9573eb">Детальніше...</a><br /></td></tr>
+<tr class="separator:a6ddfcf2b3f3b34872005ca281a9573eb inherit pub_methods_classGlBindable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f192025460eb6510b281cdc69b9a731 inherit pub_methods_classGlBindable"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGlBindable.html#a3f192025460eb6510b281cdc69b9a731">unbind</a> (GLenum target) const</td></tr>
+<tr class="memdesc:a3f192025460eb6510b281cdc69b9a731 inherit pub_methods_classGlBindable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Відв'язує контекст до об'єкту із ціллю <code>target</code>  <a href="classGlBindable.html#a3f192025460eb6510b281cdc69b9a731">Детальніше...</a><br /></td></tr>
+<tr class="separator:a3f192025460eb6510b281cdc69b9a731 inherit pub_methods_classGlBindable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3194126ecaf5285842cee0e7d28c951 inherit pub_methods_classGlBindable"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGlBinder.html">GlBinder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGlBindable.html#ad3194126ecaf5285842cee0e7d28c951">binder</a> () const</td></tr>
+<tr class="memdesc:ad3194126ecaf5285842cee0e7d28c951 inherit pub_methods_classGlBindable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Повертає об'єкт прив'язки контексту із ціллю за замовчуванням  <a href="classGlBindable.html#ad3194126ecaf5285842cee0e7d28c951">Детальніше...</a><br /></td></tr>
+<tr class="separator:ad3194126ecaf5285842cee0e7d28c951 inherit pub_methods_classGlBindable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a771e840af25b89bbdd097cf0088f7ea2 inherit pub_methods_classGlBindable"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGlBinder.html">GlBinder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGlBindable.html#a771e840af25b89bbdd097cf0088f7ea2">binder</a> (GLenum target) const</td></tr>
+<tr class="memdesc:a771e840af25b89bbdd097cf0088f7ea2 inherit pub_methods_classGlBindable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Повертає об'єкт прив'язки контексту із ціллю <code>target</code>  <a href="classGlBindable.html#a771e840af25b89bbdd097cf0088f7ea2">Детальніше...</a><br /></td></tr>
+<tr class="separator:a771e840af25b89bbdd097cf0088f7ea2 inherit pub_methods_classGlBindable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Загальнодоступні статичні елементи</h2></td></tr>
+<tr class="memitem:aea711ca1659af57fe4124ea318aa59c1"><td class="memItemLeft" align="right" valign="top">static shared_ptr&lt; <a class="el" href="classShader.html">Shader</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShader.html#aea711ca1659af57fe4124ea318aa59c1">create</a> (const <a class="el" href="classShader.html#a37c1d8b706d1bc83800419d8776eeb23">shader_map</a> &amp;shaders_paths)</td></tr>
+<tr class="memdesc:aea711ca1659af57fe4124ea318aa59c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Створює об'єкт шейдеру за заданими шляхами файлів шейдерів.  <a href="classShader.html#aea711ca1659af57fe4124ea318aa59c1">Детальніше...</a><br /></td></tr>
+<tr class="separator:aea711ca1659af57fe4124ea318aa59c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Приватні елементи</h2></td></tr>
+<tr class="memitem:ad4ef4f54ecb6c7950867d4f091ffbec9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShader.html#ad4ef4f54ecb6c7950867d4f091ffbec9">_bind</a> (const GLuint <a class="el" href="classGlBindable.html#a299d9182805eb4c6b7e9e8cc9d5b4577">id</a>, GLenum target) const override</td></tr>
+<tr class="memdesc:ad4ef4f54ecb6c7950867d4f091ffbec9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Віртуальний метод, що прив'язує контекст OpenGL до шейдеру.  <a href="classShader.html#ad4ef4f54ecb6c7950867d4f091ffbec9">Детальніше...</a><br /></td></tr>
+<tr class="separator:ad4ef4f54ecb6c7950867d4f091ffbec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Додаткові успадковані елементи</h2></td></tr>
+<tr class="inherit_header pro_methods_classGlBindable"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classGlBindable')"><img src="closed.png" alt="-"/>&#160;Захищені елементи успадковано з <a class="el" href="classGlBindable.html">GlBindable</a></td></tr>
+<tr class="memitem:adeae77f0e91e38fbd0685df3d45bf240 inherit pro_methods_classGlBindable"><td class="memItemLeft" align="right" valign="top">virtual GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGlBindable.html#adeae77f0e91e38fbd0685df3d45bf240">_generate</a> () const</td></tr>
+<tr class="memdesc:adeae77f0e91e38fbd0685df3d45bf240 inherit pro_methods_classGlBindable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Віртуальний метод що створює об'єкт.  <a href="classGlBindable.html#adeae77f0e91e38fbd0685df3d45bf240">Детальніше...</a><br /></td></tr>
+<tr class="separator:adeae77f0e91e38fbd0685df3d45bf240 inherit pro_methods_classGlBindable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99e6c236fadee7211e721dd8b0d57598 inherit pro_methods_classGlBindable"><td class="memItemLeft" align="right" valign="top">virtual GLenum&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGlBindable.html#a99e6c236fadee7211e721dd8b0d57598">_default</a> () const</td></tr>
+<tr class="memdesc:a99e6c236fadee7211e721dd8b0d57598 inherit pro_methods_classGlBindable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Віртуальний метод, що задає ціль прив'язки за замовчуванням.  <a href="classGlBindable.html#a99e6c236fadee7211e721dd8b0d57598">Детальніше...</a><br /></td></tr>
+<tr class="separator:a99e6c236fadee7211e721dd8b0d57598 inherit pro_methods_classGlBindable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96cb4e25165880fceb4511f07912ef0e inherit pro_methods_classGlBindable"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGlBindable.html#a96cb4e25165880fceb4511f07912ef0e">GlBindable</a> ()</td></tr>
+<tr class="separator:a96cb4e25165880fceb4511f07912ef0e inherit pro_methods_classGlBindable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1f81eadcda1f2dd5e4b5a5673c4d00f inherit pro_methods_classGlBindable"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGlBindable.html#ad1f81eadcda1f2dd5e4b5a5673c4d00f">GlBindable</a> (const GLuint <a class="el" href="classGlBindable.html#a299d9182805eb4c6b7e9e8cc9d5b4577">id</a>)</td></tr>
+<tr class="memdesc:ad1f81eadcda1f2dd5e4b5a5673c4d00f inherit pro_methods_classGlBindable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор з параметром.  <a href="classGlBindable.html#ad1f81eadcda1f2dd5e4b5a5673c4d00f">Детальніше...</a><br /></td></tr>
+<tr class="separator:ad1f81eadcda1f2dd5e4b5a5673c4d00f inherit pro_methods_classGlBindable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Детальний опис</h2>
+<div class="textblock"><p>Клас взаємодії з шейдером у видеокарті. </p>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="shader_8h_source.html">shader.h</a>, рядок <a class="el" href="shader_8h_source.html#l00031">31</a></p>
+</div><h2 class="groupheader">Опис типів користувача</h2>
+<a id="a37c1d8b706d1bc83800419d8776eeb23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37c1d8b706d1bc83800419d8776eeb23">&#9670;&nbsp;</a></span>shader_map</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef hash_map&lt;<a class="el" href="shader_8h.html#a6230e1b9ecbf2d82d10856fd7e1fde46">ShaderType</a>, string&gt; <a class="el" href="classShader.html#a37c1d8b706d1bc83800419d8776eeb23">Shader::shader_map</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>тип для зберігання шляхів файлів шейдеру по їх типам. </p>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="shader_8h_source.html">shader.h</a>, рядок <a class="el" href="shader_8h_source.html#l00042">42</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(и)</h2>
+<a id="af878abbd5ebf1a17e1df35dd9933f4e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af878abbd5ebf1a17e1df35dd9933f4e8">&#9670;&nbsp;</a></span>Shader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Shader::Shader </td>
+          <td>(</td>
+          <td class="paramtype">const GLuint&#160;</td>
+          <td class="paramname"><em>shader</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Див. визначення в файлі <a class="el" href="shader_8cpp_source.html">shader.cpp</a>, рядок <a class="el" href="shader_8cpp_source.html#l00118">118</a></p>
+
+</div>
+</div>
+<a id="ad3825ce04340dcb4c3fe7eea5a1c46d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3825ce04340dcb4c3fe7eea5a1c46d2">&#9670;&nbsp;</a></span>~Shader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Shader::~Shader </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Див. визначення в файлі <a class="el" href="shader_8cpp_source.html">shader.cpp</a>, рядок <a class="el" href="shader_8cpp_source.html#l00120">120</a></p>
+<div class="dynheader">
+Граф всіх викликів цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="classShader_ad3825ce04340dcb4c3fe7eea5a1c46d2_cgraph.png" border="0" usemap="#aclassShader_ad3825ce04340dcb4c3fe7eea5a1c46d2_cgraph" alt=""/></div>
+<map name="aclassShader_ad3825ce04340dcb4c3fe7eea5a1c46d2_cgraph" id="aclassShader_ad3825ce04340dcb4c3fe7eea5a1c46d2_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,125,32"/>
+<area shape="rect" href="classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7" title="Повертає індекс об&#39;єкту OpenGL." alt="" coords="173,5,301,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Опис методів компонент</h2>
+<a id="ad4ef4f54ecb6c7950867d4f091ffbec9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4ef4f54ecb6c7950867d4f091ffbec9">&#9670;&nbsp;</a></span>_bind()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Shader::_bind </td>
+          <td>(</td>
+          <td class="paramtype">const GLuint&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLenum&#160;</td>
+          <td class="paramname"><em>target</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Віртуальний метод, що прив'язує контекст OpenGL до шейдеру. </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>індекс шейдеру OpenGL </td></tr>
+    <tr><td class="paramname">target</td><td>не використовується, реалізован для інтерфейсу <code><a class="el" href="classGlBindable.html#ae3213a00db0e6f6dfc356a06a5b1e6d6" title="Віртуальний метод, що прив&#39;язує контекст OpenGL до об&#39;єкту.">GlBindable::_bind</a></code> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Переозначення з <a class="el" href="classGlBindable.html#ae3213a00db0e6f6dfc356a06a5b1e6d6">GlBindable</a>.</p>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="shader_8cpp_source.html">shader.cpp</a>, рядок <a class="el" href="shader_8cpp_source.html#l00113">113</a></p>
+
+</div>
+</div>
+<a id="aea711ca1659af57fe4124ea318aa59c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea711ca1659af57fe4124ea318aa59c1">&#9670;&nbsp;</a></span>create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">shared_ptr&lt; <a class="el" href="classShader.html">Shader</a> &gt; Shader::create </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classShader.html#a37c1d8b706d1bc83800419d8776eeb23">shader_map</a> &amp;&#160;</td>
+          <td class="paramname"><em>shaders_paths</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Створює об'єкт шейдеру за заданими шляхами файлів шейдерів. </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shaders_paths</td><td>шляхи файлів шейдеру по їх типам </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Повертає</dt><dd>розумний вказівник на об'єкт шейдеру </dd></dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="shader_8cpp_source.html">shader.cpp</a>, рядок <a class="el" href="shader_8cpp_source.html#l00124">124</a></p>
+<div class="dynheader">
+Граф всіх викликів цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="classShader_aea711ca1659af57fe4124ea318aa59c1_cgraph.png" border="0" usemap="#aclassShader_aea711ca1659af57fe4124ea318aa59c1_cgraph" alt=""/></div>
+<map name="aclassShader_aea711ca1659af57fe4124ea318aa59c1_cgraph" id="aclassShader_aea711ca1659af57fe4124ea318aa59c1_cgraph">
+<area shape="rect" title="Створює об&#39;єкт шейдеру за заданими шляхами файлів шейдерів." alt="" coords="5,31,112,57"/>
+<area shape="rect" href="classShaderSource.html#a40a8e5a541a0f30dacad32b75b995586" title=" " alt="" coords="160,31,332,57"/>
+<area shape="rect" href="classShaderSource.html#a992c5f061e5448ee1d35bdc272fb5702" title=" " alt="" coords="380,5,528,32"/>
+<area shape="rect" href="shader_8cpp.html#a4bfab66f3e39943f6389bb854900e17b" title=" " alt="" coords="405,56,503,83"/>
+<area shape="rect" href="shader_8cpp.html#a9ab6260d9d6a7ad27211ba2dde544a8d" title=" " alt="" coords="576,5,679,32"/>
+</map>
+</div>
+<div class="dynheader">
+Граф викликів для цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="classShader_aea711ca1659af57fe4124ea318aa59c1_icgraph.png" border="0" usemap="#aclassShader_aea711ca1659af57fe4124ea318aa59c1_icgraph" alt=""/></div>
+<map name="aclassShader_aea711ca1659af57fe4124ea318aa59c1_icgraph" id="aclassShader_aea711ca1659af57fe4124ea318aa59c1_icgraph">
+<area shape="rect" title="Створює об&#39;єкт шейдеру за заданими шляхами файлів шейдерів." alt="" coords="199,5,305,32"/>
+<area shape="rect" href="structContext.html#a6b8babb597ca6c92a2ce8f9b62626a27" title="Завантажує та компілює шейдер." alt="" coords="5,5,151,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4581e5cba0fa25ab7080a6848543dc58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4581e5cba0fa25ab7080a6848543dc58">&#9670;&nbsp;</a></span>set_bool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Shader::set_bool </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Задати поле шейдеру типу <code>bool</code> </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>ім'я поля </td></tr>
+    <tr><td class="paramname">value</td><td>значення поля </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="shader_8cpp_source.html">shader.cpp</a>, рядок <a class="el" href="shader_8cpp_source.html#l00134">134</a></p>
+<div class="dynheader">
+Граф всіх викликів цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="classShader_a4581e5cba0fa25ab7080a6848543dc58_cgraph.png" border="0" usemap="#aclassShader_a4581e5cba0fa25ab7080a6848543dc58_cgraph" alt=""/></div>
+<map name="aclassShader_a4581e5cba0fa25ab7080a6848543dc58_cgraph" id="aclassShader_a4581e5cba0fa25ab7080a6848543dc58_cgraph">
+<area shape="rect" title="Задати поле шейдеру типу bool" alt="" coords="5,5,125,32"/>
+<area shape="rect" href="classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7" title="Повертає індекс об&#39;єкту OpenGL." alt="" coords="173,5,301,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6e686eb1dd9e36aa617397520b669497"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e686eb1dd9e36aa617397520b669497">&#9670;&nbsp;</a></span>set_float()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Shader::set_float </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Задати поле шейдеру типу <code>float</code> </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>ім'я поля </td></tr>
+    <tr><td class="paramname">value</td><td>значення поля </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="shader_8cpp_source.html">shader.cpp</a>, рядок <a class="el" href="shader_8cpp_source.html#l00142">142</a></p>
+<div class="dynheader">
+Граф всіх викликів цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="classShader_a6e686eb1dd9e36aa617397520b669497_cgraph.png" border="0" usemap="#aclassShader_a6e686eb1dd9e36aa617397520b669497_cgraph" alt=""/></div>
+<map name="aclassShader_a6e686eb1dd9e36aa617397520b669497_cgraph" id="aclassShader_a6e686eb1dd9e36aa617397520b669497_cgraph">
+<area shape="rect" title="Задати поле шейдеру типу float" alt="" coords="5,5,127,32"/>
+<area shape="rect" href="classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7" title="Повертає індекс об&#39;єкту OpenGL." alt="" coords="175,5,303,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5544845a48d60515371b5cb71c7bcb8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5544845a48d60515371b5cb71c7bcb8f">&#9670;&nbsp;</a></span>set_int()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Shader::set_int </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Задати поле шейдеру типу <code>int</code> </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>ім'я поля </td></tr>
+    <tr><td class="paramname">value</td><td>значення поля </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="shader_8cpp_source.html">shader.cpp</a>, рядок <a class="el" href="shader_8cpp_source.html#l00138">138</a></p>
+<div class="dynheader">
+Граф всіх викликів цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="classShader_a5544845a48d60515371b5cb71c7bcb8f_cgraph.png" border="0" usemap="#aclassShader_a5544845a48d60515371b5cb71c7bcb8f_cgraph" alt=""/></div>
+<map name="aclassShader_a5544845a48d60515371b5cb71c7bcb8f_cgraph" id="aclassShader_a5544845a48d60515371b5cb71c7bcb8f_cgraph">
+<area shape="rect" title="Задати поле шейдеру типу int" alt="" coords="5,5,116,32"/>
+<area shape="rect" href="classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7" title="Повертає індекс об&#39;єкту OpenGL." alt="" coords="164,5,292,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a249093af915275a1e25d21ab70bfc4f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a249093af915275a1e25d21ab70bfc4f9">&#9670;&nbsp;</a></span>set_mat2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Shader::set_mat2 </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mat2&#160;</td>
+          <td class="paramname"><em>mat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Задати поле шейдеру типу <code>mat2</code> </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>ім'я поля </td></tr>
+    <tr><td class="paramname">mat</td><td>значення поля </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="shader_8cpp_source.html">shader.cpp</a>, рядок <a class="el" href="shader_8cpp_source.html#l00176">176</a></p>
+<div class="dynheader">
+Граф всіх викликів цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="classShader_a249093af915275a1e25d21ab70bfc4f9_cgraph.png" border="0" usemap="#aclassShader_a249093af915275a1e25d21ab70bfc4f9_cgraph" alt=""/></div>
+<map name="aclassShader_a249093af915275a1e25d21ab70bfc4f9_cgraph" id="aclassShader_a249093af915275a1e25d21ab70bfc4f9_cgraph">
+<area shape="rect" title="Задати поле шейдеру типу mat2" alt="" coords="5,5,131,32"/>
+<area shape="rect" href="classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7" title="Повертає індекс об&#39;єкту OpenGL." alt="" coords="179,5,307,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9d871b7a0436c84096f1b294083a3ed7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d871b7a0436c84096f1b294083a3ed7">&#9670;&nbsp;</a></span>set_mat3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Shader::set_mat3 </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mat3&#160;</td>
+          <td class="paramname"><em>mat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Задати поле шейдеру типу <code>mat3</code> </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>ім'я поля </td></tr>
+    <tr><td class="paramname">mat</td><td>значення поля </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="shader_8cpp_source.html">shader.cpp</a>, рядок <a class="el" href="shader_8cpp_source.html#l00181">181</a></p>
+<div class="dynheader">
+Граф всіх викликів цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="classShader_a9d871b7a0436c84096f1b294083a3ed7_cgraph.png" border="0" usemap="#aclassShader_a9d871b7a0436c84096f1b294083a3ed7_cgraph" alt=""/></div>
+<map name="aclassShader_a9d871b7a0436c84096f1b294083a3ed7_cgraph" id="aclassShader_a9d871b7a0436c84096f1b294083a3ed7_cgraph">
+<area shape="rect" title="Задати поле шейдеру типу mat3" alt="" coords="5,5,131,32"/>
+<area shape="rect" href="classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7" title="Повертає індекс об&#39;єкту OpenGL." alt="" coords="179,5,307,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a34d5548a520489bd132f5bfbc46bb3a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34d5548a520489bd132f5bfbc46bb3a9">&#9670;&nbsp;</a></span>set_mat4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Shader::set_mat4 </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mat4&#160;</td>
+          <td class="paramname"><em>mat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Задати поле шейдеру типу <code>mat4</code> </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>ім'я поля </td></tr>
+    <tr><td class="paramname">mat</td><td>значення поля </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="shader_8cpp_source.html">shader.cpp</a>, рядок <a class="el" href="shader_8cpp_source.html#l00186">186</a></p>
+<div class="dynheader">
+Граф всіх викликів цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="classShader_a34d5548a520489bd132f5bfbc46bb3a9_cgraph.png" border="0" usemap="#aclassShader_a34d5548a520489bd132f5bfbc46bb3a9_cgraph" alt=""/></div>
+<map name="aclassShader_a34d5548a520489bd132f5bfbc46bb3a9_cgraph" id="aclassShader_a34d5548a520489bd132f5bfbc46bb3a9_cgraph">
+<area shape="rect" title="Задати поле шейдеру типу mat4" alt="" coords="5,5,131,32"/>
+<area shape="rect" href="classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7" title="Повертає індекс об&#39;єкту OpenGL." alt="" coords="179,5,307,32"/>
+</map>
+</div>
+<div class="dynheader">
+Граф викликів для цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="classShader_a34d5548a520489bd132f5bfbc46bb3a9_icgraph.png" border="0" usemap="#aclassShader_a34d5548a520489bd132f5bfbc46bb3a9_icgraph" alt=""/></div>
+<map name="aclassShader_a34d5548a520489bd132f5bfbc46bb3a9_icgraph" id="aclassShader_a34d5548a520489bd132f5bfbc46bb3a9_icgraph">
+<area shape="rect" title="Задати поле шейдеру типу mat4" alt="" coords="148,5,273,32"/>
+<area shape="rect" href="classObject.html#aa23e007d3b922a56f11510c5481a3e07" title="Відображує об&#39;єкт" alt="" coords="5,5,100,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aec16390e257fd63c173336869cda6488"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec16390e257fd63c173336869cda6488">&#9670;&nbsp;</a></span>set_vec2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Shader::set_vec2 </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vec2&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Задати поле шейдеру типу <code>vec2</code> </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>ім'я поля </td></tr>
+    <tr><td class="paramname">value</td><td>значення поля </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="shader_8cpp_source.html">shader.cpp</a>, рядок <a class="el" href="shader_8cpp_source.html#l00146">146</a></p>
+<div class="dynheader">
+Граф всіх викликів цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="classShader_aec16390e257fd63c173336869cda6488_cgraph.png" border="0" usemap="#aclassShader_aec16390e257fd63c173336869cda6488_cgraph" alt=""/></div>
+<map name="aclassShader_aec16390e257fd63c173336869cda6488_cgraph" id="aclassShader_aec16390e257fd63c173336869cda6488_cgraph">
+<area shape="rect" title="Задати поле шейдеру типу vec2" alt="" coords="5,5,128,32"/>
+<area shape="rect" href="classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7" title="Повертає індекс об&#39;єкту OpenGL." alt="" coords="176,5,304,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9c15d92dae60d9bebc5a8e05e7e16771"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c15d92dae60d9bebc5a8e05e7e16771">&#9670;&nbsp;</a></span>set_vec2f()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Shader::set_vec2f </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Задати вектор-поле шейдеру типу <code>vec2</code> </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>ім'я поля </td></tr>
+    <tr><td class="paramname">x</td><td>значення першого элементу вектор-поля </td></tr>
+    <tr><td class="paramname">y</td><td>значення другого элементу вектор-поля </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="shader_8cpp_source.html">shader.cpp</a>, рядок <a class="el" href="shader_8cpp_source.html#l00151">151</a></p>
+<div class="dynheader">
+Граф всіх викликів цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="classShader_a9c15d92dae60d9bebc5a8e05e7e16771_cgraph.png" border="0" usemap="#aclassShader_a9c15d92dae60d9bebc5a8e05e7e16771_cgraph" alt=""/></div>
+<map name="aclassShader_a9c15d92dae60d9bebc5a8e05e7e16771_cgraph" id="aclassShader_a9c15d92dae60d9bebc5a8e05e7e16771_cgraph">
+<area shape="rect" title="Задати вектор&#45;поле шейдеру типу vec2" alt="" coords="5,5,132,32"/>
+<area shape="rect" href="classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7" title="Повертає індекс об&#39;єкту OpenGL." alt="" coords="180,5,308,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5da8dde2a4756ce7f5da98f4e3dd9990"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5da8dde2a4756ce7f5da98f4e3dd9990">&#9670;&nbsp;</a></span>set_vec3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Shader::set_vec3 </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vec3&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Задати поле шейдеру типу <code>vec3</code> </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>ім'я поля </td></tr>
+    <tr><td class="paramname">value</td><td>значення поля </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="shader_8cpp_source.html">shader.cpp</a>, рядок <a class="el" href="shader_8cpp_source.html#l00156">156</a></p>
+<div class="dynheader">
+Граф всіх викликів цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="classShader_a5da8dde2a4756ce7f5da98f4e3dd9990_cgraph.png" border="0" usemap="#aclassShader_a5da8dde2a4756ce7f5da98f4e3dd9990_cgraph" alt=""/></div>
+<map name="aclassShader_a5da8dde2a4756ce7f5da98f4e3dd9990_cgraph" id="aclassShader_a5da8dde2a4756ce7f5da98f4e3dd9990_cgraph">
+<area shape="rect" title="Задати поле шейдеру типу vec3" alt="" coords="5,5,128,32"/>
+<area shape="rect" href="classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7" title="Повертає індекс об&#39;єкту OpenGL." alt="" coords="176,5,304,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8ab6219e3f760caa7a586061a9894096"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ab6219e3f760caa7a586061a9894096">&#9670;&nbsp;</a></span>set_vec3f()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Shader::set_vec3f </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>z</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Задати вектор-поле шейдеру типу <code>vec3</code> </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>ім'я поля </td></tr>
+    <tr><td class="paramname">x</td><td>значення першого элементу вектор-поля </td></tr>
+    <tr><td class="paramname">y</td><td>значення другого элементу вектор-поля </td></tr>
+    <tr><td class="paramname">z</td><td>значення третього элементу вектор-поля </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="shader_8cpp_source.html">shader.cpp</a>, рядок <a class="el" href="shader_8cpp_source.html#l00161">161</a></p>
+<div class="dynheader">
+Граф всіх викликів цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="classShader_a8ab6219e3f760caa7a586061a9894096_cgraph.png" border="0" usemap="#aclassShader_a8ab6219e3f760caa7a586061a9894096_cgraph" alt=""/></div>
+<map name="aclassShader_a8ab6219e3f760caa7a586061a9894096_cgraph" id="aclassShader_a8ab6219e3f760caa7a586061a9894096_cgraph">
+<area shape="rect" title="Задати вектор&#45;поле шейдеру типу vec3" alt="" coords="5,5,132,32"/>
+<area shape="rect" href="classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7" title="Повертає індекс об&#39;єкту OpenGL." alt="" coords="180,5,308,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a77c606dadf7b56b825fa02621f13fac3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77c606dadf7b56b825fa02621f13fac3">&#9670;&nbsp;</a></span>set_vec4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Shader::set_vec4 </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vec4&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Задати поле шейдеру типу <code>vec4</code> </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>ім'я поля </td></tr>
+    <tr><td class="paramname">value</td><td>значення поля </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="shader_8cpp_source.html">shader.cpp</a>, рядок <a class="el" href="shader_8cpp_source.html#l00166">166</a></p>
+<div class="dynheader">
+Граф всіх викликів цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="classShader_a77c606dadf7b56b825fa02621f13fac3_cgraph.png" border="0" usemap="#aclassShader_a77c606dadf7b56b825fa02621f13fac3_cgraph" alt=""/></div>
+<map name="aclassShader_a77c606dadf7b56b825fa02621f13fac3_cgraph" id="aclassShader_a77c606dadf7b56b825fa02621f13fac3_cgraph">
+<area shape="rect" title="Задати поле шейдеру типу vec4" alt="" coords="5,5,128,32"/>
+<area shape="rect" href="classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7" title="Повертає індекс об&#39;єкту OpenGL." alt="" coords="176,5,304,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a52615fe5f2d1528baa909dcbeab6fcb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52615fe5f2d1528baa909dcbeab6fcb3">&#9670;&nbsp;</a></span>set_vec4f()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Shader::set_vec4f </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>z</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>w</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Задати вектор-поле шейдеру типу <code>vec4</code> </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>ім'я поля </td></tr>
+    <tr><td class="paramname">x</td><td>значення першого элементу вектор-поля </td></tr>
+    <tr><td class="paramname">y</td><td>значення другого элементу вектор-поля </td></tr>
+    <tr><td class="paramname">z</td><td>значення третього элементу вектор-поля </td></tr>
+    <tr><td class="paramname">w</td><td>значення четвертого элементу вектор-поля </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="shader_8cpp_source.html">shader.cpp</a>, рядок <a class="el" href="shader_8cpp_source.html#l00171">171</a></p>
+<div class="dynheader">
+Граф всіх викликів цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="classShader_a52615fe5f2d1528baa909dcbeab6fcb3_cgraph.png" border="0" usemap="#aclassShader_a52615fe5f2d1528baa909dcbeab6fcb3_cgraph" alt=""/></div>
+<map name="aclassShader_a52615fe5f2d1528baa909dcbeab6fcb3_cgraph" id="aclassShader_a52615fe5f2d1528baa909dcbeab6fcb3_cgraph">
+<area shape="rect" title="Задати вектор&#45;поле шейдеру типу vec4" alt="" coords="5,5,132,32"/>
+<area shape="rect" href="classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7" title="Повертає індекс об&#39;єкту OpenGL." alt="" coords="180,5,308,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>Документація цих класів була створена з файлів:<ul>
+<li>osdo/<a class="el" href="shader_8h_source.html">shader.h</a></li>
+<li>osdo/<a class="el" href="shader_8cpp_source.html">shader.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

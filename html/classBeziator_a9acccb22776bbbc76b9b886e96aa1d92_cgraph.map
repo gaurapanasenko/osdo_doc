@@ -1,0 +1,4 @@
+<map id="Beziator::draw" name="Beziator::draw">
+<area shape="rect" id="node1" title="Відображує модель." alt="" coords="5,5,112,32"/>
+<area shape="rect" id="node2" href="$classMesh.html#a93447b5a86c72070e7d6ad6118058351" title="Відображує меш у певному режимі. Див. glDrawElements." alt="" coords="160,5,289,32"/>
+</map>

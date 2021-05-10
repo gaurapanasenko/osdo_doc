@@ -1,0 +1,326 @@
+\hypertarget{window_8cpp_source}{}\doxysubsection{window.\+cpp}
+\label{window_8cpp_source}\index{druidengine/window.cpp@{druidengine/window.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{window_8h}{window.h}}"{}}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{conf_8h}{conf.h}}"{}}}
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#include <GLFW/glfw3.h>}}
+\DoxyCodeLine{00004 \textcolor{preprocessor}{\#include <imgui.h>}}
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#include "{}imgui\_impl\_glfw.h"{}}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#include "{}imgui\_impl\_opengl2.h"{}}}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00008}\mbox{\hyperlink{structkey__map__t}{00008}} \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structkey__map__t}{key\_map\_t}} \{}
+\DoxyCodeLine{00009     \textcolor{keyword}{enum} \mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211}{KEYS}} \mbox{\hyperlink{structkey__map__t_a77017629c67076f140e71fb6daf0506c}{key}};}
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00010}\mbox{\hyperlink{structmouse__map__t_a4952e050775cfb82af9fec3d05593f6b}{00010}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{structkey__map__t_a0615f14224b07352424fedd0919c1e47}{glfw\_key}};}
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00011}\mbox{\hyperlink{window_8cpp_a234b5b1147e2fc05d2b0cebe692e3834}{00011}} \} \mbox{\hyperlink{window_8cpp_a234b5b1147e2fc05d2b0cebe692e3834}{key\_map\_t}};}
+\DoxyCodeLine{00012 }
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00013}\mbox{\hyperlink{structmouse__map__t}{00013}} \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structmouse__map__t}{mouse\_map\_t}} \{}
+\DoxyCodeLine{00014     \textcolor{keyword}{enum} \mbox{\hyperlink{window_8h_a13dc1bbe931fd8c6b75fed89f1e23256}{BUTTONS}} \mbox{\hyperlink{structmouse__map__t_a4952e050775cfb82af9fec3d05593f6b}{btn}};}
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00015}\mbox{\hyperlink{structmouse__map__t_a61e7a271fd8c99a0f1f7c9ba5e1b152e}{00015}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{structmouse__map__t_a61e7a271fd8c99a0f1f7c9ba5e1b152e}{glfw\_btn}};}
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00016}\mbox{\hyperlink{window_8cpp_a648f15cfd900029e8b824ff741552943}{00016}} \} \mbox{\hyperlink{window_8cpp_a648f15cfd900029e8b824ff741552943}{mouse\_map\_t}};}
+\DoxyCodeLine{00017 }
+\DoxyCodeLine{00018 \textcolor{keyword}{static} \textcolor{keyword}{const} \mbox{\hyperlink{structkey__map__t}{key\_map\_t}} key\_list[] = \{}
+\DoxyCodeLine{00019     \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211ae7a3a4540031b038014294aa6743a7a4}{KEY\_DELETE}},        GLFW\_KEY\_DELETE\},}
+\DoxyCodeLine{00020     \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a2a662d23aadd7106a3a2afdfd5d426ed}{KEY\_ENTER}},         GLFW\_KEY\_ENTER\},}
+\DoxyCodeLine{00021     \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a60c75f9c8eded88ef76c0c94da27963c}{KEY\_TAB}},           GLFW\_KEY\_TAB\},}
+\DoxyCodeLine{00022     \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211aa3cd0158e01f834cebcfb3fc5578df4b}{KEY\_BACKSPACE}},     GLFW\_KEY\_BACKSPACE\},}
+\DoxyCodeLine{00023     \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a0848a442d907968b211b97bc2bd88acd}{KEY\_UP}},            GLFW\_KEY\_UP\},}
+\DoxyCodeLine{00024     \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211aa9cdac7967bf7d88fdb761138a2a3416}{KEY\_DOWN}},          GLFW\_KEY\_DOWN\},}
+\DoxyCodeLine{00025     \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a612120b69c7dfd46086db7aaebdbcf65}{KEY\_LEFT}},          GLFW\_KEY\_LEFT\},}
+\DoxyCodeLine{00026     \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a6504370d9c6391e1a9da6a1a529b089d}{KEY\_RIGHT}},         GLFW\_KEY\_RIGHT\},}
+\DoxyCodeLine{00027     \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211ad5b83418c285e43af5d3a87b4d4049d7}{KEY\_HOME}},          GLFW\_KEY\_HOME\},}
+\DoxyCodeLine{00028     \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211aa8adb6fcb92dec58fb19410eacfdd403}{KEY\_END}},           GLFW\_KEY\_END\},}
+\DoxyCodeLine{00029     \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211ad435c2e06f3d05728ed52ede8a68295b}{KEY\_PAGE\_UP}},       GLFW\_KEY\_PAGE\_UP\},}
+\DoxyCodeLine{00030     \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211ada883d03c9fb53deb33064a13ca97639}{KEY\_PAGE\_DOWN}},     GLFW\_KEY\_PAGE\_DOWN\},}
+\DoxyCodeLine{00031     \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a5d5eb3601a49913c3ab0f9bcbdc5918a}{KEY\_LEFT\_SHIFT}},    GLFW\_KEY\_LEFT\_SHIFT\},}
+\DoxyCodeLine{00032     \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a125ed6244c499a097a3e1cb111c8fa9c}{KEY\_RIGHT\_SHIFT}},   GLFW\_KEY\_RIGHT\_SHIFT\},}
+\DoxyCodeLine{00033     \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a7c9c57571c47a267791fabb5e5dca6f0}{KEY\_LEFT\_CONTROL}},  GLFW\_KEY\_LEFT\_CONTROL\},}
+\DoxyCodeLine{00034     \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a7952b899556457f74a9ed51a0484a323}{KEY\_RIGHT\_CONTROL}}, GLFW\_KEY\_RIGHT\_CONTROL\},}
+\DoxyCodeLine{00035 }
+\DoxyCodeLine{00036     \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a35bcc2bc85513df4f3897a9d64a9c51c}{KEY\_1}}, GLFW\_KEY\_1\}, \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a2333d7c312aa98622c41e74c5d13e8de}{KEY\_2}}, GLFW\_KEY\_2\}, \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211aef054680a9be7da17d196e15aec894f8}{KEY\_3}}, GLFW\_KEY\_3\},}
+\DoxyCodeLine{00037     \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211ae9f20352b4ef69ae68b9ff44abadfd79}{KEY\_4}}, GLFW\_KEY\_4\}, \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211aed864c0209ba46546ba112f6c36e0cc4}{KEY\_5}}, GLFW\_KEY\_5\}, \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a2fe7fe99bcb0fd90bf4234be9e4ce5be}{KEY\_6}}, GLFW\_KEY\_6\},}
+\DoxyCodeLine{00038     \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211ae78c88108d428cb8066e7a056195f489}{KEY\_7}}, GLFW\_KEY\_7\}, \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211aab8917d426f9be27c95c0d3810006d7b}{KEY\_8}}, GLFW\_KEY\_8\}, \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a601382e2da6215882c129b43b3384611}{KEY\_9}}, GLFW\_KEY\_9\},}
+\DoxyCodeLine{00039     \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a6b30f8af6c880e1aca01b91aa13c6ff9}{KEY\_0}}, GLFW\_KEY\_0\},}
+\DoxyCodeLine{00040 }
+\DoxyCodeLine{00041     \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211ac8234231b36474d3666ad56752fe6f5e}{KEY\_Q}}, GLFW\_KEY\_Q\}, \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a2e6a652ccd7afc5ce75ac4d902b6a60a}{KEY\_W}}, GLFW\_KEY\_W\}, \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a2af9840d90c49239339bfd42f9f32868}{KEY\_E}}, GLFW\_KEY\_E\},}
+\DoxyCodeLine{00042     \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211aa3ec8a2ffd5b0e200db5ebe7b65515ff}{KEY\_R}}, GLFW\_KEY\_R\}, \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a6167a8727e73df1eb96f19c2460766c9}{KEY\_T}}, GLFW\_KEY\_T\}, \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a5d44524b2a6090fa97aa9353d69f67a3}{KEY\_Y}}, GLFW\_KEY\_Y\},}
+\DoxyCodeLine{00043     \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211ad4961a6c7ea9d008812aaaa8c4ea9730}{KEY\_U}}, GLFW\_KEY\_U\}, \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a2c98fd67709a9fd5409498d4f7175877}{KEY\_I}}, GLFW\_KEY\_I\}, \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211ae7edd672641b587364ea4a0c89388290}{KEY\_O}}, GLFW\_KEY\_O\},}
+\DoxyCodeLine{00044     \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a0a4c7291c92b7fc84da27a363dc53fa6}{KEY\_P}}, GLFW\_KEY\_P\},}
+\DoxyCodeLine{00045 }
+\DoxyCodeLine{00046     \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211aa7b3a3d0503a46bec51c6e3da95747cc}{KEY\_A}}, GLFW\_KEY\_A\}, \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211abb2f0ce8efc3067757dbf091437f89f5}{KEY\_S}}, GLFW\_KEY\_S\}, \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a2fd73a4d527efe137e8f259db2092766}{KEY\_D}}, GLFW\_KEY\_D\},}
+\DoxyCodeLine{00047     \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a3c069efeb1638c2ab0d2a50ff45b529f}{KEY\_F}}, GLFW\_KEY\_F\}, \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a4ec980867be1d5bded2bccdee2ebd601}{KEY\_G}}, GLFW\_KEY\_G\}, \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a41d1aa573d29ca6a9eb429a680dc53cd}{KEY\_H}}, GLFW\_KEY\_H\},}
+\DoxyCodeLine{00048     \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211abb3108883bee68e265b554542484c5d7}{KEY\_J}}, GLFW\_KEY\_J\}, \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a6b0799a9923c55f8a73550a371ea69f6}{KEY\_K}}, GLFW\_KEY\_K\}, \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211aece16de35a5ea11f9b228c9376bebc62}{KEY\_L}}, GLFW\_KEY\_L\},}
+\DoxyCodeLine{00049 }
+\DoxyCodeLine{00050     \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211aadc60d2de1d019604547c0df88f84cda}{KEY\_Z}}, GLFW\_KEY\_Z\}, \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a480a807305121d41673b8c208898f497}{KEY\_X}}, GLFW\_KEY\_X\}, \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a9cabc5fc0d1f7f6a78e78b8ff29dbb61}{KEY\_C}}, GLFW\_KEY\_C\},}
+\DoxyCodeLine{00051     \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211afa1c237398bdfc48e5c1a55ce4a977fe}{KEY\_V}}, GLFW\_KEY\_V\}, \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a10072b5ee7aa1faf316434ecc9e2bb3a}{KEY\_B}}, GLFW\_KEY\_B\}, \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211aa606b8c6deaec8077387975d195cd824}{KEY\_N}}, GLFW\_KEY\_N\},}
+\DoxyCodeLine{00052     \{\mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211a0d94112555886427204ad0c0711ca327}{KEY\_M}}, GLFW\_KEY\_M\},}
+\DoxyCodeLine{00053 \};}
+\DoxyCodeLine{00054 }
+\DoxyCodeLine{00055 \textcolor{keyword}{static} \textcolor{keyword}{const} \mbox{\hyperlink{structmouse__map__t}{mouse\_map\_t}} mouse\_list[] = \{}
+\DoxyCodeLine{00056     \{\mbox{\hyperlink{window_8h_a13dc1bbe931fd8c6b75fed89f1e23256a3c2e62b97b30d850c5539d0f3a6d0958}{MOUSE\_BUTTON\_LEFT}}, GLFW\_MOUSE\_BUTTON\_LEFT\},}
+\DoxyCodeLine{00057     \{\mbox{\hyperlink{window_8h_a13dc1bbe931fd8c6b75fed89f1e23256a9b37b35bcb71185dafcb151b3dde9a06}{MOUSE\_BUTTON\_MIDDLE}}, GLFW\_MOUSE\_BUTTON\_MIDDLE\},}
+\DoxyCodeLine{00058     \{\mbox{\hyperlink{window_8h_a13dc1bbe931fd8c6b75fed89f1e23256a5b61e63e73f15ed6af97d5cd3124bc6f}{MOUSE\_BUTTON\_RIGHT}}, GLFW\_MOUSE\_BUTTON\_RIGHT\},}
+\DoxyCodeLine{00059 \};}
+\DoxyCodeLine{00060 }
+\DoxyCodeLine{00061 \textcolor{keyword}{static} \textcolor{keywordtype}{bool} map\_inited = \textcolor{keyword}{false};}
+\DoxyCodeLine{00062 \textcolor{keyword}{static} \textcolor{keywordtype}{int} key\_glfw\_map[60];}
+\DoxyCodeLine{00063 \textcolor{keyword}{static} \textcolor{keyword}{enum} \mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211}{KEYS}} glfw\_key\_map[1024];}
+\DoxyCodeLine{00064 \textcolor{keyword}{static} \textcolor{keywordtype}{int} btn\_glfw\_map[60];}
+\DoxyCodeLine{00065 \textcolor{keyword}{static} \textcolor{keyword}{enum} \mbox{\hyperlink{window_8h_a13dc1bbe931fd8c6b75fed89f1e23256}{BUTTONS}} glfw\_btn\_map[1024];}
+\DoxyCodeLine{00066 }
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00067}\mbox{\hyperlink{window_8cpp_af6765bf7aae4ba2a0d60d0091a3f5f61}{00067}} \textcolor{keywordtype}{void} \mbox{\hyperlink{window_8cpp_af6765bf7aae4ba2a0d60d0091a3f5f61}{map\_init}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{00068     \textcolor{keywordflow}{if} (!map\_inited) \{}
+\DoxyCodeLine{00069         map\_inited = \textcolor{keyword}{true};}
+\DoxyCodeLine{00070         \textcolor{keyword}{const} \textcolor{keywordtype}{void}* end;}
+\DoxyCodeLine{00071         end = key\_list + \textcolor{keyword}{sizeof}(key\_list) / \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structkey__map__t}{key\_map\_t}});}
+\DoxyCodeLine{00072         \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \mbox{\hyperlink{structkey__map__t}{key\_map\_t}} *i = key\_list; i != end; i++) \{}
+\DoxyCodeLine{00073             key\_glfw\_map[i-\/>key] = i-\/>glfw\_key;}
+\DoxyCodeLine{00074             glfw\_key\_map[i-\/>glfw\_key] = i-\/>key;}
+\DoxyCodeLine{00075         \}}
+\DoxyCodeLine{00076         end = mouse\_list + \textcolor{keyword}{sizeof}(mouse\_list) / \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structmouse__map__t}{mouse\_map\_t}});}
+\DoxyCodeLine{00077         \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \mbox{\hyperlink{structmouse__map__t}{mouse\_map\_t}} *i = mouse\_list; i != end; i++) \{}
+\DoxyCodeLine{00078             btn\_glfw\_map[i-\/>btn] = i-\/>glfw\_btn;}
+\DoxyCodeLine{00079             glfw\_btn\_map[i-\/>glfw\_btn] = i-\/>btn;}
+\DoxyCodeLine{00080         \}}
+\DoxyCodeLine{00081     \}}
+\DoxyCodeLine{00082 \}}
+\DoxyCodeLine{00083 }
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00084}\mbox{\hyperlink{window_8cpp_ac97bd0f3af797ceb0789b137fb0b526f}{00084}} \textcolor{keywordtype}{void} \mbox{\hyperlink{window_8cpp_ac97bd0f3af797ceb0789b137fb0b526f}{error\_callback}}(\textcolor{keywordtype}{int} e, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *d) \{}
+\DoxyCodeLine{00085     printf(\textcolor{stringliteral}{"{}Error \%d: \%s\(\backslash\)n"{}}, e, d);}
+\DoxyCodeLine{00086 \}}
+\DoxyCodeLine{00087 }
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00088}\mbox{\hyperlink{classWindow_a9b8185b7661ce79e9b02b0c1fec94e93}{00088}} \textcolor{keywordtype}{int} \mbox{\hyperlink{classWindow_a9b8185b7661ce79e9b02b0c1fec94e93}{Window::init}}() \{}
+\DoxyCodeLine{00089     \textcolor{comment}{// glfw: initialize and configure}}
+\DoxyCodeLine{00090     \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00091     \mbox{\hyperlink{window_8cpp_af6765bf7aae4ba2a0d60d0091a3f5f61}{map\_init}}();}
+\DoxyCodeLine{00092     glfwSetErrorCallback(\mbox{\hyperlink{window_8cpp_ac97bd0f3af797ceb0789b137fb0b526f}{error\_callback}});}
+\DoxyCodeLine{00093     glfwInit();}
+\DoxyCodeLine{00094     glfwWindowHint(GLFW\_CONTEXT\_VERSION\_MAJOR, 4);}
+\DoxyCodeLine{00095     glfwWindowHint(GLFW\_CONTEXT\_VERSION\_MINOR, 0);}
+\DoxyCodeLine{00096     glfwWindowHint(GLFW\_OPENGL\_PROFILE, GLFW\_OPENGL\_CORE\_PROFILE);}
+\DoxyCodeLine{00097     glfwWindowHint(GLFW\_OPENGL\_DEBUG\_CONTEXT, \textcolor{keyword}{true});}
+\DoxyCodeLine{00098 }
+\DoxyCodeLine{00099 \textcolor{preprocessor}{\#ifdef \_\_APPLE\_\_}}
+\DoxyCodeLine{00100     glfwWindowHint(GLFW\_OPENGL\_FORWARD\_COMPAT, GL\_TRUE);}
+\DoxyCodeLine{00101 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00102 }
+\DoxyCodeLine{00103     GLFWwindow* \mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}} = glfwCreateWindow(SCR\_WIDTH, SCR\_HEIGHT, \textcolor{stringliteral}{"{}osdo"{}},}
+\DoxyCodeLine{00104                                           \textcolor{keyword}{nullptr}, \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00105     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}} == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{00106         printf(\textcolor{stringliteral}{"{}Failed to create GLFW window\(\backslash\)n"{}});}
+\DoxyCodeLine{00107         glfwTerminate();}
+\DoxyCodeLine{00108         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{00109     \}}
+\DoxyCodeLine{00110 }
+\DoxyCodeLine{00111     glfwMakeContextCurrent(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}});}
+\DoxyCodeLine{00112     glfwSetWindowUserPointer(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, \textcolor{keyword}{this});}
+\DoxyCodeLine{00113     glfwSetFramebufferSizeCallback(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, \mbox{\hyperlink{classWindow_ace643e617ddafc9053c32344f0ac2cb8}{Window::resize\_cb}});}
+\DoxyCodeLine{00114     glfwSetScrollCallback(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, \mbox{\hyperlink{classWindow_a2a4aca70c898ebd343082547c5f5cd97}{Window::scroll\_cb}});}
+\DoxyCodeLine{00115     glfwSetCharCallback(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, \mbox{\hyperlink{classWindow_a537792624d1e5e0198c4dd19e921b82b}{Window::char\_cb}});}
+\DoxyCodeLine{00116     glfwSetMouseButtonCallback(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, \mbox{\hyperlink{classWindow_aded41e0be30352e18eecc7d6dbf8ea07}{Window::mouse\_button\_cb}});}
+\DoxyCodeLine{00117     glfwSetCursorPosCallback(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, \mbox{\hyperlink{classWindow_ad91aa61a640bd958d121c9324cfdd7f6}{Window::mouse\_motion\_cb}});}
+\DoxyCodeLine{00118     glfwSetKeyCallback(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, \mbox{\hyperlink{classWindow_aa5fa239afa97c8349130bf57dd15b5d9}{Window::key\_cb}});}
+\DoxyCodeLine{00119 }
+\DoxyCodeLine{00120     glewExperimental = GL\_TRUE;}
+\DoxyCodeLine{00121     \textcolor{keywordflow}{if} (glewInit() != GLEW\_OK) \{}
+\DoxyCodeLine{00122         printf(\textcolor{stringliteral}{"{}Failed to initialize GLEW\(\backslash\)n"{}});}
+\DoxyCodeLine{00123         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{00124     \}}
+\DoxyCodeLine{00125 }
+\DoxyCodeLine{00126     this-\/>\mbox{\hyperlink{classWindow_a0e91023e1a52fdbdbfb5ca5895737b33}{size}}[0] = SCR\_WIDTH;}
+\DoxyCodeLine{00127     this-\/>\mbox{\hyperlink{classWindow_a0e91023e1a52fdbdbfb5ca5895737b33}{size}}[1] = SCR\_HEIGHT;}
+\DoxyCodeLine{00128     this-\/>\mbox{\hyperlink{classWindow_a98918f091517455d79a8609e83ae02c3}{mouse\_capute}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{00129     this-\/>window = \mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}};}
+\DoxyCodeLine{00130     this-\/>\mbox{\hyperlink{classWindow_a4f24296720b0de0aff3cb904de1beaad}{current\_time}} = glfwGetTime();}
+\DoxyCodeLine{00131     this-\/>\mbox{\hyperlink{classWindow_aadac4820e0fc8f5146d95cb7b0bbcbc7}{last\_time}} = this-\/>\mbox{\hyperlink{classWindow_a4f24296720b0de0aff3cb904de1beaad}{current\_time}};}
+\DoxyCodeLine{00132     this-\/>\mbox{\hyperlink{classWindow_a7a9941c6794302b55e314cf6f546b501}{delta\_time}} = 0;}
+\DoxyCodeLine{00133     this-\/>\mbox{\hyperlink{classWindow_a0bed18dc1776cca6171d47dbcc829572}{\_scroll\_cb}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00134     this-\/>\mbox{\hyperlink{classWindow_afea84c179a7941d1623c3a9f2c6b21b4}{\_mouse\_motion\_cb}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00135     this-\/>\mbox{\hyperlink{classWindow_ad1e41fc84bd2a313094026ab2a2b722b}{\_char\_cb}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00136     this-\/>\mbox{\hyperlink{classWindow_af591c2fc3cb2e9837004d942c7a88bfc}{\_mouse\_button\_cb}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00137     this-\/>\mbox{\hyperlink{classWindow_acb07e3ddb652a3385cbdcdb25b2aac09}{\_key\_cb}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00138     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00139 \}}
+\DoxyCodeLine{00140 }
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00141}\mbox{\hyperlink{classWindow_a245d821e6016fa1f6970ccbbedd635f6}{00141}} \mbox{\hyperlink{classWindow_a245d821e6016fa1f6970ccbbedd635f6}{Window::\string~Window}}() \{}
+\DoxyCodeLine{00142     glfwTerminate();}
+\DoxyCodeLine{00143 \}}
+\DoxyCodeLine{00144 }
+\DoxyCodeLine{00145 }
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00146}\mbox{\hyperlink{classWindow_a16c5a9c1744d2fe611ec1fe3a174e0fb}{00146}} GLFWwindow *\mbox{\hyperlink{classWindow_a16c5a9c1744d2fe611ec1fe3a174e0fb}{Window::get}}() \{}
+\DoxyCodeLine{00147     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}};}
+\DoxyCodeLine{00148 \}}
+\DoxyCodeLine{00149 }
+\DoxyCodeLine{00150 }
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00151}\mbox{\hyperlink{classWindow_a282eee1c73fe157a5c4bc1c0999654ac}{00151}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classWindow_a282eee1c73fe157a5c4bc1c0999654ac}{Window::alive}}() \{}
+\DoxyCodeLine{00152     \textcolor{keywordflow}{return} !glfwWindowShouldClose(this-\/>\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}});}
+\DoxyCodeLine{00153 \}}
+\DoxyCodeLine{00154 }
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00155}\mbox{\hyperlink{classWindow_afc092c266a1f943d498d37ee88da7d47}{00155}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classWindow_afc092c266a1f943d498d37ee88da7d47}{Window::pre\_loop}}() \{}
+\DoxyCodeLine{00156     \textcolor{keywordflow}{if} (glfwWindowShouldClose(this-\/>\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}})) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00157     glfwMakeContextCurrent(this-\/>\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}});}
+\DoxyCodeLine{00158     glfwPollEvents();}
+\DoxyCodeLine{00159     \textcolor{comment}{//glfwWaitEvents();}}
+\DoxyCodeLine{00160     glfwGetWindowSize(this-\/>\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, this-\/>\mbox{\hyperlink{classWindow_a0e91023e1a52fdbdbfb5ca5895737b33}{size}}, this-\/>\mbox{\hyperlink{classWindow_a0e91023e1a52fdbdbfb5ca5895737b33}{size}} + 1);}
+\DoxyCodeLine{00161     glfwGetFramebufferSize(}
+\DoxyCodeLine{00162                 this-\/>\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, this-\/>\mbox{\hyperlink{classWindow_a263eae897c5dbbf4c41574ae7bcad868}{display}}, this-\/>\mbox{\hyperlink{classWindow_a263eae897c5dbbf4c41574ae7bcad868}{display}} + 1);}
+\DoxyCodeLine{00163     this-\/>\mbox{\hyperlink{classWindow_ae432549fcf0aa5f6fe61bae87bc2ac60}{scale}}[0] = (float)this-\/>\mbox{\hyperlink{classWindow_a263eae897c5dbbf4c41574ae7bcad868}{display}}[0] / (\textcolor{keywordtype}{float})this-\/>\mbox{\hyperlink{classWindow_a0e91023e1a52fdbdbfb5ca5895737b33}{size}}[0];}
+\DoxyCodeLine{00164     this-\/>\mbox{\hyperlink{classWindow_ae432549fcf0aa5f6fe61bae87bc2ac60}{scale}}[1] = (float)this-\/>\mbox{\hyperlink{classWindow_a263eae897c5dbbf4c41574ae7bcad868}{display}}[1] / (\textcolor{keywordtype}{float})this-\/>\mbox{\hyperlink{classWindow_a0e91023e1a52fdbdbfb5ca5895737b33}{size}}[1];}
+\DoxyCodeLine{00165     this-\/>\mbox{\hyperlink{classWindow_a4f24296720b0de0aff3cb904de1beaad}{current\_time}} = glfwGetTime();}
+\DoxyCodeLine{00166     this-\/>\mbox{\hyperlink{classWindow_a7a9941c6794302b55e314cf6f546b501}{delta\_time}} = this-\/>\mbox{\hyperlink{classWindow_a4f24296720b0de0aff3cb904de1beaad}{current\_time}} -\/ this-\/>\mbox{\hyperlink{classWindow_aadac4820e0fc8f5146d95cb7b0bbcbc7}{last\_time}};}
+\DoxyCodeLine{00167     this-\/>last\_time = this-\/>\mbox{\hyperlink{classWindow_a4f24296720b0de0aff3cb904de1beaad}{current\_time}};}
+\DoxyCodeLine{00168     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00169 \}}
+\DoxyCodeLine{00170 }
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00171}\mbox{\hyperlink{classWindow_a6e155310c3b36f40c586cc7a5c1000e8}{00171}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classWindow_a6e155310c3b36f40c586cc7a5c1000e8}{Window::post\_loop}}() \{}
+\DoxyCodeLine{00172     glfwSwapBuffers(this-\/>\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}});}
+\DoxyCodeLine{00173 \}}
+\DoxyCodeLine{00174 }
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00175}\mbox{\hyperlink{classWindow_ad7b04e6a6caa522ed351d0725db3983b}{00175}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classWindow_ad7b04e6a6caa522ed351d0725db3983b}{Window::set\_user\_pointer}}(\textcolor{keywordtype}{void} *pointer) \{}
+\DoxyCodeLine{00176     this-\/>\mbox{\hyperlink{classWindow_ad4658cd0c67bf155569a418df73e3e98}{user\_pointer}} = pointer;}
+\DoxyCodeLine{00177 \}}
+\DoxyCodeLine{00178 }
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00179}\mbox{\hyperlink{classWindow_a22c6ec1d375e4e11ee6550faddfc15de}{00179}} \textcolor{keywordtype}{void} *\mbox{\hyperlink{classWindow_a22c6ec1d375e4e11ee6550faddfc15de}{Window::get\_user\_pointer}}() \{}
+\DoxyCodeLine{00180     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classWindow_ad4658cd0c67bf155569a418df73e3e98}{user\_pointer}};}
+\DoxyCodeLine{00181 \}}
+\DoxyCodeLine{00182 }
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00183}\mbox{\hyperlink{classWindow_a97cba7a0b0a82378cc3fff5eeb77c018}{00183}} \textcolor{keywordtype}{float} \mbox{\hyperlink{classWindow_a97cba7a0b0a82378cc3fff5eeb77c018}{Window::get\_resolution}}() \{}
+\DoxyCodeLine{00184     \textcolor{keywordflow}{return} (\textcolor{keywordtype}{float})this-\/>\mbox{\hyperlink{classWindow_a0e91023e1a52fdbdbfb5ca5895737b33}{size}}[0] / (float)this-\/>\mbox{\hyperlink{classWindow_a0e91023e1a52fdbdbfb5ca5895737b33}{size}}[1];}
+\DoxyCodeLine{00185 \}}
+\DoxyCodeLine{00186 }
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00187}\mbox{\hyperlink{classWindow_abebd53575e0294950631146b64188012}{00187}} \textcolor{keywordtype}{double} \mbox{\hyperlink{classWindow_abebd53575e0294950631146b64188012}{Window::get\_delta\_time}}() \{}
+\DoxyCodeLine{00188     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classWindow_a7a9941c6794302b55e314cf6f546b501}{delta\_time}};}
+\DoxyCodeLine{00189 \}}
+\DoxyCodeLine{00190 }
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00191}\mbox{\hyperlink{classWindow_a4601634ee8d8c047e1a4aaf8992cb752}{00191}} \textcolor{keyword}{const} \textcolor{keywordtype}{char} * \mbox{\hyperlink{classWindow_a4601634ee8d8c047e1a4aaf8992cb752}{Window::get\_clipboard}}() \{}
+\DoxyCodeLine{00192      \textcolor{keywordflow}{return} glfwGetClipboardString(this-\/>\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}});}
+\DoxyCodeLine{00193 \}}
+\DoxyCodeLine{00194 }
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00195}\mbox{\hyperlink{classWindow_a7978071954bf1fed7e83d15be74fae21}{00195}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classWindow_a7978071954bf1fed7e83d15be74fae21}{Window::set\_clipboard}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} * str) \{}
+\DoxyCodeLine{00196     glfwSetClipboardString(this-\/>\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, str);}
+\DoxyCodeLine{00197 \}}
+\DoxyCodeLine{00198 }
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00199}\mbox{\hyperlink{classWindow_acf6a1038e0a510e33c632c2429381df7}{00199}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classWindow_acf6a1038e0a510e33c632c2429381df7}{Window::is\_mouse\_caputed}}() \{}
+\DoxyCodeLine{00200     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classWindow_a98918f091517455d79a8609e83ae02c3}{mouse\_capute}};}
+\DoxyCodeLine{00201 \}}
+\DoxyCodeLine{00202 }
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00203}\mbox{\hyperlink{classWindow_aa76f6ed874afa60591c9eafdd4ad6e0f}{00203}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classWindow_aa76f6ed874afa60591c9eafdd4ad6e0f}{Window::grab\_mouse}}(\textcolor{keywordtype}{bool} grab) \{}
+\DoxyCodeLine{00204     \textcolor{keywordflow}{if} (grab != this-\/>\mbox{\hyperlink{classWindow_a98918f091517455d79a8609e83ae02c3}{mouse\_capute}}) \{}
+\DoxyCodeLine{00205         this-\/>\mbox{\hyperlink{classWindow_a98918f091517455d79a8609e83ae02c3}{mouse\_capute}} = grab;}
+\DoxyCodeLine{00206         glfwSetInputMode(this-\/>\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, GLFW\_CURSOR,}
+\DoxyCodeLine{00207                          grab ? GLFW\_CURSOR\_DISABLED : GLFW\_CURSOR\_NORMAL);}
+\DoxyCodeLine{00208     \}}
+\DoxyCodeLine{00209 }
+\DoxyCodeLine{00210 \}}
+\DoxyCodeLine{00211 }
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00212}\mbox{\hyperlink{classWindow_a21f9f85d8de77f565cd96a7922d5770c}{00212}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classWindow_a21f9f85d8de77f565cd96a7922d5770c}{Window::is\_key\_pressed}}(\textcolor{keyword}{enum} \mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211}{KEYS}} key) \{}
+\DoxyCodeLine{00213     \textcolor{keywordflow}{return} glfwGetKey(this-\/>\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, key\_glfw\_map[key]) == GLFW\_PRESS;}
+\DoxyCodeLine{00214 \}}
+\DoxyCodeLine{00215 }
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00216}\mbox{\hyperlink{classWindow_a6697c355d5d604f5b071af73048dd533}{00216}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classWindow_a6697c355d5d604f5b071af73048dd533}{Window::is\_mouse\_pressed}}(\textcolor{keyword}{enum} \mbox{\hyperlink{window_8h_a13dc1bbe931fd8c6b75fed89f1e23256}{BUTTONS}} key) \{}
+\DoxyCodeLine{00217     \textcolor{keywordflow}{return} glfwGetMouseButton(}
+\DoxyCodeLine{00218                 this-\/>\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, btn\_glfw\_map[key]) == GLFW\_PRESS;}
+\DoxyCodeLine{00219 \}}
+\DoxyCodeLine{00220 }
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00221}\mbox{\hyperlink{classWindow_a6d1c02d6c0e8962ae999b32945a35d62}{00221}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classWindow_a6d1c02d6c0e8962ae999b32945a35d62}{Window::get\_cursor}}(vec2 dest) \{}
+\DoxyCodeLine{00222     glm\_vec2\_copy(this-\/>\mbox{\hyperlink{classWindow_ac5e5494690f313e1deb3321d7c8e694f}{cursor}}, dest);}
+\DoxyCodeLine{00223 \}}
+\DoxyCodeLine{00224 }
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00225}\mbox{\hyperlink{classWindow_af2e37273a0ba587032b7bf918e17a76d}{00225}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classWindow_af2e37273a0ba587032b7bf918e17a76d}{Window::set\_cursor}}(vec2 coords) \{}
+\DoxyCodeLine{00226     glfwSetCursorPos(this-\/>\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, (\textcolor{keywordtype}{double})coords[0], (\textcolor{keywordtype}{double})coords[1]);}
+\DoxyCodeLine{00227     glm\_vec2\_copy(coords, this-\/>\mbox{\hyperlink{classWindow_ac5e5494690f313e1deb3321d7c8e694f}{cursor}});}
+\DoxyCodeLine{00228 \}}
+\DoxyCodeLine{00229 }
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00230}\mbox{\hyperlink{classWindow_a00ed91cfb08f776087c5fce3f6338a68}{00230}} \textcolor{keywordtype}{int} *\mbox{\hyperlink{classWindow_a00ed91cfb08f776087c5fce3f6338a68}{Window::get\_size}}() \{}
+\DoxyCodeLine{00231     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classWindow_a0e91023e1a52fdbdbfb5ca5895737b33}{size}};}
+\DoxyCodeLine{00232 \}}
+\DoxyCodeLine{00233 }
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00234}\mbox{\hyperlink{classWindow_a465858fa58be57d2d8b7f3a915935b66}{00234}} \textcolor{keywordtype}{int} *\mbox{\hyperlink{classWindow_a465858fa58be57d2d8b7f3a915935b66}{Window::get\_display}}() \{}
+\DoxyCodeLine{00235     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classWindow_a263eae897c5dbbf4c41574ae7bcad868}{display}};}
+\DoxyCodeLine{00236 \}}
+\DoxyCodeLine{00237 }
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00238}\mbox{\hyperlink{classWindow_af09caf9ffab4ba4e70f931e4c0bdf223}{00238}} \textcolor{keywordtype}{float} *\mbox{\hyperlink{classWindow_af09caf9ffab4ba4e70f931e4c0bdf223}{Window::get\_scale}}() \{}
+\DoxyCodeLine{00239     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classWindow_ae432549fcf0aa5f6fe61bae87bc2ac60}{scale}};}
+\DoxyCodeLine{00240 \}}
+\DoxyCodeLine{00241 }
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00242}\mbox{\hyperlink{classWindow_aa045a4694443b28f22adc959b5182de7}{00242}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classWindow_aa045a4694443b28f22adc959b5182de7}{Window::set\_scroll\_cb}}(\mbox{\hyperlink{window_8h_a4251531d4faa41e60a2cd13d4525af1f}{scroll\_cb\_t}} callback) \{}
+\DoxyCodeLine{00243     this-\/>\mbox{\hyperlink{classWindow_a0bed18dc1776cca6171d47dbcc829572}{\_scroll\_cb}} = callback;}
+\DoxyCodeLine{00244 \}}
+\DoxyCodeLine{00245 }
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00246}\mbox{\hyperlink{classWindow_a79d68098adb64801b168d992a1bf760f}{00246}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classWindow_a79d68098adb64801b168d992a1bf760f}{Window::set\_mouse\_motion\_cb}}(\mbox{\hyperlink{window_8h_a09edcf54e1f22a5e7f2d944286902ef3}{mouse\_motion\_cb\_t}} callback) \{}
+\DoxyCodeLine{00247     this-\/>\mbox{\hyperlink{classWindow_afea84c179a7941d1623c3a9f2c6b21b4}{\_mouse\_motion\_cb}} = callback;}
+\DoxyCodeLine{00248 \}}
+\DoxyCodeLine{00249 }
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00250}\mbox{\hyperlink{classWindow_a5e4136232d0f0239f7e74a9db1466b44}{00250}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classWindow_a5e4136232d0f0239f7e74a9db1466b44}{Window::set\_char\_cb}}(\mbox{\hyperlink{window_8h_a7148bb12e7c547fd91b077ac96d52d4e}{char\_cb\_t}} callback) \{}
+\DoxyCodeLine{00251     this-\/>\mbox{\hyperlink{classWindow_ad1e41fc84bd2a313094026ab2a2b722b}{\_char\_cb}} = callback;}
+\DoxyCodeLine{00252 \}}
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00253}\mbox{\hyperlink{classWindow_a58445ba372624ec8b17ec80d6c2ff64a}{00253}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classWindow_a58445ba372624ec8b17ec80d6c2ff64a}{Window::set\_mouse\_button\_cb}}(\mbox{\hyperlink{window_8h_ae9edc663539f1b26d79dff1300c8d8b5}{mouse\_button\_cb\_t}} callback) \{}
+\DoxyCodeLine{00254     this-\/>\mbox{\hyperlink{classWindow_af591c2fc3cb2e9837004d942c7a88bfc}{\_mouse\_button\_cb}} = callback;}
+\DoxyCodeLine{00255 \}}
+\DoxyCodeLine{00256 }
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00257}\mbox{\hyperlink{classWindow_a087e87ad86a9f8b8a3ffe2d1727fb2bc}{00257}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classWindow_a087e87ad86a9f8b8a3ffe2d1727fb2bc}{Window::set\_key\_cb}}(\mbox{\hyperlink{window_8h_a9f34a6ec569f31c06cc15579e99be23d}{key\_cb\_t}} callback) \{}
+\DoxyCodeLine{00258     this-\/>\mbox{\hyperlink{classWindow_acb07e3ddb652a3385cbdcdb25b2aac09}{\_key\_cb}} = callback;}
+\DoxyCodeLine{00259 \}}
+\DoxyCodeLine{00260 }
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00261}\mbox{\hyperlink{classWindow_ace643e617ddafc9053c32344f0ac2cb8}{00261}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classWindow_ace643e617ddafc9053c32344f0ac2cb8}{Window::resize\_cb}}(}
+\DoxyCodeLine{00262         \textcolor{keyword}{struct} GLFWwindow* window, GLint width, GLint height) \{}
+\DoxyCodeLine{00263     \mbox{\hyperlink{classWindow}{Window}} *win = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{classWindow}{Window}}*\textcolor{keyword}{>}(glfwGetWindowUserPointer(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}));}
+\DoxyCodeLine{00264     glfwMakeContextCurrent(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}});}
+\DoxyCodeLine{00265     glViewport(0, 0, width, height);}
+\DoxyCodeLine{00266     win-\/>\mbox{\hyperlink{classWindow_a0e91023e1a52fdbdbfb5ca5895737b33}{size}}[0] = width; win-\/>\mbox{\hyperlink{classWindow_a0e91023e1a52fdbdbfb5ca5895737b33}{size}}[1] = height;}
+\DoxyCodeLine{00267 \}}
+\DoxyCodeLine{00268 }
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00269}\mbox{\hyperlink{classWindow_a2a4aca70c898ebd343082547c5f5cd97}{00269}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classWindow_a2a4aca70c898ebd343082547c5f5cd97}{Window::scroll\_cb}}(}
+\DoxyCodeLine{00270         \textcolor{keyword}{struct} GLFWwindow* window, GLdouble xoffset, GLdouble yoffset) \{}
+\DoxyCodeLine{00271     ImGui\_ImplGlfw\_ScrollCallback(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, xoffset, yoffset);}
+\DoxyCodeLine{00272     \mbox{\hyperlink{classWindow}{Window}} *win = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{classWindow}{Window}}*\textcolor{keyword}{>}(glfwGetWindowUserPointer(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}));}
+\DoxyCodeLine{00273     \textcolor{keywordflow}{if} (win-\/>\mbox{\hyperlink{classWindow_a0bed18dc1776cca6171d47dbcc829572}{\_scroll\_cb}} != \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00274         win-\/>\mbox{\hyperlink{classWindow_a0bed18dc1776cca6171d47dbcc829572}{\_scroll\_cb}}(win, xoffset, yoffset);}
+\DoxyCodeLine{00275 \}}
+\DoxyCodeLine{00276 }
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00277}\mbox{\hyperlink{classWindow_ad91aa61a640bd958d121c9324cfdd7f6}{00277}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classWindow_ad91aa61a640bd958d121c9324cfdd7f6}{Window::mouse\_motion\_cb}}(}
+\DoxyCodeLine{00278         \textcolor{keyword}{struct} GLFWwindow* window, \textcolor{keywordtype}{double} xpos, \textcolor{keywordtype}{double} ypos) \{}
+\DoxyCodeLine{00279     \mbox{\hyperlink{classWindow}{Window}} *win = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{classWindow}{Window}}*\textcolor{keyword}{>}(glfwGetWindowUserPointer(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}));}
+\DoxyCodeLine{00280     vec2 pos = \{(float)xpos, (\textcolor{keywordtype}{float})ypos\}, offset;}
+\DoxyCodeLine{00281     glm\_vec2\_sub(pos, win-\/>\mbox{\hyperlink{classWindow_ac5e5494690f313e1deb3321d7c8e694f}{cursor}}, offset);}
+\DoxyCodeLine{00282     glm\_vec2\_copy(pos, win-\/>\mbox{\hyperlink{classWindow_ac5e5494690f313e1deb3321d7c8e694f}{cursor}});}
+\DoxyCodeLine{00283     \textcolor{keywordflow}{if} (win-\/>\mbox{\hyperlink{classWindow_afea84c179a7941d1623c3a9f2c6b21b4}{\_mouse\_motion\_cb}})}
+\DoxyCodeLine{00284         win-\/>\mbox{\hyperlink{classWindow_afea84c179a7941d1623c3a9f2c6b21b4}{\_mouse\_motion\_cb}}(win, pos, offset);}
+\DoxyCodeLine{00285 \}}
+\DoxyCodeLine{00286 }
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00287}\mbox{\hyperlink{classWindow_a537792624d1e5e0198c4dd19e921b82b}{00287}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classWindow_a537792624d1e5e0198c4dd19e921b82b}{Window::char\_cb}}(GLFWwindow* window, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} codepoint) \{}
+\DoxyCodeLine{00288     ImGui\_ImplGlfw\_CharCallback(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, codepoint);}
+\DoxyCodeLine{00289     \mbox{\hyperlink{classWindow}{Window}} *win = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{classWindow}{Window}}*\textcolor{keyword}{>}(glfwGetWindowUserPointer(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}));}
+\DoxyCodeLine{00290     \textcolor{keywordflow}{if} (win-\/>\mbox{\hyperlink{classWindow_ad1e41fc84bd2a313094026ab2a2b722b}{\_char\_cb}})}
+\DoxyCodeLine{00291         win-\/>\mbox{\hyperlink{classWindow_ad1e41fc84bd2a313094026ab2a2b722b}{\_char\_cb}}(win, codepoint);}
+\DoxyCodeLine{00292 \}}
+\DoxyCodeLine{00293 }
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00294}\mbox{\hyperlink{classWindow_aded41e0be30352e18eecc7d6dbf8ea07}{00294}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classWindow_aded41e0be30352e18eecc7d6dbf8ea07}{Window::mouse\_button\_cb}}(}
+\DoxyCodeLine{00295         GLFWwindow *window, \textcolor{keywordtype}{int} button, \textcolor{keywordtype}{int} action, \mbox{\hyperlink{osdo_8h_addf5ec070e9499d36b7f2009ce736076}{UNUSED}} \textcolor{keywordtype}{int} mods) \{}
+\DoxyCodeLine{00296     ImGui\_ImplGlfw\_MouseButtonCallback(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, button, action, mods);}
+\DoxyCodeLine{00297     \mbox{\hyperlink{classWindow}{Window}} *win = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{classWindow}{Window}}*\textcolor{keyword}{>}(glfwGetWindowUserPointer(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}));}
+\DoxyCodeLine{00298     \textcolor{keyword}{enum} \mbox{\hyperlink{window_8h_a13dc1bbe931fd8c6b75fed89f1e23256}{BUTTONS}} btn = glfw\_btn\_map[button];}
+\DoxyCodeLine{00299     \textcolor{keywordtype}{bool} pressed = action == GLFW\_PRESS;}
+\DoxyCodeLine{00300     \textcolor{keywordflow}{if} (button == GLFW\_MOUSE\_BUTTON\_LEFT \&\& pressed) \{}
+\DoxyCodeLine{00301         \textcolor{keywordtype}{double} dt = glfwGetTime() -\/ win-\/>\mbox{\hyperlink{classWindow_aaaaa6d029e6b2b8a36274b9839414519}{last\_click\_time}};}
+\DoxyCodeLine{00302         \textcolor{keywordflow}{if} (dt > \mbox{\hyperlink{conf_8h_a42b057f37c15a818d862a2da98b88324}{NK\_GLFW\_DOUBLE\_CLICK\_LO}} \&\& dt < \mbox{\hyperlink{conf_8h_af13bb1926df9718b198163fe1d7b702c}{NK\_GLFW\_DOUBLE\_CLICK\_HI}}) \{}
+\DoxyCodeLine{00303             btn = \mbox{\hyperlink{window_8h_a13dc1bbe931fd8c6b75fed89f1e23256a3426787a420c05b549381016700871d1}{MOUSE\_BUTTON\_DOUBLE}};}
+\DoxyCodeLine{00304         \}}
+\DoxyCodeLine{00305         win-\/>\mbox{\hyperlink{classWindow_aaaaa6d029e6b2b8a36274b9839414519}{last\_click\_time}} = glfwGetTime();}
+\DoxyCodeLine{00306     \}}
+\DoxyCodeLine{00307     \textcolor{keywordflow}{if} (pressed || action == GLFW\_RELEASE)}
+\DoxyCodeLine{00308         win-\/>\mbox{\hyperlink{classWindow_af591c2fc3cb2e9837004d942c7a88bfc}{\_mouse\_button\_cb}}(win, btn, pressed);}
+\DoxyCodeLine{00309 \}}
+\DoxyCodeLine{00310 }
+\DoxyCodeLine{\Hypertarget{window_8cpp_source_l00311}\mbox{\hyperlink{structkey__map__t_a77017629c67076f140e71fb6daf0506c}{00311}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classWindow_aa5fa239afa97c8349130bf57dd15b5d9}{Window::key\_cb}}(GLFWwindow* window, \textcolor{keywordtype}{int} key, \mbox{\hyperlink{osdo_8h_addf5ec070e9499d36b7f2009ce736076}{UNUSED}} \textcolor{keywordtype}{int} scancode,}
+\DoxyCodeLine{00312                    \textcolor{keywordtype}{int} action, \mbox{\hyperlink{osdo_8h_addf5ec070e9499d36b7f2009ce736076}{UNUSED}} \textcolor{keywordtype}{int} mods) \{}
+\DoxyCodeLine{00313     ImGui\_ImplGlfw\_KeyCallback(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, key, scancode, action, mods);}
+\DoxyCodeLine{00314     \textcolor{keywordflow}{if} (glfwGetKey(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, GLFW\_KEY\_ESCAPE) == GLFW\_PRESS)}
+\DoxyCodeLine{00315         glfwSetWindowShouldClose(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, \textcolor{keyword}{true});}
+\DoxyCodeLine{00316     \mbox{\hyperlink{classWindow}{Window}} *win = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{classWindow}{Window}}*\textcolor{keyword}{>}(glfwGetWindowUserPointer(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}));}
+\DoxyCodeLine{00317     \textcolor{keywordtype}{bool} pressed = action == GLFW\_PRESS;}
+\DoxyCodeLine{00318     \textcolor{keywordflow}{if} (pressed || action == GLFW\_RELEASE)}
+\DoxyCodeLine{00319         win-\/>\mbox{\hyperlink{classWindow_acb07e3ddb652a3385cbdcdb25b2aac09}{\_key\_cb}}(win, glfw\_key\_map[key], pressed);}
+\DoxyCodeLine{00320 \}}
+
+\end{DoxyCode}

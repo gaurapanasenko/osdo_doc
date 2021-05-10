@@ -1,0 +1,145 @@
+\hypertarget{classModel}{}\doxysubsection{Клас Model}
+\label{classModel}\index{Model@{Model}}
+
+
+Інтерфейс до деякої моделі, яку можна відобразити.  
+
+
+
+
+{\ttfamily \#include $<$model.\+h$>$}
+
+
+
+Схема успадкувань для Model\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=133pt]{classModel__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Загальнодоступні елементи}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classModel_ad6ebd2062a0b823db841a0b88baac4c0}{$\sim$\+Model}} ()
+\item 
+virtual void \mbox{\hyperlink{classModel_a13ff51c6cdc364c49a5bb76dc76f409f}{draw}} (\mbox{\hyperlink{classShader}{Shader}} \&shader, bool pre\+\_\+generated=false)
+\begin{DoxyCompactList}\small\item\em Відображує модель. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classModel_a50fc76140d00753bc503817cdef39a92}{generate}} (size\+\_\+t d=8)
+\begin{DoxyCompactList}\small\item\em Генерує деталізований меш моделі. Див. {\ttfamily \mbox{\hyperlink{classBeziator_a850797d7a346cd6f30405e21b0224a3e}{Beziator\+::generate}}} \end{DoxyCompactList}\item 
+virtual vector$<$ \mbox{\hyperlink{structVertex}{Vertex}} $>$ $\ast$ \mbox{\hyperlink{classModel_a59f773de2939fc7c8613c0323a5907e0}{get\+\_\+vertices}} ()
+\begin{DoxyCompactList}\small\item\em Видає список вершин моделі. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classModel_a36d4969ac196d8e5e02f112aa73d54d7}{edit\+\_\+panel}} ()
+\begin{DoxyCompactList}\small\item\em Створює вікно редагування моделі. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Детальний опис}
+Інтерфейс до деякої моделі, яку можна відобразити. 
+
+Див. визначення в файлі \mbox{\hyperlink{model_8h_source}{model.\+h}}, рядок \mbox{\hyperlink{model_8h_source_l00018}{18}}
+
+
+
+\doxysubsubsection{Конструктор(и)}
+\mbox{\Hypertarget{classModel_ad6ebd2062a0b823db841a0b88baac4c0}\label{classModel_ad6ebd2062a0b823db841a0b88baac4c0}} 
+\index{Model@{Model}!````~Model@{$\sim$Model}}
+\index{````~Model@{$\sim$Model}!Model@{Model}}
+\doxyparagraph{\texorpdfstring{$\sim$Model()}{~Model()}}
+{\footnotesize\ttfamily Model\+::$\sim$\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{model_8cpp_source}{model.\+cpp}}, рядок \mbox{\hyperlink{model_8cpp_source_l00004}{4}}
+
+
+
+\doxysubsubsection{Опис методів компонент}
+\mbox{\Hypertarget{classModel_a13ff51c6cdc364c49a5bb76dc76f409f}\label{classModel_a13ff51c6cdc364c49a5bb76dc76f409f}} 
+\index{Model@{Model}!draw@{draw}}
+\index{draw@{draw}!Model@{Model}}
+\doxyparagraph{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Model\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classShader}{Shader}} \&}]{shader,  }\item[{bool}]{pre\+\_\+generated = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Відображує модель. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em shader} & Шейдер який використовуєтсья для відображення моделі. \\
+\hline
+{\em pre\+\_\+generated} & флаг, який позначає яким чином відображати модель. \\
+\hline
+\end{DoxyParams}
+
+
+Переозначається в \mbox{\hyperlink{classMesh_a19faf1bd2a71c1ca74cc2821d9d592d2}{Mesh}} і \mbox{\hyperlink{classBeziator_a9acccb22776bbbc76b9b886e96aa1d92}{Beziator}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{model_8cpp_source}{model.\+cpp}}, рядок \mbox{\hyperlink{model_8cpp_source_l00006}{6}}
+
+\mbox{\Hypertarget{classModel_a36d4969ac196d8e5e02f112aa73d54d7}\label{classModel_a36d4969ac196d8e5e02f112aa73d54d7}} 
+\index{Model@{Model}!edit\_panel@{edit\_panel}}
+\index{edit\_panel@{edit\_panel}!Model@{Model}}
+\doxyparagraph{\texorpdfstring{edit\_panel()}{edit\_panel()}}
+{\footnotesize\ttfamily void Model\+::edit\+\_\+panel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Створює вікно редагування моделі. 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{model_8cpp_source}{model.\+cpp}}, рядок \mbox{\hyperlink{model_8cpp_source_l00014}{14}}
+
+\mbox{\Hypertarget{classModel_a50fc76140d00753bc503817cdef39a92}\label{classModel_a50fc76140d00753bc503817cdef39a92}} 
+\index{Model@{Model}!generate@{generate}}
+\index{generate@{generate}!Model@{Model}}
+\doxyparagraph{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily void Model\+::generate (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{d = {\ttfamily 8} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Генерує деталізований меш моделі. Див. {\ttfamily \mbox{\hyperlink{classBeziator_a850797d7a346cd6f30405e21b0224a3e}{Beziator\+::generate}}} 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em d} & ступінь деталізації. \\
+\hline
+\end{DoxyParams}
+
+
+Переозначається в \mbox{\hyperlink{classBeziator_a850797d7a346cd6f30405e21b0224a3e}{Beziator}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{model_8cpp_source}{model.\+cpp}}, рядок \mbox{\hyperlink{model_8cpp_source_l00008}{8}}
+
+\mbox{\Hypertarget{classModel_a59f773de2939fc7c8613c0323a5907e0}\label{classModel_a59f773de2939fc7c8613c0323a5907e0}} 
+\index{Model@{Model}!get\_vertices@{get\_vertices}}
+\index{get\_vertices@{get\_vertices}!Model@{Model}}
+\doxyparagraph{\texorpdfstring{get\_vertices()}{get\_vertices()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{structVertex}{Vertex}} $>$ $\ast$ Model\+::get\+\_\+vertices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Видає список вершин моделі. 
+
+\begin{DoxyReturn}{Повертає}
+Вказівник на поле {\ttfamily vertices}. 
+\end{DoxyReturn}
+
+
+Переозначається в \mbox{\hyperlink{classBeziator_a961bc3acb296bbdd3c4b7fdf4c8c5511}{Beziator}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{model_8cpp_source}{model.\+cpp}}, рядок \mbox{\hyperlink{model_8cpp_source_l00010}{10}}
+
+
+
+Документація цих класів була створена з файлів\+:\begin{DoxyCompactItemize}
+\item 
+osdo/\mbox{\hyperlink{model_8h}{model.\+h}}\item 
+osdo/\mbox{\hyperlink{model_8cpp}{model.\+cpp}}\end{DoxyCompactItemize}

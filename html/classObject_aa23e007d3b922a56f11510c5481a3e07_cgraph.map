@@ -1,0 +1,10 @@
+<map id="Object::draw" name="Object::draw">
+<area shape="rect" id="node1" title="Відображує об&#39;єкт" alt="" coords="5,63,100,90"/>
+<area shape="rect" id="node2" href="$classObject.html#ad0997e94d29fff7b70940ce862ea0827" title="Обертає об&#39;єкт по заданій анімації." alt="" coords="154,13,267,39"/>
+<area shape="rect" id="node6" href="$classObject.html#afff370408e02f6886c5bba0406e2073d" title="Забирає матрицю лінійних перетворень над об&#39;єктом." alt="" coords="150,63,271,90"/>
+<area shape="rect" id="node7" href="$classShader.html#a34d5548a520489bd132f5bfbc46bb3a9" title="Задати поле шейдеру типу mat4" alt="" coords="148,114,273,141"/>
+<area shape="rect" id="node3" href="$classObject.html#add3dce565f65cf4e74329dd3ed987f73" title="Обернути об&#39;єкт по всім осям." alt="" coords="325,13,445,39"/>
+<area shape="rect" id="node4" href="$classObject.html#a2c5ac1f0bcbd1583ac4fc28bcac70811" title="Обертає об&#39;єкт по всім осям незалежно від часу." alt="" coords="497,5,617,47"/>
+<area shape="rect" id="node5" href="$classObject.html#a9dcb8961e7f0d5cbaaba5eaf826b741a" title="Обертає об&#39;єкт по осі незалежно від часу." alt="" coords="665,13,808,39"/>
+<area shape="rect" id="node8" href="$classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7" title="Повертає індекс об&#39;єкту OpenGL." alt="" coords="321,114,449,141"/>
+</map>

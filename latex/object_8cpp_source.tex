@@ -1,0 +1,124 @@
+\hypertarget{object_8cpp_source}{}\doxysubsection{object.\+cpp}
+\label{object_8cpp_source}\index{osdo/object.cpp@{osdo/object.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{object_8h}{object.h}}"{}}}
+\DoxyCodeLine{00004 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{conf_8h}{conf.h}}"{}}}
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{shader_8h}{shader.h}}"{}}}
+\DoxyCodeLine{00006 }
+\DoxyCodeLine{\Hypertarget{object_8cpp_source_l00007}\mbox{\hyperlink{classObject_afcecd10bd5781c735966c67a8b2a032f}{00007}} \mbox{\hyperlink{classObject_afcecd10bd5781c735966c67a8b2a032f}{Object::Object}}(shared\_ptr<Model> model)}
+\DoxyCodeLine{00008     : transform GLM\_MAT4\_IDENTITY\_INIT,}
+\DoxyCodeLine{00009       position GLM\_VEC4\_BLACK\_INIT,}
+\DoxyCodeLine{00010       animation GLM\_VEC3\_ZERO\_INIT,}
+\DoxyCodeLine{00011       model(model)}
+\DoxyCodeLine{00012 \{}
+\DoxyCodeLine{00013 \}}
+\DoxyCodeLine{\Hypertarget{object_8cpp_source_l00014}\mbox{\hyperlink{classObject_a494825c4cf01dcb9a7cc03d2912ebc23}{00014}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classObject_a494825c4cf01dcb9a7cc03d2912ebc23}{Object::get\_position}}(vec4 position)}
+\DoxyCodeLine{00015 \{}
+\DoxyCodeLine{00016     glm\_vec4\_copy(this-\/>position, \mbox{\hyperlink{classObject_a66142044dec90724bc31f9511362eb9f}{position}});}
+\DoxyCodeLine{00017 \}}
+\DoxyCodeLine{00018 }
+\DoxyCodeLine{\Hypertarget{object_8cpp_source_l00019}\mbox{\hyperlink{classObject_afb2a9a9461d2602bbf04f2a88f79dd03}{00019}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classObject_afb2a9a9461d2602bbf04f2a88f79dd03}{Object::set\_position}}(vec4 position)}
+\DoxyCodeLine{00020 \{}
+\DoxyCodeLine{00021     glm\_vec4\_copy(\mbox{\hyperlink{classObject_a66142044dec90724bc31f9511362eb9f}{position}}, this-\/>position);}
+\DoxyCodeLine{00022 \}}
+\DoxyCodeLine{00023 }
+\DoxyCodeLine{\Hypertarget{object_8cpp_source_l00024}\mbox{\hyperlink{classObject_aa8359d878b035e443c8fbe677bbc3613}{00024}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classObject_aa8359d878b035e443c8fbe677bbc3613}{Object::get\_rotation}}(vec3 rotation)}
+\DoxyCodeLine{00025 \{}
+\DoxyCodeLine{00026     glm\_euler\_angles(this-\/>\mbox{\hyperlink{classObject_a8f8afc163da863a8ff5198a650fb1e91}{transform}}, rotation);}
+\DoxyCodeLine{00027 \}}
+\DoxyCodeLine{00028 }
+\DoxyCodeLine{\Hypertarget{object_8cpp_source_l00029}\mbox{\hyperlink{classObject_ad2bac42a4343326372b44a620fc6f32e}{00029}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classObject_ad2bac42a4343326372b44a620fc6f32e}{Object::set\_rotation}}(vec3 rotation)}
+\DoxyCodeLine{00030 \{}
+\DoxyCodeLine{00031     glm\_euler\_xyz(rotation, this-\/>\mbox{\hyperlink{classObject_a8f8afc163da863a8ff5198a650fb1e91}{transform}});}
+\DoxyCodeLine{00032 \}}
+\DoxyCodeLine{00033 }
+\DoxyCodeLine{\Hypertarget{object_8cpp_source_l00034}\mbox{\hyperlink{classObject_a6f78bd2cc21324b4d243bcfab465deaa}{00034}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classObject_a6f78bd2cc21324b4d243bcfab465deaa}{Object::get\_animation}}(vec3 animation)}
+\DoxyCodeLine{00035 \{}
+\DoxyCodeLine{00036     glm\_vec3\_copy(this-\/>animation, \mbox{\hyperlink{classObject_adffa22add11a86b403a4acef6bc5ac4a}{animation}});}
+\DoxyCodeLine{00037 \}}
+\DoxyCodeLine{00038 }
+\DoxyCodeLine{\Hypertarget{object_8cpp_source_l00039}\mbox{\hyperlink{classObject_a6ddb712178530b3f3af4b1b1a7c39b00}{00039}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classObject_a6ddb712178530b3f3af4b1b1a7c39b00}{Object::set\_animation}}(vec3 animation)}
+\DoxyCodeLine{00040 \{}
+\DoxyCodeLine{00041     glm\_vec3\_copy(\mbox{\hyperlink{classObject_adffa22add11a86b403a4acef6bc5ac4a}{animation}}, this-\/>animation);}
+\DoxyCodeLine{00042 \}}
+\DoxyCodeLine{00043 }
+\DoxyCodeLine{\Hypertarget{object_8cpp_source_l00044}\mbox{\hyperlink{classObject_afff370408e02f6886c5bba0406e2073d}{00044}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classObject_afff370408e02f6886c5bba0406e2073d}{Object::get\_mat4}}(mat4 dest) \{}
+\DoxyCodeLine{00045     glm\_translate\_make(dest, this-\/>\mbox{\hyperlink{classObject_a66142044dec90724bc31f9511362eb9f}{position}});}
+\DoxyCodeLine{00046     glm\_mat4\_mul(dest, this-\/>\mbox{\hyperlink{classObject_a8f8afc163da863a8ff5198a650fb1e91}{transform}}, dest);}
+\DoxyCodeLine{00047 \}}
+\DoxyCodeLine{00048 }
+\DoxyCodeLine{\Hypertarget{object_8cpp_source_l00049}\mbox{\hyperlink{classObject_a42b8d284828b2d62960ecf07a61cdd32}{00049}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classObject_a42b8d284828b2d62960ecf07a61cdd32}{Object::translate}}(vec3 distances, \textcolor{keywordtype}{float} delta\_time) \{}
+\DoxyCodeLine{00050     vec3 new\_distances = GLM\_VEC3\_ZERO\_INIT;}
+\DoxyCodeLine{00051     glm\_vec3\_muladds(distances, OBJECT\_MOVE\_SPEED * delta\_time,}
+\DoxyCodeLine{00052                      new\_distances);}
+\DoxyCodeLine{00053     \mbox{\hyperlink{classObject_ab4dab8a9da970d074185b17c2fd95f21}{Object::translate\_object}}( new\_distances);}
+\DoxyCodeLine{00054 \}}
+\DoxyCodeLine{00055 }
+\DoxyCodeLine{\Hypertarget{object_8cpp_source_l00056}\mbox{\hyperlink{classObject_aa23e007d3b922a56f11510c5481a3e07}{00056}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classObject_aa23e007d3b922a56f11510c5481a3e07}{Object::draw}}(\mbox{\hyperlink{classShader}{Shader}} \&shader, mat4 mat4buf, GLdouble delta\_time,}
+\DoxyCodeLine{00057                   \textcolor{keywordtype}{bool} pre\_generated) \{}
+\DoxyCodeLine{00058     \textcolor{comment}{// render the loaded model}}
+\DoxyCodeLine{00059     \mbox{\hyperlink{classObject_ad0997e94d29fff7b70940ce862ea0827}{Object::animate}}(\textcolor{keyword}{static\_cast<}GLfloat\textcolor{keyword}{>}(delta\_time));}
+\DoxyCodeLine{00060     \mbox{\hyperlink{classObject_afff370408e02f6886c5bba0406e2073d}{Object::get\_mat4}}(mat4buf);}
+\DoxyCodeLine{00061     shader.\mbox{\hyperlink{classShader_a34d5548a520489bd132f5bfbc46bb3a9}{set\_mat4}}(\textcolor{stringliteral}{"{}model"{}}, mat4buf);}
+\DoxyCodeLine{00062     this-\/>\mbox{\hyperlink{classObject_adadea81d91f42970ba3829793bdac3c5}{model}}-\/>draw(shader, pre\_generated);}
+\DoxyCodeLine{00063 \}}
+\DoxyCodeLine{00064 }
+\DoxyCodeLine{\Hypertarget{object_8cpp_source_l00065}\mbox{\hyperlink{classObject_a485bd8b8aa5fb4ca6d0dd9c6701c4948}{00065}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classObject_a485bd8b8aa5fb4ca6d0dd9c6701c4948}{Object::rotate}}(\textcolor{keyword}{enum} \mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ff}{coord\_enum}} coord, \textcolor{keywordtype}{float} delta\_time) \{}
+\DoxyCodeLine{00066     \mbox{\hyperlink{classObject_a9dcb8961e7f0d5cbaaba5eaf826b741a}{Object::rotate\_object}}(delta\_time * OBJECT\_ROTATE\_SPEED, coord);}
+\DoxyCodeLine{00067 \}}
+\DoxyCodeLine{00068 }
+\DoxyCodeLine{\Hypertarget{object_8cpp_source_l00069}\mbox{\hyperlink{classObject_add3dce565f65cf4e74329dd3ed987f73}{00069}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classObject_add3dce565f65cf4e74329dd3ed987f73}{Object::rotate\_all}}(vec3 angles) \{}
+\DoxyCodeLine{00070     \mbox{\hyperlink{classObject_a2c5ac1f0bcbd1583ac4fc28bcac70811}{Object::rotate\_all\_object}}(angles);}
+\DoxyCodeLine{00071 \}}
+\DoxyCodeLine{00072 }
+\DoxyCodeLine{\Hypertarget{object_8cpp_source_l00073}\mbox{\hyperlink{classObject_a5c6095ac962c2faeaccf09d0a9a7d4a6}{00073}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classObject_a5c6095ac962c2faeaccf09d0a9a7d4a6}{Object::add\_animation}}(vec3 angles, \textcolor{keywordtype}{float} delta\_time) \{}
+\DoxyCodeLine{00074     vec3 \mbox{\hyperlink{classObject_adffa22add11a86b403a4acef6bc5ac4a}{animation}} = GLM\_VEC3\_ZERO\_INIT;}
+\DoxyCodeLine{00075     glm\_vec3\_muladds(angles, delta\_time, \mbox{\hyperlink{classObject_adffa22add11a86b403a4acef6bc5ac4a}{animation}});}
+\DoxyCodeLine{00076     glm\_vec3\_add(this-\/>animation, \mbox{\hyperlink{classObject_adffa22add11a86b403a4acef6bc5ac4a}{animation}},}
+\DoxyCodeLine{00077                  this-\/>animation);}
+\DoxyCodeLine{00078 \}}
+\DoxyCodeLine{00079 }
+\DoxyCodeLine{\Hypertarget{object_8cpp_source_l00080}\mbox{\hyperlink{classObject_aeeec41ecc01e46f9d191b6abc50a0ae0}{00080}} shared\_ptr<Model> \mbox{\hyperlink{classObject_aeeec41ecc01e46f9d191b6abc50a0ae0}{Object::get\_model}}()}
+\DoxyCodeLine{00081 \{}
+\DoxyCodeLine{00082     \textcolor{keywordflow}{return} \mbox{\hyperlink{classObject_adadea81d91f42970ba3829793bdac3c5}{model}};}
+\DoxyCodeLine{00083 \}}
+\DoxyCodeLine{00084 }
+\DoxyCodeLine{\Hypertarget{object_8cpp_source_l00085}\mbox{\hyperlink{classObject_ab4dab8a9da970d074185b17c2fd95f21}{00085}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classObject_ab4dab8a9da970d074185b17c2fd95f21}{Object::translate\_object}}(vec3 distances) \{}
+\DoxyCodeLine{00086     glm\_vec3\_add(this-\/>\mbox{\hyperlink{classObject_a66142044dec90724bc31f9511362eb9f}{position}}, distances, this-\/>\mbox{\hyperlink{classObject_a66142044dec90724bc31f9511362eb9f}{position}});}
+\DoxyCodeLine{00087 \}}
+\DoxyCodeLine{00088 }
+\DoxyCodeLine{\Hypertarget{object_8cpp_source_l00089}\mbox{\hyperlink{classObject_a9dcb8961e7f0d5cbaaba5eaf826b741a}{00089}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classObject_a9dcb8961e7f0d5cbaaba5eaf826b741a}{Object::rotate\_object}}(\textcolor{keywordtype}{float} angle, \textcolor{keyword}{enum} \mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ff}{coord\_enum}} coord) \{}
+\DoxyCodeLine{00090     mat4 matrix = GLM\_MAT4\_IDENTITY\_INIT;}
+\DoxyCodeLine{00091     \textcolor{keywordflow}{switch} (coord) \{}
+\DoxyCodeLine{00092     \textcolor{keywordflow}{case} \mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ffa58833a3110c570fb05130d40c365d1e4}{X}}: glm\_rotate\_x(matrix, angle, matrix); \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00093     \textcolor{keywordflow}{case} \mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ffa5596231eabd6cf29050967d5ac83ad84}{Y}}: glm\_rotate\_y(matrix, angle, matrix); \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00094     \textcolor{keywordflow}{case} \mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ffaa70478ce277ffc322f8e1e3418e07355}{Z}}: glm\_rotate\_z(matrix, angle, matrix); \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00095     \}}
+\DoxyCodeLine{00096     glm\_mat4\_mul(matrix, this-\/>\mbox{\hyperlink{classObject_a8f8afc163da863a8ff5198a650fb1e91}{transform}}, this-\/>\mbox{\hyperlink{classObject_a8f8afc163da863a8ff5198a650fb1e91}{transform}});}
+\DoxyCodeLine{00097 \}}
+\DoxyCodeLine{00098 }
+\DoxyCodeLine{\Hypertarget{object_8cpp_source_l00099}\mbox{\hyperlink{classObject_a2c5ac1f0bcbd1583ac4fc28bcac70811}{00099}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classObject_a2c5ac1f0bcbd1583ac4fc28bcac70811}{Object::rotate\_all\_object}}(vec3 angles) \{}
+\DoxyCodeLine{00100     \mbox{\hyperlink{classObject_a9dcb8961e7f0d5cbaaba5eaf826b741a}{Object::rotate\_object}}(angles[0], \mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ffa58833a3110c570fb05130d40c365d1e4}{X}});}
+\DoxyCodeLine{00101     \mbox{\hyperlink{classObject_a9dcb8961e7f0d5cbaaba5eaf826b741a}{Object::rotate\_object}}(angles[1], \mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ffa5596231eabd6cf29050967d5ac83ad84}{Y}});}
+\DoxyCodeLine{00102     \mbox{\hyperlink{classObject_a9dcb8961e7f0d5cbaaba5eaf826b741a}{Object::rotate\_object}}(angles[2], \mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ffaa70478ce277ffc322f8e1e3418e07355}{Z}});}
+\DoxyCodeLine{00103 \}}
+\DoxyCodeLine{00104 }
+\DoxyCodeLine{\Hypertarget{object_8cpp_source_l00105}\mbox{\hyperlink{classObject_ad0997e94d29fff7b70940ce862ea0827}{00105}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classObject_ad0997e94d29fff7b70940ce862ea0827}{Object::animate}}(\textcolor{keywordtype}{float} step) \{}
+\DoxyCodeLine{00106     vec3 \mbox{\hyperlink{classObject_adffa22add11a86b403a4acef6bc5ac4a}{animation}} = GLM\_VEC3\_ZERO\_INIT;}
+\DoxyCodeLine{00107     glm\_vec3\_muladds(this-\/>animation, step, \mbox{\hyperlink{classObject_adffa22add11a86b403a4acef6bc5ac4a}{animation}});}
+\DoxyCodeLine{00108     \mbox{\hyperlink{classObject_add3dce565f65cf4e74329dd3ed987f73}{Object::rotate\_all}}(\mbox{\hyperlink{classObject_adffa22add11a86b403a4acef6bc5ac4a}{animation}});}
+\DoxyCodeLine{00109 \}}
+\DoxyCodeLine{00110 }
+\DoxyCodeLine{\Hypertarget{object_8cpp_source_l00111}\mbox{\hyperlink{classObject_a89c4ed17dc35de90ee5fd12302c9e120}{00111}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classObject_a89c4ed17dc35de90ee5fd12302c9e120}{Object::scale}}(vec3 scale) \{}
+\DoxyCodeLine{00112     glm\_scale(this-\/>\mbox{\hyperlink{classObject_a8f8afc163da863a8ff5198a650fb1e91}{transform}}, scale);}
+\DoxyCodeLine{00113 \}}
+\DoxyCodeLine{00114 }
+\DoxyCodeLine{\Hypertarget{object_8cpp_source_l00115}\mbox{\hyperlink{classObject_a5cdb7fd4168627de68679563c48d8567}{00115}} mat4 *\mbox{\hyperlink{classObject_a5cdb7fd4168627de68679563c48d8567}{Object::get\_transform}}()}
+\DoxyCodeLine{00116 \{}
+\DoxyCodeLine{00117     \textcolor{keywordflow}{return} \&this-\/>\mbox{\hyperlink{classObject_a8f8afc163da863a8ff5198a650fb1e91}{transform}};}
+\DoxyCodeLine{00118 \}}
+
+\end{DoxyCode}

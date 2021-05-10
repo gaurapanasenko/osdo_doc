@@ -1,0 +1,6 @@
+<map id="BeziatorPanel" name="BeziatorPanel">
+<area shape="rect" id="node1" title=" " alt="" coords="5,229,108,256"/>
+<area shape="rect" id="node2" href="$classBeziator.html" title="Клас який зберігає та оброблює модель утвореню через поверхні Безьє." alt="" coords="21,155,92,181"/>
+<area shape="rect" id="node3" href="$classMesh.html" title=" " alt="" coords="29,80,84,107"/>
+<area shape="rect" id="node4" href="$classModel.html" title=" " alt="" coords="28,5,85,32"/>
+</map>

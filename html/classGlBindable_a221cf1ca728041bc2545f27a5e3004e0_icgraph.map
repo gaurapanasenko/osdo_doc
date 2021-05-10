@@ -1,0 +1,5 @@
+<map id="GlBindable::bind" name="GlBindable::bind">
+<area shape="rect" id="node1" title="Прив&#39;язує контекст до об&#39;єкту із ціллю за замовчуванням." alt="" coords="184,31,301,57"/>
+<area shape="rect" id="node2" href="$classGlBinder.html#a08572e5ea0ea17c146c1ed90425d13c1" title="Конструктор із параметром" alt="" coords="5,5,136,32"/>
+<area shape="rect" id="node3" href="$classBuffer.html#a1fc0873aa0dd87e47da962f32110b03e" title="Підгодовка до рендеренгу." alt="" coords="7,56,134,83"/>
+</map>

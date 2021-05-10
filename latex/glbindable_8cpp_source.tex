@@ -1,0 +1,66 @@
+\hypertarget{glbindable_8cpp_source}{}\doxysubsection{glbindable.\+cpp}
+\label{glbindable_8cpp_source}\index{osdo/glbindable.cpp@{osdo/glbindable.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{glbindable_8h}{glbindable.h}}"{}}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{glbinder_8h}{glbinder.h}}"{}}}
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{\Hypertarget{glbindable_8cpp_source_l00004}\mbox{\hyperlink{classGlBindable_adeae77f0e91e38fbd0685df3d45bf240}{00004}} GLuint \mbox{\hyperlink{classGlBindable_adeae77f0e91e38fbd0685df3d45bf240}{GlBindable::\_generate}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{00005     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00006 \}}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{\Hypertarget{glbindable_8cpp_source_l00008}\mbox{\hyperlink{classGlBindable_ae3213a00db0e6f6dfc356a06a5b1e6d6}{00008}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classGlBindable_ae3213a00db0e6f6dfc356a06a5b1e6d6}{GlBindable::\_bind}}(\textcolor{keyword}{const} GLuint, GLenum)\textcolor{keyword}{ const }\{\}}
+\DoxyCodeLine{00009 }
+\DoxyCodeLine{\Hypertarget{glbindable_8cpp_source_l00010}\mbox{\hyperlink{classGlBindable_a99e6c236fadee7211e721dd8b0d57598}{00010}} GLenum \mbox{\hyperlink{classGlBindable_a99e6c236fadee7211e721dd8b0d57598}{GlBindable::\_default}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{00011     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00012 \}}
+\DoxyCodeLine{00013 }
+\DoxyCodeLine{\Hypertarget{glbindable_8cpp_source_l00014}\mbox{\hyperlink{classGlBindable_a96cb4e25165880fceb4511f07912ef0e}{00014}} \mbox{\hyperlink{classGlBindable_a96cb4e25165880fceb4511f07912ef0e}{GlBindable::GlBindable}}() : id(\_generate()) \{\}}
+\DoxyCodeLine{00015 }
+\DoxyCodeLine{\Hypertarget{glbindable_8cpp_source_l00016}\mbox{\hyperlink{classGlBindable_ad1f81eadcda1f2dd5e4b5a5673c4d00f}{00016}} \mbox{\hyperlink{classGlBindable_a96cb4e25165880fceb4511f07912ef0e}{GlBindable::GlBindable}}(\textcolor{keyword}{const} GLuint \textcolor{keywordtype}{id}) : id(id) \{\}}
+\DoxyCodeLine{00017 }
+\DoxyCodeLine{\Hypertarget{glbindable_8cpp_source_l00018}\mbox{\hyperlink{classGlBindable_a7099d57d5e30d61d3dd8c3578bef2369}{00018}} \mbox{\hyperlink{classGlBindable_a7099d57d5e30d61d3dd8c3578bef2369}{GlBindable::\string~GlBindable}}() \{\}}
+\DoxyCodeLine{00019 }
+\DoxyCodeLine{\Hypertarget{glbindable_8cpp_source_l00020}\mbox{\hyperlink{classGlBindable_a5a7e0bbde3d01e24a83e0f0122402ab7}{00020}} \textcolor{keyword}{const} GLuint \&\mbox{\hyperlink{classGlBindable_a5a7e0bbde3d01e24a83e0f0122402ab7}{GlBindable::get\_id}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{00021 \textcolor{keyword}{}\{}
+\DoxyCodeLine{00022     \textcolor{keywordflow}{return} \mbox{\hyperlink{classGlBindable_a299d9182805eb4c6b7e9e8cc9d5b4577}{id}};}
+\DoxyCodeLine{00023 \}}
+\DoxyCodeLine{00024 }
+\DoxyCodeLine{\Hypertarget{glbindable_8cpp_source_l00025}\mbox{\hyperlink{classGlBindable_a998a690af84360cd283e49f6a32ae4fd}{00025}} \textcolor{keywordtype}{void} *\mbox{\hyperlink{classGlBindable_a998a690af84360cd283e49f6a32ae4fd}{GlBindable::get\_vid}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{00026 \textcolor{keyword}{}\{}
+\DoxyCodeLine{00027     \textcolor{keywordflow}{return} \textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{void}*\textcolor{keyword}{>}(\textcolor{keyword}{static\_cast<}intptr\_t\textcolor{keyword}{>}(\mbox{\hyperlink{classGlBindable_a299d9182805eb4c6b7e9e8cc9d5b4577}{id}}));}
+\DoxyCodeLine{00028 \}}
+\DoxyCodeLine{00029 }
+\DoxyCodeLine{\Hypertarget{glbindable_8cpp_source_l00030}\mbox{\hyperlink{classGlBindable_a221cf1ca728041bc2545f27a5e3004e0}{00030}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classGlBindable_a221cf1ca728041bc2545f27a5e3004e0}{GlBindable::bind}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{00031 \textcolor{keyword}{}\{}
+\DoxyCodeLine{00032     \mbox{\hyperlink{classGlBindable_ae3213a00db0e6f6dfc356a06a5b1e6d6}{\_bind}}(\textcolor{keywordtype}{id}, \mbox{\hyperlink{classGlBindable_a99e6c236fadee7211e721dd8b0d57598}{\_default}}());}
+\DoxyCodeLine{00033 \}}
+\DoxyCodeLine{00034 }
+\DoxyCodeLine{\Hypertarget{glbindable_8cpp_source_l00035}\mbox{\hyperlink{classGlBindable_a1509aad02d36265d0a42a56ca6d33211}{00035}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classGlBindable_a221cf1ca728041bc2545f27a5e3004e0}{GlBindable::bind}}(GLenum target)\textcolor{keyword}{ const}}
+\DoxyCodeLine{00036 \textcolor{keyword}{}\{}
+\DoxyCodeLine{00037     \mbox{\hyperlink{classGlBindable_ae3213a00db0e6f6dfc356a06a5b1e6d6}{\_bind}}(\textcolor{keywordtype}{id}, target);}
+\DoxyCodeLine{00038 \}}
+\DoxyCodeLine{00039 }
+\DoxyCodeLine{\Hypertarget{glbindable_8cpp_source_l00040}\mbox{\hyperlink{classGlBindable_a6ddfcf2b3f3b34872005ca281a9573eb}{00040}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classGlBindable_a6ddfcf2b3f3b34872005ca281a9573eb}{GlBindable::unbind}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{00041 \textcolor{keyword}{}\{}
+\DoxyCodeLine{00042     \mbox{\hyperlink{classGlBindable_ae3213a00db0e6f6dfc356a06a5b1e6d6}{\_bind}}(0, \mbox{\hyperlink{classGlBindable_a99e6c236fadee7211e721dd8b0d57598}{\_default}}());}
+\DoxyCodeLine{00043 \}}
+\DoxyCodeLine{00044 }
+\DoxyCodeLine{\Hypertarget{glbindable_8cpp_source_l00045}\mbox{\hyperlink{classGlBindable_a3f192025460eb6510b281cdc69b9a731}{00045}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classGlBindable_a6ddfcf2b3f3b34872005ca281a9573eb}{GlBindable::unbind}}(GLenum target)\textcolor{keyword}{ const}}
+\DoxyCodeLine{00046 \textcolor{keyword}{}\{}
+\DoxyCodeLine{00047     \mbox{\hyperlink{classGlBindable_ae3213a00db0e6f6dfc356a06a5b1e6d6}{\_bind}}(0, target);}
+\DoxyCodeLine{00048 \}}
+\DoxyCodeLine{00049 }
+\DoxyCodeLine{\Hypertarget{glbindable_8cpp_source_l00050}\mbox{\hyperlink{classGlBindable_ad3194126ecaf5285842cee0e7d28c951}{00050}} \mbox{\hyperlink{classGlBinder}{GlBinder}} \mbox{\hyperlink{classGlBindable_ad3194126ecaf5285842cee0e7d28c951}{GlBindable::binder}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{00051 \textcolor{keyword}{}\{}
+\DoxyCodeLine{00052     \textcolor{keywordflow}{return} \{*\textcolor{keyword}{this}, \mbox{\hyperlink{classGlBindable_a99e6c236fadee7211e721dd8b0d57598}{\_default}}()\};}
+\DoxyCodeLine{00053 \}}
+\DoxyCodeLine{00054 }
+\DoxyCodeLine{\Hypertarget{glbindable_8cpp_source_l00055}\mbox{\hyperlink{classGlBindable_a771e840af25b89bbdd097cf0088f7ea2}{00055}} \mbox{\hyperlink{classGlBinder}{GlBinder}} \mbox{\hyperlink{classGlBindable_ad3194126ecaf5285842cee0e7d28c951}{GlBindable::binder}}(GLenum target)\textcolor{keyword}{ const}}
+\DoxyCodeLine{00056 \textcolor{keyword}{}\{}
+\DoxyCodeLine{00057     \textcolor{keywordflow}{return} \{*\textcolor{keyword}{this}, target\};}
+\DoxyCodeLine{00058 \}}
+\DoxyCodeLine{00059 }
+\DoxyCodeLine{00060 }
+
+\end{DoxyCode}

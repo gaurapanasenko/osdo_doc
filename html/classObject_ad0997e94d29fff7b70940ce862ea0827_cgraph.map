@@ -1,0 +1,6 @@
+<map id="Object::animate" name="Object::animate">
+<area shape="rect" id="node1" title="Обертає об&#39;єкт по заданій анімації." alt="" coords="5,13,119,39"/>
+<area shape="rect" id="node2" href="$classObject.html#add3dce565f65cf4e74329dd3ed987f73" title="Обернути об&#39;єкт по всім осям." alt="" coords="167,13,287,39"/>
+<area shape="rect" id="node3" href="$classObject.html#a2c5ac1f0bcbd1583ac4fc28bcac70811" title="Обертає об&#39;єкт по всім осям незалежно від часу." alt="" coords="335,5,455,47"/>
+<area shape="rect" id="node4" href="$classObject.html#a9dcb8961e7f0d5cbaaba5eaf826b741a" title="Обертає об&#39;єкт по осі незалежно від часу." alt="" coords="503,13,645,39"/>
+</map>

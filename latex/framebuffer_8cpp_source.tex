@@ -1,0 +1,76 @@
+\hypertarget{framebuffer_8cpp_source}{}\doxysubsection{framebuffer.\+cpp}
+\label{framebuffer_8cpp_source}\index{osdo/framebuffer.cpp@{osdo/framebuffer.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{framebuffer_8h}{framebuffer.h}}"{}}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{texture_8h}{texture.h}}"{}}}
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{renderbuffer_8h}{renderbuffer.h}}"{}}}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{\Hypertarget{framebuffer_8cpp_source_l00005}\mbox{\hyperlink{classFramebuffer_adb84d4f813bc52460bde7ce62ccfa150}{00005}} GLuint \mbox{\hyperlink{classFramebuffer_adb84d4f813bc52460bde7ce62ccfa150}{Framebuffer::\_generate}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{00006 \textcolor{keyword}{}\{}
+\DoxyCodeLine{00007     GLuint \mbox{\hyperlink{classGlBindable_a299d9182805eb4c6b7e9e8cc9d5b4577}{id}};}
+\DoxyCodeLine{00008     glGenFramebuffers(1, \&\textcolor{keywordtype}{id});}
+\DoxyCodeLine{00009     \textcolor{keywordflow}{return} \mbox{\hyperlink{classGlBindable_a299d9182805eb4c6b7e9e8cc9d5b4577}{id}};}
+\DoxyCodeLine{00010 \}}
+\DoxyCodeLine{00011 }
+\DoxyCodeLine{\Hypertarget{framebuffer_8cpp_source_l00012}\mbox{\hyperlink{classFramebuffer_a5b4e690288f3283c9d9967ed29bfb1b1}{00012}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classFramebuffer_a5b4e690288f3283c9d9967ed29bfb1b1}{Framebuffer::\_bind}}(\textcolor{keyword}{const} GLuint \textcolor{keywordtype}{id}, GLenum target)\textcolor{keyword}{ const}}
+\DoxyCodeLine{00013 \textcolor{keyword}{}\{}
+\DoxyCodeLine{00014     glBindFramebuffer(target, \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00015 \}}
+\DoxyCodeLine{00016 }
+\DoxyCodeLine{\Hypertarget{framebuffer_8cpp_source_l00017}\mbox{\hyperlink{classFramebuffer_a33d174278da3c420e01f371b727eced6}{00017}} GLenum \mbox{\hyperlink{classFramebuffer_a33d174278da3c420e01f371b727eced6}{Framebuffer::\_default}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{00018 \textcolor{keyword}{}\{}
+\DoxyCodeLine{00019     \textcolor{keywordflow}{return} GL\_FRAMEBUFFER;}
+\DoxyCodeLine{00020 \}}
+\DoxyCodeLine{00021 }
+\DoxyCodeLine{\Hypertarget{framebuffer_8cpp_source_l00022}\mbox{\hyperlink{classFramebuffer_a4f10f2020d414add1ea0e6553908c86b}{00022}} \mbox{\hyperlink{classFramebuffer_a4f10f2020d414add1ea0e6553908c86b}{Framebuffer::Framebuffer}}() : \mbox{\hyperlink{classGlBindable}{GlBindable}}(\_generate()) \{\}}
+\DoxyCodeLine{00023 }
+\DoxyCodeLine{\Hypertarget{framebuffer_8cpp_source_l00024}\mbox{\hyperlink{classFramebuffer_a64dae662375f670e5757612e972de62f}{00024}} \mbox{\hyperlink{classFramebuffer_a64dae662375f670e5757612e972de62f}{Framebuffer::\string~Framebuffer}}() \{}
+\DoxyCodeLine{00025     glDeleteFramebuffers(1, \&\mbox{\hyperlink{classGlBindable_a5a7e0bbde3d01e24a83e0f0122402ab7}{get\_id}}());}
+\DoxyCodeLine{00026 \}}
+\DoxyCodeLine{00027 }
+\DoxyCodeLine{\Hypertarget{framebuffer_8cpp_source_l00028}\mbox{\hyperlink{classFramebuffer_afa8771e517776fde7edf0a0b07b6e91b}{00028}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classFramebuffer_afa8771e517776fde7edf0a0b07b6e91b}{Framebuffer::check}}(GLenum target) \{}
+\DoxyCodeLine{00029     \textcolor{keywordflow}{return} glCheckFramebufferStatus(target) == GL\_FRAMEBUFFER\_COMPLETE;}
+\DoxyCodeLine{00030 \}}
+\DoxyCodeLine{00031 }
+\DoxyCodeLine{\Hypertarget{framebuffer_8cpp_source_l00032}\mbox{\hyperlink{classFramebuffer_a0d90533a9cd82dd33ad45d7e49a722e0}{00032}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classFramebuffer_a0d90533a9cd82dd33ad45d7e49a722e0}{Framebuffer::tex\_2d\_multisample}}(GLsizei size[2], \textcolor{keyword}{const} \mbox{\hyperlink{classTexture}{Texture}} \&texture) \{}
+\DoxyCodeLine{00033     texture.\mbox{\hyperlink{classTexture_ae40798a49160911e52be2c0329b17565}{make\_2d\_multisample}}(size);}
+\DoxyCodeLine{00034     glFramebufferTexture2D(GL\_FRAMEBUFFER, GL\_COLOR\_ATTACHMENT0,}
+\DoxyCodeLine{00035                            GL\_TEXTURE\_2D\_MULTISAMPLE, texture.\mbox{\hyperlink{classGlBindable_a5a7e0bbde3d01e24a83e0f0122402ab7}{get\_id}}(), 0);}
+\DoxyCodeLine{00036 \}}
+\DoxyCodeLine{00037 }
+\DoxyCodeLine{\Hypertarget{framebuffer_8cpp_source_l00038}\mbox{\hyperlink{classFramebuffer_a2d6e0ef178e7199df8149d53b12d93e0}{00038}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classFramebuffer_a2d6e0ef178e7199df8149d53b12d93e0}{Framebuffer::tex\_2d}}(GLsizei size[2], \textcolor{keyword}{const} \mbox{\hyperlink{classTexture}{Texture}} \&texture) \{}
+\DoxyCodeLine{00039     texture.\mbox{\hyperlink{classTexture_a08252c0058235586ddce388f6ac81b79}{make\_2d}}(size);}
+\DoxyCodeLine{00040     glFramebufferTexture(GL\_FRAMEBUFFER, GL\_COLOR\_ATTACHMENT0,}
+\DoxyCodeLine{00041                          texture.\mbox{\hyperlink{classGlBindable_a5a7e0bbde3d01e24a83e0f0122402ab7}{get\_id}}(), 0);}
+\DoxyCodeLine{00042 \}}
+\DoxyCodeLine{00043 }
+\DoxyCodeLine{\Hypertarget{framebuffer_8cpp_source_l00044}\mbox{\hyperlink{classFramebuffer_a0f0dce697d4107c9e6ea39fe11df6d29}{00044}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classFramebuffer_a0f0dce697d4107c9e6ea39fe11df6d29}{Framebuffer::renderbuffer}}(\textcolor{keyword}{const} \mbox{\hyperlink{classRenderbuffer}{Renderbuffer}} \&rb, GLenum target)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{00045     glFramebufferRenderbuffer(GL\_FRAMEBUFFER, target,}
+\DoxyCodeLine{00046                               GL\_RENDERBUFFER, rb.\mbox{\hyperlink{classGlBindable_a5a7e0bbde3d01e24a83e0f0122402ab7}{get\_id}}());}
+\DoxyCodeLine{00047 \}}
+\DoxyCodeLine{00048 }
+\DoxyCodeLine{\Hypertarget{framebuffer_8cpp_source_l00049}\mbox{\hyperlink{classFramebuffer_a28bda5ab4a57e13e49280d745dbf35b0}{00049}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classFramebuffer_a28bda5ab4a57e13e49280d745dbf35b0}{Framebuffer::rb\_color\_multisample}}(}
+\DoxyCodeLine{00050         GLsizei size[2], \textcolor{keyword}{const} \mbox{\hyperlink{classRenderbuffer}{Renderbuffer}} \&rb)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{00051     rb.\mbox{\hyperlink{classRenderbuffer_a492da8fc565ab9ae05f8aae2effdd4e7}{make\_multisample}}(size, GL\_RGB);}
+\DoxyCodeLine{00052     \mbox{\hyperlink{classFramebuffer_a0f0dce697d4107c9e6ea39fe11df6d29}{renderbuffer}}(rb, GL\_COLOR\_ATTACHMENT0);}
+\DoxyCodeLine{00053 \}}
+\DoxyCodeLine{00054 }
+\DoxyCodeLine{\Hypertarget{framebuffer_8cpp_source_l00055}\mbox{\hyperlink{classFramebuffer_a3c14a0980ae1369f964c0bc05c3ea4dd}{00055}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classFramebuffer_a3c14a0980ae1369f964c0bc05c3ea4dd}{Framebuffer::rb\_depth\_multisample}}(}
+\DoxyCodeLine{00056         GLsizei size[2], \textcolor{keyword}{const} \mbox{\hyperlink{classRenderbuffer}{Renderbuffer}} \&rb)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{00057     rb.\mbox{\hyperlink{classRenderbuffer_a492da8fc565ab9ae05f8aae2effdd4e7}{make\_multisample}}(size, GL\_DEPTH32F\_STENCIL8);}
+\DoxyCodeLine{00058     \mbox{\hyperlink{classFramebuffer_a0f0dce697d4107c9e6ea39fe11df6d29}{renderbuffer}}(rb, GL\_DEPTH\_STENCIL\_ATTACHMENT);}
+\DoxyCodeLine{00059 \}}
+\DoxyCodeLine{00060 }
+\DoxyCodeLine{\Hypertarget{framebuffer_8cpp_source_l00061}\mbox{\hyperlink{classFramebuffer_aa22bed74c24a765257806ed4693e7005}{00061}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classFramebuffer_aa22bed74c24a765257806ed4693e7005}{Framebuffer::rb\_color}}(GLsizei size[2], \textcolor{keyword}{const} \mbox{\hyperlink{classRenderbuffer}{Renderbuffer}} \&rb)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{00062     rb.\mbox{\hyperlink{classRenderbuffer_a48aed0ac588e14dd9024af29ef974b22}{make}}(size, GL\_RGB);}
+\DoxyCodeLine{00063     \mbox{\hyperlink{classFramebuffer_a0f0dce697d4107c9e6ea39fe11df6d29}{renderbuffer}}(rb, GL\_COLOR\_ATTACHMENT0);}
+\DoxyCodeLine{00064 \}}
+\DoxyCodeLine{00065 }
+\DoxyCodeLine{00066 }
+\DoxyCodeLine{\Hypertarget{framebuffer_8cpp_source_l00067}\mbox{\hyperlink{classFramebuffer_ac47980bdb179418e6ed3c8ff18d0fb2b}{00067}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classFramebuffer_ac47980bdb179418e6ed3c8ff18d0fb2b}{Framebuffer::rb\_depth}}(GLsizei size[2], \textcolor{keyword}{const} \mbox{\hyperlink{classRenderbuffer}{Renderbuffer}} \&rb)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{00068     rb.\mbox{\hyperlink{classRenderbuffer_a48aed0ac588e14dd9024af29ef974b22}{make}}(size, GL\_DEPTH32F\_STENCIL8);}
+\DoxyCodeLine{00069     \mbox{\hyperlink{classFramebuffer_a0f0dce697d4107c9e6ea39fe11df6d29}{renderbuffer}}(rb, GL\_DEPTH\_STENCIL\_ATTACHMENT);}
+\DoxyCodeLine{00070 \}}
+
+\end{DoxyCode}

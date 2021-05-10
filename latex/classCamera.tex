@@ -1,0 +1,596 @@
+\hypertarget{classCamera}{}\doxysubsection{Клас Camera}
+\label{classCamera}\index{Camera@{Camera}}
+
+
+Клас камери, якою можна маніпулювати у сцені.  
+
+
+
+
+{\ttfamily \#include $<$camera.\+h$>$}
+
+
+
+Схема успадкувань для Camera\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=133pt]{classCamera__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Діаграма зв\textquotesingle{}язків класу Camera\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=133pt]{classCamera__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Загальнодоступні елементи}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCamera_a01f94c3543f56ede7af49dc778f19331}{Camera}} ()
+\item 
+void \mbox{\hyperlink{classCamera_a92e90596e90d3405c93a9c2d4305a287}{get\+\_\+position}} (vec4 \mbox{\hyperlink{classCamera_adacb271479e9ca7df8cdffc489a9ec23}{position}}) override
+\begin{DoxyCompactList}\small\item\em Забирає поточну позицію камери у просторі. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_a06c173530d6f5d982092fb5f5f58f84a}{set\+\_\+position}} (vec4 \mbox{\hyperlink{classCamera_adacb271479e9ca7df8cdffc489a9ec23}{position}}) override
+\begin{DoxyCompactList}\small\item\em Задає нову позицію камери у просторі. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_aa7eb7b6bb3dc03911a44abefab63db28}{get\+\_\+rotation}} (vec3 \mbox{\hyperlink{classCamera_a7c0dfc9a9c583a9ec33f6831e563cd0b}{rotation}}) override
+\begin{DoxyCompactList}\small\item\em Забирає поточний нахил камери. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_a1a69c9c9f9f370599ba390c8c33f3f2f}{set\+\_\+rotation}} (vec3 \mbox{\hyperlink{classCamera_a7c0dfc9a9c583a9ec33f6831e563cd0b}{rotation}}) override
+\begin{DoxyCompactList}\small\item\em Задає новий нахил камери. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_a34282db3a235feac8b411787d0839a03}{get\+\_\+animation}} (vec3 \mbox{\hyperlink{classCamera_a7f5cd83c97cb8b1fa3fa5bf49a2d2738}{animation}}) override
+\begin{DoxyCompactList}\small\item\em Метод реалізований для інтерфейсу {\ttfamily \mbox{\hyperlink{classBijective}{Bijective}}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_a3630d2283d4065dfc3c9960518f2b329}{set\+\_\+animation}} (vec3 \mbox{\hyperlink{classCamera_a7f5cd83c97cb8b1fa3fa5bf49a2d2738}{animation}}) override
+\begin{DoxyCompactList}\small\item\em Метод реалізований для інтерфейсу {\ttfamily \mbox{\hyperlink{classBijective}{Bijective}}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_ab82dd66e529cd5da7f61bd0efe7cfed2}{get\+\_\+mat4}} (mat4 matrix) override
+\begin{DoxyCompactList}\small\item\em Забирає матрицю лінійних перетворень над камерою. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_a264f13ea514a68eb440a6e20b975470d}{translate}} (vec3 distances, float delta\+\_\+time) override
+\begin{DoxyCompactList}\small\item\em Переміщує камеру у просторі. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_aefe16d03f63e29639110b3fe9afa0e3c}{rotate}} (enum \mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ff}{coord\+\_\+enum}} coord, float delta\+\_\+time) override
+\begin{DoxyCompactList}\small\item\em Обертає камеру. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_a5e17cbaf3c595058ebf596ca612f4428}{rotate\+\_\+all}} (vec3 angles) override
+\begin{DoxyCompactList}\small\item\em Обернути камеру по всім осям. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_a8adea6001bb43806f2f012841335c305}{add\+\_\+animation}} (vec3 angles, float delta\+\_\+time) override
+\begin{DoxyCompactList}\small\item\em Метод реалізований для інтерфейсу {\ttfamily \mbox{\hyperlink{classBijective}{Bijective}}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_afda6bcc513fd95c22985ba078d47b2a3}{get\+\_\+direction}} (vec4 dest)
+\begin{DoxyCompactList}\small\item\em Обчислює напрямок перегляду камери. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_ac88148998eeb829c8ba8143831b7ced0}{get\+\_\+rotation\+\_\+mat4}} (mat4 dest)
+\begin{DoxyCompactList}\small\item\em Забирає матрицю обертання камери. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_a9ad7a34ba72c1dd1a4cef1e0cc896d6f}{get\+\_\+rotation\+\_\+inv\+\_\+mat4}} (mat4 dest)
+\begin{DoxyCompactList}\small\item\em Забирає інвертовану матрицю обертання камери. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_af770e5190d9a895ad804679e02ac182b}{translate\+\_\+camera}} (vec3 distances)
+\begin{DoxyCompactList}\small\item\em Переміщує камеру незалежно від часу. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_af2e2e8d296575d210a75c3ca88647a67}{rotate\+\_\+camera}} (float angle, enum \mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ff}{coord\+\_\+enum}} coord)
+\begin{DoxyCompactList}\small\item\em Обертає камеру по осі незалежно від часу. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_ac56fb9a7adad365cae4c0238b8d1e39a}{rotate\+\_\+all\+\_\+camera}} (vec3 angles)
+\begin{DoxyCompactList}\small\item\em Обертає камеру по всім осям незалежно від часу. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_ac8896d30c755130ba22c867598a1a432}{rotate\+\_\+all\+\_\+inverse}} (vec3 angles)
+\begin{DoxyCompactList}\small\item\em Обертає камеру по орбіті навколо центру коодинат. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Приватні дані}
+\begin{DoxyCompactItemize}
+\item 
+mat4 \mbox{\hyperlink{classCamera_a7c0dfc9a9c583a9ec33f6831e563cd0b}{rotation}}
+\begin{DoxyCompactList}\small\item\em Матриця лінійних перетворень у якій зберігається обернення камери. \end{DoxyCompactList}\item 
+vec4 \mbox{\hyperlink{classCamera_adacb271479e9ca7df8cdffc489a9ec23}{position}}
+\begin{DoxyCompactList}\small\item\em Вектор позіції камери $(x, y, z, 1.0)$. \end{DoxyCompactList}\item 
+vec4 \mbox{\hyperlink{classCamera_a7f5cd83c97cb8b1fa3fa5bf49a2d2738}{animation}}
+\begin{DoxyCompactList}\small\item\em Вектор, який реалізования для інтерфейсу {\ttfamily \mbox{\hyperlink{classBijective}{Bijective}}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Детальний опис}
+Клас камери, якою можна маніпулювати у сцені. 
+
+Див. визначення в файлі \mbox{\hyperlink{camera_8h_source}{camera.\+h}}, рядок \mbox{\hyperlink{camera_8h_source_l00019}{19}}
+
+
+
+\doxysubsubsection{Конструктор(и)}
+\mbox{\Hypertarget{classCamera_a01f94c3543f56ede7af49dc778f19331}\label{classCamera_a01f94c3543f56ede7af49dc778f19331}} 
+\index{Camera@{Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Camera@{Camera}}
+\doxyparagraph{\texorpdfstring{Camera()}{Camera()}}
+{\footnotesize\ttfamily Camera\+::\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{camera_8cpp_source}{camera.\+cpp}}, рядок \mbox{\hyperlink{camera_8cpp_source_l00006}{6}}
+
+
+
+\doxysubsubsection{Опис методів компонент}
+\mbox{\Hypertarget{classCamera_a8adea6001bb43806f2f012841335c305}\label{classCamera_a8adea6001bb43806f2f012841335c305}} 
+\index{Camera@{Camera}!add\_animation@{add\_animation}}
+\index{add\_animation@{add\_animation}!Camera@{Camera}}
+\doxyparagraph{\texorpdfstring{add\_animation()}{add\_animation()}}
+{\footnotesize\ttfamily void Camera\+::add\+\_\+animation (\begin{DoxyParamCaption}\item[{vec3}]{angles,  }\item[{float}]{delta\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Метод реалізований для інтерфейсу {\ttfamily \mbox{\hyperlink{classBijective}{Bijective}}} 
+
+
+
+Переозначення з \mbox{\hyperlink{classBijective_a193af7a2ea46d86fb32e5e86d2710940}{Bijective}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{camera_8cpp_source}{camera.\+cpp}}, рядок \mbox{\hyperlink{camera_8cpp_source_l00069}{69}}
+
+\mbox{\Hypertarget{classCamera_a34282db3a235feac8b411787d0839a03}\label{classCamera_a34282db3a235feac8b411787d0839a03}} 
+\index{Camera@{Camera}!get\_animation@{get\_animation}}
+\index{get\_animation@{get\_animation}!Camera@{Camera}}
+\doxyparagraph{\texorpdfstring{get\_animation()}{get\_animation()}}
+{\footnotesize\ttfamily void Camera\+::get\+\_\+animation (\begin{DoxyParamCaption}\item[{vec3}]{animation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Метод реалізований для інтерфейсу {\ttfamily \mbox{\hyperlink{classBijective}{Bijective}}} 
+
+
+
+Переозначення з \mbox{\hyperlink{classBijective_ae2901f2c23f284cacc1c4d20ca3e04b9}{Bijective}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{camera_8cpp_source}{camera.\+cpp}}, рядок \mbox{\hyperlink{camera_8cpp_source_l00031}{31}}
+
+\mbox{\Hypertarget{classCamera_afda6bcc513fd95c22985ba078d47b2a3}\label{classCamera_afda6bcc513fd95c22985ba078d47b2a3}} 
+\index{Camera@{Camera}!get\_direction@{get\_direction}}
+\index{get\_direction@{get\_direction}!Camera@{Camera}}
+\doxyparagraph{\texorpdfstring{get\_direction()}{get\_direction()}}
+{\footnotesize\ttfamily void Camera\+::get\+\_\+direction (\begin{DoxyParamCaption}\item[{vec4}]{dest }\end{DoxyParamCaption})}
+
+
+
+Обчислює напрямок перегляду камери. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\texttt{ out}}  & {\em dest} & напрямок перегляду камери \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{camera_8cpp_source}{camera.\+cpp}}, рядок \mbox{\hyperlink{camera_8cpp_source_l00077}{77}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{classCamera_afda6bcc513fd95c22985ba078d47b2a3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classCamera_ab82dd66e529cd5da7f61bd0efe7cfed2}\label{classCamera_ab82dd66e529cd5da7f61bd0efe7cfed2}} 
+\index{Camera@{Camera}!get\_mat4@{get\_mat4}}
+\index{get\_mat4@{get\_mat4}!Camera@{Camera}}
+\doxyparagraph{\texorpdfstring{get\_mat4()}{get\_mat4()}}
+{\footnotesize\ttfamily void Camera\+::get\+\_\+mat4 (\begin{DoxyParamCaption}\item[{mat4}]{matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Забирає матрицю лінійних перетворень над камерою. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\texttt{ out}}  & {\em matrix} & матриця лінійних перетворень \\
+\hline
+\end{DoxyParams}
+
+
+Переозначення з \mbox{\hyperlink{classBijective_ada286887158f78c0d1ad6cf2b18b9993}{Bijective}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{camera_8cpp_source}{camera.\+cpp}}, рядок \mbox{\hyperlink{camera_8cpp_source_l00041}{41}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{classCamera_ab82dd66e529cd5da7f61bd0efe7cfed2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classCamera_a92e90596e90d3405c93a9c2d4305a287}\label{classCamera_a92e90596e90d3405c93a9c2d4305a287}} 
+\index{Camera@{Camera}!get\_position@{get\_position}}
+\index{get\_position@{get\_position}!Camera@{Camera}}
+\doxyparagraph{\texorpdfstring{get\_position()}{get\_position()}}
+{\footnotesize\ttfamily void Camera\+::get\+\_\+position (\begin{DoxyParamCaption}\item[{vec4}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Забирає поточну позицію камери у просторі. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\texttt{ out}}  & {\em position} & поточна позицію камери \\
+\hline
+\end{DoxyParams}
+
+
+Переозначення з \mbox{\hyperlink{classBijective_af0939112acd564a7c51728a222246a45}{Bijective}}.
+
+\mbox{\Hypertarget{classCamera_aa7eb7b6bb3dc03911a44abefab63db28}\label{classCamera_aa7eb7b6bb3dc03911a44abefab63db28}} 
+\index{Camera@{Camera}!get\_rotation@{get\_rotation}}
+\index{get\_rotation@{get\_rotation}!Camera@{Camera}}
+\doxyparagraph{\texorpdfstring{get\_rotation()}{get\_rotation()}}
+{\footnotesize\ttfamily void Camera\+::get\+\_\+rotation (\begin{DoxyParamCaption}\item[{vec3}]{rotation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Забирає поточний нахил камери. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\texttt{ out}}  & {\em rotation} & поточний нахил камери \\
+\hline
+\end{DoxyParams}
+
+
+Переозначення з \mbox{\hyperlink{classBijective_a86168faf15a3a96e925fcd7e8b808b01}{Bijective}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{camera_8cpp_source}{camera.\+cpp}}, рядок \mbox{\hyperlink{camera_8cpp_source_l00021}{21}}
+
+\mbox{\Hypertarget{classCamera_a9ad7a34ba72c1dd1a4cef1e0cc896d6f}\label{classCamera_a9ad7a34ba72c1dd1a4cef1e0cc896d6f}} 
+\index{Camera@{Camera}!get\_rotation\_inv\_mat4@{get\_rotation\_inv\_mat4}}
+\index{get\_rotation\_inv\_mat4@{get\_rotation\_inv\_mat4}!Camera@{Camera}}
+\doxyparagraph{\texorpdfstring{get\_rotation\_inv\_mat4()}{get\_rotation\_inv\_mat4()}}
+{\footnotesize\ttfamily void Camera\+::get\+\_\+rotation\+\_\+inv\+\_\+mat4 (\begin{DoxyParamCaption}\item[{mat4}]{dest }\end{DoxyParamCaption})}
+
+
+
+Забирає інвертовану матрицю обертання камери. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\texttt{ out}}  & {\em dest} & інвертована матриця обертання камери. \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{camera_8cpp_source}{camera.\+cpp}}, рядок \mbox{\hyperlink{camera_8cpp_source_l00088}{88}}
+
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{classCamera_a9ad7a34ba72c1dd1a4cef1e0cc896d6f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classCamera_ac88148998eeb829c8ba8143831b7ced0}\label{classCamera_ac88148998eeb829c8ba8143831b7ced0}} 
+\index{Camera@{Camera}!get\_rotation\_mat4@{get\_rotation\_mat4}}
+\index{get\_rotation\_mat4@{get\_rotation\_mat4}!Camera@{Camera}}
+\doxyparagraph{\texorpdfstring{get\_rotation\_mat4()}{get\_rotation\_mat4()}}
+{\footnotesize\ttfamily void Camera\+::get\+\_\+rotation\+\_\+mat4 (\begin{DoxyParamCaption}\item[{mat4}]{dest }\end{DoxyParamCaption})}
+
+
+
+Забирає матрицю обертання камери. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\texttt{ out}}  & {\em dest} & матриця обертання камери. \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{camera_8cpp_source}{camera.\+cpp}}, рядок \mbox{\hyperlink{camera_8cpp_source_l00083}{83}}
+
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{classCamera_ac88148998eeb829c8ba8143831b7ced0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classCamera_aefe16d03f63e29639110b3fe9afa0e3c}\label{classCamera_aefe16d03f63e29639110b3fe9afa0e3c}} 
+\index{Camera@{Camera}!rotate@{rotate}}
+\index{rotate@{rotate}!Camera@{Camera}}
+\doxyparagraph{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily void Camera\+::rotate (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ff}{coord\+\_\+enum}}}]{coord,  }\item[{float}]{delta\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Обертає камеру. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\texttt{ in}}  & {\em coord} & позначає координатну вісь навколо якої обертати \\
+\hline
+\mbox{\texttt{ in}}  & {\em delta\+\_\+time} & скільки часу пройшло з останнього кадру \\
+\hline
+\end{DoxyParams}
+
+
+Переозначення з \mbox{\hyperlink{classBijective_ad59a2e843e9805ffd902baf7185f4622}{Bijective}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{camera_8cpp_source}{camera.\+cpp}}, рядок \mbox{\hyperlink{camera_8cpp_source_l00058}{58}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{classCamera_aefe16d03f63e29639110b3fe9afa0e3c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classCamera_a5e17cbaf3c595058ebf596ca612f4428}\label{classCamera_a5e17cbaf3c595058ebf596ca612f4428}} 
+\index{Camera@{Camera}!rotate\_all@{rotate\_all}}
+\index{rotate\_all@{rotate\_all}!Camera@{Camera}}
+\doxyparagraph{\texorpdfstring{rotate\_all()}{rotate\_all()}}
+{\footnotesize\ttfamily void Camera\+::rotate\+\_\+all (\begin{DoxyParamCaption}\item[{vec3}]{angles }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Обернути камеру по всім осям. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\texttt{ in}}  & {\em angles} & вектор кутів у радіанах на кожну вісь \\
+\hline
+\end{DoxyParams}
+
+
+Переозначення з \mbox{\hyperlink{classBijective_abef32f8b820e8f12a1bc856fb85c1654}{Bijective}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{camera_8cpp_source}{camera.\+cpp}}, рядок \mbox{\hyperlink{camera_8cpp_source_l00063}{63}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{classCamera_a5e17cbaf3c595058ebf596ca612f4428_cgraph}
+\end{center}
+\end{figure}
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{classCamera_a5e17cbaf3c595058ebf596ca612f4428_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classCamera_ac56fb9a7adad365cae4c0238b8d1e39a}\label{classCamera_ac56fb9a7adad365cae4c0238b8d1e39a}} 
+\index{Camera@{Camera}!rotate\_all\_camera@{rotate\_all\_camera}}
+\index{rotate\_all\_camera@{rotate\_all\_camera}!Camera@{Camera}}
+\doxyparagraph{\texorpdfstring{rotate\_all\_camera()}{rotate\_all\_camera()}}
+{\footnotesize\ttfamily void Camera\+::rotate\+\_\+all\+\_\+camera (\begin{DoxyParamCaption}\item[{vec3}]{angles }\end{DoxyParamCaption})}
+
+
+
+Обертає камеру по всім осям незалежно від часу. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em angles} & вектор кутів обертання по трьом осям $(x, y, z)$ \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{camera_8cpp_source}{camera.\+cpp}}, рядок \mbox{\hyperlink{camera_8cpp_source_l00110}{110}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCamera_ac56fb9a7adad365cae4c0238b8d1e39a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classCamera_ac8896d30c755130ba22c867598a1a432}\label{classCamera_ac8896d30c755130ba22c867598a1a432}} 
+\index{Camera@{Camera}!rotate\_all\_inverse@{rotate\_all\_inverse}}
+\index{rotate\_all\_inverse@{rotate\_all\_inverse}!Camera@{Camera}}
+\doxyparagraph{\texorpdfstring{rotate\_all\_inverse()}{rotate\_all\_inverse()}}
+{\footnotesize\ttfamily void Camera\+::rotate\+\_\+all\+\_\+inverse (\begin{DoxyParamCaption}\item[{vec3}]{angles }\end{DoxyParamCaption})}
+
+
+
+Обертає камеру по орбіті навколо центру коодинат. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em angles} & вектор кутів у радіанах обертання по трьом осям $(x, y, z)$ \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{camera_8cpp_source}{camera.\+cpp}}, рядок \mbox{\hyperlink{camera_8cpp_source_l00114}{114}}
+
+\mbox{\Hypertarget{classCamera_af2e2e8d296575d210a75c3ca88647a67}\label{classCamera_af2e2e8d296575d210a75c3ca88647a67}} 
+\index{Camera@{Camera}!rotate\_camera@{rotate\_camera}}
+\index{rotate\_camera@{rotate\_camera}!Camera@{Camera}}
+\doxyparagraph{\texorpdfstring{rotate\_camera()}{rotate\_camera()}}
+{\footnotesize\ttfamily void Camera\+::rotate\+\_\+camera (\begin{DoxyParamCaption}\item[{float}]{angle,  }\item[{enum \mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ff}{coord\+\_\+enum}}}]{coord }\end{DoxyParamCaption})}
+
+
+
+Обертає камеру по осі незалежно від часу. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em angle} & кут обертання у радіанах \\
+\hline
+{\em coord} & ввісь обертання \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{camera_8cpp_source}{camera.\+cpp}}, рядок \mbox{\hyperlink{camera_8cpp_source_l00096}{96}}
+
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCamera_af2e2e8d296575d210a75c3ca88647a67_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classCamera_a3630d2283d4065dfc3c9960518f2b329}\label{classCamera_a3630d2283d4065dfc3c9960518f2b329}} 
+\index{Camera@{Camera}!set\_animation@{set\_animation}}
+\index{set\_animation@{set\_animation}!Camera@{Camera}}
+\doxyparagraph{\texorpdfstring{set\_animation()}{set\_animation()}}
+{\footnotesize\ttfamily void Camera\+::set\+\_\+animation (\begin{DoxyParamCaption}\item[{vec3}]{animation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Метод реалізований для інтерфейсу {\ttfamily \mbox{\hyperlink{classBijective}{Bijective}}} 
+
+
+
+Переозначення з \mbox{\hyperlink{classBijective_a4791c5545451015a1b7e099517430ca4}{Bijective}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{camera_8cpp_source}{camera.\+cpp}}, рядок \mbox{\hyperlink{camera_8cpp_source_l00036}{36}}
+
+\mbox{\Hypertarget{classCamera_a06c173530d6f5d982092fb5f5f58f84a}\label{classCamera_a06c173530d6f5d982092fb5f5f58f84a}} 
+\index{Camera@{Camera}!set\_position@{set\_position}}
+\index{set\_position@{set\_position}!Camera@{Camera}}
+\doxyparagraph{\texorpdfstring{set\_position()}{set\_position()}}
+{\footnotesize\ttfamily void Camera\+::set\+\_\+position (\begin{DoxyParamCaption}\item[{vec4}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Задає нову позицію камери у просторі. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\texttt{ in}}  & {\em position} & нова позиція камери у просторі \\
+\hline
+\end{DoxyParams}
+
+
+Переозначення з \mbox{\hyperlink{classBijective_ad91ff8fb9810bf530e9d393f99428130}{Bijective}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{camera_8cpp_source}{camera.\+cpp}}, рядок \mbox{\hyperlink{camera_8cpp_source_l00016}{16}}
+
+\mbox{\Hypertarget{classCamera_a1a69c9c9f9f370599ba390c8c33f3f2f}\label{classCamera_a1a69c9c9f9f370599ba390c8c33f3f2f}} 
+\index{Camera@{Camera}!set\_rotation@{set\_rotation}}
+\index{set\_rotation@{set\_rotation}!Camera@{Camera}}
+\doxyparagraph{\texorpdfstring{set\_rotation()}{set\_rotation()}}
+{\footnotesize\ttfamily void Camera\+::set\+\_\+rotation (\begin{DoxyParamCaption}\item[{vec3}]{rotation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Задає новий нахил камери. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\texttt{ in}}  & {\em rotation} & новий нахил камери \\
+\hline
+\end{DoxyParams}
+
+
+Переозначення з \mbox{\hyperlink{classBijective_a41b82ac3c2ef05fa7c63913d4dac3e86}{Bijective}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{camera_8cpp_source}{camera.\+cpp}}, рядок \mbox{\hyperlink{camera_8cpp_source_l00026}{26}}
+
+\mbox{\Hypertarget{classCamera_a264f13ea514a68eb440a6e20b975470d}\label{classCamera_a264f13ea514a68eb440a6e20b975470d}} 
+\index{Camera@{Camera}!translate@{translate}}
+\index{translate@{translate}!Camera@{Camera}}
+\doxyparagraph{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily void Camera\+::translate (\begin{DoxyParamCaption}\item[{vec3}]{distances,  }\item[{float}]{delta\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Переміщує камеру у просторі. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\texttt{ in}}  & {\em distances} & відстані переміщення по осям \\
+\hline
+\mbox{\texttt{ in}}  & {\em delta\+\_\+time} & скільки часу пройшло з останнього кадру \\
+\hline
+\end{DoxyParams}
+
+
+Переозначення з \mbox{\hyperlink{classBijective_a00595de58fb9732439f4b5f1ea3d9c6c}{Bijective}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{camera_8cpp_source}{camera.\+cpp}}, рядок \mbox{\hyperlink{camera_8cpp_source_l00046}{46}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{classCamera_a264f13ea514a68eb440a6e20b975470d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classCamera_af770e5190d9a895ad804679e02ac182b}\label{classCamera_af770e5190d9a895ad804679e02ac182b}} 
+\index{Camera@{Camera}!translate\_camera@{translate\_camera}}
+\index{translate\_camera@{translate\_camera}!Camera@{Camera}}
+\doxyparagraph{\texorpdfstring{translate\_camera()}{translate\_camera()}}
+{\footnotesize\ttfamily void Camera\+::translate\+\_\+camera (\begin{DoxyParamCaption}\item[{vec3}]{distances }\end{DoxyParamCaption})}
+
+
+
+Переміщує камеру незалежно від часу. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em distances} & відстані переміщення по трьом осям $(x, y, z)$ \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{camera_8cpp_source}{camera.\+cpp}}, рядок \mbox{\hyperlink{camera_8cpp_source_l00092}{92}}
+
+
+
+\doxysubsubsection{Компонентні дані}
+\mbox{\Hypertarget{classCamera_a7f5cd83c97cb8b1fa3fa5bf49a2d2738}\label{classCamera_a7f5cd83c97cb8b1fa3fa5bf49a2d2738}} 
+\index{Camera@{Camera}!animation@{animation}}
+\index{animation@{animation}!Camera@{Camera}}
+\doxyparagraph{\texorpdfstring{animation}{animation}}
+{\footnotesize\ttfamily vec4 Camera\+::animation\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Вектор, який реалізования для інтерфейсу {\ttfamily \mbox{\hyperlink{classBijective}{Bijective}}} 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{camera_8h_source}{camera.\+h}}, рядок \mbox{\hyperlink{camera_8h_source_l00031}{31}}
+
+\mbox{\Hypertarget{classCamera_adacb271479e9ca7df8cdffc489a9ec23}\label{classCamera_adacb271479e9ca7df8cdffc489a9ec23}} 
+\index{Camera@{Camera}!position@{position}}
+\index{position@{position}!Camera@{Camera}}
+\doxyparagraph{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily vec4 Camera\+::position\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Вектор позіції камери $(x, y, z, 1.0)$. 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{camera_8h_source}{camera.\+h}}, рядок \mbox{\hyperlink{camera_8h_source_l00027}{27}}
+
+\mbox{\Hypertarget{classCamera_a7c0dfc9a9c583a9ec33f6831e563cd0b}\label{classCamera_a7c0dfc9a9c583a9ec33f6831e563cd0b}} 
+\index{Camera@{Camera}!rotation@{rotation}}
+\index{rotation@{rotation}!Camera@{Camera}}
+\doxyparagraph{\texorpdfstring{rotation}{rotation}}
+{\footnotesize\ttfamily mat4 Camera\+::rotation\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Матриця лінійних перетворень у якій зберігається обернення камери. 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{camera_8h_source}{camera.\+h}}, рядок \mbox{\hyperlink{camera_8h_source_l00023}{23}}
+
+
+
+Документація цих класів була створена з файлів\+:\begin{DoxyCompactItemize}
+\item 
+osdo/\mbox{\hyperlink{camera_8h}{camera.\+h}}\item 
+osdo/\mbox{\hyperlink{camera_8cpp}{camera.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,673 @@
+\hypertarget{classObject}{}\doxysubsection{Клас Object}
+\label{classObject}\index{Object@{Object}}
+
+
+Об\textquotesingle{}єкт моделі.  
+
+
+
+
+{\ttfamily \#include $<$object.\+h$>$}
+
+
+
+Схема успадкувань для Object\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=133pt]{classObject__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Діаграма зв\textquotesingle{}язків класу Object\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{classObject__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Загальнодоступні елементи}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classObject_afcecd10bd5781c735966c67a8b2a032f}{Object}} (shared\+\_\+ptr$<$ \mbox{\hyperlink{classModel}{Model}} $>$ \mbox{\hyperlink{classObject_adadea81d91f42970ba3829793bdac3c5}{model}}=nullptr)
+\begin{DoxyCompactList}\small\item\em Конструктор, який створює об\textquotesingle{}єкт з моделі. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classObject_ab42ffe43dbd5d5cc089493eb60245ee1}{$\sim$\+Object}} () override=default
+\item 
+void \mbox{\hyperlink{classObject_a494825c4cf01dcb9a7cc03d2912ebc23}{get\+\_\+position}} (vec4 \mbox{\hyperlink{classObject_a66142044dec90724bc31f9511362eb9f}{position}}) override
+\begin{DoxyCompactList}\small\item\em Забирає поточну позицію об\textquotesingle{}єкта у просторі. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_afb2a9a9461d2602bbf04f2a88f79dd03}{set\+\_\+position}} (vec4 \mbox{\hyperlink{classObject_a66142044dec90724bc31f9511362eb9f}{position}}) override
+\begin{DoxyCompactList}\small\item\em Задає нову позицію об\textquotesingle{}єкта у просторі. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_aa8359d878b035e443c8fbe677bbc3613}{get\+\_\+rotation}} (vec3 rotation) override
+\begin{DoxyCompactList}\small\item\em Забирає поточний нахил об\textquotesingle{}єкта. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_ad2bac42a4343326372b44a620fc6f32e}{set\+\_\+rotation}} (vec3 rotation) override
+\begin{DoxyCompactList}\small\item\em Задає новий нахил об\textquotesingle{}єкта. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a6f78bd2cc21324b4d243bcfab465deaa}{get\+\_\+animation}} (vec3 rotation) override
+\begin{DoxyCompactList}\small\item\em Забирає поточну анімацію обернення об\textquotesingle{}єкта. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a6ddb712178530b3f3af4b1b1a7c39b00}{set\+\_\+animation}} (vec3 rotation) override
+\begin{DoxyCompactList}\small\item\em Задає нову анімацію обернення об\textquotesingle{}єкта. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_afff370408e02f6886c5bba0406e2073d}{get\+\_\+mat4}} (mat4 matrix) override
+\begin{DoxyCompactList}\small\item\em Забирає матрицю лінійних перетворень над об\textquotesingle{}єктом. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a42b8d284828b2d62960ecf07a61cdd32}{translate}} (vec3 distances, float delta\+\_\+time) override
+\begin{DoxyCompactList}\small\item\em Переміщує об\textquotesingle{}єкт у просторі. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a485bd8b8aa5fb4ca6d0dd9c6701c4948}{rotate}} (enum \mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ff}{coord\+\_\+enum}} coord, float delta\+\_\+time) override
+\begin{DoxyCompactList}\small\item\em Обертає об\textquotesingle{}єкт. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_add3dce565f65cf4e74329dd3ed987f73}{rotate\+\_\+all}} (vec3 angles) override
+\begin{DoxyCompactList}\small\item\em Обернути об\textquotesingle{}єкт по всім осям. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a5c6095ac962c2faeaccf09d0a9a7d4a6}{add\+\_\+animation}} (vec3 angles, float delta\+\_\+time) override
+\begin{DoxyCompactList}\small\item\em Додає швидкість анімації обертання об\textquotesingle{}єкту. \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classModel}{Model}} $>$ \mbox{\hyperlink{classObject_aeeec41ecc01e46f9d191b6abc50a0ae0}{get\+\_\+model}} ()
+\begin{DoxyCompactList}\small\item\em Повертає модель об\textquotesingle{}єкту. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_aa23e007d3b922a56f11510c5481a3e07}{draw}} (\mbox{\hyperlink{classShader}{Shader}} \&shader, mat4 mat4buf, GLdouble delta\+\_\+time, bool pre\+\_\+generated)
+\begin{DoxyCompactList}\small\item\em Відображує об\textquotesingle{}єкт \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_ab4dab8a9da970d074185b17c2fd95f21}{translate\+\_\+object}} (vec3 distances)
+\begin{DoxyCompactList}\small\item\em Переміщує об\textquotesingle{}єкт незалежно від часу. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a9dcb8961e7f0d5cbaaba5eaf826b741a}{rotate\+\_\+object}} (float angle, enum \mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ff}{coord\+\_\+enum}} coord)
+\begin{DoxyCompactList}\small\item\em Обертає об\textquotesingle{}єкт по осі незалежно від часу. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a2c5ac1f0bcbd1583ac4fc28bcac70811}{rotate\+\_\+all\+\_\+object}} (vec3 angles)
+\begin{DoxyCompactList}\small\item\em Обертає об\textquotesingle{}єкт по всім осям незалежно від часу. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_ad0997e94d29fff7b70940ce862ea0827}{animate}} (float step)
+\begin{DoxyCompactList}\small\item\em Обертає об\textquotesingle{}єкт по заданій анімації. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a89c4ed17dc35de90ee5fd12302c9e120}{scale}} (vec3 scale)
+\begin{DoxyCompactList}\small\item\em Збільщує або зменшує об\textquotesingle{}єкт по трьом осям. \end{DoxyCompactList}\item 
+mat4 $\ast$ \mbox{\hyperlink{classObject_a5cdb7fd4168627de68679563c48d8567}{get\+\_\+transform}} ()
+\begin{DoxyCompactList}\small\item\em Повертає матрицю лінійних перетворень без переміщення. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Приватні дані}
+\begin{DoxyCompactItemize}
+\item 
+mat4 \mbox{\hyperlink{classObject_a8f8afc163da863a8ff5198a650fb1e91}{transform}}
+\begin{DoxyCompactList}\small\item\em Матриця лінійних перетворень. \end{DoxyCompactList}\item 
+vec4 \mbox{\hyperlink{classObject_a66142044dec90724bc31f9511362eb9f}{position}}
+\begin{DoxyCompactList}\small\item\em Позиція об\textquotesingle{}єкту у просторі \end{DoxyCompactList}\item 
+vec4 \mbox{\hyperlink{classObject_adffa22add11a86b403a4acef6bc5ac4a}{animation}}
+\begin{DoxyCompactList}\small\item\em Анімація обертання по осям $(x, y, z, 1.0)$. \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classModel}{Model}} $>$ \mbox{\hyperlink{classObject_adadea81d91f42970ba3829793bdac3c5}{model}}
+\begin{DoxyCompactList}\small\item\em Модель об\textquotesingle{}єкту. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Детальний опис}
+Об\textquotesingle{}єкт моделі. 
+
+Див. визначення в файлі \mbox{\hyperlink{object_8h_source}{object.\+h}}, рядок \mbox{\hyperlink{object_8h_source_l00020}{20}}
+
+
+
+\doxysubsubsection{Конструктор(и)}
+\mbox{\Hypertarget{classObject_afcecd10bd5781c735966c67a8b2a032f}\label{classObject_afcecd10bd5781c735966c67a8b2a032f}} 
+\index{Object@{Object}!Object@{Object}}
+\index{Object@{Object}!Object@{Object}}
+\doxyparagraph{\texorpdfstring{Object()}{Object()}}
+{\footnotesize\ttfamily Object\+::\+Object (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{classModel}{Model}} $>$}]{model = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Конструктор, який створює об\textquotesingle{}єкт з моделі. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em model} & Модель об\textquotesingle{}єкту. \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{object_8cpp_source}{object.\+cpp}}, рядок \mbox{\hyperlink{object_8cpp_source_l00007}{7}}
+
+\mbox{\Hypertarget{classObject_ab42ffe43dbd5d5cc089493eb60245ee1}\label{classObject_ab42ffe43dbd5d5cc089493eb60245ee1}} 
+\index{Object@{Object}!````~Object@{$\sim$Object}}
+\index{````~Object@{$\sim$Object}!Object@{Object}}
+\doxyparagraph{\texorpdfstring{$\sim$Object()}{~Object()}}
+{\footnotesize\ttfamily Object\+::$\sim$\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+\doxysubsubsection{Опис методів компонент}
+\mbox{\Hypertarget{classObject_a5c6095ac962c2faeaccf09d0a9a7d4a6}\label{classObject_a5c6095ac962c2faeaccf09d0a9a7d4a6}} 
+\index{Object@{Object}!add\_animation@{add\_animation}}
+\index{add\_animation@{add\_animation}!Object@{Object}}
+\doxyparagraph{\texorpdfstring{add\_animation()}{add\_animation()}}
+{\footnotesize\ttfamily void Object\+::add\+\_\+animation (\begin{DoxyParamCaption}\item[{vec3}]{angles,  }\item[{float}]{delta\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Додає швидкість анімації обертання об\textquotesingle{}єкту. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\texttt{ in}}  & {\em angles} & вектор швидкостей анімацій обертання по трьом осям \\
+\hline
+\mbox{\texttt{ in}}  & {\em delta\+\_\+time} & скільки часу пройшло з останнього кадру \\
+\hline
+\end{DoxyParams}
+
+
+Переозначення з \mbox{\hyperlink{classBijective_a193af7a2ea46d86fb32e5e86d2710940}{Bijective}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{object_8cpp_source}{object.\+cpp}}, рядок \mbox{\hyperlink{object_8cpp_source_l00073}{73}}
+
+\mbox{\Hypertarget{classObject_ad0997e94d29fff7b70940ce862ea0827}\label{classObject_ad0997e94d29fff7b70940ce862ea0827}} 
+\index{Object@{Object}!animate@{animate}}
+\index{animate@{animate}!Object@{Object}}
+\doxyparagraph{\texorpdfstring{animate()}{animate()}}
+{\footnotesize\ttfamily void Object\+::animate (\begin{DoxyParamCaption}\item[{float}]{step }\end{DoxyParamCaption})}
+
+
+
+Обертає об\textquotesingle{}єкт по заданій анімації. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em step} & шаг анімації \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{object_8cpp_source}{object.\+cpp}}, рядок \mbox{\hyperlink{object_8cpp_source_l00105}{105}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classObject_ad0997e94d29fff7b70940ce862ea0827_cgraph}
+\end{center}
+\end{figure}
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{classObject_ad0997e94d29fff7b70940ce862ea0827_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classObject_aa23e007d3b922a56f11510c5481a3e07}\label{classObject_aa23e007d3b922a56f11510c5481a3e07}} 
+\index{Object@{Object}!draw@{draw}}
+\index{draw@{draw}!Object@{Object}}
+\doxyparagraph{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Object\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classShader}{Shader}} \&}]{shader,  }\item[{mat4}]{mat4buf,  }\item[{GLdouble}]{delta\+\_\+time,  }\item[{bool}]{pre\+\_\+generated }\end{DoxyParamCaption})}
+
+
+
+Відображує об\textquotesingle{}єкт 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em shader} & Шейдер який використовуєтсья для відображення моделі \\
+\hline
+{\em mat4buf} & буфер матриці \\
+\hline
+{\em delta\+\_\+time} & скільки часу пройшло з останнього кадру \\
+\hline
+{\em pre\+\_\+generated} & флаг, який позначає яким чином відображати модель \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{object_8cpp_source}{object.\+cpp}}, рядок \mbox{\hyperlink{object_8cpp_source_l00056}{56}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classObject_aa23e007d3b922a56f11510c5481a3e07_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classObject_a6f78bd2cc21324b4d243bcfab465deaa}\label{classObject_a6f78bd2cc21324b4d243bcfab465deaa}} 
+\index{Object@{Object}!get\_animation@{get\_animation}}
+\index{get\_animation@{get\_animation}!Object@{Object}}
+\doxyparagraph{\texorpdfstring{get\_animation()}{get\_animation()}}
+{\footnotesize\ttfamily void Object\+::get\+\_\+animation (\begin{DoxyParamCaption}\item[{vec3}]{rotation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Забирає поточну анімацію обернення об\textquotesingle{}єкта. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\texttt{ out}}  & {\em rotation} & поточна анімація обернення об\textquotesingle{}єкта \\
+\hline
+\end{DoxyParams}
+
+
+Переозначення з \mbox{\hyperlink{classBijective_ae2901f2c23f284cacc1c4d20ca3e04b9}{Bijective}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{object_8cpp_source}{object.\+cpp}}, рядок \mbox{\hyperlink{object_8cpp_source_l00034}{34}}
+
+\mbox{\Hypertarget{classObject_afff370408e02f6886c5bba0406e2073d}\label{classObject_afff370408e02f6886c5bba0406e2073d}} 
+\index{Object@{Object}!get\_mat4@{get\_mat4}}
+\index{get\_mat4@{get\_mat4}!Object@{Object}}
+\doxyparagraph{\texorpdfstring{get\_mat4()}{get\_mat4()}}
+{\footnotesize\ttfamily void Object\+::get\+\_\+mat4 (\begin{DoxyParamCaption}\item[{mat4}]{matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Забирає матрицю лінійних перетворень над об\textquotesingle{}єктом. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\texttt{ out}}  & {\em matrix} & матриця лінійних перетворень \\
+\hline
+\end{DoxyParams}
+
+
+Переозначення з \mbox{\hyperlink{classBijective_ada286887158f78c0d1ad6cf2b18b9993}{Bijective}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{object_8cpp_source}{object.\+cpp}}, рядок \mbox{\hyperlink{object_8cpp_source_l00044}{44}}
+
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{classObject_afff370408e02f6886c5bba0406e2073d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classObject_aeeec41ecc01e46f9d191b6abc50a0ae0}\label{classObject_aeeec41ecc01e46f9d191b6abc50a0ae0}} 
+\index{Object@{Object}!get\_model@{get\_model}}
+\index{get\_model@{get\_model}!Object@{Object}}
+\doxyparagraph{\texorpdfstring{get\_model()}{get\_model()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{classModel}{Model}} $>$ Object\+::get\+\_\+model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Повертає модель об\textquotesingle{}єкту. 
+
+\begin{DoxyReturn}{Повертає}
+модель об\textquotesingle{}єкту 
+\end{DoxyReturn}
+
+
+Див. визначення в файлі \mbox{\hyperlink{object_8cpp_source}{object.\+cpp}}, рядок \mbox{\hyperlink{object_8cpp_source_l00080}{80}}
+
+\mbox{\Hypertarget{classObject_a494825c4cf01dcb9a7cc03d2912ebc23}\label{classObject_a494825c4cf01dcb9a7cc03d2912ebc23}} 
+\index{Object@{Object}!get\_position@{get\_position}}
+\index{get\_position@{get\_position}!Object@{Object}}
+\doxyparagraph{\texorpdfstring{get\_position()}{get\_position()}}
+{\footnotesize\ttfamily void Object\+::get\+\_\+position (\begin{DoxyParamCaption}\item[{vec4}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Забирає поточну позицію об\textquotesingle{}єкта у просторі. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\texttt{ out}}  & {\em position} & поточна позицію об\textquotesingle{}єкта \\
+\hline
+\end{DoxyParams}
+
+
+Переозначення з \mbox{\hyperlink{classBijective_af0939112acd564a7c51728a222246a45}{Bijective}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{object_8cpp_source}{object.\+cpp}}, рядок \mbox{\hyperlink{object_8cpp_source_l00014}{14}}
+
+\mbox{\Hypertarget{classObject_aa8359d878b035e443c8fbe677bbc3613}\label{classObject_aa8359d878b035e443c8fbe677bbc3613}} 
+\index{Object@{Object}!get\_rotation@{get\_rotation}}
+\index{get\_rotation@{get\_rotation}!Object@{Object}}
+\doxyparagraph{\texorpdfstring{get\_rotation()}{get\_rotation()}}
+{\footnotesize\ttfamily void Object\+::get\+\_\+rotation (\begin{DoxyParamCaption}\item[{vec3}]{rotation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Забирає поточний нахил об\textquotesingle{}єкта. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\texttt{ out}}  & {\em rotation} & поточний нахил об\textquotesingle{}єкта \\
+\hline
+\end{DoxyParams}
+
+
+Переозначення з \mbox{\hyperlink{classBijective_a86168faf15a3a96e925fcd7e8b808b01}{Bijective}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{object_8cpp_source}{object.\+cpp}}, рядок \mbox{\hyperlink{object_8cpp_source_l00024}{24}}
+
+\mbox{\Hypertarget{classObject_a5cdb7fd4168627de68679563c48d8567}\label{classObject_a5cdb7fd4168627de68679563c48d8567}} 
+\index{Object@{Object}!get\_transform@{get\_transform}}
+\index{get\_transform@{get\_transform}!Object@{Object}}
+\doxyparagraph{\texorpdfstring{get\_transform()}{get\_transform()}}
+{\footnotesize\ttfamily mat4 $\ast$ Object\+::get\+\_\+transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Повертає матрицю лінійних перетворень без переміщення. 
+
+\begin{DoxyReturn}{Повертає}
+матриця лінійних перетворень 
+\end{DoxyReturn}
+
+
+Див. визначення в файлі \mbox{\hyperlink{object_8cpp_source}{object.\+cpp}}, рядок \mbox{\hyperlink{object_8cpp_source_l00115}{115}}
+
+\mbox{\Hypertarget{classObject_a485bd8b8aa5fb4ca6d0dd9c6701c4948}\label{classObject_a485bd8b8aa5fb4ca6d0dd9c6701c4948}} 
+\index{Object@{Object}!rotate@{rotate}}
+\index{rotate@{rotate}!Object@{Object}}
+\doxyparagraph{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily void Object\+::rotate (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ff}{coord\+\_\+enum}}}]{coord,  }\item[{float}]{delta\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Обертає об\textquotesingle{}єкт. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\texttt{ in}}  & {\em coord} & позначає координатну вісь навколо якої обертати \\
+\hline
+\mbox{\texttt{ in}}  & {\em delta\+\_\+time} & скільки часу пройшло з останнього кадру \\
+\hline
+\end{DoxyParams}
+
+
+Переозначення з \mbox{\hyperlink{classBijective_ad59a2e843e9805ffd902baf7185f4622}{Bijective}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{object_8cpp_source}{object.\+cpp}}, рядок \mbox{\hyperlink{object_8cpp_source_l00065}{65}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{classObject_a485bd8b8aa5fb4ca6d0dd9c6701c4948_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classObject_add3dce565f65cf4e74329dd3ed987f73}\label{classObject_add3dce565f65cf4e74329dd3ed987f73}} 
+\index{Object@{Object}!rotate\_all@{rotate\_all}}
+\index{rotate\_all@{rotate\_all}!Object@{Object}}
+\doxyparagraph{\texorpdfstring{rotate\_all()}{rotate\_all()}}
+{\footnotesize\ttfamily void Object\+::rotate\+\_\+all (\begin{DoxyParamCaption}\item[{vec3}]{angles }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Обернути об\textquotesingle{}єкт по всім осям. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\texttt{ in}}  & {\em angles} & вектор кутів у радіанах на кожну вісь \\
+\hline
+\end{DoxyParams}
+
+
+Переозначення з \mbox{\hyperlink{classBijective_abef32f8b820e8f12a1bc856fb85c1654}{Bijective}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{object_8cpp_source}{object.\+cpp}}, рядок \mbox{\hyperlink{object_8cpp_source_l00069}{69}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classObject_add3dce565f65cf4e74329dd3ed987f73_cgraph}
+\end{center}
+\end{figure}
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classObject_add3dce565f65cf4e74329dd3ed987f73_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classObject_a2c5ac1f0bcbd1583ac4fc28bcac70811}\label{classObject_a2c5ac1f0bcbd1583ac4fc28bcac70811}} 
+\index{Object@{Object}!rotate\_all\_object@{rotate\_all\_object}}
+\index{rotate\_all\_object@{rotate\_all\_object}!Object@{Object}}
+\doxyparagraph{\texorpdfstring{rotate\_all\_object()}{rotate\_all\_object()}}
+{\footnotesize\ttfamily void Object\+::rotate\+\_\+all\+\_\+object (\begin{DoxyParamCaption}\item[{vec3}]{angles }\end{DoxyParamCaption})}
+
+
+
+Обертає об\textquotesingle{}єкт по всім осям незалежно від часу. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em angles} & вектор кутів обертання по трьом осям $(x, y, z)$ \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{object_8cpp_source}{object.\+cpp}}, рядок \mbox{\hyperlink{object_8cpp_source_l00099}{99}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{classObject_a2c5ac1f0bcbd1583ac4fc28bcac70811_cgraph}
+\end{center}
+\end{figure}
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classObject_a2c5ac1f0bcbd1583ac4fc28bcac70811_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classObject_a9dcb8961e7f0d5cbaaba5eaf826b741a}\label{classObject_a9dcb8961e7f0d5cbaaba5eaf826b741a}} 
+\index{Object@{Object}!rotate\_object@{rotate\_object}}
+\index{rotate\_object@{rotate\_object}!Object@{Object}}
+\doxyparagraph{\texorpdfstring{rotate\_object()}{rotate\_object()}}
+{\footnotesize\ttfamily void Object\+::rotate\+\_\+object (\begin{DoxyParamCaption}\item[{float}]{angle,  }\item[{enum \mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ff}{coord\+\_\+enum}}}]{coord }\end{DoxyParamCaption})}
+
+
+
+Обертає об\textquotesingle{}єкт по осі незалежно від часу. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em angle} & кут обертання у радіанах \\
+\hline
+{\em coord} & ввісь обертання \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{object_8cpp_source}{object.\+cpp}}, рядок \mbox{\hyperlink{object_8cpp_source_l00089}{89}}
+
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classObject_a9dcb8961e7f0d5cbaaba5eaf826b741a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classObject_a89c4ed17dc35de90ee5fd12302c9e120}\label{classObject_a89c4ed17dc35de90ee5fd12302c9e120}} 
+\index{Object@{Object}!scale@{scale}}
+\index{scale@{scale}!Object@{Object}}
+\doxyparagraph{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily void Object\+::scale (\begin{DoxyParamCaption}\item[{vec3}]{scale }\end{DoxyParamCaption})}
+
+
+
+Збільщує або зменшує об\textquotesingle{}єкт по трьом осям. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em scale} & коеффіціенти зміни розміру по осям $(x, y, z)$ \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{object_8cpp_source}{object.\+cpp}}, рядок \mbox{\hyperlink{object_8cpp_source_l00111}{111}}
+
+\mbox{\Hypertarget{classObject_a6ddb712178530b3f3af4b1b1a7c39b00}\label{classObject_a6ddb712178530b3f3af4b1b1a7c39b00}} 
+\index{Object@{Object}!set\_animation@{set\_animation}}
+\index{set\_animation@{set\_animation}!Object@{Object}}
+\doxyparagraph{\texorpdfstring{set\_animation()}{set\_animation()}}
+{\footnotesize\ttfamily void Object\+::set\+\_\+animation (\begin{DoxyParamCaption}\item[{vec3}]{rotation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Задає нову анімацію обернення об\textquotesingle{}єкта. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\texttt{ in}}  & {\em rotation} & нова анімація обернення об\textquotesingle{}єкта. \\
+\hline
+\end{DoxyParams}
+
+
+Переозначення з \mbox{\hyperlink{classBijective_a4791c5545451015a1b7e099517430ca4}{Bijective}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{object_8cpp_source}{object.\+cpp}}, рядок \mbox{\hyperlink{object_8cpp_source_l00039}{39}}
+
+\mbox{\Hypertarget{classObject_afb2a9a9461d2602bbf04f2a88f79dd03}\label{classObject_afb2a9a9461d2602bbf04f2a88f79dd03}} 
+\index{Object@{Object}!set\_position@{set\_position}}
+\index{set\_position@{set\_position}!Object@{Object}}
+\doxyparagraph{\texorpdfstring{set\_position()}{set\_position()}}
+{\footnotesize\ttfamily void Object\+::set\+\_\+position (\begin{DoxyParamCaption}\item[{vec4}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Задає нову позицію об\textquotesingle{}єкта у просторі. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\texttt{ in}}  & {\em position} & нова позиція об\textquotesingle{}єкта у просторі \\
+\hline
+\end{DoxyParams}
+
+
+Переозначення з \mbox{\hyperlink{classBijective_ad91ff8fb9810bf530e9d393f99428130}{Bijective}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{object_8cpp_source}{object.\+cpp}}, рядок \mbox{\hyperlink{object_8cpp_source_l00019}{19}}
+
+\mbox{\Hypertarget{classObject_ad2bac42a4343326372b44a620fc6f32e}\label{classObject_ad2bac42a4343326372b44a620fc6f32e}} 
+\index{Object@{Object}!set\_rotation@{set\_rotation}}
+\index{set\_rotation@{set\_rotation}!Object@{Object}}
+\doxyparagraph{\texorpdfstring{set\_rotation()}{set\_rotation()}}
+{\footnotesize\ttfamily void Object\+::set\+\_\+rotation (\begin{DoxyParamCaption}\item[{vec3}]{rotation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Задає новий нахил об\textquotesingle{}єкта. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\texttt{ in}}  & {\em rotation} & новий нахил об\textquotesingle{}єкта \\
+\hline
+\end{DoxyParams}
+
+
+Переозначення з \mbox{\hyperlink{classBijective_a41b82ac3c2ef05fa7c63913d4dac3e86}{Bijective}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{object_8cpp_source}{object.\+cpp}}, рядок \mbox{\hyperlink{object_8cpp_source_l00029}{29}}
+
+\mbox{\Hypertarget{classObject_a42b8d284828b2d62960ecf07a61cdd32}\label{classObject_a42b8d284828b2d62960ecf07a61cdd32}} 
+\index{Object@{Object}!translate@{translate}}
+\index{translate@{translate}!Object@{Object}}
+\doxyparagraph{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily void Object\+::translate (\begin{DoxyParamCaption}\item[{vec3}]{distances,  }\item[{float}]{delta\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Переміщує об\textquotesingle{}єкт у просторі. 
+
+Переміщує об\textquotesingle{}єкт у просторі на відстані з аргументу {\ttfamily distances}, де кожне значення вектору позначає відстань відповідної осі. 
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\texttt{ in}}  & {\em distances} & відстані переміщення по осям \\
+\hline
+\mbox{\texttt{ in}}  & {\em delta\+\_\+time} & скільки часу пройшло з останнього кадру \\
+\hline
+\end{DoxyParams}
+
+
+Переозначення з \mbox{\hyperlink{classBijective_a00595de58fb9732439f4b5f1ea3d9c6c}{Bijective}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{object_8cpp_source}{object.\+cpp}}, рядок \mbox{\hyperlink{object_8cpp_source_l00049}{49}}
+
+\mbox{\Hypertarget{classObject_ab4dab8a9da970d074185b17c2fd95f21}\label{classObject_ab4dab8a9da970d074185b17c2fd95f21}} 
+\index{Object@{Object}!translate\_object@{translate\_object}}
+\index{translate\_object@{translate\_object}!Object@{Object}}
+\doxyparagraph{\texorpdfstring{translate\_object()}{translate\_object()}}
+{\footnotesize\ttfamily void Object\+::translate\+\_\+object (\begin{DoxyParamCaption}\item[{vec3}]{distances }\end{DoxyParamCaption})}
+
+
+
+Переміщує об\textquotesingle{}єкт незалежно від часу. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em distances} & відстані переміщення по трьом осям $(x, y, z)$ \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{object_8cpp_source}{object.\+cpp}}, рядок \mbox{\hyperlink{object_8cpp_source_l00085}{85}}
+
+
+
+\doxysubsubsection{Компонентні дані}
+\mbox{\Hypertarget{classObject_adffa22add11a86b403a4acef6bc5ac4a}\label{classObject_adffa22add11a86b403a4acef6bc5ac4a}} 
+\index{Object@{Object}!animation@{animation}}
+\index{animation@{animation}!Object@{Object}}
+\doxyparagraph{\texorpdfstring{animation}{animation}}
+{\footnotesize\ttfamily vec4 Object\+::animation\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Анімація обертання по осям $(x, y, z, 1.0)$. 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{object_8h_source}{object.\+h}}, рядок \mbox{\hyperlink{object_8h_source_l00032}{32}}
+
+\mbox{\Hypertarget{classObject_adadea81d91f42970ba3829793bdac3c5}\label{classObject_adadea81d91f42970ba3829793bdac3c5}} 
+\index{Object@{Object}!model@{model}}
+\index{model@{model}!Object@{Object}}
+\doxyparagraph{\texorpdfstring{model}{model}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$\mbox{\hyperlink{classModel}{Model}}$>$ Object\+::model\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Модель об\textquotesingle{}єкту. 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{object_8h_source}{object.\+h}}, рядок \mbox{\hyperlink{object_8h_source_l00036}{36}}
+
+\mbox{\Hypertarget{classObject_a66142044dec90724bc31f9511362eb9f}\label{classObject_a66142044dec90724bc31f9511362eb9f}} 
+\index{Object@{Object}!position@{position}}
+\index{position@{position}!Object@{Object}}
+\doxyparagraph{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily vec4 Object\+::position\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Позиція об\textquotesingle{}єкту у просторі 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{object_8h_source}{object.\+h}}, рядок \mbox{\hyperlink{object_8h_source_l00028}{28}}
+
+\mbox{\Hypertarget{classObject_a8f8afc163da863a8ff5198a650fb1e91}\label{classObject_a8f8afc163da863a8ff5198a650fb1e91}} 
+\index{Object@{Object}!transform@{transform}}
+\index{transform@{transform}!Object@{Object}}
+\doxyparagraph{\texorpdfstring{transform}{transform}}
+{\footnotesize\ttfamily mat4 Object\+::transform\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Матриця лінійних перетворень. 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{object_8h_source}{object.\+h}}, рядок \mbox{\hyperlink{object_8h_source_l00024}{24}}
+
+
+
+Документація цих класів була створена з файлів\+:\begin{DoxyCompactItemize}
+\item 
+osdo/\mbox{\hyperlink{object_8h}{object.\+h}}\item 
+osdo/\mbox{\hyperlink{object_8cpp}{object.\+cpp}}\end{DoxyCompactItemize}

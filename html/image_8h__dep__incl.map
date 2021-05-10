@@ -1,0 +1,6 @@
+<map id="osdo/image.h" name="osdo/image.h">
+<area shape="rect" id="node1" title="Задає клас, який зберігає масив пікселів, ширину та висоту." alt="" coords="159,5,259,32"/>
+<area shape="rect" id="node2" href="$context_8cpp.html" title=" " alt="" coords="5,80,128,107"/>
+<area shape="rect" id="node3" href="$image_8cpp.html" title=" " alt="" coords="152,80,267,107"/>
+<area shape="rect" id="node4" href="$texture_8cpp.html" title=" " alt="" coords="291,80,410,107"/>
+</map>

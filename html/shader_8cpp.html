@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Дипломна робота: Файл osdo/shader.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Дипломна робота
+   </div>
+   <div id="projectbrief">студента групи ПА-17-2 Панасенка Єгора Сергійовича</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e0c7de59e470a6e6d29babac2e4befdd.html">osdo</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Класи</a> &#124;
+<a href="#func-members">Функції</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл shader.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+<code>#include &quot;<a class="el" href="shader_8h_source.html">shader.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="conf_8h_source.html">conf.h</a>&quot;</code><br />
+<code>#include &quot;EASTL/hash_map.h&quot;</code><br />
+<code>#include &quot;EASTL/shared_ptr.h&quot;</code><br />
+<code>#include &quot;EASTL/vector.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Діаграма включених заголовочних файлів для shader.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="shader_8cpp__incl.png" border="0" usemap="#aosdo_2shader_8cpp" alt=""/></div>
+<map name="aosdo_2shader_8cpp" id="aosdo_2shader_8cpp">
+<area shape="rect" title=" " alt="" coords="373,5,491,32"/>
+<area shape="rect" title=" " alt="" coords="175,80,236,107"/>
+<area shape="rect" title=" " alt="" coords="260,80,321,107"/>
+<area shape="rect" href="shader_8h.html" title="Задає клас шейдеру." alt="" coords="396,80,468,107"/>
+<area shape="rect" title=" " alt="" coords="5,155,144,181"/>
+<area shape="rect" title=" " alt="" coords="470,155,610,181"/>
+<area shape="rect" href="conf_8h.html" title="Конфігурація бібліотеки osdo" alt="" coords="589,80,648,107"/>
+<area shape="rect" title=" " alt="" coords="672,80,787,107"/>
+<area shape="rect" href="osdo_8h.html" title=" " alt="" coords="509,229,571,256"/>
+<area shape="rect" href="glbindable_8h.html" title="Абстрактний клас, який виконує роль генерації та прив&#39;язки об&#39;єктів OpenGL." alt="" coords="304,155,395,181"/>
+<area shape="rect" title=" " alt="" coords="169,155,279,181"/>
+<area shape="rect" title=" " alt="" coords="383,304,476,331"/>
+<area shape="rect" title=" " alt="" coords="500,304,580,331"/>
+<area shape="rect" title=" " alt="" coords="604,304,668,331"/>
+<area shape="rect" href="vertex_8h.html" title="Задає cтруктуру вершини." alt="" coords="685,155,755,181"/>
+</map>
+</div>
+</div>
+<p><a href="shader_8cpp_source.html">Див. вихідні тексти.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Класи</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShaderSource.html">ShaderSource</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функції</h2></td></tr>
+<tr class="memitem:a4bfab66f3e39943f6389bb854900e17b"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shader_8cpp.html#a4bfab66f3e39943f6389bb854900e17b">readFromFile</a> (const char *path)</td></tr>
+<tr class="separator:a4bfab66f3e39943f6389bb854900e17b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ab6260d9d6a7ad27211ba2dde544a8d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shader_8cpp.html#a9ab6260d9d6a7ad27211ba2dde544a8d">check_shader</a> (GLuint shader, const int type)</td></tr>
+<tr class="separator:a9ab6260d9d6a7ad27211ba2dde544a8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f3ac031e18245c27d4bcdd6731f7520"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="classShader.html">Shader</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shader_8cpp.html#a0f3ac031e18245c27d4bcdd6731f7520">compile</a> (vector&lt; shared_ptr&lt; <a class="el" href="classShaderSource.html">ShaderSource</a> &gt;&gt; shaders)</td></tr>
+<tr class="separator:a0f3ac031e18245c27d4bcdd6731f7520"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Опис функцій</h2>
+<a id="a9ab6260d9d6a7ad27211ba2dde544a8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ab6260d9d6a7ad27211ba2dde544a8d">&#9670;&nbsp;</a></span>check_shader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool check_shader </td>
+          <td>(</td>
+          <td class="paramtype">GLuint&#160;</td>
+          <td class="paramname"><em>shader</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Див. визначення в файлі <a class="el" href="shader_8cpp_source.html">shader.cpp</a>, рядок <a class="el" href="shader_8cpp_source.html#l00040">40</a></p>
+<div class="dynheader">
+Граф викликів для цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="shader_8cpp_a9ab6260d9d6a7ad27211ba2dde544a8d_icgraph.png" border="0" usemap="#ashader_8cpp_a9ab6260d9d6a7ad27211ba2dde544a8d_icgraph" alt=""/></div>
+<map name="ashader_8cpp_a9ab6260d9d6a7ad27211ba2dde544a8d_icgraph" id="ashader_8cpp_a9ab6260d9d6a7ad27211ba2dde544a8d_icgraph">
+<area shape="rect" title=" " alt="" coords="769,31,872,57"/>
+<area shape="rect" href="shader_8cpp.html#a0f3ac031e18245c27d4bcdd6731f7520" title=" " alt="" coords="614,5,681,32"/>
+<area shape="rect" href="classShaderSource.html#a992c5f061e5448ee1d35bdc272fb5702" title=" " alt="" coords="573,56,721,83"/>
+<area shape="rect" href="classShaderSource.html#a40a8e5a541a0f30dacad32b75b995586" title=" " alt="" coords="353,56,525,83"/>
+<area shape="rect" href="classShader.html#aea711ca1659af57fe4124ea318aa59c1" title="Створює об&#39;єкт шейдеру за заданими шляхами файлів шейдерів." alt="" coords="199,56,305,83"/>
+<area shape="rect" href="structContext.html#a6b8babb597ca6c92a2ce8f9b62626a27" title="Завантажує та компілює шейдер." alt="" coords="5,56,151,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0f3ac031e18245c27d4bcdd6731f7520"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f3ac031e18245c27d4bcdd6731f7520">&#9670;&nbsp;</a></span>compile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">shared_ptr&lt;<a class="el" href="classShader.html">Shader</a>&gt; compile </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; shared_ptr&lt; <a class="el" href="classShaderSource.html">ShaderSource</a> &gt;&gt;&#160;</td>
+          <td class="paramname"><em>shaders</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Див. визначення в файлі <a class="el" href="shader_8cpp_source.html">shader.cpp</a>, рядок <a class="el" href="shader_8cpp_source.html#l00095">95</a></p>
+<div class="dynheader">
+Граф всіх викликів цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="shader_8cpp_a0f3ac031e18245c27d4bcdd6731f7520_cgraph.png" border="0" usemap="#ashader_8cpp_a0f3ac031e18245c27d4bcdd6731f7520_cgraph" alt=""/></div>
+<map name="ashader_8cpp_a0f3ac031e18245c27d4bcdd6731f7520_cgraph" id="ashader_8cpp_a0f3ac031e18245c27d4bcdd6731f7520_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,72,32"/>
+<area shape="rect" href="shader_8cpp.html#a9ab6260d9d6a7ad27211ba2dde544a8d" title=" " alt="" coords="120,5,223,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4bfab66f3e39943f6389bb854900e17b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bfab66f3e39943f6389bb854900e17b">&#9670;&nbsp;</a></span>readFromFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* readFromFile </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Див. визначення в файлі <a class="el" href="shader_8cpp_source.html">shader.cpp</a>, рядок <a class="el" href="shader_8cpp_source.html#l00021">21</a></p>
+<div class="dynheader">
+Граф викликів для цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="shader_8cpp_a4bfab66f3e39943f6389bb854900e17b_icgraph.png" border="0" usemap="#ashader_8cpp_a4bfab66f3e39943f6389bb854900e17b_icgraph" alt=""/></div>
+<map name="ashader_8cpp_a4bfab66f3e39943f6389bb854900e17b_icgraph" id="ashader_8cpp_a4bfab66f3e39943f6389bb854900e17b_icgraph">
+<area shape="rect" title=" " alt="" coords="573,5,672,32"/>
+<area shape="rect" href="classShaderSource.html#a40a8e5a541a0f30dacad32b75b995586" title=" " alt="" coords="353,5,525,32"/>
+<area shape="rect" href="classShader.html#aea711ca1659af57fe4124ea318aa59c1" title="Створює об&#39;єкт шейдеру за заданими шляхами файлів шейдерів." alt="" coords="199,5,305,32"/>
+<area shape="rect" href="structContext.html#a6b8babb597ca6c92a2ce8f9b62626a27" title="Завантажує та компілює шейдер." alt="" coords="5,5,151,32"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

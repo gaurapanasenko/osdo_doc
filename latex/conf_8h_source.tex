@@ -1,0 +1,179 @@
+\hypertarget{conf_8h_source}{}\doxysubsection{conf.\+h}
+\label{conf_8h_source}\index{osdo/conf.h@{osdo/conf.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/**}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * @file conf.h}}
+\DoxyCodeLine{00003 \textcolor{comment}{ * @brief Конфігурація бібліотеки `osdo`}}
+\DoxyCodeLine{00004 \textcolor{comment}{ */}}
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#ifndef CONF\_H}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#define CONF\_H}}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{osdo_8h}{osdo.h}}"{}}}
+\DoxyCodeLine{00009 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{vertex_8h}{vertex.h}}"{}}}
+\DoxyCodeLine{00010 \textcolor{comment}{}}
+\DoxyCodeLine{00011 \textcolor{comment}{/**}}
+\DoxyCodeLine{00012 \textcolor{comment}{ * @brief Число пі у типі `double`}}
+\DoxyCodeLine{00013 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{conf_8h_source_l00014}\mbox{\hyperlink{conf_8h_ae71449b1cc6e6250b91f539153a7a0d3}{00014}} \textcolor{preprocessor}{\#define M\_PI 3.14159265358979323846}\textcolor{comment}{}}
+\DoxyCodeLine{00015 \textcolor{comment}{/**}}
+\DoxyCodeLine{00016 \textcolor{comment}{ * @brief Коеффіцієнт перетворення у радіани у типі `double`}}
+\DoxyCodeLine{00017 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{conf_8h_source_l00018}\mbox{\hyperlink{conf_8h_a9c65eada5a68982aff430100c1a35ccf}{00018}} \textcolor{preprocessor}{\#define M\_RAD M\_PI / 180}}
+\DoxyCodeLine{\Hypertarget{conf_8h_source_l00019}\mbox{\hyperlink{conf_8h_ab9c3c609e1d02430671de0a109410ac8}{00019}} \textcolor{preprocessor}{\#define M\_PI\_F 3.14159265358979323846f}\textcolor{comment}{}}
+\DoxyCodeLine{00020 \textcolor{comment}{/**}}
+\DoxyCodeLine{00021 \textcolor{comment}{ * @brief Число пі у типі `float`}}
+\DoxyCodeLine{00022 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{conf_8h_source_l00023}\mbox{\hyperlink{conf_8h_ab01f46e058bbb810a0e6228545950dc6}{00023}} \textcolor{preprocessor}{\#define M\_RAD\_F M\_PI\_F / 180}\textcolor{comment}{}}
+\DoxyCodeLine{00024 \textcolor{comment}{/**}}
+\DoxyCodeLine{00025 \textcolor{comment}{ * @brief Коеффіцієнт перетворення у радіани у типі `float`}}
+\DoxyCodeLine{00026 \textcolor{comment}{ */}}
+\DoxyCodeLine{00027 \textcolor{comment}{}}
+\DoxyCodeLine{00028 \textcolor{comment}{/**}}
+\DoxyCodeLine{00029 \textcolor{comment}{ * @brief Шлях до директорії з ресурсами бібліотеки `osdo`}}
+\DoxyCodeLine{00030 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{conf_8h_source_l00031}\mbox{\hyperlink{conf_8h_a4fc8d0ab577054f447b9d9779c61a97e}{00031}} \textcolor{preprocessor}{\#define RES\_DIR "{}../share/osdo"{}}}
+\DoxyCodeLine{00032 \textcolor{comment}{}}
+\DoxyCodeLine{00033 \textcolor{comment}{/**}}
+\DoxyCodeLine{00034 \textcolor{comment}{ * @brief Паттерн шляху до файлу з вершинним шейдером}}
+\DoxyCodeLine{00035 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{conf_8h_source_l00036}\mbox{\hyperlink{conf_8h_aca6c962ce78e3e65d1380575565492c8}{00036}} \textcolor{preprocessor}{\#define VERTEX\_PATH RES\_DIR"{}/\%s.vert"{}}\textcolor{comment}{}}
+\DoxyCodeLine{00037 \textcolor{comment}{/**}}
+\DoxyCodeLine{00038 \textcolor{comment}{ * @brief Паттерн шляху до файлу з теселяційним контрольним шейдером}}
+\DoxyCodeLine{00039 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{conf_8h_source_l00040}\mbox{\hyperlink{conf_8h_ab6f0ec5d8551ddbce25d6448a3cac812}{00040}} \textcolor{preprocessor}{\#define TESC\_PATH RES\_DIR"{}/\%s.tesc"{}}\textcolor{comment}{}}
+\DoxyCodeLine{00041 \textcolor{comment}{/**}}
+\DoxyCodeLine{00042 \textcolor{comment}{ * @brief Паттерн шляху до файлу з теселяційним обчислювальним шейдером}}
+\DoxyCodeLine{00043 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{conf_8h_source_l00044}\mbox{\hyperlink{conf_8h_a53b04c9d7d0c9171478c06f525098864}{00044}} \textcolor{preprocessor}{\#define TESE\_PATH RES\_DIR"{}/\%s.tese"{}}\textcolor{comment}{}}
+\DoxyCodeLine{00045 \textcolor{comment}{/**}}
+\DoxyCodeLine{00046 \textcolor{comment}{ * @brief Паттерн шляху до файлу з геометричним шейдером}}
+\DoxyCodeLine{00047 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{conf_8h_source_l00048}\mbox{\hyperlink{conf_8h_abfaf4edfb83006e945adae251c351781}{00048}} \textcolor{preprocessor}{\#define GEOMETRY\_PATH RES\_DIR"{}/\%s.geom"{}}\textcolor{comment}{}}
+\DoxyCodeLine{00049 \textcolor{comment}{/**}}
+\DoxyCodeLine{00050 \textcolor{comment}{ * @brief Паттерн шляху до файлу з фрагментним шейдером}}
+\DoxyCodeLine{00051 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{conf_8h_source_l00052}\mbox{\hyperlink{conf_8h_a40cefafac4a15acca8875dcdf07c9f8e}{00052}} \textcolor{preprocessor}{\#define FRAGMENT\_PATH RES\_DIR"{}/\%s.frag"{}}\textcolor{comment}{}}
+\DoxyCodeLine{00053 \textcolor{comment}{/**}}
+\DoxyCodeLine{00054 \textcolor{comment}{ * @brief Паттерн шляху до файлу з моделлю}}
+\DoxyCodeLine{00055 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{conf_8h_source_l00056}\mbox{\hyperlink{conf_8h_a3caf02891d20571ad2bc81ce139ed549}{00056}} \textcolor{preprocessor}{\#define BEZIATOR\_PATH RES\_DIR"{}/\%s.odom"{}}}
+\DoxyCodeLine{00057 \textcolor{comment}{}}
+\DoxyCodeLine{00058 \textcolor{comment}{/**}}
+\DoxyCodeLine{00059 \textcolor{comment}{ * @brief Максимальна кількість вершин}}
+\DoxyCodeLine{00060 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{conf_8h_source_l00061}\mbox{\hyperlink{conf_8h_aa241b98421197a51c39906e4b36091b8}{00061}} \textcolor{preprocessor}{\#define MAX\_VERTEX\_BUFFER 512 * 1024}\textcolor{comment}{}}
+\DoxyCodeLine{00062 \textcolor{comment}{/**}}
+\DoxyCodeLine{00063 \textcolor{comment}{ * @brief Максимальна кількість елементів}}
+\DoxyCodeLine{00064 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{conf_8h_source_l00065}\mbox{\hyperlink{conf_8h_a0dad45ec2df924c6dcc218703572a0ad}{00065}} \textcolor{preprocessor}{\#define MAX\_ELEMENT\_BUFFER 128 * 1024}}
+\DoxyCodeLine{00066 \textcolor{comment}{}}
+\DoxyCodeLine{00067 \textcolor{comment}{/**}}
+\DoxyCodeLine{00068 \textcolor{comment}{ * @brief Нижня границя часу при якому спрацьовує подвійний клік мишою}}
+\DoxyCodeLine{00069 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{conf_8h_source_l00070}\mbox{\hyperlink{conf_8h_a42b057f37c15a818d862a2da98b88324}{00070}} \textcolor{preprocessor}{\#define NK\_GLFW\_DOUBLE\_CLICK\_LO 0.02}\textcolor{comment}{}}
+\DoxyCodeLine{00071 \textcolor{comment}{/**}}
+\DoxyCodeLine{00072 \textcolor{comment}{ * @brief Верхня границя часу при якому спрацьовує подвійний клік мишою}}
+\DoxyCodeLine{00073 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{conf_8h_source_l00074}\mbox{\hyperlink{conf_8h_af13bb1926df9718b198163fe1d7b702c}{00074}} \textcolor{preprocessor}{\#define NK\_GLFW\_DOUBLE\_CLICK\_HI 0.2}}
+\DoxyCodeLine{00075 \textcolor{comment}{}}
+\DoxyCodeLine{00076 \textcolor{comment}{/**}}
+\DoxyCodeLine{00077 \textcolor{comment}{ * @brief Початкова ширина вікна при запуску програми}}
+\DoxyCodeLine{00078 \textcolor{comment}{ */}}
+\DoxyCodeLine{00079 \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} SCR\_WIDTH = 1366;\textcolor{comment}{}}
+\DoxyCodeLine{00080 \textcolor{comment}{/**}}
+\DoxyCodeLine{00081 \textcolor{comment}{ * @brief Початкова висота вікна при запуску програми}}
+\DoxyCodeLine{00082 \textcolor{comment}{ */}}
+\DoxyCodeLine{00083 \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} SCR\_HEIGHT = 700;}
+\DoxyCodeLine{00084 \textcolor{comment}{}}
+\DoxyCodeLine{00085 \textcolor{comment}{/**}}
+\DoxyCodeLine{00086 \textcolor{comment}{ * @brief Швидкість переміщення об'єкту}}
+\DoxyCodeLine{00087 \textcolor{comment}{ */}}
+\DoxyCodeLine{00088 \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{float} OBJECT\_MOVE\_SPEED   =  5.0f;\textcolor{comment}{}}
+\DoxyCodeLine{00089 \textcolor{comment}{/**}}
+\DoxyCodeLine{00090 \textcolor{comment}{ * @brief Швидкість повороту об'єкту}}
+\DoxyCodeLine{00091 \textcolor{comment}{ */}}
+\DoxyCodeLine{00092 \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{float} OBJECT\_ROTATE\_SPEED =  1.0f;\textcolor{comment}{}}
+\DoxyCodeLine{00093 \textcolor{comment}{/**}}
+\DoxyCodeLine{00094 \textcolor{comment}{ * @brief Коєффіцієнти швидкості для додавання обертання об'єкту}}
+\DoxyCodeLine{00095 \textcolor{comment}{ */}}
+\DoxyCodeLine{00096 \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{float} OBJECT\_ANIMATE\_SPEED = 1.0f;}
+\DoxyCodeLine{00097 \textcolor{comment}{}}
+\DoxyCodeLine{00098 \textcolor{comment}{/**}}
+\DoxyCodeLine{00099 \textcolor{comment}{ * @brief Чутливість миші}}
+\DoxyCodeLine{00100 \textcolor{comment}{ */}}
+\DoxyCodeLine{00101 \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{float} SENSITIVITY = 0.01f;}
+\DoxyCodeLine{00102 \textcolor{comment}{}}
+\DoxyCodeLine{00103 \textcolor{comment}{/**}}
+\DoxyCodeLine{00104 \textcolor{comment}{ * @brief Початкові позиції джерел світла (не використовується у програмі)}}
+\DoxyCodeLine{00105 \textcolor{comment}{ */}}
+\DoxyCodeLine{00106 \textcolor{keyword}{static} vec3 \mbox{\hyperlink{osdo_8h_addf5ec070e9499d36b7f2009ce736076}{UNUSED}} LAMP\_POSITIONS[] = \{}
+\DoxyCodeLine{00107     \{5.0f, 0.0f, 5.0f\},}
+\DoxyCodeLine{00108     \{-\/1.0f, 0.0f, 1.0f\}}
+\DoxyCodeLine{00109 \};}
+\DoxyCodeLine{00110 \textcolor{comment}{}}
+\DoxyCodeLine{00111 \textcolor{comment}{/**}}
+\DoxyCodeLine{00112 \textcolor{comment}{ * @brief Вершини куба}}
+\DoxyCodeLine{00113 \textcolor{comment}{ */}}
+\DoxyCodeLine{00114 \textcolor{keyword}{static} \textcolor{keyword}{const} \mbox{\hyperlink{structVertex}{Vertex}} EXAMPLE\_CUBE\_VERTEX[] = \{}
+\DoxyCodeLine{00115     \{\{-\/1.,  1., -\/1.\}, \{ 0.,  1.,  0.\}, \{  0, 255,   0, 255\}, \{0., 0.\}\},}
+\DoxyCodeLine{00116     \{\{ 1.,  1.,  1.\}, \{ 0.,  1.,  0.\}, \{255, 255, 255, 255\}, \{0., 0.\}\},}
+\DoxyCodeLine{00117     \{\{ 1.,  1., -\/1.\}, \{ 0.,  1.,  0.\}, \{255, 255,   0, 255\}, \{0., 0.\}\},}
+\DoxyCodeLine{00118 }
+\DoxyCodeLine{00119     \{\{ 1.,  1.,  1.\}, \{ 0.,  0.,  1.\}, \{255, 255, 255, 255\}, \{0., 0.\}\},}
+\DoxyCodeLine{00120     \{\{-\/1., -\/1.,  1.\}, \{ 0.,  0.,  1.\}, \{  0,   0, 255, 255\}, \{0., 0.\}\},}
+\DoxyCodeLine{00121     \{\{ 1., -\/1.,  1.\}, \{ 0.,  0.,  1.\}, \{255,   0, 255, 255\}, \{0., 0.\}\},}
+\DoxyCodeLine{00122 }
+\DoxyCodeLine{00123     \{\{-\/1.,  1.,  1.\}, \{-\/1.,  0.,  0.\}, \{  0, 255, 255, 255\}, \{0., 0.\}\},}
+\DoxyCodeLine{00124     \{\{-\/1., -\/1., -\/1.\}, \{-\/1.,  0.,  0.\}, \{  0,   0,   0, 255\}, \{0., 0.\}\},}
+\DoxyCodeLine{00125     \{\{-\/1., -\/1.,  1.\}, \{-\/1.,  0.,  0.\}, \{  0,   0, 255, 255\}, \{0., 0.\}\},}
+\DoxyCodeLine{00126 }
+\DoxyCodeLine{00127     \{\{ 1., -\/1., -\/1.\}, \{ 0., -\/1.,  0.\}, \{255,   0,   0, 255\}, \{0., 0.\}\},}
+\DoxyCodeLine{00128     \{\{-\/1., -\/1.,  1.\}, \{ 0., -\/1.,  0.\}, \{  0,   0, 255, 255\}, \{0., 0.\}\},}
+\DoxyCodeLine{00129     \{\{-\/1., -\/1., -\/1.\}, \{ 0., -\/1.,  0.\}, \{  0,   0,   0, 255\}, \{0., 0.\}\},}
+\DoxyCodeLine{00130 }
+\DoxyCodeLine{00131     \{\{ 1.,  1., -\/1.\}, \{ 1.,  0.,  0.\}, \{255, 255,   0, 255\}, \{0., 0.\}\},}
+\DoxyCodeLine{00132     \{\{ 1., -\/1.,  1.\}, \{ 1.,  0.,  0.\}, \{255,   0, 255, 255\}, \{0., 0.\}\},}
+\DoxyCodeLine{00133     \{\{ 1., -\/1., -\/1.\}, \{ 1.,  0.,  0.\}, \{255,   0,   0, 255\}, \{0., 0.\}\},}
+\DoxyCodeLine{00134 }
+\DoxyCodeLine{00135     \{\{-\/1.,  1., -\/1.\}, \{ 0.,  0., -\/1.\}, \{  0, 255,   0, 255\}, \{0., 0.\}\},}
+\DoxyCodeLine{00136     \{\{ 1., -\/1., -\/1.\}, \{ 0.,  0., -\/1.\}, \{255,   0,   0, 255\}, \{0., 0.\}\},}
+\DoxyCodeLine{00137     \{\{-\/1., -\/1., -\/1.\}, \{ 0.,  0., -\/1.\}, \{  0,   0,   0, 255\}, \{0., 0.\}\},}
+\DoxyCodeLine{00138 }
+\DoxyCodeLine{00139     \{\{-\/1.,  1., -\/1.\}, \{ 0.,  1.,  0.\}, \{  0, 255,   0, 255\}, \{0., 0.\}\},}
+\DoxyCodeLine{00140     \{\{-\/1.,  1.,  1.\}, \{ 0.,  1.,  0.\}, \{  0, 255, 255, 255\}, \{0., 0.\}\},}
+\DoxyCodeLine{00141     \{\{ 1.,  1.,  1.\}, \{ 0.,  1.,  0.\}, \{255, 255, 255, 255\}, \{0., 0.\}\},}
+\DoxyCodeLine{00142 }
+\DoxyCodeLine{00143     \{\{ 1.,  1.,  1.\}, \{ 0.,  0.,  1.\}, \{255, 255, 255, 255\}, \{0., 0.\}\},}
+\DoxyCodeLine{00144     \{\{-\/1.,  1.,  1.\}, \{ 0.,  0.,  1.\}, \{  0, 255, 255, 255\}, \{0., 0.\}\},}
+\DoxyCodeLine{00145     \{\{-\/1., -\/1.,  1.\}, \{ 0.,  0.,  1.\}, \{  0,   0, 255, 255\}, \{0., 0.\}\},}
+\DoxyCodeLine{00146 }
+\DoxyCodeLine{00147     \{\{-\/1.,  1.,  1.\}, \{-\/1.,  0.,  0.\}, \{  0, 255, 255, 255\}, \{0., 0.\}\},}
+\DoxyCodeLine{00148     \{\{-\/1.,  1., -\/1.\}, \{-\/1.,  0.,  0.\}, \{  0, 255,   0, 255\}, \{0., 0.\}\},}
+\DoxyCodeLine{00149     \{\{-\/1., -\/1., -\/1.\}, \{-\/1.,  0.,  0.\}, \{  0,   0,   0, 255\}, \{0., 0.\}\},}
+\DoxyCodeLine{00150 }
+\DoxyCodeLine{00151     \{\{ 1., -\/1., -\/1.\}, \{ 0., -\/1.,  0.\}, \{255,   0,   0, 255\}, \{0., 0.\}\},}
+\DoxyCodeLine{00152     \{\{ 1., -\/1.,  1.\}, \{ 0., -\/1.,  0.\}, \{255,   0, 255, 255\}, \{0., 0.\}\},}
+\DoxyCodeLine{00153     \{\{-\/1., -\/1.,  1.\}, \{ 0., -\/1.,  0.\}, \{  0,   0, 255, 255\}, \{0., 0.\}\},}
+\DoxyCodeLine{00154 }
+\DoxyCodeLine{00155     \{\{ 1.,  1., -\/1.\}, \{ 1.,  0.,  0.\}, \{255, 255,   0, 255\}, \{0., 0.\}\},}
+\DoxyCodeLine{00156     \{\{ 1.,  1.,  1.\}, \{ 1.,  0.,  0.\}, \{255, 255, 255, 255\}, \{0., 0.\}\},}
+\DoxyCodeLine{00157     \{\{ 1., -\/1.,  1.\}, \{ 1.,  0.,  0.\}, \{255,   0, 255, 255\}, \{0., 0.\}\},}
+\DoxyCodeLine{00158 }
+\DoxyCodeLine{00159     \{\{-\/1.,  1., -\/1.\}, \{ 0.,  0., -\/1.\}, \{  0, 255,   0, 255\}, \{0., 0.\}\},}
+\DoxyCodeLine{00160     \{\{ 1.,  1., -\/1.\}, \{ 0.,  0., -\/1.\}, \{255, 255,   0, 255\}, \{0., 0.\}\},}
+\DoxyCodeLine{00161     \{\{ 1., -\/1., -\/1.\}, \{ 0.,  0., -\/1.\}, \{255,   0,   0, 255\}, \{0., 0.\}\},}
+\DoxyCodeLine{00162 \};}
+\DoxyCodeLine{00163 \textcolor{comment}{}}
+\DoxyCodeLine{00164 \textcolor{comment}{/**}}
+\DoxyCodeLine{00165 \textcolor{comment}{ * @brief Індекси вершин, що утворюють сторони куба.}}
+\DoxyCodeLine{00166 \textcolor{comment}{ */}}
+\DoxyCodeLine{00167 \textcolor{keyword}{static} \textcolor{keyword}{const} GLuint EXAMPLE\_CUBE\_INDICIES[] = \{}
+\DoxyCodeLine{00168      0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11,}
+\DoxyCodeLine{00169     12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23,}
+\DoxyCodeLine{00170     24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35,}
+\DoxyCodeLine{00171 \};}
+\DoxyCodeLine{00172 }
+\DoxyCodeLine{00173 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// CONF\_H}}
+
+\end{DoxyCode}

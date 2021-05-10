@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Дипломна робота: Текст програми osdo/model.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Дипломна робота
+   </div>
+   <div id="projectbrief">студента групи ПА-17-2 Панасенка Єгора Сергійовича</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e0c7de59e470a6e6d29babac2e4befdd.html">osdo</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">model.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="model_8h.html">Див. документацію.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * @file model.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * @brief Задає інтерфейс моделі, яку можна відобразити.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef MODEL_H</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define MODEL_H</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;EASTL/vector.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="osdo_8h.html">osdo.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">struct </span><a class="code" href="structVertex.html">Vertex</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">class </span><a class="code" href="classShader.html">Shader</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">using</span> eastl::vector;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * @brief Інтерфейс до деякої моделі, яку можна відобразити.</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classModel.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classModel.html">Model</a> {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classModel.html#ad6ebd2062a0b823db841a0b88baac4c0">~Model</a>();<span class="comment"></span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">     * @brief Відображує модель.</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">     * @param shader Шейдер який використовуєтсья для відображення моделі.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">     * @param pre_generated флаг, який позначає яким чином відображати модель.</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classModel.html#a13ff51c6cdc364c49a5bb76dc76f409f">draw</a>(<a class="code" href="classShader.html">Shader</a> &amp;shader, <span class="keywordtype">bool</span> pre_generated = <span class="keyword">false</span>);<span class="comment"></span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">     * @brief Генерує деталізований меш моделі.</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">     * Див. `Beziator::generate`</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">     * @param d ступінь деталізації.</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classModel.html#a50fc76140d00753bc503817cdef39a92">generate</a>(<span class="keywordtype">size_t</span> d = 8);<span class="comment"></span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">     * @brief Видає список вершин моделі.</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">     * @return Вказівник на поле `vertices`.</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">virtual</span> vector&lt;Vertex&gt; *<a class="code" href="classModel.html#a59f773de2939fc7c8613c0323a5907e0">get_vertices</a>();<span class="comment"></span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">     * @brief Створює вікно редагування моделі.</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classModel.html#a36d4969ac196d8e5e02f112aa73d54d7">edit_panel</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;};</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// MODEL_H</span></div>
+<div class="ttc" id="aclassModel_html"><div class="ttname"><a href="classModel.html">Model</a></div><div class="ttdoc">Інтерфейс до деякої моделі, яку можна відобразити.</div><div class="ttdef"><b>Definition:</b> <a href="model_8h_source.html#l00018">model.h:18</a></div></div>
+<div class="ttc" id="aclassModel_html_a13ff51c6cdc364c49a5bb76dc76f409f"><div class="ttname"><a href="classModel.html#a13ff51c6cdc364c49a5bb76dc76f409f">Model::draw</a></div><div class="ttdeci">virtual void draw(Shader &amp;shader, bool pre_generated=false)</div><div class="ttdoc">Відображує модель.</div><div class="ttdef"><b>Definition:</b> <a href="model_8cpp_source.html#l00006">model.cpp:6</a></div></div>
+<div class="ttc" id="aclassModel_html_a36d4969ac196d8e5e02f112aa73d54d7"><div class="ttname"><a href="classModel.html#a36d4969ac196d8e5e02f112aa73d54d7">Model::edit_panel</a></div><div class="ttdeci">virtual void edit_panel()</div><div class="ttdoc">Створює вікно редагування моделі.</div><div class="ttdef"><b>Definition:</b> <a href="model_8cpp_source.html#l00014">model.cpp:14</a></div></div>
+<div class="ttc" id="aclassModel_html_a50fc76140d00753bc503817cdef39a92"><div class="ttname"><a href="classModel.html#a50fc76140d00753bc503817cdef39a92">Model::generate</a></div><div class="ttdeci">virtual void generate(size_t d=8)</div><div class="ttdoc">Генерує деталізований меш моделі. Див. Beziator::generate</div><div class="ttdef"><b>Definition:</b> <a href="model_8cpp_source.html#l00008">model.cpp:8</a></div></div>
+<div class="ttc" id="aclassModel_html_a59f773de2939fc7c8613c0323a5907e0"><div class="ttname"><a href="classModel.html#a59f773de2939fc7c8613c0323a5907e0">Model::get_vertices</a></div><div class="ttdeci">virtual vector&lt; Vertex &gt; * get_vertices()</div><div class="ttdoc">Видає список вершин моделі.</div><div class="ttdef"><b>Definition:</b> <a href="model_8cpp_source.html#l00010">model.cpp:10</a></div></div>
+<div class="ttc" id="aclassModel_html_ad6ebd2062a0b823db841a0b88baac4c0"><div class="ttname"><a href="classModel.html#ad6ebd2062a0b823db841a0b88baac4c0">Model::~Model</a></div><div class="ttdeci">virtual ~Model()</div><div class="ttdef"><b>Definition:</b> <a href="model_8cpp_source.html#l00004">model.cpp:4</a></div></div>
+<div class="ttc" id="aclassShader_html"><div class="ttname"><a href="classShader.html">Shader</a></div><div class="ttdoc">Клас взаємодії з шейдером у видеокарті.</div><div class="ttdef"><b>Definition:</b> <a href="shader_8h_source.html#l00031">shader.h:31</a></div></div>
+<div class="ttc" id="aosdo_8h_html"><div class="ttname"><a href="osdo_8h.html">osdo.h</a></div></div>
+<div class="ttc" id="astructVertex_html"><div class="ttname"><a href="structVertex.html">Vertex</a></div><div class="ttdoc">Структура вершини, для передачі у відеокарту.</div><div class="ttdef"><b>Definition:</b> <a href="vertex_8h_source.html#l00012">vertex.h:12</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

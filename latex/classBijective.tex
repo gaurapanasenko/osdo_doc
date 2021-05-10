@@ -1,0 +1,334 @@
+\hypertarget{classBijective}{}\doxysubsection{Клас Bijective}
+\label{classBijective}\index{Bijective@{Bijective}}
+
+
+Інтерфейс до об\textquotesingle{}єктів, що можуть можуть бути переміщені та повернуті у просторі.  
+
+
+
+
+{\ttfamily \#include $<$bijective.\+h$>$}
+
+
+
+Схема успадкувань для Bijective\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{classBijective__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Загальнодоступні елементи}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classBijective_ab67be719c16f877c554f622567e878b4}{$\sim$\+Bijective}} ()
+\item 
+virtual void \mbox{\hyperlink{classBijective_af0939112acd564a7c51728a222246a45}{get\+\_\+position}} (vec4 position)
+\begin{DoxyCompactList}\small\item\em Забирає поточну позицію об\textquotesingle{}єкта у просторі. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBijective_ad91ff8fb9810bf530e9d393f99428130}{set\+\_\+position}} (vec4 position)
+\begin{DoxyCompactList}\small\item\em Задає нову позицію об\textquotesingle{}єкта у просторі. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBijective_a86168faf15a3a96e925fcd7e8b808b01}{get\+\_\+rotation}} (vec3 rotation)
+\begin{DoxyCompactList}\small\item\em Забирає поточний нахил об\textquotesingle{}єкта. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBijective_a41b82ac3c2ef05fa7c63913d4dac3e86}{set\+\_\+rotation}} (vec3 rotation)
+\begin{DoxyCompactList}\small\item\em Задає новий нахил об\textquotesingle{}єкта. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBijective_ae2901f2c23f284cacc1c4d20ca3e04b9}{get\+\_\+animation}} (vec3 rotation)
+\begin{DoxyCompactList}\small\item\em Забирає поточну анімацію обернення об\textquotesingle{}єкта. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBijective_a4791c5545451015a1b7e099517430ca4}{set\+\_\+animation}} (vec3 rotation)
+\begin{DoxyCompactList}\small\item\em Задає нову анімацію обернення об\textquotesingle{}єкта. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBijective_ada286887158f78c0d1ad6cf2b18b9993}{get\+\_\+mat4}} (mat4 matrix)
+\begin{DoxyCompactList}\small\item\em Забирає матрицю лінійних перетворень над об\textquotesingle{}єктом. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBijective_a00595de58fb9732439f4b5f1ea3d9c6c}{translate}} (vec3 distances, float delta\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Переміщує об\textquotesingle{}єкт у просторі. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBijective_ad59a2e843e9805ffd902baf7185f4622}{rotate}} (enum \mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ff}{coord\+\_\+enum}} coord, float delta\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Обертає об\textquotesingle{}єкт. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBijective_abef32f8b820e8f12a1bc856fb85c1654}{rotate\+\_\+all}} (vec3 angles)
+\begin{DoxyCompactList}\small\item\em Обернути об\textquotesingle{}єкт по всім осям. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBijective_a193af7a2ea46d86fb32e5e86d2710940}{add\+\_\+animation}} (vec3 angles, float delta\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Додає швидкість анімації обертання об\textquotesingle{}єкту. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Детальний опис}
+Інтерфейс до об\textquotesingle{}єктів, що можуть можуть бути переміщені та повернуті у просторі. 
+
+Див. визначення в файлі \mbox{\hyperlink{bijective_8h_source}{bijective.\+h}}, рядок \mbox{\hyperlink{bijective_8h_source_l00013}{13}}
+
+
+
+\doxysubsubsection{Конструктор(и)}
+\mbox{\Hypertarget{classBijective_ab67be719c16f877c554f622567e878b4}\label{classBijective_ab67be719c16f877c554f622567e878b4}} 
+\index{Bijective@{Bijective}!````~Bijective@{$\sim$Bijective}}
+\index{````~Bijective@{$\sim$Bijective}!Bijective@{Bijective}}
+\doxyparagraph{\texorpdfstring{$\sim$Bijective()}{~Bijective()}}
+{\footnotesize\ttfamily virtual Bijective\+::$\sim$\+Bijective (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{bijective_8h_source}{bijective.\+h}}, рядок \mbox{\hyperlink{bijective_8h_source_l00015}{15}}
+
+
+
+\doxysubsubsection{Опис методів компонент}
+\mbox{\Hypertarget{classBijective_a193af7a2ea46d86fb32e5e86d2710940}\label{classBijective_a193af7a2ea46d86fb32e5e86d2710940}} 
+\index{Bijective@{Bijective}!add\_animation@{add\_animation}}
+\index{add\_animation@{add\_animation}!Bijective@{Bijective}}
+\doxyparagraph{\texorpdfstring{add\_animation()}{add\_animation()}}
+{\footnotesize\ttfamily virtual void Bijective\+::add\+\_\+animation (\begin{DoxyParamCaption}\item[{vec3}]{angles,  }\item[{float}]{delta\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Додає швидкість анімації обертання об\textquotesingle{}єкту. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\texttt{ in}}  & {\em angles} & вектор швидкостей анімацій обертання по трьом осям \\
+\hline
+\mbox{\texttt{ in}}  & {\em delta\+\_\+time} & скільки часу пройшло з останнього кадру \\
+\hline
+\end{DoxyParams}
+
+
+Переозначається в \mbox{\hyperlink{classObject_a5c6095ac962c2faeaccf09d0a9a7d4a6}{Object}} і \mbox{\hyperlink{classCamera_a8adea6001bb43806f2f012841335c305}{Camera}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{bijective_8h_source}{bijective.\+h}}, рядок \mbox{\hyperlink{bijective_8h_source_l00081}{81}}
+
+\mbox{\Hypertarget{classBijective_ae2901f2c23f284cacc1c4d20ca3e04b9}\label{classBijective_ae2901f2c23f284cacc1c4d20ca3e04b9}} 
+\index{Bijective@{Bijective}!get\_animation@{get\_animation}}
+\index{get\_animation@{get\_animation}!Bijective@{Bijective}}
+\doxyparagraph{\texorpdfstring{get\_animation()}{get\_animation()}}
+{\footnotesize\ttfamily virtual void Bijective\+::get\+\_\+animation (\begin{DoxyParamCaption}\item[{vec3}]{rotation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Забирає поточну анімацію обернення об\textquotesingle{}єкта. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\texttt{ out}}  & {\em rotation} & поточна анімація обернення об\textquotesingle{}єкта \\
+\hline
+\end{DoxyParams}
+
+
+Переозначається в \mbox{\hyperlink{classObject_a6f78bd2cc21324b4d243bcfab465deaa}{Object}} і \mbox{\hyperlink{classCamera_a34282db3a235feac8b411787d0839a03}{Camera}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{bijective_8h_source}{bijective.\+h}}, рядок \mbox{\hyperlink{bijective_8h_source_l00043}{43}}
+
+\mbox{\Hypertarget{classBijective_ada286887158f78c0d1ad6cf2b18b9993}\label{classBijective_ada286887158f78c0d1ad6cf2b18b9993}} 
+\index{Bijective@{Bijective}!get\_mat4@{get\_mat4}}
+\index{get\_mat4@{get\_mat4}!Bijective@{Bijective}}
+\doxyparagraph{\texorpdfstring{get\_mat4()}{get\_mat4()}}
+{\footnotesize\ttfamily virtual void Bijective\+::get\+\_\+mat4 (\begin{DoxyParamCaption}\item[{mat4}]{matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Забирає матрицю лінійних перетворень над об\textquotesingle{}єктом. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\texttt{ out}}  & {\em matrix} & матриця лінійних перетворень \\
+\hline
+\end{DoxyParams}
+
+
+Переозначається в \mbox{\hyperlink{classObject_afff370408e02f6886c5bba0406e2073d}{Object}} і \mbox{\hyperlink{classCamera_ab82dd66e529cd5da7f61bd0efe7cfed2}{Camera}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{bijective_8h_source}{bijective.\+h}}, рядок \mbox{\hyperlink{bijective_8h_source_l00054}{54}}
+
+\mbox{\Hypertarget{classBijective_af0939112acd564a7c51728a222246a45}\label{classBijective_af0939112acd564a7c51728a222246a45}} 
+\index{Bijective@{Bijective}!get\_position@{get\_position}}
+\index{get\_position@{get\_position}!Bijective@{Bijective}}
+\doxyparagraph{\texorpdfstring{get\_position()}{get\_position()}}
+{\footnotesize\ttfamily virtual void Bijective\+::get\+\_\+position (\begin{DoxyParamCaption}\item[{vec4}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Забирає поточну позицію об\textquotesingle{}єкта у просторі. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\texttt{ out}}  & {\em position} & поточна позицію об\textquotesingle{}єкта \\
+\hline
+\end{DoxyParams}
+
+
+Переозначається в \mbox{\hyperlink{classObject_a494825c4cf01dcb9a7cc03d2912ebc23}{Object}} і \mbox{\hyperlink{classCamera_a92e90596e90d3405c93a9c2d4305a287}{Camera}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{bijective_8h_source}{bijective.\+h}}, рядок \mbox{\hyperlink{bijective_8h_source_l00021}{21}}
+
+\mbox{\Hypertarget{classBijective_a86168faf15a3a96e925fcd7e8b808b01}\label{classBijective_a86168faf15a3a96e925fcd7e8b808b01}} 
+\index{Bijective@{Bijective}!get\_rotation@{get\_rotation}}
+\index{get\_rotation@{get\_rotation}!Bijective@{Bijective}}
+\doxyparagraph{\texorpdfstring{get\_rotation()}{get\_rotation()}}
+{\footnotesize\ttfamily virtual void Bijective\+::get\+\_\+rotation (\begin{DoxyParamCaption}\item[{vec3}]{rotation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Забирає поточний нахил об\textquotesingle{}єкта. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\texttt{ out}}  & {\em rotation} & поточний нахил об\textquotesingle{}єкта \\
+\hline
+\end{DoxyParams}
+
+
+Переозначається в \mbox{\hyperlink{classObject_aa8359d878b035e443c8fbe677bbc3613}{Object}} і \mbox{\hyperlink{classCamera_aa7eb7b6bb3dc03911a44abefab63db28}{Camera}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{bijective_8h_source}{bijective.\+h}}, рядок \mbox{\hyperlink{bijective_8h_source_l00032}{32}}
+
+\mbox{\Hypertarget{classBijective_ad59a2e843e9805ffd902baf7185f4622}\label{classBijective_ad59a2e843e9805ffd902baf7185f4622}} 
+\index{Bijective@{Bijective}!rotate@{rotate}}
+\index{rotate@{rotate}!Bijective@{Bijective}}
+\doxyparagraph{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily virtual void Bijective\+::rotate (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ff}{coord\+\_\+enum}}}]{coord,  }\item[{float}]{delta\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Обертає об\textquotesingle{}єкт. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\texttt{ in}}  & {\em coord} & позначає координатну вісь навколо якої обертати \\
+\hline
+\mbox{\texttt{ in}}  & {\em delta\+\_\+time} & скільки часу пройшло з останнього кадру \\
+\hline
+\end{DoxyParams}
+
+
+Переозначається в \mbox{\hyperlink{classObject_a485bd8b8aa5fb4ca6d0dd9c6701c4948}{Object}} і \mbox{\hyperlink{classCamera_aefe16d03f63e29639110b3fe9afa0e3c}{Camera}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{bijective_8h_source}{bijective.\+h}}, рядок \mbox{\hyperlink{bijective_8h_source_l00070}{70}}
+
+\mbox{\Hypertarget{classBijective_abef32f8b820e8f12a1bc856fb85c1654}\label{classBijective_abef32f8b820e8f12a1bc856fb85c1654}} 
+\index{Bijective@{Bijective}!rotate\_all@{rotate\_all}}
+\index{rotate\_all@{rotate\_all}!Bijective@{Bijective}}
+\doxyparagraph{\texorpdfstring{rotate\_all()}{rotate\_all()}}
+{\footnotesize\ttfamily virtual void Bijective\+::rotate\+\_\+all (\begin{DoxyParamCaption}\item[{vec3}]{angles }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Обернути об\textquotesingle{}єкт по всім осям. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\texttt{ in}}  & {\em angles} & вектор кутів у радіанах на кожну вісь \\
+\hline
+\end{DoxyParams}
+
+
+Переозначається в \mbox{\hyperlink{classObject_add3dce565f65cf4e74329dd3ed987f73}{Object}} і \mbox{\hyperlink{classCamera_a5e17cbaf3c595058ebf596ca612f4428}{Camera}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{bijective_8h_source}{bijective.\+h}}, рядок \mbox{\hyperlink{bijective_8h_source_l00075}{75}}
+
+\mbox{\Hypertarget{classBijective_a4791c5545451015a1b7e099517430ca4}\label{classBijective_a4791c5545451015a1b7e099517430ca4}} 
+\index{Bijective@{Bijective}!set\_animation@{set\_animation}}
+\index{set\_animation@{set\_animation}!Bijective@{Bijective}}
+\doxyparagraph{\texorpdfstring{set\_animation()}{set\_animation()}}
+{\footnotesize\ttfamily virtual void Bijective\+::set\+\_\+animation (\begin{DoxyParamCaption}\item[{vec3}]{rotation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Задає нову анімацію обернення об\textquotesingle{}єкта. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\texttt{ in}}  & {\em rotation} & нова анімація обернення об\textquotesingle{}єкта. \\
+\hline
+\end{DoxyParams}
+
+
+Переозначається в \mbox{\hyperlink{classObject_a6ddb712178530b3f3af4b1b1a7c39b00}{Object}} і \mbox{\hyperlink{classCamera_a3630d2283d4065dfc3c9960518f2b329}{Camera}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{bijective_8h_source}{bijective.\+h}}, рядок \mbox{\hyperlink{bijective_8h_source_l00048}{48}}
+
+\mbox{\Hypertarget{classBijective_ad91ff8fb9810bf530e9d393f99428130}\label{classBijective_ad91ff8fb9810bf530e9d393f99428130}} 
+\index{Bijective@{Bijective}!set\_position@{set\_position}}
+\index{set\_position@{set\_position}!Bijective@{Bijective}}
+\doxyparagraph{\texorpdfstring{set\_position()}{set\_position()}}
+{\footnotesize\ttfamily virtual void Bijective\+::set\+\_\+position (\begin{DoxyParamCaption}\item[{vec4}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Задає нову позицію об\textquotesingle{}єкта у просторі. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\texttt{ in}}  & {\em position} & нова позиція об\textquotesingle{}єкта у просторі \\
+\hline
+\end{DoxyParams}
+
+
+Переозначається в \mbox{\hyperlink{classObject_afb2a9a9461d2602bbf04f2a88f79dd03}{Object}} і \mbox{\hyperlink{classCamera_a06c173530d6f5d982092fb5f5f58f84a}{Camera}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{bijective_8h_source}{bijective.\+h}}, рядок \mbox{\hyperlink{bijective_8h_source_l00026}{26}}
+
+\mbox{\Hypertarget{classBijective_a41b82ac3c2ef05fa7c63913d4dac3e86}\label{classBijective_a41b82ac3c2ef05fa7c63913d4dac3e86}} 
+\index{Bijective@{Bijective}!set\_rotation@{set\_rotation}}
+\index{set\_rotation@{set\_rotation}!Bijective@{Bijective}}
+\doxyparagraph{\texorpdfstring{set\_rotation()}{set\_rotation()}}
+{\footnotesize\ttfamily virtual void Bijective\+::set\+\_\+rotation (\begin{DoxyParamCaption}\item[{vec3}]{rotation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Задає новий нахил об\textquotesingle{}єкта. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\texttt{ in}}  & {\em rotation} & новий нахил об\textquotesingle{}єкта \\
+\hline
+\end{DoxyParams}
+
+
+Переозначається в \mbox{\hyperlink{classObject_ad2bac42a4343326372b44a620fc6f32e}{Object}} і \mbox{\hyperlink{classCamera_a1a69c9c9f9f370599ba390c8c33f3f2f}{Camera}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{bijective_8h_source}{bijective.\+h}}, рядок \mbox{\hyperlink{bijective_8h_source_l00037}{37}}
+
+\mbox{\Hypertarget{classBijective_a00595de58fb9732439f4b5f1ea3d9c6c}\label{classBijective_a00595de58fb9732439f4b5f1ea3d9c6c}} 
+\index{Bijective@{Bijective}!translate@{translate}}
+\index{translate@{translate}!Bijective@{Bijective}}
+\doxyparagraph{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily virtual void Bijective\+::translate (\begin{DoxyParamCaption}\item[{vec3}]{distances,  }\item[{float}]{delta\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Переміщує об\textquotesingle{}єкт у просторі. 
+
+Переміщує об\textquotesingle{}єкт у просторі на відстані з аргументу {\ttfamily distances}, де кожне значення вектору позначає відстань відповідної осі. 
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\texttt{ in}}  & {\em distances} & відстані переміщення по осям \\
+\hline
+\mbox{\texttt{ in}}  & {\em delta\+\_\+time} & скільки часу пройшло з останнього кадру \\
+\hline
+\end{DoxyParams}
+
+
+Переозначається в \mbox{\hyperlink{classObject_a42b8d284828b2d62960ecf07a61cdd32}{Object}} і \mbox{\hyperlink{classCamera_a264f13ea514a68eb440a6e20b975470d}{Camera}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{bijective_8h_source}{bijective.\+h}}, рядок \mbox{\hyperlink{bijective_8h_source_l00064}{64}}
+
+
+
+Документація цього класу була створена з файлу\+:\begin{DoxyCompactItemize}
+\item 
+osdo/\mbox{\hyperlink{bijective_8h}{bijective.\+h}}\end{DoxyCompactItemize}

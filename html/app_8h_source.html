@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Дипломна робота: Текст програми druidengine/app.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Дипломна робота
+   </div>
+   <div id="projectbrief">студента групи ПА-17-2 Панасенка Єгора Сергійовича</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_949b4dac30c9b4f92191601f9632f3ff.html">druidengine</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">app.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="app_8h.html">Див. документацію.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef APP_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define APP_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="osdo_8h.html">osdo.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//#include &quot;subwindow.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="context_8h.html">context.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="window_8h.html">window.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="deimgui_8h.html">deimgui.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;EASTL/list.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">using</span> eastl::list;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">using</span> eastl::string;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">using</span> eastl::pair;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">class </span><a class="code" href="classSubWindow.html">SubWindow</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">struct </span><a class="code" href="structScene.html">Scene</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="app_8h.html#abe0b71fc7c17456ad9addcb03f4dbbdf">   18</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="app_8h.html#abe0b71fc7c17456ad9addcb03f4dbbdf">TRANSFORMATIONS</a> {</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="app_8h.html#abe0b71fc7c17456ad9addcb03f4dbbdfa3dcfe0046eb5876e287dbf0914819b16">   19</a></span>&#160;    <a class="code" href="app_8h.html#abe0b71fc7c17456ad9addcb03f4dbbdfa3dcfe0046eb5876e287dbf0914819b16">ROTATE</a>    = 0,</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="app_8h.html#abe0b71fc7c17456ad9addcb03f4dbbdfabc6501410409b0638909b580970b35f7">   20</a></span>&#160;    <a class="code" href="app_8h.html#abe0b71fc7c17456ad9addcb03f4dbbdfabc6501410409b0638909b580970b35f7">TRANSLATE</a> = 1,</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="app_8h.html#abe0b71fc7c17456ad9addcb03f4dbbdfa47310f1cfc88e61d7ff5a0d09534b4a1">   21</a></span>&#160;    <a class="code" href="app_8h.html#abe0b71fc7c17456ad9addcb03f4dbbdfa47310f1cfc88e61d7ff5a0d09534b4a1">ANIMATE</a>   = 2,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classApp.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="classApp.html">App</a> {</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classApp.html#a80081d49557bdd8663843c9698682997">   25</a></span>&#160;    <span class="keyword">typedef</span> list&lt;shared_ptr&lt;SubWindow&gt;&gt; <a class="code" href="classApp.html#a80081d49557bdd8663843c9698682997">SubWindows</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classApp.html#ae794f9b64a3178583adb15964dd0f3d3">   26</a></span>&#160;    <span class="keyword">typedef</span> SubWindows::iterator <a class="code" href="classApp.html#ae794f9b64a3178583adb15964dd0f3d3">SubWinIter</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classApp.html#aa1619caa7bf1e312d237796feff40bdf">   27</a></span>&#160;    <a class="code" href="structContext.html">Context</a> <a class="code" href="classApp.html#aa1619caa7bf1e312d237796feff40bdf">context</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classApp.html#abf4802385f7f2460656ea82c2522b511">   28</a></span>&#160;    <a class="code" href="classWindow.html">Window</a> <a class="code" href="classApp.html#abf4802385f7f2460656ea82c2522b511">window</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classApp.html#a284f6e8cff9c0fa03a0a1906d2d435f9">   29</a></span>&#160;    list&lt;shared_ptr&lt;Scene&gt;&gt; <a class="code" href="classApp.html#a284f6e8cff9c0fa03a0a1906d2d435f9">scenes</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classApp.html#a7502165713243e73c8773825e039f063">   30</a></span>&#160;    <a class="code" href="classApp.html#a80081d49557bdd8663843c9698682997">SubWindows</a> <a class="code" href="classApp.html#a7502165713243e73c8773825e039f063">subwindows</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classApp.html#afc8f7aba8daa634c0d20dbb9dab5364f">   31</a></span>&#160;    hash_map&lt;shared_ptr&lt;Scene&gt;, hash_map&lt;SubWindows::pointer, SubWinIter&gt;&gt; <a class="code" href="classApp.html#afc8f7aba8daa634c0d20dbb9dab5364f">winmap</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classApp.html#a4db7433ed8624e034e502a806c866938">   32</a></span>&#160;    <a class="code" href="classDeImgui.html">DeImgui</a> <a class="code" href="classApp.html#a4db7433ed8624e034e502a806c866938">deimgui</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classApp.html#aa481132fcfaf7b94263b01656b445d12">   33</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classApp.html#aa481132fcfaf7b94263b01656b445d12">interactive_mode</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classApp.html#a3ae0a45fca199be672ed234afac60190">   34</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classApp.html#a3ae0a45fca199be672ed234afac60190">trans</a>[3][3];</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classApp.html#a734e41fc893a74403a725cb1df3403dc">init</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classApp.html#abc276203f1e1403b35bb3d41739a37c4">loop</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="classShader.html#a37c1d8b706d1bc83800419d8776eeb23">Shader::shader_map</a> <a class="code" href="classApp.html#ad22f4e601a3a6ab235d1d4ab81c07f98">create_shader_paths</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * name);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="classShader.html#a37c1d8b706d1bc83800419d8776eeb23">Shader::shader_map</a> <a class="code" href="classApp.html#a5fc51a0a78ceb038c9679d2af5d28834">create_adv_shader_paths</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * name);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classApp.html#abd80502050c99609309e176eb5496ae7">create_model_paths</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * name);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classApp.html#acda294904bf8e856f8707e3fad0be950">load_model</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;path);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classApp.html#a389257925cb999235efb3129598a87df">add_subwindow</a>(<a class="code" href="classeastl_1_1shared__ptr.html">shared_ptr&lt;Scene&gt;</a>&amp; scene);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="classApp.html#ae794f9b64a3178583adb15964dd0f3d3">SubWinIter</a> <a class="code" href="classApp.html#a12ea246a72eab2f8bc2c849855e25c9a">remove_subwindow</a>(<a class="code" href="classApp.html#ae794f9b64a3178583adb15964dd0f3d3">SubWinIter</a> it);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    list&lt;shared_ptr&lt;Scene&gt;&gt;::iterator</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="classApp.html#a87c2fa6a1bb79dc2f59ed7bc15400a15">close_scene</a>(list&lt;<a class="code" href="classeastl_1_1shared__ptr.html">shared_ptr&lt;Scene&gt;</a>&gt;::iterator it);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classApp.html#a82b7712b81ea2e3172efb59cd285da7c">object_edit</a>(<a class="code" href="classObject.html">Object</a>&amp; <span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classApp.html#a2a41e9de9a671887184fc4572286431c">scroll</a>(<a class="code" href="classWindow.html">Window</a>* <a class="code" href="classApp.html#abf4802385f7f2460656ea82c2522b511">window</a>, GLdouble xoffset, GLdouble yoffset);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classApp.html#aaddce08fc56135f09a674fb2a6088335">mouse</a>(<a class="code" href="classWindow.html">Window</a>* <a class="code" href="classApp.html#abf4802385f7f2460656ea82c2522b511">window</a>, vec2 pos, vec2 offset);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classApp.html#a931e5f593b06d3aff27e5a96566f1d41">char_callback</a>(<a class="code" href="classWindow.html">Window</a>* <a class="code" href="classApp.html#abf4802385f7f2460656ea82c2522b511">window</a>, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> codepoint);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classApp.html#a9a45736060031d4e064c531bf95702af">mouse_button_callback</a>(</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <a class="code" href="classWindow.html">Window</a> *<a class="code" href="classApp.html#abf4802385f7f2460656ea82c2522b511">window</a>, <span class="keyword">enum</span> <a class="code" href="window_8h.html#a13dc1bbe931fd8c6b75fed89f1e23256">BUTTONS</a> button, <span class="keywordtype">bool</span> pressed);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classApp.html#a350119beab82886447687d7b2634f7ad">key</a>(<a class="code" href="classWindow.html">Window</a>* <a class="code" href="classApp.html#abf4802385f7f2460656ea82c2522b511">window</a>, <span class="keyword">enum</span> <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211">KEYS</a> <a class="code" href="classApp.html#a350119beab82886447687d7b2634f7ad">key</a>, <span class="keywordtype">bool</span> pressed);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="comment">// process all input</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">// -----------------</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classApp.html#a2d0db695e3c389d834dc95420cf41711">process_input</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;};</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// APP_H</span></div>
+<div class="ttc" id="aapp_8h_html_abe0b71fc7c17456ad9addcb03f4dbbdf"><div class="ttname"><a href="app_8h.html#abe0b71fc7c17456ad9addcb03f4dbbdf">TRANSFORMATIONS</a></div><div class="ttdeci">TRANSFORMATIONS</div><div class="ttdef"><b>Definition:</b> <a href="app_8h_source.html#l00018">app.h:18</a></div></div>
+<div class="ttc" id="aapp_8h_html_abe0b71fc7c17456ad9addcb03f4dbbdfa3dcfe0046eb5876e287dbf0914819b16"><div class="ttname"><a href="app_8h.html#abe0b71fc7c17456ad9addcb03f4dbbdfa3dcfe0046eb5876e287dbf0914819b16">ROTATE</a></div><div class="ttdeci">@ ROTATE</div><div class="ttdef"><b>Definition:</b> <a href="app_8h_source.html#l00019">app.h:19</a></div></div>
+<div class="ttc" id="aapp_8h_html_abe0b71fc7c17456ad9addcb03f4dbbdfa47310f1cfc88e61d7ff5a0d09534b4a1"><div class="ttname"><a href="app_8h.html#abe0b71fc7c17456ad9addcb03f4dbbdfa47310f1cfc88e61d7ff5a0d09534b4a1">ANIMATE</a></div><div class="ttdeci">@ ANIMATE</div><div class="ttdef"><b>Definition:</b> <a href="app_8h_source.html#l00021">app.h:21</a></div></div>
+<div class="ttc" id="aapp_8h_html_abe0b71fc7c17456ad9addcb03f4dbbdfabc6501410409b0638909b580970b35f7"><div class="ttname"><a href="app_8h.html#abe0b71fc7c17456ad9addcb03f4dbbdfabc6501410409b0638909b580970b35f7">TRANSLATE</a></div><div class="ttdeci">@ TRANSLATE</div><div class="ttdef"><b>Definition:</b> <a href="app_8h_source.html#l00020">app.h:20</a></div></div>
+<div class="ttc" id="aclassApp_html"><div class="ttname"><a href="classApp.html">App</a></div><div class="ttdef"><b>Definition:</b> <a href="app_8h_source.html#l00024">app.h:24</a></div></div>
+<div class="ttc" id="aclassApp_html_a12ea246a72eab2f8bc2c849855e25c9a"><div class="ttname"><a href="classApp.html#a12ea246a72eab2f8bc2c849855e25c9a">App::remove_subwindow</a></div><div class="ttdeci">SubWinIter remove_subwindow(SubWinIter it)</div><div class="ttdef"><b>Definition:</b> <a href="app_8cpp_source.html#l00292">app.cpp:292</a></div></div>
+<div class="ttc" id="aclassApp_html_a284f6e8cff9c0fa03a0a1906d2d435f9"><div class="ttname"><a href="classApp.html#a284f6e8cff9c0fa03a0a1906d2d435f9">App::scenes</a></div><div class="ttdeci">list&lt; shared_ptr&lt; Scene &gt; &gt; scenes</div><div class="ttdef"><b>Definition:</b> <a href="app_8h_source.html#l00029">app.h:29</a></div></div>
+<div class="ttc" id="aclassApp_html_a2a41e9de9a671887184fc4572286431c"><div class="ttname"><a href="classApp.html#a2a41e9de9a671887184fc4572286431c">App::scroll</a></div><div class="ttdeci">static void scroll(Window *window, GLdouble xoffset, GLdouble yoffset)</div><div class="ttdef"><b>Definition:</b> <a href="app_8cpp_source.html#l00325">app.cpp:325</a></div></div>
+<div class="ttc" id="aclassApp_html_a2d0db695e3c389d834dc95420cf41711"><div class="ttname"><a href="classApp.html#a2d0db695e3c389d834dc95420cf41711">App::process_input</a></div><div class="ttdeci">void process_input()</div><div class="ttdef"><b>Definition:</b> <a href="app_8cpp_source.html#l00392">app.cpp:392</a></div></div>
+<div class="ttc" id="aclassApp_html_a350119beab82886447687d7b2634f7ad"><div class="ttname"><a href="classApp.html#a350119beab82886447687d7b2634f7ad">App::key</a></div><div class="ttdeci">static void key(Window *window, enum KEYS key, bool pressed)</div><div class="ttdef"><b>Definition:</b> <a href="app_8cpp_source.html#l00347">app.cpp:347</a></div></div>
+<div class="ttc" id="aclassApp_html_a389257925cb999235efb3129598a87df"><div class="ttname"><a href="classApp.html#a389257925cb999235efb3129598a87df">App::add_subwindow</a></div><div class="ttdeci">void add_subwindow(shared_ptr&lt; Scene &gt; &amp;scene)</div><div class="ttdef"><b>Definition:</b> <a href="app_8cpp_source.html#l00286">app.cpp:286</a></div></div>
+<div class="ttc" id="aclassApp_html_a3ae0a45fca199be672ed234afac60190"><div class="ttname"><a href="classApp.html#a3ae0a45fca199be672ed234afac60190">App::trans</a></div><div class="ttdeci">int trans[3][3]</div><div class="ttdef"><b>Definition:</b> <a href="app_8h_source.html#l00034">app.h:34</a></div></div>
+<div class="ttc" id="aclassApp_html_a4db7433ed8624e034e502a806c866938"><div class="ttname"><a href="classApp.html#a4db7433ed8624e034e502a806c866938">App::deimgui</a></div><div class="ttdeci">DeImgui deimgui</div><div class="ttdef"><b>Definition:</b> <a href="app_8h_source.html#l00032">app.h:32</a></div></div>
+<div class="ttc" id="aclassApp_html_a5fc51a0a78ceb038c9679d2af5d28834"><div class="ttname"><a href="classApp.html#a5fc51a0a78ceb038c9679d2af5d28834">App::create_adv_shader_paths</a></div><div class="ttdeci">Shader::shader_map create_adv_shader_paths(const char *name)</div><div class="ttdef"><b>Definition:</b> <a href="app_8cpp_source.html#l00256">app.cpp:256</a></div></div>
+<div class="ttc" id="aclassApp_html_a734e41fc893a74403a725cb1df3403dc"><div class="ttname"><a href="classApp.html#a734e41fc893a74403a725cb1df3403dc">App::init</a></div><div class="ttdeci">int init()</div><div class="ttdef"><b>Definition:</b> <a href="app_8cpp_source.html#l00015">app.cpp:15</a></div></div>
+<div class="ttc" id="aclassApp_html_a7502165713243e73c8773825e039f063"><div class="ttname"><a href="classApp.html#a7502165713243e73c8773825e039f063">App::subwindows</a></div><div class="ttdeci">SubWindows subwindows</div><div class="ttdef"><b>Definition:</b> <a href="app_8h_source.html#l00030">app.h:30</a></div></div>
+<div class="ttc" id="aclassApp_html_a80081d49557bdd8663843c9698682997"><div class="ttname"><a href="classApp.html#a80081d49557bdd8663843c9698682997">App::SubWindows</a></div><div class="ttdeci">list&lt; shared_ptr&lt; SubWindow &gt; &gt; SubWindows</div><div class="ttdef"><b>Definition:</b> <a href="app_8h_source.html#l00025">app.h:25</a></div></div>
+<div class="ttc" id="aclassApp_html_a82b7712b81ea2e3172efb59cd285da7c"><div class="ttname"><a href="classApp.html#a82b7712b81ea2e3172efb59cd285da7c">App::object_edit</a></div><div class="ttdeci">void object_edit(Object &amp;object)</div><div class="ttdef"><b>Definition:</b> <a href="app_8cpp_source.html#l00306">app.cpp:306</a></div></div>
+<div class="ttc" id="aclassApp_html_a87c2fa6a1bb79dc2f59ed7bc15400a15"><div class="ttname"><a href="classApp.html#a87c2fa6a1bb79dc2f59ed7bc15400a15">App::close_scene</a></div><div class="ttdeci">list&lt; shared_ptr&lt; Scene &gt; &gt;::iterator close_scene(list&lt; shared_ptr&lt; Scene &gt;&gt;::iterator it)</div><div class="ttdef"><b>Definition:</b> <a href="app_8cpp_source.html#l00298">app.cpp:298</a></div></div>
+<div class="ttc" id="aclassApp_html_a931e5f593b06d3aff27e5a96566f1d41"><div class="ttname"><a href="classApp.html#a931e5f593b06d3aff27e5a96566f1d41">App::char_callback</a></div><div class="ttdeci">static void char_callback(Window *window, unsigned int codepoint)</div><div class="ttdef"><b>Definition:</b> <a href="app_8cpp_source.html#l00341">app.cpp:341</a></div></div>
+<div class="ttc" id="aclassApp_html_a9a45736060031d4e064c531bf95702af"><div class="ttname"><a href="classApp.html#a9a45736060031d4e064c531bf95702af">App::mouse_button_callback</a></div><div class="ttdeci">static void mouse_button_callback(Window *window, enum BUTTONS button, bool pressed)</div><div class="ttdef"><b>Definition:</b> <a href="app_8cpp_source.html#l00343">app.cpp:343</a></div></div>
+<div class="ttc" id="aclassApp_html_aa1619caa7bf1e312d237796feff40bdf"><div class="ttname"><a href="classApp.html#aa1619caa7bf1e312d237796feff40bdf">App::context</a></div><div class="ttdeci">Context context</div><div class="ttdef"><b>Definition:</b> <a href="app_8h_source.html#l00027">app.h:27</a></div></div>
+<div class="ttc" id="aclassApp_html_aa481132fcfaf7b94263b01656b445d12"><div class="ttname"><a href="classApp.html#aa481132fcfaf7b94263b01656b445d12">App::interactive_mode</a></div><div class="ttdeci">bool interactive_mode</div><div class="ttdef"><b>Definition:</b> <a href="app_8h_source.html#l00033">app.h:33</a></div></div>
+<div class="ttc" id="aclassApp_html_aaddce08fc56135f09a674fb2a6088335"><div class="ttname"><a href="classApp.html#aaddce08fc56135f09a674fb2a6088335">App::mouse</a></div><div class="ttdeci">static void mouse(Window *window, vec2 pos, vec2 offset)</div><div class="ttdef"><b>Definition:</b> <a href="app_8cpp_source.html#l00328">app.cpp:328</a></div></div>
+<div class="ttc" id="aclassApp_html_abc276203f1e1403b35bb3d41739a37c4"><div class="ttname"><a href="classApp.html#abc276203f1e1403b35bb3d41739a37c4">App::loop</a></div><div class="ttdeci">int loop()</div><div class="ttdef"><b>Definition:</b> <a href="app_8cpp_source.html#l00054">app.cpp:54</a></div></div>
+<div class="ttc" id="aclassApp_html_abd80502050c99609309e176eb5496ae7"><div class="ttname"><a href="classApp.html#abd80502050c99609309e176eb5496ae7">App::create_model_paths</a></div><div class="ttdeci">string create_model_paths(const char *name)</div><div class="ttdef"><b>Definition:</b> <a href="app_8cpp_source.html#l00265">app.cpp:265</a></div></div>
+<div class="ttc" id="aclassApp_html_abf4802385f7f2460656ea82c2522b511"><div class="ttname"><a href="classApp.html#abf4802385f7f2460656ea82c2522b511">App::window</a></div><div class="ttdeci">Window window</div><div class="ttdef"><b>Definition:</b> <a href="app_8h_source.html#l00028">app.h:28</a></div></div>
+<div class="ttc" id="aclassApp_html_acda294904bf8e856f8707e3fad0be950"><div class="ttname"><a href="classApp.html#acda294904bf8e856f8707e3fad0be950">App::load_model</a></div><div class="ttdeci">bool load_model(const string &amp;path)</div><div class="ttdef"><b>Definition:</b> <a href="app_8cpp_source.html#l00270">app.cpp:270</a></div></div>
+<div class="ttc" id="aclassApp_html_ad22f4e601a3a6ab235d1d4ab81c07f98"><div class="ttname"><a href="classApp.html#ad22f4e601a3a6ab235d1d4ab81c07f98">App::create_shader_paths</a></div><div class="ttdeci">Shader::shader_map create_shader_paths(const char *name)</div><div class="ttdef"><b>Definition:</b> <a href="app_8cpp_source.html#l00249">app.cpp:249</a></div></div>
+<div class="ttc" id="aclassApp_html_ae794f9b64a3178583adb15964dd0f3d3"><div class="ttname"><a href="classApp.html#ae794f9b64a3178583adb15964dd0f3d3">App::SubWinIter</a></div><div class="ttdeci">SubWindows::iterator SubWinIter</div><div class="ttdef"><b>Definition:</b> <a href="app_8h_source.html#l00026">app.h:26</a></div></div>
+<div class="ttc" id="aclassApp_html_afc8f7aba8daa634c0d20dbb9dab5364f"><div class="ttname"><a href="classApp.html#afc8f7aba8daa634c0d20dbb9dab5364f">App::winmap</a></div><div class="ttdeci">hash_map&lt; shared_ptr&lt; Scene &gt;, hash_map&lt; SubWindows::pointer, SubWinIter &gt; &gt; winmap</div><div class="ttdef"><b>Definition:</b> <a href="app_8h_source.html#l00031">app.h:31</a></div></div>
+<div class="ttc" id="aclassDeImgui_html"><div class="ttname"><a href="classDeImgui.html">DeImgui</a></div><div class="ttdef"><b>Definition:</b> <a href="deimgui_8h_source.html#l00006">deimgui.h:6</a></div></div>
+<div class="ttc" id="aclassObject_html"><div class="ttname"><a href="classObject.html">Object</a></div><div class="ttdef"><b>Definition:</b> <a href="object_8h_source.html#l00013">object.h:13</a></div></div>
+<div class="ttc" id="aclassShader_html_a37c1d8b706d1bc83800419d8776eeb23"><div class="ttname"><a href="classShader.html#a37c1d8b706d1bc83800419d8776eeb23">Shader::shader_map</a></div><div class="ttdeci">hash_map&lt; ShaderType, string &gt; shader_map</div><div class="ttdef"><b>Definition:</b> <a href="shader_8h_source.html#l00028">shader.h:28</a></div></div>
+<div class="ttc" id="aclassSubWindow_html"><div class="ttname"><a href="classSubWindow.html">SubWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8h_source.html#l00010">subwindow.h:11</a></div></div>
+<div class="ttc" id="aclassWindow_html"><div class="ttname"><a href="classWindow.html">Window</a></div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00051">window.h:51</a></div></div>
+<div class="ttc" id="aclasseastl_1_1shared__ptr_html"><div class="ttname"><a href="classeastl_1_1shared__ptr.html">eastl::shared_ptr</a></div><div class="ttdef"><b>Definition:</b> <a href="shader_8h_source.html#l00012">shader.h:12</a></div></div>
+<div class="ttc" id="acontext_8h_html"><div class="ttname"><a href="context_8h.html">context.h</a></div></div>
+<div class="ttc" id="adeimgui_8h_html"><div class="ttname"><a href="deimgui_8h.html">deimgui.h</a></div></div>
+<div class="ttc" id="aosdo_8h_html"><div class="ttname"><a href="osdo_8h.html">osdo.h</a></div></div>
+<div class="ttc" id="astructContext_html"><div class="ttname"><a href="structContext.html">Context</a></div><div class="ttdef"><b>Definition:</b> <a href="context_8h_source.html#l00019">context.h:20</a></div></div>
+<div class="ttc" id="astructScene_html"><div class="ttname"><a href="structScene.html">Scene</a></div><div class="ttdef"><b>Definition:</b> <a href="scene_8h_source.html#l00009">scene.h:9</a></div></div>
+<div class="ttc" id="awindow_8h_html"><div class="ttname"><a href="window_8h.html">window.h</a></div></div>
+<div class="ttc" id="awindow_8h_html_a13dc1bbe931fd8c6b75fed89f1e23256"><div class="ttname"><a href="window_8h.html#a13dc1bbe931fd8c6b75fed89f1e23256">BUTTONS</a></div><div class="ttdeci">BUTTONS</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00031">window.h:31</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211">KEYS</a></div><div class="ttdeci">KEYS</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00008">window.h:8</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

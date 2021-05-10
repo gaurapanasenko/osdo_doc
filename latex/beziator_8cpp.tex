@@ -1,0 +1,139 @@
+\hypertarget{beziator_8cpp}{}\doxysubsection{Файл osdo/beziator.cpp}
+\label{beziator_8cpp}\index{osdo/beziator.cpp@{osdo/beziator.cpp}}
+{\ttfamily \#include \char`\"{}beziator.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}conf.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+Діаграма включених заголовочних файлів для beziator.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{beziator_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Макровизначення}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{beziator_8cpp_a5c48d2df20ec6cfbc7bdcecfff134c7b}{BEZIER\+\_\+\+TANGENT\+\_\+\+INIT}}
+\item 
+\#define \mbox{\hyperlink{beziator_8cpp_aaf0fd126ea86726aa206778ad2315f31}{ucast}}~static\+\_\+cast$<$unsigned$>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Визначення типів}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{structVertex}{Vertex}} $\ast$ \mbox{\hyperlink{beziator_8cpp_a1be679a80ddb401e60a4ae4a90a1eddf}{surface\+\_\+t}}\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Функції}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{beziator_8cpp_abff744cd88c5f344ef77ebcd6f2ec8a1}{bezier\+\_\+curve}} (float a, mat4 points, vec4 dest)
+\item 
+void \mbox{\hyperlink{beziator_8cpp_a9441d014e907f9b43dbe11cebcfaf138}{bezier\+\_\+curve\+\_\+tangent}} (float a, mat4 points, vec4 dest)
+\item 
+void \mbox{\hyperlink{beziator_8cpp_ac99c8d4702aa8184518428b26331873c}{bezier\+\_\+surface}} (float u, float v, \mbox{\hyperlink{beziator_8cpp_a1be679a80ddb401e60a4ae4a90a1eddf}{surface\+\_\+t}} points, vec4 dest, vec4 normal)
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Опис макровизначень}
+\mbox{\Hypertarget{beziator_8cpp_a5c48d2df20ec6cfbc7bdcecfff134c7b}\label{beziator_8cpp_a5c48d2df20ec6cfbc7bdcecfff134c7b}} 
+\index{beziator.cpp@{beziator.cpp}!BEZIER\_TANGENT\_INIT@{BEZIER\_TANGENT\_INIT}}
+\index{BEZIER\_TANGENT\_INIT@{BEZIER\_TANGENT\_INIT}!beziator.cpp@{beziator.cpp}}
+\doxyparagraph{\texorpdfstring{BEZIER\_TANGENT\_INIT}{BEZIER\_TANGENT\_INIT}}
+{\footnotesize\ttfamily \#define BEZIER\+\_\+\+TANGENT\+\_\+\+INIT}
+
+{\bfseries Макровизначення\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{\(\backslash\)}
+\DoxyCodeLine{\{  0,  0,  0,  0\},\(\backslash\)}
+\DoxyCodeLine{\{ -\/3,  9, -\/9,  3\},\(\backslash\)}
+\DoxyCodeLine{\{  6,-\/12,  6,  0\},\(\backslash\)}
+\DoxyCodeLine{\{ -\/3,  3,  0,  0\},\}}
+
+\end{DoxyCode}
+
+
+Див. визначення в файлі \mbox{\hyperlink{beziator_8cpp_source}{beziator.\+cpp}}, рядок \mbox{\hyperlink{beziator_8cpp_source_l00005}{5}}
+
+\mbox{\Hypertarget{beziator_8cpp_aaf0fd126ea86726aa206778ad2315f31}\label{beziator_8cpp_aaf0fd126ea86726aa206778ad2315f31}} 
+\index{beziator.cpp@{beziator.cpp}!ucast@{ucast}}
+\index{ucast@{ucast}!beziator.cpp@{beziator.cpp}}
+\doxyparagraph{\texorpdfstring{ucast}{ucast}}
+{\footnotesize\ttfamily \#define ucast~static\+\_\+cast$<$unsigned$>$}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{beziator_8cpp_source}{beziator.\+cpp}}, рядок \mbox{\hyperlink{beziator_8cpp_source_l00011}{11}}
+
+
+
+\doxysubsubsection{Опис визначень типів}
+\mbox{\Hypertarget{beziator_8cpp_a1be679a80ddb401e60a4ae4a90a1eddf}\label{beziator_8cpp_a1be679a80ddb401e60a4ae4a90a1eddf}} 
+\index{beziator.cpp@{beziator.cpp}!surface\_t@{surface\_t}}
+\index{surface\_t@{surface\_t}!beziator.cpp@{beziator.cpp}}
+\doxyparagraph{\texorpdfstring{surface\_t}{surface\_t}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structVertex}{Vertex}}$\ast$ surface\+\_\+t\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{beziator_8cpp_source}{beziator.\+cpp}}, рядок \mbox{\hyperlink{beziator_8cpp_source_l00016}{16}}
+
+
+
+\doxysubsubsection{Опис функцій}
+\mbox{\Hypertarget{beziator_8cpp_abff744cd88c5f344ef77ebcd6f2ec8a1}\label{beziator_8cpp_abff744cd88c5f344ef77ebcd6f2ec8a1}} 
+\index{beziator.cpp@{beziator.cpp}!bezier\_curve@{bezier\_curve}}
+\index{bezier\_curve@{bezier\_curve}!beziator.cpp@{beziator.cpp}}
+\doxyparagraph{\texorpdfstring{bezier\_curve()}{bezier\_curve()}}
+{\footnotesize\ttfamily void bezier\+\_\+curve (\begin{DoxyParamCaption}\item[{float}]{a,  }\item[{mat4}]{points,  }\item[{vec4}]{dest }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{beziator_8cpp_source}{beziator.\+cpp}}, рядок \mbox{\hyperlink{beziator_8cpp_source_l00071}{71}}
+
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{beziator_8cpp_abff744cd88c5f344ef77ebcd6f2ec8a1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{beziator_8cpp_a9441d014e907f9b43dbe11cebcfaf138}\label{beziator_8cpp_a9441d014e907f9b43dbe11cebcfaf138}} 
+\index{beziator.cpp@{beziator.cpp}!bezier\_curve\_tangent@{bezier\_curve\_tangent}}
+\index{bezier\_curve\_tangent@{bezier\_curve\_tangent}!beziator.cpp@{beziator.cpp}}
+\doxyparagraph{\texorpdfstring{bezier\_curve\_tangent()}{bezier\_curve\_tangent()}}
+{\footnotesize\ttfamily void bezier\+\_\+curve\+\_\+tangent (\begin{DoxyParamCaption}\item[{float}]{a,  }\item[{mat4}]{points,  }\item[{vec4}]{dest }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{beziator_8cpp_source}{beziator.\+cpp}}, рядок \mbox{\hyperlink{beziator_8cpp_source_l00078}{78}}
+
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{beziator_8cpp_a9441d014e907f9b43dbe11cebcfaf138_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{beziator_8cpp_ac99c8d4702aa8184518428b26331873c}\label{beziator_8cpp_ac99c8d4702aa8184518428b26331873c}} 
+\index{beziator.cpp@{beziator.cpp}!bezier\_surface@{bezier\_surface}}
+\index{bezier\_surface@{bezier\_surface}!beziator.cpp@{beziator.cpp}}
+\doxyparagraph{\texorpdfstring{bezier\_surface()}{bezier\_surface()}}
+{\footnotesize\ttfamily void bezier\+\_\+surface (\begin{DoxyParamCaption}\item[{float}]{u,  }\item[{float}]{v,  }\item[{\mbox{\hyperlink{beziator_8cpp_a1be679a80ddb401e60a4ae4a90a1eddf}{surface\+\_\+t}}}]{points,  }\item[{vec4}]{dest,  }\item[{vec4}]{normal }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{beziator_8cpp_source}{beziator.\+cpp}}, рядок \mbox{\hyperlink{beziator_8cpp_source_l00085}{85}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{beziator_8cpp_ac99c8d4702aa8184518428b26331873c_cgraph}
+\end{center}
+\end{figure}
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{beziator_8cpp_ac99c8d4702aa8184518428b26331873c_icgraph}
+\end{center}
+\end{figure}

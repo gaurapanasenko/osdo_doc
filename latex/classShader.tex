@@ -1,0 +1,555 @@
+\hypertarget{classShader}{}\doxysubsection{Клас Shader}
+\label{classShader}\index{Shader@{Shader}}
+
+
+Клас взаємодії з шейдером у видеокарті.  
+
+
+
+
+{\ttfamily \#include $<$shader.\+h$>$}
+
+
+
+Схема успадкувань для Shader\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{classShader__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Діаграма зв\textquotesingle{}язків класу Shader\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{classShader__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Загальнодоступні типи}
+\begin{DoxyCompactItemize}
+\item 
+typedef hash\+\_\+map$<$ \mbox{\hyperlink{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46}{Shader\+Type}}, string $>$ \mbox{\hyperlink{classShader_a37c1d8b706d1bc83800419d8776eeb23}{shader\+\_\+map}}
+\begin{DoxyCompactList}\small\item\em тип для зберігання шляхів файлів шейдеру по їх типам. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Загальнодоступні елементи}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classShader_af878abbd5ebf1a17e1df35dd9933f4e8}{Shader}} (const GLuint shader)
+\item 
+\mbox{\hyperlink{classShader_ad3825ce04340dcb4c3fe7eea5a1c46d2}{$\sim$\+Shader}} () override
+\item 
+void \mbox{\hyperlink{classShader_a4581e5cba0fa25ab7080a6848543dc58}{set\+\_\+bool}} (const char $\ast$name, bool value)
+\begin{DoxyCompactList}\small\item\em Задати поле шейдеру типу {\ttfamily bool} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classShader_a5544845a48d60515371b5cb71c7bcb8f}{set\+\_\+int}} (const char $\ast$name, int value)
+\begin{DoxyCompactList}\small\item\em Задати поле шейдеру типу {\ttfamily int} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classShader_a6e686eb1dd9e36aa617397520b669497}{set\+\_\+float}} (const char $\ast$name, float value)
+\begin{DoxyCompactList}\small\item\em Задати поле шейдеру типу {\ttfamily float} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classShader_aec16390e257fd63c173336869cda6488}{set\+\_\+vec2}} (const char $\ast$name, vec2 value)
+\begin{DoxyCompactList}\small\item\em Задати поле шейдеру типу {\ttfamily vec2} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classShader_a9c15d92dae60d9bebc5a8e05e7e16771}{set\+\_\+vec2f}} (const char $\ast$name, float x, float y)
+\begin{DoxyCompactList}\small\item\em Задати вектор-\/поле шейдеру типу {\ttfamily vec2} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classShader_a5da8dde2a4756ce7f5da98f4e3dd9990}{set\+\_\+vec3}} (const char $\ast$name, vec3 value)
+\begin{DoxyCompactList}\small\item\em Задати поле шейдеру типу {\ttfamily vec3} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classShader_a8ab6219e3f760caa7a586061a9894096}{set\+\_\+vec3f}} (const char $\ast$name, float x, float y, float z)
+\begin{DoxyCompactList}\small\item\em Задати вектор-\/поле шейдеру типу {\ttfamily vec3} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classShader_a77c606dadf7b56b825fa02621f13fac3}{set\+\_\+vec4}} (const char $\ast$name, vec4 value)
+\begin{DoxyCompactList}\small\item\em Задати поле шейдеру типу {\ttfamily vec4} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classShader_a52615fe5f2d1528baa909dcbeab6fcb3}{set\+\_\+vec4f}} (const char $\ast$name, float x, float y, float z, float w)
+\begin{DoxyCompactList}\small\item\em Задати вектор-\/поле шейдеру типу {\ttfamily vec4} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classShader_a249093af915275a1e25d21ab70bfc4f9}{set\+\_\+mat2}} (const char $\ast$name, mat2 mat)
+\begin{DoxyCompactList}\small\item\em Задати поле шейдеру типу {\ttfamily mat2} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classShader_a9d871b7a0436c84096f1b294083a3ed7}{set\+\_\+mat3}} (const char $\ast$name, mat3 mat)
+\begin{DoxyCompactList}\small\item\em Задати поле шейдеру типу {\ttfamily mat3} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classShader_a34d5548a520489bd132f5bfbc46bb3a9}{set\+\_\+mat4}} (const char $\ast$name, mat4 mat)
+\begin{DoxyCompactList}\small\item\em Задати поле шейдеру типу {\ttfamily mat4} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Загальнодоступні статичні елементи}
+\begin{DoxyCompactItemize}
+\item 
+static shared\+\_\+ptr$<$ \mbox{\hyperlink{classShader}{Shader}} $>$ \mbox{\hyperlink{classShader_aea711ca1659af57fe4124ea318aa59c1}{create}} (const \mbox{\hyperlink{classShader_a37c1d8b706d1bc83800419d8776eeb23}{shader\+\_\+map}} \&shaders\+\_\+paths)
+\begin{DoxyCompactList}\small\item\em Створює об\textquotesingle{}єкт шейдеру за заданими шляхами файлів шейдерів. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Приватні елементи}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classShader_ad4ef4f54ecb6c7950867d4f091ffbec9}{\+\_\+bind}} (const GLuint \mbox{\hyperlink{classGlBindable_a299d9182805eb4c6b7e9e8cc9d5b4577}{id}}, GLenum target) const override
+\begin{DoxyCompactList}\small\item\em Віртуальний метод, що прив\textquotesingle{}язує контекст Open\+GL до шейдеру. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Додаткові успадковані елементи}
+
+
+\doxysubsubsection{Детальний опис}
+Клас взаємодії з шейдером у видеокарті. 
+
+Див. визначення в файлі \mbox{\hyperlink{shader_8h_source}{shader.\+h}}, рядок \mbox{\hyperlink{shader_8h_source_l00031}{31}}
+
+
+
+\doxysubsubsection{Опис типів користувача}
+\mbox{\Hypertarget{classShader_a37c1d8b706d1bc83800419d8776eeb23}\label{classShader_a37c1d8b706d1bc83800419d8776eeb23}} 
+\index{Shader@{Shader}!shader\_map@{shader\_map}}
+\index{shader\_map@{shader\_map}!Shader@{Shader}}
+\doxyparagraph{\texorpdfstring{shader\_map}{shader\_map}}
+{\footnotesize\ttfamily typedef hash\+\_\+map$<$\mbox{\hyperlink{shader_8h_a6230e1b9ecbf2d82d10856fd7e1fde46}{Shader\+Type}}, string$>$ \mbox{\hyperlink{classShader_a37c1d8b706d1bc83800419d8776eeb23}{Shader\+::shader\+\_\+map}}}
+
+
+
+тип для зберігання шляхів файлів шейдеру по їх типам. 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{shader_8h_source}{shader.\+h}}, рядок \mbox{\hyperlink{shader_8h_source_l00042}{42}}
+
+
+
+\doxysubsubsection{Конструктор(и)}
+\mbox{\Hypertarget{classShader_af878abbd5ebf1a17e1df35dd9933f4e8}\label{classShader_af878abbd5ebf1a17e1df35dd9933f4e8}} 
+\index{Shader@{Shader}!Shader@{Shader}}
+\index{Shader@{Shader}!Shader@{Shader}}
+\doxyparagraph{\texorpdfstring{Shader()}{Shader()}}
+{\footnotesize\ttfamily Shader\+::\+Shader (\begin{DoxyParamCaption}\item[{const GLuint}]{shader }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{shader_8cpp_source}{shader.\+cpp}}, рядок \mbox{\hyperlink{shader_8cpp_source_l00118}{118}}
+
+\mbox{\Hypertarget{classShader_ad3825ce04340dcb4c3fe7eea5a1c46d2}\label{classShader_ad3825ce04340dcb4c3fe7eea5a1c46d2}} 
+\index{Shader@{Shader}!````~Shader@{$\sim$Shader}}
+\index{````~Shader@{$\sim$Shader}!Shader@{Shader}}
+\doxyparagraph{\texorpdfstring{$\sim$Shader()}{~Shader()}}
+{\footnotesize\ttfamily Shader\+::$\sim$\+Shader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{shader_8cpp_source}{shader.\+cpp}}, рядок \mbox{\hyperlink{shader_8cpp_source_l00120}{120}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{classShader_ad3825ce04340dcb4c3fe7eea5a1c46d2_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsubsection{Опис методів компонент}
+\mbox{\Hypertarget{classShader_ad4ef4f54ecb6c7950867d4f091ffbec9}\label{classShader_ad4ef4f54ecb6c7950867d4f091ffbec9}} 
+\index{Shader@{Shader}!\_bind@{\_bind}}
+\index{\_bind@{\_bind}!Shader@{Shader}}
+\doxyparagraph{\texorpdfstring{\_bind()}{\_bind()}}
+{\footnotesize\ttfamily void Shader\+::\+\_\+bind (\begin{DoxyParamCaption}\item[{const GLuint}]{id,  }\item[{GLenum}]{target }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Віртуальний метод, що прив\textquotesingle{}язує контекст Open\+GL до шейдеру. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em id} & індекс шейдеру Open\+GL \\
+\hline
+{\em target} & не використовується, реалізован для інтерфейсу {\ttfamily \mbox{\hyperlink{classGlBindable_ae3213a00db0e6f6dfc356a06a5b1e6d6}{Gl\+Bindable\+::\+\_\+bind}}} \\
+\hline
+\end{DoxyParams}
+
+
+Переозначення з \mbox{\hyperlink{classGlBindable_ae3213a00db0e6f6dfc356a06a5b1e6d6}{Gl\+Bindable}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{shader_8cpp_source}{shader.\+cpp}}, рядок \mbox{\hyperlink{shader_8cpp_source_l00113}{113}}
+
+\mbox{\Hypertarget{classShader_aea711ca1659af57fe4124ea318aa59c1}\label{classShader_aea711ca1659af57fe4124ea318aa59c1}} 
+\index{Shader@{Shader}!create@{create}}
+\index{create@{create}!Shader@{Shader}}
+\doxyparagraph{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{classShader}{Shader}} $>$ Shader\+::create (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classShader_a37c1d8b706d1bc83800419d8776eeb23}{shader\+\_\+map}} \&}]{shaders\+\_\+paths }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Створює об\textquotesingle{}єкт шейдеру за заданими шляхами файлів шейдерів. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em shaders\+\_\+paths} & шляхи файлів шейдеру по їх типам \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Повертає}
+розумний вказівник на об\textquotesingle{}єкт шейдеру 
+\end{DoxyReturn}
+
+
+Див. визначення в файлі \mbox{\hyperlink{shader_8cpp_source}{shader.\+cpp}}, рядок \mbox{\hyperlink{shader_8cpp_source_l00124}{124}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classShader_aea711ca1659af57fe4124ea318aa59c1_cgraph}
+\end{center}
+\end{figure}
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{classShader_aea711ca1659af57fe4124ea318aa59c1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classShader_a4581e5cba0fa25ab7080a6848543dc58}\label{classShader_a4581e5cba0fa25ab7080a6848543dc58}} 
+\index{Shader@{Shader}!set\_bool@{set\_bool}}
+\index{set\_bool@{set\_bool}!Shader@{Shader}}
+\doxyparagraph{\texorpdfstring{set\_bool()}{set\_bool()}}
+{\footnotesize\ttfamily void Shader\+::set\+\_\+bool (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+Задати поле шейдеру типу {\ttfamily bool} 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em name} & ім\textquotesingle{}я поля \\
+\hline
+{\em value} & значення поля \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{shader_8cpp_source}{shader.\+cpp}}, рядок \mbox{\hyperlink{shader_8cpp_source_l00134}{134}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{classShader_a4581e5cba0fa25ab7080a6848543dc58_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classShader_a6e686eb1dd9e36aa617397520b669497}\label{classShader_a6e686eb1dd9e36aa617397520b669497}} 
+\index{Shader@{Shader}!set\_float@{set\_float}}
+\index{set\_float@{set\_float}!Shader@{Shader}}
+\doxyparagraph{\texorpdfstring{set\_float()}{set\_float()}}
+{\footnotesize\ttfamily void Shader\+::set\+\_\+float (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+Задати поле шейдеру типу {\ttfamily float} 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em name} & ім\textquotesingle{}я поля \\
+\hline
+{\em value} & значення поля \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{shader_8cpp_source}{shader.\+cpp}}, рядок \mbox{\hyperlink{shader_8cpp_source_l00142}{142}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{classShader_a6e686eb1dd9e36aa617397520b669497_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classShader_a5544845a48d60515371b5cb71c7bcb8f}\label{classShader_a5544845a48d60515371b5cb71c7bcb8f}} 
+\index{Shader@{Shader}!set\_int@{set\_int}}
+\index{set\_int@{set\_int}!Shader@{Shader}}
+\doxyparagraph{\texorpdfstring{set\_int()}{set\_int()}}
+{\footnotesize\ttfamily void Shader\+::set\+\_\+int (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+Задати поле шейдеру типу {\ttfamily int} 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em name} & ім\textquotesingle{}я поля \\
+\hline
+{\em value} & значення поля \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{shader_8cpp_source}{shader.\+cpp}}, рядок \mbox{\hyperlink{shader_8cpp_source_l00138}{138}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{classShader_a5544845a48d60515371b5cb71c7bcb8f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classShader_a249093af915275a1e25d21ab70bfc4f9}\label{classShader_a249093af915275a1e25d21ab70bfc4f9}} 
+\index{Shader@{Shader}!set\_mat2@{set\_mat2}}
+\index{set\_mat2@{set\_mat2}!Shader@{Shader}}
+\doxyparagraph{\texorpdfstring{set\_mat2()}{set\_mat2()}}
+{\footnotesize\ttfamily void Shader\+::set\+\_\+mat2 (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{mat2}]{mat }\end{DoxyParamCaption})}
+
+
+
+Задати поле шейдеру типу {\ttfamily mat2} 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em name} & ім\textquotesingle{}я поля \\
+\hline
+{\em mat} & значення поля \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{shader_8cpp_source}{shader.\+cpp}}, рядок \mbox{\hyperlink{shader_8cpp_source_l00176}{176}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{classShader_a249093af915275a1e25d21ab70bfc4f9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classShader_a9d871b7a0436c84096f1b294083a3ed7}\label{classShader_a9d871b7a0436c84096f1b294083a3ed7}} 
+\index{Shader@{Shader}!set\_mat3@{set\_mat3}}
+\index{set\_mat3@{set\_mat3}!Shader@{Shader}}
+\doxyparagraph{\texorpdfstring{set\_mat3()}{set\_mat3()}}
+{\footnotesize\ttfamily void Shader\+::set\+\_\+mat3 (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{mat3}]{mat }\end{DoxyParamCaption})}
+
+
+
+Задати поле шейдеру типу {\ttfamily mat3} 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em name} & ім\textquotesingle{}я поля \\
+\hline
+{\em mat} & значення поля \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{shader_8cpp_source}{shader.\+cpp}}, рядок \mbox{\hyperlink{shader_8cpp_source_l00181}{181}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{classShader_a9d871b7a0436c84096f1b294083a3ed7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classShader_a34d5548a520489bd132f5bfbc46bb3a9}\label{classShader_a34d5548a520489bd132f5bfbc46bb3a9}} 
+\index{Shader@{Shader}!set\_mat4@{set\_mat4}}
+\index{set\_mat4@{set\_mat4}!Shader@{Shader}}
+\doxyparagraph{\texorpdfstring{set\_mat4()}{set\_mat4()}}
+{\footnotesize\ttfamily void Shader\+::set\+\_\+mat4 (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{mat4}]{mat }\end{DoxyParamCaption})}
+
+
+
+Задати поле шейдеру типу {\ttfamily mat4} 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em name} & ім\textquotesingle{}я поля \\
+\hline
+{\em mat} & значення поля \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{shader_8cpp_source}{shader.\+cpp}}, рядок \mbox{\hyperlink{shader_8cpp_source_l00186}{186}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{classShader_a34d5548a520489bd132f5bfbc46bb3a9_cgraph}
+\end{center}
+\end{figure}
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{classShader_a34d5548a520489bd132f5bfbc46bb3a9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classShader_aec16390e257fd63c173336869cda6488}\label{classShader_aec16390e257fd63c173336869cda6488}} 
+\index{Shader@{Shader}!set\_vec2@{set\_vec2}}
+\index{set\_vec2@{set\_vec2}!Shader@{Shader}}
+\doxyparagraph{\texorpdfstring{set\_vec2()}{set\_vec2()}}
+{\footnotesize\ttfamily void Shader\+::set\+\_\+vec2 (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{vec2}]{value }\end{DoxyParamCaption})}
+
+
+
+Задати поле шейдеру типу {\ttfamily vec2} 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em name} & ім\textquotesingle{}я поля \\
+\hline
+{\em value} & значення поля \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{shader_8cpp_source}{shader.\+cpp}}, рядок \mbox{\hyperlink{shader_8cpp_source_l00146}{146}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{classShader_aec16390e257fd63c173336869cda6488_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classShader_a9c15d92dae60d9bebc5a8e05e7e16771}\label{classShader_a9c15d92dae60d9bebc5a8e05e7e16771}} 
+\index{Shader@{Shader}!set\_vec2f@{set\_vec2f}}
+\index{set\_vec2f@{set\_vec2f}!Shader@{Shader}}
+\doxyparagraph{\texorpdfstring{set\_vec2f()}{set\_vec2f()}}
+{\footnotesize\ttfamily void Shader\+::set\+\_\+vec2f (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})}
+
+
+
+Задати вектор-\/поле шейдеру типу {\ttfamily vec2} 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em name} & ім\textquotesingle{}я поля \\
+\hline
+{\em x} & значення першого элементу вектор-\/поля \\
+\hline
+{\em y} & значення другого элементу вектор-\/поля \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{shader_8cpp_source}{shader.\+cpp}}, рядок \mbox{\hyperlink{shader_8cpp_source_l00151}{151}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{classShader_a9c15d92dae60d9bebc5a8e05e7e16771_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classShader_a5da8dde2a4756ce7f5da98f4e3dd9990}\label{classShader_a5da8dde2a4756ce7f5da98f4e3dd9990}} 
+\index{Shader@{Shader}!set\_vec3@{set\_vec3}}
+\index{set\_vec3@{set\_vec3}!Shader@{Shader}}
+\doxyparagraph{\texorpdfstring{set\_vec3()}{set\_vec3()}}
+{\footnotesize\ttfamily void Shader\+::set\+\_\+vec3 (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{vec3}]{value }\end{DoxyParamCaption})}
+
+
+
+Задати поле шейдеру типу {\ttfamily vec3} 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em name} & ім\textquotesingle{}я поля \\
+\hline
+{\em value} & значення поля \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{shader_8cpp_source}{shader.\+cpp}}, рядок \mbox{\hyperlink{shader_8cpp_source_l00156}{156}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{classShader_a5da8dde2a4756ce7f5da98f4e3dd9990_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classShader_a8ab6219e3f760caa7a586061a9894096}\label{classShader_a8ab6219e3f760caa7a586061a9894096}} 
+\index{Shader@{Shader}!set\_vec3f@{set\_vec3f}}
+\index{set\_vec3f@{set\_vec3f}!Shader@{Shader}}
+\doxyparagraph{\texorpdfstring{set\_vec3f()}{set\_vec3f()}}
+{\footnotesize\ttfamily void Shader\+::set\+\_\+vec3f (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z }\end{DoxyParamCaption})}
+
+
+
+Задати вектор-\/поле шейдеру типу {\ttfamily vec3} 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em name} & ім\textquotesingle{}я поля \\
+\hline
+{\em x} & значення першого элементу вектор-\/поля \\
+\hline
+{\em y} & значення другого элементу вектор-\/поля \\
+\hline
+{\em z} & значення третього элементу вектор-\/поля \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{shader_8cpp_source}{shader.\+cpp}}, рядок \mbox{\hyperlink{shader_8cpp_source_l00161}{161}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{classShader_a8ab6219e3f760caa7a586061a9894096_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classShader_a77c606dadf7b56b825fa02621f13fac3}\label{classShader_a77c606dadf7b56b825fa02621f13fac3}} 
+\index{Shader@{Shader}!set\_vec4@{set\_vec4}}
+\index{set\_vec4@{set\_vec4}!Shader@{Shader}}
+\doxyparagraph{\texorpdfstring{set\_vec4()}{set\_vec4()}}
+{\footnotesize\ttfamily void Shader\+::set\+\_\+vec4 (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{vec4}]{value }\end{DoxyParamCaption})}
+
+
+
+Задати поле шейдеру типу {\ttfamily vec4} 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em name} & ім\textquotesingle{}я поля \\
+\hline
+{\em value} & значення поля \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{shader_8cpp_source}{shader.\+cpp}}, рядок \mbox{\hyperlink{shader_8cpp_source_l00166}{166}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{classShader_a77c606dadf7b56b825fa02621f13fac3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classShader_a52615fe5f2d1528baa909dcbeab6fcb3}\label{classShader_a52615fe5f2d1528baa909dcbeab6fcb3}} 
+\index{Shader@{Shader}!set\_vec4f@{set\_vec4f}}
+\index{set\_vec4f@{set\_vec4f}!Shader@{Shader}}
+\doxyparagraph{\texorpdfstring{set\_vec4f()}{set\_vec4f()}}
+{\footnotesize\ttfamily void Shader\+::set\+\_\+vec4f (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z,  }\item[{float}]{w }\end{DoxyParamCaption})}
+
+
+
+Задати вектор-\/поле шейдеру типу {\ttfamily vec4} 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em name} & ім\textquotesingle{}я поля \\
+\hline
+{\em x} & значення першого элементу вектор-\/поля \\
+\hline
+{\em y} & значення другого элементу вектор-\/поля \\
+\hline
+{\em z} & значення третього элементу вектор-\/поля \\
+\hline
+{\em w} & значення четвертого элементу вектор-\/поля \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{shader_8cpp_source}{shader.\+cpp}}, рядок \mbox{\hyperlink{shader_8cpp_source_l00171}{171}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{classShader_a52615fe5f2d1528baa909dcbeab6fcb3_cgraph}
+\end{center}
+\end{figure}
+
+
+Документація цих класів була створена з файлів\+:\begin{DoxyCompactItemize}
+\item 
+osdo/\mbox{\hyperlink{shader_8h}{shader.\+h}}\item 
+osdo/\mbox{\hyperlink{shader_8cpp}{shader.\+cpp}}\end{DoxyCompactItemize}

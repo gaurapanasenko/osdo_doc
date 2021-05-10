@@ -1,0 +1,20 @@
+<map id="App::loop" name="App::loop">
+<area shape="rect" id="node1" title=" " alt="" coords="5,335,83,361"/>
+<area shape="rect" id="node2" href="$classApp.html#a389257925cb999235efb3129598a87df" title=" " alt="" coords="138,5,285,32"/>
+<area shape="rect" id="node3" href="$classWindow.html#a282eee1c73fe157a5c4bc1c0999654ac" title=" " alt="" coords="160,56,263,83"/>
+<area shape="rect" id="node4" href="$classApp.html#a87c2fa6a1bb79dc2f59ed7bc15400a15" title=" " alt="" coords="148,107,275,133"/>
+<area shape="rect" id="node6" href="$structScene.html#ac9d55f5bebb962cd4aedc86ec5bf3269" title=" " alt="" coords="160,157,263,184"/>
+<area shape="rect" id="node7" href="$classWindow.html#abebd53575e0294950631146b64188012" title=" " alt="" coords="131,208,292,235"/>
+<area shape="rect" id="node8" href="$classApp.html#acda294904bf8e856f8707e3fad0be950" title=" " alt="" coords="152,259,271,285"/>
+<area shape="rect" id="node9" href="$structContext.html#ae9498eceb6dd3257ac2e5e8fc904370c" title=" " alt="" coords="138,309,285,336"/>
+<area shape="rect" id="node11" href="$structContext.html#ad93eb2d9c753907a173f0c534eb534ad" title=" " alt="" coords="141,360,282,387"/>
+<area shape="rect" id="node12" href="$classApp.html#a82b7712b81ea2e3172efb59cd285da7c" title=" " alt="" coords="153,411,269,437"/>
+<area shape="rect" id="node13" href="$classWindow.html#a6e155310c3b36f40c586cc7a5c1000e8" title=" " alt="" coords="145,461,277,488"/>
+<area shape="rect" id="node14" href="$classWindow.html#afc092c266a1f943d498d37ee88da7d47" title=" " alt="" coords="149,512,274,539"/>
+<area shape="rect" id="node15" href="$classApp.html#a2d0db695e3c389d834dc95420cf41711" title=" " alt="" coords="144,563,279,589"/>
+<area shape="rect" id="node16" href="$classDeImgui.html#a3650b15446ef07b693ba050642a8f0e6" title=" " alt="" coords="154,613,269,640"/>
+<area shape="rect" id="node17" href="$classDeImgui.html#a85d0b29799dec3904a59e2282f49e3a3" title=" " alt="" coords="152,664,271,691"/>
+<area shape="rect" id="node5" href="$classApp.html#a12ea246a72eab2f8bc2c849855e25c9a" title=" " alt="" coords="340,107,507,133"/>
+<area shape="rect" id="node10" href="$classImage.html#ac282669cfe2627b0feeadebeba74c35e" title="Read image from file." alt="" coords="367,309,480,336"/>
+<area shape="rect" id="node18" href="$classWindow.html#a00ed91cfb08f776087c5fce3f6338a68" title=" " alt="" coords="361,664,486,691"/>
+</map>

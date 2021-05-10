@@ -1,0 +1,5 @@
+<map id="Texture::make_2d" name="Texture::make_2d">
+<area shape="rect" id="node1" title="Створює текстуру." alt="" coords="5,5,131,32"/>
+<area shape="rect" id="node2" href="$classGlBindable.html#ad3194126ecaf5285842cee0e7d28c951" title="Повертає об&#39;єкт прив&#39;язки контексту із ціллю за замовчуванням" alt="" coords="179,5,307,32"/>
+<area shape="rect" id="node3" href="$classGlBindable.html#a99e6c236fadee7211e721dd8b0d57598" title="Віртуальний метод, що задає ціль прив&#39;язки за замовчуванням." alt="" coords="355,5,493,32"/>
+</map>

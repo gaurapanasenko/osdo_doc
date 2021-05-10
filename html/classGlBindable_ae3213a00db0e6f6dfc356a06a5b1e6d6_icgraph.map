@@ -1,0 +1,9 @@
+<map id="GlBindable::_bind" name="GlBindable::_bind">
+<area shape="rect" id="node1" title="Віртуальний метод, що прив&#39;язує контекст OpenGL до об&#39;єкту." alt="" coords="371,81,495,108"/>
+<area shape="rect" id="node2" href="$classGlBindable.html#a221cf1ca728041bc2545f27a5e3004e0" title="Прив&#39;язує контекст до об&#39;єкту із ціллю за замовчуванням." alt="" coords="199,56,316,83"/>
+<area shape="rect" id="node5" href="$classGlBindable.html#a6ddfcf2b3f3b34872005ca281a9573eb" title="Відв&#39;язує контекст до об&#39;єкту із ціллю за замовчуванням." alt="" coords="192,107,323,133"/>
+<area shape="rect" id="node3" href="$classGlBinder.html#a08572e5ea0ea17c146c1ed90425d13c1" title="Конструктор із параметром" alt="" coords="9,5,140,32"/>
+<area shape="rect" id="node4" href="$classBuffer.html#a1fc0873aa0dd87e47da962f32110b03e" title="Підгодовка до рендеренгу." alt="" coords="11,56,138,83"/>
+<area shape="rect" id="node6" href="$classBuffer.html#a2546d46567336e00cb66d53585ebbbd7" title="Генерація текстури з утвореного кадру." alt="" coords="8,107,141,133"/>
+<area shape="rect" id="node7" href="$classGlBinder.html#ae60129365fcbd5c9f20a3c2bb6ca98fa" title=" " alt="" coords="5,157,144,184"/>
+</map>

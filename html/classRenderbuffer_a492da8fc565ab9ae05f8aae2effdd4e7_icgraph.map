@@ -1,0 +1,6 @@
+<map id="Renderbuffer::make_multisample" name="Renderbuffer::make_multisample">
+<area shape="rect" id="node1" title="Створює буфер рендеренгу з згладжуванням." alt="" coords="379,39,513,80"/>
+<area shape="rect" id="node2" href="$classFramebuffer.html#a28bda5ab4a57e13e49280d745dbf35b0" title="Підготовлює рендер буфер з згладжуванням для зберігання кольорів." alt="" coords="182,5,329,47"/>
+<area shape="rect" id="node4" href="$classFramebuffer.html#a3c14a0980ae1369f964c0bc05c3ea4dd" title="Підготовлює глибинний рендер буфер з згладжуванням." alt="" coords="180,71,331,112"/>
+<area shape="rect" id="node3" href="$classBuffer.html#a1fc0873aa0dd87e47da962f32110b03e" title="Підгодовка до рендеренгу." alt="" coords="5,46,132,73"/>
+</map>

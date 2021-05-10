@@ -1,0 +1,5 @@
+<map id="Bijective" name="Bijective">
+<area shape="rect" id="node1" title="Інтерфейс до об&#39;єктів, що можуть можуть бути переміщені та повернуті у просторі." alt="" coords="48,5,119,32"/>
+<area shape="rect" id="node2" href="$classCamera.html" title="Клас камери, якою можна маніпулювати у сцені." alt="" coords="5,80,73,107"/>
+<area shape="rect" id="node3" href="$classObject.html" title="Об&#39;єкт моделі." alt="" coords="97,80,157,107"/>
+</map>

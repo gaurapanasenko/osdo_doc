@@ -1,0 +1,333 @@
+\hypertarget{classBeziator}{}\doxysubsection{Клас Beziator}
+\label{classBeziator}\index{Beziator@{Beziator}}
+
+
+Клас який зберігає та оброблює модель утвореню через поверхні Безьє.  
+
+
+
+
+{\ttfamily \#include $<$beziator.\+h$>$}
+
+
+
+Схема успадкувань для Beziator\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=133pt]{classBeziator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Діаграма зв\textquotesingle{}язків класу Beziator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBeziator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Загальнодоступні типи}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{beziator_8h_adc91dd1f882e36615956dace902ac8a2}{surfacei\+\_\+t}} $\ast$ \mbox{\hyperlink{classBeziator_abc19212ee3b33d266c1c2017bf97c738}{surfaces\+\_\+vector}}
+\begin{DoxyCompactList}\small\item\em Тип позначаючий вказівнкик на массив з поверхнями Безьє. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Загальнодоступні елементи}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBeziator_a2e0cf1c9d9d89ed9772f1b5659845330}{Beziator}} (const string \&\mbox{\hyperlink{classBeziator_a982834e352be2e112b07d1f60a090a98}{path}})
+\begin{DoxyCompactList}\small\item\em Конструктор до \mbox{\hyperlink{classBeziator}{Beziator}}, який зберігає шлях до файлу з моделлю. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBeziator_aec6c4b5d0cf86ae184b435432814fb25}{$\sim$\+Beziator}} () override
+\item 
+bool \mbox{\hyperlink{classBeziator_aeafb7d3607d064c7dfa7e1c4c6d698cb}{init}} ()
+\begin{DoxyCompactList}\small\item\em Завантажує модель у пам\textquotesingle{}ять. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBeziator_a9acccb22776bbbc76b9b886e96aa1d92}{draw}} (\mbox{\hyperlink{classShader}{Shader}} \&shader, bool pre\+\_\+generated) override
+\begin{DoxyCompactList}\small\item\em Відображує модель. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBeziator_a850797d7a346cd6f30405e21b0224a3e}{generate}} (size\+\_\+t d=8) override
+\begin{DoxyCompactList}\small\item\em Генерує деталізований меш моделі. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBeziator_af67a38badc29b8747f242bbde8a2ccdf}{save}} ()
+\begin{DoxyCompactList}\small\item\em Зберігає модель у файл, вказаний у полі {\ttfamily path}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBeziator_a17dc368875dfa7375eda7889c1fbd5e5}{rotate}} (size\+\_\+t i)
+\begin{DoxyCompactList}\small\item\em Інвертує порядок індесів поверхні, щоб нормалі дивилися у протилежний бік. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{structVertex}{Vertex}} $>$ $\ast$ \mbox{\hyperlink{classBeziator_a961bc3acb296bbdd3c4b7fdf4c8c5511}{get\+\_\+vertices}} () override
+\begin{DoxyCompactList}\small\item\em Видає список вершин моделі. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Захищені дані}
+\begin{DoxyCompactItemize}
+\item 
+const string \mbox{\hyperlink{classBeziator_a982834e352be2e112b07d1f60a090a98}{path}}
+\begin{DoxyCompactList}\small\item\em Шлях до файлу у якому зберігається модель. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMesh}{Mesh}} \mbox{\hyperlink{classBeziator_afc2e274334058f3b4c34f025156693f1}{mesh}}
+\begin{DoxyCompactList}\small\item\em Згенерований за допомогою CPU меш моделі. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{structVertex}{Vertex}} $>$ \mbox{\hyperlink{classBeziator_ade482f00f5cb1ce4d594b4c132903313}{vertices}}
+\begin{DoxyCompactList}\small\item\em Масив вершин/вузлів моделі. \end{DoxyCompactList}\item 
+vector$<$ GLuint $>$ \mbox{\hyperlink{classBeziator_aa885148677b1b0fd71850f2cd604af5e}{indices}}
+\begin{DoxyCompactList}\small\item\em Масив індексів, що утворюють поверхні Безье. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Детальний опис}
+Клас який зберігає та оброблює модель утвореню через поверхні Безьє. 
+
+Див. визначення в файлі \mbox{\hyperlink{beziator_8h_source}{beziator.\+h}}, рядок \mbox{\hyperlink{beziator_8h_source_l00022}{22}}
+
+
+
+\doxysubsubsection{Опис типів користувача}
+\mbox{\Hypertarget{classBeziator_abc19212ee3b33d266c1c2017bf97c738}\label{classBeziator_abc19212ee3b33d266c1c2017bf97c738}} 
+\index{Beziator@{Beziator}!surfaces\_vector@{surfaces\_vector}}
+\index{surfaces\_vector@{surfaces\_vector}!Beziator@{Beziator}}
+\doxyparagraph{\texorpdfstring{surfaces\_vector}{surfaces\_vector}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{beziator_8h_adc91dd1f882e36615956dace902ac8a2}{surfacei\+\_\+t}}$\ast$ \mbox{\hyperlink{classBeziator_abc19212ee3b33d266c1c2017bf97c738}{Beziator\+::surfaces\+\_\+vector}}}
+
+
+
+Тип позначаючий вказівнкик на массив з поверхнями Безьє. 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{beziator_8h_source}{beziator.\+h}}, рядок \mbox{\hyperlink{beziator_8h_source_l00027}{27}}
+
+
+
+\doxysubsubsection{Конструктор(и)}
+\mbox{\Hypertarget{classBeziator_a2e0cf1c9d9d89ed9772f1b5659845330}\label{classBeziator_a2e0cf1c9d9d89ed9772f1b5659845330}} 
+\index{Beziator@{Beziator}!Beziator@{Beziator}}
+\index{Beziator@{Beziator}!Beziator@{Beziator}}
+\doxyparagraph{\texorpdfstring{Beziator()}{Beziator()}}
+{\footnotesize\ttfamily Beziator\+::\+Beziator (\begin{DoxyParamCaption}\item[{const string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Конструктор до \mbox{\hyperlink{classBeziator}{Beziator}}, який зберігає шлях до файлу з моделлю. 
+
+Обов\textquotesingle{}язково потібно запустити метод {\ttfamily \mbox{\hyperlink{classBeziator_aeafb7d3607d064c7dfa7e1c4c6d698cb}{Beziator\+::init}}} для того щоб завантажити модель у пам\textquotesingle{}ять. 
+\begin{DoxyParams}{Аргументи}
+{\em path} & Шлях до файлу у якому зберігається модель. \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{beziator_8cpp_source}{beziator.\+cpp}}, рядок \mbox{\hyperlink{beziator_8cpp_source_l00018}{18}}
+
+\mbox{\Hypertarget{classBeziator_aec6c4b5d0cf86ae184b435432814fb25}\label{classBeziator_aec6c4b5d0cf86ae184b435432814fb25}} 
+\index{Beziator@{Beziator}!````~Beziator@{$\sim$Beziator}}
+\index{````~Beziator@{$\sim$Beziator}!Beziator@{Beziator}}
+\doxyparagraph{\texorpdfstring{$\sim$Beziator()}{~Beziator()}}
+{\footnotesize\ttfamily Beziator\+::$\sim$\+Beziator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{beziator_8cpp_source}{beziator.\+cpp}}, рядок \mbox{\hyperlink{beziator_8cpp_source_l00058}{58}}
+
+
+
+\doxysubsubsection{Опис методів компонент}
+\mbox{\Hypertarget{classBeziator_a9acccb22776bbbc76b9b886e96aa1d92}\label{classBeziator_a9acccb22776bbbc76b9b886e96aa1d92}} 
+\index{Beziator@{Beziator}!draw@{draw}}
+\index{draw@{draw}!Beziator@{Beziator}}
+\doxyparagraph{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Beziator\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classShader}{Shader}} \&}]{shader,  }\item[{bool}]{pre\+\_\+generated }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Відображує модель. 
+
+За допомогою флагу {\ttfamily pre\+\_\+generated} можна задати яким чином потібно відображати, якщо задати {\ttfamily false}, то у буде використаний меш із поверхнями Безье 4x4, а якщо задано {\ttfamily true}, то відобразиться сгенерований деталізований меш моделі. 
+\begin{DoxyParams}{Аргументи}
+{\em shader} & Шейдер який використовуєтсья для відображення моделі. \\
+\hline
+{\em pre\+\_\+generated} & Флаг, який позначає який з мешів відображати. \\
+\hline
+\end{DoxyParams}
+
+
+Переозначення з \mbox{\hyperlink{classModel_a13ff51c6cdc364c49a5bb76dc76f409f}{Model}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{beziator_8cpp_source}{beziator.\+cpp}}, рядок \mbox{\hyperlink{beziator_8cpp_source_l00061}{61}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{classBeziator_a9acccb22776bbbc76b9b886e96aa1d92_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBeziator_a850797d7a346cd6f30405e21b0224a3e}\label{classBeziator_a850797d7a346cd6f30405e21b0224a3e}} 
+\index{Beziator@{Beziator}!generate@{generate}}
+\index{generate@{generate}!Beziator@{Beziator}}
+\doxyparagraph{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily void Beziator\+::generate (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{d = {\ttfamily 8} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Генерує деталізований меш моделі. 
+
+Ступінь деталізаії {\ttfamily d} позначає скільки вершин буде створено по двом осям, за заммовчанням задано 8, таким чином поверхня буде складатися з 8x8=64 вершини. 
+\begin{DoxyParams}{Аргументи}
+{\em d} & ступінь деталізації. \\
+\hline
+\end{DoxyParams}
+
+
+Переозначення з \mbox{\hyperlink{classModel_a50fc76140d00753bc503817cdef39a92}{Model}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{beziator_8cpp_source}{beziator.\+cpp}}, рядок \mbox{\hyperlink{beziator_8cpp_source_l00136}{136}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBeziator_a850797d7a346cd6f30405e21b0224a3e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBeziator_a961bc3acb296bbdd3c4b7fdf4c8c5511}\label{classBeziator_a961bc3acb296bbdd3c4b7fdf4c8c5511}} 
+\index{Beziator@{Beziator}!get\_vertices@{get\_vertices}}
+\index{get\_vertices@{get\_vertices}!Beziator@{Beziator}}
+\doxyparagraph{\texorpdfstring{get\_vertices()}{get\_vertices()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{structVertex}{Vertex}} $>$ $\ast$ Beziator\+::get\+\_\+vertices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Видає список вершин моделі. 
+
+\begin{DoxyReturn}{Повертає}
+Вказівник на поле {\ttfamily vertices}. 
+\end{DoxyReturn}
+
+
+Переозначення з \mbox{\hyperlink{classModel_a59f773de2939fc7c8613c0323a5907e0}{Model}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{beziator_8cpp_source}{beziator.\+cpp}}, рядок \mbox{\hyperlink{beziator_8cpp_source_l00287}{287}}
+
+\mbox{\Hypertarget{classBeziator_aeafb7d3607d064c7dfa7e1c4c6d698cb}\label{classBeziator_aeafb7d3607d064c7dfa7e1c4c6d698cb}} 
+\index{Beziator@{Beziator}!init@{init}}
+\index{init@{init}!Beziator@{Beziator}}
+\doxyparagraph{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool Beziator\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Завантажує модель у пам\textquotesingle{}ять. 
+
+\begin{DoxyReturn}{Повертає}
+Статус, чи успішно була завантажена модель. 
+\end{DoxyReturn}
+
+
+Див. визначення в файлі \mbox{\hyperlink{beziator_8cpp_source}{beziator.\+cpp}}, рядок \mbox{\hyperlink{beziator_8cpp_source_l00020}{20}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{classBeziator_aeafb7d3607d064c7dfa7e1c4c6d698cb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBeziator_a17dc368875dfa7375eda7889c1fbd5e5}\label{classBeziator_a17dc368875dfa7375eda7889c1fbd5e5}} 
+\index{Beziator@{Beziator}!rotate@{rotate}}
+\index{rotate@{rotate}!Beziator@{Beziator}}
+\doxyparagraph{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily void Beziator\+::rotate (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{i }\end{DoxyParamCaption})}
+
+
+
+Інвертує порядок індесів поверхні, щоб нормалі дивилися у протилежний бік. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em i} & номер поверхні. \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{beziator_8cpp_source}{beziator.\+cpp}}, рядок \mbox{\hyperlink{beziator_8cpp_source_l00277}{277}}
+
+\mbox{\Hypertarget{classBeziator_af67a38badc29b8747f242bbde8a2ccdf}\label{classBeziator_af67a38badc29b8747f242bbde8a2ccdf}} 
+\index{Beziator@{Beziator}!save@{save}}
+\index{save@{save}!Beziator@{Beziator}}
+\doxyparagraph{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily bool Beziator\+::save (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Зберігає модель у файл, вказаний у полі {\ttfamily path}. 
+
+\begin{DoxyReturn}{Повертає}
+Статус зберігання файлу. 
+\end{DoxyReturn}
+
+
+Див. визначення в файлі \mbox{\hyperlink{beziator_8cpp_source}{beziator.\+cpp}}, рядок \mbox{\hyperlink{beziator_8cpp_source_l00110}{110}}
+
+
+
+\doxysubsubsection{Компонентні дані}
+\mbox{\Hypertarget{classBeziator_aa885148677b1b0fd71850f2cd604af5e}\label{classBeziator_aa885148677b1b0fd71850f2cd604af5e}} 
+\index{Beziator@{Beziator}!indices@{indices}}
+\index{indices@{indices}!Beziator@{Beziator}}
+\doxyparagraph{\texorpdfstring{indices}{indices}}
+{\footnotesize\ttfamily vector$<$GLuint$>$ Beziator\+::indices\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Масив індексів, що утворюють поверхні Безье. 
+
+Індекси розташовані у масиві по 16 элементів, які утворюють поверхню з контрольними точками 4x4. Масив легко інтерпретуєтсья у {\ttfamily surfaces\+\_\+vector}\+: \begin{DoxyVerb}surfacei_t *surfaces = reinterpret_cast<surfacei_t*>(indices.data());
+\end{DoxyVerb}
+ 
+
+Див. визначення в файлі \mbox{\hyperlink{beziator_8h_source}{beziator.\+h}}, рядок \mbox{\hyperlink{beziator_8h_source_l00052}{52}}
+
+\mbox{\Hypertarget{classBeziator_afc2e274334058f3b4c34f025156693f1}\label{classBeziator_afc2e274334058f3b4c34f025156693f1}} 
+\index{Beziator@{Beziator}!mesh@{mesh}}
+\index{mesh@{mesh}!Beziator@{Beziator}}
+\doxyparagraph{\texorpdfstring{mesh}{mesh}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMesh}{Mesh}} Beziator\+::mesh\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Згенерований за допомогою CPU меш моделі. 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{beziator_8h_source}{beziator.\+h}}, рядок \mbox{\hyperlink{beziator_8h_source_l00036}{36}}
+
+\mbox{\Hypertarget{classBeziator_a982834e352be2e112b07d1f60a090a98}\label{classBeziator_a982834e352be2e112b07d1f60a090a98}} 
+\index{Beziator@{Beziator}!path@{path}}
+\index{path@{path}!Beziator@{Beziator}}
+\doxyparagraph{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily const string Beziator\+::path\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Шлях до файлу у якому зберігається модель. 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{beziator_8h_source}{beziator.\+h}}, рядок \mbox{\hyperlink{beziator_8h_source_l00032}{32}}
+
+\mbox{\Hypertarget{classBeziator_ade482f00f5cb1ce4d594b4c132903313}\label{classBeziator_ade482f00f5cb1ce4d594b4c132903313}} 
+\index{Beziator@{Beziator}!vertices@{vertices}}
+\index{vertices@{vertices}!Beziator@{Beziator}}
+\doxyparagraph{\texorpdfstring{vertices}{vertices}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{structVertex}{Vertex}}$>$ Beziator\+::vertices\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Масив вершин/вузлів моделі. 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{beziator_8h_source}{beziator.\+h}}, рядок \mbox{\hyperlink{beziator_8h_source_l00042}{42}}
+
+
+
+Документація цих класів була створена з файлів\+:\begin{DoxyCompactItemize}
+\item 
+osdo/\mbox{\hyperlink{beziator_8h}{beziator.\+h}}\item 
+osdo/\mbox{\hyperlink{beziator_8cpp}{beziator.\+cpp}}\end{DoxyCompactItemize}

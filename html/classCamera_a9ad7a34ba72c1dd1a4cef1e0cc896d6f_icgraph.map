@@ -1,0 +1,5 @@
+<map id="Camera::get_rotation_inv_mat4" name="Camera::get_rotation_inv_mat4">
+<area shape="rect" id="node1" title="Забирає інвертовану матрицю обертання камери." alt="" coords="204,23,348,65"/>
+<area shape="rect" id="node2" href="$classCamera.html#afda6bcc513fd95c22985ba078d47b2a3" title="Обчислює напрямок перегляду камери." alt="" coords="5,5,156,32"/>
+<area shape="rect" id="node3" href="$classCamera.html#a264f13ea514a68eb440a6e20b975470d" title="Переміщує камеру у просторі." alt="" coords="17,56,144,83"/>
+</map>

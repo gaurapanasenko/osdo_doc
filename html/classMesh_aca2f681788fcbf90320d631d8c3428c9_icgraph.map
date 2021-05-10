@@ -1,0 +1,5 @@
+<map id="Mesh::update" name="Mesh::update">
+<area shape="rect" id="node1" title="Завантажити у відеокарту новий меш." alt="" coords="181,31,283,57"/>
+<area shape="rect" id="node2" href="$classBeziator.html#a850797d7a346cd6f30405e21b0224a3e" title="Генерує деталізований меш моделі." alt="" coords="5,5,133,32"/>
+<area shape="rect" id="node3" href="$classBeziator.html#aeafb7d3607d064c7dfa7e1c4c6d698cb" title="Завантажує модель у пам&#39;ять." alt="" coords="22,56,117,83"/>
+</map>

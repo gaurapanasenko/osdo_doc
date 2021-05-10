@@ -1,0 +1,4 @@
+<map id="GlBindable::unbind" name="GlBindable::unbind">
+<area shape="rect" id="node1" title="Відв&#39;язує контекст до об&#39;єкту із ціллю target" alt="" coords="5,5,136,32"/>
+<area shape="rect" id="node2" href="$classGlBindable.html#ae3213a00db0e6f6dfc356a06a5b1e6d6" title="Віртуальний метод, що прив&#39;язує контекст OpenGL до об&#39;єкту." alt="" coords="184,5,308,32"/>
+</map>

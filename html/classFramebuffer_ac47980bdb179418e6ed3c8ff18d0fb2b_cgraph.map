@@ -1,0 +1,8 @@
+<map id="Framebuffer::rb_depth" name="Framebuffer::rb_depth">
+<area shape="rect" id="node1" title="Підготовлює глибинний рендер буфер." alt="" coords="5,31,156,57"/>
+<area shape="rect" id="node2" href="$classRenderbuffer.html#a48aed0ac588e14dd9024af29ef974b22" title="Створює буфер рендеренгу." alt="" coords="221,5,356,32"/>
+<area shape="rect" id="node5" href="$classFramebuffer.html#a0f0dce697d4107c9e6ea39fe11df6d29" title="Підготовлює рендер буфер rb" alt="" coords="204,56,373,83"/>
+<area shape="rect" id="node3" href="$classGlBindable.html#ad3194126ecaf5285842cee0e7d28c951" title="Повертає об&#39;єкт прив&#39;язки контексту із ціллю за замовчуванням" alt="" coords="421,5,549,32"/>
+<area shape="rect" id="node4" href="$classGlBindable.html#a99e6c236fadee7211e721dd8b0d57598" title="Віртуальний метод, що задає ціль прив&#39;язки за замовчуванням." alt="" coords="597,5,736,32"/>
+<area shape="rect" id="node6" href="$classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7" title="Повертає індекс об&#39;єкту OpenGL." alt="" coords="421,56,549,83"/>
+</map>

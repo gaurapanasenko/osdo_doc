@@ -1,0 +1,57 @@
+\hypertarget{app_8cpp}{}\doxysubsection{Файл druidengine/app.cpp}
+\label{app_8cpp}\index{druidengine/app.cpp@{druidengine/app.cpp}}
+{\ttfamily \#include \char`\"{}app.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}conf.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}shader.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}beziatorpanel.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$imgui.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}buffer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Im\+Gui\+File\+Dialog.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}image.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}scene.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}subwindow.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$EASTL/algorithm.\+h$>$}\newline
+Діаграма включених заголовочних файлів для app.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{app_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Функції}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{app_8cpp_a4095f1f91eb1ec5c63d581a94823a967}{get\+\_\+path\+\_\+from\+\_\+name}} (const char $\ast$name, const char $\ast$pattern)
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Опис функцій}
+\mbox{\Hypertarget{app_8cpp_a4095f1f91eb1ec5c63d581a94823a967}\label{app_8cpp_a4095f1f91eb1ec5c63d581a94823a967}} 
+\index{app.cpp@{app.cpp}!get\_path\_from\_name@{get\_path\_from\_name}}
+\index{get\_path\_from\_name@{get\_path\_from\_name}!app.cpp@{app.cpp}}
+\doxyparagraph{\texorpdfstring{get\_path\_from\_name()}{get\_path\_from\_name()}}
+{\footnotesize\ttfamily string get\+\_\+path\+\_\+from\+\_\+name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const char $\ast$}]{pattern }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{app_8cpp_source}{app.\+cpp}}, рядок \mbox{\hyperlink{app_8cpp_source_l00242}{242}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00242                                                                  \{}
+\DoxyCodeLine{00243     \textcolor{keywordtype}{string} s;}
+\DoxyCodeLine{00244     s.resize(strlen(name) + strlen(pattern));}
+\DoxyCodeLine{00245     snprintf(\&s[0], s.size(), pattern, name);}
+\DoxyCodeLine{00246     \textcolor{keywordflow}{return} s;}
+\DoxyCodeLine{00247 \}}
+
+\end{DoxyCode}
+Граф викликів для цієї функції\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{app_8cpp_a4095f1f91eb1ec5c63d581a94823a967_icgraph}
+\end{center}
+\end{figure}

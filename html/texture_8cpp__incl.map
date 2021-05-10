@@ -1,0 +1,12 @@
+<map id="osdo/texture.cpp" name="osdo/texture.cpp">
+<area shape="rect" id="node1" title=" " alt="" coords="213,5,331,32"/>
+<area shape="rect" id="node2" href="$texture_8h.html" title="Задає клас текстури." alt="" coords="126,80,199,107"/>
+<area shape="rect" id="node8" href="$glbinder_8h.html" title="Клас який прив&#39;язує контексту до деякого об&#39;єкту OpenGL." alt="" coords="233,155,311,181"/>
+<area shape="rect" id="node9" href="$image_8h.html" title="Задає клас, який зберігає масив пікселів, ширину та висоту." alt="" coords="341,80,409,107"/>
+<area shape="rect" id="node3" href="$osdo_8h.html" title=" " alt="" coords="132,229,193,256"/>
+<area shape="rect" id="node7" href="$glbindable_8h.html" title="Абстрактний клас, який виконує роль генерації та прив&#39;язки об&#39;єктів OpenGL." alt="" coords="117,155,208,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,304,99,331"/>
+<area shape="rect" id="node5" title=" " alt="" coords="123,304,203,331"/>
+<area shape="rect" id="node6" title=" " alt="" coords="227,304,291,331"/>
+<area shape="rect" id="node10" title=" " alt="" coords="335,155,475,181"/>
+</map>

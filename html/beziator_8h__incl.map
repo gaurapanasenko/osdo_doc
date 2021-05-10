@@ -1,0 +1,12 @@
+<map id="osdo/beziator.h" name="osdo/beziator.h">
+<area shape="rect" id="node1" title="Клас який зберігає та оброблює модель утвореню через поверхні Безьє." alt="" coords="99,5,209,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,80,116,107"/>
+<area shape="rect" id="node3" href="$osdo_8h.html" title=" " alt="" coords="201,229,262,256"/>
+<area shape="rect" id="node7" href="$mesh_8h.html" title="Задає клас мешу, який зберігається на відеокарті." alt="" coords="217,80,283,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="74,304,167,331"/>
+<area shape="rect" id="node5" title=" " alt="" coords="191,304,271,331"/>
+<area shape="rect" id="node6" title=" " alt="" coords="295,304,359,331"/>
+<area shape="rect" id="node8" href="$model_8h.html" title="Задає інтерфейс моделі, яку можна відобразити." alt="" coords="336,155,404,181"/>
+<area shape="rect" id="node10" href="$vertex_8h.html" title="Задає cтруктуру вершини." alt="" coords="242,155,311,181"/>
+<area shape="rect" id="node9" title=" " alt="" coords="313,229,427,256"/>
+</map>

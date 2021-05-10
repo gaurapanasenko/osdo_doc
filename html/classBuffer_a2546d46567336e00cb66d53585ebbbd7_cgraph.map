@@ -1,0 +1,10 @@
+<map id="Buffer::post_render" name="Buffer::post_render">
+<area shape="rect" id="node1" title="Генерація текстури з утвореного кадру." alt="" coords="5,59,139,86"/>
+<area shape="rect" id="node2" href="$classGlBindable.html#ad3194126ecaf5285842cee0e7d28c951" title="Повертає об&#39;єкт прив&#39;язки контексту із ціллю за замовчуванням" alt="" coords="549,85,677,111"/>
+<area shape="rect" id="node4" href="$classFramebuffer.html#a2d6e0ef178e7199df8149d53b12d93e0" title="Підготовлює звичайну текстуру" alt="" coords="187,59,325,86"/>
+<area shape="rect" id="node7" href="$classGlBindable.html#a6ddfcf2b3f3b34872005ca281a9573eb" title="Відв&#39;язує контекст до об&#39;єкту із ціллю за замовчуванням." alt="" coords="191,135,321,162"/>
+<area shape="rect" id="node3" href="$classGlBindable.html#a99e6c236fadee7211e721dd8b0d57598" title="Віртуальний метод, що задає ціль прив&#39;язки за замовчуванням." alt="" coords="725,110,864,137"/>
+<area shape="rect" id="node5" href="$classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7" title="Повертає індекс об&#39;єкту OpenGL." alt="" coords="373,34,501,61"/>
+<area shape="rect" id="node6" href="$classTexture.html#a08252c0058235586ddce388f6ac81b79" title="Створює текстуру." alt="" coords="375,85,500,111"/>
+<area shape="rect" id="node8" href="$classGlBindable.html#ae3213a00db0e6f6dfc356a06a5b1e6d6" title="Віртуальний метод, що прив&#39;язує контекст OpenGL до об&#39;єкту." alt="" coords="375,186,499,213"/>
+</map>

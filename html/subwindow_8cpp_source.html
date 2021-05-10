@@ -1,0 +1,375 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Дипломна робота: Текст програми druidengine/subwindow.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Дипломна робота
+   </div>
+   <div id="projectbrief">студента групи ПА-17-2 Панасенка Єгора Сергійовича</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_949b4dac30c9b4f92191601f9632f3ff.html">druidengine</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">subwindow.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="subwindow_8cpp.html">Див. документацію.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;EASTL/algorithm.h&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;imgui.h&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="subwindow_8h.html">subwindow.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="conf_8h.html">conf.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> eastl::max;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classSubWindow.html#a43045574e72b59e2ad533145ff428a0d">    7</a></span>&#160;<a class="code" href="classSubWindow.html#a43045574e72b59e2ad533145ff428a0d">SubWindow::SubWindow</a>(<a class="code" href="classWindow.html">Window</a> &amp;window, <a class="code" href="structContext.html">Context</a> &amp;context, <a class="code" href="classeastl_1_1shared__ptr.html">shared_ptr&lt;Scene&gt;</a> scene)</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    : wireframe(false),</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;      light_mode(false),</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;      culling(false),</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;      transparency(false),</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;      camera_mode(false),</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;      textured(false),</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;      pre_generated(false),</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;      level{8, 8},</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;      context(context),</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;      scene(scene),</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;      window(window)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    this-&gt;<a class="code" href="classSubWindow.html#a888cbbc96e72b6268107d09481dff262">camera</a>.<a class="code" href="classCamera.html#af770e5190d9a895ad804679e02ac182b">translate_camera</a>(<a class="code" href="osdo_8cpp.html#a8027f0f98c35ea23923f0db84b86c05a">BASIS0POS</a>);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classSubWindow.html#aa69a4e9aeada4c9c6755b348a70c3ab6">   23</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classSubWindow.html#aa69a4e9aeada4c9c6755b348a70c3ab6">SubWindow::params_window</a>() {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    ImGui::Checkbox(<span class="stringliteral">&quot;Wireframe&quot;</span>, &amp;this-&gt;<a class="code" href="classSubWindow.html#a598ffb4ca0f7561841bd93cbaae69836">wireframe</a>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    ImGui::Checkbox(<span class="stringliteral">&quot;Light&quot;</span>, &amp;this-&gt;<a class="code" href="classSubWindow.html#a735eb6ad8bba8ae950916a71892479d0">light_mode</a>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    ImGui::Checkbox(<span class="stringliteral">&quot;Culling&quot;</span>, &amp;this-&gt;<a class="code" href="classSubWindow.html#a6471350dcb826ee19b90e17681dbfa5a">culling</a>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    ImGui::Checkbox(<span class="stringliteral">&quot;Transparency&quot;</span>, &amp;this-&gt;<a class="code" href="classSubWindow.html#a9343928126f200cea5f7e670ddda4a49">transparency</a>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    ImGui::Checkbox(<span class="stringliteral">&quot;Camera mode&quot;</span>, &amp;this-&gt;<a class="code" href="classSubWindow.html#a99279028421377e4764a0177f198d90b">camera_mode</a>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    ImGui::Checkbox(<span class="stringliteral">&quot;Textured&quot;</span>, &amp;this-&gt;<a class="code" href="classSubWindow.html#a84e719afe4b9cdcd9762d74eadce5fec">textured</a>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">bool</span> changed = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    changed |= ImGui::Checkbox(<span class="stringliteral">&quot;Pre generated&quot;</span>, &amp;this-&gt;<a class="code" href="classSubWindow.html#a6540a161c2cb9d24703c2841f98d9659">pre_generated</a>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    changed |= ImGui::DragInt2(<span class="stringliteral">&quot;Level&quot;</span>, <a class="code" href="classSubWindow.html#a9680efc0a8e34ddaa9fdd42f658f2a09">level</a>, 1, 1, 0);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">if</span> (changed &amp;&amp; <a class="code" href="classSubWindow.html#a6540a161c2cb9d24703c2841f98d9659">pre_generated</a>) {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;i : <a class="code" href="classSubWindow.html#a039dc3e93af2abf807d16dcc16bd2568">scene</a>-&gt;objects) {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            i.second.get_model()-&gt;generate(<span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(<a class="code" href="classSubWindow.html#a9680efc0a8e34ddaa9fdd42f658f2a09">level</a>[0]));</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    ImGui::Text(<span class="stringliteral">&quot;Camera&quot;</span>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    vec4 vector;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="classSubWindow.html#a888cbbc96e72b6268107d09481dff262">camera</a>.<a class="code" href="classCamera.html#a92e90596e90d3405c93a9c2d4305a287">get_position</a>(vector);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">if</span> (ImGui::DragFloat3(<span class="stringliteral">&quot;Potision&quot;</span>, vector, 0.1f, 0, 0)) {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="classSubWindow.html#a888cbbc96e72b6268107d09481dff262">camera</a>.<a class="code" href="classCamera.html#a06c173530d6f5d982092fb5f5f58f84a">set_position</a>(vector);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="classSubWindow.html#a888cbbc96e72b6268107d09481dff262">camera</a>.<a class="code" href="classCamera.html#aa7eb7b6bb3dc03911a44abefab63db28">get_rotation</a>(vector);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">if</span> (ImGui::DragFloat3(<span class="stringliteral">&quot;Rotation&quot;</span>, vector, 0.01f, 0, 0)) {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="classSubWindow.html#a888cbbc96e72b6268107d09481dff262">camera</a>.<a class="code" href="classCamera.html#a1a69c9c9f9f370599ba390c8c33f3f2f">set_rotation</a>(vector);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classSubWindow.html#acbfb789831e20841fe7cc7ee8a8a9c4d">   53</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classSubWindow.html#acbfb789831e20841fe7cc7ee8a8a9c4d">SubWindow::render_window</a>(<span class="keywordtype">double</span> delta_time) {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    ImVec2 vMin, vMax, win_pos;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    win_pos = ImGui::GetWindowPos();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    vMin = ImGui::GetWindowContentRegionMin();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    vMax = ImGui::GetWindowContentRegionMax();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    ImVec2 size = {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        max(vMax.x-vMin.x, 5.f),</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        max(vMax.y-vMin.y, 5.f)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    };</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    GLsizei glsize[] = {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keyword">static_cast&lt;</span>GLsizei<span class="keyword">&gt;</span>(size.x),</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keyword">static_cast&lt;</span>GLsizei<span class="keyword">&gt;</span>(size.y),</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    };</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">string</span> shader = <span class="stringliteral">&quot;main_adv&quot;</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classSubWindow.html#a6540a161c2cb9d24703c2841f98d9659">pre_generated</a>) shader = <span class="stringliteral">&quot;main&quot;</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="classShader.html">Shader</a> &amp;sh = *<a class="code" href="classSubWindow.html#a1a30bdfafe71c986b7040192d5405d09">context</a>.<a class="code" href="structContext.html#ae6fcb1cace574a21fb21ccd678473d17">shaders</a>.find(shader)-&gt;second;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classSubWindow.html#ab701da6251cc8b6b6e8284db477759dd">buffer</a>.<a class="code" href="classBuffer.html#a1fc0873aa0dd87e47da962f32110b03e">pre_render</a>(glsize)) {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        glClearColor(1, 1, 1, 1);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        glClearDepth(1.0);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        sh.<a class="code" href="classGlBindable.html#a221cf1ca728041bc2545f27a5e3004e0">bind</a>();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="comment">// pass projection matrix to shader</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        glm_perspective(45.f * <a class="code" href="conf_8h.html#ab01f46e058bbb810a0e6228545950dc6">M_RAD_F</a>, size.x / size.y,</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                        0.1f, 100.0f, this-&gt;projection);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        sh.<a class="code" href="classShader.html#a34d5548a520489bd132f5bfbc46bb3a9">set_mat4</a>(<span class="stringliteral">&quot;projection&quot;</span>, this-&gt;<a class="code" href="classSubWindow.html#a7c2016e2374e5f3025a43fe07ddcdbfe">projection</a>);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        sh.<a class="code" href="classShader.html#a6e686eb1dd9e36aa617397520b669497">set_float</a>(<span class="stringliteral">&quot;materialShininess&quot;</span>, 32.0f);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="comment">// directional light</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        vec4 direction = {0,-1,0,0};</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">if</span> (this-&gt;<a class="code" href="classSubWindow.html#a735eb6ad8bba8ae950916a71892479d0">light_mode</a>)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            this-&gt;<a class="code" href="classSubWindow.html#a888cbbc96e72b6268107d09481dff262">camera</a>.<a class="code" href="classCamera.html#afda6bcc513fd95c22985ba078d47b2a3">get_direction</a>(direction);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        sh.<a class="code" href="classShader.html#a5da8dde2a4756ce7f5da98f4e3dd9990">set_vec3</a>(<span class="stringliteral">&quot;dirLight.direction&quot;</span>, direction);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        sh.<a class="code" href="classShader.html#a8ab6219e3f760caa7a586061a9894096">set_vec3f</a>(<span class="stringliteral">&quot;dirLight.ambient&quot;</span>, 0.2f, 0.2f, 0.2f);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        sh.<a class="code" href="classShader.html#a8ab6219e3f760caa7a586061a9894096">set_vec3f</a>(<span class="stringliteral">&quot;dirLight.diffuse&quot;</span>, 0.6f, 0.6f, 0.6f);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        sh.<a class="code" href="classShader.html#a8ab6219e3f760caa7a586061a9894096">set_vec3f</a>(<span class="stringliteral">&quot;dirLight.specular&quot;</span>, 0.2f, 0.2f, 0.2f);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="comment">// camera/view transformation</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        this-&gt;<a class="code" href="classSubWindow.html#a888cbbc96e72b6268107d09481dff262">camera</a>.<a class="code" href="classCamera.html#ab82dd66e529cd5da7f61bd0efe7cfed2">get_mat4</a>(this-&gt;<a class="code" href="classSubWindow.html#ae3d03f0b0c9e6b2077eaf42e4a21b08d">last_camera</a>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            vec4 pos;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            this-&gt;<a class="code" href="classSubWindow.html#a888cbbc96e72b6268107d09481dff262">camera</a>.<a class="code" href="classCamera.html#a92e90596e90d3405c93a9c2d4305a287">get_position</a>(pos);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            sh.<a class="code" href="classShader.html#a5da8dde2a4756ce7f5da98f4e3dd9990">set_vec3</a>(<span class="stringliteral">&quot;viewPos&quot;</span>, pos);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        sh.<a class="code" href="classShader.html#a6e686eb1dd9e36aa617397520b669497">set_float</a>(<span class="stringliteral">&quot;materialShininess&quot;</span>, 32.0f);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        sh.<a class="code" href="classShader.html#a34d5548a520489bd132f5bfbc46bb3a9">set_mat4</a>(<span class="stringliteral">&quot;camera&quot;</span>, this-&gt;<a class="code" href="classSubWindow.html#ae3d03f0b0c9e6b2077eaf42e4a21b08d">last_camera</a>);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        sh.<a class="code" href="classShader.html#a6e686eb1dd9e36aa617397520b669497">set_float</a>(<span class="stringliteral">&quot;alpha&quot;</span>, 1.0);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classSubWindow.html#a6471350dcb826ee19b90e17681dbfa5a">culling</a>) {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            glEnable(GL_CULL_FACE);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            glCullFace(GL_BACK);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            glFrontFace(GL_CCW);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            glDisable(GL_CULL_FACE);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classSubWindow.html#a9343928126f200cea5f7e670ddda4a49">transparency</a>) {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            glEnable(GL_BLEND);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            glBlendEquation(GL_FUNC_ADD);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            glDisable(GL_BLEND);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classSubWindow.html#a598ffb4ca0f7561841bd93cbaae69836">wireframe</a>)</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classSubWindow.html#a84e719afe4b9cdcd9762d74eadce5fec">textured</a> &amp;&amp; <a class="code" href="classSubWindow.html#a1a30bdfafe71c986b7040192d5405d09">context</a>.<a class="code" href="structContext.html#af6e358ab9890652b7c0accf7fcd1fc85">active_texture</a> != <a class="code" href="classSubWindow.html#a1a30bdfafe71c986b7040192d5405d09">context</a>.<a class="code" href="structContext.html#acc023c5c78fc019ae50fac056ddf7226">textures</a>.end()) {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            sh.<a class="code" href="classShader.html#a4581e5cba0fa25ab7080a6848543dc58">set_bool</a>(<span class="stringliteral">&quot;textured&quot;</span>, 1);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            glBindTexture(GL_TEXTURE_2D, <a class="code" href="classSubWindow.html#a1a30bdfafe71c986b7040192d5405d09">context</a>.<a class="code" href="structContext.html#af6e358ab9890652b7c0accf7fcd1fc85">active_texture</a>-&gt;second-&gt;get_id());</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        } <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            sh.<a class="code" href="classShader.html#a4581e5cba0fa25ab7080a6848543dc58">set_bool</a>(<span class="stringliteral">&quot;textured&quot;</span>, 0);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        sh.<a class="code" href="classShader.html#a5544845a48d60515371b5cb71c7bcb8f">set_int</a>(<span class="stringliteral">&quot;inner&quot;</span>, <a class="code" href="classSubWindow.html#a9680efc0a8e34ddaa9fdd42f658f2a09">level</a>[0]);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        sh.<a class="code" href="classShader.html#a5544845a48d60515371b5cb71c7bcb8f">set_int</a>(<span class="stringliteral">&quot;outer&quot;</span>, <a class="code" href="classSubWindow.html#a9680efc0a8e34ddaa9fdd42f658f2a09">level</a>[1]);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        sh.<a class="code" href="classShader.html#a6e686eb1dd9e36aa617397520b669497">set_float</a>(<span class="stringliteral">&quot;alpha&quot;</span>, 1);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;i : <a class="code" href="classSubWindow.html#a039dc3e93af2abf807d16dcc16bd2568">scene</a>-&gt;objects) {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            mat4 mat4buf;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            i.second.draw(sh, mat4buf, delta_time, <a class="code" href="classSubWindow.html#a6540a161c2cb9d24703c2841f98d9659">pre_generated</a>);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        }</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    }</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <a class="code" href="classSubWindow.html#ab701da6251cc8b6b6e8284db477759dd">buffer</a>.<a class="code" href="classBuffer.html#a2546d46567336e00cb66d53585ebbbd7">post_render</a>(glsize);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    ImVec2 cursorBegin = ImGui::GetCursorPos();</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordtype">void</span> * tex_id = <a class="code" href="classSubWindow.html#ab701da6251cc8b6b6e8284db477759dd">buffer</a>.<a class="code" href="classBuffer.html#a83f8f07b7743b697cc5d0d78dfc0b9db">get_tex</a>().<a class="code" href="classGlBindable.html#a998a690af84360cd283e49f6a32ae4fd">get_vid</a>();</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    ImGui::Image(tex_id, size,</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                 ImVec2{0, 0}, ImVec2{1, 1}, ImVec4{1,1,1,1}, ImVec4{0,0,0,0});</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    ImGui::SetCursorPos(cursorBegin);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    ImGui::InvisibleButton(<span class="stringliteral">&quot;##empty&quot;</span>, size);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">bool</span> is_hovered = ImGui::IsItemHovered(0);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">bool</span> is_active = ImGui::IsItemActive();</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordflow">if</span> (is_hovered) {</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        ImGuiIO &amp;io = ImGui::GetIO();</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordflow">if</span> (is_active) {</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            vec3 mouse_pos = {</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                io.MouseDelta.y / size.y * 2, -io.MouseDelta.x / size.x * 2, 0</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            };</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            <span class="keywordflow">if</span> (!this-&gt;<a class="code" href="classSubWindow.html#a99279028421377e4764a0177f198d90b">camera_mode</a>)</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                this-&gt;<a class="code" href="classSubWindow.html#a888cbbc96e72b6268107d09481dff262">camera</a>.<a class="code" href="classCamera.html#ac56fb9a7adad365cae4c0238b8d1e39a">rotate_all_camera</a>(mouse_pos);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <span class="keywordflow">else</span> this-&gt;<a class="code" href="classSubWindow.html#a888cbbc96e72b6268107d09481dff262">camera</a>.<a class="code" href="classCamera.html#ac8896d30c755130ba22c867598a1a432">rotate_all_inverse</a>(mouse_pos);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        vec3 tr = {0, 0, -io.MouseWheel};</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        this-&gt;<a class="code" href="classSubWindow.html#a888cbbc96e72b6268107d09481dff262">camera</a>.<a class="code" href="classCamera.html#a264f13ea514a68eb440a6e20b975470d">translate</a>(tr, 1);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    }</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    ImDrawList *dl = ImGui::GetWindowDrawList();</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keyword">auto</span> active = this-&gt;<a class="code" href="classSubWindow.html#a1a30bdfafe71c986b7040192d5405d09">context</a>.<a class="code" href="structContext.html#a2495f12fa2a7e55cb4d6e7d514e58735">active</a>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordflow">if</span> (active != this-&gt;<a class="code" href="classSubWindow.html#a1a30bdfafe71c986b7040192d5405d09">context</a>.<a class="code" href="structContext.html#adf5341866d506e12dca716c71367fdcf">models</a>.end()) {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <a class="code" href="classeastl_1_1shared__ptr.html">shared_ptr&lt;Model&gt;</a> model = active-&gt;second.get_model();</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;i : <a class="code" href="classSubWindow.html#a039dc3e93af2abf807d16dcc16bd2568">scene</a>-&gt;objects) {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            <span class="keywordflow">if</span> (i.second.get_model() != model) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            mat4 mat4buf;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            i.second.get_mat4(mat4buf);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            mat4 matr = GLM_MAT4_IDENTITY_INIT;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            glm_mat4_mul(mat4buf, matr, matr);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            glm_mat4_mul(this-&gt;<a class="code" href="classSubWindow.html#ae3d03f0b0c9e6b2077eaf42e4a21b08d">last_camera</a>, matr, matr);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            glm_mat4_mul(this-&gt;<a class="code" href="classSubWindow.html#a7c2016e2374e5f3025a43fe07ddcdbfe">projection</a>, matr, matr);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <span class="keywordtype">float</span> minz = 0, maxz = 0;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            <span class="keyword">auto</span>&amp; vertices = *model-&gt;get_vertices();</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">size_t</span> vertices_size = vertices.size();</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            vector&lt;vec4&gt; points(vertices_size);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vertices_size; i++) {</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                vec4 view_sz = {0, 0, size.x, size.y};</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                glm_project(vertices[i].position, matr,</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                            view_sz, points[i]);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                <span class="keywordflow">if</span> (!i) {</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                    minz = points[i][2];</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                    maxz = points[i][2];</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                    <span class="keywordflow">if</span> (minz &gt; points[i][2]) minz = points[i][2];</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                    <span class="keywordflow">if</span> (maxz &lt; points[i][2]) maxz = points[i][2];</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                }</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vertices_size; i++) {</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                points[i][2] = (maxz - points[i][2]) / (maxz - minz) * 0.6f + 0.4f;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            }</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            ImVec2 pos, sz;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            <span class="keywordtype">char</span> buf[16];</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vertices_size; i++) {</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                pos.x = points[i][0] + win_pos.x + cursorBegin.x;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                pos.y = points[i][1] + win_pos.y + cursorBegin.y;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                ImGui::PushStyleColor(ImGuiCol_Text, ImVec4{0,0,0,points[i][2]});</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                ImGui::SetCursorPos(ImVec2{points[i][0] + cursorBegin.x,</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                                           points[i][1] + cursorBegin.y});</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                sprintf(buf, <span class="stringliteral">&quot;%lu&quot;</span>, i);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                sz = ImGui::CalcTextSize(buf, <span class="keyword">nullptr</span>, <span class="keyword">false</span>, 0);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                dl-&gt;AddRectFilled(</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                            ImVec2{pos.x-2,pos.y-2},</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                            ImVec2{pos.x+ sz.x+2, pos.y+ sz.y+2},</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                            ImGui::GetColorU32(ImVec4{0,1,0,points[i][2]}),</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                            4, ImDrawCornerFlags_All);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                ImGui::Text(<span class="stringliteral">&quot;%s&quot;</span>, buf);</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                ImGui::PopStyleColor(1);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            }</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        }</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    }</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;}</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
+<div class="line"><a name="l00220"></a><span class="lineno"><a class="line" href="classSubWindow.html#a3f96bc1981aeedb209fdf3168e41d924">  220</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classSubWindow.html#a3f96bc1981aeedb209fdf3168e41d924">SubWindow::loop</a>(<span class="keywordtype">size_t</span> <span class="keywordtype">id</span>, <span class="keywordtype">double</span> delta_time) {</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keywordtype">char</span> name[128];</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    snprintf(name, 128, <span class="stringliteral">&quot;Subwindow params %lu&quot;</span>, <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordflow">if</span> (ImGui::Begin(name)) {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <a class="code" href="classSubWindow.html#aa69a4e9aeada4c9c6755b348a70c3ab6">params_window</a>();</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    }</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    ImGui::End();</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    snprintf(name, 128, <span class="stringliteral">&quot;Subwindow %lu&quot;</span>, <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    ImGui::SetNextWindowSize(ImVec2{512, 512}, ImGuiCond_FirstUseEver);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keyword">auto</span> flags = ImGuiWindowFlags_NoScrollbar |</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                 ImGuiWindowFlags_NoScrollWithMouse;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordtype">bool</span> showWindow = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordflow">if</span> (ImGui::Begin(name, &amp;showWindow, flags)) {</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <a class="code" href="classSubWindow.html#acbfb789831e20841fe7cc7ee8a8a9c4d">render_window</a>(delta_time);</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    }</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    ImGui::End();</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordflow">return</span> showWindow;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;}</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
+<div class="line"><a name="l00240"></a><span class="lineno"><a class="line" href="classSubWindow.html#a4920e96742d73540eaeb692249a662a6">  240</a></span>&#160;<a class="code" href="classeastl_1_1shared__ptr.html">shared_ptr&lt;Scene&gt;</a> &amp;<a class="code" href="classSubWindow.html#a4920e96742d73540eaeb692249a662a6">SubWindow::get_scene</a>()</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;{</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSubWindow.html#a039dc3e93af2abf807d16dcc16bd2568">scene</a>;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;}</div>
+<div class="ttc" id="aclassBuffer_html_a1fc0873aa0dd87e47da962f32110b03e"><div class="ttname"><a href="classBuffer.html#a1fc0873aa0dd87e47da962f32110b03e">Buffer::pre_render</a></div><div class="ttdeci">bool pre_render(GLsizei size[2])</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8cpp_source.html#l00006">buffer.cpp:6</a></div></div>
+<div class="ttc" id="aclassBuffer_html_a2546d46567336e00cb66d53585ebbbd7"><div class="ttname"><a href="classBuffer.html#a2546d46567336e00cb66d53585ebbbd7">Buffer::post_render</a></div><div class="ttdeci">void post_render(GLsizei size[2])</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8cpp_source.html#l00021">buffer.cpp:21</a></div></div>
+<div class="ttc" id="aclassBuffer_html_a83f8f07b7743b697cc5d0d78dfc0b9db"><div class="ttname"><a href="classBuffer.html#a83f8f07b7743b697cc5d0d78dfc0b9db">Buffer::get_tex</a></div><div class="ttdeci">const Texture &amp; get_tex()</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8cpp_source.html#l00035">buffer.cpp:35</a></div></div>
+<div class="ttc" id="aclassCamera_html_a06c173530d6f5d982092fb5f5f58f84a"><div class="ttname"><a href="classCamera.html#a06c173530d6f5d982092fb5f5f58f84a">Camera::set_position</a></div><div class="ttdeci">void set_position(vec4 position) override</div><div class="ttdef"><b>Definition:</b> <a href="camera_8cpp_source.html#l00016">camera.cpp:16</a></div></div>
+<div class="ttc" id="aclassCamera_html_a1a69c9c9f9f370599ba390c8c33f3f2f"><div class="ttname"><a href="classCamera.html#a1a69c9c9f9f370599ba390c8c33f3f2f">Camera::set_rotation</a></div><div class="ttdeci">void set_rotation(vec3 rotation) override</div><div class="ttdef"><b>Definition:</b> <a href="camera_8cpp_source.html#l00026">camera.cpp:26</a></div></div>
+<div class="ttc" id="aclassCamera_html_a264f13ea514a68eb440a6e20b975470d"><div class="ttname"><a href="classCamera.html#a264f13ea514a68eb440a6e20b975470d">Camera::translate</a></div><div class="ttdeci">void translate(vec3 distances, float delta_time) override</div><div class="ttdef"><b>Definition:</b> <a href="camera_8cpp_source.html#l00046">camera.cpp:46</a></div></div>
+<div class="ttc" id="aclassCamera_html_a92e90596e90d3405c93a9c2d4305a287"><div class="ttname"><a href="classCamera.html#a92e90596e90d3405c93a9c2d4305a287">Camera::get_position</a></div><div class="ttdeci">void get_position(vec4 position) override</div></div>
+<div class="ttc" id="aclassCamera_html_aa7eb7b6bb3dc03911a44abefab63db28"><div class="ttname"><a href="classCamera.html#aa7eb7b6bb3dc03911a44abefab63db28">Camera::get_rotation</a></div><div class="ttdeci">void get_rotation(vec3 rotation) override</div><div class="ttdef"><b>Definition:</b> <a href="camera_8cpp_source.html#l00021">camera.cpp:21</a></div></div>
+<div class="ttc" id="aclassCamera_html_ab82dd66e529cd5da7f61bd0efe7cfed2"><div class="ttname"><a href="classCamera.html#ab82dd66e529cd5da7f61bd0efe7cfed2">Camera::get_mat4</a></div><div class="ttdeci">void get_mat4(mat4 matrix) override</div><div class="ttdef"><b>Definition:</b> <a href="camera_8cpp_source.html#l00041">camera.cpp:41</a></div></div>
+<div class="ttc" id="aclassCamera_html_ac56fb9a7adad365cae4c0238b8d1e39a"><div class="ttname"><a href="classCamera.html#ac56fb9a7adad365cae4c0238b8d1e39a">Camera::rotate_all_camera</a></div><div class="ttdeci">void rotate_all_camera(vec3 angles)</div><div class="ttdef"><b>Definition:</b> <a href="camera_8cpp_source.html#l00110">camera.cpp:110</a></div></div>
+<div class="ttc" id="aclassCamera_html_ac8896d30c755130ba22c867598a1a432"><div class="ttname"><a href="classCamera.html#ac8896d30c755130ba22c867598a1a432">Camera::rotate_all_inverse</a></div><div class="ttdeci">void rotate_all_inverse(vec3 angles)</div><div class="ttdef"><b>Definition:</b> <a href="camera_8cpp_source.html#l00114">camera.cpp:114</a></div></div>
+<div class="ttc" id="aclassCamera_html_af770e5190d9a895ad804679e02ac182b"><div class="ttname"><a href="classCamera.html#af770e5190d9a895ad804679e02ac182b">Camera::translate_camera</a></div><div class="ttdeci">void translate_camera(vec3 distances)</div><div class="ttdef"><b>Definition:</b> <a href="camera_8cpp_source.html#l00092">camera.cpp:92</a></div></div>
+<div class="ttc" id="aclassCamera_html_afda6bcc513fd95c22985ba078d47b2a3"><div class="ttname"><a href="classCamera.html#afda6bcc513fd95c22985ba078d47b2a3">Camera::get_direction</a></div><div class="ttdeci">void get_direction(vec4 dest)</div><div class="ttdef"><b>Definition:</b> <a href="camera_8cpp_source.html#l00077">camera.cpp:77</a></div></div>
+<div class="ttc" id="aclassGlBindable_html_a221cf1ca728041bc2545f27a5e3004e0"><div class="ttname"><a href="classGlBindable.html#a221cf1ca728041bc2545f27a5e3004e0">GlBindable::bind</a></div><div class="ttdeci">void bind() const</div><div class="ttdef"><b>Definition:</b> <a href="glbindable_8cpp_source.html#l00030">glbindable.cpp:30</a></div></div>
+<div class="ttc" id="aclassGlBindable_html_a998a690af84360cd283e49f6a32ae4fd"><div class="ttname"><a href="classGlBindable.html#a998a690af84360cd283e49f6a32ae4fd">GlBindable::get_vid</a></div><div class="ttdeci">void * get_vid() const</div><div class="ttdef"><b>Definition:</b> <a href="glbindable_8cpp_source.html#l00025">glbindable.cpp:25</a></div></div>
+<div class="ttc" id="aclassShader_html"><div class="ttname"><a href="classShader.html">Shader</a></div><div class="ttdef"><b>Definition:</b> <a href="shader_8h_source.html#l00025">shader.h:25</a></div></div>
+<div class="ttc" id="aclassShader_html_a34d5548a520489bd132f5bfbc46bb3a9"><div class="ttname"><a href="classShader.html#a34d5548a520489bd132f5bfbc46bb3a9">Shader::set_mat4</a></div><div class="ttdeci">void set_mat4(const char *name, mat4 mat)</div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00186">shader.cpp:186</a></div></div>
+<div class="ttc" id="aclassShader_html_a4581e5cba0fa25ab7080a6848543dc58"><div class="ttname"><a href="classShader.html#a4581e5cba0fa25ab7080a6848543dc58">Shader::set_bool</a></div><div class="ttdeci">void set_bool(const char *name, bool value)</div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00134">shader.cpp:134</a></div></div>
+<div class="ttc" id="aclassShader_html_a5544845a48d60515371b5cb71c7bcb8f"><div class="ttname"><a href="classShader.html#a5544845a48d60515371b5cb71c7bcb8f">Shader::set_int</a></div><div class="ttdeci">void set_int(const char *name, int value)</div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00138">shader.cpp:138</a></div></div>
+<div class="ttc" id="aclassShader_html_a5da8dde2a4756ce7f5da98f4e3dd9990"><div class="ttname"><a href="classShader.html#a5da8dde2a4756ce7f5da98f4e3dd9990">Shader::set_vec3</a></div><div class="ttdeci">void set_vec3(const char *name, vec3 value)</div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00156">shader.cpp:156</a></div></div>
+<div class="ttc" id="aclassShader_html_a6e686eb1dd9e36aa617397520b669497"><div class="ttname"><a href="classShader.html#a6e686eb1dd9e36aa617397520b669497">Shader::set_float</a></div><div class="ttdeci">void set_float(const char *name, float value)</div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00142">shader.cpp:142</a></div></div>
+<div class="ttc" id="aclassShader_html_a8ab6219e3f760caa7a586061a9894096"><div class="ttname"><a href="classShader.html#a8ab6219e3f760caa7a586061a9894096">Shader::set_vec3f</a></div><div class="ttdeci">void set_vec3f(const char *name, float x, float y, float z)</div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00161">shader.cpp:161</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_a039dc3e93af2abf807d16dcc16bd2568"><div class="ttname"><a href="classSubWindow.html#a039dc3e93af2abf807d16dcc16bd2568">SubWindow::scene</a></div><div class="ttdeci">shared_ptr&lt; Scene &gt; scene</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8h_source.html#l00022">subwindow.h:22</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_a1a30bdfafe71c986b7040192d5405d09"><div class="ttname"><a href="classSubWindow.html#a1a30bdfafe71c986b7040192d5405d09">SubWindow::context</a></div><div class="ttdeci">Context &amp; context</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8h_source.html#l00021">subwindow.h:21</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_a3f96bc1981aeedb209fdf3168e41d924"><div class="ttname"><a href="classSubWindow.html#a3f96bc1981aeedb209fdf3168e41d924">SubWindow::loop</a></div><div class="ttdeci">bool loop(size_t id, double delta_time)</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8cpp_source.html#l00220">subwindow.cpp:220</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_a43045574e72b59e2ad533145ff428a0d"><div class="ttname"><a href="classSubWindow.html#a43045574e72b59e2ad533145ff428a0d">SubWindow::SubWindow</a></div><div class="ttdeci">SubWindow(Window &amp;window, Context &amp;context, shared_ptr&lt; Scene &gt; scene)</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8cpp_source.html#l00007">subwindow.cpp:7</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_a4920e96742d73540eaeb692249a662a6"><div class="ttname"><a href="classSubWindow.html#a4920e96742d73540eaeb692249a662a6">SubWindow::get_scene</a></div><div class="ttdeci">shared_ptr&lt; Scene &gt; &amp; get_scene()</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8cpp_source.html#l00240">subwindow.cpp:240</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_a598ffb4ca0f7561841bd93cbaae69836"><div class="ttname"><a href="classSubWindow.html#a598ffb4ca0f7561841bd93cbaae69836">SubWindow::wireframe</a></div><div class="ttdeci">bool wireframe</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8h_source.html#l00012">subwindow.h:12</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_a6471350dcb826ee19b90e17681dbfa5a"><div class="ttname"><a href="classSubWindow.html#a6471350dcb826ee19b90e17681dbfa5a">SubWindow::culling</a></div><div class="ttdeci">bool culling</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8h_source.html#l00014">subwindow.h:14</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_a6540a161c2cb9d24703c2841f98d9659"><div class="ttname"><a href="classSubWindow.html#a6540a161c2cb9d24703c2841f98d9659">SubWindow::pre_generated</a></div><div class="ttdeci">bool pre_generated</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8h_source.html#l00018">subwindow.h:18</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_a735eb6ad8bba8ae950916a71892479d0"><div class="ttname"><a href="classSubWindow.html#a735eb6ad8bba8ae950916a71892479d0">SubWindow::light_mode</a></div><div class="ttdeci">bool light_mode</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8h_source.html#l00013">subwindow.h:13</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_a7c2016e2374e5f3025a43fe07ddcdbfe"><div class="ttname"><a href="classSubWindow.html#a7c2016e2374e5f3025a43fe07ddcdbfe">SubWindow::projection</a></div><div class="ttdeci">mat4 projection</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8h_source.html#l00026">subwindow.h:26</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_a84e719afe4b9cdcd9762d74eadce5fec"><div class="ttname"><a href="classSubWindow.html#a84e719afe4b9cdcd9762d74eadce5fec">SubWindow::textured</a></div><div class="ttdeci">bool textured</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8h_source.html#l00017">subwindow.h:17</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_a888cbbc96e72b6268107d09481dff262"><div class="ttname"><a href="classSubWindow.html#a888cbbc96e72b6268107d09481dff262">SubWindow::camera</a></div><div class="ttdeci">Camera camera</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8h_source.html#l00020">subwindow.h:20</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_a9343928126f200cea5f7e670ddda4a49"><div class="ttname"><a href="classSubWindow.html#a9343928126f200cea5f7e670ddda4a49">SubWindow::transparency</a></div><div class="ttdeci">bool transparency</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8h_source.html#l00015">subwindow.h:15</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_a9680efc0a8e34ddaa9fdd42f658f2a09"><div class="ttname"><a href="classSubWindow.html#a9680efc0a8e34ddaa9fdd42f658f2a09">SubWindow::level</a></div><div class="ttdeci">int level[2]</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8h_source.html#l00019">subwindow.h:19</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_a99279028421377e4764a0177f198d90b"><div class="ttname"><a href="classSubWindow.html#a99279028421377e4764a0177f198d90b">SubWindow::camera_mode</a></div><div class="ttdeci">bool camera_mode</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8h_source.html#l00016">subwindow.h:16</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_aa69a4e9aeada4c9c6755b348a70c3ab6"><div class="ttname"><a href="classSubWindow.html#aa69a4e9aeada4c9c6755b348a70c3ab6">SubWindow::params_window</a></div><div class="ttdeci">bool params_window()</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8cpp_source.html#l00023">subwindow.cpp:23</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_ab701da6251cc8b6b6e8284db477759dd"><div class="ttname"><a href="classSubWindow.html#ab701da6251cc8b6b6e8284db477759dd">SubWindow::buffer</a></div><div class="ttdeci">Buffer buffer</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8h_source.html#l00023">subwindow.h:23</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_acbfb789831e20841fe7cc7ee8a8a9c4d"><div class="ttname"><a href="classSubWindow.html#acbfb789831e20841fe7cc7ee8a8a9c4d">SubWindow::render_window</a></div><div class="ttdeci">bool render_window(double delta_time)</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8cpp_source.html#l00053">subwindow.cpp:53</a></div></div>
+<div class="ttc" id="aclassSubWindow_html_ae3d03f0b0c9e6b2077eaf42e4a21b08d"><div class="ttname"><a href="classSubWindow.html#ae3d03f0b0c9e6b2077eaf42e4a21b08d">SubWindow::last_camera</a></div><div class="ttdeci">mat4 last_camera</div><div class="ttdef"><b>Definition:</b> <a href="subwindow_8h_source.html#l00026">subwindow.h:26</a></div></div>
+<div class="ttc" id="aclassWindow_html"><div class="ttname"><a href="classWindow.html">Window</a></div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00051">window.h:51</a></div></div>
+<div class="ttc" id="aclasseastl_1_1shared__ptr_html"><div class="ttname"><a href="classeastl_1_1shared__ptr.html">eastl::shared_ptr</a></div><div class="ttdef"><b>Definition:</b> <a href="shader_8h_source.html#l00012">shader.h:12</a></div></div>
+<div class="ttc" id="aconf_8h_html"><div class="ttname"><a href="conf_8h.html">conf.h</a></div></div>
+<div class="ttc" id="aconf_8h_html_ab01f46e058bbb810a0e6228545950dc6"><div class="ttname"><a href="conf_8h.html#ab01f46e058bbb810a0e6228545950dc6">M_RAD_F</a></div><div class="ttdeci">#define M_RAD_F</div><div class="ttdef"><b>Definition:</b> <a href="conf_8h_source.html#l00010">conf.h:10</a></div></div>
+<div class="ttc" id="aosdo_8cpp_html_a8027f0f98c35ea23923f0db84b86c05a"><div class="ttname"><a href="osdo_8cpp.html#a8027f0f98c35ea23923f0db84b86c05a">BASIS0POS</a></div><div class="ttdeci">vec3 BASIS0POS</div><div class="ttdef"><b>Definition:</b> <a href="osdo_8cpp_source.html#l00012">osdo.cpp:12</a></div></div>
+<div class="ttc" id="astructContext_html"><div class="ttname"><a href="structContext.html">Context</a></div><div class="ttdef"><b>Definition:</b> <a href="context_8h_source.html#l00019">context.h:20</a></div></div>
+<div class="ttc" id="astructContext_html_a2495f12fa2a7e55cb4d6e7d514e58735"><div class="ttname"><a href="structContext.html#a2495f12fa2a7e55cb4d6e7d514e58735">Context::active</a></div><div class="ttdeci">Models::iterator active</div><div class="ttdef"><b>Definition:</b> <a href="context_8h_source.html#l00027">context.h:27</a></div></div>
+<div class="ttc" id="astructContext_html_acc023c5c78fc019ae50fac056ddf7226"><div class="ttname"><a href="structContext.html#acc023c5c78fc019ae50fac056ddf7226">Context::textures</a></div><div class="ttdeci">Textures textures</div><div class="ttdef"><b>Definition:</b> <a href="context_8h_source.html#l00025">context.h:25</a></div></div>
+<div class="ttc" id="astructContext_html_adf5341866d506e12dca716c71367fdcf"><div class="ttname"><a href="structContext.html#adf5341866d506e12dca716c71367fdcf">Context::models</a></div><div class="ttdeci">Models models</div><div class="ttdef"><b>Definition:</b> <a href="context_8h_source.html#l00023">context.h:23</a></div></div>
+<div class="ttc" id="astructContext_html_ae6fcb1cace574a21fb21ccd678473d17"><div class="ttname"><a href="structContext.html#ae6fcb1cace574a21fb21ccd678473d17">Context::shaders</a></div><div class="ttdeci">hash_map&lt; string, shared_ptr&lt; Shader &gt; &gt; shaders</div><div class="ttdef"><b>Definition:</b> <a href="context_8h_source.html#l00024">context.h:24</a></div></div>
+<div class="ttc" id="astructContext_html_af6e358ab9890652b7c0accf7fcd1fc85"><div class="ttname"><a href="structContext.html#af6e358ab9890652b7c0accf7fcd1fc85">Context::active_texture</a></div><div class="ttdeci">Textures::iterator active_texture</div><div class="ttdef"><b>Definition:</b> <a href="context_8h_source.html#l00028">context.h:28</a></div></div>
+<div class="ttc" id="asubwindow_8h_html"><div class="ttname"><a href="subwindow_8h.html">subwindow.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

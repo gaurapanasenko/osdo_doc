@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Дипломна робота: Текст програми osdo/object.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Дипломна робота
+   </div>
+   <div id="projectbrief">студента групи ПА-17-2 Панасенка Єгора Сергійовича</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e0c7de59e470a6e6d29babac2e4befdd.html">osdo</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">object.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="object_8cpp.html">Див. документацію.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="object_8h.html">object.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="conf_8h.html">conf.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="shader_8h.html">shader.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classObject.html#afcecd10bd5781c735966c67a8b2a032f">    7</a></span>&#160;<a class="code" href="classObject.html#afcecd10bd5781c735966c67a8b2a032f">Object::Object</a>(shared_ptr&lt;Model&gt; model)</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    : transform GLM_MAT4_IDENTITY_INIT,</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;      position GLM_VEC4_BLACK_INIT,</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;      animation GLM_VEC3_ZERO_INIT,</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;      model(model)</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classObject.html#a494825c4cf01dcb9a7cc03d2912ebc23">   14</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classObject.html#a494825c4cf01dcb9a7cc03d2912ebc23">Object::get_position</a>(vec4 position)</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    glm_vec4_copy(this-&gt;position, <a class="code" href="classObject.html#a66142044dec90724bc31f9511362eb9f">position</a>);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classObject.html#afb2a9a9461d2602bbf04f2a88f79dd03">   19</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classObject.html#afb2a9a9461d2602bbf04f2a88f79dd03">Object::set_position</a>(vec4 position)</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    glm_vec4_copy(<a class="code" href="classObject.html#a66142044dec90724bc31f9511362eb9f">position</a>, this-&gt;position);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classObject.html#aa8359d878b035e443c8fbe677bbc3613">   24</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classObject.html#aa8359d878b035e443c8fbe677bbc3613">Object::get_rotation</a>(vec3 rotation)</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    glm_euler_angles(this-&gt;<a class="code" href="classObject.html#a8f8afc163da863a8ff5198a650fb1e91">transform</a>, rotation);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classObject.html#ad2bac42a4343326372b44a620fc6f32e">   29</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classObject.html#ad2bac42a4343326372b44a620fc6f32e">Object::set_rotation</a>(vec3 rotation)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    glm_euler_xyz(rotation, this-&gt;<a class="code" href="classObject.html#a8f8afc163da863a8ff5198a650fb1e91">transform</a>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classObject.html#a6f78bd2cc21324b4d243bcfab465deaa">   34</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classObject.html#a6f78bd2cc21324b4d243bcfab465deaa">Object::get_animation</a>(vec3 animation)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    glm_vec3_copy(this-&gt;animation, <a class="code" href="classObject.html#adffa22add11a86b403a4acef6bc5ac4a">animation</a>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classObject.html#a6ddb712178530b3f3af4b1b1a7c39b00">   39</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classObject.html#a6ddb712178530b3f3af4b1b1a7c39b00">Object::set_animation</a>(vec3 animation)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    glm_vec3_copy(<a class="code" href="classObject.html#adffa22add11a86b403a4acef6bc5ac4a">animation</a>, this-&gt;animation);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classObject.html#afff370408e02f6886c5bba0406e2073d">   44</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classObject.html#afff370408e02f6886c5bba0406e2073d">Object::get_mat4</a>(mat4 dest) {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    glm_translate_make(dest, this-&gt;<a class="code" href="classObject.html#a66142044dec90724bc31f9511362eb9f">position</a>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    glm_mat4_mul(dest, this-&gt;<a class="code" href="classObject.html#a8f8afc163da863a8ff5198a650fb1e91">transform</a>, dest);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classObject.html#a42b8d284828b2d62960ecf07a61cdd32">   49</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classObject.html#a42b8d284828b2d62960ecf07a61cdd32">Object::translate</a>(vec3 distances, <span class="keywordtype">float</span> delta_time) {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    vec3 new_distances = GLM_VEC3_ZERO_INIT;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    glm_vec3_muladds(distances, OBJECT_MOVE_SPEED * delta_time,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                     new_distances);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="classObject.html#ab4dab8a9da970d074185b17c2fd95f21">Object::translate_object</a>( new_distances);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classObject.html#aa23e007d3b922a56f11510c5481a3e07">   56</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classObject.html#aa23e007d3b922a56f11510c5481a3e07">Object::draw</a>(<a class="code" href="classShader.html">Shader</a> &amp;shader, mat4 mat4buf, GLdouble delta_time,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                  <span class="keywordtype">bool</span> pre_generated) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="comment">// render the loaded model</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="classObject.html#ad0997e94d29fff7b70940ce862ea0827">Object::animate</a>(<span class="keyword">static_cast&lt;</span>GLfloat<span class="keyword">&gt;</span>(delta_time));</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="classObject.html#afff370408e02f6886c5bba0406e2073d">Object::get_mat4</a>(mat4buf);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    shader.<a class="code" href="classShader.html#a34d5548a520489bd132f5bfbc46bb3a9">set_mat4</a>(<span class="stringliteral">&quot;model&quot;</span>, mat4buf);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    this-&gt;<a class="code" href="classObject.html#adadea81d91f42970ba3829793bdac3c5">model</a>-&gt;draw(shader, pre_generated);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classObject.html#a485bd8b8aa5fb4ca6d0dd9c6701c4948">   65</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classObject.html#a485bd8b8aa5fb4ca6d0dd9c6701c4948">Object::rotate</a>(<span class="keyword">enum</span> <a class="code" href="osdo_8h.html#aaecdceeb081c850edfb088e508fa45ff">coord_enum</a> coord, <span class="keywordtype">float</span> delta_time) {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="classObject.html#a9dcb8961e7f0d5cbaaba5eaf826b741a">Object::rotate_object</a>(delta_time * OBJECT_ROTATE_SPEED, coord);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classObject.html#add3dce565f65cf4e74329dd3ed987f73">   69</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classObject.html#add3dce565f65cf4e74329dd3ed987f73">Object::rotate_all</a>(vec3 angles) {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="classObject.html#a2c5ac1f0bcbd1583ac4fc28bcac70811">Object::rotate_all_object</a>(angles);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classObject.html#a5c6095ac962c2faeaccf09d0a9a7d4a6">   73</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classObject.html#a5c6095ac962c2faeaccf09d0a9a7d4a6">Object::add_animation</a>(vec3 angles, <span class="keywordtype">float</span> delta_time) {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    vec3 <a class="code" href="classObject.html#adffa22add11a86b403a4acef6bc5ac4a">animation</a> = GLM_VEC3_ZERO_INIT;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    glm_vec3_muladds(angles, delta_time, <a class="code" href="classObject.html#adffa22add11a86b403a4acef6bc5ac4a">animation</a>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    glm_vec3_add(this-&gt;animation, <a class="code" href="classObject.html#adffa22add11a86b403a4acef6bc5ac4a">animation</a>,</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                 this-&gt;animation);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classObject.html#aeeec41ecc01e46f9d191b6abc50a0ae0">   80</a></span>&#160;shared_ptr&lt;Model&gt; <a class="code" href="classObject.html#aeeec41ecc01e46f9d191b6abc50a0ae0">Object::get_model</a>()</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classObject.html#adadea81d91f42970ba3829793bdac3c5">model</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classObject.html#ab4dab8a9da970d074185b17c2fd95f21">   85</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classObject.html#ab4dab8a9da970d074185b17c2fd95f21">Object::translate_object</a>(vec3 distances) {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    glm_vec3_add(this-&gt;<a class="code" href="classObject.html#a66142044dec90724bc31f9511362eb9f">position</a>, distances, this-&gt;<a class="code" href="classObject.html#a66142044dec90724bc31f9511362eb9f">position</a>);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classObject.html#a9dcb8961e7f0d5cbaaba5eaf826b741a">   89</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classObject.html#a9dcb8961e7f0d5cbaaba5eaf826b741a">Object::rotate_object</a>(<span class="keywordtype">float</span> angle, <span class="keyword">enum</span> <a class="code" href="osdo_8h.html#aaecdceeb081c850edfb088e508fa45ff">coord_enum</a> coord) {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    mat4 matrix = GLM_MAT4_IDENTITY_INIT;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">switch</span> (coord) {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="osdo_8h.html#aaecdceeb081c850edfb088e508fa45ffa58833a3110c570fb05130d40c365d1e4">X</a>: glm_rotate_x(matrix, angle, matrix); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="osdo_8h.html#aaecdceeb081c850edfb088e508fa45ffa5596231eabd6cf29050967d5ac83ad84">Y</a>: glm_rotate_y(matrix, angle, matrix); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="osdo_8h.html#aaecdceeb081c850edfb088e508fa45ffaa70478ce277ffc322f8e1e3418e07355">Z</a>: glm_rotate_z(matrix, angle, matrix); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    glm_mat4_mul(matrix, this-&gt;<a class="code" href="classObject.html#a8f8afc163da863a8ff5198a650fb1e91">transform</a>, this-&gt;<a class="code" href="classObject.html#a8f8afc163da863a8ff5198a650fb1e91">transform</a>);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classObject.html#a2c5ac1f0bcbd1583ac4fc28bcac70811">   99</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classObject.html#a2c5ac1f0bcbd1583ac4fc28bcac70811">Object::rotate_all_object</a>(vec3 angles) {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <a class="code" href="classObject.html#a9dcb8961e7f0d5cbaaba5eaf826b741a">Object::rotate_object</a>(angles[0], <a class="code" href="osdo_8h.html#aaecdceeb081c850edfb088e508fa45ffa58833a3110c570fb05130d40c365d1e4">X</a>);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <a class="code" href="classObject.html#a9dcb8961e7f0d5cbaaba5eaf826b741a">Object::rotate_object</a>(angles[1], <a class="code" href="osdo_8h.html#aaecdceeb081c850edfb088e508fa45ffa5596231eabd6cf29050967d5ac83ad84">Y</a>);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="classObject.html#a9dcb8961e7f0d5cbaaba5eaf826b741a">Object::rotate_object</a>(angles[2], <a class="code" href="osdo_8h.html#aaecdceeb081c850edfb088e508fa45ffaa70478ce277ffc322f8e1e3418e07355">Z</a>);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="classObject.html#ad0997e94d29fff7b70940ce862ea0827">  105</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classObject.html#ad0997e94d29fff7b70940ce862ea0827">Object::animate</a>(<span class="keywordtype">float</span> step) {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    vec3 <a class="code" href="classObject.html#adffa22add11a86b403a4acef6bc5ac4a">animation</a> = GLM_VEC3_ZERO_INIT;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    glm_vec3_muladds(this-&gt;animation, step, <a class="code" href="classObject.html#adffa22add11a86b403a4acef6bc5ac4a">animation</a>);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <a class="code" href="classObject.html#add3dce565f65cf4e74329dd3ed987f73">Object::rotate_all</a>(<a class="code" href="classObject.html#adffa22add11a86b403a4acef6bc5ac4a">animation</a>);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="classObject.html#a89c4ed17dc35de90ee5fd12302c9e120">  111</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classObject.html#a89c4ed17dc35de90ee5fd12302c9e120">Object::scale</a>(vec3 scale) {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    glm_scale(this-&gt;<a class="code" href="classObject.html#a8f8afc163da863a8ff5198a650fb1e91">transform</a>, scale);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="classObject.html#a5cdb7fd4168627de68679563c48d8567">  115</a></span>&#160;mat4 *<a class="code" href="classObject.html#a5cdb7fd4168627de68679563c48d8567">Object::get_transform</a>()</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;{</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">return</span> &amp;this-&gt;<a class="code" href="classObject.html#a8f8afc163da863a8ff5198a650fb1e91">transform</a>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;}</div>
+<div class="ttc" id="aclassObject_html_a2c5ac1f0bcbd1583ac4fc28bcac70811"><div class="ttname"><a href="classObject.html#a2c5ac1f0bcbd1583ac4fc28bcac70811">Object::rotate_all_object</a></div><div class="ttdeci">void rotate_all_object(vec3 angles)</div><div class="ttdoc">Обертає об'єкт по всім осям незалежно від часу.</div><div class="ttdef"><b>Definition:</b> <a href="object_8cpp_source.html#l00099">object.cpp:99</a></div></div>
+<div class="ttc" id="aclassObject_html_a42b8d284828b2d62960ecf07a61cdd32"><div class="ttname"><a href="classObject.html#a42b8d284828b2d62960ecf07a61cdd32">Object::translate</a></div><div class="ttdeci">void translate(vec3 distances, float delta_time) override</div><div class="ttdoc">Переміщує об'єкт у просторі.</div><div class="ttdef"><b>Definition:</b> <a href="object_8cpp_source.html#l00049">object.cpp:49</a></div></div>
+<div class="ttc" id="aclassObject_html_a485bd8b8aa5fb4ca6d0dd9c6701c4948"><div class="ttname"><a href="classObject.html#a485bd8b8aa5fb4ca6d0dd9c6701c4948">Object::rotate</a></div><div class="ttdeci">void rotate(enum coord_enum coord, float delta_time) override</div><div class="ttdoc">Обертає об'єкт.</div><div class="ttdef"><b>Definition:</b> <a href="object_8cpp_source.html#l00065">object.cpp:65</a></div></div>
+<div class="ttc" id="aclassObject_html_a494825c4cf01dcb9a7cc03d2912ebc23"><div class="ttname"><a href="classObject.html#a494825c4cf01dcb9a7cc03d2912ebc23">Object::get_position</a></div><div class="ttdeci">void get_position(vec4 position) override</div><div class="ttdoc">Забирає поточну позицію об'єкта у просторі.</div><div class="ttdef"><b>Definition:</b> <a href="object_8cpp_source.html#l00014">object.cpp:14</a></div></div>
+<div class="ttc" id="aclassObject_html_a5c6095ac962c2faeaccf09d0a9a7d4a6"><div class="ttname"><a href="classObject.html#a5c6095ac962c2faeaccf09d0a9a7d4a6">Object::add_animation</a></div><div class="ttdeci">void add_animation(vec3 angles, float delta_time) override</div><div class="ttdoc">Додає швидкість анімації обертання об'єкту.</div><div class="ttdef"><b>Definition:</b> <a href="object_8cpp_source.html#l00073">object.cpp:73</a></div></div>
+<div class="ttc" id="aclassObject_html_a5cdb7fd4168627de68679563c48d8567"><div class="ttname"><a href="classObject.html#a5cdb7fd4168627de68679563c48d8567">Object::get_transform</a></div><div class="ttdeci">mat4 * get_transform()</div><div class="ttdoc">Повертає матрицю лінійних перетворень без переміщення.</div><div class="ttdef"><b>Definition:</b> <a href="object_8cpp_source.html#l00115">object.cpp:115</a></div></div>
+<div class="ttc" id="aclassObject_html_a66142044dec90724bc31f9511362eb9f"><div class="ttname"><a href="classObject.html#a66142044dec90724bc31f9511362eb9f">Object::position</a></div><div class="ttdeci">vec4 position</div><div class="ttdoc">Позиція об'єкту у просторі</div><div class="ttdef"><b>Definition:</b> <a href="object_8h_source.html#l00028">object.h:28</a></div></div>
+<div class="ttc" id="aclassObject_html_a6ddb712178530b3f3af4b1b1a7c39b00"><div class="ttname"><a href="classObject.html#a6ddb712178530b3f3af4b1b1a7c39b00">Object::set_animation</a></div><div class="ttdeci">void set_animation(vec3 rotation) override</div><div class="ttdoc">Задає нову анімацію обернення об'єкта.</div><div class="ttdef"><b>Definition:</b> <a href="object_8cpp_source.html#l00039">object.cpp:39</a></div></div>
+<div class="ttc" id="aclassObject_html_a6f78bd2cc21324b4d243bcfab465deaa"><div class="ttname"><a href="classObject.html#a6f78bd2cc21324b4d243bcfab465deaa">Object::get_animation</a></div><div class="ttdeci">void get_animation(vec3 rotation) override</div><div class="ttdoc">Забирає поточну анімацію обернення об'єкта.</div><div class="ttdef"><b>Definition:</b> <a href="object_8cpp_source.html#l00034">object.cpp:34</a></div></div>
+<div class="ttc" id="aclassObject_html_a89c4ed17dc35de90ee5fd12302c9e120"><div class="ttname"><a href="classObject.html#a89c4ed17dc35de90ee5fd12302c9e120">Object::scale</a></div><div class="ttdeci">void scale(vec3 scale)</div><div class="ttdoc">Збільщує або зменшує об'єкт по трьом осям.</div><div class="ttdef"><b>Definition:</b> <a href="object_8cpp_source.html#l00111">object.cpp:111</a></div></div>
+<div class="ttc" id="aclassObject_html_a8f8afc163da863a8ff5198a650fb1e91"><div class="ttname"><a href="classObject.html#a8f8afc163da863a8ff5198a650fb1e91">Object::transform</a></div><div class="ttdeci">mat4 transform</div><div class="ttdoc">Матриця лінійних перетворень.</div><div class="ttdef"><b>Definition:</b> <a href="object_8h_source.html#l00024">object.h:24</a></div></div>
+<div class="ttc" id="aclassObject_html_a9dcb8961e7f0d5cbaaba5eaf826b741a"><div class="ttname"><a href="classObject.html#a9dcb8961e7f0d5cbaaba5eaf826b741a">Object::rotate_object</a></div><div class="ttdeci">void rotate_object(float angle, enum coord_enum coord)</div><div class="ttdoc">Обертає об'єкт по осі незалежно від часу.</div><div class="ttdef"><b>Definition:</b> <a href="object_8cpp_source.html#l00089">object.cpp:89</a></div></div>
+<div class="ttc" id="aclassObject_html_aa23e007d3b922a56f11510c5481a3e07"><div class="ttname"><a href="classObject.html#aa23e007d3b922a56f11510c5481a3e07">Object::draw</a></div><div class="ttdeci">void draw(Shader &amp;shader, mat4 mat4buf, GLdouble delta_time, bool pre_generated)</div><div class="ttdoc">Відображує об'єкт</div><div class="ttdef"><b>Definition:</b> <a href="object_8cpp_source.html#l00056">object.cpp:56</a></div></div>
+<div class="ttc" id="aclassObject_html_aa8359d878b035e443c8fbe677bbc3613"><div class="ttname"><a href="classObject.html#aa8359d878b035e443c8fbe677bbc3613">Object::get_rotation</a></div><div class="ttdeci">void get_rotation(vec3 rotation) override</div><div class="ttdoc">Забирає поточний нахил об'єкта.</div><div class="ttdef"><b>Definition:</b> <a href="object_8cpp_source.html#l00024">object.cpp:24</a></div></div>
+<div class="ttc" id="aclassObject_html_ab4dab8a9da970d074185b17c2fd95f21"><div class="ttname"><a href="classObject.html#ab4dab8a9da970d074185b17c2fd95f21">Object::translate_object</a></div><div class="ttdeci">void translate_object(vec3 distances)</div><div class="ttdoc">Переміщує об'єкт незалежно від часу.</div><div class="ttdef"><b>Definition:</b> <a href="object_8cpp_source.html#l00085">object.cpp:85</a></div></div>
+<div class="ttc" id="aclassObject_html_ad0997e94d29fff7b70940ce862ea0827"><div class="ttname"><a href="classObject.html#ad0997e94d29fff7b70940ce862ea0827">Object::animate</a></div><div class="ttdeci">void animate(float step)</div><div class="ttdoc">Обертає об'єкт по заданій анімації.</div><div class="ttdef"><b>Definition:</b> <a href="object_8cpp_source.html#l00105">object.cpp:105</a></div></div>
+<div class="ttc" id="aclassObject_html_ad2bac42a4343326372b44a620fc6f32e"><div class="ttname"><a href="classObject.html#ad2bac42a4343326372b44a620fc6f32e">Object::set_rotation</a></div><div class="ttdeci">void set_rotation(vec3 rotation) override</div><div class="ttdoc">Задає новий нахил об'єкта.</div><div class="ttdef"><b>Definition:</b> <a href="object_8cpp_source.html#l00029">object.cpp:29</a></div></div>
+<div class="ttc" id="aclassObject_html_adadea81d91f42970ba3829793bdac3c5"><div class="ttname"><a href="classObject.html#adadea81d91f42970ba3829793bdac3c5">Object::model</a></div><div class="ttdeci">shared_ptr&lt; Model &gt; model</div><div class="ttdoc">Модель об'єкту.</div><div class="ttdef"><b>Definition:</b> <a href="object_8h_source.html#l00036">object.h:36</a></div></div>
+<div class="ttc" id="aclassObject_html_add3dce565f65cf4e74329dd3ed987f73"><div class="ttname"><a href="classObject.html#add3dce565f65cf4e74329dd3ed987f73">Object::rotate_all</a></div><div class="ttdeci">void rotate_all(vec3 angles) override</div><div class="ttdoc">Обернути об'єкт по всім осям.</div><div class="ttdef"><b>Definition:</b> <a href="object_8cpp_source.html#l00069">object.cpp:69</a></div></div>
+<div class="ttc" id="aclassObject_html_adffa22add11a86b403a4acef6bc5ac4a"><div class="ttname"><a href="classObject.html#adffa22add11a86b403a4acef6bc5ac4a">Object::animation</a></div><div class="ttdeci">vec4 animation</div><div class="ttdoc">Анімація обертання по осям .</div><div class="ttdef"><b>Definition:</b> <a href="object_8h_source.html#l00032">object.h:32</a></div></div>
+<div class="ttc" id="aclassObject_html_aeeec41ecc01e46f9d191b6abc50a0ae0"><div class="ttname"><a href="classObject.html#aeeec41ecc01e46f9d191b6abc50a0ae0">Object::get_model</a></div><div class="ttdeci">shared_ptr&lt; Model &gt; get_model()</div><div class="ttdoc">Повертає модель об'єкту.</div><div class="ttdef"><b>Definition:</b> <a href="object_8cpp_source.html#l00080">object.cpp:80</a></div></div>
+<div class="ttc" id="aclassObject_html_afb2a9a9461d2602bbf04f2a88f79dd03"><div class="ttname"><a href="classObject.html#afb2a9a9461d2602bbf04f2a88f79dd03">Object::set_position</a></div><div class="ttdeci">void set_position(vec4 position) override</div><div class="ttdoc">Задає нову позицію об'єкта у просторі.</div><div class="ttdef"><b>Definition:</b> <a href="object_8cpp_source.html#l00019">object.cpp:19</a></div></div>
+<div class="ttc" id="aclassObject_html_afcecd10bd5781c735966c67a8b2a032f"><div class="ttname"><a href="classObject.html#afcecd10bd5781c735966c67a8b2a032f">Object::Object</a></div><div class="ttdeci">Object(shared_ptr&lt; Model &gt; model=nullptr)</div><div class="ttdoc">Конструктор, який створює об'єкт з моделі.</div><div class="ttdef"><b>Definition:</b> <a href="object_8cpp_source.html#l00007">object.cpp:7</a></div></div>
+<div class="ttc" id="aclassObject_html_afff370408e02f6886c5bba0406e2073d"><div class="ttname"><a href="classObject.html#afff370408e02f6886c5bba0406e2073d">Object::get_mat4</a></div><div class="ttdeci">void get_mat4(mat4 matrix) override</div><div class="ttdoc">Забирає матрицю лінійних перетворень над об'єктом.</div><div class="ttdef"><b>Definition:</b> <a href="object_8cpp_source.html#l00044">object.cpp:44</a></div></div>
+<div class="ttc" id="aclassShader_html"><div class="ttname"><a href="classShader.html">Shader</a></div><div class="ttdoc">Клас взаємодії з шейдером у видеокарті.</div><div class="ttdef"><b>Definition:</b> <a href="shader_8h_source.html#l00031">shader.h:31</a></div></div>
+<div class="ttc" id="aclassShader_html_a34d5548a520489bd132f5bfbc46bb3a9"><div class="ttname"><a href="classShader.html#a34d5548a520489bd132f5bfbc46bb3a9">Shader::set_mat4</a></div><div class="ttdeci">void set_mat4(const char *name, mat4 mat)</div><div class="ttdoc">Задати поле шейдеру типу mat4</div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00186">shader.cpp:186</a></div></div>
+<div class="ttc" id="aconf_8h_html"><div class="ttname"><a href="conf_8h.html">conf.h</a></div><div class="ttdoc">Конфігурація бібліотеки osdo</div></div>
+<div class="ttc" id="aobject_8h_html"><div class="ttname"><a href="object_8h.html">object.h</a></div><div class="ttdoc">Задає клас об'єкту моделі.</div></div>
+<div class="ttc" id="aosdo_8h_html_aaecdceeb081c850edfb088e508fa45ff"><div class="ttname"><a href="osdo_8h.html#aaecdceeb081c850edfb088e508fa45ff">coord_enum</a></div><div class="ttdeci">coord_enum</div><div class="ttdoc">Координатні осі.</div><div class="ttdef"><b>Definition:</b> <a href="osdo_8h_source.html#l00016">osdo.h:16</a></div></div>
+<div class="ttc" id="aosdo_8h_html_aaecdceeb081c850edfb088e508fa45ffa5596231eabd6cf29050967d5ac83ad84"><div class="ttname"><a href="osdo_8h.html#aaecdceeb081c850edfb088e508fa45ffa5596231eabd6cf29050967d5ac83ad84">Y</a></div><div class="ttdeci">@ Y</div><div class="ttdef"><b>Definition:</b> <a href="osdo_8h_source.html#l00018">osdo.h:18</a></div></div>
+<div class="ttc" id="aosdo_8h_html_aaecdceeb081c850edfb088e508fa45ffa58833a3110c570fb05130d40c365d1e4"><div class="ttname"><a href="osdo_8h.html#aaecdceeb081c850edfb088e508fa45ffa58833a3110c570fb05130d40c365d1e4">X</a></div><div class="ttdeci">@ X</div><div class="ttdef"><b>Definition:</b> <a href="osdo_8h_source.html#l00017">osdo.h:17</a></div></div>
+<div class="ttc" id="aosdo_8h_html_aaecdceeb081c850edfb088e508fa45ffaa70478ce277ffc322f8e1e3418e07355"><div class="ttname"><a href="osdo_8h.html#aaecdceeb081c850edfb088e508fa45ffaa70478ce277ffc322f8e1e3418e07355">Z</a></div><div class="ttdeci">@ Z</div><div class="ttdef"><b>Definition:</b> <a href="osdo_8h_source.html#l00019">osdo.h:19</a></div></div>
+<div class="ttc" id="ashader_8h_html"><div class="ttname"><a href="shader_8h.html">shader.h</a></div><div class="ttdoc">Задає клас шейдеру.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

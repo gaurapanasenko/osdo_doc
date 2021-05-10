@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Дипломна робота: Текст програми osdo/texture.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Дипломна робота
+   </div>
+   <div id="projectbrief">студента групи ПА-17-2 Панасенка Єгора Сергійовича</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e0c7de59e470a6e6d29babac2e4befdd.html">osdo</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">texture.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="texture_8cpp.html">Див. документацію.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="texture_8h.html">texture.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="glbinder_8h.html">glbinder.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="image_8h.html">image.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="classTexture.html#a04704df51d1b28c3fadbe209755d3217">    5</a></span>&#160;GLuint <a class="code" href="classTexture.html#a04704df51d1b28c3fadbe209755d3217">Texture::_generate</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    GLuint <a class="code" href="classGlBindable.html#a299d9182805eb4c6b7e9e8cc9d5b4577">id</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    glGenTextures(1, &amp;<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classGlBindable.html#a299d9182805eb4c6b7e9e8cc9d5b4577">id</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classTexture.html#ae0c8fad482833b570de830820c12166a">   12</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classTexture.html#ae0c8fad482833b570de830820c12166a">Texture::_bind</a>(<span class="keyword">const</span> GLuint <span class="keywordtype">id</span>, GLenum target)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    glBindTexture(target, <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classTexture.html#a0f788e2cad6ef4b1058e1de912658582">   17</a></span>&#160;GLenum <a class="code" href="classTexture.html#a0f788e2cad6ef4b1058e1de912658582">Texture::_default</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">return</span> GL_TEXTURE_2D_MULTISAMPLE;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classTexture.html#ac8942e677bb3b5c06a3be96568d89fa8">   22</a></span>&#160;<a class="code" href="classTexture.html#ac8942e677bb3b5c06a3be96568d89fa8">Texture::~Texture</a>() {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    glDeleteTextures(1, &amp;<a class="code" href="classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7">get_id</a>());</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="texture_8cpp.html#a111df5e7a747cd89978fee5d19fa7e22">   26</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="texture_8cpp.html#a111df5e7a747cd89978fee5d19fa7e22">LoadTextureFromFile</a>(<span class="keyword">const</span> <a class="code" href="image_8h.html#a8e678b6802a89940a89c7343bec499f5">pixel_t</a> (*data)[], <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height,</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                         <span class="keyword">const</span> GLuint <span class="keywordtype">id</span>)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    glBindTexture(GL_TEXTURE_2D, <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#if defined(GL_UNPACK_ROW_LENGTH) &amp;&amp; !defined(__EMSCRIPTEN__)</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    glPixelStorei(GL_UNPACK_ROW_LENGTH, 0);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                 GL_UNSIGNED_BYTE, data);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classTexture.html#af6e54c3a29e5187163e433217516e8d2">   43</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classTexture.html#af6e54c3a29e5187163e433217516e8d2">Texture::update</a>(<span class="keyword">const</span> <a class="code" href="classImage.html">Image</a> &amp;image)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="texture_8cpp.html#a111df5e7a747cd89978fee5d19fa7e22">LoadTextureFromFile</a>(image.<a class="code" href="classImage.html#a0bff7334a9e45a84e0503448af829bbb">data</a>.get(), image.<a class="code" href="classImage.html#a5be4b15e10ac6609ec9350e79e723246">width</a>, image.<a class="code" href="classImage.html#adf1e0c7ecb8f09929175b5d4229beaad">height</a>, <a class="code" href="classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7">get_id</a>());</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classTexture.html#ae40798a49160911e52be2c0329b17565">   47</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classTexture.html#ae40798a49160911e52be2c0329b17565">Texture::make_2d_multisample</a>(GLsizei size[])<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="classGlBinder.html">GlBinder</a> b = <a class="code" href="classGlBindable.html#ad3194126ecaf5285842cee0e7d28c951">binder</a>(GL_TEXTURE_2D_MULTISAMPLE);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    glTexImage2DMultisample(GL_TEXTURE_2D_MULTISAMPLE, 4, GL_RGB,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                            size[0], size[1], GL_TRUE);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classTexture.html#a08252c0058235586ddce388f6ac81b79">   53</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classTexture.html#a08252c0058235586ddce388f6ac81b79">Texture::make_2d</a>(GLsizei size[])<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="classGlBinder.html">GlBinder</a> b = <a class="code" href="classGlBindable.html#ad3194126ecaf5285842cee0e7d28c951">binder</a>(GL_TEXTURE_2D);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, size[0], size[1], 0, GL_RGB,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            GL_UNSIGNED_BYTE, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="ttc" id="aclassGlBindable_html_a299d9182805eb4c6b7e9e8cc9d5b4577"><div class="ttname"><a href="classGlBindable.html#a299d9182805eb4c6b7e9e8cc9d5b4577">GlBindable::id</a></div><div class="ttdeci">const GLuint id</div><div class="ttdoc">Індекс об'єкту OpenGL.</div><div class="ttdef"><b>Definition:</b> <a href="glbindable_8h_source.html#l00020">glbindable.h:20</a></div></div>
+<div class="ttc" id="aclassGlBindable_html_a5a7e0bbde3d01e24a83e0f0122402ab7"><div class="ttname"><a href="classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7">GlBindable::get_id</a></div><div class="ttdeci">const GLuint &amp; get_id() const</div><div class="ttdoc">Повертає індекс об'єкту OpenGL.</div><div class="ttdef"><b>Definition:</b> <a href="glbindable_8cpp_source.html#l00020">glbindable.cpp:20</a></div></div>
+<div class="ttc" id="aclassGlBindable_html_ad3194126ecaf5285842cee0e7d28c951"><div class="ttname"><a href="classGlBindable.html#ad3194126ecaf5285842cee0e7d28c951">GlBindable::binder</a></div><div class="ttdeci">GlBinder binder() const</div><div class="ttdoc">Повертає об'єкт прив'язки контексту із ціллю за замовчуванням</div><div class="ttdef"><b>Definition:</b> <a href="glbindable_8cpp_source.html#l00050">glbindable.cpp:50</a></div></div>
+<div class="ttc" id="aclassGlBinder_html"><div class="ttname"><a href="classGlBinder.html">GlBinder</a></div><div class="ttdoc">Клас який прив'язує контексту до деякого об'єкту OpenGL.</div><div class="ttdef"><b>Definition:</b> <a href="glbinder_8h_source.html#l00015">glbinder.h:16</a></div></div>
+<div class="ttc" id="aclassImage_html"><div class="ttname"><a href="classImage.html">Image</a></div><div class="ttdoc">Зберігає масив пікселів, ширину та висоту.</div><div class="ttdef"><b>Definition:</b> <a href="image_8h_source.html#l00036">image.h:37</a></div></div>
+<div class="ttc" id="aclassImage_html_a0bff7334a9e45a84e0503448af829bbb"><div class="ttname"><a href="classImage.html#a0bff7334a9e45a84e0503448af829bbb">Image::data</a></div><div class="ttdeci">shared_ptr&lt; const pixel_t[]&gt; data</div><div class="ttdoc">Константнний масив пікселів. Зберігає розумний вказівник на масив пікселів зображення розміром висота...</div><div class="ttdef"><b>Definition:</b> <a href="image_8h_source.html#l00044">image.h:44</a></div></div>
+<div class="ttc" id="aclassImage_html_a5be4b15e10ac6609ec9350e79e723246"><div class="ttname"><a href="classImage.html#a5be4b15e10ac6609ec9350e79e723246">Image::width</a></div><div class="ttdeci">const int width</div><div class="ttdoc">Ширина зображення.</div><div class="ttdef"><b>Definition:</b> <a href="image_8h_source.html#l00048">image.h:48</a></div></div>
+<div class="ttc" id="aclassImage_html_adf1e0c7ecb8f09929175b5d4229beaad"><div class="ttname"><a href="classImage.html#adf1e0c7ecb8f09929175b5d4229beaad">Image::height</a></div><div class="ttdeci">const int height</div><div class="ttdoc">Висота зображення.</div><div class="ttdef"><b>Definition:</b> <a href="image_8h_source.html#l00052">image.h:52</a></div></div>
+<div class="ttc" id="aclassTexture_html_a04704df51d1b28c3fadbe209755d3217"><div class="ttname"><a href="classTexture.html#a04704df51d1b28c3fadbe209755d3217">Texture::_generate</a></div><div class="ttdeci">GLuint _generate() const override</div><div class="ttdoc">Віртуальний метод що створює текстуру.</div><div class="ttdef"><b>Definition:</b> <a href="texture_8cpp_source.html#l00005">texture.cpp:5</a></div></div>
+<div class="ttc" id="aclassTexture_html_a08252c0058235586ddce388f6ac81b79"><div class="ttname"><a href="classTexture.html#a08252c0058235586ddce388f6ac81b79">Texture::make_2d</a></div><div class="ttdeci">void make_2d(GLsizei size[2]) const</div><div class="ttdoc">Створює текстуру.</div><div class="ttdef"><b>Definition:</b> <a href="texture_8cpp_source.html#l00053">texture.cpp:53</a></div></div>
+<div class="ttc" id="aclassTexture_html_a0f788e2cad6ef4b1058e1de912658582"><div class="ttname"><a href="classTexture.html#a0f788e2cad6ef4b1058e1de912658582">Texture::_default</a></div><div class="ttdeci">virtual GLenum _default() const override</div><div class="ttdoc">Віртуальний метод, що задає ціль прив'язки за замовчуванням.</div><div class="ttdef"><b>Definition:</b> <a href="texture_8cpp_source.html#l00017">texture.cpp:17</a></div></div>
+<div class="ttc" id="aclassTexture_html_ac8942e677bb3b5c06a3be96568d89fa8"><div class="ttname"><a href="classTexture.html#ac8942e677bb3b5c06a3be96568d89fa8">Texture::~Texture</a></div><div class="ttdeci">~Texture() override</div><div class="ttdef"><b>Definition:</b> <a href="texture_8cpp_source.html#l00022">texture.cpp:22</a></div></div>
+<div class="ttc" id="aclassTexture_html_ae0c8fad482833b570de830820c12166a"><div class="ttname"><a href="classTexture.html#ae0c8fad482833b570de830820c12166a">Texture::_bind</a></div><div class="ttdeci">virtual void _bind(const GLuint id, GLenum target) const override</div><div class="ttdoc">Віртуальний метод, що прив'язує контекст OpenGL до текстури.</div><div class="ttdef"><b>Definition:</b> <a href="texture_8cpp_source.html#l00012">texture.cpp:12</a></div></div>
+<div class="ttc" id="aclassTexture_html_ae40798a49160911e52be2c0329b17565"><div class="ttname"><a href="classTexture.html#ae40798a49160911e52be2c0329b17565">Texture::make_2d_multisample</a></div><div class="ttdeci">void make_2d_multisample(GLsizei size[2]) const</div><div class="ttdoc">Створює текстуру з згладжуванням.</div><div class="ttdef"><b>Definition:</b> <a href="texture_8cpp_source.html#l00047">texture.cpp:47</a></div></div>
+<div class="ttc" id="aclassTexture_html_af6e54c3a29e5187163e433217516e8d2"><div class="ttname"><a href="classTexture.html#af6e54c3a29e5187163e433217516e8d2">Texture::update</a></div><div class="ttdeci">void update(const Image &amp;image) const</div><div class="ttdoc">Завантажує зображення у текстуру.</div><div class="ttdef"><b>Definition:</b> <a href="texture_8cpp_source.html#l00043">texture.cpp:43</a></div></div>
+<div class="ttc" id="aglbinder_8h_html"><div class="ttname"><a href="glbinder_8h.html">glbinder.h</a></div><div class="ttdoc">Клас який прив'язує контексту до деякого об'єкту OpenGL.</div></div>
+<div class="ttc" id="aimage_8h_html"><div class="ttname"><a href="image_8h.html">image.h</a></div><div class="ttdoc">Задає клас, який зберігає масив пікселів, ширину та висоту.</div></div>
+<div class="ttc" id="aimage_8h_html_a8e678b6802a89940a89c7343bec499f5"><div class="ttname"><a href="image_8h.html#a8e678b6802a89940a89c7343bec499f5">pixel_t</a></div><div class="ttdeci">channel_t pixel_t[COMP]</div><div class="ttdoc">Тип пікселя. Один піксель має COMP каналів і канал визначений типом channel_t. Використовується 8-біт...</div><div class="ttdef"><b>Definition:</b> <a href="image_8h_source.html#l00031">image.h:31</a></div></div>
+<div class="ttc" id="atexture_8cpp_html_a111df5e7a747cd89978fee5d19fa7e22"><div class="ttname"><a href="texture_8cpp.html#a111df5e7a747cd89978fee5d19fa7e22">LoadTextureFromFile</a></div><div class="ttdeci">void LoadTextureFromFile(const pixel_t(*data)[], int width, int height, const GLuint id)</div><div class="ttdef"><b>Definition:</b> <a href="texture_8cpp_source.html#l00026">texture.cpp:26</a></div></div>
+<div class="ttc" id="atexture_8h_html"><div class="ttname"><a href="texture_8h.html">texture.h</a></div><div class="ttdoc">Задає клас текстури.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

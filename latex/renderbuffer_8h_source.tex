@@ -1,0 +1,60 @@
+\hypertarget{renderbuffer_8h_source}{}\doxysubsection{renderbuffer.\+h}
+\label{renderbuffer_8h_source}\index{osdo/renderbuffer.h@{osdo/renderbuffer.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/**}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * @file renderbuffer.h}}
+\DoxyCodeLine{00003 \textcolor{comment}{ * @brief Задає клас буфера рендеренгу (для зберігання кольорів або глибини).}}
+\DoxyCodeLine{00004 \textcolor{comment}{ */}}
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#ifndef RENDERBUFFER\_H}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#define RENDERBUFFER\_H}}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{osdo_8h}{osdo.h}}"{}}}
+\DoxyCodeLine{00009 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{glbindable_8h}{glbindable.h}}"{}}}
+\DoxyCodeLine{00010 \textcolor{comment}{}}
+\DoxyCodeLine{00011 \textcolor{comment}{/**}}
+\DoxyCodeLine{00012 \textcolor{comment}{ * @brief Буфер рендеренгу (для зберігання кольорів або глибини)}}
+\DoxyCodeLine{00013 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{renderbuffer_8h_source_l00014}\mbox{\hyperlink{classRenderbuffer}{00014}} \textcolor{keyword}{class }\mbox{\hyperlink{classRenderbuffer}{Renderbuffer}} : \textcolor{keyword}{public} \mbox{\hyperlink{classGlBindable}{GlBindable}}}
+\DoxyCodeLine{00015 \{\textcolor{comment}{}}
+\DoxyCodeLine{00016 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00017 \textcolor{comment}{     * @brief Віртуальний метод що створює буфер рендеренгу.}}
+\DoxyCodeLine{00018 \textcolor{comment}{     * @return індекс буфер рендеренгу}}
+\DoxyCodeLine{00019 \textcolor{comment}{     */}}
+\DoxyCodeLine{00020     GLuint \mbox{\hyperlink{classRenderbuffer_a95f7ce01633b7b0bd75a475a11f4acc3}{\_generate}}() \textcolor{keyword}{const override};\textcolor{comment}{}}
+\DoxyCodeLine{00021 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00022 \textcolor{comment}{     * @brief Віртуальний метод, що прив'язує контекст OpenGL до буферу рендеренгу.}}
+\DoxyCodeLine{00023 \textcolor{comment}{     * @param id індекс буфер рендеренгу}}
+\DoxyCodeLine{00024 \textcolor{comment}{     * @param target ціль прив'язки буфера рендеренгу}}
+\DoxyCodeLine{00025 \textcolor{comment}{     */}}
+\DoxyCodeLine{00026     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classRenderbuffer_af13806e5fa5089d38b59a4210b8b0325}{\_bind}}(\textcolor{keyword}{const} GLuint \textcolor{keywordtype}{id}, GLenum target) \textcolor{keyword}{const override};\textcolor{comment}{}}
+\DoxyCodeLine{00027 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00028 \textcolor{comment}{     * @brief Віртуальний метод, що задає ціль прив'язки за замовчуванням.}}
+\DoxyCodeLine{00029 \textcolor{comment}{     * @return ціль прив'язки за замовчуванням}}
+\DoxyCodeLine{00030 \textcolor{comment}{     */}}
+\DoxyCodeLine{00031     \textcolor{keyword}{virtual} GLenum \mbox{\hyperlink{classRenderbuffer_ac93dafa9269f474ebfccdc1480c4a0f8}{\_default}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{00032 \textcolor{keyword}{public}:\textcolor{comment}{}}
+\DoxyCodeLine{00033 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00034 \textcolor{comment}{     * @brief Конструктор, що створює буфер рендеренгу.}}
+\DoxyCodeLine{00035 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{renderbuffer_8h_source_l00036}\mbox{\hyperlink{classRenderbuffer_a173dd19fef4a3331773560bea4b90b88}{00036}}     \mbox{\hyperlink{classRenderbuffer_a173dd19fef4a3331773560bea4b90b88}{Renderbuffer}}() : \mbox{\hyperlink{classGlBindable}{GlBindable}}(\mbox{\hyperlink{classRenderbuffer_a95f7ce01633b7b0bd75a475a11f4acc3}{\_generate}}()) \{\}}
+\DoxyCodeLine{00037     \mbox{\hyperlink{classRenderbuffer_a82819f82255c09136ca71d7d8bb9a40d}{\string~Renderbuffer}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{00038 \textcolor{comment}{}}
+\DoxyCodeLine{00039 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00040 \textcolor{comment}{     * @brief Створює буфер рендеренгу з згладжуванням.}}
+\DoxyCodeLine{00041 \textcolor{comment}{     * @param size ширина та висота кадру}}
+\DoxyCodeLine{00042 \textcolor{comment}{     * @param target ціль буферу рендеренгу}}
+\DoxyCodeLine{00043 \textcolor{comment}{     */}}
+\DoxyCodeLine{00044     \textcolor{keywordtype}{void} \mbox{\hyperlink{classRenderbuffer_a492da8fc565ab9ae05f8aae2effdd4e7}{make\_multisample}}(GLsizei size[2], GLenum target) \textcolor{keyword}{const};}
+\DoxyCodeLine{00045 \textcolor{comment}{}}
+\DoxyCodeLine{00046 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00047 \textcolor{comment}{     * @brief Створює буфер рендеренгу.}}
+\DoxyCodeLine{00048 \textcolor{comment}{     * @param size ширина та висота кадру}}
+\DoxyCodeLine{00049 \textcolor{comment}{     * @param target ціль буферу рендеренгу}}
+\DoxyCodeLine{00050 \textcolor{comment}{     */}}
+\DoxyCodeLine{00051     \textcolor{keywordtype}{void} \mbox{\hyperlink{classRenderbuffer_a48aed0ac588e14dd9024af29ef974b22}{make}}(GLsizei size[2], GLenum target) \textcolor{keyword}{const};}
+\DoxyCodeLine{00052 \};}
+\DoxyCodeLine{00053 }
+\DoxyCodeLine{00054 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// RENDERBUFFER\_H}}
+
+\end{DoxyCode}

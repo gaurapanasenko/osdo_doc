@@ -1,0 +1,5 @@
+<map id="Beziator" name="Beziator">
+<area shape="rect" id="node1" title="Клас який зберігає та оброблює модель утвореню через поверхні Безьє." alt="" coords="5,155,76,181"/>
+<area shape="rect" id="node2" href="$classMesh.html" title="Меш, який зберігається на відеокарті." alt="" coords="13,80,68,107"/>
+<area shape="rect" id="node3" href="$classModel.html" title="Інтерфейс до деякої моделі, яку можна відобразити." alt="" coords="12,5,69,32"/>
+</map>

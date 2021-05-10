@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Дипломна робота: Текст програми osdo/scene.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Дипломна робота
+   </div>
+   <div id="projectbrief">студента групи ПА-17-2 Панасенка Єгора Сергійовича</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e0c7de59e470a6e6d29babac2e4befdd.html">osdo</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">scene.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="scene_8cpp.html">Див. документацію.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="scene_8h.html">scene.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="conf_8h.html">conf.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;EASTL/algorithm.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> eastl::transform;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> eastl::make_shared;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="structScene.html#a45d36f98829eeb0b89d458f6f7f5ee9b">    7</a></span>&#160;<a class="code" href="structScene.html#a45d36f98829eeb0b89d458f6f7f5ee9b">Scene::Scene</a>(<span class="keyword">const</span> <a class="code" href="structContext.html#a0fb5343f40542412aa4089d22627f232">Context::Models</a> &amp;objects) : objects(objects) {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;}</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="structScene.html#ac9d55f5bebb962cd4aedc86ec5bf3269">   10</a></span>&#160;shared_ptr&lt;Scene&gt; <a class="code" href="structScene.html#ac9d55f5bebb962cd4aedc86ec5bf3269">Scene::create</a>(<span class="keyword">const</span> <a class="code" href="structContext.html#a0fb5343f40542412aa4089d22627f232">Context::Models</a> &amp;objects)</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">return</span> make_shared&lt;Scene&gt;(<a class="code" href="structScene.html#a295dfaa5202a61abfc8cf32f58d2fdd5">objects</a>);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
+<div class="ttc" id="aconf_8h_html"><div class="ttname"><a href="conf_8h.html">conf.h</a></div><div class="ttdoc">Конфігурація бібліотеки osdo</div></div>
+<div class="ttc" id="ascene_8h_html"><div class="ttname"><a href="scene_8h.html">scene.h</a></div><div class="ttdoc">Задає клас сцени із об'єктами.</div></div>
+<div class="ttc" id="astructContext_html_a0fb5343f40542412aa4089d22627f232"><div class="ttname"><a href="structContext.html#a0fb5343f40542412aa4089d22627f232">Context::Models</a></div><div class="ttdeci">hash_map&lt; string, Object &gt; Models</div><div class="ttdoc">Тип для зберігання моделей.</div><div class="ttdef"><b>Definition:</b> <a href="context_8h_source.html#l00031">context.h:31</a></div></div>
+<div class="ttc" id="astructScene_html_a295dfaa5202a61abfc8cf32f58d2fdd5"><div class="ttname"><a href="structScene.html#a295dfaa5202a61abfc8cf32f58d2fdd5">Scene::objects</a></div><div class="ttdeci">hash_map&lt; string, Object &gt; objects</div><div class="ttdoc">Об'єкти у сцені.</div><div class="ttdef"><b>Definition:</b> <a href="scene_8h_source.html#l00020">scene.h:20</a></div></div>
+<div class="ttc" id="astructScene_html_a45d36f98829eeb0b89d458f6f7f5ee9b"><div class="ttname"><a href="structScene.html#a45d36f98829eeb0b89d458f6f7f5ee9b">Scene::Scene</a></div><div class="ttdeci">Scene(const Context::Models &amp;objects)</div><div class="ttdoc">Конструктор, що створює об'єкти у сцені за заготовленими у агрументі objects</div><div class="ttdef"><b>Definition:</b> <a href="scene_8cpp_source.html#l00007">scene.cpp:7</a></div></div>
+<div class="ttc" id="astructScene_html_ac9d55f5bebb962cd4aedc86ec5bf3269"><div class="ttname"><a href="structScene.html#ac9d55f5bebb962cd4aedc86ec5bf3269">Scene::create</a></div><div class="ttdeci">static shared_ptr&lt; Scene &gt; create(const Context::Models &amp;objects)</div><div class="ttdoc">Створює сцену</div><div class="ttdef"><b>Definition:</b> <a href="scene_8cpp_source.html#l00010">scene.cpp:10</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

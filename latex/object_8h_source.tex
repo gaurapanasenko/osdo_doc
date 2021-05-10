@@ -1,0 +1,170 @@
+\hypertarget{object_8h_source}{}\doxysubsection{object.\+h}
+\label{object_8h_source}\index{osdo/object.h@{osdo/object.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/**}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * @file object.h}}
+\DoxyCodeLine{00003 \textcolor{comment}{ * @brief Задає клас об'єкту моделі.}}
+\DoxyCodeLine{00004 \textcolor{comment}{ */}}
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#ifndef OBJECT\_H}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#define OBJECT\_H}}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{osdo_8h}{osdo.h}}"{}}}
+\DoxyCodeLine{00009 }
+\DoxyCodeLine{00010 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{bijective_8h}{bijective.h}}"{}}}
+\DoxyCodeLine{00011 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{model_8h}{model.h}}"{}}}
+\DoxyCodeLine{00012 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{shader_8h}{shader.h}}"{}}}
+\DoxyCodeLine{00013 \textcolor{preprocessor}{\#include "{}EASTL/shared\_ptr.h"{}}}
+\DoxyCodeLine{00014 \textcolor{keyword}{using} eastl::shared\_ptr;}
+\DoxyCodeLine{00015 \textcolor{keyword}{using} eastl::make\_shared;}
+\DoxyCodeLine{00016 \textcolor{comment}{}}
+\DoxyCodeLine{00017 \textcolor{comment}{/**}}
+\DoxyCodeLine{00018 \textcolor{comment}{ * @brief Об'єкт моделі.}}
+\DoxyCodeLine{00019 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{object_8h_source_l00020}\mbox{\hyperlink{classObject}{00020}} \textcolor{keyword}{class }\mbox{\hyperlink{classObject}{Object}} : \textcolor{keyword}{public} \mbox{\hyperlink{classBijective}{Bijective}} \{\textcolor{comment}{}}
+\DoxyCodeLine{00021 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00022 \textcolor{comment}{     * @brief Матриця лінійних перетворень.}}
+\DoxyCodeLine{00023 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{object_8h_source_l00024}\mbox{\hyperlink{classObject_a8f8afc163da863a8ff5198a650fb1e91}{00024}}     mat4 \mbox{\hyperlink{classObject_a8f8afc163da863a8ff5198a650fb1e91}{transform}};\textcolor{comment}{}}
+\DoxyCodeLine{00025 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00026 \textcolor{comment}{     * @brief Позиція об'єкту у просторі}}
+\DoxyCodeLine{00027 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{object_8h_source_l00028}\mbox{\hyperlink{classObject_a66142044dec90724bc31f9511362eb9f}{00028}}     vec4 \mbox{\hyperlink{classObject_a66142044dec90724bc31f9511362eb9f}{position}};\textcolor{comment}{}}
+\DoxyCodeLine{00029 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00030 \textcolor{comment}{     * @brief Анімація обертання по осям \(\backslash\)f\$(x, y, z, 1.0)\(\backslash\)f\$.}}
+\DoxyCodeLine{00031 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{object_8h_source_l00032}\mbox{\hyperlink{classObject_adffa22add11a86b403a4acef6bc5ac4a}{00032}}     vec4 \mbox{\hyperlink{classObject_adffa22add11a86b403a4acef6bc5ac4a}{animation}};\textcolor{comment}{}}
+\DoxyCodeLine{00033 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00034 \textcolor{comment}{     * @brief Модель об'єкту.}}
+\DoxyCodeLine{00035 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{object_8h_source_l00036}\mbox{\hyperlink{classObject_adadea81d91f42970ba3829793bdac3c5}{00036}}     shared\_ptr<Model> \mbox{\hyperlink{classObject_adadea81d91f42970ba3829793bdac3c5}{model}};}
+\DoxyCodeLine{00037 }
+\DoxyCodeLine{00038 \textcolor{keyword}{public}:\textcolor{comment}{}}
+\DoxyCodeLine{00039 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00040 \textcolor{comment}{     * @brief Конструктор, який створює об'єкт з моделі.}}
+\DoxyCodeLine{00041 \textcolor{comment}{     * @param model Модель об'єкту.}}
+\DoxyCodeLine{00042 \textcolor{comment}{     */}}
+\DoxyCodeLine{00043     \mbox{\hyperlink{classObject_afcecd10bd5781c735966c67a8b2a032f}{Object}}(shared\_ptr<Model> \mbox{\hyperlink{classObject_adadea81d91f42970ba3829793bdac3c5}{model}} = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{object_8h_source_l00044}\mbox{\hyperlink{classObject_ab42ffe43dbd5d5cc089493eb60245ee1}{00044}}     \mbox{\hyperlink{classObject_ab42ffe43dbd5d5cc089493eb60245ee1}{\string~Object}}() \textcolor{keyword}{override} = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00045 \textcolor{comment}{}}
+\DoxyCodeLine{00046 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00047 \textcolor{comment}{     * @brief Забирає поточну позицію об'єкта у просторі.}}
+\DoxyCodeLine{00048 \textcolor{comment}{     * @param[out] position поточна позицію об'єкта}}
+\DoxyCodeLine{00049 \textcolor{comment}{     */}}
+\DoxyCodeLine{00050     \textcolor{keywordtype}{void} \mbox{\hyperlink{classObject_a494825c4cf01dcb9a7cc03d2912ebc23}{get\_position}}(vec4 \mbox{\hyperlink{classObject_a66142044dec90724bc31f9511362eb9f}{position}}) \textcolor{keyword}{override};\textcolor{comment}{}}
+\DoxyCodeLine{00051 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00052 \textcolor{comment}{     * @brief Задає нову позицію об'єкта у просторі.}}
+\DoxyCodeLine{00053 \textcolor{comment}{     * @param[in] position нова позиція об'єкта у просторі}}
+\DoxyCodeLine{00054 \textcolor{comment}{     */}}
+\DoxyCodeLine{00055     \textcolor{keywordtype}{void} \mbox{\hyperlink{classObject_afb2a9a9461d2602bbf04f2a88f79dd03}{set\_position}}(vec4 \mbox{\hyperlink{classObject_a66142044dec90724bc31f9511362eb9f}{position}}) \textcolor{keyword}{override};}
+\DoxyCodeLine{00056 \textcolor{comment}{}}
+\DoxyCodeLine{00057 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00058 \textcolor{comment}{     * @brief Забирає поточний нахил об'єкта.}}
+\DoxyCodeLine{00059 \textcolor{comment}{     * @param[out] rotation поточний нахил  об'єкта}}
+\DoxyCodeLine{00060 \textcolor{comment}{     */}}
+\DoxyCodeLine{00061     \textcolor{keywordtype}{void} \mbox{\hyperlink{classObject_aa8359d878b035e443c8fbe677bbc3613}{get\_rotation}}(vec3 rotation) \textcolor{keyword}{override};\textcolor{comment}{}}
+\DoxyCodeLine{00062 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00063 \textcolor{comment}{     * @brief Задає новий нахил об'єкта.}}
+\DoxyCodeLine{00064 \textcolor{comment}{     * @param[in] rotation новий нахил об'єкта}}
+\DoxyCodeLine{00065 \textcolor{comment}{     */}}
+\DoxyCodeLine{00066     \textcolor{keywordtype}{void} \mbox{\hyperlink{classObject_ad2bac42a4343326372b44a620fc6f32e}{set\_rotation}}(vec3 rotation) \textcolor{keyword}{override};}
+\DoxyCodeLine{00067 \textcolor{comment}{}}
+\DoxyCodeLine{00068 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00069 \textcolor{comment}{     * @brief Забирає поточну анімацію обернення об'єкта.}}
+\DoxyCodeLine{00070 \textcolor{comment}{     * @param[out] rotation поточна анімація обернення об'єкта}}
+\DoxyCodeLine{00071 \textcolor{comment}{     */}}
+\DoxyCodeLine{00072     \textcolor{keywordtype}{void} \mbox{\hyperlink{classObject_a6f78bd2cc21324b4d243bcfab465deaa}{get\_animation}}(vec3 rotation) \textcolor{keyword}{override};\textcolor{comment}{}}
+\DoxyCodeLine{00073 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00074 \textcolor{comment}{     * @brief Задає нову анімацію обернення об'єкта.}}
+\DoxyCodeLine{00075 \textcolor{comment}{     * @param[in] rotation нова анімація обернення об'єкта.}}
+\DoxyCodeLine{00076 \textcolor{comment}{     */}}
+\DoxyCodeLine{00077     \textcolor{keywordtype}{void} \mbox{\hyperlink{classObject_a6ddb712178530b3f3af4b1b1a7c39b00}{set\_animation}}(vec3 rotation) \textcolor{keyword}{override};}
+\DoxyCodeLine{00078 \textcolor{comment}{}}
+\DoxyCodeLine{00079 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00080 \textcolor{comment}{     * @brief Забирає матрицю лінійних перетворень над об'єктом.}}
+\DoxyCodeLine{00081 \textcolor{comment}{     * @param[out] matrix матриця лінійних перетворень}}
+\DoxyCodeLine{00082 \textcolor{comment}{     */}}
+\DoxyCodeLine{00083     \textcolor{keywordtype}{void} \mbox{\hyperlink{classObject_afff370408e02f6886c5bba0406e2073d}{get\_mat4}}(mat4 matrix) \textcolor{keyword}{override};}
+\DoxyCodeLine{00084 \textcolor{comment}{}}
+\DoxyCodeLine{00085 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00086 \textcolor{comment}{     * @brief Переміщує об'єкт у просторі.}}
+\DoxyCodeLine{00087 \textcolor{comment}{     *}}
+\DoxyCodeLine{00088 \textcolor{comment}{     * Переміщує об'єкт у просторі на відстані з аргументу `distances`,}}
+\DoxyCodeLine{00089 \textcolor{comment}{     * де кожне значення вектору позначає відстань відповідної осі.}}
+\DoxyCodeLine{00090 \textcolor{comment}{     * @param[in] distances відстані переміщення по осям}}
+\DoxyCodeLine{00091 \textcolor{comment}{     * @param[in] delta\_time скільки часу пройшло з останнього кадру}}
+\DoxyCodeLine{00092 \textcolor{comment}{     */}}
+\DoxyCodeLine{00093     \textcolor{keywordtype}{void} \mbox{\hyperlink{classObject_a42b8d284828b2d62960ecf07a61cdd32}{translate}}(vec3 distances, \textcolor{keywordtype}{float} delta\_time) \textcolor{keyword}{override};\textcolor{comment}{}}
+\DoxyCodeLine{00094 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00095 \textcolor{comment}{     * @brief Обертає об'єкт.}}
+\DoxyCodeLine{00096 \textcolor{comment}{     * @param[in] coord позначає координатну вісь навколо якої обертати}}
+\DoxyCodeLine{00097 \textcolor{comment}{     * @param[in] delta\_time скільки часу пройшло з останнього кадру}}
+\DoxyCodeLine{00098 \textcolor{comment}{     */}}
+\DoxyCodeLine{00099     \textcolor{keywordtype}{void} \mbox{\hyperlink{classObject_a485bd8b8aa5fb4ca6d0dd9c6701c4948}{rotate}}(\textcolor{keyword}{enum} \mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ff}{coord\_enum}} coord, \textcolor{keywordtype}{float} delta\_time) \textcolor{keyword}{override};\textcolor{comment}{}}
+\DoxyCodeLine{00100 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00101 \textcolor{comment}{     * @brief Обернути об'єкт по всім осям.}}
+\DoxyCodeLine{00102 \textcolor{comment}{     * @param[in] angles вектор кутів у радіанах на кожну вісь}}
+\DoxyCodeLine{00103 \textcolor{comment}{     */}}
+\DoxyCodeLine{00104     \textcolor{keywordtype}{void} \mbox{\hyperlink{classObject_add3dce565f65cf4e74329dd3ed987f73}{rotate\_all}}(vec3 angles) \textcolor{keyword}{override};\textcolor{comment}{}}
+\DoxyCodeLine{00105 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00106 \textcolor{comment}{     * @brief Додає швидкість анімації обертання об'єкту.}}
+\DoxyCodeLine{00107 \textcolor{comment}{     * @param[in] angles вектор швидкостей анімацій обертання по трьом осям}}
+\DoxyCodeLine{00108 \textcolor{comment}{     * @param[in] delta\_time скільки часу пройшло з останнього кадру}}
+\DoxyCodeLine{00109 \textcolor{comment}{     */}}
+\DoxyCodeLine{00110     \textcolor{keywordtype}{void} \mbox{\hyperlink{classObject_a5c6095ac962c2faeaccf09d0a9a7d4a6}{add\_animation}}(vec3 angles, \textcolor{keywordtype}{float} delta\_time) \textcolor{keyword}{override};}
+\DoxyCodeLine{00111 \textcolor{comment}{}}
+\DoxyCodeLine{00112 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00113 \textcolor{comment}{     * @brief Повертає модель об'єкту.}}
+\DoxyCodeLine{00114 \textcolor{comment}{     * @return модель об'єкту}}
+\DoxyCodeLine{00115 \textcolor{comment}{     */}}
+\DoxyCodeLine{00116     shared\_ptr<Model> \mbox{\hyperlink{classObject_aeeec41ecc01e46f9d191b6abc50a0ae0}{get\_model}}();}
+\DoxyCodeLine{00117 \textcolor{comment}{}}
+\DoxyCodeLine{00118 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00119 \textcolor{comment}{     * @brief Відображує об'єкт}}
+\DoxyCodeLine{00120 \textcolor{comment}{     * @param shader Шейдер який використовуєтсья для відображення моделі}}
+\DoxyCodeLine{00121 \textcolor{comment}{     * @param mat4buf буфер матриці}}
+\DoxyCodeLine{00122 \textcolor{comment}{     * @param delta\_time скільки часу пройшло з останнього кадру}}
+\DoxyCodeLine{00123 \textcolor{comment}{     * @param pre\_generated флаг, який позначає яким чином відображати модель}}
+\DoxyCodeLine{00124 \textcolor{comment}{     */}}
+\DoxyCodeLine{00125     \textcolor{keywordtype}{void} \mbox{\hyperlink{classObject_aa23e007d3b922a56f11510c5481a3e07}{draw}}(\mbox{\hyperlink{classShader}{Shader}} \&shader, mat4 mat4buf, GLdouble delta\_time,}
+\DoxyCodeLine{00126               \textcolor{keywordtype}{bool} pre\_generated);}
+\DoxyCodeLine{00127 \textcolor{comment}{}}
+\DoxyCodeLine{00128 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00129 \textcolor{comment}{     * @brief Переміщує об'єкт незалежно від часу.}}
+\DoxyCodeLine{00130 \textcolor{comment}{     * @param distances відстані переміщення по трьом осям \(\backslash\)f\$(x, y, z)\(\backslash\)f\$}}
+\DoxyCodeLine{00131 \textcolor{comment}{     */}}
+\DoxyCodeLine{00132     \textcolor{keywordtype}{void} \mbox{\hyperlink{classObject_ab4dab8a9da970d074185b17c2fd95f21}{translate\_object}}(vec3 distances);}
+\DoxyCodeLine{00133 \textcolor{comment}{}}
+\DoxyCodeLine{00134 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00135 \textcolor{comment}{     * @brief Обертає об'єкт по осі незалежно від часу.}}
+\DoxyCodeLine{00136 \textcolor{comment}{     * @param angle кут обертання у радіанах}}
+\DoxyCodeLine{00137 \textcolor{comment}{     * @param coord ввісь обертання}}
+\DoxyCodeLine{00138 \textcolor{comment}{     */}}
+\DoxyCodeLine{00139     \textcolor{keywordtype}{void} \mbox{\hyperlink{classObject_a9dcb8961e7f0d5cbaaba5eaf826b741a}{rotate\_object}}(\textcolor{keywordtype}{float} angle, \textcolor{keyword}{enum} \mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ff}{coord\_enum}} coord);\textcolor{comment}{}}
+\DoxyCodeLine{00140 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00141 \textcolor{comment}{     * @brief Обертає об'єкт по всім осям незалежно від часу.}}
+\DoxyCodeLine{00142 \textcolor{comment}{     * @param angles вектор кутів обертання по трьом осям \(\backslash\)f\$(x, y, z)\(\backslash\)f\$}}
+\DoxyCodeLine{00143 \textcolor{comment}{     */}}
+\DoxyCodeLine{00144     \textcolor{keywordtype}{void} \mbox{\hyperlink{classObject_a2c5ac1f0bcbd1583ac4fc28bcac70811}{rotate\_all\_object}}(vec3 angles);}
+\DoxyCodeLine{00145 \textcolor{comment}{}}
+\DoxyCodeLine{00146 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00147 \textcolor{comment}{     * @brief Обертає об'єкт по заданій анімації.}}
+\DoxyCodeLine{00148 \textcolor{comment}{     * @param step шаг анімації}}
+\DoxyCodeLine{00149 \textcolor{comment}{     */}}
+\DoxyCodeLine{00150     \textcolor{keywordtype}{void} \mbox{\hyperlink{classObject_ad0997e94d29fff7b70940ce862ea0827}{animate}}(\textcolor{keywordtype}{float} step);}
+\DoxyCodeLine{00151 \textcolor{comment}{}}
+\DoxyCodeLine{00152 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00153 \textcolor{comment}{     * @brief Збільщує або зменшує об'єкт по трьом осям.}}
+\DoxyCodeLine{00154 \textcolor{comment}{     * @param scale коеффіціенти зміни розміру по осям \(\backslash\)f\$(x, y, z)\(\backslash\)f\$}}
+\DoxyCodeLine{00155 \textcolor{comment}{     */}}
+\DoxyCodeLine{00156     \textcolor{keywordtype}{void} \mbox{\hyperlink{classObject_a89c4ed17dc35de90ee5fd12302c9e120}{scale}}(vec3 \mbox{\hyperlink{classObject_a89c4ed17dc35de90ee5fd12302c9e120}{scale}});\textcolor{comment}{}}
+\DoxyCodeLine{00157 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00158 \textcolor{comment}{     * @brief Повертає матрицю лінійних перетворень без переміщення.}}
+\DoxyCodeLine{00159 \textcolor{comment}{     * @return матриця лінійних перетворень}}
+\DoxyCodeLine{00160 \textcolor{comment}{     */}}
+\DoxyCodeLine{00161     mat4* \mbox{\hyperlink{classObject_a5cdb7fd4168627de68679563c48d8567}{get\_transform}}();}
+\DoxyCodeLine{00162 \};}
+\DoxyCodeLine{00163 }
+\DoxyCodeLine{00164 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// OBJECT\_H}}
+
+\end{DoxyCode}

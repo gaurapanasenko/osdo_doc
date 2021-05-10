@@ -1,0 +1,335 @@
+\hypertarget{classDeImgui}{}\doxysubsection{Клас De\+Imgui}
+\label{classDeImgui}\index{DeImgui@{DeImgui}}
+
+
+{\ttfamily \#include $<$deimgui.\+h$>$}
+
+
+
+Діаграма зв\textquotesingle{}язків класу De\+Imgui\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{classDeImgui__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Загальнодоступні елементи}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classDeImgui_a1fac4c02b6787f23343f6d3bf795060b}{init}} (\mbox{\hyperlink{classWindow}{Window}} $\ast$\mbox{\hyperlink{classDeImgui_abac8189c264eeceb0e44a4845d7b66b0}{win}})
+\item 
+\mbox{\hyperlink{classDeImgui_ac2ed40911c24570d633b6ba28e3dd04b}{$\sim$\+De\+Imgui}} ()
+\item 
+\mbox{\hyperlink{classDeImgui_a6a72ab6f671b0e39cad0b09d37763dee}{De\+Imgui}} ()=default
+\item 
+\mbox{\hyperlink{classDeImgui_ae9ef92e0adcac5722afe9e5a61bf5c15}{De\+Imgui}} (const \mbox{\hyperlink{classDeImgui}{De\+Imgui}} \&)=delete
+\item 
+\mbox{\hyperlink{classDeImgui_a497efd8f755e31c4075af22ce640ebd8}{De\+Imgui}} (\mbox{\hyperlink{classDeImgui}{De\+Imgui}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classDeImgui}{De\+Imgui}} \& \mbox{\hyperlink{classDeImgui_ae9b232c6d21c3e57b28afa67c2d18f0b}{operator=}} (const \mbox{\hyperlink{classDeImgui}{De\+Imgui}} \&)=delete
+\item 
+\mbox{\hyperlink{classDeImgui}{De\+Imgui}} \& \mbox{\hyperlink{classDeImgui_afd3fc79748fa6a824ca451213e84d8d2}{operator=}} (\mbox{\hyperlink{classDeImgui}{De\+Imgui}} \&\&)=delete
+\item 
+void \mbox{\hyperlink{classDeImgui_a3650b15446ef07b693ba050642a8f0e6}{render}} ()
+\item 
+void \mbox{\hyperlink{classDeImgui_a85d0b29799dec3904a59e2282f49e3a3}{update}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Приватні дані}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWindow}{Window}} $\ast$ \mbox{\hyperlink{classDeImgui_abac8189c264eeceb0e44a4845d7b66b0}{win}}
+\item 
+bool \mbox{\hyperlink{classDeImgui_a324ddcedca4c84beafdf37fe43914805}{show\+\_\+demo\+\_\+window}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Детальний опис}
+
+
+Див. визначення в файлі \mbox{\hyperlink{deimgui_8h_source}{deimgui.\+h}}, рядок \mbox{\hyperlink{deimgui_8h_source_l00006}{6}}
+
+
+
+\doxysubsubsection{Конструктор(и)}
+\mbox{\Hypertarget{classDeImgui_ac2ed40911c24570d633b6ba28e3dd04b}\label{classDeImgui_ac2ed40911c24570d633b6ba28e3dd04b}} 
+\index{DeImgui@{DeImgui}!````~DeImgui@{$\sim$DeImgui}}
+\index{````~DeImgui@{$\sim$DeImgui}!DeImgui@{DeImgui}}
+\doxyparagraph{\texorpdfstring{$\sim$DeImgui()}{~DeImgui()}}
+{\footnotesize\ttfamily De\+Imgui\+::$\sim$\+De\+Imgui (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{deimgui_8cpp_source}{deimgui.\+cpp}}, рядок \mbox{\hyperlink{deimgui_8cpp_source_l00080}{80}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00080                   \{}
+\DoxyCodeLine{00081     ImGui\_ImplOpenGL3\_Shutdown();}
+\DoxyCodeLine{00082     ImGui\_ImplGlfw\_Shutdown();}
+\DoxyCodeLine{00083     ImGui::DestroyContext();}
+\DoxyCodeLine{00084 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classDeImgui_a6a72ab6f671b0e39cad0b09d37763dee}\label{classDeImgui_a6a72ab6f671b0e39cad0b09d37763dee}} 
+\index{DeImgui@{DeImgui}!DeImgui@{DeImgui}}
+\index{DeImgui@{DeImgui}!DeImgui@{DeImgui}}
+\doxyparagraph{\texorpdfstring{DeImgui()}{DeImgui()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily De\+Imgui\+::\+De\+Imgui (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classDeImgui_ae9ef92e0adcac5722afe9e5a61bf5c15}\label{classDeImgui_ae9ef92e0adcac5722afe9e5a61bf5c15}} 
+\index{DeImgui@{DeImgui}!DeImgui@{DeImgui}}
+\index{DeImgui@{DeImgui}!DeImgui@{DeImgui}}
+\doxyparagraph{\texorpdfstring{DeImgui()}{DeImgui()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily De\+Imgui\+::\+De\+Imgui (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDeImgui}{De\+Imgui}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classDeImgui_a497efd8f755e31c4075af22ce640ebd8}\label{classDeImgui_a497efd8f755e31c4075af22ce640ebd8}} 
+\index{DeImgui@{DeImgui}!DeImgui@{DeImgui}}
+\index{DeImgui@{DeImgui}!DeImgui@{DeImgui}}
+\doxyparagraph{\texorpdfstring{DeImgui()}{DeImgui()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily De\+Imgui\+::\+De\+Imgui (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDeImgui}{De\+Imgui}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsubsection{Опис методів компонент}
+\mbox{\Hypertarget{classDeImgui_a1fac4c02b6787f23343f6d3bf795060b}\label{classDeImgui_a1fac4c02b6787f23343f6d3bf795060b}} 
+\index{DeImgui@{DeImgui}!init@{init}}
+\index{init@{init}!DeImgui@{DeImgui}}
+\doxyparagraph{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void De\+Imgui\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWindow}{Window}} $\ast$}]{win }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{deimgui_8cpp_source}{deimgui.\+cpp}}, рядок \mbox{\hyperlink{deimgui_8cpp_source_l00011}{11}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011                               \{}
+\DoxyCodeLine{00012     this-\/>win = \mbox{\hyperlink{classDeImgui_abac8189c264eeceb0e44a4845d7b66b0}{win}};}
+\DoxyCodeLine{00013     this-\/>\mbox{\hyperlink{classDeImgui_a324ddcedca4c84beafdf37fe43914805}{show\_demo\_window}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{00014 }
+\DoxyCodeLine{00015     IMGUI\_CHECKVERSION();}
+\DoxyCodeLine{00016     ImGui::CreateContext();}
+\DoxyCodeLine{00017     ImGuiIO\& io = ImGui::GetIO(); (void)io;}
+\DoxyCodeLine{00018     io.ConfigFlags |= ImGuiConfigFlags\_DockingEnable;}
+\DoxyCodeLine{00019 }
+\DoxyCodeLine{00020     ImGui::StyleColorsDark();}
+\DoxyCodeLine{00021 }
+\DoxyCodeLine{00022     ImGui::GetStyle().FrameRounding = 4.0f;}
+\DoxyCodeLine{00023     ImGui::GetStyle().GrabRounding = 4.0f;}
+\DoxyCodeLine{00024 }
+\DoxyCodeLine{00025     ImVec4* colors = ImGui::GetStyle().Colors;}
+\DoxyCodeLine{00026     colors[ImGuiCol\_Text] = ImVec4(0.95f, 0.96f, 0.98f, 1.00f);}
+\DoxyCodeLine{00027     colors[ImGuiCol\_TextDisabled] = ImVec4(0.36f, 0.42f, 0.47f, 1.00f);}
+\DoxyCodeLine{00028     colors[ImGuiCol\_WindowBg] = ImVec4(0.11f, 0.15f, 0.17f, 1.00f);}
+\DoxyCodeLine{00029     colors[ImGuiCol\_ChildBg] = ImVec4(0.15f, 0.18f, 0.22f, 1.00f);}
+\DoxyCodeLine{00030     colors[ImGuiCol\_PopupBg] = ImVec4(0.08f, 0.08f, 0.08f, 0.94f);}
+\DoxyCodeLine{00031     colors[ImGuiCol\_Border] = ImVec4(0.08f, 0.10f, 0.12f, 1.00f);}
+\DoxyCodeLine{00032     colors[ImGuiCol\_BorderShadow] = ImVec4(0.00f, 0.00f, 0.00f, 0.00f);}
+\DoxyCodeLine{00033     colors[ImGuiCol\_FrameBg] = ImVec4(0.20f, 0.25f, 0.29f, 1.00f);}
+\DoxyCodeLine{00034     colors[ImGuiCol\_FrameBgHovered] = ImVec4(0.12f, 0.20f, 0.28f, 1.00f);}
+\DoxyCodeLine{00035     colors[ImGuiCol\_FrameBgActive] = ImVec4(0.09f, 0.12f, 0.14f, 1.00f);}
+\DoxyCodeLine{00036     colors[ImGuiCol\_TitleBg] = ImVec4(0.09f, 0.12f, 0.14f, 0.65f);}
+\DoxyCodeLine{00037     colors[ImGuiCol\_TitleBgActive] = ImVec4(0.08f, 0.10f, 0.12f, 1.00f);}
+\DoxyCodeLine{00038     colors[ImGuiCol\_TitleBgCollapsed] = ImVec4(0.00f, 0.00f, 0.00f, 0.51f);}
+\DoxyCodeLine{00039     colors[ImGuiCol\_MenuBarBg] = ImVec4(0.15f, 0.18f, 0.22f, 1.00f);}
+\DoxyCodeLine{00040     colors[ImGuiCol\_ScrollbarBg] = ImVec4(0.02f, 0.02f, 0.02f, 0.39f);}
+\DoxyCodeLine{00041     colors[ImGuiCol\_ScrollbarGrab] = ImVec4(0.20f, 0.25f, 0.29f, 1.00f);}
+\DoxyCodeLine{00042     colors[ImGuiCol\_ScrollbarGrabHovered] = ImVec4(0.18f, 0.22f, 0.25f, 1.00f);}
+\DoxyCodeLine{00043     colors[ImGuiCol\_ScrollbarGrabActive] = ImVec4(0.09f, 0.21f, 0.31f, 1.00f);}
+\DoxyCodeLine{00044     colors[ImGuiCol\_CheckMark] = ImVec4(0.28f, 0.56f, 1.00f, 1.00f);}
+\DoxyCodeLine{00045     colors[ImGuiCol\_SliderGrab] = ImVec4(0.28f, 0.56f, 1.00f, 1.00f);}
+\DoxyCodeLine{00046     colors[ImGuiCol\_SliderGrabActive] = ImVec4(0.37f, 0.61f, 1.00f, 1.00f);}
+\DoxyCodeLine{00047     colors[ImGuiCol\_Button] = ImVec4(0.20f, 0.25f, 0.29f, 1.00f);}
+\DoxyCodeLine{00048     colors[ImGuiCol\_ButtonHovered] = ImVec4(0.28f, 0.56f, 1.00f, 1.00f);}
+\DoxyCodeLine{00049     colors[ImGuiCol\_ButtonActive] = ImVec4(0.06f, 0.53f, 0.98f, 1.00f);}
+\DoxyCodeLine{00050     colors[ImGuiCol\_Header] = ImVec4(0.20f, 0.25f, 0.29f, 0.55f);}
+\DoxyCodeLine{00051     colors[ImGuiCol\_HeaderHovered] = ImVec4(0.26f, 0.59f, 0.98f, 0.80f);}
+\DoxyCodeLine{00052     colors[ImGuiCol\_HeaderActive] = ImVec4(0.26f, 0.59f, 0.98f, 1.00f);}
+\DoxyCodeLine{00053     colors[ImGuiCol\_Separator] = ImVec4(0.20f, 0.25f, 0.29f, 1.00f);}
+\DoxyCodeLine{00054     colors[ImGuiCol\_SeparatorHovered] = ImVec4(0.10f, 0.40f, 0.75f, 0.78f);}
+\DoxyCodeLine{00055     colors[ImGuiCol\_SeparatorActive] = ImVec4(0.10f, 0.40f, 0.75f, 1.00f);}
+\DoxyCodeLine{00056     colors[ImGuiCol\_ResizeGrip] = ImVec4(0.26f, 0.59f, 0.98f, 0.25f);}
+\DoxyCodeLine{00057     colors[ImGuiCol\_ResizeGripHovered] = ImVec4(0.26f, 0.59f, 0.98f, 0.67f);}
+\DoxyCodeLine{00058     colors[ImGuiCol\_ResizeGripActive] = ImVec4(0.26f, 0.59f, 0.98f, 0.95f);}
+\DoxyCodeLine{00059     colors[ImGuiCol\_Tab] = ImVec4(0.11f, 0.15f, 0.17f, 1.00f);}
+\DoxyCodeLine{00060     colors[ImGuiCol\_TabHovered] = ImVec4(0.26f, 0.59f, 0.98f, 0.80f);}
+\DoxyCodeLine{00061     colors[ImGuiCol\_TabActive] = ImVec4(0.20f, 0.25f, 0.29f, 1.00f);}
+\DoxyCodeLine{00062     colors[ImGuiCol\_TabUnfocused] = ImVec4(0.11f, 0.15f, 0.17f, 1.00f);}
+\DoxyCodeLine{00063     colors[ImGuiCol\_TabUnfocusedActive] = ImVec4(0.11f, 0.15f, 0.17f, 1.00f);}
+\DoxyCodeLine{00064     colors[ImGuiCol\_PlotLines] = ImVec4(0.61f, 0.61f, 0.61f, 1.00f);}
+\DoxyCodeLine{00065     colors[ImGuiCol\_PlotLinesHovered] = ImVec4(1.00f, 0.43f, 0.35f, 1.00f);}
+\DoxyCodeLine{00066     colors[ImGuiCol\_PlotHistogram] = ImVec4(0.90f, 0.70f, 0.00f, 1.00f);}
+\DoxyCodeLine{00067     colors[ImGuiCol\_PlotHistogramHovered] = ImVec4(1.00f, 0.60f, 0.00f, 1.00f);}
+\DoxyCodeLine{00068     colors[ImGuiCol\_TextSelectedBg] = ImVec4(0.26f, 0.59f, 0.98f, 0.35f);}
+\DoxyCodeLine{00069     colors[ImGuiCol\_DragDropTarget] = ImVec4(1.00f, 1.00f, 0.00f, 0.90f);}
+\DoxyCodeLine{00070     colors[ImGuiCol\_NavHighlight] = ImVec4(0.26f, 0.59f, 0.98f, 1.00f);}
+\DoxyCodeLine{00071     colors[ImGuiCol\_NavWindowingHighlight] = ImVec4(1.00f, 1.00f, 1.00f, 0.70f);}
+\DoxyCodeLine{00072     colors[ImGuiCol\_NavWindowingDimBg] = ImVec4(0.80f, 0.80f, 0.80f, 0.20f);}
+\DoxyCodeLine{00073     colors[ImGuiCol\_ModalWindowDimBg] = ImVec4(0.80f, 0.80f, 0.80f, 0.35f);}
+\DoxyCodeLine{00074 }
+\DoxyCodeLine{00075     \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{char}* glsl\_version = \textcolor{stringliteral}{"{}\#version 330 core"{}};}
+\DoxyCodeLine{00076     ImGui\_ImplGlfw\_InitForOpenGL(\mbox{\hyperlink{classDeImgui_abac8189c264eeceb0e44a4845d7b66b0}{win}}-\/>\mbox{\hyperlink{classWindow_a16c5a9c1744d2fe611ec1fe3a174e0fb}{get}}(), \textcolor{keyword}{false});}
+\DoxyCodeLine{00077     ImGui\_ImplOpenGL3\_Init(glsl\_version);}
+\DoxyCodeLine{00078 \}}
+
+\end{DoxyCode}
+Граф всіх викликів цієї функції\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{classDeImgui_a1fac4c02b6787f23343f6d3bf795060b_cgraph}
+\end{center}
+\end{figure}
+Граф викликів для цієї функції\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{classDeImgui_a1fac4c02b6787f23343f6d3bf795060b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classDeImgui_ae9b232c6d21c3e57b28afa67c2d18f0b}\label{classDeImgui_ae9b232c6d21c3e57b28afa67c2d18f0b}} 
+\index{DeImgui@{DeImgui}!operator=@{operator=}}
+\index{operator=@{operator=}!DeImgui@{DeImgui}}
+\doxyparagraph{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDeImgui}{De\+Imgui}}\& De\+Imgui\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDeImgui}{De\+Imgui}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classDeImgui_afd3fc79748fa6a824ca451213e84d8d2}\label{classDeImgui_afd3fc79748fa6a824ca451213e84d8d2}} 
+\index{DeImgui@{DeImgui}!operator=@{operator=}}
+\index{operator=@{operator=}!DeImgui@{DeImgui}}
+\doxyparagraph{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDeImgui}{De\+Imgui}}\& De\+Imgui\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDeImgui}{De\+Imgui}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classDeImgui_a3650b15446ef07b693ba050642a8f0e6}\label{classDeImgui_a3650b15446ef07b693ba050642a8f0e6}} 
+\index{DeImgui@{DeImgui}!render@{render}}
+\index{render@{render}!DeImgui@{DeImgui}}
+\doxyparagraph{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void De\+Imgui\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{deimgui_8cpp_source}{deimgui.\+cpp}}, рядок \mbox{\hyperlink{deimgui_8cpp_source_l00087}{87}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00087                      \{}
+\DoxyCodeLine{00088     ImGui::Render();}
+\DoxyCodeLine{00089     ImGui\_ImplOpenGL3\_RenderDrawData(ImGui::GetDrawData());}
+\DoxyCodeLine{00090 \}}
+
+\end{DoxyCode}
+Граф викликів для цієї функції\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{classDeImgui_a3650b15446ef07b693ba050642a8f0e6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classDeImgui_a85d0b29799dec3904a59e2282f49e3a3}\label{classDeImgui_a85d0b29799dec3904a59e2282f49e3a3}} 
+\index{DeImgui@{DeImgui}!update@{update}}
+\index{update@{update}!DeImgui@{DeImgui}}
+\doxyparagraph{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void De\+Imgui\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{deimgui_8cpp_source}{deimgui.\+cpp}}, рядок \mbox{\hyperlink{deimgui_8cpp_source_l00092}{92}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00092                      \{}
+\DoxyCodeLine{00093     ImGui\_ImplOpenGL3\_NewFrame();}
+\DoxyCodeLine{00094     ImGui\_ImplGlfw\_NewFrame();}
+\DoxyCodeLine{00095     ImGui::NewFrame();}
+\DoxyCodeLine{00096 }
+\DoxyCodeLine{00097     \textcolor{comment}{/*if (show\_demo\_window)}}
+\DoxyCodeLine{00098 \textcolor{comment}{        ImGui::ShowDemoWindow(\&show\_demo\_window);*/}}
+\DoxyCodeLine{00099 }
+\DoxyCodeLine{00100     \textcolor{keywordtype}{int} *size = \mbox{\hyperlink{classDeImgui_abac8189c264eeceb0e44a4845d7b66b0}{win}}-\/>\mbox{\hyperlink{classWindow_a00ed91cfb08f776087c5fce3f6338a68}{get\_size}}();}
+\DoxyCodeLine{00101     ImGui::SetNextWindowPos(ImVec2(0, 0), ImGuiCond\_Always);}
+\DoxyCodeLine{00102     ImGui::SetNextWindowSize(ImVec2(size[0], size[1]), ImGuiCond\_Always);}
+\DoxyCodeLine{00103     ImGuiWindowFlags window\_flags = 0}
+\DoxyCodeLine{00104         | ImGuiWindowFlags\_MenuBar | ImGuiWindowFlags\_NoDocking}
+\DoxyCodeLine{00105         | ImGuiWindowFlags\_NoTitleBar | ImGuiWindowFlags\_NoCollapse}
+\DoxyCodeLine{00106         | ImGuiWindowFlags\_NoResize | ImGuiWindowFlags\_NoMove}
+\DoxyCodeLine{00107         | ImGuiWindowFlags\_NoBringToFrontOnFocus | ImGuiWindowFlags\_NoNavFocus;}
+\DoxyCodeLine{00108     ImGui::PushStyleVar(ImGuiStyleVar\_WindowPadding, ImVec2(0.0f, 0.0f));}
+\DoxyCodeLine{00109     ImGui::PushStyleVar(ImGuiStyleVar\_WindowRounding, 0.0f);}
+\DoxyCodeLine{00110     ImGui::PushStyleVar(ImGuiStyleVar\_WindowBorderSize, 0.0f);}
+\DoxyCodeLine{00111     ImGui::Begin(\textcolor{stringliteral}{"{}Main Window"{}}, \textcolor{keyword}{nullptr}, window\_flags);}
+\DoxyCodeLine{00112     ImGuiID dockMain = ImGui::GetID(\textcolor{stringliteral}{"{}MyDockspace"{}});}
+\DoxyCodeLine{00113 }
+\DoxyCodeLine{00114     ImGui::DockSpace(dockMain);}
+\DoxyCodeLine{00115     ImGui::End();}
+\DoxyCodeLine{00116     ImGui::PopStyleVar(3);}
+\DoxyCodeLine{00117 }
+\DoxyCodeLine{00118     \textcolor{keywordtype}{bool} open = \textcolor{keyword}{false};}
+\DoxyCodeLine{00119     \textcolor{keywordflow}{if}(ImGui::BeginMainMenuBar())}
+\DoxyCodeLine{00120     \{}
+\DoxyCodeLine{00121         \textcolor{keywordflow}{if} (ImGui::BeginMenu(\textcolor{stringliteral}{"{}Menu"{}}))}
+\DoxyCodeLine{00122         \{}
+\DoxyCodeLine{00123             \textcolor{keywordflow}{if} (ImGui::MenuItem(\textcolor{stringliteral}{"{}Open"{}}, \textcolor{keyword}{nullptr}))}
+\DoxyCodeLine{00124                 open = \textcolor{keyword}{true};}
+\DoxyCodeLine{00125             \textcolor{comment}{/*if (ImGui::MenuItem("{}Demo"{}, nullptr))}}
+\DoxyCodeLine{00126 \textcolor{comment}{                show\_demo\_window = true;*/}}
+\DoxyCodeLine{00127 }
+\DoxyCodeLine{00128             ImGui::EndMenu();}
+\DoxyCodeLine{00129         \}}
+\DoxyCodeLine{00130         ImGui::EndMainMenuBar();}
+\DoxyCodeLine{00131     \}}
+\DoxyCodeLine{00132 }
+\DoxyCodeLine{00133     \textcolor{keywordflow}{if}(open)}
+\DoxyCodeLine{00134         ImGuiFileDialog::Instance()-\/>OpenDialog(}
+\DoxyCodeLine{00135                     \textcolor{stringliteral}{"{}ModelOpenDialog"{}}, \textcolor{stringliteral}{"{}Open a model"{}},}
+\DoxyCodeLine{00136                     \textcolor{stringliteral}{"{}.odom,.*"{}}, \textcolor{stringliteral}{"{}."{}});}
+\DoxyCodeLine{00137 \}}
+
+\end{DoxyCode}
+Граф всіх викликів цієї функції\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{classDeImgui_a85d0b29799dec3904a59e2282f49e3a3_cgraph}
+\end{center}
+\end{figure}
+Граф викликів для цієї функції\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{classDeImgui_a85d0b29799dec3904a59e2282f49e3a3_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsubsection{Компонентні дані}
+\mbox{\Hypertarget{classDeImgui_a324ddcedca4c84beafdf37fe43914805}\label{classDeImgui_a324ddcedca4c84beafdf37fe43914805}} 
+\index{DeImgui@{DeImgui}!show\_demo\_window@{show\_demo\_window}}
+\index{show\_demo\_window@{show\_demo\_window}!DeImgui@{DeImgui}}
+\doxyparagraph{\texorpdfstring{show\_demo\_window}{show\_demo\_window}}
+{\footnotesize\ttfamily bool De\+Imgui\+::show\+\_\+demo\+\_\+window\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{deimgui_8h_source}{deimgui.\+h}}, рядок \mbox{\hyperlink{deimgui_8h_source_l00009}{9}}
+
+\mbox{\Hypertarget{classDeImgui_abac8189c264eeceb0e44a4845d7b66b0}\label{classDeImgui_abac8189c264eeceb0e44a4845d7b66b0}} 
+\index{DeImgui@{DeImgui}!win@{win}}
+\index{win@{win}!DeImgui@{DeImgui}}
+\doxyparagraph{\texorpdfstring{win}{win}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWindow}{Window}}$\ast$ De\+Imgui\+::win\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{deimgui_8h_source}{deimgui.\+h}}, рядок \mbox{\hyperlink{deimgui_8h_source_l00007}{7}}
+
+
+
+Документація цих класів була створена з файлів\+:\begin{DoxyCompactItemize}
+\item 
+druidengine/\mbox{\hyperlink{deimgui_8h}{deimgui.\+h}}\item 
+druidengine/\mbox{\hyperlink{deimgui_8cpp}{deimgui.\+cpp}}\end{DoxyCompactItemize}

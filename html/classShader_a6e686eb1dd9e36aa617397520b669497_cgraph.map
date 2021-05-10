@@ -1,0 +1,4 @@
+<map id="Shader::set_float" name="Shader::set_float">
+<area shape="rect" id="node1" title="Задати поле шейдеру типу float" alt="" coords="5,5,127,32"/>
+<area shape="rect" id="node2" href="$classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7" title="Повертає індекс об&#39;єкту OpenGL." alt="" coords="175,5,303,32"/>
+</map>

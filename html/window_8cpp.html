@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Дипломна робота: Файл druidengine/window.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Дипломна робота
+   </div>
+   <div id="projectbrief">студента групи ПА-17-2 Панасенка Єгора Сергійовича</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_949b4dac30c9b4f92191601f9632f3ff.html">druidengine</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Класи</a> &#124;
+<a href="#typedef-members">Визначення типів</a> &#124;
+<a href="#func-members">Функції</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл window.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="window_8h_source.html">window.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="conf_8h_source.html">conf.h</a>&quot;</code><br />
+<code>#include &lt;GLFW/glfw3.h&gt;</code><br />
+<code>#include &lt;imgui.h&gt;</code><br />
+<code>#include &quot;imgui_impl_glfw.h&quot;</code><br />
+<code>#include &quot;imgui_impl_opengl2.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Діаграма включених заголовочних файлів для window.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="window_8cpp__incl.png" border="0" usemap="#adruidengine_2window_8cpp" alt=""/></div>
+<map name="adruidengine_2window_8cpp" id="adruidengine_2window_8cpp">
+<area shape="rect" title=" " alt="" coords="244,5,404,32"/>
+<area shape="rect" href="window_8h.html" title=" " alt="" coords="49,155,125,181"/>
+<area shape="rect" href="conf_8h.html" title=" " alt="" coords="133,80,192,107"/>
+<area shape="rect" title=" " alt="" coords="216,80,323,107"/>
+<area shape="rect" title=" " alt="" coords="347,80,411,107"/>
+<area shape="rect" title=" " alt="" coords="435,80,560,107"/>
+<area shape="rect" title=" " alt="" coords="584,80,731,107"/>
+<area shape="rect" href="osdo_8h.html" title=" " alt="" coords="132,229,193,256"/>
+<area shape="rect" title=" " alt="" coords="5,304,99,331"/>
+<area shape="rect" title=" " alt="" coords="123,304,203,331"/>
+<area shape="rect" title=" " alt="" coords="227,304,291,331"/>
+<area shape="rect" href="vertex_8h.html" title=" " alt="" coords="200,155,269,181"/>
+</map>
+</div>
+</div>
+<p><a href="window_8cpp_source.html">Див. вихідні тексти.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Класи</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkey__map__t.html">key_map_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmouse__map__t.html">mouse_map_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Визначення типів</h2></td></tr>
+<tr class="memitem:a234b5b1147e2fc05d2b0cebe692e3834"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structkey__map__t.html">key_map_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="window_8cpp.html#a234b5b1147e2fc05d2b0cebe692e3834">key_map_t</a></td></tr>
+<tr class="separator:a234b5b1147e2fc05d2b0cebe692e3834"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a648f15cfd900029e8b824ff741552943"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structmouse__map__t.html">mouse_map_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="window_8cpp.html#a648f15cfd900029e8b824ff741552943">mouse_map_t</a></td></tr>
+<tr class="separator:a648f15cfd900029e8b824ff741552943"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функції</h2></td></tr>
+<tr class="memitem:af6765bf7aae4ba2a0d60d0091a3f5f61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="window_8cpp.html#af6765bf7aae4ba2a0d60d0091a3f5f61">map_init</a> (void)</td></tr>
+<tr class="separator:af6765bf7aae4ba2a0d60d0091a3f5f61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac97bd0f3af797ceb0789b137fb0b526f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="window_8cpp.html#ac97bd0f3af797ceb0789b137fb0b526f">error_callback</a> (int e, const char *d)</td></tr>
+<tr class="separator:ac97bd0f3af797ceb0789b137fb0b526f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Опис визначень типів</h2>
+<a id="a234b5b1147e2fc05d2b0cebe692e3834"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a234b5b1147e2fc05d2b0cebe692e3834">&#9670;&nbsp;</a></span>key_map_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structkey__map__t.html">key_map_t</a> <a class="el" href="structkey__map__t.html">key_map_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a648f15cfd900029e8b824ff741552943"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a648f15cfd900029e8b824ff741552943">&#9670;&nbsp;</a></span>mouse_map_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structmouse__map__t.html">mouse_map_t</a> <a class="el" href="structmouse__map__t.html">mouse_map_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Опис функцій</h2>
+<a id="ac97bd0f3af797ceb0789b137fb0b526f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac97bd0f3af797ceb0789b137fb0b526f">&#9670;&nbsp;</a></span>error_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void error_callback </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>d</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Див. визначення в файлі <a class="el" href="window_8cpp_source.html">window.cpp</a>, рядок <a class="el" href="window_8cpp_source.html#l00084">84</a></p>
+<div class="fragment"><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                                          {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    printf(<span class="stringliteral">&quot;Error %d: %s\n&quot;</span>, e, d);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+Граф викликів для цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="window_8cpp_ac97bd0f3af797ceb0789b137fb0b526f_icgraph.png" border="0" usemap="#awindow_8cpp_ac97bd0f3af797ceb0789b137fb0b526f_icgraph" alt=""/></div>
+<map name="awindow_8cpp_ac97bd0f3af797ceb0789b137fb0b526f_icgraph" id="awindow_8cpp_ac97bd0f3af797ceb0789b137fb0b526f_icgraph">
+<area shape="rect" title=" " alt="" coords="364,5,467,32"/>
+<area shape="rect" href="classWindow.html#a9b8185b7661ce79e9b02b0c1fec94e93" title=" " alt="" coords="223,5,316,32"/>
+<area shape="rect" href="classApp.html#a734e41fc893a74403a725cb1df3403dc" title=" " alt="" coords="104,5,175,32"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af6765bf7aae4ba2a0d60d0091a3f5f61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6765bf7aae4ba2a0d60d0091a3f5f61">&#9670;&nbsp;</a></span>map_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void map_init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Див. визначення в файлі <a class="el" href="window_8cpp_source.html">window.cpp</a>, рядок <a class="el" href="window_8cpp_source.html#l00067">67</a></p>
+<div class="fragment"><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                    {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">if</span> (!map_inited) {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        map_inited = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">void</span>* end;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        end = key_list + <span class="keyword">sizeof</span>(key_list) / <span class="keyword">sizeof</span>(<a class="code" href="structkey__map__t.html">key_map_t</a>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code" href="structkey__map__t.html">key_map_t</a> *i = key_list; i != end; i++) {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            key_glfw_map[i-&gt;key] = i-&gt;glfw_key;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            glfw_key_map[i-&gt;glfw_key] = i-&gt;key;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        end = mouse_list + <span class="keyword">sizeof</span>(mouse_list) / <span class="keyword">sizeof</span>(<a class="code" href="structmouse__map__t.html">mouse_map_t</a>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code" href="structmouse__map__t.html">mouse_map_t</a> *i = mouse_list; i != end; i++) {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            btn_glfw_map[i-&gt;btn] = i-&gt;glfw_btn;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            glfw_btn_map[i-&gt;glfw_btn] = i-&gt;btn;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
+<div class="ttc" id="astructkey__map__t_html"><div class="ttname"><a href="structkey__map__t.html">key_map_t</a></div><div class="ttdef"><b>Definition:</b> <a href="window_8cpp_source.html#l00008">window.cpp:8</a></div></div>
+<div class="ttc" id="astructmouse__map__t_html"><div class="ttname"><a href="structmouse__map__t.html">mouse_map_t</a></div><div class="ttdef"><b>Definition:</b> <a href="window_8cpp_source.html#l00013">window.cpp:13</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Граф викликів для цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="window_8cpp_af6765bf7aae4ba2a0d60d0091a3f5f61_icgraph.png" border="0" usemap="#awindow_8cpp_af6765bf7aae4ba2a0d60d0091a3f5f61_icgraph" alt=""/></div>
+<map name="awindow_8cpp_af6765bf7aae4ba2a0d60d0091a3f5f61_icgraph" id="awindow_8cpp_af6765bf7aae4ba2a0d60d0091a3f5f61_icgraph">
+<area shape="rect" title=" " alt="" coords="364,5,435,32"/>
+<area shape="rect" href="classWindow.html#a9b8185b7661ce79e9b02b0c1fec94e93" title=" " alt="" coords="223,5,316,32"/>
+<area shape="rect" href="classApp.html#a734e41fc893a74403a725cb1df3403dc" title=" " alt="" coords="104,5,175,32"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

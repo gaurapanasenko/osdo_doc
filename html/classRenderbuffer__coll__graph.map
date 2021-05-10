@@ -1,0 +1,4 @@
+<map id="Renderbuffer" name="Renderbuffer">
+<area shape="rect" id="node1" title="Буфер рендеренгу (для зберігання кольорів або глибини)" alt="" coords="5,80,101,107"/>
+<area shape="rect" id="node2" href="$classGlBindable.html" title="Абстрактний клас, який виконує роль генерації та прив&#39;язки об&#39;єктів OpenGL." alt="" coords="11,5,96,32"/>
+</map>

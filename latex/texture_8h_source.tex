@@ -1,0 +1,63 @@
+\hypertarget{texture_8h_source}{}\doxysubsection{texture.\+h}
+\label{texture_8h_source}\index{osdo/texture.h@{osdo/texture.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/**}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * @file texture.h}}
+\DoxyCodeLine{00003 \textcolor{comment}{ * @brief Задає клас текстури.}}
+\DoxyCodeLine{00004 \textcolor{comment}{ */}}
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#ifndef TEXTURE\_H}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#define TEXTURE\_H}}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{osdo_8h}{osdo.h}}"{}}}
+\DoxyCodeLine{00009 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{glbindable_8h}{glbindable.h}}"{}}}
+\DoxyCodeLine{00010 }
+\DoxyCodeLine{00011 \textcolor{keyword}{class }\mbox{\hyperlink{classImage}{Image}};}
+\DoxyCodeLine{00012 \textcolor{comment}{}}
+\DoxyCodeLine{00013 \textcolor{comment}{/**}}
+\DoxyCodeLine{00014 \textcolor{comment}{ * @brief Клас текстури, що зберігаэться у відеокарті.}}
+\DoxyCodeLine{00015 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{texture_8h_source_l00016}\mbox{\hyperlink{classTexture}{00016}} \textcolor{keyword}{class }\mbox{\hyperlink{classTexture}{Texture}} : \textcolor{keyword}{public} \mbox{\hyperlink{classGlBindable}{GlBindable}}}
+\DoxyCodeLine{00017 \{\textcolor{comment}{}}
+\DoxyCodeLine{00018 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00019 \textcolor{comment}{     * @brief Віртуальний метод що створює текстуру.}}
+\DoxyCodeLine{00020 \textcolor{comment}{     * @return індекс текстури}}
+\DoxyCodeLine{00021 \textcolor{comment}{     */}}
+\DoxyCodeLine{00022     GLuint \mbox{\hyperlink{classTexture_a04704df51d1b28c3fadbe209755d3217}{\_generate}}() \textcolor{keyword}{const override};\textcolor{comment}{}}
+\DoxyCodeLine{00023 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00024 \textcolor{comment}{     * @brief Віртуальний метод, що прив'язує контекст OpenGL до текстури.}}
+\DoxyCodeLine{00025 \textcolor{comment}{     * @param id індекс текстури}}
+\DoxyCodeLine{00026 \textcolor{comment}{     * @param target ціль прив'язки текстури}}
+\DoxyCodeLine{00027 \textcolor{comment}{     */}}
+\DoxyCodeLine{00028     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classTexture_ae0c8fad482833b570de830820c12166a}{\_bind}}(\textcolor{keyword}{const} GLuint \textcolor{keywordtype}{id}, GLenum target) \textcolor{keyword}{const override};\textcolor{comment}{}}
+\DoxyCodeLine{00029 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00030 \textcolor{comment}{     * @brief Віртуальний метод, що задає ціль прив'язки за замовчуванням.}}
+\DoxyCodeLine{00031 \textcolor{comment}{     * @return ціль прив'язки за замовчуванням}}
+\DoxyCodeLine{00032 \textcolor{comment}{     */}}
+\DoxyCodeLine{00033     \textcolor{keyword}{virtual} GLenum \mbox{\hyperlink{classTexture_a0f788e2cad6ef4b1058e1de912658582}{\_default}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{00034 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{texture_8h_source_l00035}\mbox{\hyperlink{classTexture_a6c275e3f186675ff6ed73ccf970e552f}{00035}}     \mbox{\hyperlink{classTexture_a6c275e3f186675ff6ed73ccf970e552f}{Texture}}() : \mbox{\hyperlink{classGlBindable}{GlBindable}}(\mbox{\hyperlink{classTexture_a04704df51d1b28c3fadbe209755d3217}{\_generate}}()) \{\}}
+\DoxyCodeLine{00036     \mbox{\hyperlink{classTexture_ac8942e677bb3b5c06a3be96568d89fa8}{\string~Texture}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{00037 \textcolor{comment}{}}
+\DoxyCodeLine{00038 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00039 \textcolor{comment}{     * @brief Завантажує зображення у текстуру.}}
+\DoxyCodeLine{00040 \textcolor{comment}{     * @param image зображення}}
+\DoxyCodeLine{00041 \textcolor{comment}{     */}}
+\DoxyCodeLine{00042     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTexture_af6e54c3a29e5187163e433217516e8d2}{update}}(\textcolor{keyword}{const} \mbox{\hyperlink{classImage}{Image}}\& image) \textcolor{keyword}{const};}
+\DoxyCodeLine{00043 \textcolor{comment}{}}
+\DoxyCodeLine{00044 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00045 \textcolor{comment}{     * @brief Створює текстуру з згладжуванням.}}
+\DoxyCodeLine{00046 \textcolor{comment}{     * @param size ширина та висота кадру}}
+\DoxyCodeLine{00047 \textcolor{comment}{     */}}
+\DoxyCodeLine{00048     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTexture_ae40798a49160911e52be2c0329b17565}{make\_2d\_multisample}}(GLsizei size[2]) \textcolor{keyword}{const};}
+\DoxyCodeLine{00049 \textcolor{comment}{}}
+\DoxyCodeLine{00050 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00051 \textcolor{comment}{     * @brief Створює текстуру.}}
+\DoxyCodeLine{00052 \textcolor{comment}{     * @param size ширина та висота кадру}}
+\DoxyCodeLine{00053 \textcolor{comment}{     */}}
+\DoxyCodeLine{00054     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTexture_a08252c0058235586ddce388f6ac81b79}{make\_2d}}(GLsizei size[2]) \textcolor{keyword}{const};}
+\DoxyCodeLine{00055 \};}
+\DoxyCodeLine{00056 }
+\DoxyCodeLine{00057 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// TEXTURE\_H}}
+
+\end{DoxyCode}

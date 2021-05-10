@@ -1,0 +1,10 @@
+<map id="BeziatorPanel::edit_panel" name="BeziatorPanel::edit_panel">
+<area shape="rect" id="node1" title=" " alt="" coords="5,99,137,141"/>
+<area shape="rect" id="node2" href="$classBeziator.html#a850797d7a346cd6f30405e21b0224a3e" title="Генерує деталізований меш моделі." alt="" coords="185,56,313,83"/>
+<area shape="rect" id="node7" href="$classBeziator.html#a17dc368875dfa7375eda7889c1fbd5e5" title="Інвертує порядок індесів поверхні, щоб нормалі дивилися у протилежний бік." alt="" coords="194,107,305,133"/>
+<area shape="rect" id="node8" href="$classBeziator.html#af67a38badc29b8747f242bbde8a2ccdf" title="Зберігає модель у файл, вказаний у полі path." alt="" coords="197,157,302,184"/>
+<area shape="rect" id="node3" href="$beziator_8cpp.html#ac99c8d4702aa8184518428b26331873c" title=" " alt="" coords="361,31,469,57"/>
+<area shape="rect" id="node6" href="$classMesh.html#aca2f681788fcbf90320d631d8c3428c9" title=" " alt="" coords="365,81,466,108"/>
+<area shape="rect" id="node4" href="$beziator_8cpp.html#abff744cd88c5f344ef77ebcd6f2ec8a1" title=" " alt="" coords="543,5,639,32"/>
+<area shape="rect" id="node5" href="$beziator_8cpp.html#a9441d014e907f9b43dbe11cebcfaf138" title=" " alt="" coords="517,56,664,83"/>
+</map>

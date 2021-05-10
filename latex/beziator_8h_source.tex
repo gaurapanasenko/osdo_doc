@@ -1,0 +1,117 @@
+\hypertarget{beziator_8h_source}{}\doxysubsection{beziator.\+h}
+\label{beziator_8h_source}\index{osdo/beziator.h@{osdo/beziator.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/**}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * @file beziator.h}}
+\DoxyCodeLine{00003 \textcolor{comment}{ * @brief Клас який зберігає та оброблює модель утвореню через поверхні Безьє.}}
+\DoxyCodeLine{00004 \textcolor{comment}{ */}}
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#ifndef BEZIATOR\_H}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#define BEZIATOR\_H}}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#include <EASTL/string.h>}}
+\DoxyCodeLine{00009 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{osdo_8h}{osdo.h}}"{}}}
+\DoxyCodeLine{00010 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{mesh_8h}{mesh.h}}"{}}}
+\DoxyCodeLine{00011 }
+\DoxyCodeLine{00012 \textcolor{keyword}{using} eastl::string;}
+\DoxyCodeLine{00013 \textcolor{comment}{}}
+\DoxyCodeLine{00014 \textcolor{comment}{/**}}
+\DoxyCodeLine{00015 \textcolor{comment}{ * @brief Набір індексів на вершини, що утворюють поверхню 4x4.}}
+\DoxyCodeLine{00016 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{beziator_8h_source_l00017}\mbox{\hyperlink{beziator_8h_adc91dd1f882e36615956dace902ac8a2}{00017}} \textcolor{keyword}{typedef} GLuint \mbox{\hyperlink{beziator_8h_adc91dd1f882e36615956dace902ac8a2}{surfacei\_t}}[4][4];}
+\DoxyCodeLine{00018 \textcolor{comment}{}}
+\DoxyCodeLine{00019 \textcolor{comment}{/**}}
+\DoxyCodeLine{00020 \textcolor{comment}{ * @brief Клас який зберігає та оброблює модель утвореню через поверхні Безьє.}}
+\DoxyCodeLine{00021 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{beziator_8h_source_l00022}\mbox{\hyperlink{classBeziator}{00022}} \textcolor{keyword}{class }\mbox{\hyperlink{classBeziator}{Beziator}} : \textcolor{keyword}{public} \mbox{\hyperlink{classMesh}{Mesh}} \{}
+\DoxyCodeLine{00023 \textcolor{keyword}{public}:\textcolor{comment}{}}
+\DoxyCodeLine{00024 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00025 \textcolor{comment}{     * @brief Тип позначаючий вказівнкик на массив з поверхнями Безьє.}}
+\DoxyCodeLine{00026 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{beziator_8h_source_l00027}\mbox{\hyperlink{classBeziator_abc19212ee3b33d266c1c2017bf97c738}{00027}}     \textcolor{keyword}{typedef} \mbox{\hyperlink{beziator_8h_adc91dd1f882e36615956dace902ac8a2}{surfacei\_t}}* \mbox{\hyperlink{classBeziator_abc19212ee3b33d266c1c2017bf97c738}{surfaces\_vector}};}
+\DoxyCodeLine{00028 \textcolor{keyword}{protected}:\textcolor{comment}{}}
+\DoxyCodeLine{00029 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00030 \textcolor{comment}{     * @brief Шлях до файлу у якому зберігається модель.}}
+\DoxyCodeLine{00031 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{beziator_8h_source_l00032}\mbox{\hyperlink{classBeziator_a982834e352be2e112b07d1f60a090a98}{00032}}     \textcolor{keyword}{const} \textcolor{keywordtype}{string} \mbox{\hyperlink{classBeziator_a982834e352be2e112b07d1f60a090a98}{path}};\textcolor{comment}{}}
+\DoxyCodeLine{00033 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00034 \textcolor{comment}{     * @brief Згенерований за допомогою CPU меш моделі.}}
+\DoxyCodeLine{00035 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{beziator_8h_source_l00036}\mbox{\hyperlink{classBeziator_afc2e274334058f3b4c34f025156693f1}{00036}}     \mbox{\hyperlink{classMesh}{Mesh}} \mbox{\hyperlink{classBeziator_afc2e274334058f3b4c34f025156693f1}{mesh}};}
+\DoxyCodeLine{00037     \textcolor{comment}{//Mesh frame;}}
+\DoxyCodeLine{00038     \textcolor{comment}{//Mesh normals;}\textcolor{comment}{}}
+\DoxyCodeLine{00039 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00040 \textcolor{comment}{     * @brief Масив вершин/вузлів моделі.}}
+\DoxyCodeLine{00041 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{beziator_8h_source_l00042}\mbox{\hyperlink{classBeziator_ade482f00f5cb1ce4d594b4c132903313}{00042}}     vector<Vertex> \mbox{\hyperlink{classBeziator_ade482f00f5cb1ce4d594b4c132903313}{vertices}};\textcolor{comment}{}}
+\DoxyCodeLine{00043 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00044 \textcolor{comment}{     * @brief Масив індексів, що утворюють поверхні Безье.}}
+\DoxyCodeLine{00045 \textcolor{comment}{     *}}
+\DoxyCodeLine{00046 \textcolor{comment}{     * Індекси розташовані у масиві по 16 элементів, які утворюють поверхню}}
+\DoxyCodeLine{00047 \textcolor{comment}{     * з контрольними точками 4x4.}}
+\DoxyCodeLine{00048 \textcolor{comment}{     * Масив легко інтерпретуєтсья у `surfaces\_vector`:}}
+\DoxyCodeLine{00049 \textcolor{comment}{     *}}
+\DoxyCodeLine{00050 \textcolor{comment}{     *     surfacei\_t *surfaces = reinterpret\_cast<surfacei\_t*>(indices.data());}}
+\DoxyCodeLine{00051 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{beziator_8h_source_l00052}\mbox{\hyperlink{classBeziator_aa885148677b1b0fd71850f2cd604af5e}{00052}}     vector<GLuint> \mbox{\hyperlink{classBeziator_aa885148677b1b0fd71850f2cd604af5e}{indices}};}
+\DoxyCodeLine{00053 \textcolor{keyword}{public}:\textcolor{comment}{}}
+\DoxyCodeLine{00054 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00055 \textcolor{comment}{     * @brief Конструктор до Beziator, який зберігає шлях до файлу з моделлю.}}
+\DoxyCodeLine{00056 \textcolor{comment}{     *}}
+\DoxyCodeLine{00057 \textcolor{comment}{     * Обов'язково потібно запустити метод `Beziator::init` для того щоб}}
+\DoxyCodeLine{00058 \textcolor{comment}{     * завантажити модель у пам'ять.}}
+\DoxyCodeLine{00059 \textcolor{comment}{     * @param path Шлях до файлу у якому зберігається модель.}}
+\DoxyCodeLine{00060 \textcolor{comment}{     */}}
+\DoxyCodeLine{00061     \mbox{\hyperlink{classBeziator_a2e0cf1c9d9d89ed9772f1b5659845330}{Beziator}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& \mbox{\hyperlink{classBeziator_a982834e352be2e112b07d1f60a090a98}{path}});}
+\DoxyCodeLine{00062     \mbox{\hyperlink{classBeziator_aec6c4b5d0cf86ae184b435432814fb25}{\string~Beziator}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{00063 \textcolor{comment}{}}
+\DoxyCodeLine{00064 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00065 \textcolor{comment}{     * @brief Завантажує модель у пам'ять.}}
+\DoxyCodeLine{00066 \textcolor{comment}{     * @return Статус, чи успішно була завантажена модель.}}
+\DoxyCodeLine{00067 \textcolor{comment}{     */}}
+\DoxyCodeLine{00068     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classBeziator_aeafb7d3607d064c7dfa7e1c4c6d698cb}{init}}();}
+\DoxyCodeLine{00069 \textcolor{comment}{}}
+\DoxyCodeLine{00070 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00071 \textcolor{comment}{     * @brief Відображує модель.}}
+\DoxyCodeLine{00072 \textcolor{comment}{     *}}
+\DoxyCodeLine{00073 \textcolor{comment}{     * За допомогою флагу `pre\_generated` можна задати яким чином потібно}}
+\DoxyCodeLine{00074 \textcolor{comment}{     * відображати, якщо задати `false`, то у буде використаний меш із}}
+\DoxyCodeLine{00075 \textcolor{comment}{     * поверхнями Безье 4x4, а якщо задано `true`,}}
+\DoxyCodeLine{00076 \textcolor{comment}{     * то відобразиться сгенерований деталізований меш моделі.}}
+\DoxyCodeLine{00077 \textcolor{comment}{     * @param shader Шейдер який використовуєтсья для відображення моделі.}}
+\DoxyCodeLine{00078 \textcolor{comment}{     * @param pre\_generated Флаг, який позначає який з мешів відображати.}}
+\DoxyCodeLine{00079 \textcolor{comment}{     */}}
+\DoxyCodeLine{00080     \textcolor{keywordtype}{void} \mbox{\hyperlink{classBeziator_a9acccb22776bbbc76b9b886e96aa1d92}{draw}}(\mbox{\hyperlink{classShader}{Shader}} \&shader, \textcolor{keywordtype}{bool} pre\_generated) \textcolor{keyword}{override};}
+\DoxyCodeLine{00081 \textcolor{comment}{}}
+\DoxyCodeLine{00082 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00083 \textcolor{comment}{     * @brief Генерує деталізований меш моделі.}}
+\DoxyCodeLine{00084 \textcolor{comment}{     *}}
+\DoxyCodeLine{00085 \textcolor{comment}{     * Ступінь деталізаії `d` позначає скільки вершин буде створено по двом}}
+\DoxyCodeLine{00086 \textcolor{comment}{     * осям, за заммовчанням задано 8, таким чином поверхня буде складатися з}}
+\DoxyCodeLine{00087 \textcolor{comment}{     * 8x8=64 вершини.}}
+\DoxyCodeLine{00088 \textcolor{comment}{     * @param d ступінь деталізації.}}
+\DoxyCodeLine{00089 \textcolor{comment}{     */}}
+\DoxyCodeLine{00090     \textcolor{keywordtype}{void} \mbox{\hyperlink{classBeziator_a850797d7a346cd6f30405e21b0224a3e}{generate}}(\textcolor{keywordtype}{size\_t} d = 8) \textcolor{keyword}{override};}
+\DoxyCodeLine{00091 \textcolor{comment}{}}
+\DoxyCodeLine{00092 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00093 \textcolor{comment}{     * @brief Зберігає модель у файл, вказаний у полі `path`.}}
+\DoxyCodeLine{00094 \textcolor{comment}{     * @return Статус зберігання файлу.}}
+\DoxyCodeLine{00095 \textcolor{comment}{     */}}
+\DoxyCodeLine{00096     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classBeziator_af67a38badc29b8747f242bbde8a2ccdf}{save}}();}
+\DoxyCodeLine{00097 \textcolor{comment}{}}
+\DoxyCodeLine{00098 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00099 \textcolor{comment}{     * @brief Інвертує порядок індесів поверхні, щоб нормалі дивилися у протилежний бік.}}
+\DoxyCodeLine{00100 \textcolor{comment}{     * @param i номер поверхні.}}
+\DoxyCodeLine{00101 \textcolor{comment}{     */}}
+\DoxyCodeLine{00102     \textcolor{keywordtype}{void} \mbox{\hyperlink{classBeziator_a17dc368875dfa7375eda7889c1fbd5e5}{rotate}}(\textcolor{keywordtype}{size\_t} i);}
+\DoxyCodeLine{00103 \textcolor{comment}{}}
+\DoxyCodeLine{00104 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00105 \textcolor{comment}{     * @brief Видає список вершин моделі.}}
+\DoxyCodeLine{00106 \textcolor{comment}{     * @return Вказівник на поле `vertices`.}}
+\DoxyCodeLine{00107 \textcolor{comment}{     */}}
+\DoxyCodeLine{00108     vector<Vertex> *\mbox{\hyperlink{classBeziator_a961bc3acb296bbdd3c4b7fdf4c8c5511}{get\_vertices}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{00109 \};}
+\DoxyCodeLine{00110 }
+\DoxyCodeLine{00111 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// BEZIATOR\_H}}
+
+\end{DoxyCode}

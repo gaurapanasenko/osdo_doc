@@ -1,0 +1,7 @@
+<map id="Framebuffer::tex_2d_multisample" name="Framebuffer::tex_2d_multisample">
+<area shape="rect" id="node1" title="Підготовлює текстуру з згладжуванням" alt="" coords="5,23,144,65"/>
+<area shape="rect" id="node2" href="$classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7" title="Повертає індекс об&#39;єкту OpenGL." alt="" coords="229,5,357,32"/>
+<area shape="rect" id="node3" href="$classTexture.html#ae40798a49160911e52be2c0329b17565" title="Створює текстуру з згладжуванням." alt="" coords="192,56,395,83"/>
+<area shape="rect" id="node4" href="$classGlBindable.html#ad3194126ecaf5285842cee0e7d28c951" title="Повертає об&#39;єкт прив&#39;язки контексту із ціллю за замовчуванням" alt="" coords="443,56,571,83"/>
+<area shape="rect" id="node5" href="$classGlBindable.html#a99e6c236fadee7211e721dd8b0d57598" title="Віртуальний метод, що задає ціль прив&#39;язки за замовчуванням." alt="" coords="619,56,757,83"/>
+</map>

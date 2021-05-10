@@ -1,0 +1,1115 @@
+\hypertarget{classWindow}{}\doxysubsection{Клас Window}
+\label{classWindow}\index{Window@{Window}}
+
+
+{\ttfamily \#include $<$window.\+h$>$}
+
+
+
+Діаграма зв\textquotesingle{}язків класу Window\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classWindow__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Загальнодоступні елементи}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWindow_a245d821e6016fa1f6970ccbbedd635f6}{$\sim$\+Window}} ()
+\item 
+\mbox{\hyperlink{classWindow_a685a2ed99afee9abe60252d5378c8078}{Window}} ()=default
+\item 
+\mbox{\hyperlink{classWindow_ac877b031e11ba0b517a8b1db3c315175}{Window}} (const \mbox{\hyperlink{classWindow}{Window}} \&)=delete
+\item 
+\mbox{\hyperlink{classWindow_a2ab0651c103c184420629c76344e4a20}{Window}} (\mbox{\hyperlink{classWindow}{Window}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classWindow}{Window}} \& \mbox{\hyperlink{classWindow_adec7572747f5e0137ad0387dfceb06ea}{operator=}} (const \mbox{\hyperlink{classWindow}{Window}} \&)=delete
+\item 
+\mbox{\hyperlink{classWindow}{Window}} \& \mbox{\hyperlink{classWindow_ae1fc9363c4075cf77ccb3e2074a7288d}{operator=}} (\mbox{\hyperlink{classWindow}{Window}} \&\&)=delete
+\item 
+int \mbox{\hyperlink{classWindow_a9b8185b7661ce79e9b02b0c1fec94e93}{init}} ()
+\item 
+struct GLFWwindow $\ast$ \mbox{\hyperlink{classWindow_a16c5a9c1744d2fe611ec1fe3a174e0fb}{get}} ()
+\item 
+bool \mbox{\hyperlink{classWindow_a282eee1c73fe157a5c4bc1c0999654ac}{alive}} ()
+\item 
+bool \mbox{\hyperlink{classWindow_afc092c266a1f943d498d37ee88da7d47}{pre\+\_\+loop}} ()
+\item 
+void \mbox{\hyperlink{classWindow_a6e155310c3b36f40c586cc7a5c1000e8}{post\+\_\+loop}} ()
+\item 
+void \mbox{\hyperlink{classWindow_ad7b04e6a6caa522ed351d0725db3983b}{set\+\_\+user\+\_\+pointer}} (void $\ast$pointer)
+\item 
+void $\ast$ \mbox{\hyperlink{classWindow_a22c6ec1d375e4e11ee6550faddfc15de}{get\+\_\+user\+\_\+pointer}} ()
+\item 
+float \mbox{\hyperlink{classWindow_a97cba7a0b0a82378cc3fff5eeb77c018}{get\+\_\+resolution}} ()
+\item 
+double \mbox{\hyperlink{classWindow_abebd53575e0294950631146b64188012}{get\+\_\+delta\+\_\+time}} ()
+\item 
+const char $\ast$ \mbox{\hyperlink{classWindow_a4601634ee8d8c047e1a4aaf8992cb752}{get\+\_\+clipboard}} ()
+\item 
+void \mbox{\hyperlink{classWindow_a7978071954bf1fed7e83d15be74fae21}{set\+\_\+clipboard}} (const char $\ast$str)
+\item 
+bool \mbox{\hyperlink{classWindow_acf6a1038e0a510e33c632c2429381df7}{is\+\_\+mouse\+\_\+caputed}} ()
+\item 
+void \mbox{\hyperlink{classWindow_aa76f6ed874afa60591c9eafdd4ad6e0f}{grab\+\_\+mouse}} (bool grab)
+\item 
+bool \mbox{\hyperlink{classWindow_a21f9f85d8de77f565cd96a7922d5770c}{is\+\_\+key\+\_\+pressed}} (enum \mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211}{KEYS}} key)
+\item 
+bool \mbox{\hyperlink{classWindow_a6697c355d5d604f5b071af73048dd533}{is\+\_\+mouse\+\_\+pressed}} (enum \mbox{\hyperlink{window_8h_a13dc1bbe931fd8c6b75fed89f1e23256}{BUTTONS}} key)
+\item 
+void \mbox{\hyperlink{classWindow_a6d1c02d6c0e8962ae999b32945a35d62}{get\+\_\+cursor}} (vec2 dest)
+\item 
+void \mbox{\hyperlink{classWindow_af2e37273a0ba587032b7bf918e17a76d}{set\+\_\+cursor}} (vec2 coords)
+\item 
+int $\ast$ \mbox{\hyperlink{classWindow_a00ed91cfb08f776087c5fce3f6338a68}{get\+\_\+size}} ()
+\item 
+int $\ast$ \mbox{\hyperlink{classWindow_a465858fa58be57d2d8b7f3a915935b66}{get\+\_\+display}} ()
+\item 
+float $\ast$ \mbox{\hyperlink{classWindow_af09caf9ffab4ba4e70f931e4c0bdf223}{get\+\_\+scale}} ()
+\item 
+void \mbox{\hyperlink{classWindow_aa045a4694443b28f22adc959b5182de7}{set\+\_\+scroll\+\_\+cb}} (\mbox{\hyperlink{window_8h_a4251531d4faa41e60a2cd13d4525af1f}{scroll\+\_\+cb\+\_\+t}} callback)
+\item 
+void \mbox{\hyperlink{classWindow_a79d68098adb64801b168d992a1bf760f}{set\+\_\+mouse\+\_\+motion\+\_\+cb}} (\mbox{\hyperlink{window_8h_a09edcf54e1f22a5e7f2d944286902ef3}{mouse\+\_\+motion\+\_\+cb\+\_\+t}} callback)
+\item 
+void \mbox{\hyperlink{classWindow_a5e4136232d0f0239f7e74a9db1466b44}{set\+\_\+char\+\_\+cb}} (\mbox{\hyperlink{window_8h_a7148bb12e7c547fd91b077ac96d52d4e}{char\+\_\+cb\+\_\+t}} callback)
+\item 
+void \mbox{\hyperlink{classWindow_a58445ba372624ec8b17ec80d6c2ff64a}{set\+\_\+mouse\+\_\+button\+\_\+cb}} (\mbox{\hyperlink{window_8h_ae9edc663539f1b26d79dff1300c8d8b5}{mouse\+\_\+button\+\_\+cb\+\_\+t}} callback)
+\item 
+void \mbox{\hyperlink{classWindow_a087e87ad86a9f8b8a3ffe2d1727fb2bc}{set\+\_\+key\+\_\+cb}} (\mbox{\hyperlink{window_8h_a9f34a6ec569f31c06cc15579e99be23d}{key\+\_\+cb\+\_\+t}} callback)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Загальнодоступні статичні елементи}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classWindow_ace643e617ddafc9053c32344f0ac2cb8}{resize\+\_\+cb}} (struct GLFWwindow $\ast$\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, GLint width, GLint height)
+\item 
+static void \mbox{\hyperlink{classWindow_a2a4aca70c898ebd343082547c5f5cd97}{scroll\+\_\+cb}} (struct GLFWwindow $\ast$\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, GLdouble xoffset, GLdouble yoffset)
+\item 
+static void \mbox{\hyperlink{classWindow_ad91aa61a640bd958d121c9324cfdd7f6}{mouse\+\_\+motion\+\_\+cb}} (struct GLFWwindow $\ast$\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, double xpos, double ypos)
+\item 
+static void \mbox{\hyperlink{classWindow_a537792624d1e5e0198c4dd19e921b82b}{char\+\_\+cb}} (struct GLFWwindow $\ast$\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, unsigned int codepoint)
+\item 
+static void \mbox{\hyperlink{classWindow_aded41e0be30352e18eecc7d6dbf8ea07}{mouse\+\_\+button\+\_\+cb}} (struct GLFWwindow $\ast$\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, int button, int action, int mods)
+\item 
+static void \mbox{\hyperlink{classWindow_aa5fa239afa97c8349130bf57dd15b5d9}{key\+\_\+cb}} (struct GLFWwindow $\ast$\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, int key, int scancode, int action, int mods)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Приватні дані}
+\begin{DoxyCompactItemize}
+\item 
+struct GLFWwindow $\ast$ \mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}
+\item 
+void $\ast$ \mbox{\hyperlink{classWindow_ad4658cd0c67bf155569a418df73e3e98}{user\+\_\+pointer}}
+\item 
+int \mbox{\hyperlink{classWindow_a0e91023e1a52fdbdbfb5ca5895737b33}{size}} \mbox{[}2\mbox{]}
+\item 
+int \mbox{\hyperlink{classWindow_a263eae897c5dbbf4c41574ae7bcad868}{display}} \mbox{[}2\mbox{]}
+\item 
+vec2 \mbox{\hyperlink{classWindow_ae432549fcf0aa5f6fe61bae87bc2ac60}{scale}}
+\item 
+vec2 \mbox{\hyperlink{classWindow_ac5e5494690f313e1deb3321d7c8e694f}{cursor}}
+\item 
+bool \mbox{\hyperlink{classWindow_a98918f091517455d79a8609e83ae02c3}{mouse\+\_\+capute}}
+\item 
+double \mbox{\hyperlink{classWindow_aaaaa6d029e6b2b8a36274b9839414519}{last\+\_\+click\+\_\+time}}
+\item 
+double \mbox{\hyperlink{classWindow_a4f24296720b0de0aff3cb904de1beaad}{current\+\_\+time}}
+\item 
+double \mbox{\hyperlink{classWindow_aadac4820e0fc8f5146d95cb7b0bbcbc7}{last\+\_\+time}}
+\item 
+double \mbox{\hyperlink{classWindow_a7a9941c6794302b55e314cf6f546b501}{delta\+\_\+time}}
+\item 
+\mbox{\hyperlink{window_8h_a4251531d4faa41e60a2cd13d4525af1f}{scroll\+\_\+cb\+\_\+t}} \mbox{\hyperlink{classWindow_a0bed18dc1776cca6171d47dbcc829572}{\+\_\+scroll\+\_\+cb}}
+\item 
+\mbox{\hyperlink{window_8h_a09edcf54e1f22a5e7f2d944286902ef3}{mouse\+\_\+motion\+\_\+cb\+\_\+t}} \mbox{\hyperlink{classWindow_afea84c179a7941d1623c3a9f2c6b21b4}{\+\_\+mouse\+\_\+motion\+\_\+cb}}
+\item 
+\mbox{\hyperlink{window_8h_a7148bb12e7c547fd91b077ac96d52d4e}{char\+\_\+cb\+\_\+t}} \mbox{\hyperlink{classWindow_ad1e41fc84bd2a313094026ab2a2b722b}{\+\_\+char\+\_\+cb}}
+\item 
+\mbox{\hyperlink{window_8h_ae9edc663539f1b26d79dff1300c8d8b5}{mouse\+\_\+button\+\_\+cb\+\_\+t}} \mbox{\hyperlink{classWindow_af591c2fc3cb2e9837004d942c7a88bfc}{\+\_\+mouse\+\_\+button\+\_\+cb}}
+\item 
+\mbox{\hyperlink{window_8h_a9f34a6ec569f31c06cc15579e99be23d}{key\+\_\+cb\+\_\+t}} \mbox{\hyperlink{classWindow_acb07e3ddb652a3385cbdcdb25b2aac09}{\+\_\+key\+\_\+cb}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Детальний опис}
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8h_source}{window.\+h}}, рядок \mbox{\hyperlink{window_8h_source_l00051}{51}}
+
+
+
+\doxysubsubsection{Конструктор(и)}
+\mbox{\Hypertarget{classWindow_a245d821e6016fa1f6970ccbbedd635f6}\label{classWindow_a245d821e6016fa1f6970ccbbedd635f6}} 
+\index{Window@{Window}!````~Window@{$\sim$Window}}
+\index{````~Window@{$\sim$Window}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{$\sim$Window()}{~Window()}}
+{\footnotesize\ttfamily Window\+::$\sim$\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}, рядок \mbox{\hyperlink{window_8cpp_source_l00141}{141}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00141                 \{}
+\DoxyCodeLine{00142     glfwTerminate();}
+\DoxyCodeLine{00143 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classWindow_a685a2ed99afee9abe60252d5378c8078}\label{classWindow_a685a2ed99afee9abe60252d5378c8078}} 
+\index{Window@{Window}!Window@{Window}}
+\index{Window@{Window}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{Window()}{Window()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Window\+::\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classWindow_ac877b031e11ba0b517a8b1db3c315175}\label{classWindow_ac877b031e11ba0b517a8b1db3c315175}} 
+\index{Window@{Window}!Window@{Window}}
+\index{Window@{Window}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{Window()}{Window()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Window\+::\+Window (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWindow}{Window}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classWindow_a2ab0651c103c184420629c76344e4a20}\label{classWindow_a2ab0651c103c184420629c76344e4a20}} 
+\index{Window@{Window}!Window@{Window}}
+\index{Window@{Window}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{Window()}{Window()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Window\+::\+Window (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWindow}{Window}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsubsection{Опис методів компонент}
+\mbox{\Hypertarget{classWindow_a282eee1c73fe157a5c4bc1c0999654ac}\label{classWindow_a282eee1c73fe157a5c4bc1c0999654ac}} 
+\index{Window@{Window}!alive@{alive}}
+\index{alive@{alive}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{alive()}{alive()}}
+{\footnotesize\ttfamily bool Window\+::alive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}, рядок \mbox{\hyperlink{window_8cpp_source_l00151}{151}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00151                    \{}
+\DoxyCodeLine{00152     \textcolor{keywordflow}{return} !glfwWindowShouldClose(this-\/>\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}});}
+\DoxyCodeLine{00153 \}}
+
+\end{DoxyCode}
+Граф викликів для цієї функції\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{classWindow_a282eee1c73fe157a5c4bc1c0999654ac_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classWindow_a537792624d1e5e0198c4dd19e921b82b}\label{classWindow_a537792624d1e5e0198c4dd19e921b82b}} 
+\index{Window@{Window}!char\_cb@{char\_cb}}
+\index{char\_cb@{char\_cb}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{char\_cb()}{char\_cb()}}
+{\footnotesize\ttfamily void Window\+::char\+\_\+cb (\begin{DoxyParamCaption}\item[{struct GLFWwindow $\ast$}]{window,  }\item[{unsigned int}]{codepoint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}, рядок \mbox{\hyperlink{window_8cpp_source_l00287}{287}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00287                                                                \{}
+\DoxyCodeLine{00288     ImGui\_ImplGlfw\_CharCallback(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, codepoint);}
+\DoxyCodeLine{00289     \mbox{\hyperlink{classWindow}{Window}} *win = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{classWindow}{Window}}*\textcolor{keyword}{>}(glfwGetWindowUserPointer(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}));}
+\DoxyCodeLine{00290     \textcolor{keywordflow}{if} (win-\/>\mbox{\hyperlink{classWindow_ad1e41fc84bd2a313094026ab2a2b722b}{\_char\_cb}})}
+\DoxyCodeLine{00291         win-\/>\mbox{\hyperlink{classWindow_ad1e41fc84bd2a313094026ab2a2b722b}{\_char\_cb}}(win, codepoint);}
+\DoxyCodeLine{00292 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classWindow_a16c5a9c1744d2fe611ec1fe3a174e0fb}\label{classWindow_a16c5a9c1744d2fe611ec1fe3a174e0fb}} 
+\index{Window@{Window}!get@{get}}
+\index{get@{get}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily GLFWwindow $\ast$ Window\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}, рядок \mbox{\hyperlink{window_8cpp_source_l00146}{146}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00146                         \{}
+\DoxyCodeLine{00147     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}};}
+\DoxyCodeLine{00148 \}}
+
+\end{DoxyCode}
+Граф викликів для цієї функції\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classWindow_a16c5a9c1744d2fe611ec1fe3a174e0fb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classWindow_a4601634ee8d8c047e1a4aaf8992cb752}\label{classWindow_a4601634ee8d8c047e1a4aaf8992cb752}} 
+\index{Window@{Window}!get\_clipboard@{get\_clipboard}}
+\index{get\_clipboard@{get\_clipboard}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{get\_clipboard()}{get\_clipboard()}}
+{\footnotesize\ttfamily const char $\ast$ Window\+::get\+\_\+clipboard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}, рядок \mbox{\hyperlink{window_8cpp_source_l00191}{191}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00191                                    \{}
+\DoxyCodeLine{00192      \textcolor{keywordflow}{return} glfwGetClipboardString(this-\/>\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}});}
+\DoxyCodeLine{00193 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classWindow_a6d1c02d6c0e8962ae999b32945a35d62}\label{classWindow_a6d1c02d6c0e8962ae999b32945a35d62}} 
+\index{Window@{Window}!get\_cursor@{get\_cursor}}
+\index{get\_cursor@{get\_cursor}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{get\_cursor()}{get\_cursor()}}
+{\footnotesize\ttfamily void Window\+::get\+\_\+cursor (\begin{DoxyParamCaption}\item[{vec2}]{dest }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}, рядок \mbox{\hyperlink{window_8cpp_source_l00221}{221}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00221                                  \{}
+\DoxyCodeLine{00222     glm\_vec2\_copy(this-\/>\mbox{\hyperlink{classWindow_ac5e5494690f313e1deb3321d7c8e694f}{cursor}}, dest);}
+\DoxyCodeLine{00223 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classWindow_abebd53575e0294950631146b64188012}\label{classWindow_abebd53575e0294950631146b64188012}} 
+\index{Window@{Window}!get\_delta\_time@{get\_delta\_time}}
+\index{get\_delta\_time@{get\_delta\_time}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{get\_delta\_time()}{get\_delta\_time()}}
+{\footnotesize\ttfamily double Window\+::get\+\_\+delta\+\_\+time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}, рядок \mbox{\hyperlink{window_8cpp_source_l00187}{187}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00187                               \{}
+\DoxyCodeLine{00188     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classWindow_a7a9941c6794302b55e314cf6f546b501}{delta\_time}};}
+\DoxyCodeLine{00189 \}}
+
+\end{DoxyCode}
+Граф викликів для цієї функції\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classWindow_abebd53575e0294950631146b64188012_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classWindow_a465858fa58be57d2d8b7f3a915935b66}\label{classWindow_a465858fa58be57d2d8b7f3a915935b66}} 
+\index{Window@{Window}!get\_display@{get\_display}}
+\index{get\_display@{get\_display}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{get\_display()}{get\_display()}}
+{\footnotesize\ttfamily int $\ast$ Window\+::get\+\_\+display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}, рядок \mbox{\hyperlink{window_8cpp_source_l00234}{234}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00234                          \{}
+\DoxyCodeLine{00235     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classWindow_a263eae897c5dbbf4c41574ae7bcad868}{display}};}
+\DoxyCodeLine{00236 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classWindow_a97cba7a0b0a82378cc3fff5eeb77c018}\label{classWindow_a97cba7a0b0a82378cc3fff5eeb77c018}} 
+\index{Window@{Window}!get\_resolution@{get\_resolution}}
+\index{get\_resolution@{get\_resolution}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{get\_resolution()}{get\_resolution()}}
+{\footnotesize\ttfamily float Window\+::get\+\_\+resolution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}, рядок \mbox{\hyperlink{window_8cpp_source_l00183}{183}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00183                              \{}
+\DoxyCodeLine{00184     \textcolor{keywordflow}{return} (\textcolor{keywordtype}{float})this-\/>\mbox{\hyperlink{classWindow_a0e91023e1a52fdbdbfb5ca5895737b33}{size}}[0] / (float)this-\/>\mbox{\hyperlink{classWindow_a0e91023e1a52fdbdbfb5ca5895737b33}{size}}[1];}
+\DoxyCodeLine{00185 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classWindow_af09caf9ffab4ba4e70f931e4c0bdf223}\label{classWindow_af09caf9ffab4ba4e70f931e4c0bdf223}} 
+\index{Window@{Window}!get\_scale@{get\_scale}}
+\index{get\_scale@{get\_scale}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{get\_scale()}{get\_scale()}}
+{\footnotesize\ttfamily float $\ast$ Window\+::get\+\_\+scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}, рядок \mbox{\hyperlink{window_8cpp_source_l00238}{238}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00238                          \{}
+\DoxyCodeLine{00239     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classWindow_ae432549fcf0aa5f6fe61bae87bc2ac60}{scale}};}
+\DoxyCodeLine{00240 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classWindow_a00ed91cfb08f776087c5fce3f6338a68}\label{classWindow_a00ed91cfb08f776087c5fce3f6338a68}} 
+\index{Window@{Window}!get\_size@{get\_size}}
+\index{get\_size@{get\_size}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{get\_size()}{get\_size()}}
+{\footnotesize\ttfamily int $\ast$ Window\+::get\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}, рядок \mbox{\hyperlink{window_8cpp_source_l00230}{230}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00230                       \{}
+\DoxyCodeLine{00231     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classWindow_a0e91023e1a52fdbdbfb5ca5895737b33}{size}};}
+\DoxyCodeLine{00232 \}}
+
+\end{DoxyCode}
+Граф викликів для цієї функції\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classWindow_a00ed91cfb08f776087c5fce3f6338a68_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classWindow_a22c6ec1d375e4e11ee6550faddfc15de}\label{classWindow_a22c6ec1d375e4e11ee6550faddfc15de}} 
+\index{Window@{Window}!get\_user\_pointer@{get\_user\_pointer}}
+\index{get\_user\_pointer@{get\_user\_pointer}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{get\_user\_pointer()}{get\_user\_pointer()}}
+{\footnotesize\ttfamily void $\ast$ Window\+::get\+\_\+user\+\_\+pointer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}, рядок \mbox{\hyperlink{window_8cpp_source_l00179}{179}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00179                                \{}
+\DoxyCodeLine{00180     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classWindow_ad4658cd0c67bf155569a418df73e3e98}{user\_pointer}};}
+\DoxyCodeLine{00181 \}}
+
+\end{DoxyCode}
+Граф викликів для цієї функції\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classWindow_a22c6ec1d375e4e11ee6550faddfc15de_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classWindow_aa76f6ed874afa60591c9eafdd4ad6e0f}\label{classWindow_aa76f6ed874afa60591c9eafdd4ad6e0f}} 
+\index{Window@{Window}!grab\_mouse@{grab\_mouse}}
+\index{grab\_mouse@{grab\_mouse}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{grab\_mouse()}{grab\_mouse()}}
+{\footnotesize\ttfamily void Window\+::grab\+\_\+mouse (\begin{DoxyParamCaption}\item[{bool}]{grab }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}, рядок \mbox{\hyperlink{window_8cpp_source_l00203}{203}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00203                                  \{}
+\DoxyCodeLine{00204     \textcolor{keywordflow}{if} (grab != this-\/>\mbox{\hyperlink{classWindow_a98918f091517455d79a8609e83ae02c3}{mouse\_capute}}) \{}
+\DoxyCodeLine{00205         this-\/>\mbox{\hyperlink{classWindow_a98918f091517455d79a8609e83ae02c3}{mouse\_capute}} = grab;}
+\DoxyCodeLine{00206         glfwSetInputMode(this-\/>\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, GLFW\_CURSOR,}
+\DoxyCodeLine{00207                          grab ? GLFW\_CURSOR\_DISABLED : GLFW\_CURSOR\_NORMAL);}
+\DoxyCodeLine{00208     \}}
+\DoxyCodeLine{00209 }
+\DoxyCodeLine{00210 \}}
+
+\end{DoxyCode}
+Граф викликів для цієї функції\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classWindow_aa76f6ed874afa60591c9eafdd4ad6e0f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classWindow_a9b8185b7661ce79e9b02b0c1fec94e93}\label{classWindow_a9b8185b7661ce79e9b02b0c1fec94e93}} 
+\index{Window@{Window}!init@{init}}
+\index{init@{init}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily int Window\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}, рядок \mbox{\hyperlink{window_8cpp_source_l00088}{88}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00088                  \{}
+\DoxyCodeLine{00089     \textcolor{comment}{// glfw: initialize and configure}}
+\DoxyCodeLine{00090     \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00091     \mbox{\hyperlink{window_8cpp_af6765bf7aae4ba2a0d60d0091a3f5f61}{map\_init}}();}
+\DoxyCodeLine{00092     glfwSetErrorCallback(\mbox{\hyperlink{window_8cpp_ac97bd0f3af797ceb0789b137fb0b526f}{error\_callback}});}
+\DoxyCodeLine{00093     glfwInit();}
+\DoxyCodeLine{00094     glfwWindowHint(GLFW\_CONTEXT\_VERSION\_MAJOR, 4);}
+\DoxyCodeLine{00095     glfwWindowHint(GLFW\_CONTEXT\_VERSION\_MINOR, 0);}
+\DoxyCodeLine{00096     glfwWindowHint(GLFW\_OPENGL\_PROFILE, GLFW\_OPENGL\_CORE\_PROFILE);}
+\DoxyCodeLine{00097     glfwWindowHint(GLFW\_OPENGL\_DEBUG\_CONTEXT, \textcolor{keyword}{true});}
+\DoxyCodeLine{00098 }
+\DoxyCodeLine{00099 \textcolor{preprocessor}{\#ifdef \_\_APPLE\_\_}}
+\DoxyCodeLine{00100     glfwWindowHint(GLFW\_OPENGL\_FORWARD\_COMPAT, GL\_TRUE);}
+\DoxyCodeLine{00101 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00102 }
+\DoxyCodeLine{00103     GLFWwindow* \mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}} = glfwCreateWindow(SCR\_WIDTH, SCR\_HEIGHT, \textcolor{stringliteral}{"{}osdo"{}},}
+\DoxyCodeLine{00104                                           \textcolor{keyword}{nullptr}, \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00105     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}} == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{00106         printf(\textcolor{stringliteral}{"{}Failed to create GLFW window\(\backslash\)n"{}});}
+\DoxyCodeLine{00107         glfwTerminate();}
+\DoxyCodeLine{00108         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{00109     \}}
+\DoxyCodeLine{00110 }
+\DoxyCodeLine{00111     glfwMakeContextCurrent(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}});}
+\DoxyCodeLine{00112     glfwSetWindowUserPointer(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, \textcolor{keyword}{this});}
+\DoxyCodeLine{00113     glfwSetFramebufferSizeCallback(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, \mbox{\hyperlink{classWindow_ace643e617ddafc9053c32344f0ac2cb8}{Window::resize\_cb}});}
+\DoxyCodeLine{00114     glfwSetScrollCallback(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, \mbox{\hyperlink{classWindow_a2a4aca70c898ebd343082547c5f5cd97}{Window::scroll\_cb}});}
+\DoxyCodeLine{00115     glfwSetCharCallback(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, \mbox{\hyperlink{classWindow_a537792624d1e5e0198c4dd19e921b82b}{Window::char\_cb}});}
+\DoxyCodeLine{00116     glfwSetMouseButtonCallback(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, \mbox{\hyperlink{classWindow_aded41e0be30352e18eecc7d6dbf8ea07}{Window::mouse\_button\_cb}});}
+\DoxyCodeLine{00117     glfwSetCursorPosCallback(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, \mbox{\hyperlink{classWindow_ad91aa61a640bd958d121c9324cfdd7f6}{Window::mouse\_motion\_cb}});}
+\DoxyCodeLine{00118     glfwSetKeyCallback(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, \mbox{\hyperlink{classWindow_aa5fa239afa97c8349130bf57dd15b5d9}{Window::key\_cb}});}
+\DoxyCodeLine{00119 }
+\DoxyCodeLine{00120     glewExperimental = GL\_TRUE;}
+\DoxyCodeLine{00121     \textcolor{keywordflow}{if} (glewInit() != GLEW\_OK) \{}
+\DoxyCodeLine{00122         printf(\textcolor{stringliteral}{"{}Failed to initialize GLEW\(\backslash\)n"{}});}
+\DoxyCodeLine{00123         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{00124     \}}
+\DoxyCodeLine{00125 }
+\DoxyCodeLine{00126     this-\/>\mbox{\hyperlink{classWindow_a0e91023e1a52fdbdbfb5ca5895737b33}{size}}[0] = SCR\_WIDTH;}
+\DoxyCodeLine{00127     this-\/>\mbox{\hyperlink{classWindow_a0e91023e1a52fdbdbfb5ca5895737b33}{size}}[1] = SCR\_HEIGHT;}
+\DoxyCodeLine{00128     this-\/>\mbox{\hyperlink{classWindow_a98918f091517455d79a8609e83ae02c3}{mouse\_capute}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{00129     this-\/>window = \mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}};}
+\DoxyCodeLine{00130     this-\/>\mbox{\hyperlink{classWindow_a4f24296720b0de0aff3cb904de1beaad}{current\_time}} = glfwGetTime();}
+\DoxyCodeLine{00131     this-\/>\mbox{\hyperlink{classWindow_aadac4820e0fc8f5146d95cb7b0bbcbc7}{last\_time}} = this-\/>\mbox{\hyperlink{classWindow_a4f24296720b0de0aff3cb904de1beaad}{current\_time}};}
+\DoxyCodeLine{00132     this-\/>\mbox{\hyperlink{classWindow_a7a9941c6794302b55e314cf6f546b501}{delta\_time}} = 0;}
+\DoxyCodeLine{00133     this-\/>\mbox{\hyperlink{classWindow_a0bed18dc1776cca6171d47dbcc829572}{\_scroll\_cb}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00134     this-\/>\mbox{\hyperlink{classWindow_afea84c179a7941d1623c3a9f2c6b21b4}{\_mouse\_motion\_cb}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00135     this-\/>\mbox{\hyperlink{classWindow_ad1e41fc84bd2a313094026ab2a2b722b}{\_char\_cb}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00136     this-\/>\mbox{\hyperlink{classWindow_af591c2fc3cb2e9837004d942c7a88bfc}{\_mouse\_button\_cb}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00137     this-\/>\mbox{\hyperlink{classWindow_acb07e3ddb652a3385cbdcdb25b2aac09}{\_key\_cb}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00138     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00139 \}}
+
+\end{DoxyCode}
+Граф всіх викликів цієї функції\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{classWindow_a9b8185b7661ce79e9b02b0c1fec94e93_cgraph}
+\end{center}
+\end{figure}
+Граф викликів для цієї функції\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{classWindow_a9b8185b7661ce79e9b02b0c1fec94e93_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classWindow_a21f9f85d8de77f565cd96a7922d5770c}\label{classWindow_a21f9f85d8de77f565cd96a7922d5770c}} 
+\index{Window@{Window}!is\_key\_pressed@{is\_key\_pressed}}
+\index{is\_key\_pressed@{is\_key\_pressed}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{is\_key\_pressed()}{is\_key\_pressed()}}
+{\footnotesize\ttfamily bool Window\+::is\+\_\+key\+\_\+pressed (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{window_8h_a917cb2ad6b731b390f8c57aa48656211}{KEYS}}}]{key }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}, рядок \mbox{\hyperlink{window_8cpp_source_l00212}{212}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00212                                          \{}
+\DoxyCodeLine{00213     \textcolor{keywordflow}{return} glfwGetKey(this-\/>\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, key\_glfw\_map[key]) == GLFW\_PRESS;}
+\DoxyCodeLine{00214 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classWindow_acf6a1038e0a510e33c632c2429381df7}\label{classWindow_acf6a1038e0a510e33c632c2429381df7}} 
+\index{Window@{Window}!is\_mouse\_caputed@{is\_mouse\_caputed}}
+\index{is\_mouse\_caputed@{is\_mouse\_caputed}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{is\_mouse\_caputed()}{is\_mouse\_caputed()}}
+{\footnotesize\ttfamily bool Window\+::is\+\_\+mouse\+\_\+caputed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}, рядок \mbox{\hyperlink{window_8cpp_source_l00199}{199}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00199                               \{}
+\DoxyCodeLine{00200     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classWindow_a98918f091517455d79a8609e83ae02c3}{mouse\_capute}};}
+\DoxyCodeLine{00201 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classWindow_a6697c355d5d604f5b071af73048dd533}\label{classWindow_a6697c355d5d604f5b071af73048dd533}} 
+\index{Window@{Window}!is\_mouse\_pressed@{is\_mouse\_pressed}}
+\index{is\_mouse\_pressed@{is\_mouse\_pressed}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{is\_mouse\_pressed()}{is\_mouse\_pressed()}}
+{\footnotesize\ttfamily bool Window\+::is\+\_\+mouse\+\_\+pressed (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{window_8h_a13dc1bbe931fd8c6b75fed89f1e23256}{BUTTONS}}}]{key }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}, рядок \mbox{\hyperlink{window_8cpp_source_l00216}{216}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00216                                               \{}
+\DoxyCodeLine{00217     \textcolor{keywordflow}{return} glfwGetMouseButton(}
+\DoxyCodeLine{00218                 this-\/>\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, btn\_glfw\_map[key]) == GLFW\_PRESS;}
+\DoxyCodeLine{00219 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classWindow_aa5fa239afa97c8349130bf57dd15b5d9}\label{classWindow_aa5fa239afa97c8349130bf57dd15b5d9}} 
+\index{Window@{Window}!key\_cb@{key\_cb}}
+\index{key\_cb@{key\_cb}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{key\_cb()}{key\_cb()}}
+{\footnotesize\ttfamily void Window\+::key\+\_\+cb (\begin{DoxyParamCaption}\item[{struct GLFWwindow $\ast$}]{window,  }\item[{int}]{key,  }\item[{int}]{scancode,  }\item[{int}]{action,  }\item[{int}]{mods }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}, рядок \mbox{\hyperlink{window_8cpp_source_l00311}{311}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00312                                                 \{}
+\DoxyCodeLine{00313     ImGui\_ImplGlfw\_KeyCallback(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, key, scancode, action, mods);}
+\DoxyCodeLine{00314     \textcolor{keywordflow}{if} (glfwGetKey(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, GLFW\_KEY\_ESCAPE) == GLFW\_PRESS)}
+\DoxyCodeLine{00315         glfwSetWindowShouldClose(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, \textcolor{keyword}{true});}
+\DoxyCodeLine{00316     \mbox{\hyperlink{classWindow}{Window}} *win = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{classWindow}{Window}}*\textcolor{keyword}{>}(glfwGetWindowUserPointer(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}));}
+\DoxyCodeLine{00317     \textcolor{keywordtype}{bool} pressed = action == GLFW\_PRESS;}
+\DoxyCodeLine{00318     \textcolor{keywordflow}{if} (pressed || action == GLFW\_RELEASE)}
+\DoxyCodeLine{00319         win-\/>\mbox{\hyperlink{classWindow_acb07e3ddb652a3385cbdcdb25b2aac09}{\_key\_cb}}(win, glfw\_key\_map[key], pressed);}
+\DoxyCodeLine{00320 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classWindow_aded41e0be30352e18eecc7d6dbf8ea07}\label{classWindow_aded41e0be30352e18eecc7d6dbf8ea07}} 
+\index{Window@{Window}!mouse\_button\_cb@{mouse\_button\_cb}}
+\index{mouse\_button\_cb@{mouse\_button\_cb}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{mouse\_button\_cb()}{mouse\_button\_cb()}}
+{\footnotesize\ttfamily void Window\+::mouse\+\_\+button\+\_\+cb (\begin{DoxyParamCaption}\item[{struct GLFWwindow $\ast$}]{window,  }\item[{int}]{button,  }\item[{int}]{action,  }\item[{int}]{mods }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}, рядок \mbox{\hyperlink{window_8cpp_source_l00294}{294}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00295                                                                      \{}
+\DoxyCodeLine{00296     ImGui\_ImplGlfw\_MouseButtonCallback(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, button, action, mods);}
+\DoxyCodeLine{00297     \mbox{\hyperlink{classWindow}{Window}} *win = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{classWindow}{Window}}*\textcolor{keyword}{>}(glfwGetWindowUserPointer(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}));}
+\DoxyCodeLine{00298     \textcolor{keyword}{enum} \mbox{\hyperlink{window_8h_a13dc1bbe931fd8c6b75fed89f1e23256}{BUTTONS}} btn = glfw\_btn\_map[button];}
+\DoxyCodeLine{00299     \textcolor{keywordtype}{bool} pressed = action == GLFW\_PRESS;}
+\DoxyCodeLine{00300     \textcolor{keywordflow}{if} (button == GLFW\_MOUSE\_BUTTON\_LEFT \&\& pressed) \{}
+\DoxyCodeLine{00301         \textcolor{keywordtype}{double} dt = glfwGetTime() -\/ win-\/>\mbox{\hyperlink{classWindow_aaaaa6d029e6b2b8a36274b9839414519}{last\_click\_time}};}
+\DoxyCodeLine{00302         \textcolor{keywordflow}{if} (dt > \mbox{\hyperlink{conf_8h_a42b057f37c15a818d862a2da98b88324}{NK\_GLFW\_DOUBLE\_CLICK\_LO}} \&\& dt < \mbox{\hyperlink{conf_8h_af13bb1926df9718b198163fe1d7b702c}{NK\_GLFW\_DOUBLE\_CLICK\_HI}}) \{}
+\DoxyCodeLine{00303             btn = \mbox{\hyperlink{window_8h_a13dc1bbe931fd8c6b75fed89f1e23256a3426787a420c05b549381016700871d1}{MOUSE\_BUTTON\_DOUBLE}};}
+\DoxyCodeLine{00304         \}}
+\DoxyCodeLine{00305         win-\/>\mbox{\hyperlink{classWindow_aaaaa6d029e6b2b8a36274b9839414519}{last\_click\_time}} = glfwGetTime();}
+\DoxyCodeLine{00306     \}}
+\DoxyCodeLine{00307     \textcolor{keywordflow}{if} (pressed || action == GLFW\_RELEASE)}
+\DoxyCodeLine{00308         win-\/>\mbox{\hyperlink{classWindow_af591c2fc3cb2e9837004d942c7a88bfc}{\_mouse\_button\_cb}}(win, btn, pressed);}
+\DoxyCodeLine{00309 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classWindow_ad91aa61a640bd958d121c9324cfdd7f6}\label{classWindow_ad91aa61a640bd958d121c9324cfdd7f6}} 
+\index{Window@{Window}!mouse\_motion\_cb@{mouse\_motion\_cb}}
+\index{mouse\_motion\_cb@{mouse\_motion\_cb}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{mouse\_motion\_cb()}{mouse\_motion\_cb()}}
+{\footnotesize\ttfamily void Window\+::mouse\+\_\+motion\+\_\+cb (\begin{DoxyParamCaption}\item[{struct GLFWwindow $\ast$}]{window,  }\item[{double}]{xpos,  }\item[{double}]{ypos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}, рядок \mbox{\hyperlink{window_8cpp_source_l00277}{277}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00278                                                              \{}
+\DoxyCodeLine{00279     \mbox{\hyperlink{classWindow}{Window}} *win = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{classWindow}{Window}}*\textcolor{keyword}{>}(glfwGetWindowUserPointer(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}));}
+\DoxyCodeLine{00280     vec2 pos = \{(float)xpos, (\textcolor{keywordtype}{float})ypos\}, offset;}
+\DoxyCodeLine{00281     glm\_vec2\_sub(pos, win-\/>\mbox{\hyperlink{classWindow_ac5e5494690f313e1deb3321d7c8e694f}{cursor}}, offset);}
+\DoxyCodeLine{00282     glm\_vec2\_copy(pos, win-\/>\mbox{\hyperlink{classWindow_ac5e5494690f313e1deb3321d7c8e694f}{cursor}});}
+\DoxyCodeLine{00283     \textcolor{keywordflow}{if} (win-\/>\mbox{\hyperlink{classWindow_afea84c179a7941d1623c3a9f2c6b21b4}{\_mouse\_motion\_cb}})}
+\DoxyCodeLine{00284         win-\/>\mbox{\hyperlink{classWindow_afea84c179a7941d1623c3a9f2c6b21b4}{\_mouse\_motion\_cb}}(win, pos, offset);}
+\DoxyCodeLine{00285 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classWindow_adec7572747f5e0137ad0387dfceb06ea}\label{classWindow_adec7572747f5e0137ad0387dfceb06ea}} 
+\index{Window@{Window}!operator=@{operator=}}
+\index{operator=@{operator=}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWindow}{Window}}\& Window\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWindow}{Window}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classWindow_ae1fc9363c4075cf77ccb3e2074a7288d}\label{classWindow_ae1fc9363c4075cf77ccb3e2074a7288d}} 
+\index{Window@{Window}!operator=@{operator=}}
+\index{operator=@{operator=}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWindow}{Window}}\& Window\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWindow}{Window}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classWindow_a6e155310c3b36f40c586cc7a5c1000e8}\label{classWindow_a6e155310c3b36f40c586cc7a5c1000e8}} 
+\index{Window@{Window}!post\_loop@{post\_loop}}
+\index{post\_loop@{post\_loop}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{post\_loop()}{post\_loop()}}
+{\footnotesize\ttfamily void Window\+::post\+\_\+loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}, рядок \mbox{\hyperlink{window_8cpp_source_l00171}{171}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00171                        \{}
+\DoxyCodeLine{00172     glfwSwapBuffers(this-\/>\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}});}
+\DoxyCodeLine{00173 \}}
+
+\end{DoxyCode}
+Граф викликів для цієї функції\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{classWindow_a6e155310c3b36f40c586cc7a5c1000e8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classWindow_afc092c266a1f943d498d37ee88da7d47}\label{classWindow_afc092c266a1f943d498d37ee88da7d47}} 
+\index{Window@{Window}!pre\_loop@{pre\_loop}}
+\index{pre\_loop@{pre\_loop}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{pre\_loop()}{pre\_loop()}}
+{\footnotesize\ttfamily bool Window\+::pre\+\_\+loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}, рядок \mbox{\hyperlink{window_8cpp_source_l00155}{155}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00155                       \{}
+\DoxyCodeLine{00156     \textcolor{keywordflow}{if} (glfwWindowShouldClose(this-\/>\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}})) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00157     glfwMakeContextCurrent(this-\/>\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}});}
+\DoxyCodeLine{00158     glfwPollEvents();}
+\DoxyCodeLine{00159     \textcolor{comment}{//glfwWaitEvents();}}
+\DoxyCodeLine{00160     glfwGetWindowSize(this-\/>\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, this-\/>\mbox{\hyperlink{classWindow_a0e91023e1a52fdbdbfb5ca5895737b33}{size}}, this-\/>\mbox{\hyperlink{classWindow_a0e91023e1a52fdbdbfb5ca5895737b33}{size}} + 1);}
+\DoxyCodeLine{00161     glfwGetFramebufferSize(}
+\DoxyCodeLine{00162                 this-\/>\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, this-\/>\mbox{\hyperlink{classWindow_a263eae897c5dbbf4c41574ae7bcad868}{display}}, this-\/>\mbox{\hyperlink{classWindow_a263eae897c5dbbf4c41574ae7bcad868}{display}} + 1);}
+\DoxyCodeLine{00163     this-\/>\mbox{\hyperlink{classWindow_ae432549fcf0aa5f6fe61bae87bc2ac60}{scale}}[0] = (float)this-\/>\mbox{\hyperlink{classWindow_a263eae897c5dbbf4c41574ae7bcad868}{display}}[0] / (\textcolor{keywordtype}{float})this-\/>\mbox{\hyperlink{classWindow_a0e91023e1a52fdbdbfb5ca5895737b33}{size}}[0];}
+\DoxyCodeLine{00164     this-\/>\mbox{\hyperlink{classWindow_ae432549fcf0aa5f6fe61bae87bc2ac60}{scale}}[1] = (float)this-\/>\mbox{\hyperlink{classWindow_a263eae897c5dbbf4c41574ae7bcad868}{display}}[1] / (\textcolor{keywordtype}{float})this-\/>\mbox{\hyperlink{classWindow_a0e91023e1a52fdbdbfb5ca5895737b33}{size}}[1];}
+\DoxyCodeLine{00165     this-\/>\mbox{\hyperlink{classWindow_a4f24296720b0de0aff3cb904de1beaad}{current\_time}} = glfwGetTime();}
+\DoxyCodeLine{00166     this-\/>\mbox{\hyperlink{classWindow_a7a9941c6794302b55e314cf6f546b501}{delta\_time}} = this-\/>\mbox{\hyperlink{classWindow_a4f24296720b0de0aff3cb904de1beaad}{current\_time}} -\/ this-\/>\mbox{\hyperlink{classWindow_aadac4820e0fc8f5146d95cb7b0bbcbc7}{last\_time}};}
+\DoxyCodeLine{00167     this-\/>last\_time = this-\/>\mbox{\hyperlink{classWindow_a4f24296720b0de0aff3cb904de1beaad}{current\_time}};}
+\DoxyCodeLine{00168     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00169 \}}
+
+\end{DoxyCode}
+Граф викликів для цієї функції\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{classWindow_afc092c266a1f943d498d37ee88da7d47_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classWindow_ace643e617ddafc9053c32344f0ac2cb8}\label{classWindow_ace643e617ddafc9053c32344f0ac2cb8}} 
+\index{Window@{Window}!resize\_cb@{resize\_cb}}
+\index{resize\_cb@{resize\_cb}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{resize\_cb()}{resize\_cb()}}
+{\footnotesize\ttfamily void Window\+::resize\+\_\+cb (\begin{DoxyParamCaption}\item[{struct GLFWwindow $\ast$}]{window,  }\item[{GLint}]{width,  }\item[{GLint}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}, рядок \mbox{\hyperlink{window_8cpp_source_l00261}{261}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00262                                                               \{}
+\DoxyCodeLine{00263     \mbox{\hyperlink{classWindow}{Window}} *win = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{classWindow}{Window}}*\textcolor{keyword}{>}(glfwGetWindowUserPointer(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}));}
+\DoxyCodeLine{00264     glfwMakeContextCurrent(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}});}
+\DoxyCodeLine{00265     glViewport(0, 0, width, height);}
+\DoxyCodeLine{00266     win-\/>\mbox{\hyperlink{classWindow_a0e91023e1a52fdbdbfb5ca5895737b33}{size}}[0] = width; win-\/>\mbox{\hyperlink{classWindow_a0e91023e1a52fdbdbfb5ca5895737b33}{size}}[1] = height;}
+\DoxyCodeLine{00267 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classWindow_a2a4aca70c898ebd343082547c5f5cd97}\label{classWindow_a2a4aca70c898ebd343082547c5f5cd97}} 
+\index{Window@{Window}!scroll\_cb@{scroll\_cb}}
+\index{scroll\_cb@{scroll\_cb}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{scroll\_cb()}{scroll\_cb()}}
+{\footnotesize\ttfamily void Window\+::scroll\+\_\+cb (\begin{DoxyParamCaption}\item[{struct GLFWwindow $\ast$}]{window,  }\item[{GLdouble}]{xoffset,  }\item[{GLdouble}]{yoffset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}, рядок \mbox{\hyperlink{window_8cpp_source_l00269}{269}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00270                                                                        \{}
+\DoxyCodeLine{00271     ImGui\_ImplGlfw\_ScrollCallback(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, xoffset, yoffset);}
+\DoxyCodeLine{00272     \mbox{\hyperlink{classWindow}{Window}} *win = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{classWindow}{Window}}*\textcolor{keyword}{>}(glfwGetWindowUserPointer(\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}));}
+\DoxyCodeLine{00273     \textcolor{keywordflow}{if} (win-\/>\mbox{\hyperlink{classWindow_a0bed18dc1776cca6171d47dbcc829572}{\_scroll\_cb}} != \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00274         win-\/>\mbox{\hyperlink{classWindow_a0bed18dc1776cca6171d47dbcc829572}{\_scroll\_cb}}(win, xoffset, yoffset);}
+\DoxyCodeLine{00275 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classWindow_a5e4136232d0f0239f7e74a9db1466b44}\label{classWindow_a5e4136232d0f0239f7e74a9db1466b44}} 
+\index{Window@{Window}!set\_char\_cb@{set\_char\_cb}}
+\index{set\_char\_cb@{set\_char\_cb}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{set\_char\_cb()}{set\_char\_cb()}}
+{\footnotesize\ttfamily void Window\+::set\+\_\+char\+\_\+cb (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{window_8h_a7148bb12e7c547fd91b077ac96d52d4e}{char\+\_\+cb\+\_\+t}}}]{callback }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}, рядок \mbox{\hyperlink{window_8cpp_source_l00250}{250}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00250                                            \{}
+\DoxyCodeLine{00251     this-\/>\mbox{\hyperlink{classWindow_ad1e41fc84bd2a313094026ab2a2b722b}{\_char\_cb}} = callback;}
+\DoxyCodeLine{00252 \}}
+
+\end{DoxyCode}
+Граф викликів для цієї функції\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classWindow_a5e4136232d0f0239f7e74a9db1466b44_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classWindow_a7978071954bf1fed7e83d15be74fae21}\label{classWindow_a7978071954bf1fed7e83d15be74fae21}} 
+\index{Window@{Window}!set\_clipboard@{set\_clipboard}}
+\index{set\_clipboard@{set\_clipboard}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{set\_clipboard()}{set\_clipboard()}}
+{\footnotesize\ttfamily void Window\+::set\+\_\+clipboard (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}, рядок \mbox{\hyperlink{window_8cpp_source_l00195}{195}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00195                                            \{}
+\DoxyCodeLine{00196     glfwSetClipboardString(this-\/>\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, str);}
+\DoxyCodeLine{00197 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classWindow_af2e37273a0ba587032b7bf918e17a76d}\label{classWindow_af2e37273a0ba587032b7bf918e17a76d}} 
+\index{Window@{Window}!set\_cursor@{set\_cursor}}
+\index{set\_cursor@{set\_cursor}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{set\_cursor()}{set\_cursor()}}
+{\footnotesize\ttfamily void Window\+::set\+\_\+cursor (\begin{DoxyParamCaption}\item[{vec2}]{coords }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}, рядок \mbox{\hyperlink{window_8cpp_source_l00225}{225}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00225                                    \{}
+\DoxyCodeLine{00226     glfwSetCursorPos(this-\/>\mbox{\hyperlink{classWindow_ac1c84e78802a372064f838556be1a723}{window}}, (\textcolor{keywordtype}{double})coords[0], (\textcolor{keywordtype}{double})coords[1]);}
+\DoxyCodeLine{00227     glm\_vec2\_copy(coords, this-\/>\mbox{\hyperlink{classWindow_ac5e5494690f313e1deb3321d7c8e694f}{cursor}});}
+\DoxyCodeLine{00228 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classWindow_a087e87ad86a9f8b8a3ffe2d1727fb2bc}\label{classWindow_a087e87ad86a9f8b8a3ffe2d1727fb2bc}} 
+\index{Window@{Window}!set\_key\_cb@{set\_key\_cb}}
+\index{set\_key\_cb@{set\_key\_cb}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{set\_key\_cb()}{set\_key\_cb()}}
+{\footnotesize\ttfamily void Window\+::set\+\_\+key\+\_\+cb (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{window_8h_a9f34a6ec569f31c06cc15579e99be23d}{key\+\_\+cb\+\_\+t}}}]{callback }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}, рядок \mbox{\hyperlink{window_8cpp_source_l00257}{257}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00257                                          \{}
+\DoxyCodeLine{00258     this-\/>\mbox{\hyperlink{classWindow_acb07e3ddb652a3385cbdcdb25b2aac09}{\_key\_cb}} = callback;}
+\DoxyCodeLine{00259 \}}
+
+\end{DoxyCode}
+Граф викликів для цієї функції\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classWindow_a087e87ad86a9f8b8a3ffe2d1727fb2bc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classWindow_a58445ba372624ec8b17ec80d6c2ff64a}\label{classWindow_a58445ba372624ec8b17ec80d6c2ff64a}} 
+\index{Window@{Window}!set\_mouse\_button\_cb@{set\_mouse\_button\_cb}}
+\index{set\_mouse\_button\_cb@{set\_mouse\_button\_cb}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{set\_mouse\_button\_cb()}{set\_mouse\_button\_cb()}}
+{\footnotesize\ttfamily void Window\+::set\+\_\+mouse\+\_\+button\+\_\+cb (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{window_8h_ae9edc663539f1b26d79dff1300c8d8b5}{mouse\+\_\+button\+\_\+cb\+\_\+t}}}]{callback }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}, рядок \mbox{\hyperlink{window_8cpp_source_l00253}{253}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00253                                                            \{}
+\DoxyCodeLine{00254     this-\/>\mbox{\hyperlink{classWindow_af591c2fc3cb2e9837004d942c7a88bfc}{\_mouse\_button\_cb}} = callback;}
+\DoxyCodeLine{00255 \}}
+
+\end{DoxyCode}
+Граф викликів для цієї функції\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classWindow_a58445ba372624ec8b17ec80d6c2ff64a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classWindow_a79d68098adb64801b168d992a1bf760f}\label{classWindow_a79d68098adb64801b168d992a1bf760f}} 
+\index{Window@{Window}!set\_mouse\_motion\_cb@{set\_mouse\_motion\_cb}}
+\index{set\_mouse\_motion\_cb@{set\_mouse\_motion\_cb}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{set\_mouse\_motion\_cb()}{set\_mouse\_motion\_cb()}}
+{\footnotesize\ttfamily void Window\+::set\+\_\+mouse\+\_\+motion\+\_\+cb (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{window_8h_a09edcf54e1f22a5e7f2d944286902ef3}{mouse\+\_\+motion\+\_\+cb\+\_\+t}}}]{callback }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}, рядок \mbox{\hyperlink{window_8cpp_source_l00246}{246}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00246                                                            \{}
+\DoxyCodeLine{00247     this-\/>\mbox{\hyperlink{classWindow_afea84c179a7941d1623c3a9f2c6b21b4}{\_mouse\_motion\_cb}} = callback;}
+\DoxyCodeLine{00248 \}}
+
+\end{DoxyCode}
+Граф викликів для цієї функції\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classWindow_a79d68098adb64801b168d992a1bf760f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classWindow_aa045a4694443b28f22adc959b5182de7}\label{classWindow_aa045a4694443b28f22adc959b5182de7}} 
+\index{Window@{Window}!set\_scroll\_cb@{set\_scroll\_cb}}
+\index{set\_scroll\_cb@{set\_scroll\_cb}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{set\_scroll\_cb()}{set\_scroll\_cb()}}
+{\footnotesize\ttfamily void Window\+::set\+\_\+scroll\+\_\+cb (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{window_8h_a4251531d4faa41e60a2cd13d4525af1f}{scroll\+\_\+cb\+\_\+t}}}]{callback }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}, рядок \mbox{\hyperlink{window_8cpp_source_l00242}{242}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00242                                                \{}
+\DoxyCodeLine{00243     this-\/>\mbox{\hyperlink{classWindow_a0bed18dc1776cca6171d47dbcc829572}{\_scroll\_cb}} = callback;}
+\DoxyCodeLine{00244 \}}
+
+\end{DoxyCode}
+Граф викликів для цієї функції\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classWindow_aa045a4694443b28f22adc959b5182de7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classWindow_ad7b04e6a6caa522ed351d0725db3983b}\label{classWindow_ad7b04e6a6caa522ed351d0725db3983b}} 
+\index{Window@{Window}!set\_user\_pointer@{set\_user\_pointer}}
+\index{set\_user\_pointer@{set\_user\_pointer}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{set\_user\_pointer()}{set\_user\_pointer()}}
+{\footnotesize\ttfamily void Window\+::set\+\_\+user\+\_\+pointer (\begin{DoxyParamCaption}\item[{void $\ast$}]{pointer }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}, рядок \mbox{\hyperlink{window_8cpp_source_l00175}{175}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00175                                            \{}
+\DoxyCodeLine{00176     this-\/>\mbox{\hyperlink{classWindow_ad4658cd0c67bf155569a418df73e3e98}{user\_pointer}} = pointer;}
+\DoxyCodeLine{00177 \}}
+
+\end{DoxyCode}
+Граф викликів для цієї функції\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classWindow_ad7b04e6a6caa522ed351d0725db3983b_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsubsection{Компонентні дані}
+\mbox{\Hypertarget{classWindow_ad1e41fc84bd2a313094026ab2a2b722b}\label{classWindow_ad1e41fc84bd2a313094026ab2a2b722b}} 
+\index{Window@{Window}!\_char\_cb@{\_char\_cb}}
+\index{\_char\_cb@{\_char\_cb}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{\_char\_cb}{\_char\_cb}}
+{\footnotesize\ttfamily \mbox{\hyperlink{window_8h_a7148bb12e7c547fd91b077ac96d52d4e}{char\+\_\+cb\+\_\+t}} Window\+::\+\_\+char\+\_\+cb\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8h_source}{window.\+h}}, рядок \mbox{\hyperlink{window_8h_source_l00063}{63}}
+
+\mbox{\Hypertarget{classWindow_acb07e3ddb652a3385cbdcdb25b2aac09}\label{classWindow_acb07e3ddb652a3385cbdcdb25b2aac09}} 
+\index{Window@{Window}!\_key\_cb@{\_key\_cb}}
+\index{\_key\_cb@{\_key\_cb}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{\_key\_cb}{\_key\_cb}}
+{\footnotesize\ttfamily \mbox{\hyperlink{window_8h_a9f34a6ec569f31c06cc15579e99be23d}{key\+\_\+cb\+\_\+t}} Window\+::\+\_\+key\+\_\+cb\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8h_source}{window.\+h}}, рядок \mbox{\hyperlink{window_8h_source_l00065}{65}}
+
+\mbox{\Hypertarget{classWindow_af591c2fc3cb2e9837004d942c7a88bfc}\label{classWindow_af591c2fc3cb2e9837004d942c7a88bfc}} 
+\index{Window@{Window}!\_mouse\_button\_cb@{\_mouse\_button\_cb}}
+\index{\_mouse\_button\_cb@{\_mouse\_button\_cb}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{\_mouse\_button\_cb}{\_mouse\_button\_cb}}
+{\footnotesize\ttfamily \mbox{\hyperlink{window_8h_ae9edc663539f1b26d79dff1300c8d8b5}{mouse\+\_\+button\+\_\+cb\+\_\+t}} Window\+::\+\_\+mouse\+\_\+button\+\_\+cb\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8h_source}{window.\+h}}, рядок \mbox{\hyperlink{window_8h_source_l00064}{64}}
+
+\mbox{\Hypertarget{classWindow_afea84c179a7941d1623c3a9f2c6b21b4}\label{classWindow_afea84c179a7941d1623c3a9f2c6b21b4}} 
+\index{Window@{Window}!\_mouse\_motion\_cb@{\_mouse\_motion\_cb}}
+\index{\_mouse\_motion\_cb@{\_mouse\_motion\_cb}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{\_mouse\_motion\_cb}{\_mouse\_motion\_cb}}
+{\footnotesize\ttfamily \mbox{\hyperlink{window_8h_a09edcf54e1f22a5e7f2d944286902ef3}{mouse\+\_\+motion\+\_\+cb\+\_\+t}} Window\+::\+\_\+mouse\+\_\+motion\+\_\+cb\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8h_source}{window.\+h}}, рядок \mbox{\hyperlink{window_8h_source_l00062}{62}}
+
+\mbox{\Hypertarget{classWindow_a0bed18dc1776cca6171d47dbcc829572}\label{classWindow_a0bed18dc1776cca6171d47dbcc829572}} 
+\index{Window@{Window}!\_scroll\_cb@{\_scroll\_cb}}
+\index{\_scroll\_cb@{\_scroll\_cb}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{\_scroll\_cb}{\_scroll\_cb}}
+{\footnotesize\ttfamily \mbox{\hyperlink{window_8h_a4251531d4faa41e60a2cd13d4525af1f}{scroll\+\_\+cb\+\_\+t}} Window\+::\+\_\+scroll\+\_\+cb\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8h_source}{window.\+h}}, рядок \mbox{\hyperlink{window_8h_source_l00061}{61}}
+
+\mbox{\Hypertarget{classWindow_a4f24296720b0de0aff3cb904de1beaad}\label{classWindow_a4f24296720b0de0aff3cb904de1beaad}} 
+\index{Window@{Window}!current\_time@{current\_time}}
+\index{current\_time@{current\_time}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{current\_time}{current\_time}}
+{\footnotesize\ttfamily double Window\+::current\+\_\+time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8h_source}{window.\+h}}, рядок \mbox{\hyperlink{window_8h_source_l00059}{59}}
+
+\mbox{\Hypertarget{classWindow_ac5e5494690f313e1deb3321d7c8e694f}\label{classWindow_ac5e5494690f313e1deb3321d7c8e694f}} 
+\index{Window@{Window}!cursor@{cursor}}
+\index{cursor@{cursor}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{cursor}{cursor}}
+{\footnotesize\ttfamily vec2 Window\+::cursor\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8h_source}{window.\+h}}, рядок \mbox{\hyperlink{window_8h_source_l00057}{57}}
+
+\mbox{\Hypertarget{classWindow_a7a9941c6794302b55e314cf6f546b501}\label{classWindow_a7a9941c6794302b55e314cf6f546b501}} 
+\index{Window@{Window}!delta\_time@{delta\_time}}
+\index{delta\_time@{delta\_time}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{delta\_time}{delta\_time}}
+{\footnotesize\ttfamily double Window\+::delta\+\_\+time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8h_source}{window.\+h}}, рядок \mbox{\hyperlink{window_8h_source_l00059}{59}}
+
+\mbox{\Hypertarget{classWindow_a263eae897c5dbbf4c41574ae7bcad868}\label{classWindow_a263eae897c5dbbf4c41574ae7bcad868}} 
+\index{Window@{Window}!display@{display}}
+\index{display@{display}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{display}{display}}
+{\footnotesize\ttfamily int Window\+::display\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8h_source}{window.\+h}}, рядок \mbox{\hyperlink{window_8h_source_l00056}{56}}
+
+\mbox{\Hypertarget{classWindow_aaaaa6d029e6b2b8a36274b9839414519}\label{classWindow_aaaaa6d029e6b2b8a36274b9839414519}} 
+\index{Window@{Window}!last\_click\_time@{last\_click\_time}}
+\index{last\_click\_time@{last\_click\_time}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{last\_click\_time}{last\_click\_time}}
+{\footnotesize\ttfamily double Window\+::last\+\_\+click\+\_\+time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8h_source}{window.\+h}}, рядок \mbox{\hyperlink{window_8h_source_l00059}{59}}
+
+\mbox{\Hypertarget{classWindow_aadac4820e0fc8f5146d95cb7b0bbcbc7}\label{classWindow_aadac4820e0fc8f5146d95cb7b0bbcbc7}} 
+\index{Window@{Window}!last\_time@{last\_time}}
+\index{last\_time@{last\_time}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{last\_time}{last\_time}}
+{\footnotesize\ttfamily double Window\+::last\+\_\+time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8h_source}{window.\+h}}, рядок \mbox{\hyperlink{window_8h_source_l00059}{59}}
+
+\mbox{\Hypertarget{classWindow_a98918f091517455d79a8609e83ae02c3}\label{classWindow_a98918f091517455d79a8609e83ae02c3}} 
+\index{Window@{Window}!mouse\_capute@{mouse\_capute}}
+\index{mouse\_capute@{mouse\_capute}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{mouse\_capute}{mouse\_capute}}
+{\footnotesize\ttfamily bool Window\+::mouse\+\_\+capute\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8h_source}{window.\+h}}, рядок \mbox{\hyperlink{window_8h_source_l00058}{58}}
+
+\mbox{\Hypertarget{classWindow_ae432549fcf0aa5f6fe61bae87bc2ac60}\label{classWindow_ae432549fcf0aa5f6fe61bae87bc2ac60}} 
+\index{Window@{Window}!scale@{scale}}
+\index{scale@{scale}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{scale}{scale}}
+{\footnotesize\ttfamily vec2 Window\+::scale\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8h_source}{window.\+h}}, рядок \mbox{\hyperlink{window_8h_source_l00057}{57}}
+
+\mbox{\Hypertarget{classWindow_a0e91023e1a52fdbdbfb5ca5895737b33}\label{classWindow_a0e91023e1a52fdbdbfb5ca5895737b33}} 
+\index{Window@{Window}!size@{size}}
+\index{size@{size}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily int Window\+::size\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8h_source}{window.\+h}}, рядок \mbox{\hyperlink{window_8h_source_l00056}{56}}
+
+\mbox{\Hypertarget{classWindow_ad4658cd0c67bf155569a418df73e3e98}\label{classWindow_ad4658cd0c67bf155569a418df73e3e98}} 
+\index{Window@{Window}!user\_pointer@{user\_pointer}}
+\index{user\_pointer@{user\_pointer}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{user\_pointer}{user\_pointer}}
+{\footnotesize\ttfamily void$\ast$ Window\+::user\+\_\+pointer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8h_source}{window.\+h}}, рядок \mbox{\hyperlink{window_8h_source_l00053}{53}}
+
+\mbox{\Hypertarget{classWindow_ac1c84e78802a372064f838556be1a723}\label{classWindow_ac1c84e78802a372064f838556be1a723}} 
+\index{Window@{Window}!window@{window}}
+\index{window@{window}!Window@{Window}}
+\doxyparagraph{\texorpdfstring{window}{window}}
+{\footnotesize\ttfamily struct GLFWwindow$\ast$ Window\+::window\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8h_source}{window.\+h}}, рядок \mbox{\hyperlink{window_8h_source_l00052}{52}}
+
+
+
+Документація цих класів була створена з файлів\+:\begin{DoxyCompactItemize}
+\item 
+druidengine/\mbox{\hyperlink{window_8h}{window.\+h}}\item 
+druidengine/\mbox{\hyperlink{window_8cpp}{window.\+cpp}}\end{DoxyCompactItemize}

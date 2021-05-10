@@ -1,0 +1,42 @@
+\hypertarget{scene_8h_source}{}\doxysubsection{scene.\+h}
+\label{scene_8h_source}\index{osdo/scene.h@{osdo/scene.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/**}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * @file scene.h}}
+\DoxyCodeLine{00003 \textcolor{comment}{ * @brief Задає клас сцени із об'єктами.}}
+\DoxyCodeLine{00004 \textcolor{comment}{ */}}
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#ifndef SCENE\_H}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#define SCENE\_H}}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{osdo_8h}{osdo.h}}"{}}}
+\DoxyCodeLine{00009 }
+\DoxyCodeLine{00010 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{object_8h}{object.h}}"{}}}
+\DoxyCodeLine{00011 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{context_8h}{context.h}}"{}}}
+\DoxyCodeLine{00012 \textcolor{comment}{}}
+\DoxyCodeLine{00013 \textcolor{comment}{/**}}
+\DoxyCodeLine{00014 \textcolor{comment}{ * @brief Сцена із об'єктами.}}
+\DoxyCodeLine{00015 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00016}\mbox{\hyperlink{structScene}{00016}} \textcolor{keyword}{struct }\mbox{\hyperlink{structScene}{Scene}} \{\textcolor{comment}{}}
+\DoxyCodeLine{00017 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00018 \textcolor{comment}{     * @brief Об'єкти у сцені.}}
+\DoxyCodeLine{00019 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00020}\mbox{\hyperlink{structScene_a295dfaa5202a61abfc8cf32f58d2fdd5}{00020}}     hash\_map<string, Object> \mbox{\hyperlink{structScene_a295dfaa5202a61abfc8cf32f58d2fdd5}{objects}};}
+\DoxyCodeLine{00021 \textcolor{comment}{}}
+\DoxyCodeLine{00022 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00023 \textcolor{comment}{     * @brief Конструктор, що створює об'єкти у сцені за заготовленими у агрументі `objects`}}
+\DoxyCodeLine{00024 \textcolor{comment}{     * @param objects заготовлені об'єкти для додавання у сцену}}
+\DoxyCodeLine{00025 \textcolor{comment}{     */}}
+\DoxyCodeLine{00026     \mbox{\hyperlink{structScene_a45d36f98829eeb0b89d458f6f7f5ee9b}{Scene}}(\textcolor{keyword}{const} \mbox{\hyperlink{structContext_a0fb5343f40542412aa4089d22627f232}{Context::Models}}\& \mbox{\hyperlink{structScene_a295dfaa5202a61abfc8cf32f58d2fdd5}{objects}});}
+\DoxyCodeLine{00027 \textcolor{comment}{}}
+\DoxyCodeLine{00028 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00029 \textcolor{comment}{     * @brief Створює сцену}}
+\DoxyCodeLine{00030 \textcolor{comment}{     * @param objects заготовлені об'єкти для додавання у сцену}}
+\DoxyCodeLine{00031 \textcolor{comment}{     * @return Розумний вказівник на об'єкт сцени.}}
+\DoxyCodeLine{00032 \textcolor{comment}{     */}}
+\DoxyCodeLine{00033     \textcolor{keyword}{static} shared\_ptr<Scene> \mbox{\hyperlink{structScene_ac9d55f5bebb962cd4aedc86ec5bf3269}{create}}(\textcolor{keyword}{const} \mbox{\hyperlink{structContext_a0fb5343f40542412aa4089d22627f232}{Context::Models}}\& \mbox{\hyperlink{structScene_a295dfaa5202a61abfc8cf32f58d2fdd5}{objects}});}
+\DoxyCodeLine{00034 \};}
+\DoxyCodeLine{00035 }
+\DoxyCodeLine{00036 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// SCENE\_H}}
+
+\end{DoxyCode}

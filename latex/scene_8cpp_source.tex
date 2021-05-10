@@ -1,0 +1,19 @@
+\hypertarget{scene_8cpp_source}{}\doxysubsection{scene.\+cpp}
+\label{scene_8cpp_source}\index{osdo/scene.cpp@{osdo/scene.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{scene_8h}{scene.h}}"{}}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{conf_8h}{conf.h}}"{}}}
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#include "{}EASTL/algorithm.h"{}}}
+\DoxyCodeLine{00004 \textcolor{keyword}{using} eastl::transform;}
+\DoxyCodeLine{00005 \textcolor{keyword}{using} eastl::make\_shared;}
+\DoxyCodeLine{00006 }
+\DoxyCodeLine{\Hypertarget{scene_8cpp_source_l00007}\mbox{\hyperlink{structScene_a45d36f98829eeb0b89d458f6f7f5ee9b}{00007}} \mbox{\hyperlink{structScene_a45d36f98829eeb0b89d458f6f7f5ee9b}{Scene::Scene}}(\textcolor{keyword}{const} \mbox{\hyperlink{structContext_a0fb5343f40542412aa4089d22627f232}{Context::Models}} \&objects) : objects(objects) \{}
+\DoxyCodeLine{00008 \}}
+\DoxyCodeLine{00009 }
+\DoxyCodeLine{\Hypertarget{scene_8cpp_source_l00010}\mbox{\hyperlink{structScene_ac9d55f5bebb962cd4aedc86ec5bf3269}{00010}} shared\_ptr<Scene> \mbox{\hyperlink{structScene_ac9d55f5bebb962cd4aedc86ec5bf3269}{Scene::create}}(\textcolor{keyword}{const} \mbox{\hyperlink{structContext_a0fb5343f40542412aa4089d22627f232}{Context::Models}} \&objects)}
+\DoxyCodeLine{00011 \{}
+\DoxyCodeLine{00012     \textcolor{keywordflow}{return} make\_shared<Scene>(\mbox{\hyperlink{structScene_a295dfaa5202a61abfc8cf32f58d2fdd5}{objects}});}
+\DoxyCodeLine{00013 \}}
+
+\end{DoxyCode}

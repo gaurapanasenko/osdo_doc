@@ -1,0 +1,449 @@
+\hypertarget{classGlBindable}{}\doxysubsection{Клас Gl\+Bindable}
+\label{classGlBindable}\index{GlBindable@{GlBindable}}
+
+
+Абстрактний клас, який виконує роль генерації та прив\textquotesingle{}язки об\textquotesingle{}єктів Open\+GL.  
+
+
+
+
+{\ttfamily \#include $<$glbindable.\+h$>$}
+
+
+
+Схема успадкувань для Gl\+Bindable\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGlBindable__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Загальнодоступні елементи}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classGlBindable_a7099d57d5e30d61d3dd8c3578bef2369}{$\sim$\+Gl\+Bindable}} ()
+\item 
+\mbox{\hyperlink{classGlBindable_a480ce669f04f132cdbcc576fcd5d47c3}{Gl\+Bindable}} (const \mbox{\hyperlink{classGlBindable}{Gl\+Bindable}} \&)=delete
+\item 
+\mbox{\hyperlink{classGlBindable_a2a02a06024506fcb207432ac82cc5af7}{Gl\+Bindable}} (\mbox{\hyperlink{classGlBindable}{Gl\+Bindable}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classGlBindable}{Gl\+Bindable}} \& \mbox{\hyperlink{classGlBindable_a53277dbd34048cff234f9633d8e1b4ac}{operator=}} (const \mbox{\hyperlink{classGlBindable}{Gl\+Bindable}} \&)=delete
+\item 
+\mbox{\hyperlink{classGlBindable}{Gl\+Bindable}} \& \mbox{\hyperlink{classGlBindable_aa4aa0fada538cc49d5f248ef9693fc18}{operator=}} (\mbox{\hyperlink{classGlBindable}{Gl\+Bindable}} \&\&)=delete
+\item 
+const GLuint \& \mbox{\hyperlink{classGlBindable_a5a7e0bbde3d01e24a83e0f0122402ab7}{get\+\_\+id}} () const
+\begin{DoxyCompactList}\small\item\em Повертає індекс об\textquotesingle{}єкту Open\+GL. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{classGlBindable_a998a690af84360cd283e49f6a32ae4fd}{get\+\_\+vid}} () const
+\begin{DoxyCompactList}\small\item\em Повертає індекс об\textquotesingle{}єкту Open\+GL у типі {\ttfamily void$\ast$} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGlBindable_a221cf1ca728041bc2545f27a5e3004e0}{bind}} () const
+\begin{DoxyCompactList}\small\item\em Прив\textquotesingle{}язує контекст до об\textquotesingle{}єкту із ціллю за замовчуванням. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGlBindable_a1509aad02d36265d0a42a56ca6d33211}{bind}} (GLenum target) const
+\begin{DoxyCompactList}\small\item\em Прив\textquotesingle{}язує контекст до об\textquotesingle{}єкту із ціллю {\ttfamily target} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGlBindable_a6ddfcf2b3f3b34872005ca281a9573eb}{unbind}} () const
+\begin{DoxyCompactList}\small\item\em Відв\textquotesingle{}язує контекст до об\textquotesingle{}єкту із ціллю за замовчуванням. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGlBindable_a3f192025460eb6510b281cdc69b9a731}{unbind}} (GLenum target) const
+\begin{DoxyCompactList}\small\item\em Відв\textquotesingle{}язує контекст до об\textquotesingle{}єкту із ціллю {\ttfamily target} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classGlBinder}{Gl\+Binder}} \mbox{\hyperlink{classGlBindable_ad3194126ecaf5285842cee0e7d28c951}{binder}} () const
+\begin{DoxyCompactList}\small\item\em Повертає об\textquotesingle{}єкт прив\textquotesingle{}язки контексту із ціллю за замовчуванням \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classGlBinder}{Gl\+Binder}} \mbox{\hyperlink{classGlBindable_a771e840af25b89bbdd097cf0088f7ea2}{binder}} (GLenum target) const
+\begin{DoxyCompactList}\small\item\em Повертає об\textquotesingle{}єкт прив\textquotesingle{}язки контексту із ціллю {\ttfamily target} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Захищені елементи}
+\begin{DoxyCompactItemize}
+\item 
+virtual GLuint \mbox{\hyperlink{classGlBindable_adeae77f0e91e38fbd0685df3d45bf240}{\+\_\+generate}} () const
+\begin{DoxyCompactList}\small\item\em Віртуальний метод що створює об\textquotesingle{}єкт. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classGlBindable_ae3213a00db0e6f6dfc356a06a5b1e6d6}{\+\_\+bind}} (const GLuint \mbox{\hyperlink{classGlBindable_a299d9182805eb4c6b7e9e8cc9d5b4577}{id}}, GLenum target) const
+\begin{DoxyCompactList}\small\item\em Віртуальний метод, що прив\textquotesingle{}язує контекст Open\+GL до об\textquotesingle{}єкту. \end{DoxyCompactList}\item 
+virtual GLenum \mbox{\hyperlink{classGlBindable_a99e6c236fadee7211e721dd8b0d57598}{\+\_\+default}} () const
+\begin{DoxyCompactList}\small\item\em Віртуальний метод, що задає ціль прив\textquotesingle{}язки за замовчуванням. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classGlBindable_a96cb4e25165880fceb4511f07912ef0e}{Gl\+Bindable}} ()
+\item 
+\mbox{\hyperlink{classGlBindable_ad1f81eadcda1f2dd5e4b5a5673c4d00f}{Gl\+Bindable}} (const GLuint \mbox{\hyperlink{classGlBindable_a299d9182805eb4c6b7e9e8cc9d5b4577}{id}})
+\begin{DoxyCompactList}\small\item\em Конструктор з параметром. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Приватні дані}
+\begin{DoxyCompactItemize}
+\item 
+const GLuint \mbox{\hyperlink{classGlBindable_a299d9182805eb4c6b7e9e8cc9d5b4577}{id}}
+\begin{DoxyCompactList}\small\item\em Індекс об\textquotesingle{}єкту Open\+GL. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Детальний опис}
+Абстрактний клас, який виконує роль генерації та прив\textquotesingle{}язки об\textquotesingle{}єктів Open\+GL. 
+
+Див. визначення в файлі \mbox{\hyperlink{glbindable_8h_source}{glbindable.\+h}}, рядок \mbox{\hyperlink{glbindable_8h_source_l00015}{15}}
+
+
+
+\doxysubsubsection{Конструктор(и)}
+\mbox{\Hypertarget{classGlBindable_a96cb4e25165880fceb4511f07912ef0e}\label{classGlBindable_a96cb4e25165880fceb4511f07912ef0e}} 
+\index{GlBindable@{GlBindable}!GlBindable@{GlBindable}}
+\index{GlBindable@{GlBindable}!GlBindable@{GlBindable}}
+\doxyparagraph{\texorpdfstring{GlBindable()}{GlBindable()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Gl\+Bindable\+::\+Gl\+Bindable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{glbindable_8cpp_source}{glbindable.\+cpp}}, рядок \mbox{\hyperlink{glbindable_8cpp_source_l00014}{14}}
+
+\mbox{\Hypertarget{classGlBindable_ad1f81eadcda1f2dd5e4b5a5673c4d00f}\label{classGlBindable_ad1f81eadcda1f2dd5e4b5a5673c4d00f}} 
+\index{GlBindable@{GlBindable}!GlBindable@{GlBindable}}
+\index{GlBindable@{GlBindable}!GlBindable@{GlBindable}}
+\doxyparagraph{\texorpdfstring{GlBindable()}{GlBindable()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Gl\+Bindable\+::\+Gl\+Bindable (\begin{DoxyParamCaption}\item[{const GLuint}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Конструктор з параметром. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em id} & індекс об\textquotesingle{}єкту Open\+GL \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{glbindable_8cpp_source}{glbindable.\+cpp}}, рядок \mbox{\hyperlink{glbindable_8cpp_source_l00016}{16}}
+
+\mbox{\Hypertarget{classGlBindable_a7099d57d5e30d61d3dd8c3578bef2369}\label{classGlBindable_a7099d57d5e30d61d3dd8c3578bef2369}} 
+\index{GlBindable@{GlBindable}!````~GlBindable@{$\sim$GlBindable}}
+\index{````~GlBindable@{$\sim$GlBindable}!GlBindable@{GlBindable}}
+\doxyparagraph{\texorpdfstring{$\sim$GlBindable()}{~GlBindable()}}
+{\footnotesize\ttfamily Gl\+Bindable\+::$\sim$\+Gl\+Bindable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{glbindable_8cpp_source}{glbindable.\+cpp}}, рядок \mbox{\hyperlink{glbindable_8cpp_source_l00018}{18}}
+
+\mbox{\Hypertarget{classGlBindable_a480ce669f04f132cdbcc576fcd5d47c3}\label{classGlBindable_a480ce669f04f132cdbcc576fcd5d47c3}} 
+\index{GlBindable@{GlBindable}!GlBindable@{GlBindable}}
+\index{GlBindable@{GlBindable}!GlBindable@{GlBindable}}
+\doxyparagraph{\texorpdfstring{GlBindable()}{GlBindable()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Gl\+Bindable\+::\+Gl\+Bindable (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classGlBindable}{Gl\+Bindable}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classGlBindable_a2a02a06024506fcb207432ac82cc5af7}\label{classGlBindable_a2a02a06024506fcb207432ac82cc5af7}} 
+\index{GlBindable@{GlBindable}!GlBindable@{GlBindable}}
+\index{GlBindable@{GlBindable}!GlBindable@{GlBindable}}
+\doxyparagraph{\texorpdfstring{GlBindable()}{GlBindable()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Gl\+Bindable\+::\+Gl\+Bindable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGlBindable}{Gl\+Bindable}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsubsection{Опис методів компонент}
+\mbox{\Hypertarget{classGlBindable_ae3213a00db0e6f6dfc356a06a5b1e6d6}\label{classGlBindable_ae3213a00db0e6f6dfc356a06a5b1e6d6}} 
+\index{GlBindable@{GlBindable}!\_bind@{\_bind}}
+\index{\_bind@{\_bind}!GlBindable@{GlBindable}}
+\doxyparagraph{\texorpdfstring{\_bind()}{\_bind()}}
+{\footnotesize\ttfamily void Gl\+Bindable\+::\+\_\+bind (\begin{DoxyParamCaption}\item[{const GLuint}]{id,  }\item[{GLenum}]{target }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Віртуальний метод, що прив\textquotesingle{}язує контекст Open\+GL до об\textquotesingle{}єкту. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em id} & індекс об\textquotesingle{}єкту Open\+GL \\
+\hline
+{\em target} & ціль прив\textquotesingle{}язки об\textquotesingle{}єкту \\
+\hline
+\end{DoxyParams}
+
+
+Переозначається в \mbox{\hyperlink{classTexture_ae0c8fad482833b570de830820c12166a}{Texture}}, \mbox{\hyperlink{classShader_ad4ef4f54ecb6c7950867d4f091ffbec9}{Shader}}, \mbox{\hyperlink{classRenderbuffer_af13806e5fa5089d38b59a4210b8b0325}{Renderbuffer}} і \mbox{\hyperlink{classFramebuffer_a5b4e690288f3283c9d9967ed29bfb1b1}{Framebuffer}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{glbindable_8cpp_source}{glbindable.\+cpp}}, рядок \mbox{\hyperlink{glbindable_8cpp_source_l00008}{8}}
+
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGlBindable_ae3213a00db0e6f6dfc356a06a5b1e6d6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classGlBindable_a99e6c236fadee7211e721dd8b0d57598}\label{classGlBindable_a99e6c236fadee7211e721dd8b0d57598}} 
+\index{GlBindable@{GlBindable}!\_default@{\_default}}
+\index{\_default@{\_default}!GlBindable@{GlBindable}}
+\doxyparagraph{\texorpdfstring{\_default()}{\_default()}}
+{\footnotesize\ttfamily GLenum Gl\+Bindable\+::\+\_\+default (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Віртуальний метод, що задає ціль прив\textquotesingle{}язки за замовчуванням. 
+
+\begin{DoxyReturn}{Повертає}
+ціль прив\textquotesingle{}язки за замовчуванням 
+\end{DoxyReturn}
+
+
+Переозначається в \mbox{\hyperlink{classTexture_a0f788e2cad6ef4b1058e1de912658582}{Texture}}, \mbox{\hyperlink{classRenderbuffer_ac93dafa9269f474ebfccdc1480c4a0f8}{Renderbuffer}} і \mbox{\hyperlink{classFramebuffer_a33d174278da3c420e01f371b727eced6}{Framebuffer}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{glbindable_8cpp_source}{glbindable.\+cpp}}, рядок \mbox{\hyperlink{glbindable_8cpp_source_l00010}{10}}
+
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGlBindable_a99e6c236fadee7211e721dd8b0d57598_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classGlBindable_adeae77f0e91e38fbd0685df3d45bf240}\label{classGlBindable_adeae77f0e91e38fbd0685df3d45bf240}} 
+\index{GlBindable@{GlBindable}!\_generate@{\_generate}}
+\index{\_generate@{\_generate}!GlBindable@{GlBindable}}
+\doxyparagraph{\texorpdfstring{\_generate()}{\_generate()}}
+{\footnotesize\ttfamily GLuint Gl\+Bindable\+::\+\_\+generate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Віртуальний метод що створює об\textquotesingle{}єкт. 
+
+\begin{DoxyReturn}{Повертає}
+індекс об\textquotesingle{}єкту Open\+GL 
+\end{DoxyReturn}
+
+
+Переозначається в \mbox{\hyperlink{classTexture_a04704df51d1b28c3fadbe209755d3217}{Texture}}, \mbox{\hyperlink{classRenderbuffer_a95f7ce01633b7b0bd75a475a11f4acc3}{Renderbuffer}} і \mbox{\hyperlink{classFramebuffer_adb84d4f813bc52460bde7ce62ccfa150}{Framebuffer}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{glbindable_8cpp_source}{glbindable.\+cpp}}, рядок \mbox{\hyperlink{glbindable_8cpp_source_l00004}{4}}
+
+\mbox{\Hypertarget{classGlBindable_a221cf1ca728041bc2545f27a5e3004e0}\label{classGlBindable_a221cf1ca728041bc2545f27a5e3004e0}} 
+\index{GlBindable@{GlBindable}!bind@{bind}}
+\index{bind@{bind}!GlBindable@{GlBindable}}
+\doxyparagraph{\texorpdfstring{bind()}{bind()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Gl\+Bindable\+::bind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Прив\textquotesingle{}язує контекст до об\textquotesingle{}єкту із ціллю за замовчуванням. 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{glbindable_8cpp_source}{glbindable.\+cpp}}, рядок \mbox{\hyperlink{glbindable_8cpp_source_l00030}{30}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{classGlBindable_a221cf1ca728041bc2545f27a5e3004e0_cgraph}
+\end{center}
+\end{figure}
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{classGlBindable_a221cf1ca728041bc2545f27a5e3004e0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classGlBindable_a1509aad02d36265d0a42a56ca6d33211}\label{classGlBindable_a1509aad02d36265d0a42a56ca6d33211}} 
+\index{GlBindable@{GlBindable}!bind@{bind}}
+\index{bind@{bind}!GlBindable@{GlBindable}}
+\doxyparagraph{\texorpdfstring{bind()}{bind()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Gl\+Bindable\+::bind (\begin{DoxyParamCaption}\item[{GLenum}]{target }\end{DoxyParamCaption}) const}
+
+
+
+Прив\textquotesingle{}язує контекст до об\textquotesingle{}єкту із ціллю {\ttfamily target} 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em target} & ціль прив\textquotesingle{}язки об\textquotesingle{}єкту \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{glbindable_8cpp_source}{glbindable.\+cpp}}, рядок \mbox{\hyperlink{glbindable_8cpp_source_l00035}{35}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{classGlBindable_a1509aad02d36265d0a42a56ca6d33211_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classGlBindable_ad3194126ecaf5285842cee0e7d28c951}\label{classGlBindable_ad3194126ecaf5285842cee0e7d28c951}} 
+\index{GlBindable@{GlBindable}!binder@{binder}}
+\index{binder@{binder}!GlBindable@{GlBindable}}
+\doxyparagraph{\texorpdfstring{binder()}{binder()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGlBinder}{Gl\+Binder}} Gl\+Bindable\+::binder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Повертає об\textquotesingle{}єкт прив\textquotesingle{}язки контексту із ціллю за замовчуванням 
+
+\begin{DoxyReturn}{Повертає}
+об\textquotesingle{}єкт прив\textquotesingle{}язки контексту із ціллю за замовчуванням 
+\end{DoxyReturn}
+
+
+Див. визначення в файлі \mbox{\hyperlink{glbindable_8cpp_source}{glbindable.\+cpp}}, рядок \mbox{\hyperlink{glbindable_8cpp_source_l00050}{50}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{classGlBindable_ad3194126ecaf5285842cee0e7d28c951_cgraph}
+\end{center}
+\end{figure}
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGlBindable_ad3194126ecaf5285842cee0e7d28c951_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classGlBindable_a771e840af25b89bbdd097cf0088f7ea2}\label{classGlBindable_a771e840af25b89bbdd097cf0088f7ea2}} 
+\index{GlBindable@{GlBindable}!binder@{binder}}
+\index{binder@{binder}!GlBindable@{GlBindable}}
+\doxyparagraph{\texorpdfstring{binder()}{binder()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGlBinder}{Gl\+Binder}} Gl\+Bindable\+::binder (\begin{DoxyParamCaption}\item[{GLenum}]{target }\end{DoxyParamCaption}) const}
+
+
+
+Повертає об\textquotesingle{}єкт прив\textquotesingle{}язки контексту із ціллю {\ttfamily target} 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em target} & ціль прив\textquotesingle{}язки об\textquotesingle{}єкту \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Повертає}
+об\textquotesingle{}єкт прив\textquotesingle{}язки контексту із ціллю {\ttfamily target} 
+\end{DoxyReturn}
+
+
+Див. визначення в файлі \mbox{\hyperlink{glbindable_8cpp_source}{glbindable.\+cpp}}, рядок \mbox{\hyperlink{glbindable_8cpp_source_l00055}{55}}
+
+\mbox{\Hypertarget{classGlBindable_a5a7e0bbde3d01e24a83e0f0122402ab7}\label{classGlBindable_a5a7e0bbde3d01e24a83e0f0122402ab7}} 
+\index{GlBindable@{GlBindable}!get\_id@{get\_id}}
+\index{get\_id@{get\_id}!GlBindable@{GlBindable}}
+\doxyparagraph{\texorpdfstring{get\_id()}{get\_id()}}
+{\footnotesize\ttfamily const GLuint \& Gl\+Bindable\+::get\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Повертає індекс об\textquotesingle{}єкту Open\+GL. 
+
+\begin{DoxyReturn}{Повертає}
+індекс об\textquotesingle{}єкту Open\+GL 
+\end{DoxyReturn}
+
+
+Див. визначення в файлі \mbox{\hyperlink{glbindable_8cpp_source}{glbindable.\+cpp}}, рядок \mbox{\hyperlink{glbindable_8cpp_source_l00020}{20}}
+
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGlBindable_a5a7e0bbde3d01e24a83e0f0122402ab7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classGlBindable_a998a690af84360cd283e49f6a32ae4fd}\label{classGlBindable_a998a690af84360cd283e49f6a32ae4fd}} 
+\index{GlBindable@{GlBindable}!get\_vid@{get\_vid}}
+\index{get\_vid@{get\_vid}!GlBindable@{GlBindable}}
+\doxyparagraph{\texorpdfstring{get\_vid()}{get\_vid()}}
+{\footnotesize\ttfamily void $\ast$ Gl\+Bindable\+::get\+\_\+vid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Повертає індекс об\textquotesingle{}єкту Open\+GL у типі {\ttfamily void$\ast$} 
+
+\begin{DoxyReturn}{Повертає}
+індекс об\textquotesingle{}єкту Open\+GL 
+\end{DoxyReturn}
+
+
+Див. визначення в файлі \mbox{\hyperlink{glbindable_8cpp_source}{glbindable.\+cpp}}, рядок \mbox{\hyperlink{glbindable_8cpp_source_l00025}{25}}
+
+\mbox{\Hypertarget{classGlBindable_a53277dbd34048cff234f9633d8e1b4ac}\label{classGlBindable_a53277dbd34048cff234f9633d8e1b4ac}} 
+\index{GlBindable@{GlBindable}!operator=@{operator=}}
+\index{operator=@{operator=}!GlBindable@{GlBindable}}
+\doxyparagraph{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGlBindable}{Gl\+Bindable}}\& Gl\+Bindable\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classGlBindable}{Gl\+Bindable}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classGlBindable_aa4aa0fada538cc49d5f248ef9693fc18}\label{classGlBindable_aa4aa0fada538cc49d5f248ef9693fc18}} 
+\index{GlBindable@{GlBindable}!operator=@{operator=}}
+\index{operator=@{operator=}!GlBindable@{GlBindable}}
+\doxyparagraph{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGlBindable}{Gl\+Bindable}}\& Gl\+Bindable\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGlBindable}{Gl\+Bindable}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classGlBindable_a6ddfcf2b3f3b34872005ca281a9573eb}\label{classGlBindable_a6ddfcf2b3f3b34872005ca281a9573eb}} 
+\index{GlBindable@{GlBindable}!unbind@{unbind}}
+\index{unbind@{unbind}!GlBindable@{GlBindable}}
+\doxyparagraph{\texorpdfstring{unbind()}{unbind()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Gl\+Bindable\+::unbind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Відв\textquotesingle{}язує контекст до об\textquotesingle{}єкту із ціллю за замовчуванням. 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{glbindable_8cpp_source}{glbindable.\+cpp}}, рядок \mbox{\hyperlink{glbindable_8cpp_source_l00040}{40}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classGlBindable_a6ddfcf2b3f3b34872005ca281a9573eb_cgraph}
+\end{center}
+\end{figure}
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classGlBindable_a6ddfcf2b3f3b34872005ca281a9573eb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classGlBindable_a3f192025460eb6510b281cdc69b9a731}\label{classGlBindable_a3f192025460eb6510b281cdc69b9a731}} 
+\index{GlBindable@{GlBindable}!unbind@{unbind}}
+\index{unbind@{unbind}!GlBindable@{GlBindable}}
+\doxyparagraph{\texorpdfstring{unbind()}{unbind()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Gl\+Bindable\+::unbind (\begin{DoxyParamCaption}\item[{GLenum}]{target }\end{DoxyParamCaption}) const}
+
+
+
+Відв\textquotesingle{}язує контекст до об\textquotesingle{}єкту із ціллю {\ttfamily target} 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em target} & ціль прив\textquotesingle{}язки об\textquotesingle{}єкту \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{glbindable_8cpp_source}{glbindable.\+cpp}}, рядок \mbox{\hyperlink{glbindable_8cpp_source_l00045}{45}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{classGlBindable_a3f192025460eb6510b281cdc69b9a731_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsubsection{Компонентні дані}
+\mbox{\Hypertarget{classGlBindable_a299d9182805eb4c6b7e9e8cc9d5b4577}\label{classGlBindable_a299d9182805eb4c6b7e9e8cc9d5b4577}} 
+\index{GlBindable@{GlBindable}!id@{id}}
+\index{id@{id}!GlBindable@{GlBindable}}
+\doxyparagraph{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily const GLuint Gl\+Bindable\+::id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Індекс об\textquotesingle{}єкту Open\+GL. 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{glbindable_8h_source}{glbindable.\+h}}, рядок \mbox{\hyperlink{glbindable_8h_source_l00020}{20}}
+
+
+
+Документація цих класів була створена з файлів\+:\begin{DoxyCompactItemize}
+\item 
+osdo/\mbox{\hyperlink{glbindable_8h}{glbindable.\+h}}\item 
+osdo/\mbox{\hyperlink{glbindable_8cpp}{glbindable.\+cpp}}\end{DoxyCompactItemize}

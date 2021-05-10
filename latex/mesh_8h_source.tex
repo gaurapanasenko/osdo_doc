@@ -1,0 +1,77 @@
+\hypertarget{mesh_8h_source}{}\doxysubsection{mesh.\+h}
+\label{mesh_8h_source}\index{osdo/mesh.h@{osdo/mesh.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/**}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * @file mesh.h}}
+\DoxyCodeLine{00003 \textcolor{comment}{ * @brief Задає клас мешу, який зберігається на відеокарті.}}
+\DoxyCodeLine{00004 \textcolor{comment}{ */}}
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#ifndef MESH\_H}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#define MESH\_H}}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{osdo_8h}{osdo.h}}"{}}}
+\DoxyCodeLine{00009 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{model_8h}{model.h}}"{}}}
+\DoxyCodeLine{00010 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{vertex_8h}{vertex.h}}"{}}}
+\DoxyCodeLine{00011 \textcolor{comment}{}}
+\DoxyCodeLine{00012 \textcolor{comment}{/**}}
+\DoxyCodeLine{00013 \textcolor{comment}{ * @brief Меш, який зберігається на відеокарті.}}
+\DoxyCodeLine{00014 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{mesh_8h_source_l00015}\mbox{\hyperlink{classMesh}{00015}} \textcolor{keyword}{class }\mbox{\hyperlink{classMesh}{Mesh}} : \textcolor{keyword}{public} \mbox{\hyperlink{classModel}{Model}} \{}
+\DoxyCodeLine{00016 \textcolor{keyword}{protected}:\textcolor{comment}{}}
+\DoxyCodeLine{00017 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00018 \textcolor{comment}{     * @brief Об’єкт масиву вершин. Розшифровується "{}Vertex Array Object"{}.}}
+\DoxyCodeLine{00019 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{mesh_8h_source_l00020}\mbox{\hyperlink{classMesh_a101a39d88bc5c8d33f0ebd6e77a60129}{00020}}     GLuint \mbox{\hyperlink{classMesh_a101a39d88bc5c8d33f0ebd6e77a60129}{vao}};\textcolor{comment}{}}
+\DoxyCodeLine{00021 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00022 \textcolor{comment}{     * @brief Об'єкт буфера вершин. Розшифровується "{}Vertex Buffer Object"{}.}}
+\DoxyCodeLine{00023 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{mesh_8h_source_l00024}\mbox{\hyperlink{classMesh_ad8eff04c857fc1f1f42584af599f8267}{00024}}     GLuint \mbox{\hyperlink{classMesh_ad8eff04c857fc1f1f42584af599f8267}{vbo}};\textcolor{comment}{}}
+\DoxyCodeLine{00025 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00026 \textcolor{comment}{     * @brief Об'єкти буфера елементів. Розшифровується "{}Element Buffer Objects"{}.}}
+\DoxyCodeLine{00027 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{mesh_8h_source_l00028}\mbox{\hyperlink{classMesh_a17bb0f1901ce2f3bc62e7d6d2ca9e2f7}{00028}}     GLuint \mbox{\hyperlink{classMesh_a17bb0f1901ce2f3bc62e7d6d2ca9e2f7}{ebo}};\textcolor{comment}{}}
+\DoxyCodeLine{00029 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00030 \textcolor{comment}{     * @brief Кількість індексів у `ebo`.}}
+\DoxyCodeLine{00031 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{mesh_8h_source_l00032}\mbox{\hyperlink{classMesh_a8a58a8a2d991049c94d149b344a74d10}{00032}}     GLint \mbox{\hyperlink{classMesh_a8a58a8a2d991049c94d149b344a74d10}{indices\_size}};}
+\DoxyCodeLine{00033 \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034     \mbox{\hyperlink{classMesh_a2af137f1571af89172b9c102302c416b}{Mesh}}();}
+\DoxyCodeLine{00035     \mbox{\hyperlink{classMesh_a7188b0009975f3eaeeba1b170a8c83e4}{\string~Mesh}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{\Hypertarget{mesh_8h_source_l00037}\mbox{\hyperlink{classMesh_adecf9ab32fac64e846ad6b7753e8996b}{00037}}     \mbox{\hyperlink{classMesh_adecf9ab32fac64e846ad6b7753e8996b}{Mesh}}(\textcolor{keyword}{const} \mbox{\hyperlink{classMesh}{Mesh}}\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{mesh_8h_source_l00038}\mbox{\hyperlink{classMesh_ada786d45deb3cd72cac9892c6ca6cb68}{00038}}     \mbox{\hyperlink{classMesh_ada786d45deb3cd72cac9892c6ca6cb68}{Mesh}}(\mbox{\hyperlink{classMesh}{Mesh}}\&\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{mesh_8h_source_l00039}\mbox{\hyperlink{classMesh_a413bc011045c95d449569666639b7389}{00039}}     \mbox{\hyperlink{classMesh}{Mesh}}\& \mbox{\hyperlink{classMesh_a413bc011045c95d449569666639b7389}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classMesh}{Mesh}}\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{mesh_8h_source_l00040}\mbox{\hyperlink{classMesh_abe31d662fd6228b19afa8ab788f63ab0}{00040}}     \mbox{\hyperlink{classMesh}{Mesh}}\& \mbox{\hyperlink{classMesh_abe31d662fd6228b19afa8ab788f63ab0}{operator=}}(\mbox{\hyperlink{classMesh}{Mesh}}\&\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{00041 \textcolor{comment}{}}
+\DoxyCodeLine{00042 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00043 \textcolor{comment}{     * @brief Завантажити у відеокарту меш куба.}}
+\DoxyCodeLine{00044 \textcolor{comment}{     */}}
+\DoxyCodeLine{00045     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMesh_a1c575cbec797116d607e2bf6cfcb8f6a}{cube\_update}}();\textcolor{comment}{}}
+\DoxyCodeLine{00046 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00047 \textcolor{comment}{     * @brief Завантажити у відеокарту новий меш.}}
+\DoxyCodeLine{00048 \textcolor{comment}{     * @param vertices масив вершин}}
+\DoxyCodeLine{00049 \textcolor{comment}{     * @param vertices\_n кількість вершин}}
+\DoxyCodeLine{00050 \textcolor{comment}{     * @param indices масив індексів вершин}}
+\DoxyCodeLine{00051 \textcolor{comment}{     * @param indices\_n кількість індексів вершин}}
+\DoxyCodeLine{00052 \textcolor{comment}{     */}}
+\DoxyCodeLine{00053     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMesh_aca2f681788fcbf90320d631d8c3428c9}{update}}(\textcolor{keyword}{const} \mbox{\hyperlink{structVertex}{Vertex}}* vertices, \textcolor{keywordtype}{size\_t} vertices\_n,}
+\DoxyCodeLine{00054                 \textcolor{keyword}{const} GLuint* indices, \textcolor{keywordtype}{size\_t} indices\_n);}
+\DoxyCodeLine{00055 \textcolor{comment}{}}
+\DoxyCodeLine{00056 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00057 \textcolor{comment}{     * @brief Відображує меш.}}
+\DoxyCodeLine{00058 \textcolor{comment}{     * @param shader Шейдер який використовуєтсья для відображення мешу.}}
+\DoxyCodeLine{00059 \textcolor{comment}{     * @param pre\_generated флаг залишений для інтерфесу, але не використовується.}}
+\DoxyCodeLine{00060 \textcolor{comment}{     */}}
+\DoxyCodeLine{00061     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMesh_a19faf1bd2a71c1ca74cc2821d9d592d2}{draw}}(\mbox{\hyperlink{classShader}{Shader}} \&shader, \textcolor{keywordtype}{bool} pre\_generated) \textcolor{keyword}{override};\textcolor{comment}{}}
+\DoxyCodeLine{00062 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00063 \textcolor{comment}{     * @brief Відображує меш у певному режимі.}}
+\DoxyCodeLine{00064 \textcolor{comment}{     * Див. [glDrawElements][glDrawElements].}}
+\DoxyCodeLine{00065 \textcolor{comment}{     * [glDrawElements]: https://www.khronos.org/registry/OpenGL-\/Refpages/gl4/html/glDrawElements.xhtml\#parameters}}
+\DoxyCodeLine{00066 \textcolor{comment}{     * @param mode режим відображення.}}
+\DoxyCodeLine{00067 \textcolor{comment}{     */}}
+\DoxyCodeLine{00068     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMesh_a93447b5a86c72070e7d6ad6118058351}{draw\_mode}}(GLenum mode);}
+\DoxyCodeLine{00069 \};}
+\DoxyCodeLine{00070 }
+\DoxyCodeLine{00071 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

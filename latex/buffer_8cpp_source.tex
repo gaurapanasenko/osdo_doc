@@ -1,0 +1,41 @@
+\hypertarget{buffer_8cpp_source}{}\doxysubsection{buffer.\+cpp}
+\label{buffer_8cpp_source}\index{osdo/buffer.cpp@{osdo/buffer.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{buffer_8h}{buffer.h}}"{}}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{glbinder_8h}{glbinder.h}}"{}}}
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{00004 \textcolor{comment}{//static GLenum DRAW\_BUFFERS[] = \{GL\_COLOR\_ATTACHMENT0\};}}
+\DoxyCodeLine{00005 }
+\DoxyCodeLine{\Hypertarget{buffer_8cpp_source_l00006}\mbox{\hyperlink{classBuffer_a1fc0873aa0dd87e47da962f32110b03e}{00006}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classBuffer_a1fc0873aa0dd87e47da962f32110b03e}{Buffer::pre\_render}}(GLsizei size[2]) \{}
+\DoxyCodeLine{00007     this-\/>\mbox{\hyperlink{classBuffer_a4dfc88865a8457c1ac0e590239c8d109}{ms\_fb}}.\mbox{\hyperlink{classGlBindable_a221cf1ca728041bc2545f27a5e3004e0}{bind}}();}
+\DoxyCodeLine{00008 }
+\DoxyCodeLine{00009     this-\/>\mbox{\hyperlink{classBuffer_a4dfc88865a8457c1ac0e590239c8d109}{ms\_fb}}.\mbox{\hyperlink{classFramebuffer_a28bda5ab4a57e13e49280d745dbf35b0}{rb\_color\_multisample}}(size, this-\/>\mbox{\hyperlink{classBuffer_a2f3e346b7f027511c34983936f57a360}{color\_rb}});}
+\DoxyCodeLine{00010     this-\/>\mbox{\hyperlink{classBuffer_a4dfc88865a8457c1ac0e590239c8d109}{ms\_fb}}.\mbox{\hyperlink{classFramebuffer_a3c14a0980ae1369f964c0bc05c3ea4dd}{rb\_depth\_multisample}}(size, this-\/>\mbox{\hyperlink{classBuffer_a1fa066668c11e375e09b3ac05575af86}{depth\_rb}});}
+\DoxyCodeLine{00011 }
+\DoxyCodeLine{00012     \textcolor{keywordflow}{if} (!this-\/>\mbox{\hyperlink{classBuffer_a4dfc88865a8457c1ac0e590239c8d109}{ms\_fb}}.\mbox{\hyperlink{classFramebuffer_afa8771e517776fde7edf0a0b07b6e91b}{check}}()) \{}
+\DoxyCodeLine{00013         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00014     \}}
+\DoxyCodeLine{00015 }
+\DoxyCodeLine{00016     glEnable(GL\_DEPTH\_TEST);}
+\DoxyCodeLine{00017     glViewport(0, 0, size[0], size[1]);}
+\DoxyCodeLine{00018     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00019 \}}
+\DoxyCodeLine{00020 }
+\DoxyCodeLine{\Hypertarget{buffer_8cpp_source_l00021}\mbox{\hyperlink{classBuffer_a2546d46567336e00cb66d53585ebbbd7}{00021}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classBuffer_a2546d46567336e00cb66d53585ebbbd7}{Buffer::post\_render}}(GLsizei size[2]) \{}
+\DoxyCodeLine{00022     this-\/>\mbox{\hyperlink{classBuffer_a4dfc88865a8457c1ac0e590239c8d109}{ms\_fb}}.\mbox{\hyperlink{classGlBindable_a6ddfcf2b3f3b34872005ca281a9573eb}{unbind}}();}
+\DoxyCodeLine{00023 }
+\DoxyCodeLine{00024     \{}
+\DoxyCodeLine{00025         \mbox{\hyperlink{classGlBinder}{GlBinder}} b = this-\/>\mbox{\hyperlink{classBuffer_a0e59570248c5a6195f5c9e88201c7d5d}{fb}}.\mbox{\hyperlink{classGlBindable_ad3194126ecaf5285842cee0e7d28c951}{binder}}();}
+\DoxyCodeLine{00026         this-\/>\mbox{\hyperlink{classBuffer_a0e59570248c5a6195f5c9e88201c7d5d}{fb}}.\mbox{\hyperlink{classFramebuffer_a2d6e0ef178e7199df8149d53b12d93e0}{tex\_2d}}(size, this-\/>\mbox{\hyperlink{classBuffer_a0f6f91cd8ed9970868265d7e85b76d8b}{tex}});}
+\DoxyCodeLine{00027     \}}
+\DoxyCodeLine{00028     \mbox{\hyperlink{classGlBinder}{GlBinder}} b1 = this-\/>\mbox{\hyperlink{classBuffer_a4dfc88865a8457c1ac0e590239c8d109}{ms\_fb}}.\mbox{\hyperlink{classGlBindable_ad3194126ecaf5285842cee0e7d28c951}{binder}}(GL\_READ\_FRAMEBUFFER),}
+\DoxyCodeLine{00029             b2 = this-\/>\mbox{\hyperlink{classBuffer_a0e59570248c5a6195f5c9e88201c7d5d}{fb}}.\mbox{\hyperlink{classGlBindable_ad3194126ecaf5285842cee0e7d28c951}{binder}}(GL\_DRAW\_FRAMEBUFFER);}
+\DoxyCodeLine{00030 }
+\DoxyCodeLine{00031     glBlitFramebuffer(0, 0, size[0], size[1], 0, 0, size[0], size[1],}
+\DoxyCodeLine{00032             GL\_COLOR\_BUFFER\_BIT, GL\_NEAREST);}
+\DoxyCodeLine{00033 \}}
+\DoxyCodeLine{00034 }
+\DoxyCodeLine{\Hypertarget{buffer_8cpp_source_l00035}\mbox{\hyperlink{classBuffer_a83f8f07b7743b697cc5d0d78dfc0b9db}{00035}} \textcolor{keyword}{const} \mbox{\hyperlink{classTexture}{Texture}} \&\mbox{\hyperlink{classBuffer_a83f8f07b7743b697cc5d0d78dfc0b9db}{Buffer::get\_tex}}() \{\textcolor{keywordflow}{return} \mbox{\hyperlink{classBuffer_a0f6f91cd8ed9970868265d7e85b76d8b}{tex}};\}}
+
+\end{DoxyCode}

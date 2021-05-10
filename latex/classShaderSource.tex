@@ -1,0 +1,132 @@
+\hypertarget{classShaderSource}{}\doxysubsection{Клас Shader\+Source}
+\label{classShaderSource}\index{ShaderSource@{ShaderSource}}
+\doxysubsubsection*{Загальнодоступні елементи}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classShaderSource_a9610a3f7e210873e27191e5a1b7750ea}{Shader\+Source}} (const GLuint \mbox{\hyperlink{classShaderSource_a6a0213f169e5a9e771750ffaf28ae60b}{id}})
+\item 
+GLuint \mbox{\hyperlink{classShaderSource_a6b5b7c6ad06783f034e61bdf251767f2}{get\+\_\+id}} ()
+\item 
+void \mbox{\hyperlink{classShaderSource_a306de5f8967b2caaf238ea9ed25ee6b5}{attach}} (const GLuint program)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Загальнодоступні статичні елементи}
+\begin{DoxyCompactItemize}
+\item 
+static shared\+\_\+ptr$<$ \mbox{\hyperlink{classShaderSource}{Shader\+Source}} $>$ \mbox{\hyperlink{classShaderSource_a992c5f061e5448ee1d35bdc272fb5702}{create}} (GLenum type, const char $\ast$code)
+\item 
+static shared\+\_\+ptr$<$ \mbox{\hyperlink{classShaderSource}{Shader\+Source}} $>$ \mbox{\hyperlink{classShaderSource_a40a8e5a541a0f30dacad32b75b995586}{create\+\_\+file}} (GLenum type, const string \&path)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Приватні дані}
+\begin{DoxyCompactItemize}
+\item 
+const GLuint \mbox{\hyperlink{classShaderSource_a6a0213f169e5a9e771750ffaf28ae60b}{id}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Детальний опис}
+
+
+Див. визначення в файлі \mbox{\hyperlink{shader_8cpp_source}{shader.\+cpp}}, рядок \mbox{\hyperlink{shader_8cpp_source_l00070}{70}}
+
+
+
+\doxysubsubsection{Конструктор(и)}
+\mbox{\Hypertarget{classShaderSource_a9610a3f7e210873e27191e5a1b7750ea}\label{classShaderSource_a9610a3f7e210873e27191e5a1b7750ea}} 
+\index{ShaderSource@{ShaderSource}!ShaderSource@{ShaderSource}}
+\index{ShaderSource@{ShaderSource}!ShaderSource@{ShaderSource}}
+\doxyparagraph{\texorpdfstring{ShaderSource()}{ShaderSource()}}
+{\footnotesize\ttfamily Shader\+Source\+::\+Shader\+Source (\begin{DoxyParamCaption}\item[{const GLuint}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{shader_8cpp_source}{shader.\+cpp}}, рядок \mbox{\hyperlink{shader_8cpp_source_l00073}{73}}
+
+
+
+\doxysubsubsection{Опис методів компонент}
+\mbox{\Hypertarget{classShaderSource_a306de5f8967b2caaf238ea9ed25ee6b5}\label{classShaderSource_a306de5f8967b2caaf238ea9ed25ee6b5}} 
+\index{ShaderSource@{ShaderSource}!attach@{attach}}
+\index{attach@{attach}!ShaderSource@{ShaderSource}}
+\doxyparagraph{\texorpdfstring{attach()}{attach()}}
+{\footnotesize\ttfamily void Shader\+Source\+::attach (\begin{DoxyParamCaption}\item[{const GLuint}]{program }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{shader_8cpp_source}{shader.\+cpp}}, рядок \mbox{\hyperlink{shader_8cpp_source_l00090}{90}}
+
+\mbox{\Hypertarget{classShaderSource_a992c5f061e5448ee1d35bdc272fb5702}\label{classShaderSource_a992c5f061e5448ee1d35bdc272fb5702}} 
+\index{ShaderSource@{ShaderSource}!create@{create}}
+\index{create@{create}!ShaderSource@{ShaderSource}}
+\doxyparagraph{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily static shared\+\_\+ptr$<$\mbox{\hyperlink{classShaderSource}{Shader\+Source}}$>$ Shader\+Source\+::create (\begin{DoxyParamCaption}\item[{GLenum}]{type,  }\item[{const char $\ast$}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{shader_8cpp_source}{shader.\+cpp}}, рядок \mbox{\hyperlink{shader_8cpp_source_l00074}{74}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{classShaderSource_a992c5f061e5448ee1d35bdc272fb5702_cgraph}
+\end{center}
+\end{figure}
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classShaderSource_a992c5f061e5448ee1d35bdc272fb5702_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classShaderSource_a40a8e5a541a0f30dacad32b75b995586}\label{classShaderSource_a40a8e5a541a0f30dacad32b75b995586}} 
+\index{ShaderSource@{ShaderSource}!create\_file@{create\_file}}
+\index{create\_file@{create\_file}!ShaderSource@{ShaderSource}}
+\doxyparagraph{\texorpdfstring{create\_file()}{create\_file()}}
+{\footnotesize\ttfamily static shared\+\_\+ptr$<$\mbox{\hyperlink{classShaderSource}{Shader\+Source}}$>$ Shader\+Source\+::create\+\_\+file (\begin{DoxyParamCaption}\item[{GLenum}]{type,  }\item[{const string \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{shader_8cpp_source}{shader.\+cpp}}, рядок \mbox{\hyperlink{shader_8cpp_source_l00083}{83}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classShaderSource_a40a8e5a541a0f30dacad32b75b995586_cgraph}
+\end{center}
+\end{figure}
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classShaderSource_a40a8e5a541a0f30dacad32b75b995586_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classShaderSource_a6b5b7c6ad06783f034e61bdf251767f2}\label{classShaderSource_a6b5b7c6ad06783f034e61bdf251767f2}} 
+\index{ShaderSource@{ShaderSource}!get\_id@{get\_id}}
+\index{get\_id@{get\_id}!ShaderSource@{ShaderSource}}
+\doxyparagraph{\texorpdfstring{get\_id()}{get\_id()}}
+{\footnotesize\ttfamily GLuint Shader\+Source\+::get\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{shader_8cpp_source}{shader.\+cpp}}, рядок \mbox{\hyperlink{shader_8cpp_source_l00089}{89}}
+
+
+
+\doxysubsubsection{Компонентні дані}
+\mbox{\Hypertarget{classShaderSource_a6a0213f169e5a9e771750ffaf28ae60b}\label{classShaderSource_a6a0213f169e5a9e771750ffaf28ae60b}} 
+\index{ShaderSource@{ShaderSource}!id@{id}}
+\index{id@{id}!ShaderSource@{ShaderSource}}
+\doxyparagraph{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily const GLuint Shader\+Source\+::id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{shader_8cpp_source}{shader.\+cpp}}, рядок \mbox{\hyperlink{shader_8cpp_source_l00071}{71}}
+
+
+
+Документація цього класу була створена з файлу\+:\begin{DoxyCompactItemize}
+\item 
+osdo/\mbox{\hyperlink{shader_8cpp}{shader.\+cpp}}\end{DoxyCompactItemize}

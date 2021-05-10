@@ -1,0 +1,249 @@
+\hypertarget{subwindow_8cpp_source}{}\doxysubsection{subwindow.\+cpp}
+\label{subwindow_8cpp_source}\index{druidengine/subwindow.cpp@{druidengine/subwindow.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include <EASTL/algorithm.h>}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include <imgui.h>}}
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{subwindow_8h}{subwindow.h}}"{}}}
+\DoxyCodeLine{00004 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{conf_8h}{conf.h}}"{}}}
+\DoxyCodeLine{00005 \textcolor{keyword}{using} eastl::max;}
+\DoxyCodeLine{00006 }
+\DoxyCodeLine{\Hypertarget{subwindow_8cpp_source_l00007}\mbox{\hyperlink{classSubWindow_a43045574e72b59e2ad533145ff428a0d}{00007}} \mbox{\hyperlink{classSubWindow_a43045574e72b59e2ad533145ff428a0d}{SubWindow::SubWindow}}(\mbox{\hyperlink{classWindow}{Window}} \&window, \mbox{\hyperlink{structContext}{Context}} \&context, \mbox{\hyperlink{classeastl_1_1shared__ptr}{shared\_ptr<Scene>}} scene)}
+\DoxyCodeLine{00008     : wireframe(false),}
+\DoxyCodeLine{00009       light\_mode(false),}
+\DoxyCodeLine{00010       culling(false),}
+\DoxyCodeLine{00011       transparency(false),}
+\DoxyCodeLine{00012       camera\_mode(false),}
+\DoxyCodeLine{00013       textured(false),}
+\DoxyCodeLine{00014       pre\_generated(false),}
+\DoxyCodeLine{00015       level\{8, 8\},}
+\DoxyCodeLine{00016       context(context),}
+\DoxyCodeLine{00017       scene(scene),}
+\DoxyCodeLine{00018       window(window)}
+\DoxyCodeLine{00019 \{}
+\DoxyCodeLine{00020     this-\/>\mbox{\hyperlink{classSubWindow_a888cbbc96e72b6268107d09481dff262}{camera}}.\mbox{\hyperlink{classCamera_af770e5190d9a895ad804679e02ac182b}{translate\_camera}}(\mbox{\hyperlink{osdo_8cpp_a8027f0f98c35ea23923f0db84b86c05a}{BASIS0POS}});}
+\DoxyCodeLine{00021 \}}
+\DoxyCodeLine{00022 }
+\DoxyCodeLine{\Hypertarget{subwindow_8cpp_source_l00023}\mbox{\hyperlink{classSubWindow_aa69a4e9aeada4c9c6755b348a70c3ab6}{00023}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classSubWindow_aa69a4e9aeada4c9c6755b348a70c3ab6}{SubWindow::params\_window}}() \{}
+\DoxyCodeLine{00024     ImGui::Checkbox(\textcolor{stringliteral}{"{}Wireframe"{}}, \&this-\/>\mbox{\hyperlink{classSubWindow_a598ffb4ca0f7561841bd93cbaae69836}{wireframe}});}
+\DoxyCodeLine{00025     ImGui::Checkbox(\textcolor{stringliteral}{"{}Light"{}}, \&this-\/>\mbox{\hyperlink{classSubWindow_a735eb6ad8bba8ae950916a71892479d0}{light\_mode}});}
+\DoxyCodeLine{00026     ImGui::Checkbox(\textcolor{stringliteral}{"{}Culling"{}}, \&this-\/>\mbox{\hyperlink{classSubWindow_a6471350dcb826ee19b90e17681dbfa5a}{culling}});}
+\DoxyCodeLine{00027     ImGui::Checkbox(\textcolor{stringliteral}{"{}Transparency"{}}, \&this-\/>\mbox{\hyperlink{classSubWindow_a9343928126f200cea5f7e670ddda4a49}{transparency}});}
+\DoxyCodeLine{00028     ImGui::Checkbox(\textcolor{stringliteral}{"{}Camera mode"{}}, \&this-\/>\mbox{\hyperlink{classSubWindow_a99279028421377e4764a0177f198d90b}{camera\_mode}});}
+\DoxyCodeLine{00029     ImGui::Checkbox(\textcolor{stringliteral}{"{}Textured"{}}, \&this-\/>\mbox{\hyperlink{classSubWindow_a84e719afe4b9cdcd9762d74eadce5fec}{textured}});}
+\DoxyCodeLine{00030     \textcolor{keywordtype}{bool} changed = \textcolor{keyword}{false};}
+\DoxyCodeLine{00031     changed |= ImGui::Checkbox(\textcolor{stringliteral}{"{}Pre generated"{}}, \&this-\/>\mbox{\hyperlink{classSubWindow_a6540a161c2cb9d24703c2841f98d9659}{pre\_generated}});}
+\DoxyCodeLine{00032     changed |= ImGui::DragInt2(\textcolor{stringliteral}{"{}Level"{}}, \mbox{\hyperlink{classSubWindow_a9680efc0a8e34ddaa9fdd42f658f2a09}{level}}, 1, 1, 0);}
+\DoxyCodeLine{00033     \textcolor{keywordflow}{if} (changed \&\& \mbox{\hyperlink{classSubWindow_a6540a161c2cb9d24703c2841f98d9659}{pre\_generated}}) \{}
+\DoxyCodeLine{00034         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&i : \mbox{\hyperlink{classSubWindow_a039dc3e93af2abf807d16dcc16bd2568}{scene}}-\/>objects) \{}
+\DoxyCodeLine{00035             i.second.get\_model()-\/>generate(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(\mbox{\hyperlink{classSubWindow_a9680efc0a8e34ddaa9fdd42f658f2a09}{level}}[0]));}
+\DoxyCodeLine{00036         \}}
+\DoxyCodeLine{00037     \}}
+\DoxyCodeLine{00038 }
+\DoxyCodeLine{00039     ImGui::Text(\textcolor{stringliteral}{"{}Camera"{}});}
+\DoxyCodeLine{00040     vec4 vector;}
+\DoxyCodeLine{00041     \mbox{\hyperlink{classSubWindow_a888cbbc96e72b6268107d09481dff262}{camera}}.\mbox{\hyperlink{classCamera_a92e90596e90d3405c93a9c2d4305a287}{get\_position}}(vector);}
+\DoxyCodeLine{00042     \textcolor{keywordflow}{if} (ImGui::DragFloat3(\textcolor{stringliteral}{"{}Potision"{}}, vector, 0.1f, 0, 0)) \{}
+\DoxyCodeLine{00043         \mbox{\hyperlink{classSubWindow_a888cbbc96e72b6268107d09481dff262}{camera}}.\mbox{\hyperlink{classCamera_a06c173530d6f5d982092fb5f5f58f84a}{set\_position}}(vector);}
+\DoxyCodeLine{00044     \}}
+\DoxyCodeLine{00045 }
+\DoxyCodeLine{00046     \mbox{\hyperlink{classSubWindow_a888cbbc96e72b6268107d09481dff262}{camera}}.\mbox{\hyperlink{classCamera_aa7eb7b6bb3dc03911a44abefab63db28}{get\_rotation}}(vector);}
+\DoxyCodeLine{00047     \textcolor{keywordflow}{if} (ImGui::DragFloat3(\textcolor{stringliteral}{"{}Rotation"{}}, vector, 0.01f, 0, 0)) \{}
+\DoxyCodeLine{00048         \mbox{\hyperlink{classSubWindow_a888cbbc96e72b6268107d09481dff262}{camera}}.\mbox{\hyperlink{classCamera_a1a69c9c9f9f370599ba390c8c33f3f2f}{set\_rotation}}(vector);}
+\DoxyCodeLine{00049     \}}
+\DoxyCodeLine{00050     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00051 \}}
+\DoxyCodeLine{00052 }
+\DoxyCodeLine{\Hypertarget{subwindow_8cpp_source_l00053}\mbox{\hyperlink{classSubWindow_acbfb789831e20841fe7cc7ee8a8a9c4d}{00053}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classSubWindow_acbfb789831e20841fe7cc7ee8a8a9c4d}{SubWindow::render\_window}}(\textcolor{keywordtype}{double} delta\_time) \{}
+\DoxyCodeLine{00054     ImVec2 vMin, vMax, win\_pos;}
+\DoxyCodeLine{00055     win\_pos = ImGui::GetWindowPos();}
+\DoxyCodeLine{00056     vMin = ImGui::GetWindowContentRegionMin();}
+\DoxyCodeLine{00057     vMax = ImGui::GetWindowContentRegionMax();}
+\DoxyCodeLine{00058     ImVec2 size = \{}
+\DoxyCodeLine{00059         max(vMax.x-\/vMin.x, 5.f),}
+\DoxyCodeLine{00060         max(vMax.y-\/vMin.y, 5.f)}
+\DoxyCodeLine{00061     \};}
+\DoxyCodeLine{00062 }
+\DoxyCodeLine{00063     GLsizei glsize[] = \{}
+\DoxyCodeLine{00064         \textcolor{keyword}{static\_cast<}GLsizei\textcolor{keyword}{>}(size.x),}
+\DoxyCodeLine{00065         \textcolor{keyword}{static\_cast<}GLsizei\textcolor{keyword}{>}(size.y),}
+\DoxyCodeLine{00066     \};}
+\DoxyCodeLine{00067     \textcolor{keywordtype}{string} shader = \textcolor{stringliteral}{"{}main\_adv"{}};}
+\DoxyCodeLine{00068     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classSubWindow_a6540a161c2cb9d24703c2841f98d9659}{pre\_generated}}) shader = \textcolor{stringliteral}{"{}main"{}};}
+\DoxyCodeLine{00069     \mbox{\hyperlink{classShader}{Shader}} \&sh = *\mbox{\hyperlink{classSubWindow_a1a30bdfafe71c986b7040192d5405d09}{context}}.\mbox{\hyperlink{structContext_ae6fcb1cace574a21fb21ccd678473d17}{shaders}}.find(shader)-\/>second;}
+\DoxyCodeLine{00070     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classSubWindow_ab701da6251cc8b6b6e8284db477759dd}{buffer}}.\mbox{\hyperlink{classBuffer_a1fc0873aa0dd87e47da962f32110b03e}{pre\_render}}(glsize)) \{}
+\DoxyCodeLine{00071         glClearColor(1, 1, 1, 1);}
+\DoxyCodeLine{00072         glClearDepth(1.0);}
+\DoxyCodeLine{00073         glClear(GL\_COLOR\_BUFFER\_BIT | GL\_DEPTH\_BUFFER\_BIT);}
+\DoxyCodeLine{00074 }
+\DoxyCodeLine{00075         sh.\mbox{\hyperlink{classGlBindable_a221cf1ca728041bc2545f27a5e3004e0}{bind}}();}
+\DoxyCodeLine{00076 }
+\DoxyCodeLine{00077         \textcolor{comment}{// pass projection matrix to shader}}
+\DoxyCodeLine{00078         glm\_perspective(45.f * \mbox{\hyperlink{conf_8h_ab01f46e058bbb810a0e6228545950dc6}{M\_RAD\_F}}, size.x / size.y,}
+\DoxyCodeLine{00079                         0.1f, 100.0f, this-\/>projection);}
+\DoxyCodeLine{00080         sh.\mbox{\hyperlink{classShader_a34d5548a520489bd132f5bfbc46bb3a9}{set\_mat4}}(\textcolor{stringliteral}{"{}projection"{}}, this-\/>\mbox{\hyperlink{classSubWindow_a7c2016e2374e5f3025a43fe07ddcdbfe}{projection}});}
+\DoxyCodeLine{00081         sh.\mbox{\hyperlink{classShader_a6e686eb1dd9e36aa617397520b669497}{set\_float}}(\textcolor{stringliteral}{"{}materialShininess"{}}, 32.0f);}
+\DoxyCodeLine{00082 }
+\DoxyCodeLine{00083         \textcolor{comment}{// directional light}}
+\DoxyCodeLine{00084         vec4 direction = \{0,-\/1,0,0\};}
+\DoxyCodeLine{00085         \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{classSubWindow_a735eb6ad8bba8ae950916a71892479d0}{light\_mode}})}
+\DoxyCodeLine{00086             this-\/>\mbox{\hyperlink{classSubWindow_a888cbbc96e72b6268107d09481dff262}{camera}}.\mbox{\hyperlink{classCamera_afda6bcc513fd95c22985ba078d47b2a3}{get\_direction}}(direction);}
+\DoxyCodeLine{00087         sh.\mbox{\hyperlink{classShader_a5da8dde2a4756ce7f5da98f4e3dd9990}{set\_vec3}}(\textcolor{stringliteral}{"{}dirLight.direction"{}}, direction);}
+\DoxyCodeLine{00088         sh.\mbox{\hyperlink{classShader_a8ab6219e3f760caa7a586061a9894096}{set\_vec3f}}(\textcolor{stringliteral}{"{}dirLight.ambient"{}}, 0.2f, 0.2f, 0.2f);}
+\DoxyCodeLine{00089         sh.\mbox{\hyperlink{classShader_a8ab6219e3f760caa7a586061a9894096}{set\_vec3f}}(\textcolor{stringliteral}{"{}dirLight.diffuse"{}}, 0.6f, 0.6f, 0.6f);}
+\DoxyCodeLine{00090         sh.\mbox{\hyperlink{classShader_a8ab6219e3f760caa7a586061a9894096}{set\_vec3f}}(\textcolor{stringliteral}{"{}dirLight.specular"{}}, 0.2f, 0.2f, 0.2f);}
+\DoxyCodeLine{00091 }
+\DoxyCodeLine{00092         \textcolor{comment}{// camera/view transformation}}
+\DoxyCodeLine{00093         this-\/>\mbox{\hyperlink{classSubWindow_a888cbbc96e72b6268107d09481dff262}{camera}}.\mbox{\hyperlink{classCamera_ab82dd66e529cd5da7f61bd0efe7cfed2}{get\_mat4}}(this-\/>\mbox{\hyperlink{classSubWindow_ae3d03f0b0c9e6b2077eaf42e4a21b08d}{last\_camera}});}
+\DoxyCodeLine{00094         \{}
+\DoxyCodeLine{00095             vec4 pos;}
+\DoxyCodeLine{00096             this-\/>\mbox{\hyperlink{classSubWindow_a888cbbc96e72b6268107d09481dff262}{camera}}.\mbox{\hyperlink{classCamera_a92e90596e90d3405c93a9c2d4305a287}{get\_position}}(pos);}
+\DoxyCodeLine{00097             sh.\mbox{\hyperlink{classShader_a5da8dde2a4756ce7f5da98f4e3dd9990}{set\_vec3}}(\textcolor{stringliteral}{"{}viewPos"{}}, pos);}
+\DoxyCodeLine{00098         \}}
+\DoxyCodeLine{00099         sh.\mbox{\hyperlink{classShader_a6e686eb1dd9e36aa617397520b669497}{set\_float}}(\textcolor{stringliteral}{"{}materialShininess"{}}, 32.0f);}
+\DoxyCodeLine{00100         sh.\mbox{\hyperlink{classShader_a34d5548a520489bd132f5bfbc46bb3a9}{set\_mat4}}(\textcolor{stringliteral}{"{}camera"{}}, this-\/>\mbox{\hyperlink{classSubWindow_ae3d03f0b0c9e6b2077eaf42e4a21b08d}{last\_camera}});}
+\DoxyCodeLine{00101 }
+\DoxyCodeLine{00102         sh.\mbox{\hyperlink{classShader_a6e686eb1dd9e36aa617397520b669497}{set\_float}}(\textcolor{stringliteral}{"{}alpha"{}}, 1.0);}
+\DoxyCodeLine{00103 }
+\DoxyCodeLine{00104         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classSubWindow_a6471350dcb826ee19b90e17681dbfa5a}{culling}}) \{}
+\DoxyCodeLine{00105             glEnable(GL\_CULL\_FACE);}
+\DoxyCodeLine{00106             glCullFace(GL\_BACK);}
+\DoxyCodeLine{00107             glFrontFace(GL\_CCW);}
+\DoxyCodeLine{00108         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00109             glDisable(GL\_CULL\_FACE);}
+\DoxyCodeLine{00110         \}}
+\DoxyCodeLine{00111 }
+\DoxyCodeLine{00112         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classSubWindow_a9343928126f200cea5f7e670ddda4a49}{transparency}}) \{}
+\DoxyCodeLine{00113             glEnable(GL\_BLEND);}
+\DoxyCodeLine{00114             glBlendEquation(GL\_FUNC\_ADD);}
+\DoxyCodeLine{00115             glBlendFunc(GL\_SRC\_ALPHA, GL\_ONE\_MINUS\_SRC\_ALPHA);}
+\DoxyCodeLine{00116         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00117             glDisable(GL\_BLEND);}
+\DoxyCodeLine{00118         \}}
+\DoxyCodeLine{00119 }
+\DoxyCodeLine{00120         glPolygonMode(GL\_FRONT\_AND\_BACK, GL\_FILL);}
+\DoxyCodeLine{00121         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classSubWindow_a598ffb4ca0f7561841bd93cbaae69836}{wireframe}})}
+\DoxyCodeLine{00122             glPolygonMode(GL\_FRONT\_AND\_BACK, GL\_LINE);}
+\DoxyCodeLine{00123 }
+\DoxyCodeLine{00124         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classSubWindow_a84e719afe4b9cdcd9762d74eadce5fec}{textured}} \&\& \mbox{\hyperlink{classSubWindow_a1a30bdfafe71c986b7040192d5405d09}{context}}.\mbox{\hyperlink{structContext_af6e358ab9890652b7c0accf7fcd1fc85}{active\_texture}} != \mbox{\hyperlink{classSubWindow_a1a30bdfafe71c986b7040192d5405d09}{context}}.\mbox{\hyperlink{structContext_acc023c5c78fc019ae50fac056ddf7226}{textures}}.end()) \{}
+\DoxyCodeLine{00125             sh.\mbox{\hyperlink{classShader_a4581e5cba0fa25ab7080a6848543dc58}{set\_bool}}(\textcolor{stringliteral}{"{}textured"{}}, 1);}
+\DoxyCodeLine{00126             glBindTexture(GL\_TEXTURE\_2D, \mbox{\hyperlink{classSubWindow_a1a30bdfafe71c986b7040192d5405d09}{context}}.\mbox{\hyperlink{structContext_af6e358ab9890652b7c0accf7fcd1fc85}{active\_texture}}-\/>second-\/>get\_id());}
+\DoxyCodeLine{00127         \} \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00128             sh.\mbox{\hyperlink{classShader_a4581e5cba0fa25ab7080a6848543dc58}{set\_bool}}(\textcolor{stringliteral}{"{}textured"{}}, 0);}
+\DoxyCodeLine{00129 }
+\DoxyCodeLine{00130         sh.\mbox{\hyperlink{classShader_a5544845a48d60515371b5cb71c7bcb8f}{set\_int}}(\textcolor{stringliteral}{"{}inner"{}}, \mbox{\hyperlink{classSubWindow_a9680efc0a8e34ddaa9fdd42f658f2a09}{level}}[0]);}
+\DoxyCodeLine{00131         sh.\mbox{\hyperlink{classShader_a5544845a48d60515371b5cb71c7bcb8f}{set\_int}}(\textcolor{stringliteral}{"{}outer"{}}, \mbox{\hyperlink{classSubWindow_a9680efc0a8e34ddaa9fdd42f658f2a09}{level}}[1]);}
+\DoxyCodeLine{00132         sh.\mbox{\hyperlink{classShader_a6e686eb1dd9e36aa617397520b669497}{set\_float}}(\textcolor{stringliteral}{"{}alpha"{}}, 1);}
+\DoxyCodeLine{00133 }
+\DoxyCodeLine{00134         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&i : \mbox{\hyperlink{classSubWindow_a039dc3e93af2abf807d16dcc16bd2568}{scene}}-\/>objects) \{}
+\DoxyCodeLine{00135             mat4 mat4buf;}
+\DoxyCodeLine{00136             i.second.draw(sh, mat4buf, delta\_time, \mbox{\hyperlink{classSubWindow_a6540a161c2cb9d24703c2841f98d9659}{pre\_generated}});}
+\DoxyCodeLine{00137         \}}
+\DoxyCodeLine{00138     \}}
+\DoxyCodeLine{00139     \mbox{\hyperlink{classSubWindow_ab701da6251cc8b6b6e8284db477759dd}{buffer}}.\mbox{\hyperlink{classBuffer_a2546d46567336e00cb66d53585ebbbd7}{post\_render}}(glsize);}
+\DoxyCodeLine{00140 }
+\DoxyCodeLine{00141     ImVec2 cursorBegin = ImGui::GetCursorPos();}
+\DoxyCodeLine{00142     \textcolor{keywordtype}{void} * tex\_id = \mbox{\hyperlink{classSubWindow_ab701da6251cc8b6b6e8284db477759dd}{buffer}}.\mbox{\hyperlink{classBuffer_a83f8f07b7743b697cc5d0d78dfc0b9db}{get\_tex}}().\mbox{\hyperlink{classGlBindable_a998a690af84360cd283e49f6a32ae4fd}{get\_vid}}();}
+\DoxyCodeLine{00143     ImGui::Image(tex\_id, size,}
+\DoxyCodeLine{00144                  ImVec2\{0, 0\}, ImVec2\{1, 1\}, ImVec4\{1,1,1,1\}, ImVec4\{0,0,0,0\});}
+\DoxyCodeLine{00145 }
+\DoxyCodeLine{00146     ImGui::SetCursorPos(cursorBegin);}
+\DoxyCodeLine{00147     ImGui::InvisibleButton(\textcolor{stringliteral}{"{}\#\#empty"{}}, size);}
+\DoxyCodeLine{00148     \textcolor{keyword}{const} \textcolor{keywordtype}{bool} is\_hovered = ImGui::IsItemHovered(0);}
+\DoxyCodeLine{00149     \textcolor{keyword}{const} \textcolor{keywordtype}{bool} is\_active = ImGui::IsItemActive();}
+\DoxyCodeLine{00150     \textcolor{keywordflow}{if} (is\_hovered) \{}
+\DoxyCodeLine{00151         ImGuiIO \&io = ImGui::GetIO();}
+\DoxyCodeLine{00152         \textcolor{keywordflow}{if} (is\_active) \{}
+\DoxyCodeLine{00153             vec3 mouse\_pos = \{}
+\DoxyCodeLine{00154                 io.MouseDelta.y / size.y * 2, -\/io.MouseDelta.x / size.x * 2, 0}
+\DoxyCodeLine{00155             \};}
+\DoxyCodeLine{00156             \textcolor{keywordflow}{if} (!this-\/>\mbox{\hyperlink{classSubWindow_a99279028421377e4764a0177f198d90b}{camera\_mode}})}
+\DoxyCodeLine{00157                 this-\/>\mbox{\hyperlink{classSubWindow_a888cbbc96e72b6268107d09481dff262}{camera}}.\mbox{\hyperlink{classCamera_ac56fb9a7adad365cae4c0238b8d1e39a}{rotate\_all\_camera}}(mouse\_pos);}
+\DoxyCodeLine{00158             \textcolor{keywordflow}{else} this-\/>\mbox{\hyperlink{classSubWindow_a888cbbc96e72b6268107d09481dff262}{camera}}.\mbox{\hyperlink{classCamera_ac8896d30c755130ba22c867598a1a432}{rotate\_all\_inverse}}(mouse\_pos);}
+\DoxyCodeLine{00159         \}}
+\DoxyCodeLine{00160         vec3 tr = \{0, 0, -\/io.MouseWheel\};}
+\DoxyCodeLine{00161         this-\/>\mbox{\hyperlink{classSubWindow_a888cbbc96e72b6268107d09481dff262}{camera}}.\mbox{\hyperlink{classCamera_a264f13ea514a68eb440a6e20b975470d}{translate}}(tr, 1);}
+\DoxyCodeLine{00162     \}}
+\DoxyCodeLine{00163 }
+\DoxyCodeLine{00164 }
+\DoxyCodeLine{00165     ImDrawList *dl = ImGui::GetWindowDrawList();}
+\DoxyCodeLine{00166     \textcolor{keyword}{auto} active = this-\/>\mbox{\hyperlink{classSubWindow_a1a30bdfafe71c986b7040192d5405d09}{context}}.\mbox{\hyperlink{structContext_a2495f12fa2a7e55cb4d6e7d514e58735}{active}};}
+\DoxyCodeLine{00167     \textcolor{keywordflow}{if} (active != this-\/>\mbox{\hyperlink{classSubWindow_a1a30bdfafe71c986b7040192d5405d09}{context}}.\mbox{\hyperlink{structContext_adf5341866d506e12dca716c71367fdcf}{models}}.end()) \{}
+\DoxyCodeLine{00168         \mbox{\hyperlink{classeastl_1_1shared__ptr}{shared\_ptr<Model>}} model = active-\/>second.get\_model();}
+\DoxyCodeLine{00169         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&i : \mbox{\hyperlink{classSubWindow_a039dc3e93af2abf807d16dcc16bd2568}{scene}}-\/>objects) \{}
+\DoxyCodeLine{00170             \textcolor{keywordflow}{if} (i.second.get\_model() != model) \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00171             mat4 mat4buf;}
+\DoxyCodeLine{00172             i.second.get\_mat4(mat4buf);}
+\DoxyCodeLine{00173             mat4 matr = GLM\_MAT4\_IDENTITY\_INIT;}
+\DoxyCodeLine{00174             glm\_mat4\_mul(mat4buf, matr, matr);}
+\DoxyCodeLine{00175             glm\_mat4\_mul(this-\/>\mbox{\hyperlink{classSubWindow_ae3d03f0b0c9e6b2077eaf42e4a21b08d}{last\_camera}}, matr, matr);}
+\DoxyCodeLine{00176             glm\_mat4\_mul(this-\/>\mbox{\hyperlink{classSubWindow_a7c2016e2374e5f3025a43fe07ddcdbfe}{projection}}, matr, matr);}
+\DoxyCodeLine{00177             \textcolor{keywordtype}{float} minz = 0, maxz = 0;}
+\DoxyCodeLine{00178             \textcolor{keyword}{auto}\& vertices = *model-\/>get\_vertices();}
+\DoxyCodeLine{00179             \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} vertices\_size = vertices.size();}
+\DoxyCodeLine{00180             vector<vec4> points(vertices\_size);}
+\DoxyCodeLine{00181 }
+\DoxyCodeLine{00182             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vertices\_size; i++) \{}
+\DoxyCodeLine{00183                 vec4 view\_sz = \{0, 0, size.x, size.y\};}
+\DoxyCodeLine{00184                 glm\_project(vertices[i].position, matr,}
+\DoxyCodeLine{00185                             view\_sz, points[i]);}
+\DoxyCodeLine{00186                 \textcolor{keywordflow}{if} (!i) \{}
+\DoxyCodeLine{00187                     minz = points[i][2];}
+\DoxyCodeLine{00188                     maxz = points[i][2];}
+\DoxyCodeLine{00189                 \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00190                     \textcolor{keywordflow}{if} (minz > points[i][2]) minz = points[i][2];}
+\DoxyCodeLine{00191                     \textcolor{keywordflow}{if} (maxz < points[i][2]) maxz = points[i][2];}
+\DoxyCodeLine{00192                 \}}
+\DoxyCodeLine{00193             \}}
+\DoxyCodeLine{00194             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vertices\_size; i++) \{}
+\DoxyCodeLine{00195                 points[i][2] = (maxz -\/ points[i][2]) / (maxz -\/ minz) * 0.6f + 0.4f;}
+\DoxyCodeLine{00196             \}}
+\DoxyCodeLine{00197             ImVec2 pos, sz;}
+\DoxyCodeLine{00198             \textcolor{keywordtype}{char} buf[16];}
+\DoxyCodeLine{00199             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vertices\_size; i++) \{}
+\DoxyCodeLine{00200                 pos.x = points[i][0] + win\_pos.x + cursorBegin.x;}
+\DoxyCodeLine{00201                 pos.y = points[i][1] + win\_pos.y + cursorBegin.y;}
+\DoxyCodeLine{00202                 ImGui::PushStyleColor(ImGuiCol\_Text, ImVec4\{0,0,0,points[i][2]\});}
+\DoxyCodeLine{00203                 ImGui::SetCursorPos(ImVec2\{points[i][0] + cursorBegin.x,}
+\DoxyCodeLine{00204                                            points[i][1] + cursorBegin.y\});}
+\DoxyCodeLine{00205                 sprintf(buf, \textcolor{stringliteral}{"{}\%lu"{}}, i);}
+\DoxyCodeLine{00206                 sz = ImGui::CalcTextSize(buf, \textcolor{keyword}{nullptr}, \textcolor{keyword}{false}, 0);}
+\DoxyCodeLine{00207                 dl-\/>AddRectFilled(}
+\DoxyCodeLine{00208                             ImVec2\{pos.x-\/2,pos.y-\/2\},}
+\DoxyCodeLine{00209                             ImVec2\{pos.x+ sz.x+2, pos.y+ sz.y+2\},}
+\DoxyCodeLine{00210                             ImGui::GetColorU32(ImVec4\{0,1,0,points[i][2]\}),}
+\DoxyCodeLine{00211                             4, ImDrawCornerFlags\_All);}
+\DoxyCodeLine{00212                 ImGui::Text(\textcolor{stringliteral}{"{}\%s"{}}, buf);}
+\DoxyCodeLine{00213                 ImGui::PopStyleColor(1);}
+\DoxyCodeLine{00214             \}}
+\DoxyCodeLine{00215         \}}
+\DoxyCodeLine{00216     \}}
+\DoxyCodeLine{00217     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00218 \}}
+\DoxyCodeLine{00219 }
+\DoxyCodeLine{\Hypertarget{subwindow_8cpp_source_l00220}\mbox{\hyperlink{classSubWindow_a3f96bc1981aeedb209fdf3168e41d924}{00220}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classSubWindow_a3f96bc1981aeedb209fdf3168e41d924}{SubWindow::loop}}(\textcolor{keywordtype}{size\_t} \textcolor{keywordtype}{id}, \textcolor{keywordtype}{double} delta\_time) \{}
+\DoxyCodeLine{00221     \textcolor{keywordtype}{char} name[128];}
+\DoxyCodeLine{00222     snprintf(name, 128, \textcolor{stringliteral}{"{}Subwindow params \%lu"{}}, \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00223     \textcolor{keywordflow}{if} (ImGui::Begin(name)) \{}
+\DoxyCodeLine{00224         \mbox{\hyperlink{classSubWindow_aa69a4e9aeada4c9c6755b348a70c3ab6}{params\_window}}();}
+\DoxyCodeLine{00225     \}}
+\DoxyCodeLine{00226     ImGui::End();}
+\DoxyCodeLine{00227 }
+\DoxyCodeLine{00228     snprintf(name, 128, \textcolor{stringliteral}{"{}Subwindow \%lu"{}}, \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00229     ImGui::SetNextWindowSize(ImVec2\{512, 512\}, ImGuiCond\_FirstUseEver);}
+\DoxyCodeLine{00230     \textcolor{keyword}{auto} flags = ImGuiWindowFlags\_NoScrollbar |}
+\DoxyCodeLine{00231                  ImGuiWindowFlags\_NoScrollWithMouse;}
+\DoxyCodeLine{00232     \textcolor{keywordtype}{bool} showWindow = \textcolor{keyword}{true};}
+\DoxyCodeLine{00233     \textcolor{keywordflow}{if} (ImGui::Begin(name, \&showWindow, flags)) \{}
+\DoxyCodeLine{00234         \mbox{\hyperlink{classSubWindow_acbfb789831e20841fe7cc7ee8a8a9c4d}{render\_window}}(delta\_time);}
+\DoxyCodeLine{00235     \}}
+\DoxyCodeLine{00236     ImGui::End();}
+\DoxyCodeLine{00237     \textcolor{keywordflow}{return} showWindow;}
+\DoxyCodeLine{00238 \}}
+\DoxyCodeLine{00239 }
+\DoxyCodeLine{\Hypertarget{subwindow_8cpp_source_l00240}\mbox{\hyperlink{classSubWindow_a4920e96742d73540eaeb692249a662a6}{00240}} \mbox{\hyperlink{classeastl_1_1shared__ptr}{shared\_ptr<Scene>}} \&\mbox{\hyperlink{classSubWindow_a4920e96742d73540eaeb692249a662a6}{SubWindow::get\_scene}}()}
+\DoxyCodeLine{00241 \{}
+\DoxyCodeLine{00242     \textcolor{keywordflow}{return} \mbox{\hyperlink{classSubWindow_a039dc3e93af2abf807d16dcc16bd2568}{scene}};}
+\DoxyCodeLine{00243 \}}
+
+\end{DoxyCode}

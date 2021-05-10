@@ -1,0 +1,467 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Дипломна робота: Файл druidengine/window.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Дипломна робота
+   </div>
+   <div id="projectbrief">студента групи ПА-17-2 Панасенка Єгора Сергійовича</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_949b4dac30c9b4f92191601f9632f3ff.html">druidengine</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Класи</a> &#124;
+<a href="#typedef-members">Визначення типів</a> &#124;
+<a href="#enum-members">Переліки</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл window.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="osdo_8h_source.html">osdo.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Діаграма включених заголовочних файлів для window.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="window_8h__incl.png" border="0" usemap="#adruidengine_2window_8h" alt=""/></div>
+<map name="adruidengine_2window_8h" id="adruidengine_2window_8h">
+<area shape="rect" title=" " alt="" coords="89,5,236,32"/>
+<area shape="rect" href="osdo_8h.html" title=" " alt="" coords="132,80,193,107"/>
+<area shape="rect" title=" " alt="" coords="5,155,99,181"/>
+<area shape="rect" title=" " alt="" coords="123,155,203,181"/>
+<area shape="rect" title=" " alt="" coords="227,155,291,181"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлів, які включають цей файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="window_8h__dep__incl.png" border="0" usemap="#adruidengine_2window_8hdep" alt=""/></div>
+<map name="adruidengine_2window_8hdep" id="adruidengine_2window_8hdep">
+<area shape="rect" title=" " alt="" coords="267,5,414,32"/>
+<area shape="rect" href="app_8h.html" title=" " alt="" coords="16,80,140,107"/>
+<area shape="rect" href="deimgui_8cpp.html" title=" " alt="" coords="165,80,327,107"/>
+<area shape="rect" href="subwindow_8h.html" title=" " alt="" coords="352,80,519,107"/>
+<area shape="rect" href="window_8cpp.html" title=" " alt="" coords="543,80,703,107"/>
+<area shape="rect" href="app_8cpp.html" title=" " alt="" coords="179,155,318,181"/>
+<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="5,155,151,181"/>
+<area shape="rect" href="subwindow_8cpp.html" title=" " alt="" coords="345,155,526,181"/>
+</map>
+</div>
+</div>
+<p><a href="window_8h_source.html">Див. вихідні тексти.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Класи</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html">Window</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Визначення типів</h2></td></tr>
+<tr class="memitem:a4251531d4faa41e60a2cd13d4525af1f"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="window_8h.html#a4251531d4faa41e60a2cd13d4525af1f">scroll_cb_t</a>) (<a class="el" href="classWindow.html">Window</a> *window, GLdouble xoffset, GLdouble yoffset)</td></tr>
+<tr class="separator:a4251531d4faa41e60a2cd13d4525af1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09edcf54e1f22a5e7f2d944286902ef3"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="window_8h.html#a09edcf54e1f22a5e7f2d944286902ef3">mouse_motion_cb_t</a>) (<a class="el" href="classWindow.html">Window</a> *window, vec2 pos, vec2 offset)</td></tr>
+<tr class="separator:a09edcf54e1f22a5e7f2d944286902ef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7148bb12e7c547fd91b077ac96d52d4e"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="window_8h.html#a7148bb12e7c547fd91b077ac96d52d4e">char_cb_t</a>) (<a class="el" href="classWindow.html">Window</a> *window, unsigned int codepoint)</td></tr>
+<tr class="separator:a7148bb12e7c547fd91b077ac96d52d4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9edc663539f1b26d79dff1300c8d8b5"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="window_8h.html#ae9edc663539f1b26d79dff1300c8d8b5">mouse_button_cb_t</a>) (<a class="el" href="classWindow.html">Window</a> *window, enum <a class="el" href="window_8h.html#a13dc1bbe931fd8c6b75fed89f1e23256">BUTTONS</a> button, bool pressed)</td></tr>
+<tr class="separator:ae9edc663539f1b26d79dff1300c8d8b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f34a6ec569f31c06cc15579e99be23d"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="window_8h.html#a9f34a6ec569f31c06cc15579e99be23d">key_cb_t</a>) (<a class="el" href="classWindow.html">Window</a> *window, enum <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211">KEYS</a> key, bool pressed)</td></tr>
+<tr class="separator:a9f34a6ec569f31c06cc15579e99be23d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Переліки</h2></td></tr>
+<tr class="memitem:a917cb2ad6b731b390f8c57aa48656211"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211">KEYS</a> { <br />
+&#160;&#160;<a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211ae7a3a4540031b038014294aa6743a7a4">KEY_DELETE</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a2a662d23aadd7106a3a2afdfd5d426ed">KEY_ENTER</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a60c75f9c8eded88ef76c0c94da27963c">KEY_TAB</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211aa3cd0158e01f834cebcfb3fc5578df4b">KEY_BACKSPACE</a>
+, <br />
+&#160;&#160;<a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a0848a442d907968b211b97bc2bd88acd">KEY_UP</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211aa9cdac7967bf7d88fdb761138a2a3416">KEY_DOWN</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a612120b69c7dfd46086db7aaebdbcf65">KEY_LEFT</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a6504370d9c6391e1a9da6a1a529b089d">KEY_RIGHT</a>
+, <br />
+&#160;&#160;<a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211ad5b83418c285e43af5d3a87b4d4049d7">KEY_HOME</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211aa8adb6fcb92dec58fb19410eacfdd403">KEY_END</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211ad435c2e06f3d05728ed52ede8a68295b">KEY_PAGE_UP</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211ada883d03c9fb53deb33064a13ca97639">KEY_PAGE_DOWN</a>
+, <br />
+&#160;&#160;<a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a5d5eb3601a49913c3ab0f9bcbdc5918a">KEY_LEFT_SHIFT</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a125ed6244c499a097a3e1cb111c8fa9c">KEY_RIGHT_SHIFT</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a7c9c57571c47a267791fabb5e5dca6f0">KEY_LEFT_CONTROL</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a7952b899556457f74a9ed51a0484a323">KEY_RIGHT_CONTROL</a>
+, <br />
+&#160;&#160;<a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a35bcc2bc85513df4f3897a9d64a9c51c">KEY_1</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a2333d7c312aa98622c41e74c5d13e8de">KEY_2</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211aef054680a9be7da17d196e15aec894f8">KEY_3</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211ae9f20352b4ef69ae68b9ff44abadfd79">KEY_4</a>
+, <br />
+&#160;&#160;<a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211aed864c0209ba46546ba112f6c36e0cc4">KEY_5</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a2fe7fe99bcb0fd90bf4234be9e4ce5be">KEY_6</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211ae78c88108d428cb8066e7a056195f489">KEY_7</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211aab8917d426f9be27c95c0d3810006d7b">KEY_8</a>
+, <br />
+&#160;&#160;<a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a601382e2da6215882c129b43b3384611">KEY_9</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a6b30f8af6c880e1aca01b91aa13c6ff9">KEY_0</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211ac8234231b36474d3666ad56752fe6f5e">KEY_Q</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a2e6a652ccd7afc5ce75ac4d902b6a60a">KEY_W</a>
+, <br />
+&#160;&#160;<a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a2af9840d90c49239339bfd42f9f32868">KEY_E</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211aa3ec8a2ffd5b0e200db5ebe7b65515ff">KEY_R</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a6167a8727e73df1eb96f19c2460766c9">KEY_T</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a5d44524b2a6090fa97aa9353d69f67a3">KEY_Y</a>
+, <br />
+&#160;&#160;<a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211ad4961a6c7ea9d008812aaaa8c4ea9730">KEY_U</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a2c98fd67709a9fd5409498d4f7175877">KEY_I</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211ae7edd672641b587364ea4a0c89388290">KEY_O</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a0a4c7291c92b7fc84da27a363dc53fa6">KEY_P</a>
+, <br />
+&#160;&#160;<a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211aa7b3a3d0503a46bec51c6e3da95747cc">KEY_A</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211abb2f0ce8efc3067757dbf091437f89f5">KEY_S</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a2fd73a4d527efe137e8f259db2092766">KEY_D</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a3c069efeb1638c2ab0d2a50ff45b529f">KEY_F</a>
+, <br />
+&#160;&#160;<a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a4ec980867be1d5bded2bccdee2ebd601">KEY_G</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a41d1aa573d29ca6a9eb429a680dc53cd">KEY_H</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211abb3108883bee68e265b554542484c5d7">KEY_J</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a6b0799a9923c55f8a73550a371ea69f6">KEY_K</a>
+, <br />
+&#160;&#160;<a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211aece16de35a5ea11f9b228c9376bebc62">KEY_L</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211aadc60d2de1d019604547c0df88f84cda">KEY_Z</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a480a807305121d41673b8c208898f497">KEY_X</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a9cabc5fc0d1f7f6a78e78b8ff29dbb61">KEY_C</a>
+, <br />
+&#160;&#160;<a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211afa1c237398bdfc48e5c1a55ce4a977fe">KEY_V</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a10072b5ee7aa1faf316434ecc9e2bb3a">KEY_B</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211aa606b8c6deaec8077387975d195cd824">KEY_N</a>
+, <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a0d94112555886427204ad0c0711ca327">KEY_M</a>
+<br />
+ }</td></tr>
+<tr class="separator:a917cb2ad6b731b390f8c57aa48656211"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13dc1bbe931fd8c6b75fed89f1e23256"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="window_8h.html#a13dc1bbe931fd8c6b75fed89f1e23256">BUTTONS</a> { <a class="el" href="window_8h.html#a13dc1bbe931fd8c6b75fed89f1e23256a3c2e62b97b30d850c5539d0f3a6d0958">MOUSE_BUTTON_LEFT</a>
+, <a class="el" href="window_8h.html#a13dc1bbe931fd8c6b75fed89f1e23256a9b37b35bcb71185dafcb151b3dde9a06">MOUSE_BUTTON_MIDDLE</a>
+, <a class="el" href="window_8h.html#a13dc1bbe931fd8c6b75fed89f1e23256a5b61e63e73f15ed6af97d5cd3124bc6f">MOUSE_BUTTON_RIGHT</a>
+, <a class="el" href="window_8h.html#a13dc1bbe931fd8c6b75fed89f1e23256a3426787a420c05b549381016700871d1">MOUSE_BUTTON_DOUBLE</a>
+ }</td></tr>
+<tr class="separator:a13dc1bbe931fd8c6b75fed89f1e23256"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Опис визначень типів</h2>
+<a id="a7148bb12e7c547fd91b077ac96d52d4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7148bb12e7c547fd91b077ac96d52d4e">&#9670;&nbsp;</a></span>char_cb_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* char_cb_t) (<a class="el" href="classWindow.html">Window</a> *window, unsigned int codepoint)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Див. визначення в файлі <a class="el" href="window_8h_source.html">window.h</a>, рядок <a class="el" href="window_8h_source.html#l00044">44</a></p>
+
+</div>
+</div>
+<a id="a9f34a6ec569f31c06cc15579e99be23d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f34a6ec569f31c06cc15579e99be23d">&#9670;&nbsp;</a></span>key_cb_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* key_cb_t) (<a class="el" href="classWindow.html">Window</a> *window, enum <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211">KEYS</a> key, bool pressed)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Див. визначення в файлі <a class="el" href="window_8h_source.html">window.h</a>, рядок <a class="el" href="window_8h_source.html#l00048">48</a></p>
+
+</div>
+</div>
+<a id="ae9edc663539f1b26d79dff1300c8d8b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9edc663539f1b26d79dff1300c8d8b5">&#9670;&nbsp;</a></span>mouse_button_cb_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* mouse_button_cb_t) (<a class="el" href="classWindow.html">Window</a> *window, enum <a class="el" href="window_8h.html#a13dc1bbe931fd8c6b75fed89f1e23256">BUTTONS</a> button, bool pressed)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Див. визначення в файлі <a class="el" href="window_8h_source.html">window.h</a>, рядок <a class="el" href="window_8h_source.html#l00046">46</a></p>
+
+</div>
+</div>
+<a id="a09edcf54e1f22a5e7f2d944286902ef3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09edcf54e1f22a5e7f2d944286902ef3">&#9670;&nbsp;</a></span>mouse_motion_cb_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* mouse_motion_cb_t) (<a class="el" href="classWindow.html">Window</a> *window, vec2 pos, vec2 offset)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Див. визначення в файлі <a class="el" href="window_8h_source.html">window.h</a>, рядок <a class="el" href="window_8h_source.html#l00042">42</a></p>
+
+</div>
+</div>
+<a id="a4251531d4faa41e60a2cd13d4525af1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4251531d4faa41e60a2cd13d4525af1f">&#9670;&nbsp;</a></span>scroll_cb_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* scroll_cb_t) (<a class="el" href="classWindow.html">Window</a> *window, GLdouble xoffset, GLdouble yoffset)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Див. визначення в файлі <a class="el" href="window_8h_source.html">window.h</a>, рядок <a class="el" href="window_8h_source.html#l00040">40</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Опис переліків</h2>
+<a id="a13dc1bbe931fd8c6b75fed89f1e23256"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13dc1bbe931fd8c6b75fed89f1e23256">&#9670;&nbsp;</a></span>BUTTONS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="window_8h.html#a13dc1bbe931fd8c6b75fed89f1e23256">BUTTONS</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Елементи переліків</th></tr><tr><td class="fieldname"><a id="a13dc1bbe931fd8c6b75fed89f1e23256a3c2e62b97b30d850c5539d0f3a6d0958"></a>MOUSE_BUTTON_LEFT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a13dc1bbe931fd8c6b75fed89f1e23256a9b37b35bcb71185dafcb151b3dde9a06"></a>MOUSE_BUTTON_MIDDLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a13dc1bbe931fd8c6b75fed89f1e23256a5b61e63e73f15ed6af97d5cd3124bc6f"></a>MOUSE_BUTTON_RIGHT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a13dc1bbe931fd8c6b75fed89f1e23256a3426787a420c05b549381016700871d1"></a>MOUSE_BUTTON_DOUBLE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="window_8h_source.html">window.h</a>, рядок <a class="el" href="window_8h_source.html#l00031">31</a></p>
+<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;             {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="window_8h.html#a13dc1bbe931fd8c6b75fed89f1e23256a3c2e62b97b30d850c5539d0f3a6d0958">MOUSE_BUTTON_LEFT</a>,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="window_8h.html#a13dc1bbe931fd8c6b75fed89f1e23256a9b37b35bcb71185dafcb151b3dde9a06">MOUSE_BUTTON_MIDDLE</a>,</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="window_8h.html#a13dc1bbe931fd8c6b75fed89f1e23256a5b61e63e73f15ed6af97d5cd3124bc6f">MOUSE_BUTTON_RIGHT</a>,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="window_8h.html#a13dc1bbe931fd8c6b75fed89f1e23256a3426787a420c05b549381016700871d1">MOUSE_BUTTON_DOUBLE</a>,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
+<div class="ttc" id="awindow_8h_html_a13dc1bbe931fd8c6b75fed89f1e23256a3426787a420c05b549381016700871d1"><div class="ttname"><a href="window_8h.html#a13dc1bbe931fd8c6b75fed89f1e23256a3426787a420c05b549381016700871d1">MOUSE_BUTTON_DOUBLE</a></div><div class="ttdeci">@ MOUSE_BUTTON_DOUBLE</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00035">window.h:35</a></div></div>
+<div class="ttc" id="awindow_8h_html_a13dc1bbe931fd8c6b75fed89f1e23256a3c2e62b97b30d850c5539d0f3a6d0958"><div class="ttname"><a href="window_8h.html#a13dc1bbe931fd8c6b75fed89f1e23256a3c2e62b97b30d850c5539d0f3a6d0958">MOUSE_BUTTON_LEFT</a></div><div class="ttdeci">@ MOUSE_BUTTON_LEFT</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00032">window.h:32</a></div></div>
+<div class="ttc" id="awindow_8h_html_a13dc1bbe931fd8c6b75fed89f1e23256a5b61e63e73f15ed6af97d5cd3124bc6f"><div class="ttname"><a href="window_8h.html#a13dc1bbe931fd8c6b75fed89f1e23256a5b61e63e73f15ed6af97d5cd3124bc6f">MOUSE_BUTTON_RIGHT</a></div><div class="ttdeci">@ MOUSE_BUTTON_RIGHT</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00034">window.h:34</a></div></div>
+<div class="ttc" id="awindow_8h_html_a13dc1bbe931fd8c6b75fed89f1e23256a9b37b35bcb71185dafcb151b3dde9a06"><div class="ttname"><a href="window_8h.html#a13dc1bbe931fd8c6b75fed89f1e23256a9b37b35bcb71185dafcb151b3dde9a06">MOUSE_BUTTON_MIDDLE</a></div><div class="ttdeci">@ MOUSE_BUTTON_MIDDLE</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00033">window.h:33</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a917cb2ad6b731b390f8c57aa48656211"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a917cb2ad6b731b390f8c57aa48656211">&#9670;&nbsp;</a></span>KEYS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211">KEYS</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Елементи переліків</th></tr><tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211ae7a3a4540031b038014294aa6743a7a4"></a>KEY_DELETE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211a2a662d23aadd7106a3a2afdfd5d426ed"></a>KEY_ENTER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211a60c75f9c8eded88ef76c0c94da27963c"></a>KEY_TAB&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211aa3cd0158e01f834cebcfb3fc5578df4b"></a>KEY_BACKSPACE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211a0848a442d907968b211b97bc2bd88acd"></a>KEY_UP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211aa9cdac7967bf7d88fdb761138a2a3416"></a>KEY_DOWN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211a612120b69c7dfd46086db7aaebdbcf65"></a>KEY_LEFT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211a6504370d9c6391e1a9da6a1a529b089d"></a>KEY_RIGHT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211ad5b83418c285e43af5d3a87b4d4049d7"></a>KEY_HOME&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211aa8adb6fcb92dec58fb19410eacfdd403"></a>KEY_END&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211ad435c2e06f3d05728ed52ede8a68295b"></a>KEY_PAGE_UP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211ada883d03c9fb53deb33064a13ca97639"></a>KEY_PAGE_DOWN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211a5d5eb3601a49913c3ab0f9bcbdc5918a"></a>KEY_LEFT_SHIFT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211a125ed6244c499a097a3e1cb111c8fa9c"></a>KEY_RIGHT_SHIFT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211a7c9c57571c47a267791fabb5e5dca6f0"></a>KEY_LEFT_CONTROL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211a7952b899556457f74a9ed51a0484a323"></a>KEY_RIGHT_CONTROL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211a35bcc2bc85513df4f3897a9d64a9c51c"></a>KEY_1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211a2333d7c312aa98622c41e74c5d13e8de"></a>KEY_2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211aef054680a9be7da17d196e15aec894f8"></a>KEY_3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211ae9f20352b4ef69ae68b9ff44abadfd79"></a>KEY_4&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211aed864c0209ba46546ba112f6c36e0cc4"></a>KEY_5&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211a2fe7fe99bcb0fd90bf4234be9e4ce5be"></a>KEY_6&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211ae78c88108d428cb8066e7a056195f489"></a>KEY_7&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211aab8917d426f9be27c95c0d3810006d7b"></a>KEY_8&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211a601382e2da6215882c129b43b3384611"></a>KEY_9&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211a6b30f8af6c880e1aca01b91aa13c6ff9"></a>KEY_0&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211ac8234231b36474d3666ad56752fe6f5e"></a>KEY_Q&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211a2e6a652ccd7afc5ce75ac4d902b6a60a"></a>KEY_W&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211a2af9840d90c49239339bfd42f9f32868"></a>KEY_E&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211aa3ec8a2ffd5b0e200db5ebe7b65515ff"></a>KEY_R&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211a6167a8727e73df1eb96f19c2460766c9"></a>KEY_T&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211a5d44524b2a6090fa97aa9353d69f67a3"></a>KEY_Y&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211ad4961a6c7ea9d008812aaaa8c4ea9730"></a>KEY_U&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211a2c98fd67709a9fd5409498d4f7175877"></a>KEY_I&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211ae7edd672641b587364ea4a0c89388290"></a>KEY_O&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211a0a4c7291c92b7fc84da27a363dc53fa6"></a>KEY_P&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211aa7b3a3d0503a46bec51c6e3da95747cc"></a>KEY_A&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211abb2f0ce8efc3067757dbf091437f89f5"></a>KEY_S&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211a2fd73a4d527efe137e8f259db2092766"></a>KEY_D&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211a3c069efeb1638c2ab0d2a50ff45b529f"></a>KEY_F&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211a4ec980867be1d5bded2bccdee2ebd601"></a>KEY_G&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211a41d1aa573d29ca6a9eb429a680dc53cd"></a>KEY_H&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211abb3108883bee68e265b554542484c5d7"></a>KEY_J&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211a6b0799a9923c55f8a73550a371ea69f6"></a>KEY_K&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211aece16de35a5ea11f9b228c9376bebc62"></a>KEY_L&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211aadc60d2de1d019604547c0df88f84cda"></a>KEY_Z&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211a480a807305121d41673b8c208898f497"></a>KEY_X&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211a9cabc5fc0d1f7f6a78e78b8ff29dbb61"></a>KEY_C&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211afa1c237398bdfc48e5c1a55ce4a977fe"></a>KEY_V&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211a10072b5ee7aa1faf316434ecc9e2bb3a"></a>KEY_B&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211aa606b8c6deaec8077387975d195cd824"></a>KEY_N&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917cb2ad6b731b390f8c57aa48656211a0d94112555886427204ad0c0711ca327"></a>KEY_M&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="window_8h_source.html">window.h</a>, рядок <a class="el" href="window_8h_source.html#l00008">8</a></p>
+<div class="fragment"><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;          {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211ae7a3a4540031b038014294aa6743a7a4">KEY_DELETE</a>,</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a2a662d23aadd7106a3a2afdfd5d426ed">KEY_ENTER</a>,</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a60c75f9c8eded88ef76c0c94da27963c">KEY_TAB</a>,</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211aa3cd0158e01f834cebcfb3fc5578df4b">KEY_BACKSPACE</a>,</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a0848a442d907968b211b97bc2bd88acd">KEY_UP</a>,</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211aa9cdac7967bf7d88fdb761138a2a3416">KEY_DOWN</a>,</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a612120b69c7dfd46086db7aaebdbcf65">KEY_LEFT</a>,</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a6504370d9c6391e1a9da6a1a529b089d">KEY_RIGHT</a>,</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211ad5b83418c285e43af5d3a87b4d4049d7">KEY_HOME</a>,</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211aa8adb6fcb92dec58fb19410eacfdd403">KEY_END</a>,</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211ad435c2e06f3d05728ed52ede8a68295b">KEY_PAGE_UP</a>,</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211ada883d03c9fb53deb33064a13ca97639">KEY_PAGE_DOWN</a>,</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a5d5eb3601a49913c3ab0f9bcbdc5918a">KEY_LEFT_SHIFT</a>,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a125ed6244c499a097a3e1cb111c8fa9c">KEY_RIGHT_SHIFT</a>,</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a7c9c57571c47a267791fabb5e5dca6f0">KEY_LEFT_CONTROL</a>,</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a7952b899556457f74a9ed51a0484a323">KEY_RIGHT_CONTROL</a>,</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a35bcc2bc85513df4f3897a9d64a9c51c">KEY_1</a>, <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a2333d7c312aa98622c41e74c5d13e8de">KEY_2</a>, <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211aef054680a9be7da17d196e15aec894f8">KEY_3</a>, <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211ae9f20352b4ef69ae68b9ff44abadfd79">KEY_4</a>, <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211aed864c0209ba46546ba112f6c36e0cc4">KEY_5</a>, <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a2fe7fe99bcb0fd90bf4234be9e4ce5be">KEY_6</a>, <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211ae78c88108d428cb8066e7a056195f489">KEY_7</a>, <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211aab8917d426f9be27c95c0d3810006d7b">KEY_8</a>, <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a601382e2da6215882c129b43b3384611">KEY_9</a>, <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a6b30f8af6c880e1aca01b91aa13c6ff9">KEY_0</a>,</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211ac8234231b36474d3666ad56752fe6f5e">KEY_Q</a>, <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a2e6a652ccd7afc5ce75ac4d902b6a60a">KEY_W</a>, <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a2af9840d90c49239339bfd42f9f32868">KEY_E</a>, <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211aa3ec8a2ffd5b0e200db5ebe7b65515ff">KEY_R</a>, <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a6167a8727e73df1eb96f19c2460766c9">KEY_T</a>, <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a5d44524b2a6090fa97aa9353d69f67a3">KEY_Y</a>, <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211ad4961a6c7ea9d008812aaaa8c4ea9730">KEY_U</a>, <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a2c98fd67709a9fd5409498d4f7175877">KEY_I</a>, <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211ae7edd672641b587364ea4a0c89388290">KEY_O</a>, <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a0a4c7291c92b7fc84da27a363dc53fa6">KEY_P</a>,</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211aa7b3a3d0503a46bec51c6e3da95747cc">KEY_A</a>, <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211abb2f0ce8efc3067757dbf091437f89f5">KEY_S</a>, <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a2fd73a4d527efe137e8f259db2092766">KEY_D</a>, <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a3c069efeb1638c2ab0d2a50ff45b529f">KEY_F</a>, <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a4ec980867be1d5bded2bccdee2ebd601">KEY_G</a>, <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a41d1aa573d29ca6a9eb429a680dc53cd">KEY_H</a>, <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211abb3108883bee68e265b554542484c5d7">KEY_J</a>, <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a6b0799a9923c55f8a73550a371ea69f6">KEY_K</a>, <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211aece16de35a5ea11f9b228c9376bebc62">KEY_L</a>,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211aadc60d2de1d019604547c0df88f84cda">KEY_Z</a>, <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a480a807305121d41673b8c208898f497">KEY_X</a>, <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a9cabc5fc0d1f7f6a78e78b8ff29dbb61">KEY_C</a>, <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211afa1c237398bdfc48e5c1a55ce4a977fe">KEY_V</a>, <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a10072b5ee7aa1faf316434ecc9e2bb3a">KEY_B</a>, <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211aa606b8c6deaec8077387975d195cd824">KEY_N</a>, <a class="code" href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a0d94112555886427204ad0c0711ca327">KEY_M</a>,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211a0848a442d907968b211b97bc2bd88acd"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a0848a442d907968b211b97bc2bd88acd">KEY_UP</a></div><div class="ttdeci">@ KEY_UP</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00013">window.h:13</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211a0a4c7291c92b7fc84da27a363dc53fa6"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a0a4c7291c92b7fc84da27a363dc53fa6">KEY_P</a></div><div class="ttdeci">@ KEY_P</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00026">window.h:26</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211a0d94112555886427204ad0c0711ca327"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a0d94112555886427204ad0c0711ca327">KEY_M</a></div><div class="ttdeci">@ KEY_M</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00028">window.h:28</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211a10072b5ee7aa1faf316434ecc9e2bb3a"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a10072b5ee7aa1faf316434ecc9e2bb3a">KEY_B</a></div><div class="ttdeci">@ KEY_B</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00028">window.h:28</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211a125ed6244c499a097a3e1cb111c8fa9c"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a125ed6244c499a097a3e1cb111c8fa9c">KEY_RIGHT_SHIFT</a></div><div class="ttdeci">@ KEY_RIGHT_SHIFT</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00022">window.h:22</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211a2333d7c312aa98622c41e74c5d13e8de"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a2333d7c312aa98622c41e74c5d13e8de">KEY_2</a></div><div class="ttdeci">@ KEY_2</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00025">window.h:25</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211a2a662d23aadd7106a3a2afdfd5d426ed"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a2a662d23aadd7106a3a2afdfd5d426ed">KEY_ENTER</a></div><div class="ttdeci">@ KEY_ENTER</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00010">window.h:10</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211a2af9840d90c49239339bfd42f9f32868"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a2af9840d90c49239339bfd42f9f32868">KEY_E</a></div><div class="ttdeci">@ KEY_E</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00026">window.h:26</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211a2c98fd67709a9fd5409498d4f7175877"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a2c98fd67709a9fd5409498d4f7175877">KEY_I</a></div><div class="ttdeci">@ KEY_I</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00026">window.h:26</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211a2e6a652ccd7afc5ce75ac4d902b6a60a"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a2e6a652ccd7afc5ce75ac4d902b6a60a">KEY_W</a></div><div class="ttdeci">@ KEY_W</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00026">window.h:26</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211a2fd73a4d527efe137e8f259db2092766"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a2fd73a4d527efe137e8f259db2092766">KEY_D</a></div><div class="ttdeci">@ KEY_D</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00027">window.h:27</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211a2fe7fe99bcb0fd90bf4234be9e4ce5be"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a2fe7fe99bcb0fd90bf4234be9e4ce5be">KEY_6</a></div><div class="ttdeci">@ KEY_6</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00025">window.h:25</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211a35bcc2bc85513df4f3897a9d64a9c51c"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a35bcc2bc85513df4f3897a9d64a9c51c">KEY_1</a></div><div class="ttdeci">@ KEY_1</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00025">window.h:25</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211a3c069efeb1638c2ab0d2a50ff45b529f"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a3c069efeb1638c2ab0d2a50ff45b529f">KEY_F</a></div><div class="ttdeci">@ KEY_F</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00027">window.h:27</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211a41d1aa573d29ca6a9eb429a680dc53cd"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a41d1aa573d29ca6a9eb429a680dc53cd">KEY_H</a></div><div class="ttdeci">@ KEY_H</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00027">window.h:27</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211a480a807305121d41673b8c208898f497"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a480a807305121d41673b8c208898f497">KEY_X</a></div><div class="ttdeci">@ KEY_X</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00028">window.h:28</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211a4ec980867be1d5bded2bccdee2ebd601"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a4ec980867be1d5bded2bccdee2ebd601">KEY_G</a></div><div class="ttdeci">@ KEY_G</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00027">window.h:27</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211a5d44524b2a6090fa97aa9353d69f67a3"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a5d44524b2a6090fa97aa9353d69f67a3">KEY_Y</a></div><div class="ttdeci">@ KEY_Y</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00026">window.h:26</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211a5d5eb3601a49913c3ab0f9bcbdc5918a"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a5d5eb3601a49913c3ab0f9bcbdc5918a">KEY_LEFT_SHIFT</a></div><div class="ttdeci">@ KEY_LEFT_SHIFT</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00021">window.h:21</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211a601382e2da6215882c129b43b3384611"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a601382e2da6215882c129b43b3384611">KEY_9</a></div><div class="ttdeci">@ KEY_9</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00025">window.h:25</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211a60c75f9c8eded88ef76c0c94da27963c"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a60c75f9c8eded88ef76c0c94da27963c">KEY_TAB</a></div><div class="ttdeci">@ KEY_TAB</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00011">window.h:11</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211a612120b69c7dfd46086db7aaebdbcf65"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a612120b69c7dfd46086db7aaebdbcf65">KEY_LEFT</a></div><div class="ttdeci">@ KEY_LEFT</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00015">window.h:15</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211a6167a8727e73df1eb96f19c2460766c9"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a6167a8727e73df1eb96f19c2460766c9">KEY_T</a></div><div class="ttdeci">@ KEY_T</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00026">window.h:26</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211a6504370d9c6391e1a9da6a1a529b089d"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a6504370d9c6391e1a9da6a1a529b089d">KEY_RIGHT</a></div><div class="ttdeci">@ KEY_RIGHT</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00016">window.h:16</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211a6b0799a9923c55f8a73550a371ea69f6"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a6b0799a9923c55f8a73550a371ea69f6">KEY_K</a></div><div class="ttdeci">@ KEY_K</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00027">window.h:27</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211a6b30f8af6c880e1aca01b91aa13c6ff9"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a6b30f8af6c880e1aca01b91aa13c6ff9">KEY_0</a></div><div class="ttdeci">@ KEY_0</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00025">window.h:25</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211a7952b899556457f74a9ed51a0484a323"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a7952b899556457f74a9ed51a0484a323">KEY_RIGHT_CONTROL</a></div><div class="ttdeci">@ KEY_RIGHT_CONTROL</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00024">window.h:24</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211a7c9c57571c47a267791fabb5e5dca6f0"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a7c9c57571c47a267791fabb5e5dca6f0">KEY_LEFT_CONTROL</a></div><div class="ttdeci">@ KEY_LEFT_CONTROL</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00023">window.h:23</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211a9cabc5fc0d1f7f6a78e78b8ff29dbb61"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211a9cabc5fc0d1f7f6a78e78b8ff29dbb61">KEY_C</a></div><div class="ttdeci">@ KEY_C</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00028">window.h:28</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211aa3cd0158e01f834cebcfb3fc5578df4b"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211aa3cd0158e01f834cebcfb3fc5578df4b">KEY_BACKSPACE</a></div><div class="ttdeci">@ KEY_BACKSPACE</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00012">window.h:12</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211aa3ec8a2ffd5b0e200db5ebe7b65515ff"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211aa3ec8a2ffd5b0e200db5ebe7b65515ff">KEY_R</a></div><div class="ttdeci">@ KEY_R</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00026">window.h:26</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211aa606b8c6deaec8077387975d195cd824"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211aa606b8c6deaec8077387975d195cd824">KEY_N</a></div><div class="ttdeci">@ KEY_N</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00028">window.h:28</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211aa7b3a3d0503a46bec51c6e3da95747cc"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211aa7b3a3d0503a46bec51c6e3da95747cc">KEY_A</a></div><div class="ttdeci">@ KEY_A</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00027">window.h:27</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211aa8adb6fcb92dec58fb19410eacfdd403"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211aa8adb6fcb92dec58fb19410eacfdd403">KEY_END</a></div><div class="ttdeci">@ KEY_END</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00018">window.h:18</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211aa9cdac7967bf7d88fdb761138a2a3416"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211aa9cdac7967bf7d88fdb761138a2a3416">KEY_DOWN</a></div><div class="ttdeci">@ KEY_DOWN</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00014">window.h:14</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211aab8917d426f9be27c95c0d3810006d7b"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211aab8917d426f9be27c95c0d3810006d7b">KEY_8</a></div><div class="ttdeci">@ KEY_8</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00025">window.h:25</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211aadc60d2de1d019604547c0df88f84cda"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211aadc60d2de1d019604547c0df88f84cda">KEY_Z</a></div><div class="ttdeci">@ KEY_Z</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00028">window.h:28</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211abb2f0ce8efc3067757dbf091437f89f5"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211abb2f0ce8efc3067757dbf091437f89f5">KEY_S</a></div><div class="ttdeci">@ KEY_S</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00027">window.h:27</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211abb3108883bee68e265b554542484c5d7"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211abb3108883bee68e265b554542484c5d7">KEY_J</a></div><div class="ttdeci">@ KEY_J</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00027">window.h:27</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211ac8234231b36474d3666ad56752fe6f5e"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211ac8234231b36474d3666ad56752fe6f5e">KEY_Q</a></div><div class="ttdeci">@ KEY_Q</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00026">window.h:26</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211ad435c2e06f3d05728ed52ede8a68295b"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211ad435c2e06f3d05728ed52ede8a68295b">KEY_PAGE_UP</a></div><div class="ttdeci">@ KEY_PAGE_UP</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00019">window.h:19</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211ad4961a6c7ea9d008812aaaa8c4ea9730"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211ad4961a6c7ea9d008812aaaa8c4ea9730">KEY_U</a></div><div class="ttdeci">@ KEY_U</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00026">window.h:26</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211ad5b83418c285e43af5d3a87b4d4049d7"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211ad5b83418c285e43af5d3a87b4d4049d7">KEY_HOME</a></div><div class="ttdeci">@ KEY_HOME</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00017">window.h:17</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211ada883d03c9fb53deb33064a13ca97639"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211ada883d03c9fb53deb33064a13ca97639">KEY_PAGE_DOWN</a></div><div class="ttdeci">@ KEY_PAGE_DOWN</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00020">window.h:20</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211ae78c88108d428cb8066e7a056195f489"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211ae78c88108d428cb8066e7a056195f489">KEY_7</a></div><div class="ttdeci">@ KEY_7</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00025">window.h:25</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211ae7a3a4540031b038014294aa6743a7a4"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211ae7a3a4540031b038014294aa6743a7a4">KEY_DELETE</a></div><div class="ttdeci">@ KEY_DELETE</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00009">window.h:9</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211ae7edd672641b587364ea4a0c89388290"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211ae7edd672641b587364ea4a0c89388290">KEY_O</a></div><div class="ttdeci">@ KEY_O</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00026">window.h:26</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211ae9f20352b4ef69ae68b9ff44abadfd79"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211ae9f20352b4ef69ae68b9ff44abadfd79">KEY_4</a></div><div class="ttdeci">@ KEY_4</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00025">window.h:25</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211aece16de35a5ea11f9b228c9376bebc62"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211aece16de35a5ea11f9b228c9376bebc62">KEY_L</a></div><div class="ttdeci">@ KEY_L</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00027">window.h:27</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211aed864c0209ba46546ba112f6c36e0cc4"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211aed864c0209ba46546ba112f6c36e0cc4">KEY_5</a></div><div class="ttdeci">@ KEY_5</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00025">window.h:25</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211aef054680a9be7da17d196e15aec894f8"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211aef054680a9be7da17d196e15aec894f8">KEY_3</a></div><div class="ttdeci">@ KEY_3</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00025">window.h:25</a></div></div>
+<div class="ttc" id="awindow_8h_html_a917cb2ad6b731b390f8c57aa48656211afa1c237398bdfc48e5c1a55ce4a977fe"><div class="ttname"><a href="window_8h.html#a917cb2ad6b731b390f8c57aa48656211afa1c237398bdfc48e5c1a55ce4a977fe">KEY_V</a></div><div class="ttdeci">@ KEY_V</div><div class="ttdef"><b>Definition:</b> <a href="window_8h_source.html#l00028">window.h:28</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,5 @@
+<map id="Object::rotate_all" name="Object::rotate_all">
+<area shape="rect" id="node1" title="Обернути об&#39;єкт по всім осям." alt="" coords="5,13,125,39"/>
+<area shape="rect" id="node2" href="$classObject.html#a2c5ac1f0bcbd1583ac4fc28bcac70811" title="Обертає об&#39;єкт по всім осям незалежно від часу." alt="" coords="173,5,293,47"/>
+<area shape="rect" id="node3" href="$classObject.html#a9dcb8961e7f0d5cbaaba5eaf826b741a" title="Обертає об&#39;єкт по осі незалежно від часу." alt="" coords="341,13,484,39"/>
+</map>

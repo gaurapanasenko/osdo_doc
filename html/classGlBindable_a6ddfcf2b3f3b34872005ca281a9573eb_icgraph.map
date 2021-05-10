@@ -1,0 +1,5 @@
+<map id="GlBindable::unbind" name="GlBindable::unbind">
+<area shape="rect" id="node1" title="Відв&#39;язує контекст до об&#39;єкту із ціллю за замовчуванням." alt="" coords="192,31,323,57"/>
+<area shape="rect" id="node2" href="$classBuffer.html#a2546d46567336e00cb66d53585ebbbd7" title="Генерація текстури з утвореного кадру." alt="" coords="8,5,141,32"/>
+<area shape="rect" id="node3" href="$classGlBinder.html#ae60129365fcbd5c9f20a3c2bb6ca98fa" title=" " alt="" coords="5,56,144,83"/>
+</map>

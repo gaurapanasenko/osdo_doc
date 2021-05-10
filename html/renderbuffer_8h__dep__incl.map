@@ -1,0 +1,7 @@
+<map id="osdo/renderbuffer.h" name="osdo/renderbuffer.h">
+<area shape="rect" id="node1" title="Задає клас буфера рендеренгу (для зберігання кольорів або глибини)." alt="" coords="141,5,275,32"/>
+<area shape="rect" id="node2" href="$buffer_8h.html" title="Буфер, у якому відбувається рендеринг у текстуру." alt="" coords="12,80,111,107"/>
+<area shape="rect" id="node4" href="$framebuffer_8cpp.html" title=" " alt="" coords="135,80,281,107"/>
+<area shape="rect" id="node5" href="$renderbuffer_8cpp.html" title=" " alt="" coords="305,80,453,107"/>
+<area shape="rect" id="node3" href="$buffer_8cpp.html" title=" " alt="" coords="5,155,117,181"/>
+</map>

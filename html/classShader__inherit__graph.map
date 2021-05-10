@@ -1,0 +1,4 @@
+<map id="Shader" name="Shader">
+<area shape="rect" id="node1" title="Клас взаємодії з шейдером у видеокарті." alt="" coords="17,80,79,107"/>
+<area shape="rect" id="node2" href="$classGlBindable.html" title="Абстрактний клас, який виконує роль генерації та прив&#39;язки об&#39;єктів OpenGL." alt="" coords="5,5,91,32"/>
+</map>

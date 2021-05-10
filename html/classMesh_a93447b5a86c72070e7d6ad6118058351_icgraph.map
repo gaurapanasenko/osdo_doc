@@ -1,0 +1,5 @@
+<map id="Mesh::draw_mode" name="Mesh::draw_mode">
+<area shape="rect" id="node1" title="Відображує меш у певному режимі. Див. glDrawElements." alt="" coords="160,31,289,57"/>
+<area shape="rect" id="node2" href="$classBeziator.html#a9acccb22776bbbc76b9b886e96aa1d92" title="Відображує модель." alt="" coords="5,5,112,32"/>
+<area shape="rect" id="node3" href="$classMesh.html#a19faf1bd2a71c1ca74cc2821d9d592d2" title="Відображує меш." alt="" coords="13,56,104,83"/>
+</map>

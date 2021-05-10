@@ -1,0 +1,5 @@
+<map id="Texture::update" name="Texture::update">
+<area shape="rect" id="node1" title="Завантажує зображення у текстуру." alt="" coords="5,31,117,57"/>
+<area shape="rect" id="node2" href="$classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7" title="Повертає індекс об&#39;єкту OpenGL." alt="" coords="173,5,301,32"/>
+<area shape="rect" id="node3" href="$texture_8cpp.html#a111df5e7a747cd89978fee5d19fa7e22" title=" " alt="" coords="165,56,309,83"/>
+</map>

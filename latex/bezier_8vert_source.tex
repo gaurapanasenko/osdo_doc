@@ -1,0 +1,35 @@
+\hypertarget{bezier_8vert_source}{}\doxysubsection{bezier.\+vert}
+\label{bezier_8vert_source}\index{res/bezier.vert@{res/bezier.vert}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \#version 420 core}
+\DoxyCodeLine{00002 layout (location = 0) in vec3 position;}
+\DoxyCodeLine{00003 layout (location = 1) in vec3 normal;}
+\DoxyCodeLine{00004 layout (location = 2) in vec4 color;}
+\DoxyCodeLine{00005 layout (location = 3) in vec2 uv;}
+\DoxyCodeLine{00006 }
+\DoxyCodeLine{00007 struct Data \{}
+\DoxyCodeLine{00008     vec4 color;}
+\DoxyCodeLine{00009     vec2 uv;}
+\DoxyCodeLine{00010     vec3 normal;}
+\DoxyCodeLine{00011     vec3 frag\_pos;}
+\DoxyCodeLine{00012 \};}
+\DoxyCodeLine{00013 }
+\DoxyCodeLine{00014 layout(location = 0) out Data data;}
+\DoxyCodeLine{00015 }
+\DoxyCodeLine{00016 uniform mat4 model;}
+\DoxyCodeLine{00017 uniform mat4 camera;}
+\DoxyCodeLine{00018 uniform mat4 projection;}
+\DoxyCodeLine{00019 }
+\DoxyCodeLine{00020 void main()}
+\DoxyCodeLine{00021 \{}
+\DoxyCodeLine{00022     mat4 trans = projection * camera * model;}
+\DoxyCodeLine{00023     vec4 pos = trans * vec4(position, 1.0);}
+\DoxyCodeLine{00024     gl\_Position = pos;}
+\DoxyCodeLine{00025     data.color = color;}
+\DoxyCodeLine{00026     data.uv = uv;}
+\DoxyCodeLine{00027     data.frag\_pos = vec3(model * vec4(position, 1.0));}
+\DoxyCodeLine{00028     data.normal = mat3(transpose(inverse(model))) * vec3(normal);}
+\DoxyCodeLine{00029 \}}
+
+\end{DoxyCode}

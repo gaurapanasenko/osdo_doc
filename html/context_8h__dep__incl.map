@@ -1,0 +1,6 @@
+<map id="osdo/context.h" name="osdo/context.h">
+<area shape="rect" id="node1" title="Контекст, який зберігає усі завантажені у пам&#39;ять ресурси." alt="" coords="81,5,189,32"/>
+<area shape="rect" id="node2" href="$context_8cpp.html" title=" " alt="" coords="5,80,128,107"/>
+<area shape="rect" id="node3" href="$scene_8h.html" title="Задає клас сцени із об&#39;єктами." alt="" coords="153,80,253,107"/>
+<area shape="rect" id="node4" href="$scene_8cpp.html" title=" " alt="" coords="145,155,260,181"/>
+</map>

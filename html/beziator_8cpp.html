@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Дипломна робота: Файл osdo/beziator.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Дипломна робота
+   </div>
+   <div id="projectbrief">студента групи ПА-17-2 Панасенка Єгора Сергійовича</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e0c7de59e470a6e6d29babac2e4befdd.html">osdo</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макровизначення</a> &#124;
+<a href="#typedef-members">Визначення типів</a> &#124;
+<a href="#func-members">Функції</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл beziator.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="beziator_8h_source.html">beziator.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="conf_8h_source.html">conf.h</a>&quot;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Діаграма включених заголовочних файлів для beziator.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="beziator_8cpp__incl.png" border="0" usemap="#aosdo_2beziator_8cpp" alt=""/></div>
+<map name="aosdo_2beziator_8cpp" id="aosdo_2beziator_8cpp">
+<area shape="rect" title=" " alt="" coords="265,5,391,32"/>
+<area shape="rect" href="beziator_8h.html" title="Клас який зберігає та оброблює модель утвореню через поверхні Безьє." alt="" coords="197,80,275,107"/>
+<area shape="rect" href="conf_8h.html" title="Конфігурація бібліотеки osdo" alt="" coords="315,155,373,181"/>
+<area shape="rect" title=" " alt="" coords="365,80,427,107"/>
+<area shape="rect" title=" " alt="" coords="39,155,150,181"/>
+<area shape="rect" href="osdo_8h.html" title=" " alt="" coords="176,304,237,331"/>
+<area shape="rect" href="mesh_8h.html" title="Задає клас мешу, який зберігається на відеокарті." alt="" coords="174,155,239,181"/>
+<area shape="rect" title=" " alt="" coords="49,379,143,405"/>
+<area shape="rect" title=" " alt="" coords="167,379,247,405"/>
+<area shape="rect" title=" " alt="" coords="271,379,335,405"/>
+<area shape="rect" href="model_8h.html" title="Задає інтерфейс моделі, яку можна відобразити." alt="" coords="29,229,97,256"/>
+<area shape="rect" href="vertex_8h.html" title="Задає cтруктуру вершини." alt="" coords="172,229,241,256"/>
+<area shape="rect" title=" " alt="" coords="5,304,120,331"/>
+</map>
+</div>
+</div>
+<p><a href="beziator_8cpp_source.html">Див. вихідні тексти.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макровизначення</h2></td></tr>
+<tr class="memitem:a5c48d2df20ec6cfbc7bdcecfff134c7b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="beziator_8cpp.html#a5c48d2df20ec6cfbc7bdcecfff134c7b">BEZIER_TANGENT_INIT</a></td></tr>
+<tr class="separator:a5c48d2df20ec6cfbc7bdcecfff134c7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf0fd126ea86726aa206778ad2315f31"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="beziator_8cpp.html#aaf0fd126ea86726aa206778ad2315f31">ucast</a>&#160;&#160;&#160;static_cast&lt;unsigned&gt;</td></tr>
+<tr class="separator:aaf0fd126ea86726aa206778ad2315f31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Визначення типів</h2></td></tr>
+<tr class="memitem:a1be679a80ddb401e60a4ae4a90a1eddf"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structVertex.html">Vertex</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="beziator_8cpp.html#a1be679a80ddb401e60a4ae4a90a1eddf">surface_t</a>[4][4]</td></tr>
+<tr class="separator:a1be679a80ddb401e60a4ae4a90a1eddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функції</h2></td></tr>
+<tr class="memitem:abff744cd88c5f344ef77ebcd6f2ec8a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="beziator_8cpp.html#abff744cd88c5f344ef77ebcd6f2ec8a1">bezier_curve</a> (float a, mat4 points, vec4 dest)</td></tr>
+<tr class="separator:abff744cd88c5f344ef77ebcd6f2ec8a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9441d014e907f9b43dbe11cebcfaf138"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="beziator_8cpp.html#a9441d014e907f9b43dbe11cebcfaf138">bezier_curve_tangent</a> (float a, mat4 points, vec4 dest)</td></tr>
+<tr class="separator:a9441d014e907f9b43dbe11cebcfaf138"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac99c8d4702aa8184518428b26331873c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="beziator_8cpp.html#ac99c8d4702aa8184518428b26331873c">bezier_surface</a> (float u, float v, <a class="el" href="beziator_8cpp.html#a1be679a80ddb401e60a4ae4a90a1eddf">surface_t</a> points, vec4 dest, vec4 normal)</td></tr>
+<tr class="separator:ac99c8d4702aa8184518428b26331873c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Опис макровизначень</h2>
+<a id="a5c48d2df20ec6cfbc7bdcecfff134c7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c48d2df20ec6cfbc7bdcecfff134c7b">&#9670;&nbsp;</a></span>BEZIER_TANGENT_INIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BEZIER_TANGENT_INIT</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макровизначення:</b><div class="fragment"><div class="line">{\</div>
+<div class="line">{  0,  0,  0,  0},\</div>
+<div class="line">{ -3,  9, -9,  3},\</div>
+<div class="line">{  6,-12,  6,  0},\</div>
+<div class="line">{ -3,  3,  0,  0},}</div>
+</div><!-- fragment -->
+<p class="definition">Див. визначення в файлі <a class="el" href="beziator_8cpp_source.html">beziator.cpp</a>, рядок <a class="el" href="beziator_8cpp_source.html#l00005">5</a></p>
+
+</div>
+</div>
+<a id="aaf0fd126ea86726aa206778ad2315f31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf0fd126ea86726aa206778ad2315f31">&#9670;&nbsp;</a></span>ucast</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ucast&#160;&#160;&#160;static_cast&lt;unsigned&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Див. визначення в файлі <a class="el" href="beziator_8cpp_source.html">beziator.cpp</a>, рядок <a class="el" href="beziator_8cpp_source.html#l00011">11</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Опис визначень типів</h2>
+<a id="a1be679a80ddb401e60a4ae4a90a1eddf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1be679a80ddb401e60a4ae4a90a1eddf">&#9670;&nbsp;</a></span>surface_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structVertex.html">Vertex</a>* surface_t[4][4]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Див. визначення в файлі <a class="el" href="beziator_8cpp_source.html">beziator.cpp</a>, рядок <a class="el" href="beziator_8cpp_source.html#l00016">16</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Опис функцій</h2>
+<a id="abff744cd88c5f344ef77ebcd6f2ec8a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abff744cd88c5f344ef77ebcd6f2ec8a1">&#9670;&nbsp;</a></span>bezier_curve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bezier_curve </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mat4&#160;</td>
+          <td class="paramname"><em>points</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vec4&#160;</td>
+          <td class="paramname"><em>dest</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Див. визначення в файлі <a class="el" href="beziator_8cpp_source.html">beziator.cpp</a>, рядок <a class="el" href="beziator_8cpp_source.html#l00071">71</a></p>
+<div class="dynheader">
+Граф викликів для цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="beziator_8cpp_abff744cd88c5f344ef77ebcd6f2ec8a1_icgraph.png" border="0" usemap="#abeziator_8cpp_abff744cd88c5f344ef77ebcd6f2ec8a1_icgraph" alt=""/></div>
+<map name="abeziator_8cpp_abff744cd88c5f344ef77ebcd6f2ec8a1_icgraph" id="abeziator_8cpp_abff744cd88c5f344ef77ebcd6f2ec8a1_icgraph">
+<area shape="rect" title=" " alt="" coords="337,5,433,32"/>
+<area shape="rect" href="beziator_8cpp.html#ac99c8d4702aa8184518428b26331873c" title=" " alt="" coords="181,5,289,32"/>
+<area shape="rect" href="classBeziator.html#a850797d7a346cd6f30405e21b0224a3e" title="Генерує деталізований меш моделі." alt="" coords="5,5,133,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9441d014e907f9b43dbe11cebcfaf138"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9441d014e907f9b43dbe11cebcfaf138">&#9670;&nbsp;</a></span>bezier_curve_tangent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bezier_curve_tangent </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mat4&#160;</td>
+          <td class="paramname"><em>points</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vec4&#160;</td>
+          <td class="paramname"><em>dest</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Див. визначення в файлі <a class="el" href="beziator_8cpp_source.html">beziator.cpp</a>, рядок <a class="el" href="beziator_8cpp_source.html#l00078">78</a></p>
+<div class="dynheader">
+Граф викликів для цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="beziator_8cpp_a9441d014e907f9b43dbe11cebcfaf138_icgraph.png" border="0" usemap="#abeziator_8cpp_a9441d014e907f9b43dbe11cebcfaf138_icgraph" alt=""/></div>
+<map name="abeziator_8cpp_a9441d014e907f9b43dbe11cebcfaf138_icgraph" id="abeziator_8cpp_a9441d014e907f9b43dbe11cebcfaf138_icgraph">
+<area shape="rect" title=" " alt="" coords="337,5,484,32"/>
+<area shape="rect" href="beziator_8cpp.html#ac99c8d4702aa8184518428b26331873c" title=" " alt="" coords="181,5,289,32"/>
+<area shape="rect" href="classBeziator.html#a850797d7a346cd6f30405e21b0224a3e" title="Генерує деталізований меш моделі." alt="" coords="5,5,133,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac99c8d4702aa8184518428b26331873c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac99c8d4702aa8184518428b26331873c">&#9670;&nbsp;</a></span>bezier_surface()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bezier_surface </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>u</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="beziator_8cpp.html#a1be679a80ddb401e60a4ae4a90a1eddf">surface_t</a>&#160;</td>
+          <td class="paramname"><em>points</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vec4&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vec4&#160;</td>
+          <td class="paramname"><em>normal</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Див. визначення в файлі <a class="el" href="beziator_8cpp_source.html">beziator.cpp</a>, рядок <a class="el" href="beziator_8cpp_source.html#l00085">85</a></p>
+<div class="dynheader">
+Граф всіх викликів цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="beziator_8cpp_ac99c8d4702aa8184518428b26331873c_cgraph.png" border="0" usemap="#abeziator_8cpp_ac99c8d4702aa8184518428b26331873c_cgraph" alt=""/></div>
+<map name="abeziator_8cpp_ac99c8d4702aa8184518428b26331873c_cgraph" id="abeziator_8cpp_ac99c8d4702aa8184518428b26331873c_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,113,57"/>
+<area shape="rect" href="beziator_8cpp.html#abff744cd88c5f344ef77ebcd6f2ec8a1" title=" " alt="" coords="187,5,283,32"/>
+<area shape="rect" href="beziator_8cpp.html#a9441d014e907f9b43dbe11cebcfaf138" title=" " alt="" coords="161,56,308,83"/>
+</map>
+</div>
+<div class="dynheader">
+Граф викликів для цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="beziator_8cpp_ac99c8d4702aa8184518428b26331873c_icgraph.png" border="0" usemap="#abeziator_8cpp_ac99c8d4702aa8184518428b26331873c_icgraph" alt=""/></div>
+<map name="abeziator_8cpp_ac99c8d4702aa8184518428b26331873c_icgraph" id="abeziator_8cpp_ac99c8d4702aa8184518428b26331873c_icgraph">
+<area shape="rect" title=" " alt="" coords="181,5,289,32"/>
+<area shape="rect" href="classBeziator.html#a850797d7a346cd6f30405e21b0224a3e" title="Генерує деталізований меш моделі." alt="" coords="5,5,133,32"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

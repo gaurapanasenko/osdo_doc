@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Дипломна робота: Текст програми osdo/easyvector.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Дипломна робота
+   </div>
+   <div id="projectbrief">студента групи ПА-17-2 Панасенка Єгора Сергійовича</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e0c7de59e470a6e6d29babac2e4befdd.html">osdo</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">easyvector.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="easyvector_8h.html">Див. документацію.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * @file easyvector.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * @brief Вектор що не змінює свій розмір.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef EASYVECTOR_H</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define EASYVECTOR_H</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;cstring&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * @brief Неймспейс бібліотеки `osdo`</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="namespaceOSDO.html">   14</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceOSDO.html">OSDO</a> {<span class="comment"></span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * @brief Вектор що не змінює свій розмір.</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classOSDO_1_1vector.html">   19</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classOSDO_1_1vector.html">vector</a> {<span class="comment"></span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">        /**</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">         * @brief Масив із елементами типу `T`</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">         */</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classOSDO_1_1vector.html#a2e389a3e97a6a442cffbfc8cbf67338f">   23</a></span>&#160;        T * <a class="code" href="classOSDO_1_1vector.html#a2e389a3e97a6a442cffbfc8cbf67338f">arr</a>;<span class="comment"></span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">        /**</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">         * @brief Поточний розмір масиву.</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">         */</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classOSDO_1_1vector.html#ab9f6230ec6f76d13bc65710b78275c66">   27</a></span>&#160;        <span class="keywordtype">size_t</span> <a class="code" href="classOSDO_1_1vector.html#ab9f6230ec6f76d13bc65710b78275c66">_size</a>;<span class="comment"></span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">        /**</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">         * @brief Виділяє масив розміру `size`</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">         * @param size розмір масиву</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">         */</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classOSDO_1_1vector.html#aec0eccb2296e433ed5f838f646c8b668">   32</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classOSDO_1_1vector.html#aec0eccb2296e433ed5f838f646c8b668">_allocate</a>(<span class="keywordtype">size_t</span> <a class="code" href="classOSDO_1_1vector.html#a53a792907045d4d573572c4ee22ebafe">size</a>) {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <a class="code" href="classOSDO_1_1vector.html#ab9f6230ec6f76d13bc65710b78275c66">_size</a> = 0;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <a class="code" href="classOSDO_1_1vector.html#a2e389a3e97a6a442cffbfc8cbf67338f">arr</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="classOSDO_1_1vector.html#a53a792907045d4d573572c4ee22ebafe">size</a>)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <a class="code" href="classOSDO_1_1vector.html#a2e389a3e97a6a442cffbfc8cbf67338f">arr</a> = <span class="keyword">static_cast&lt;</span>T*<span class="keyword">&gt;</span>(calloc(<a class="code" href="classOSDO_1_1vector.html#a53a792907045d4d573572c4ee22ebafe">size</a>, <span class="keyword">sizeof</span>(T)));</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="classOSDO_1_1vector.html#a2e389a3e97a6a442cffbfc8cbf67338f">arr</a>)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                <a class="code" href="classOSDO_1_1vector.html#ab9f6230ec6f76d13bc65710b78275c66">_size</a> = <a class="code" href="classOSDO_1_1vector.html#a53a792907045d4d573572c4ee22ebafe">size</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        }<span class="comment"></span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">        /**</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">         * @brief Звільнює пам&#39;ять від масиву.</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">         */</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classOSDO_1_1vector.html#af52bd53d2b8cb1c91279d7af33de0af3">   43</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classOSDO_1_1vector.html#af52bd53d2b8cb1c91279d7af33de0af3">_free</a>() {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="classOSDO_1_1vector.html#a2e389a3e97a6a442cffbfc8cbf67338f">arr</a>)</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                free(<a class="code" href="classOSDO_1_1vector.html#a2e389a3e97a6a442cffbfc8cbf67338f">arr</a>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <a class="code" href="classOSDO_1_1vector.html#ab9f6230ec6f76d13bc65710b78275c66">_size</a> = 0;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <a class="code" href="classOSDO_1_1vector.html#a2e389a3e97a6a442cffbfc8cbf67338f">arr</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }<span class="comment"></span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">        /**</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">         * @brief Копіює масив.</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">         * @param vector інший масив</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">         */</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classOSDO_1_1vector.html#a1d511b6a07c22ee8ff471c73cc4ad808">   53</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classOSDO_1_1vector.html#a1d511b6a07c22ee8ff471c73cc4ad808">_copy</a>(<span class="keyword">const</span> <a class="code" href="classOSDO_1_1vector.html">vector</a>&amp; <a class="code" href="classOSDO_1_1vector.html">vector</a>) {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <a class="code" href="classOSDO_1_1vector.html#aec0eccb2296e433ed5f838f646c8b668">_allocate</a>(<a class="code" href="classOSDO_1_1vector.html">vector</a>.<a class="code" href="classOSDO_1_1vector.html#ab9f6230ec6f76d13bc65710b78275c66">_size</a>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="classOSDO_1_1vector.html#ab9f6230ec6f76d13bc65710b78275c66">_size</a>)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                memcpy(<a class="code" href="classOSDO_1_1vector.html#a2e389a3e97a6a442cffbfc8cbf67338f">arr</a>, <a class="code" href="classOSDO_1_1vector.html">vector</a>.<a class="code" href="classOSDO_1_1vector.html#a2e389a3e97a6a442cffbfc8cbf67338f">arr</a>, <a class="code" href="classOSDO_1_1vector.html#ab9f6230ec6f76d13bc65710b78275c66">_size</a> * <span class="keyword">sizeof</span>(T));</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }<span class="comment"></span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">        /**</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">         * @brief Переміщює данні з іншого масиву.</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">         * @param vector інший масив</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">         */</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classOSDO_1_1vector.html#a7c5eb8f8ad5a72cd1551152d8cb33061">   62</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classOSDO_1_1vector.html#a7c5eb8f8ad5a72cd1551152d8cb33061">_move</a>(<a class="code" href="classOSDO_1_1vector.html">vector</a>&amp; <a class="code" href="classOSDO_1_1vector.html">vector</a>) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <a class="code" href="classOSDO_1_1vector.html#a2e389a3e97a6a442cffbfc8cbf67338f">arr</a> = <a class="code" href="classOSDO_1_1vector.html">vector</a>.<a class="code" href="classOSDO_1_1vector.html#a2e389a3e97a6a442cffbfc8cbf67338f">arr</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <a class="code" href="classOSDO_1_1vector.html#ab9f6230ec6f76d13bc65710b78275c66">_size</a> = <a class="code" href="classOSDO_1_1vector.html">vector</a>.<a class="code" href="classOSDO_1_1vector.html#ab9f6230ec6f76d13bc65710b78275c66">_size</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">public</span>:<span class="comment"></span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">        /**</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">         * @brief Конструктор з параметром розміру масиву</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">         * @param size розмір массиву</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">         */</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classOSDO_1_1vector.html#a23d62d868c798c02c6056b59f986a4c5">   71</a></span>&#160;        <a class="code" href="classOSDO_1_1vector.html#a23d62d868c798c02c6056b59f986a4c5">vector</a>(<span class="keywordtype">size_t</span> <a class="code" href="classOSDO_1_1vector.html#a53a792907045d4d573572c4ee22ebafe">size</a> = 0) {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <a class="code" href="classOSDO_1_1vector.html#aec0eccb2296e433ed5f838f646c8b668">_allocate</a>(<a class="code" href="classOSDO_1_1vector.html#a53a792907045d4d573572c4ee22ebafe">size</a>);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }<span class="comment"></span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">        /**</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">         * @brief Конструктор переносу</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">         * @param vector інший масив</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">         */</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classOSDO_1_1vector.html#a1d00bc9f72a815219d77bb186c461695">   78</a></span>&#160;        <a class="code" href="classOSDO_1_1vector.html#a1d00bc9f72a815219d77bb186c461695">vector</a>(<a class="code" href="classOSDO_1_1vector.html">vector</a>&amp;&amp; <a class="code" href="classOSDO_1_1vector.html">vector</a>) {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <a class="code" href="classOSDO_1_1vector.html#a1d511b6a07c22ee8ff471c73cc4ad808">_copy</a>(<a class="code" href="classOSDO_1_1vector.html">vector</a>);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        }<span class="comment"></span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">        /**</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">         * @brief Конструктор копіювання</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">         * @param vector інший масив</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">         */</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classOSDO_1_1vector.html#a3fd2a54ec52877d9036af6d69b3cdb87">   85</a></span>&#160;        <a class="code" href="classOSDO_1_1vector.html#a3fd2a54ec52877d9036af6d69b3cdb87">vector</a>(<span class="keyword">const</span> <a class="code" href="classOSDO_1_1vector.html">vector</a>&amp; <a class="code" href="classOSDO_1_1vector.html">vector</a>) {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <a class="code" href="classOSDO_1_1vector.html#a1d511b6a07c22ee8ff471c73cc4ad808">_copy</a>(<a class="code" href="classOSDO_1_1vector.html">vector</a>);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        }</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="classOSDO_1_1vector.html#a226f310cd518da87ed699d62a39c89fe">   88</a></span>&#160;        <a class="code" href="classOSDO_1_1vector.html#a226f310cd518da87ed699d62a39c89fe">~vector</a>() {<a class="code" href="classOSDO_1_1vector.html#af52bd53d2b8cb1c91279d7af33de0af3">_free</a>();}</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classOSDO_1_1vector.html#ad51b577ece8931d6074012e9258fe399">   89</a></span>&#160;        <a class="code" href="classOSDO_1_1vector.html">vector</a> &amp;<a class="code" href="classOSDO_1_1vector.html#ad51b577ece8931d6074012e9258fe399">operator=</a>(<a class="code" href="classOSDO_1_1vector.html">vector</a>&amp;&amp; <a class="code" href="classOSDO_1_1vector.html">vector</a>) {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <a class="code" href="classOSDO_1_1vector.html#af52bd53d2b8cb1c91279d7af33de0af3">_free</a>();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <a class="code" href="classOSDO_1_1vector.html#a1d511b6a07c22ee8ff471c73cc4ad808">_copy</a>(<a class="code" href="classOSDO_1_1vector.html">vector</a>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        }</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classOSDO_1_1vector.html#ad95e677cec3b613268414042e01797ef">   94</a></span>&#160;        <a class="code" href="classOSDO_1_1vector.html">vector</a> &amp;<a class="code" href="classOSDO_1_1vector.html#ad95e677cec3b613268414042e01797ef">operator=</a>(<span class="keyword">const</span> <a class="code" href="classOSDO_1_1vector.html">vector</a>&amp; <a class="code" href="classOSDO_1_1vector.html">vector</a>) {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <a class="code" href="classOSDO_1_1vector.html#af52bd53d2b8cb1c91279d7af33de0af3">_free</a>();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <a class="code" href="classOSDO_1_1vector.html#a1d511b6a07c22ee8ff471c73cc4ad808">_copy</a>(<a class="code" href="classOSDO_1_1vector.html">vector</a>);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        }</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classOSDO_1_1vector.html#a9c1cf8e3879e21042b07e92896741716">   99</a></span>&#160;        T &amp;<a class="code" href="classOSDO_1_1vector.html#a9c1cf8e3879e21042b07e92896741716">operator[]</a>(<span class="keywordtype">size_t</span> i) {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classOSDO_1_1vector.html#a2e389a3e97a6a442cffbfc8cbf67338f">arr</a>[i];</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        }</div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="classOSDO_1_1vector.html#a53a792907045d4d573572c4ee22ebafe">  102</a></span>&#160;        <span class="keywordtype">size_t</span> <a class="code" href="classOSDO_1_1vector.html#a53a792907045d4d573572c4ee22ebafe">size</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classOSDO_1_1vector.html#ab9f6230ec6f76d13bc65710b78275c66">_size</a>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        }</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="classOSDO_1_1vector.html#a6bb34ecff9d845d2ed40fd41584c3b6b">  105</a></span>&#160;        T * <a class="code" href="classOSDO_1_1vector.html#a6bb34ecff9d845d2ed40fd41584c3b6b">data</a>() {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classOSDO_1_1vector.html#a2e389a3e97a6a442cffbfc8cbf67338f">arr</a>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        }</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="classOSDO_1_1vector.html#a32d235a404975b405f85f5be45880fed">  108</a></span>&#160;        <span class="keyword">const</span> T * <a class="code" href="classOSDO_1_1vector.html#a32d235a404975b405f85f5be45880fed">data</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classOSDO_1_1vector.html#a2e389a3e97a6a442cffbfc8cbf67338f">arr</a>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        }</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="classOSDO_1_1vector.html#a0a5e04be2de5b09300bc29a34a8886ee">  111</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classOSDO_1_1vector.html#a0a5e04be2de5b09300bc29a34a8886ee">clear</a>() {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            *<span class="keyword">this</span> = <a class="code" href="classOSDO_1_1vector.html#a23d62d868c798c02c6056b59f986a4c5">vector</a>(0);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    };</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// EASYVECTOR_H</span></div>
+<div class="ttc" id="aclassOSDO_1_1vector_html"><div class="ttname"><a href="classOSDO_1_1vector.html">OSDO::vector</a></div><div class="ttdoc">Вектор що не змінює свій розмір.</div><div class="ttdef"><b>Definition:</b> <a href="easyvector_8h_source.html#l00019">easyvector.h:19</a></div></div>
+<div class="ttc" id="aclassOSDO_1_1vector_html_a0a5e04be2de5b09300bc29a34a8886ee"><div class="ttname"><a href="classOSDO_1_1vector.html#a0a5e04be2de5b09300bc29a34a8886ee">OSDO::vector::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdef"><b>Definition:</b> <a href="easyvector_8h_source.html#l00111">easyvector.h:111</a></div></div>
+<div class="ttc" id="aclassOSDO_1_1vector_html_a1d00bc9f72a815219d77bb186c461695"><div class="ttname"><a href="classOSDO_1_1vector.html#a1d00bc9f72a815219d77bb186c461695">OSDO::vector::vector</a></div><div class="ttdeci">vector(vector &amp;&amp;vector)</div><div class="ttdoc">Конструктор переносу</div><div class="ttdef"><b>Definition:</b> <a href="easyvector_8h_source.html#l00078">easyvector.h:78</a></div></div>
+<div class="ttc" id="aclassOSDO_1_1vector_html_a1d511b6a07c22ee8ff471c73cc4ad808"><div class="ttname"><a href="classOSDO_1_1vector.html#a1d511b6a07c22ee8ff471c73cc4ad808">OSDO::vector::_copy</a></div><div class="ttdeci">void _copy(const vector &amp;vector)</div><div class="ttdoc">Копіює масив.</div><div class="ttdef"><b>Definition:</b> <a href="easyvector_8h_source.html#l00053">easyvector.h:53</a></div></div>
+<div class="ttc" id="aclassOSDO_1_1vector_html_a226f310cd518da87ed699d62a39c89fe"><div class="ttname"><a href="classOSDO_1_1vector.html#a226f310cd518da87ed699d62a39c89fe">OSDO::vector::~vector</a></div><div class="ttdeci">~vector()</div><div class="ttdef"><b>Definition:</b> <a href="easyvector_8h_source.html#l00088">easyvector.h:88</a></div></div>
+<div class="ttc" id="aclassOSDO_1_1vector_html_a23d62d868c798c02c6056b59f986a4c5"><div class="ttname"><a href="classOSDO_1_1vector.html#a23d62d868c798c02c6056b59f986a4c5">OSDO::vector::vector</a></div><div class="ttdeci">vector(size_t size=0)</div><div class="ttdoc">Конструктор з параметром розміру масиву</div><div class="ttdef"><b>Definition:</b> <a href="easyvector_8h_source.html#l00071">easyvector.h:71</a></div></div>
+<div class="ttc" id="aclassOSDO_1_1vector_html_a2e389a3e97a6a442cffbfc8cbf67338f"><div class="ttname"><a href="classOSDO_1_1vector.html#a2e389a3e97a6a442cffbfc8cbf67338f">OSDO::vector::arr</a></div><div class="ttdeci">T * arr</div><div class="ttdoc">Масив із елементами типу T</div><div class="ttdef"><b>Definition:</b> <a href="easyvector_8h_source.html#l00023">easyvector.h:23</a></div></div>
+<div class="ttc" id="aclassOSDO_1_1vector_html_a32d235a404975b405f85f5be45880fed"><div class="ttname"><a href="classOSDO_1_1vector.html#a32d235a404975b405f85f5be45880fed">OSDO::vector::data</a></div><div class="ttdeci">const T * data() const</div><div class="ttdef"><b>Definition:</b> <a href="easyvector_8h_source.html#l00108">easyvector.h:108</a></div></div>
+<div class="ttc" id="aclassOSDO_1_1vector_html_a3fd2a54ec52877d9036af6d69b3cdb87"><div class="ttname"><a href="classOSDO_1_1vector.html#a3fd2a54ec52877d9036af6d69b3cdb87">OSDO::vector::vector</a></div><div class="ttdeci">vector(const vector &amp;vector)</div><div class="ttdoc">Конструктор копіювання</div><div class="ttdef"><b>Definition:</b> <a href="easyvector_8h_source.html#l00085">easyvector.h:85</a></div></div>
+<div class="ttc" id="aclassOSDO_1_1vector_html_a53a792907045d4d573572c4ee22ebafe"><div class="ttname"><a href="classOSDO_1_1vector.html#a53a792907045d4d573572c4ee22ebafe">OSDO::vector::size</a></div><div class="ttdeci">size_t size() const</div><div class="ttdef"><b>Definition:</b> <a href="easyvector_8h_source.html#l00102">easyvector.h:102</a></div></div>
+<div class="ttc" id="aclassOSDO_1_1vector_html_a6bb34ecff9d845d2ed40fd41584c3b6b"><div class="ttname"><a href="classOSDO_1_1vector.html#a6bb34ecff9d845d2ed40fd41584c3b6b">OSDO::vector::data</a></div><div class="ttdeci">T * data()</div><div class="ttdef"><b>Definition:</b> <a href="easyvector_8h_source.html#l00105">easyvector.h:105</a></div></div>
+<div class="ttc" id="aclassOSDO_1_1vector_html_a7c5eb8f8ad5a72cd1551152d8cb33061"><div class="ttname"><a href="classOSDO_1_1vector.html#a7c5eb8f8ad5a72cd1551152d8cb33061">OSDO::vector::_move</a></div><div class="ttdeci">void _move(vector &amp;vector)</div><div class="ttdoc">Переміщює данні з іншого масиву.</div><div class="ttdef"><b>Definition:</b> <a href="easyvector_8h_source.html#l00062">easyvector.h:62</a></div></div>
+<div class="ttc" id="aclassOSDO_1_1vector_html_a9c1cf8e3879e21042b07e92896741716"><div class="ttname"><a href="classOSDO_1_1vector.html#a9c1cf8e3879e21042b07e92896741716">OSDO::vector::operator[]</a></div><div class="ttdeci">T &amp; operator[](size_t i)</div><div class="ttdef"><b>Definition:</b> <a href="easyvector_8h_source.html#l00099">easyvector.h:99</a></div></div>
+<div class="ttc" id="aclassOSDO_1_1vector_html_ab9f6230ec6f76d13bc65710b78275c66"><div class="ttname"><a href="classOSDO_1_1vector.html#ab9f6230ec6f76d13bc65710b78275c66">OSDO::vector::_size</a></div><div class="ttdeci">size_t _size</div><div class="ttdoc">Поточний розмір масиву.</div><div class="ttdef"><b>Definition:</b> <a href="easyvector_8h_source.html#l00027">easyvector.h:27</a></div></div>
+<div class="ttc" id="aclassOSDO_1_1vector_html_ad51b577ece8931d6074012e9258fe399"><div class="ttname"><a href="classOSDO_1_1vector.html#ad51b577ece8931d6074012e9258fe399">OSDO::vector::operator=</a></div><div class="ttdeci">vector &amp; operator=(vector &amp;&amp;vector)</div><div class="ttdef"><b>Definition:</b> <a href="easyvector_8h_source.html#l00089">easyvector.h:89</a></div></div>
+<div class="ttc" id="aclassOSDO_1_1vector_html_ad95e677cec3b613268414042e01797ef"><div class="ttname"><a href="classOSDO_1_1vector.html#ad95e677cec3b613268414042e01797ef">OSDO::vector::operator=</a></div><div class="ttdeci">vector &amp; operator=(const vector &amp;vector)</div><div class="ttdef"><b>Definition:</b> <a href="easyvector_8h_source.html#l00094">easyvector.h:94</a></div></div>
+<div class="ttc" id="aclassOSDO_1_1vector_html_aec0eccb2296e433ed5f838f646c8b668"><div class="ttname"><a href="classOSDO_1_1vector.html#aec0eccb2296e433ed5f838f646c8b668">OSDO::vector::_allocate</a></div><div class="ttdeci">void _allocate(size_t size)</div><div class="ttdoc">Виділяє масив розміру size</div><div class="ttdef"><b>Definition:</b> <a href="easyvector_8h_source.html#l00032">easyvector.h:32</a></div></div>
+<div class="ttc" id="aclassOSDO_1_1vector_html_af52bd53d2b8cb1c91279d7af33de0af3"><div class="ttname"><a href="classOSDO_1_1vector.html#af52bd53d2b8cb1c91279d7af33de0af3">OSDO::vector::_free</a></div><div class="ttdeci">void _free()</div><div class="ttdoc">Звільнює пам'ять від масиву.</div><div class="ttdef"><b>Definition:</b> <a href="easyvector_8h_source.html#l00043">easyvector.h:43</a></div></div>
+<div class="ttc" id="anamespaceOSDO_html"><div class="ttname"><a href="namespaceOSDO.html">OSDO</a></div><div class="ttdoc">Неймспейс бібліотеки osdo</div><div class="ttdef"><b>Definition:</b> <a href="easyvector_8h_source.html#l00014">easyvector.h:14</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,142 @@
+\hypertarget{camera_8h_source}{}\doxysubsection{camera.\+h}
+\label{camera_8h_source}\index{osdo/camera.h@{osdo/camera.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/**}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * @file camera.h}}
+\DoxyCodeLine{00003 \textcolor{comment}{ * @brief Клас камери, якою можна маніпулювати у сцені.}}
+\DoxyCodeLine{00004 \textcolor{comment}{ */}}
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#ifndef CAMERA\_H}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#define CAMERA\_H}}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{osdo_8h}{osdo.h}}"{}}}
+\DoxyCodeLine{00009 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{bijective_8h}{bijective.h}}"{}}}
+\DoxyCodeLine{00010 \textcolor{comment}{}}
+\DoxyCodeLine{00011 \textcolor{comment}{/**}}
+\DoxyCodeLine{00012 \textcolor{comment}{ * @brief Вектор, який використовуэться для обчислення напрямку перегляду камери.}}
+\DoxyCodeLine{00013 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00014}\mbox{\hyperlink{camera_8h_a841e2e7954feaef7048be384077f806a}{00014}} \textcolor{preprocessor}{\#define CAMERA\_DIRECTION\_INIT \{0.0f, 0.0f, -\/1.0f, 0.0f\}}}
+\DoxyCodeLine{00015 \textcolor{comment}{}}
+\DoxyCodeLine{00016 \textcolor{comment}{/**}}
+\DoxyCodeLine{00017 \textcolor{comment}{ * @brief Клас камери, якою можна маніпулювати у сцені.}}
+\DoxyCodeLine{00018 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00019}\mbox{\hyperlink{classCamera}{00019}} \textcolor{keyword}{class }\mbox{\hyperlink{classCamera}{Camera}} : \textcolor{keyword}{public} \mbox{\hyperlink{classBijective}{Bijective}} \{\textcolor{comment}{}}
+\DoxyCodeLine{00020 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00021 \textcolor{comment}{     * @brief Матриця лінійних перетворень у якій зберігається обернення камери.}}
+\DoxyCodeLine{00022 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00023}\mbox{\hyperlink{classCamera_a7c0dfc9a9c583a9ec33f6831e563cd0b}{00023}}     mat4 \mbox{\hyperlink{classCamera_a7c0dfc9a9c583a9ec33f6831e563cd0b}{rotation}};\textcolor{comment}{}}
+\DoxyCodeLine{00024 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00025 \textcolor{comment}{     * @brief Вектор позіції камери \(\backslash\)f\$(x, y, z, 1.0)\(\backslash\)f\$}}
+\DoxyCodeLine{00026 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00027}\mbox{\hyperlink{classCamera_adacb271479e9ca7df8cdffc489a9ec23}{00027}}     vec4 \mbox{\hyperlink{classCamera_adacb271479e9ca7df8cdffc489a9ec23}{position}};\textcolor{comment}{}}
+\DoxyCodeLine{00028 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00029 \textcolor{comment}{     * @brief Вектор, який реалізования для інтерфейсу `Bijective`}}
+\DoxyCodeLine{00030 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00031}\mbox{\hyperlink{classCamera_a7f5cd83c97cb8b1fa3fa5bf49a2d2738}{00031}}     vec4 \mbox{\hyperlink{classCamera_a7f5cd83c97cb8b1fa3fa5bf49a2d2738}{animation}};}
+\DoxyCodeLine{00032 \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033     \mbox{\hyperlink{classCamera_a01f94c3543f56ede7af49dc778f19331}{Camera}}();}
+\DoxyCodeLine{00034 \textcolor{comment}{}}
+\DoxyCodeLine{00035 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00036 \textcolor{comment}{     * @brief Забирає поточну позицію камери у просторі.}}
+\DoxyCodeLine{00037 \textcolor{comment}{     * @param[out] position поточна позицію камери}}
+\DoxyCodeLine{00038 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00039}\mbox{\hyperlink{classCamera_a92e90596e90d3405c93a9c2d4305a287}{00039}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_a92e90596e90d3405c93a9c2d4305a287}{get\_position}}(vec4 \mbox{\hyperlink{classCamera_adacb271479e9ca7df8cdffc489a9ec23}{position}}) \textcolor{keyword}{override};\textcolor{comment}{}}
+\DoxyCodeLine{00040 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00041 \textcolor{comment}{     * @brief Задає нову позицію камери у просторі.}}
+\DoxyCodeLine{00042 \textcolor{comment}{     * @param[in] position нова позиція камери у просторі}}
+\DoxyCodeLine{00043 \textcolor{comment}{     */}}
+\DoxyCodeLine{00044     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_a06c173530d6f5d982092fb5f5f58f84a}{set\_position}}(vec4 \mbox{\hyperlink{classCamera_adacb271479e9ca7df8cdffc489a9ec23}{position}}) \textcolor{keyword}{override};}
+\DoxyCodeLine{00045 \textcolor{comment}{}}
+\DoxyCodeLine{00046 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00047 \textcolor{comment}{     * @brief Забирає поточний нахил камери.}}
+\DoxyCodeLine{00048 \textcolor{comment}{     * @param[out] rotation поточний нахил камери}}
+\DoxyCodeLine{00049 \textcolor{comment}{     */}}
+\DoxyCodeLine{00050     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_aa7eb7b6bb3dc03911a44abefab63db28}{get\_rotation}}(vec3 \mbox{\hyperlink{classCamera_a7c0dfc9a9c583a9ec33f6831e563cd0b}{rotation}}) \textcolor{keyword}{override};\textcolor{comment}{}}
+\DoxyCodeLine{00051 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00052 \textcolor{comment}{     * @brief Задає новий нахил камери.}}
+\DoxyCodeLine{00053 \textcolor{comment}{     * @param[in] rotation новий нахил камери}}
+\DoxyCodeLine{00054 \textcolor{comment}{     */}}
+\DoxyCodeLine{00055     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_a1a69c9c9f9f370599ba390c8c33f3f2f}{set\_rotation}}(vec3 \mbox{\hyperlink{classCamera_a7c0dfc9a9c583a9ec33f6831e563cd0b}{rotation}}) \textcolor{keyword}{override};}
+\DoxyCodeLine{00056 \textcolor{comment}{}}
+\DoxyCodeLine{00057 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00058 \textcolor{comment}{     * @brief Метод реалізований для інтерфейсу `Bijective`}}
+\DoxyCodeLine{00059 \textcolor{comment}{     */}}
+\DoxyCodeLine{00060     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_a34282db3a235feac8b411787d0839a03}{get\_animation}}(vec3 \mbox{\hyperlink{classCamera_a7f5cd83c97cb8b1fa3fa5bf49a2d2738}{animation}}) \textcolor{keyword}{override};\textcolor{comment}{}}
+\DoxyCodeLine{00061 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00062 \textcolor{comment}{     * @brief Метод реалізований для інтерфейсу `Bijective`}}
+\DoxyCodeLine{00063 \textcolor{comment}{     */}}
+\DoxyCodeLine{00064     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_a3630d2283d4065dfc3c9960518f2b329}{set\_animation}}(vec3 \mbox{\hyperlink{classCamera_a7f5cd83c97cb8b1fa3fa5bf49a2d2738}{animation}}) \textcolor{keyword}{override};}
+\DoxyCodeLine{00065 \textcolor{comment}{}}
+\DoxyCodeLine{00066 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00067 \textcolor{comment}{     * @brief Забирає матрицю лінійних перетворень над камерою.}}
+\DoxyCodeLine{00068 \textcolor{comment}{     * @param[out] matrix матриця лінійних перетворень}}
+\DoxyCodeLine{00069 \textcolor{comment}{     */}}
+\DoxyCodeLine{00070     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_ab82dd66e529cd5da7f61bd0efe7cfed2}{get\_mat4}}(mat4 matrix) \textcolor{keyword}{override};}
+\DoxyCodeLine{00071 \textcolor{comment}{}}
+\DoxyCodeLine{00072 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00073 \textcolor{comment}{     * @brief Переміщує камеру у просторі.}}
+\DoxyCodeLine{00074 \textcolor{comment}{     * @param[in] distances відстані переміщення по осям}}
+\DoxyCodeLine{00075 \textcolor{comment}{     * @param[in] delta\_time скільки часу пройшло з останнього кадру}}
+\DoxyCodeLine{00076 \textcolor{comment}{     */}}
+\DoxyCodeLine{00077     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_a264f13ea514a68eb440a6e20b975470d}{translate}}(vec3 distances, \textcolor{keywordtype}{float} delta\_time) \textcolor{keyword}{override};\textcolor{comment}{}}
+\DoxyCodeLine{00078 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00079 \textcolor{comment}{     * @brief Обертає камеру.}}
+\DoxyCodeLine{00080 \textcolor{comment}{     * @param[in] coord позначає координатну вісь навколо якої обертати}}
+\DoxyCodeLine{00081 \textcolor{comment}{     * @param[in] delta\_time скільки часу пройшло з останнього кадру}}
+\DoxyCodeLine{00082 \textcolor{comment}{     */}}
+\DoxyCodeLine{00083     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_aefe16d03f63e29639110b3fe9afa0e3c}{rotate}}(\textcolor{keyword}{enum} \mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ff}{coord\_enum}} coord, \textcolor{keywordtype}{float} delta\_time) \textcolor{keyword}{override};\textcolor{comment}{}}
+\DoxyCodeLine{00084 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00085 \textcolor{comment}{     * @brief Обернути камеру по всім осям.}}
+\DoxyCodeLine{00086 \textcolor{comment}{     * @param[in] angles вектор кутів у радіанах на кожну вісь}}
+\DoxyCodeLine{00087 \textcolor{comment}{     */}}
+\DoxyCodeLine{00088     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_a5e17cbaf3c595058ebf596ca612f4428}{rotate\_all}}(vec3 angles) \textcolor{keyword}{override};\textcolor{comment}{}}
+\DoxyCodeLine{00089 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00090 \textcolor{comment}{     * @brief Метод реалізований для інтерфейсу `Bijective`}}
+\DoxyCodeLine{00091 \textcolor{comment}{     */}}
+\DoxyCodeLine{00092     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_a8adea6001bb43806f2f012841335c305}{add\_animation}}(vec3 angles, \textcolor{keywordtype}{float} delta\_time) \textcolor{keyword}{override};}
+\DoxyCodeLine{00093 \textcolor{comment}{}}
+\DoxyCodeLine{00094 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00095 \textcolor{comment}{     * @brief Обчислює напрямок перегляду камери.}}
+\DoxyCodeLine{00096 \textcolor{comment}{     * @param[out] dest напрямок перегляду камери}}
+\DoxyCodeLine{00097 \textcolor{comment}{     */}}
+\DoxyCodeLine{00098     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_afda6bcc513fd95c22985ba078d47b2a3}{get\_direction}}(vec4 dest);\textcolor{comment}{}}
+\DoxyCodeLine{00099 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00100 \textcolor{comment}{     * @brief Забирає матрицю обертання камери.}}
+\DoxyCodeLine{00101 \textcolor{comment}{     * @param[out] dest матриця обертання камери.}}
+\DoxyCodeLine{00102 \textcolor{comment}{     */}}
+\DoxyCodeLine{00103     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_ac88148998eeb829c8ba8143831b7ced0}{get\_rotation\_mat4}}(mat4 dest);\textcolor{comment}{}}
+\DoxyCodeLine{00104 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00105 \textcolor{comment}{     * @brief Забирає інвертовану матрицю обертання камери.}}
+\DoxyCodeLine{00106 \textcolor{comment}{     * @param[out] dest інвертована матриця обертання камери.}}
+\DoxyCodeLine{00107 \textcolor{comment}{     */}}
+\DoxyCodeLine{00108     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_a9ad7a34ba72c1dd1a4cef1e0cc896d6f}{get\_rotation\_inv\_mat4}}(mat4 dest);}
+\DoxyCodeLine{00109 \textcolor{comment}{}}
+\DoxyCodeLine{00110 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00111 \textcolor{comment}{     * @brief Переміщує камеру незалежно від часу.}}
+\DoxyCodeLine{00112 \textcolor{comment}{     * @param distances відстані переміщення по трьом осям \(\backslash\)f\$(x, y, z)\(\backslash\)f\$}}
+\DoxyCodeLine{00113 \textcolor{comment}{     */}}
+\DoxyCodeLine{00114     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_af770e5190d9a895ad804679e02ac182b}{translate\_camera}}(vec3 distances);}
+\DoxyCodeLine{00115 \textcolor{comment}{}}
+\DoxyCodeLine{00116 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00117 \textcolor{comment}{     * @brief Обертає камеру по осі незалежно від часу.}}
+\DoxyCodeLine{00118 \textcolor{comment}{     * @param angle кут обертання у радіанах}}
+\DoxyCodeLine{00119 \textcolor{comment}{     * @param coord ввісь обертання}}
+\DoxyCodeLine{00120 \textcolor{comment}{     */}}
+\DoxyCodeLine{00121     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_af2e2e8d296575d210a75c3ca88647a67}{rotate\_camera}}(\textcolor{keywordtype}{float} angle, \textcolor{keyword}{enum} \mbox{\hyperlink{osdo_8h_aaecdceeb081c850edfb088e508fa45ff}{coord\_enum}} coord);\textcolor{comment}{}}
+\DoxyCodeLine{00122 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00123 \textcolor{comment}{     * @brief Обертає камеру по всім осям незалежно від часу.}}
+\DoxyCodeLine{00124 \textcolor{comment}{     * @param angles вектор кутів обертання по трьом осям \(\backslash\)f\$(x, y, z)\(\backslash\)f\$}}
+\DoxyCodeLine{00125 \textcolor{comment}{     */}}
+\DoxyCodeLine{00126     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_ac56fb9a7adad365cae4c0238b8d1e39a}{rotate\_all\_camera}}(vec3 angles);}
+\DoxyCodeLine{00127 \textcolor{comment}{}}
+\DoxyCodeLine{00128 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00129 \textcolor{comment}{     * @brief Обертає камеру по орбіті навколо центру коодинат.}}
+\DoxyCodeLine{00130 \textcolor{comment}{     * @param angles вектор кутів у радіанах обертання по трьом осям \(\backslash\)f\$(x, y, z)\(\backslash\)f\$}}
+\DoxyCodeLine{00131 \textcolor{comment}{     */}}
+\DoxyCodeLine{00132     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_ac8896d30c755130ba22c867598a1a432}{rotate\_all\_inverse}}(vec3 angles);}
+\DoxyCodeLine{00133 }
+\DoxyCodeLine{00134 \};}
+\DoxyCodeLine{00135 }
+\DoxyCodeLine{00136 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// CAMERA\_H}}
+
+\end{DoxyCode}

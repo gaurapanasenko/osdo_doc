@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Дипломна робота: Текст програми osdo/framebuffer.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Дипломна робота
+   </div>
+   <div id="projectbrief">студента групи ПА-17-2 Панасенка Єгора Сергійовича</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e0c7de59e470a6e6d29babac2e4befdd.html">osdo</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">framebuffer.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="framebuffer_8h.html">Див. документацію.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * @file framebuffer.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * @brief Буфер кадру, що використовується для рендеренгу.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef FRAMEBUFFER_H</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define FRAMEBUFFER_H</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="osdo_8h.html">osdo.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="glbindable_8h.html">glbindable.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">class </span><a class="code" href="classRenderbuffer.html">Renderbuffer</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">class </span><a class="code" href="classTexture.html">Texture</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * @brief Буфер кадру, що використовується для рендеренгу.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classFramebuffer.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFramebuffer.html">Framebuffer</a> : <span class="keyword">public</span> <a class="code" href="classGlBindable.html">GlBindable</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{<span class="comment"></span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">     * @brief Віртуальний метод що створює буфер кадру.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">     * @return індекс буфера кадру</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    GLuint <a class="code" href="classFramebuffer.html#adb84d4f813bc52460bde7ce62ccfa150">_generate</a>() <span class="keyword">const override</span>;<span class="comment"></span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">     * @brief Віртуальний метод, що прив&#39;язує контекст до буферу кадру.</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">     * @param id індекс буфера кадру</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">     * @param target ціль буфера кадру</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classFramebuffer.html#a5b4e690288f3283c9d9967ed29bfb1b1">_bind</a>(<span class="keyword">const</span> GLuint <span class="keywordtype">id</span>, GLenum target) <span class="keyword">const override</span>;<span class="comment"></span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">     * @brief Віртуальний метод, що задає ціль прив&#39;язки за замовчуванням.</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">     * @return тип ціль прив&#39;язки за замовчуванням</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">virtual</span> GLenum <a class="code" href="classFramebuffer.html#a33d174278da3c420e01f371b727eced6">_default</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classFramebuffer.html#a4f10f2020d414add1ea0e6553908c86b">Framebuffer</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classFramebuffer.html#a64dae662375f670e5757612e972de62f">~Framebuffer</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">     * @brief Перевіряє, чи готовий буфер до рендеренгу.</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">     * @param target тип буфера</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">     * @return статус буфера</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classFramebuffer.html#afa8771e517776fde7edf0a0b07b6e91b">check</a>(GLenum target = GL_FRAMEBUFFER);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">     * @brief Підготовлює текстуру з згладжуванням</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">     * @param size ширина та висота кадру</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">     * @param texture текстура у яку зберігають кадр з згладжуванням</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFramebuffer.html#a0d90533a9cd82dd33ad45d7e49a722e0">tex_2d_multisample</a>(GLsizei size[2], <span class="keyword">const</span> <a class="code" href="classTexture.html">Texture</a>&amp; texture);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">     * @brief Підготовлює звичайну текстуру</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">     * @param size ширина та висота кадру</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">     * @param texture текстура у яку зберігають кадр</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFramebuffer.html#a2d6e0ef178e7199df8149d53b12d93e0">tex_2d</a>(GLsizei size[2], <span class="keyword">const</span> <a class="code" href="classTexture.html">Texture</a>&amp; texture);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">     * @brief Підготовлює рендер буфер `rb`</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">     * @param rb рендер буфер</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">     * @param target тип буфера</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFramebuffer.html#a0f0dce697d4107c9e6ea39fe11df6d29">renderbuffer</a>(<span class="keyword">const</span> <a class="code" href="classRenderbuffer.html">Renderbuffer</a>&amp; rb, GLenum target) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">     * @brief Підготовлює рендер буфер з згладжуванням для зберігання кольорів.</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">     * @param size ширина та висота кадру</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">     * @param rb рендер буфер</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFramebuffer.html#a28bda5ab4a57e13e49280d745dbf35b0">rb_color_multisample</a>(GLsizei size[2], <span class="keyword">const</span> <a class="code" href="classRenderbuffer.html">Renderbuffer</a>&amp; rb) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">     * @brief Підготовлює глибинний рендер буфер з згладжуванням.</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">     * @param size ширина та висота кадру</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">     * @param rb рендер буфер</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFramebuffer.html#a3c14a0980ae1369f964c0bc05c3ea4dd">rb_depth_multisample</a>(GLsizei size[2], <span class="keyword">const</span> <a class="code" href="classRenderbuffer.html">Renderbuffer</a>&amp; rb) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">     * @brief Підготовлює рендер буфер для зберігання кольорів.</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">     * @param size ширина та висота кадру</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">     * @param rb рендер буфер</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFramebuffer.html#aa22bed74c24a765257806ed4693e7005">rb_color</a>(GLsizei size[2], <span class="keyword">const</span> <a class="code" href="classRenderbuffer.html">Renderbuffer</a>&amp; rb) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">     * @brief Підготовлює глибинний рендер буфер.</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">     * @param size ширина та висота кадру</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">     * @param rb рендер буфер</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFramebuffer.html#ac47980bdb179418e6ed3c8ff18d0fb2b">rb_depth</a>(GLsizei size[2], <span class="keyword">const</span> <a class="code" href="classRenderbuffer.html">Renderbuffer</a>&amp; rb) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;};</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// FRAMEBUFFER_H</span></div>
+<div class="ttc" id="aclassFramebuffer_html"><div class="ttname"><a href="classFramebuffer.html">Framebuffer</a></div><div class="ttdoc">Буфер кадру, що використовується для рендеренгу.</div><div class="ttdef"><b>Definition:</b> <a href="framebuffer_8h_source.html#l00017">framebuffer.h:18</a></div></div>
+<div class="ttc" id="aclassFramebuffer_html_a0d90533a9cd82dd33ad45d7e49a722e0"><div class="ttname"><a href="classFramebuffer.html#a0d90533a9cd82dd33ad45d7e49a722e0">Framebuffer::tex_2d_multisample</a></div><div class="ttdeci">void tex_2d_multisample(GLsizei size[2], const Texture &amp;texture)</div><div class="ttdoc">Підготовлює текстуру з згладжуванням</div><div class="ttdef"><b>Definition:</b> <a href="framebuffer_8cpp_source.html#l00032">framebuffer.cpp:32</a></div></div>
+<div class="ttc" id="aclassFramebuffer_html_a0f0dce697d4107c9e6ea39fe11df6d29"><div class="ttname"><a href="classFramebuffer.html#a0f0dce697d4107c9e6ea39fe11df6d29">Framebuffer::renderbuffer</a></div><div class="ttdeci">void renderbuffer(const Renderbuffer &amp;rb, GLenum target) const</div><div class="ttdoc">Підготовлює рендер буфер rb</div><div class="ttdef"><b>Definition:</b> <a href="framebuffer_8cpp_source.html#l00044">framebuffer.cpp:44</a></div></div>
+<div class="ttc" id="aclassFramebuffer_html_a28bda5ab4a57e13e49280d745dbf35b0"><div class="ttname"><a href="classFramebuffer.html#a28bda5ab4a57e13e49280d745dbf35b0">Framebuffer::rb_color_multisample</a></div><div class="ttdeci">void rb_color_multisample(GLsizei size[2], const Renderbuffer &amp;rb) const</div><div class="ttdoc">Підготовлює рендер буфер з згладжуванням для зберігання кольорів.</div><div class="ttdef"><b>Definition:</b> <a href="framebuffer_8cpp_source.html#l00049">framebuffer.cpp:49</a></div></div>
+<div class="ttc" id="aclassFramebuffer_html_a2d6e0ef178e7199df8149d53b12d93e0"><div class="ttname"><a href="classFramebuffer.html#a2d6e0ef178e7199df8149d53b12d93e0">Framebuffer::tex_2d</a></div><div class="ttdeci">void tex_2d(GLsizei size[2], const Texture &amp;texture)</div><div class="ttdoc">Підготовлює звичайну текстуру</div><div class="ttdef"><b>Definition:</b> <a href="framebuffer_8cpp_source.html#l00038">framebuffer.cpp:38</a></div></div>
+<div class="ttc" id="aclassFramebuffer_html_a33d174278da3c420e01f371b727eced6"><div class="ttname"><a href="classFramebuffer.html#a33d174278da3c420e01f371b727eced6">Framebuffer::_default</a></div><div class="ttdeci">virtual GLenum _default() const override</div><div class="ttdoc">Віртуальний метод, що задає ціль прив'язки за замовчуванням.</div><div class="ttdef"><b>Definition:</b> <a href="framebuffer_8cpp_source.html#l00017">framebuffer.cpp:17</a></div></div>
+<div class="ttc" id="aclassFramebuffer_html_a3c14a0980ae1369f964c0bc05c3ea4dd"><div class="ttname"><a href="classFramebuffer.html#a3c14a0980ae1369f964c0bc05c3ea4dd">Framebuffer::rb_depth_multisample</a></div><div class="ttdeci">void rb_depth_multisample(GLsizei size[2], const Renderbuffer &amp;rb) const</div><div class="ttdoc">Підготовлює глибинний рендер буфер з згладжуванням.</div><div class="ttdef"><b>Definition:</b> <a href="framebuffer_8cpp_source.html#l00055">framebuffer.cpp:55</a></div></div>
+<div class="ttc" id="aclassFramebuffer_html_a4f10f2020d414add1ea0e6553908c86b"><div class="ttname"><a href="classFramebuffer.html#a4f10f2020d414add1ea0e6553908c86b">Framebuffer::Framebuffer</a></div><div class="ttdeci">Framebuffer()</div><div class="ttdef"><b>Definition:</b> <a href="framebuffer_8cpp_source.html#l00022">framebuffer.cpp:22</a></div></div>
+<div class="ttc" id="aclassFramebuffer_html_a5b4e690288f3283c9d9967ed29bfb1b1"><div class="ttname"><a href="classFramebuffer.html#a5b4e690288f3283c9d9967ed29bfb1b1">Framebuffer::_bind</a></div><div class="ttdeci">virtual void _bind(const GLuint id, GLenum target) const override</div><div class="ttdoc">Віртуальний метод, що прив'язує контекст до буферу кадру.</div><div class="ttdef"><b>Definition:</b> <a href="framebuffer_8cpp_source.html#l00012">framebuffer.cpp:12</a></div></div>
+<div class="ttc" id="aclassFramebuffer_html_a64dae662375f670e5757612e972de62f"><div class="ttname"><a href="classFramebuffer.html#a64dae662375f670e5757612e972de62f">Framebuffer::~Framebuffer</a></div><div class="ttdeci">~Framebuffer() override</div><div class="ttdef"><b>Definition:</b> <a href="framebuffer_8cpp_source.html#l00024">framebuffer.cpp:24</a></div></div>
+<div class="ttc" id="aclassFramebuffer_html_aa22bed74c24a765257806ed4693e7005"><div class="ttname"><a href="classFramebuffer.html#aa22bed74c24a765257806ed4693e7005">Framebuffer::rb_color</a></div><div class="ttdeci">void rb_color(GLsizei size[2], const Renderbuffer &amp;rb) const</div><div class="ttdoc">Підготовлює рендер буфер для зберігання кольорів.</div><div class="ttdef"><b>Definition:</b> <a href="framebuffer_8cpp_source.html#l00061">framebuffer.cpp:61</a></div></div>
+<div class="ttc" id="aclassFramebuffer_html_ac47980bdb179418e6ed3c8ff18d0fb2b"><div class="ttname"><a href="classFramebuffer.html#ac47980bdb179418e6ed3c8ff18d0fb2b">Framebuffer::rb_depth</a></div><div class="ttdeci">void rb_depth(GLsizei size[2], const Renderbuffer &amp;rb) const</div><div class="ttdoc">Підготовлює глибинний рендер буфер.</div><div class="ttdef"><b>Definition:</b> <a href="framebuffer_8cpp_source.html#l00067">framebuffer.cpp:67</a></div></div>
+<div class="ttc" id="aclassFramebuffer_html_adb84d4f813bc52460bde7ce62ccfa150"><div class="ttname"><a href="classFramebuffer.html#adb84d4f813bc52460bde7ce62ccfa150">Framebuffer::_generate</a></div><div class="ttdeci">GLuint _generate() const override</div><div class="ttdoc">Віртуальний метод що створює буфер кадру.</div><div class="ttdef"><b>Definition:</b> <a href="framebuffer_8cpp_source.html#l00005">framebuffer.cpp:5</a></div></div>
+<div class="ttc" id="aclassFramebuffer_html_afa8771e517776fde7edf0a0b07b6e91b"><div class="ttname"><a href="classFramebuffer.html#afa8771e517776fde7edf0a0b07b6e91b">Framebuffer::check</a></div><div class="ttdeci">bool check(GLenum target=GL_FRAMEBUFFER)</div><div class="ttdoc">Перевіряє, чи готовий буфер до рендеренгу.</div><div class="ttdef"><b>Definition:</b> <a href="framebuffer_8cpp_source.html#l00028">framebuffer.cpp:28</a></div></div>
+<div class="ttc" id="aclassGlBindable_html"><div class="ttname"><a href="classGlBindable.html">GlBindable</a></div><div class="ttdoc">Абстрактний клас, який виконує роль генерації та прив'язки об'єктів OpenGL.</div><div class="ttdef"><b>Definition:</b> <a href="glbindable_8h_source.html#l00015">glbindable.h:16</a></div></div>
+<div class="ttc" id="aclassRenderbuffer_html"><div class="ttname"><a href="classRenderbuffer.html">Renderbuffer</a></div><div class="ttdoc">Буфер рендеренгу (для зберігання кольорів або глибини)</div><div class="ttdef"><b>Definition:</b> <a href="renderbuffer_8h_source.html#l00014">renderbuffer.h:15</a></div></div>
+<div class="ttc" id="aclassTexture_html"><div class="ttname"><a href="classTexture.html">Texture</a></div><div class="ttdoc">Клас текстури, що зберігаэться у відеокарті.</div><div class="ttdef"><b>Definition:</b> <a href="texture_8h_source.html#l00016">texture.h:17</a></div></div>
+<div class="ttc" id="aglbindable_8h_html"><div class="ttname"><a href="glbindable_8h.html">glbindable.h</a></div><div class="ttdoc">Абстрактний клас, який виконує роль генерації та прив'язки об'єктів OpenGL.</div></div>
+<div class="ttc" id="aosdo_8h_html"><div class="ttname"><a href="osdo_8h.html">osdo.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

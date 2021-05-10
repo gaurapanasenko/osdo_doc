@@ -1,0 +1,5 @@
+<map id="Renderbuffer::make_multisample" name="Renderbuffer::make_multisample">
+<area shape="rect" id="node1" title="Створює буфер рендеренгу з згладжуванням." alt="" coords="5,5,140,47"/>
+<area shape="rect" id="node2" href="$classGlBindable.html#ad3194126ecaf5285842cee0e7d28c951" title="Повертає об&#39;єкт прив&#39;язки контексту із ціллю за замовчуванням" alt="" coords="188,13,316,39"/>
+<area shape="rect" id="node3" href="$classGlBindable.html#a99e6c236fadee7211e721dd8b0d57598" title="Віртуальний метод, що задає ціль прив&#39;язки за замовчуванням." alt="" coords="364,13,503,39"/>
+</map>

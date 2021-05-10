@@ -1,0 +1,8 @@
+<map id="osdo/texture.h" name="osdo/texture.h">
+<area shape="rect" id="node1" title="Задає клас текстури." alt="" coords="222,5,327,32"/>
+<area shape="rect" id="node2" href="$buffer_8h.html" title="Буфер, у якому відбувається рендеринг у текстуру." alt="" coords="12,80,111,107"/>
+<area shape="rect" id="node4" href="$context_8cpp.html" title=" " alt="" coords="135,80,257,107"/>
+<area shape="rect" id="node5" href="$framebuffer_8cpp.html" title=" " alt="" coords="282,80,427,107"/>
+<area shape="rect" id="node6" href="$texture_8cpp.html" title=" " alt="" coords="451,80,570,107"/>
+<area shape="rect" id="node3" href="$buffer_8cpp.html" title=" " alt="" coords="5,155,117,181"/>
+</map>

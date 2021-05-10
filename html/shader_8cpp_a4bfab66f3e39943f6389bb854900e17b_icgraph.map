@@ -1,0 +1,6 @@
+<map id="readFromFile" name="readFromFile">
+<area shape="rect" id="node1" title=" " alt="" coords="573,5,672,32"/>
+<area shape="rect" id="node2" href="$classShaderSource.html#a40a8e5a541a0f30dacad32b75b995586" title=" " alt="" coords="353,5,525,32"/>
+<area shape="rect" id="node3" href="$classShader.html#aea711ca1659af57fe4124ea318aa59c1" title="Створює об&#39;єкт шейдеру за заданими шляхами файлів шейдерів." alt="" coords="199,5,305,32"/>
+<area shape="rect" id="node4" href="$structContext.html#a6b8babb597ca6c92a2ce8f9b62626a27" title="Завантажує та компілює шейдер." alt="" coords="5,5,151,32"/>
+</map>

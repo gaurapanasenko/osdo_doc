@@ -1,0 +1,32 @@
+\hypertarget{bezier_8geom_source}{}\doxysubsection{bezier.\+geom}
+\label{bezier_8geom_source}\index{res/bezier.geom@{res/bezier.geom}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \#version 420 core}
+\DoxyCodeLine{00002 layout(triangles) in;}
+\DoxyCodeLine{00003 layout(triangle\_strip, max\_vertices=16) out;}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{00005 struct Data \{}
+\DoxyCodeLine{00006     vec4 color;}
+\DoxyCodeLine{00007     vec2 uv;}
+\DoxyCodeLine{00008     vec3 normal;}
+\DoxyCodeLine{00009     vec3 frag\_pos;}
+\DoxyCodeLine{00010 \};}
+\DoxyCodeLine{00011 }
+\DoxyCodeLine{00012 in Data vertex[3];}
+\DoxyCodeLine{00013 out Data geometry;}
+\DoxyCodeLine{00014 }
+\DoxyCodeLine{00015 void main() \{}
+\DoxyCodeLine{00016     int i;}
+\DoxyCodeLine{00017     for(i = 0; i < 16; i++) \{}
+\DoxyCodeLine{00018         gl\_Position = gl\_in[i].gl\_Position;}
+\DoxyCodeLine{00019         geometry.color = vertex[i].color;}
+\DoxyCodeLine{00020         geometry.uv = vertex[i].uv;}
+\DoxyCodeLine{00021         geometry.pos = vertex[i].pos;}
+\DoxyCodeLine{00022         geometry.normal = vertex[i].normal;}
+\DoxyCodeLine{00023         EmitVertex();}
+\DoxyCodeLine{00024     \}}
+\DoxyCodeLine{00025     EndPrimitive();}
+\DoxyCodeLine{00026 \}}
+
+\end{DoxyCode}

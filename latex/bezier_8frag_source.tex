@@ -1,0 +1,60 @@
+\hypertarget{bezier_8frag_source}{}\doxysubsection{bezier.\+frag}
+\label{bezier_8frag_source}\index{res/bezier.frag@{res/bezier.frag}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \#version 420 core}
+\DoxyCodeLine{00002 layout(location = 0) out vec4 FragColor;}
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{00004 struct Data \{}
+\DoxyCodeLine{00005     vec4 color;}
+\DoxyCodeLine{00006     vec2 uv;}
+\DoxyCodeLine{00007     vec3 normal;}
+\DoxyCodeLine{00008     vec3 frag\_pos;}
+\DoxyCodeLine{00009 \};}
+\DoxyCodeLine{00010 }
+\DoxyCodeLine{00011 layout(location = 0) in Data data;}
+\DoxyCodeLine{00012 }
+\DoxyCodeLine{00013 struct DirLight \{}
+\DoxyCodeLine{00014     vec3 direction;}
+\DoxyCodeLine{00015 }
+\DoxyCodeLine{00016     vec3 ambient;}
+\DoxyCodeLine{00017     vec3 diffuse;}
+\DoxyCodeLine{00018     vec3 specular;}
+\DoxyCodeLine{00019 \};}
+\DoxyCodeLine{00020 }
+\DoxyCodeLine{00021 uniform vec3 viewPos;}
+\DoxyCodeLine{00022 uniform DirLight dirLight;}
+\DoxyCodeLine{00023 uniform float materialShininess;}
+\DoxyCodeLine{00024 uniform float alpha;}
+\DoxyCodeLine{00025 uniform bool textured;}
+\DoxyCodeLine{00026 uniform sampler2D textureSample;}
+\DoxyCodeLine{00027 }
+\DoxyCodeLine{00028 // calculates the color when using a directional light.}
+\DoxyCodeLine{00029 vec3 CalcDirLight(DirLight light, vec3 normal, vec3 viewDir, vec3 color)}
+\DoxyCodeLine{00030 \{}
+\DoxyCodeLine{00031     vec3 lightDir = normalize(-\/light.direction);}
+\DoxyCodeLine{00032     // diffuse shading}
+\DoxyCodeLine{00033     float diff = max(dot(normal, lightDir), 0.0);}
+\DoxyCodeLine{00034     // specular shading}
+\DoxyCodeLine{00035     vec3 reflectDir = reflect(-\/lightDir, normal);}
+\DoxyCodeLine{00036     float spec = pow(max(dot(viewDir, reflectDir), 0.0), materialShininess);}
+\DoxyCodeLine{00037     // combine results}
+\DoxyCodeLine{00038     vec3 ambient = light.ambient * color;}
+\DoxyCodeLine{00039     vec3 diffuse = light.diffuse * diff * color;}
+\DoxyCodeLine{00040     vec3 specular = light.specular * spec * color;}
+\DoxyCodeLine{00041     return (ambient + diffuse + specular);}
+\DoxyCodeLine{00042 \}}
+\DoxyCodeLine{00043 }
+\DoxyCodeLine{00044 void main()}
+\DoxyCodeLine{00045 \{}
+\DoxyCodeLine{00046     vec3 norm = normalize(data.normal);}
+\DoxyCodeLine{00047     vec3 viewDir = normalize(-\/viewPos -\/ data.frag\_pos);}
+\DoxyCodeLine{00048     vec4 color = data.color;}
+\DoxyCodeLine{00049     if (textured) \{}
+\DoxyCodeLine{00050         color = texture(textureSample, data.uv);}
+\DoxyCodeLine{00051     \}}
+\DoxyCodeLine{00052     vec3 tmp = CalcDirLight(dirLight, norm, viewDir, vec3(color));}
+\DoxyCodeLine{00053     FragColor = vec4(tmp, alpha);}
+\DoxyCodeLine{00054 \}}
+
+\end{DoxyCode}

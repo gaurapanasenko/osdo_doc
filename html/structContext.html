@@ -1,0 +1,437 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Дипломна робота: Структура Context</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Дипломна робота
+   </div>
+   <div id="projectbrief">студента групи ПА-17-2 Панасенка Єгора Сергійовича</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Загальнодоступні типи</a> &#124;
+<a href="#pub-methods">Загальнодоступні елементи</a> &#124;
+<a href="#pub-attribs">Загальнодоступні атрибути</a> &#124;
+<a href="structContext-members.html">Список всіх елементів</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура Context</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Контекст, який зберігає усі завантажені у пам'ять ресурси.  
+ <a href="structContext.html#details">Детальніше...</a></p>
+
+<p><code>#include &lt;<a class="el" href="context_8h_source.html">context.h</a>&gt;</code></p>
+<div class="dynheader">
+Діаграма зв'язків класу Context:</div>
+<div class="dyncontent">
+<div class="center"><img src="structContext__coll__graph.png" border="0" usemap="#aContext_coll__map" alt="Collaboration graph"/></div>
+<map name="aContext_coll__map" id="aContext_coll__map">
+<area shape="rect" title="Контекст, який зберігає усі завантажені у пам&#39;ять ресурси." alt="" coords="289,78,357,105"/>
+<area shape="rect" title=" " alt="" coords="11,5,184,47"/>
+<area shape="rect" title=" " alt="" coords="11,71,184,112"/>
+<area shape="rect" title=" " alt="" coords="5,137,189,163"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">див. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Загальнодоступні типи</h2></td></tr>
+<tr class="memitem:a0fb5343f40542412aa4089d22627f232"><td class="memItemLeft" align="right" valign="top">typedef hash_map&lt; string, <a class="el" href="classObject.html">Object</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structContext.html#a0fb5343f40542412aa4089d22627f232">Models</a></td></tr>
+<tr class="memdesc:a0fb5343f40542412aa4089d22627f232"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тип для зберігання моделей.  <a href="structContext.html#a0fb5343f40542412aa4089d22627f232">Детальніше...</a><br /></td></tr>
+<tr class="separator:a0fb5343f40542412aa4089d22627f232"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6538db926f05f632413d3e83d02ba16d"><td class="memItemLeft" align="right" valign="top">typedef hash_map&lt; string, shared_ptr&lt; <a class="el" href="classTexture.html">Texture</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structContext.html#a6538db926f05f632413d3e83d02ba16d">Textures</a></td></tr>
+<tr class="memdesc:a6538db926f05f632413d3e83d02ba16d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тип для зберігання текстур.  <a href="structContext.html#a6538db926f05f632413d3e83d02ba16d">Детальніше...</a><br /></td></tr>
+<tr class="separator:a6538db926f05f632413d3e83d02ba16d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Загальнодоступні елементи</h2></td></tr>
+<tr class="memitem:a652cdcd2eedc8dbd9110bd284c5d5cf0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structContext.html#a652cdcd2eedc8dbd9110bd284c5d5cf0">Context</a> ()</td></tr>
+<tr class="separator:a652cdcd2eedc8dbd9110bd284c5d5cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad93eb2d9c753907a173f0c534eb534ad"><td class="memItemLeft" align="right" valign="top">Models::iterator &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structContext.html#ad93eb2d9c753907a173f0c534eb534ad">next_active</a> ()</td></tr>
+<tr class="memdesc:ad93eb2d9c753907a173f0c534eb534ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">перехід до наступної моделі для редагування.  <a href="structContext.html#ad93eb2d9c753907a173f0c534eb534ad">Детальніше...</a><br /></td></tr>
+<tr class="separator:ad93eb2d9c753907a173f0c534eb534ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9498eceb6dd3257ac2e5e8fc904370c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structContext.html#ae9498eceb6dd3257ac2e5e8fc904370c">load_texture</a> (const char *path)</td></tr>
+<tr class="memdesc:ae9498eceb6dd3257ac2e5e8fc904370c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Завантажує текстуру у пам'ять.  <a href="structContext.html#ae9498eceb6dd3257ac2e5e8fc904370c">Детальніше...</a><br /></td></tr>
+<tr class="separator:ae9498eceb6dd3257ac2e5e8fc904370c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b8babb597ca6c92a2ce8f9b62626a27"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structContext.html#a6b8babb597ca6c92a2ce8f9b62626a27">load_shader</a> (const char *name, const <a class="el" href="classShader.html#a37c1d8b706d1bc83800419d8776eeb23">Shader::shader_map</a> &amp;<a class="el" href="structContext.html#ae6fcb1cace574a21fb21ccd678473d17">shaders</a>)</td></tr>
+<tr class="memdesc:a6b8babb597ca6c92a2ce8f9b62626a27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Завантажує та компілює шейдер.  <a href="structContext.html#a6b8babb597ca6c92a2ce8f9b62626a27">Детальніше...</a><br /></td></tr>
+<tr class="separator:a6b8babb597ca6c92a2ce8f9b62626a27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56633326b4d4430a41803dcb34f97ec2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structContext.html#a56633326b4d4430a41803dcb34f97ec2">load_model</a> (const string &amp;path)</td></tr>
+<tr class="memdesc:a56633326b4d4430a41803dcb34f97ec2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Завантажує модель з поверхнями Безье  <a href="structContext.html#a56633326b4d4430a41803dcb34f97ec2">Детальніше...</a><br /></td></tr>
+<tr class="separator:a56633326b4d4430a41803dcb34f97ec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Загальнодоступні атрибути</h2></td></tr>
+<tr class="memitem:adf5341866d506e12dca716c71367fdcf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structContext.html#a0fb5343f40542412aa4089d22627f232">Models</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structContext.html#adf5341866d506e12dca716c71367fdcf">models</a></td></tr>
+<tr class="memdesc:adf5341866d506e12dca716c71367fdcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Завантажені моделі.  <a href="structContext.html#adf5341866d506e12dca716c71367fdcf">Детальніше...</a><br /></td></tr>
+<tr class="separator:adf5341866d506e12dca716c71367fdcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6fcb1cace574a21fb21ccd678473d17"><td class="memItemLeft" align="right" valign="top">hash_map&lt; string, shared_ptr&lt; <a class="el" href="classShader.html">Shader</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structContext.html#ae6fcb1cace574a21fb21ccd678473d17">shaders</a></td></tr>
+<tr class="memdesc:ae6fcb1cace574a21fb21ccd678473d17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Зкомпіловані шейдери.  <a href="structContext.html#ae6fcb1cace574a21fb21ccd678473d17">Детальніше...</a><br /></td></tr>
+<tr class="separator:ae6fcb1cace574a21fb21ccd678473d17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc023c5c78fc019ae50fac056ddf7226"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structContext.html#a6538db926f05f632413d3e83d02ba16d">Textures</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structContext.html#acc023c5c78fc019ae50fac056ddf7226">textures</a></td></tr>
+<tr class="memdesc:acc023c5c78fc019ae50fac056ddf7226"><td class="mdescLeft">&#160;</td><td class="mdescRight">Завантажені текстури.  <a href="structContext.html#acc023c5c78fc019ae50fac056ddf7226">Детальніше...</a><br /></td></tr>
+<tr class="separator:acc023c5c78fc019ae50fac056ddf7226"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2495f12fa2a7e55cb4d6e7d514e58735"><td class="memItemLeft" align="right" valign="top">Models::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structContext.html#a2495f12fa2a7e55cb4d6e7d514e58735">active</a></td></tr>
+<tr class="memdesc:a2495f12fa2a7e55cb4d6e7d514e58735"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вибрана модель для редагування.  <a href="structContext.html#a2495f12fa2a7e55cb4d6e7d514e58735">Детальніше...</a><br /></td></tr>
+<tr class="separator:a2495f12fa2a7e55cb4d6e7d514e58735"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6e358ab9890652b7c0accf7fcd1fc85"><td class="memItemLeft" align="right" valign="top">Textures::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structContext.html#af6e358ab9890652b7c0accf7fcd1fc85">active_texture</a></td></tr>
+<tr class="memdesc:af6e358ab9890652b7c0accf7fcd1fc85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вибрана текстура для відображення.  <a href="structContext.html#af6e358ab9890652b7c0accf7fcd1fc85">Детальніше...</a><br /></td></tr>
+<tr class="separator:af6e358ab9890652b7c0accf7fcd1fc85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Детальний опис</h2>
+<div class="textblock"><p>Контекст, який зберігає усі завантажені у пам'ять ресурси. </p>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="context_8h_source.html">context.h</a>, рядок <a class="el" href="context_8h_source.html#l00026">26</a></p>
+</div><h2 class="groupheader">Опис типів користувача</h2>
+<a id="a0fb5343f40542412aa4089d22627f232"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fb5343f40542412aa4089d22627f232">&#9670;&nbsp;</a></span>Models</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef hash_map&lt;string, <a class="el" href="classObject.html">Object</a>&gt; <a class="el" href="structContext.html#a0fb5343f40542412aa4089d22627f232">Context::Models</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Тип для зберігання моделей. </p>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="context_8h_source.html">context.h</a>, рядок <a class="el" href="context_8h_source.html#l00031">31</a></p>
+
+</div>
+</div>
+<a id="a6538db926f05f632413d3e83d02ba16d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6538db926f05f632413d3e83d02ba16d">&#9670;&nbsp;</a></span>Textures</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef hash_map&lt;string, shared_ptr&lt;<a class="el" href="classTexture.html">Texture</a>&gt; &gt; <a class="el" href="structContext.html#a6538db926f05f632413d3e83d02ba16d">Context::Textures</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Тип для зберігання текстур. </p>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="context_8h_source.html">context.h</a>, рядок <a class="el" href="context_8h_source.html#l00035">35</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(и)</h2>
+<a id="a652cdcd2eedc8dbd9110bd284c5d5cf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a652cdcd2eedc8dbd9110bd284c5d5cf0">&#9670;&nbsp;</a></span>Context()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Context::Context </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Див. визначення в файлі <a class="el" href="context_8cpp_source.html">context.cpp</a>, рядок <a class="el" href="context_8cpp_source.html#l00006">6</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Опис методів компонент</h2>
+<a id="a56633326b4d4430a41803dcb34f97ec2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56633326b4d4430a41803dcb34f97ec2">&#9670;&nbsp;</a></span>load_model()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Context::load_model </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Завантажує модель з поверхнями Безье </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>шлях до файлу з моделлю </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Повертає</dt><dd>статус успішності завантаження моделі </dd></dl>
+
+</div>
+</div>
+<a id="a6b8babb597ca6c92a2ce8f9b62626a27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b8babb597ca6c92a2ce8f9b62626a27">&#9670;&nbsp;</a></span>load_shader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Context::load_shader </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classShader.html#a37c1d8b706d1bc83800419d8776eeb23">Shader::shader_map</a> &amp;&#160;</td>
+          <td class="paramname"><em>shaders</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Завантажує та компілює шейдер. </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>назва шейдеру </td></tr>
+    <tr><td class="paramname">shaders</td><td>массив до файлів шейдеру </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Повертає</dt><dd>статус успішності завантаження та компіляції шейдеру </dd></dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="context_8cpp_source.html">context.cpp</a>, рядок <a class="el" href="context_8cpp_source.html#l00026">26</a></p>
+<div class="dynheader">
+Граф всіх викликів цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="structContext_a6b8babb597ca6c92a2ce8f9b62626a27_cgraph.png" border="0" usemap="#astructContext_a6b8babb597ca6c92a2ce8f9b62626a27_cgraph" alt=""/></div>
+<map name="astructContext_a6b8babb597ca6c92a2ce8f9b62626a27_cgraph" id="astructContext_a6b8babb597ca6c92a2ce8f9b62626a27_cgraph">
+<area shape="rect" title="Завантажує та компілює шейдер." alt="" coords="5,31,151,57"/>
+<area shape="rect" href="classShader.html#aea711ca1659af57fe4124ea318aa59c1" title="Створює об&#39;єкт шейдеру за заданими шляхами файлів шейдерів." alt="" coords="199,31,305,57"/>
+<area shape="rect" href="classShaderSource.html#a40a8e5a541a0f30dacad32b75b995586" title=" " alt="" coords="353,31,525,57"/>
+<area shape="rect" href="classShaderSource.html#a992c5f061e5448ee1d35bdc272fb5702" title=" " alt="" coords="573,5,721,32"/>
+<area shape="rect" href="shader_8cpp.html#a4bfab66f3e39943f6389bb854900e17b" title=" " alt="" coords="598,56,697,83"/>
+<area shape="rect" href="shader_8cpp.html#a9ab6260d9d6a7ad27211ba2dde544a8d" title=" " alt="" coords="769,5,872,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae9498eceb6dd3257ac2e5e8fc904370c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9498eceb6dd3257ac2e5e8fc904370c">&#9670;&nbsp;</a></span>load_texture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Context::load_texture </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Завантажує текстуру у пам'ять. </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>шлях до файлу з текстурою </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="context_8cpp_source.html">context.cpp</a>, рядок <a class="el" href="context_8cpp_source.html#l00017">17</a></p>
+<div class="dynheader">
+Граф всіх викликів цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="structContext_ae9498eceb6dd3257ac2e5e8fc904370c_cgraph.png" border="0" usemap="#astructContext_ae9498eceb6dd3257ac2e5e8fc904370c_cgraph" alt=""/></div>
+<map name="astructContext_ae9498eceb6dd3257ac2e5e8fc904370c_cgraph" id="astructContext_ae9498eceb6dd3257ac2e5e8fc904370c_cgraph">
+<area shape="rect" title="Завантажує текстуру у пам&#39;ять." alt="" coords="5,5,152,32"/>
+<area shape="rect" href="classImage.html#ac282669cfe2627b0feeadebeba74c35e" title="Зчитування зображення з файлу." alt="" coords="200,5,313,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad93eb2d9c753907a173f0c534eb534ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad93eb2d9c753907a173f0c534eb534ad">&#9670;&nbsp;</a></span>next_active()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Context::Models::iterator &amp; Context::next_active </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>перехід до наступної моделі для редагування. </p>
+<dl class="section return"><dt>Повертає</dt><dd>ітератор моделі </dd></dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="context_8cpp_source.html">context.cpp</a>, рядок <a class="el" href="context_8cpp_source.html#l00010">10</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Компонентні дані</h2>
+<a id="a2495f12fa2a7e55cb4d6e7d514e58735"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2495f12fa2a7e55cb4d6e7d514e58735">&#9670;&nbsp;</a></span>active</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Models::iterator Context::active</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Вибрана модель для редагування. </p>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="context_8h_source.html">context.h</a>, рядок <a class="el" href="context_8h_source.html#l00052">52</a></p>
+
+</div>
+</div>
+<a id="af6e358ab9890652b7c0accf7fcd1fc85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6e358ab9890652b7c0accf7fcd1fc85">&#9670;&nbsp;</a></span>active_texture</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Textures::iterator Context::active_texture</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Вибрана текстура для відображення. </p>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="context_8h_source.html">context.h</a>, рядок <a class="el" href="context_8h_source.html#l00056">56</a></p>
+
+</div>
+</div>
+<a id="adf5341866d506e12dca716c71367fdcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf5341866d506e12dca716c71367fdcf">&#9670;&nbsp;</a></span>models</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structContext.html#a0fb5343f40542412aa4089d22627f232">Models</a> Context::models</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Завантажені моделі. </p>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="context_8h_source.html">context.h</a>, рядок <a class="el" href="context_8h_source.html#l00039">39</a></p>
+
+</div>
+</div>
+<a id="ae6fcb1cace574a21fb21ccd678473d17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6fcb1cace574a21fb21ccd678473d17">&#9670;&nbsp;</a></span>shaders</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">hash_map&lt;string, shared_ptr&lt;<a class="el" href="classShader.html">Shader</a>&gt; &gt; Context::shaders</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Зкомпіловані шейдери. </p>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="context_8h_source.html">context.h</a>, рядок <a class="el" href="context_8h_source.html#l00043">43</a></p>
+
+</div>
+</div>
+<a id="acc023c5c78fc019ae50fac056ddf7226"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc023c5c78fc019ae50fac056ddf7226">&#9670;&nbsp;</a></span>textures</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structContext.html#a6538db926f05f632413d3e83d02ba16d">Textures</a> Context::textures</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Завантажені текстури. </p>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="context_8h_source.html">context.h</a>, рядок <a class="el" href="context_8h_source.html#l00047">47</a></p>
+
+</div>
+</div>
+<hr/>Документація цих структур була створена з файлів:<ul>
+<li>osdo/<a class="el" href="context_8h_source.html">context.h</a></li>
+<li>osdo/<a class="el" href="context_8cpp_source.html">context.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<map id="GlBinder::GlBinder" name="GlBinder::GlBinder">
+<area shape="rect" id="node1" title="Конструктор із параметром" alt="" coords="5,31,136,57"/>
+<area shape="rect" id="node2" href="$classGlBindable.html#a221cf1ca728041bc2545f27a5e3004e0" title="Прив&#39;язує контекст до об&#39;єкту із ціллю за замовчуванням." alt="" coords="184,31,301,57"/>
+<area shape="rect" id="node3" href="$classGlBindable.html#ae3213a00db0e6f6dfc356a06a5b1e6d6" title="Віртуальний метод, що прив&#39;язує контекст OpenGL до об&#39;єкту." alt="" coords="357,5,481,32"/>
+<area shape="rect" id="node4" href="$classGlBindable.html#a99e6c236fadee7211e721dd8b0d57598" title="Віртуальний метод, що задає ціль прив&#39;язки за замовчуванням." alt="" coords="349,56,488,83"/>
+</map>

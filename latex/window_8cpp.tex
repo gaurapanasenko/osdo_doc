@@ -1,0 +1,118 @@
+\hypertarget{window_8cpp}{}\doxysubsection{Файл druidengine/window.cpp}
+\label{window_8cpp}\index{druidengine/window.cpp@{druidengine/window.cpp}}
+{\ttfamily \#include \char`\"{}window.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}conf.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$GLFW/glfw3.\+h$>$}\newline
+{\ttfamily \#include $<$imgui.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}imgui\+\_\+impl\+\_\+glfw.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgui\+\_\+impl\+\_\+opengl2.\+h\char`\"{}}\newline
+Діаграма включених заголовочних файлів для window.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{window_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Класи}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structkey__map__t}{key\+\_\+map\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structmouse__map__t}{mouse\+\_\+map\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Визначення типів}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structkey__map__t}{key\+\_\+map\+\_\+t}} \mbox{\hyperlink{window_8cpp_a234b5b1147e2fc05d2b0cebe692e3834}{key\+\_\+map\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{structmouse__map__t}{mouse\+\_\+map\+\_\+t}} \mbox{\hyperlink{window_8cpp_a648f15cfd900029e8b824ff741552943}{mouse\+\_\+map\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Функції}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{window_8cpp_af6765bf7aae4ba2a0d60d0091a3f5f61}{map\+\_\+init}} (void)
+\item 
+void \mbox{\hyperlink{window_8cpp_ac97bd0f3af797ceb0789b137fb0b526f}{error\+\_\+callback}} (int e, const char $\ast$d)
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Опис визначень типів}
+\mbox{\Hypertarget{window_8cpp_a234b5b1147e2fc05d2b0cebe692e3834}\label{window_8cpp_a234b5b1147e2fc05d2b0cebe692e3834}} 
+\index{window.cpp@{window.cpp}!key\_map\_t@{key\_map\_t}}
+\index{key\_map\_t@{key\_map\_t}!window.cpp@{window.cpp}}
+\doxyparagraph{\texorpdfstring{key\_map\_t}{key\_map\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structkey__map__t}{key\+\_\+map\+\_\+t}} \mbox{\hyperlink{structkey__map__t}{key\+\_\+map\+\_\+t}}}
+
+\mbox{\Hypertarget{window_8cpp_a648f15cfd900029e8b824ff741552943}\label{window_8cpp_a648f15cfd900029e8b824ff741552943}} 
+\index{window.cpp@{window.cpp}!mouse\_map\_t@{mouse\_map\_t}}
+\index{mouse\_map\_t@{mouse\_map\_t}!window.cpp@{window.cpp}}
+\doxyparagraph{\texorpdfstring{mouse\_map\_t}{mouse\_map\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structmouse__map__t}{mouse\+\_\+map\+\_\+t}} \mbox{\hyperlink{structmouse__map__t}{mouse\+\_\+map\+\_\+t}}}
+
+
+
+\doxysubsubsection{Опис функцій}
+\mbox{\Hypertarget{window_8cpp_ac97bd0f3af797ceb0789b137fb0b526f}\label{window_8cpp_ac97bd0f3af797ceb0789b137fb0b526f}} 
+\index{window.cpp@{window.cpp}!error\_callback@{error\_callback}}
+\index{error\_callback@{error\_callback}!window.cpp@{window.cpp}}
+\doxyparagraph{\texorpdfstring{error\_callback()}{error\_callback()}}
+{\footnotesize\ttfamily void error\+\_\+callback (\begin{DoxyParamCaption}\item[{int}]{e,  }\item[{const char $\ast$}]{d }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}, рядок \mbox{\hyperlink{window_8cpp_source_l00084}{84}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00084                                           \{}
+\DoxyCodeLine{00085     printf(\textcolor{stringliteral}{"{}Error \%d: \%s\(\backslash\)n"{}}, e, d);}
+\DoxyCodeLine{00086 \}}
+
+\end{DoxyCode}
+Граф викликів для цієї функції\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{window_8cpp_ac97bd0f3af797ceb0789b137fb0b526f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{window_8cpp_af6765bf7aae4ba2a0d60d0091a3f5f61}\label{window_8cpp_af6765bf7aae4ba2a0d60d0091a3f5f61}} 
+\index{window.cpp@{window.cpp}!map\_init@{map\_init}}
+\index{map\_init@{map\_init}!window.cpp@{window.cpp}}
+\doxyparagraph{\texorpdfstring{map\_init()}{map\_init()}}
+{\footnotesize\ttfamily void map\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}, рядок \mbox{\hyperlink{window_8cpp_source_l00067}{67}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00067                     \{}
+\DoxyCodeLine{00068     \textcolor{keywordflow}{if} (!map\_inited) \{}
+\DoxyCodeLine{00069         map\_inited = \textcolor{keyword}{true};}
+\DoxyCodeLine{00070         \textcolor{keyword}{const} \textcolor{keywordtype}{void}* end;}
+\DoxyCodeLine{00071         end = key\_list + \textcolor{keyword}{sizeof}(key\_list) / \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structkey__map__t}{key\_map\_t}});}
+\DoxyCodeLine{00072         \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \mbox{\hyperlink{structkey__map__t}{key\_map\_t}} *i = key\_list; i != end; i++) \{}
+\DoxyCodeLine{00073             key\_glfw\_map[i-\/>key] = i-\/>glfw\_key;}
+\DoxyCodeLine{00074             glfw\_key\_map[i-\/>glfw\_key] = i-\/>key;}
+\DoxyCodeLine{00075         \}}
+\DoxyCodeLine{00076         end = mouse\_list + \textcolor{keyword}{sizeof}(mouse\_list) / \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structmouse__map__t}{mouse\_map\_t}});}
+\DoxyCodeLine{00077         \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \mbox{\hyperlink{structmouse__map__t}{mouse\_map\_t}} *i = mouse\_list; i != end; i++) \{}
+\DoxyCodeLine{00078             btn\_glfw\_map[i-\/>btn] = i-\/>glfw\_btn;}
+\DoxyCodeLine{00079             glfw\_btn\_map[i-\/>glfw\_btn] = i-\/>btn;}
+\DoxyCodeLine{00080         \}}
+\DoxyCodeLine{00081     \}}
+\DoxyCodeLine{00082 \}}
+
+\end{DoxyCode}
+Граф викликів для цієї функції\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{window_8cpp_af6765bf7aae4ba2a0d60d0091a3f5f61_icgraph}
+\end{center}
+\end{figure}

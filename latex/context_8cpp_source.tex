@@ -1,0 +1,38 @@
+\hypertarget{context_8cpp_source}{}\doxysubsection{context.\+cpp}
+\label{context_8cpp_source}\index{osdo/context.cpp@{osdo/context.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{context_8h}{context.h}}"{}}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{glbinder_8h}{glbinder.h}}"{}}}
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{image_8h}{image.h}}"{}}}
+\DoxyCodeLine{00004 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{texture_8h}{texture.h}}"{}}}
+\DoxyCodeLine{00005 }
+\DoxyCodeLine{\Hypertarget{context_8cpp_source_l00006}\mbox{\hyperlink{structContext_a652cdcd2eedc8dbd9110bd284c5d5cf0}{00006}} \mbox{\hyperlink{structContext_a652cdcd2eedc8dbd9110bd284c5d5cf0}{Context::Context}}() : active(models.end()), active\_texture(textures.end()) \{}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 \}}
+\DoxyCodeLine{00009 }
+\DoxyCodeLine{\Hypertarget{context_8cpp_source_l00010}\mbox{\hyperlink{structContext_ad93eb2d9c753907a173f0c534eb534ad}{00010}} Context::Models::iterator \&\mbox{\hyperlink{structContext_ad93eb2d9c753907a173f0c534eb534ad}{Context::next\_active}}() \{}
+\DoxyCodeLine{00011     \textcolor{keywordflow}{if} (\mbox{\hyperlink{structContext_a2495f12fa2a7e55cb4d6e7d514e58735}{active}} == \mbox{\hyperlink{structContext_adf5341866d506e12dca716c71367fdcf}{models}}.end()) \{}
+\DoxyCodeLine{00012         \mbox{\hyperlink{structContext_a2495f12fa2a7e55cb4d6e7d514e58735}{active}} = \mbox{\hyperlink{structContext_adf5341866d506e12dca716c71367fdcf}{models}}.begin();}
+\DoxyCodeLine{00013     \} \textcolor{keywordflow}{else} \mbox{\hyperlink{structContext_a2495f12fa2a7e55cb4d6e7d514e58735}{active}}++;}
+\DoxyCodeLine{00014     \textcolor{keywordflow}{return} \mbox{\hyperlink{structContext_a2495f12fa2a7e55cb4d6e7d514e58735}{active}};}
+\DoxyCodeLine{00015 \}}
+\DoxyCodeLine{00016 }
+\DoxyCodeLine{\Hypertarget{context_8cpp_source_l00017}\mbox{\hyperlink{structContext_ae9498eceb6dd3257ac2e5e8fc904370c}{00017}} \textcolor{keywordtype}{void} \mbox{\hyperlink{structContext_ae9498eceb6dd3257ac2e5e8fc904370c}{Context::load\_texture}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *path) \{}
+\DoxyCodeLine{00018     \mbox{\hyperlink{classImage}{Image}} img = \mbox{\hyperlink{classImage_ac282669cfe2627b0feeadebeba74c35e}{Image::fromFile}}(path);}
+\DoxyCodeLine{00019     \textcolor{keywordflow}{if} (img.\mbox{\hyperlink{classImage_a0bff7334a9e45a84e0503448af829bbb}{data}}) \{}
+\DoxyCodeLine{00020         \textcolor{keyword}{auto} tex = make\_shared<Texture>();}
+\DoxyCodeLine{00021         tex-\/>update(img);}
+\DoxyCodeLine{00022         \mbox{\hyperlink{structContext_acc023c5c78fc019ae50fac056ddf7226}{textures}}[path] = tex;}
+\DoxyCodeLine{00023     \}}
+\DoxyCodeLine{00024 \}}
+\DoxyCodeLine{00025 }
+\DoxyCodeLine{\Hypertarget{context_8cpp_source_l00026}\mbox{\hyperlink{structContext_a6b8babb597ca6c92a2ce8f9b62626a27}{00026}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{structContext_a6b8babb597ca6c92a2ce8f9b62626a27}{Context::load\_shader}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name, \textcolor{keyword}{const} \mbox{\hyperlink{classShader_a37c1d8b706d1bc83800419d8776eeb23}{Shader::shader\_map}}\& shaders) \{}
+\DoxyCodeLine{00027     \textcolor{keyword}{auto} shader = \mbox{\hyperlink{classShader_aea711ca1659af57fe4124ea318aa59c1}{Shader::create}}(\mbox{\hyperlink{structContext_ae6fcb1cace574a21fb21ccd678473d17}{shaders}});}
+\DoxyCodeLine{00028     \textcolor{keywordflow}{if} (!shader)}
+\DoxyCodeLine{00029         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00030     this-\/>shaders[string(name)] = shader;}
+\DoxyCodeLine{00031     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00032 \}}
+
+\end{DoxyCode}

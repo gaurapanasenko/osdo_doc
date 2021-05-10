@@ -1,0 +1,305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Дипломна робота: Текст програми osdo/shader.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Дипломна робота
+   </div>
+   <div id="projectbrief">студента групи ПА-17-2 Панасенка Єгора Сергійовича</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e0c7de59e470a6e6d29babac2e4befdd.html">osdo</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">shader.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="shader_8cpp.html">Див. документацію.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;cstring&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="shader_8h.html">shader.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="conf_8h.html">conf.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;EASTL/hash_map.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;EASTL/shared_ptr.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;EASTL/vector.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using</span> eastl::hash_map;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">using</span> eastl::make_shared;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">using</span> eastl::vector;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">static</span> hash_map&lt;ShaderType, GLenum&gt; TYPES_MAP = {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {<a class="code" href="shader_8h.html#a6230e1b9ecbf2d82d10856fd7e1fde46a5ba20b6e8c97b8dbd2b240a0a6c62036">VERT_SHADER</a>, GL_VERTEX_SHADER},</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {<a class="code" href="shader_8h.html#a6230e1b9ecbf2d82d10856fd7e1fde46acbfaee266881f615c5ef456a906f51bf">TESC_SHADER</a>, GL_TESS_CONTROL_SHADER},</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {<a class="code" href="shader_8h.html#a6230e1b9ecbf2d82d10856fd7e1fde46a40f4e8253f67098f84518f2c9c7a94e8">TESE_SHADER</a>, GL_TESS_EVALUATION_SHADER},</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    {<a class="code" href="shader_8h.html#a6230e1b9ecbf2d82d10856fd7e1fde46a4d347b773747cda93e76787970f93620">GEOM_SHADER</a>, GL_GEOMETRY_SHADER},</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {<a class="code" href="shader_8h.html#a6230e1b9ecbf2d82d10856fd7e1fde46a099050644e08e3ab6619bb1fb8c8164e">FRAG_SHADER</a>, GL_FRAGMENT_SHADER},</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="shader_8cpp.html#a4bfab66f3e39943f6389bb854900e17b">   21</a></span>&#160;<span class="keywordtype">char</span> * <a class="code" href="shader_8cpp.html#a4bfab66f3e39943f6389bb854900e17b">readFromFile</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *path) {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">char</span>* data;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">size_t</span> size;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    FILE *file = fopen(path, <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">if</span> (file == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        printf(<span class="stringliteral">&quot;ERROR: failed to open file %s\n&quot;</span>, path);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    fseek(file, 0L, SEEK_END);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    size = <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(ftell(file));</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    fseek(file, 0L, SEEK_SET);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    data = <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(malloc(size + 1));</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    fread(data, 1, size, file);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    data[size] = 0;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    fclose(file);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span> data;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">// utility function for checking shader compilation/linking errors.</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="shader_8cpp.html#a9ab6260d9d6a7ad27211ba2dde544a8d">   40</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="shader_8cpp.html#a9ab6260d9d6a7ad27211ba2dde544a8d">check_shader</a>(GLuint shader, <span class="keyword">const</span> <span class="keywordtype">int</span> type) {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    GLint status = 0, size = 0;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    GLchar *log;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    GLuint status_type = GL_COMPILE_STATUS;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    void (*gl_get)(GLuint, GLuint, GLint*) = glGetShaderiv;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    void (*gl_info)(GLuint, GLint, GLint*, GLchar*) = glGetShaderInfoLog;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">if</span> (type == 0) {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        gl_get = glGetProgramiv;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        status_type = GL_LINK_STATUS;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        gl_info = glGetProgramInfoLog;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    gl_get(shader, status_type, &amp;status);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">if</span> (status == GL_FALSE) {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        gl_get(shader, GL_INFO_LOG_LENGTH, &amp;size);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        log = <span class="keyword">static_cast&lt;</span>GLchar*<span class="keyword">&gt;</span>(malloc(<span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(size)));</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">if</span> (log == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            printf(<span class="stringliteral">&quot;Got some error, but cant allocate memory to read it.\n&quot;</span>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        gl_info(shader, size, &amp;size, log);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        puts(log);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        fflush(stdout);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        free(log);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classShaderSource.html">   70</a></span>&#160;<span class="keyword">class </span><a class="code" href="classShaderSource.html">ShaderSource</a> {</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classShaderSource.html#a6a0213f169e5a9e771750ffaf28ae60b">   71</a></span>&#160;    <span class="keyword">const</span> GLuint <a class="code" href="classShaderSource.html#a6a0213f169e5a9e771750ffaf28ae60b">id</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classShaderSource.html#a9610a3f7e210873e27191e5a1b7750ea">   73</a></span>&#160;    <a class="code" href="classShaderSource.html#a9610a3f7e210873e27191e5a1b7750ea">ShaderSource</a>(<span class="keyword">const</span> GLuint <span class="keywordtype">id</span>) : <a class="code" href="classShaderSource.html#a6a0213f169e5a9e771750ffaf28ae60b">id</a>(<a class="code" href="classShaderSource.html#a6a0213f169e5a9e771750ffaf28ae60b">id</a>) {}</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classShaderSource.html#a992c5f061e5448ee1d35bdc272fb5702">   74</a></span>&#160;    <span class="keyword">static</span> shared_ptr&lt;ShaderSource&gt; <a class="code" href="classShaderSource.html#a992c5f061e5448ee1d35bdc272fb5702">create</a>(GLenum type, <span class="keyword">const</span> <span class="keywordtype">char</span> *code) {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keyword">const</span> GLuint shader = glCreateShader(type);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        glShaderSource(shader, 1, &amp;code, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        glCompileShader(shader);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="shader_8cpp.html#a9ab6260d9d6a7ad27211ba2dde544a8d">check_shader</a>(shader, 1)) {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">return</span> {};</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">return</span> make_shared&lt;ShaderSource&gt;(shader);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classShaderSource.html#a40a8e5a541a0f30dacad32b75b995586">   83</a></span>&#160;    <span class="keyword">static</span> shared_ptr&lt;ShaderSource&gt; <a class="code" href="classShaderSource.html#a40a8e5a541a0f30dacad32b75b995586">create_file</a>(GLenum type, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; path) {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        GLchar* code = <a class="code" href="shader_8cpp.html#a4bfab66f3e39943f6389bb854900e17b">readFromFile</a>(path.c_str());</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">if</span> (!code)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordflow">return</span> {};</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classShaderSource.html#a992c5f061e5448ee1d35bdc272fb5702">create</a>(type, code);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classShaderSource.html#a6b5b7c6ad06783f034e61bdf251767f2">   89</a></span>&#160;    GLuint <a class="code" href="classShaderSource.html#a6b5b7c6ad06783f034e61bdf251767f2">get_id</a>() {<span class="keywordflow">return</span> <a class="code" href="classShaderSource.html#a6a0213f169e5a9e771750ffaf28ae60b">id</a>;}</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="classShaderSource.html#a306de5f8967b2caaf238ea9ed25ee6b5">   90</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classShaderSource.html#a306de5f8967b2caaf238ea9ed25ee6b5">attach</a>(<span class="keyword">const</span> GLuint program) {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        glAttachShader(program, <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;};</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="shader_8cpp.html#a0f3ac031e18245c27d4bcdd6731f7520">   95</a></span>&#160;shared_ptr&lt;Shader&gt; <a class="code" href="shader_8cpp.html#a0f3ac031e18245c27d4bcdd6731f7520">compile</a>(vector&lt;shared_ptr&lt;ShaderSource&gt;&gt; shaders) {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;i : shaders) {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">if</span> (!i)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="keywordflow">return</span> {};</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    GLuint sh = glCreateProgram();</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;i : shaders) {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        i-&gt;attach(sh);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    glLinkProgram(sh);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="shader_8cpp.html#a9ab6260d9d6a7ad27211ba2dde544a8d">check_shader</a>(sh, 0)) {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">return</span> {};</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">return</span> make_shared&lt;Shader&gt;(sh);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="classShader.html#ad4ef4f54ecb6c7950867d4f091ffbec9">  113</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classShader.html#ad4ef4f54ecb6c7950867d4f091ffbec9">Shader::_bind</a>(<span class="keyword">const</span> GLuint <span class="keywordtype">id</span>, <a class="code" href="osdo_8h.html#addf5ec070e9499d36b7f2009ce736076">UNUSED</a> GLenum target)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    glUseProgram(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="classShader.html#af878abbd5ebf1a17e1df35dd9933f4e8">  118</a></span>&#160;<a class="code" href="classShader.html#af878abbd5ebf1a17e1df35dd9933f4e8">Shader::Shader</a>(<span class="keyword">const</span> GLuint shader) : <a class="code" href="classGlBindable.html">GlBindable</a>(shader) {}</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="classShader.html#ad3825ce04340dcb4c3fe7eea5a1c46d2">  120</a></span>&#160;<a class="code" href="classShader.html#ad3825ce04340dcb4c3fe7eea5a1c46d2">Shader::~Shader</a>() {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    glDeleteProgram(this-&gt;<a class="code" href="classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7">get_id</a>());</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="classShader.html#aea711ca1659af57fe4124ea318aa59c1">  124</a></span>&#160;shared_ptr&lt;Shader&gt; <a class="code" href="classShader.html#aea711ca1659af57fe4124ea318aa59c1">Shader::create</a>(<span class="keyword">const</span> <a class="code" href="classShader.html#a37c1d8b706d1bc83800419d8776eeb23">Shader::shader_map</a>&amp; shaders_paths)</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;{</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    vector&lt;shared_ptr&lt;ShaderSource&gt;&gt; shaders;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; i : shaders_paths) {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        shaders.push_back(</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                    <a class="code" href="classShaderSource.html#a40a8e5a541a0f30dacad32b75b995586">ShaderSource::create_file</a>(TYPES_MAP[i.first], i.second));</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="shader_8cpp.html#a0f3ac031e18245c27d4bcdd6731f7520">compile</a>(shaders);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="classShader.html#a4581e5cba0fa25ab7080a6848543dc58">  134</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classShader.html#a4581e5cba0fa25ab7080a6848543dc58">Shader::set_bool</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name, <span class="keywordtype">bool</span> value) {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    glUniform1i(glGetUniformLocation(this-&gt;<a class="code" href="classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7">get_id</a>(), name), <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(value));</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;}</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="classShader.html#a5544845a48d60515371b5cb71c7bcb8f">  138</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classShader.html#a5544845a48d60515371b5cb71c7bcb8f">Shader::set_int</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name, <span class="keywordtype">int</span> value) {</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    glUniform1i(glGetUniformLocation(this-&gt;<a class="code" href="classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7">get_id</a>(), name), value);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;}</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="classShader.html#a6e686eb1dd9e36aa617397520b669497">  142</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classShader.html#a6e686eb1dd9e36aa617397520b669497">Shader::set_float</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name, <span class="keywordtype">float</span> value) {</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    glUniform1f(glGetUniformLocation(this-&gt;<a class="code" href="classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7">get_id</a>(), name), value);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;}</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="classShader.html#aec16390e257fd63c173336869cda6488">  146</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classShader.html#aec16390e257fd63c173336869cda6488">Shader::set_vec2</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name, vec2 value) {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    glUniform2fv(glGetUniformLocation(this-&gt;<a class="code" href="classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7">get_id</a>(), name),</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                 1, &amp;value[0]);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;}</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="classShader.html#a9c15d92dae60d9bebc5a8e05e7e16771">  151</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classShader.html#a9c15d92dae60d9bebc5a8e05e7e16771">Shader::set_vec2f</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name,</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                      <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y) {</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    glUniform2f(glGetUniformLocation(this-&gt;<a class="code" href="classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7">get_id</a>(), name), x, y);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;}</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="classShader.html#a5da8dde2a4756ce7f5da98f4e3dd9990">  156</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classShader.html#a5da8dde2a4756ce7f5da98f4e3dd9990">Shader::set_vec3</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name, vec3 value) {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    glUniform3fv(glGetUniformLocation(this-&gt;<a class="code" href="classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7">get_id</a>(), name),</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                 1, &amp;value[0]);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;}</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="classShader.html#a8ab6219e3f760caa7a586061a9894096">  161</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classShader.html#a8ab6219e3f760caa7a586061a9894096">Shader::set_vec3f</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name,</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                      <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z) {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    glUniform3f(glGetUniformLocation(this-&gt;<a class="code" href="classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7">get_id</a>(), name), x, y, z);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;}</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="classShader.html#a77c606dadf7b56b825fa02621f13fac3">  166</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classShader.html#a77c606dadf7b56b825fa02621f13fac3">Shader::set_vec4</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name, vec4 value) {</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    glUniform4fv(glGetUniformLocation(this-&gt;<a class="code" href="classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7">get_id</a>(), name),</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                 1, &amp;value[0]);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;}</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="classShader.html#a52615fe5f2d1528baa909dcbeab6fcb3">  171</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classShader.html#a52615fe5f2d1528baa909dcbeab6fcb3">Shader::set_vec4f</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name,</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                      <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z, <span class="keywordtype">float</span> w) {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    glUniform4f(glGetUniformLocation(this-&gt;<a class="code" href="classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7">get_id</a>(), name), x, y, z, w);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;}</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="classShader.html#a249093af915275a1e25d21ab70bfc4f9">  176</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classShader.html#a249093af915275a1e25d21ab70bfc4f9">Shader::set_mat2</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name, mat2 mat) {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    glUniformMatrix2fv(glGetUniformLocation(this-&gt;<a class="code" href="classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7">get_id</a>(), name),</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                       1, GL_FALSE, &amp;mat[0][0]);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;}</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno"><a class="line" href="classShader.html#a9d871b7a0436c84096f1b294083a3ed7">  181</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classShader.html#a9d871b7a0436c84096f1b294083a3ed7">Shader::set_mat3</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name, mat3 mat) {</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    glUniformMatrix3fv(glGetUniformLocation(this-&gt;<a class="code" href="classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7">get_id</a>(), name),</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                       1, GL_FALSE, &amp;mat[0][0]);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;}</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
+<div class="line"><a name="l00186"></a><span class="lineno"><a class="line" href="classShader.html#a34d5548a520489bd132f5bfbc46bb3a9">  186</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classShader.html#a34d5548a520489bd132f5bfbc46bb3a9">Shader::set_mat4</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name, mat4 mat) {</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    glUniformMatrix4fv(glGetUniformLocation(this-&gt;<a class="code" href="classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7">get_id</a>(), name),</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                       1, GL_FALSE, &amp;mat[0][0]);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;}</div>
+<div class="ttc" id="aclassGlBindable_html"><div class="ttname"><a href="classGlBindable.html">GlBindable</a></div><div class="ttdoc">Абстрактний клас, який виконує роль генерації та прив'язки об'єктів OpenGL.</div><div class="ttdef"><b>Definition:</b> <a href="glbindable_8h_source.html#l00015">glbindable.h:16</a></div></div>
+<div class="ttc" id="aclassGlBindable_html_a5a7e0bbde3d01e24a83e0f0122402ab7"><div class="ttname"><a href="classGlBindable.html#a5a7e0bbde3d01e24a83e0f0122402ab7">GlBindable::get_id</a></div><div class="ttdeci">const GLuint &amp; get_id() const</div><div class="ttdoc">Повертає індекс об'єкту OpenGL.</div><div class="ttdef"><b>Definition:</b> <a href="glbindable_8cpp_source.html#l00020">glbindable.cpp:20</a></div></div>
+<div class="ttc" id="aclassShaderSource_html"><div class="ttname"><a href="classShaderSource.html">ShaderSource</a></div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00070">shader.cpp:70</a></div></div>
+<div class="ttc" id="aclassShaderSource_html_a306de5f8967b2caaf238ea9ed25ee6b5"><div class="ttname"><a href="classShaderSource.html#a306de5f8967b2caaf238ea9ed25ee6b5">ShaderSource::attach</a></div><div class="ttdeci">void attach(const GLuint program)</div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00090">shader.cpp:90</a></div></div>
+<div class="ttc" id="aclassShaderSource_html_a40a8e5a541a0f30dacad32b75b995586"><div class="ttname"><a href="classShaderSource.html#a40a8e5a541a0f30dacad32b75b995586">ShaderSource::create_file</a></div><div class="ttdeci">static shared_ptr&lt; ShaderSource &gt; create_file(GLenum type, const string &amp;path)</div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00083">shader.cpp:83</a></div></div>
+<div class="ttc" id="aclassShaderSource_html_a6a0213f169e5a9e771750ffaf28ae60b"><div class="ttname"><a href="classShaderSource.html#a6a0213f169e5a9e771750ffaf28ae60b">ShaderSource::id</a></div><div class="ttdeci">const GLuint id</div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00071">shader.cpp:71</a></div></div>
+<div class="ttc" id="aclassShaderSource_html_a6b5b7c6ad06783f034e61bdf251767f2"><div class="ttname"><a href="classShaderSource.html#a6b5b7c6ad06783f034e61bdf251767f2">ShaderSource::get_id</a></div><div class="ttdeci">GLuint get_id()</div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00089">shader.cpp:89</a></div></div>
+<div class="ttc" id="aclassShaderSource_html_a9610a3f7e210873e27191e5a1b7750ea"><div class="ttname"><a href="classShaderSource.html#a9610a3f7e210873e27191e5a1b7750ea">ShaderSource::ShaderSource</a></div><div class="ttdeci">ShaderSource(const GLuint id)</div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00073">shader.cpp:73</a></div></div>
+<div class="ttc" id="aclassShaderSource_html_a992c5f061e5448ee1d35bdc272fb5702"><div class="ttname"><a href="classShaderSource.html#a992c5f061e5448ee1d35bdc272fb5702">ShaderSource::create</a></div><div class="ttdeci">static shared_ptr&lt; ShaderSource &gt; create(GLenum type, const char *code)</div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00074">shader.cpp:74</a></div></div>
+<div class="ttc" id="aclassShader_html_a249093af915275a1e25d21ab70bfc4f9"><div class="ttname"><a href="classShader.html#a249093af915275a1e25d21ab70bfc4f9">Shader::set_mat2</a></div><div class="ttdeci">void set_mat2(const char *name, mat2 mat)</div><div class="ttdoc">Задати поле шейдеру типу mat2</div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00176">shader.cpp:176</a></div></div>
+<div class="ttc" id="aclassShader_html_a34d5548a520489bd132f5bfbc46bb3a9"><div class="ttname"><a href="classShader.html#a34d5548a520489bd132f5bfbc46bb3a9">Shader::set_mat4</a></div><div class="ttdeci">void set_mat4(const char *name, mat4 mat)</div><div class="ttdoc">Задати поле шейдеру типу mat4</div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00186">shader.cpp:186</a></div></div>
+<div class="ttc" id="aclassShader_html_a37c1d8b706d1bc83800419d8776eeb23"><div class="ttname"><a href="classShader.html#a37c1d8b706d1bc83800419d8776eeb23">Shader::shader_map</a></div><div class="ttdeci">hash_map&lt; ShaderType, string &gt; shader_map</div><div class="ttdoc">тип для зберігання шляхів файлів шейдеру по їх типам.</div><div class="ttdef"><b>Definition:</b> <a href="shader_8h_source.html#l00042">shader.h:42</a></div></div>
+<div class="ttc" id="aclassShader_html_a4581e5cba0fa25ab7080a6848543dc58"><div class="ttname"><a href="classShader.html#a4581e5cba0fa25ab7080a6848543dc58">Shader::set_bool</a></div><div class="ttdeci">void set_bool(const char *name, bool value)</div><div class="ttdoc">Задати поле шейдеру типу bool</div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00134">shader.cpp:134</a></div></div>
+<div class="ttc" id="aclassShader_html_a52615fe5f2d1528baa909dcbeab6fcb3"><div class="ttname"><a href="classShader.html#a52615fe5f2d1528baa909dcbeab6fcb3">Shader::set_vec4f</a></div><div class="ttdeci">void set_vec4f(const char *name, float x, float y, float z, float w)</div><div class="ttdoc">Задати вектор-поле шейдеру типу vec4</div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00171">shader.cpp:171</a></div></div>
+<div class="ttc" id="aclassShader_html_a5544845a48d60515371b5cb71c7bcb8f"><div class="ttname"><a href="classShader.html#a5544845a48d60515371b5cb71c7bcb8f">Shader::set_int</a></div><div class="ttdeci">void set_int(const char *name, int value)</div><div class="ttdoc">Задати поле шейдеру типу int</div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00138">shader.cpp:138</a></div></div>
+<div class="ttc" id="aclassShader_html_a5da8dde2a4756ce7f5da98f4e3dd9990"><div class="ttname"><a href="classShader.html#a5da8dde2a4756ce7f5da98f4e3dd9990">Shader::set_vec3</a></div><div class="ttdeci">void set_vec3(const char *name, vec3 value)</div><div class="ttdoc">Задати поле шейдеру типу vec3</div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00156">shader.cpp:156</a></div></div>
+<div class="ttc" id="aclassShader_html_a6e686eb1dd9e36aa617397520b669497"><div class="ttname"><a href="classShader.html#a6e686eb1dd9e36aa617397520b669497">Shader::set_float</a></div><div class="ttdeci">void set_float(const char *name, float value)</div><div class="ttdoc">Задати поле шейдеру типу float</div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00142">shader.cpp:142</a></div></div>
+<div class="ttc" id="aclassShader_html_a77c606dadf7b56b825fa02621f13fac3"><div class="ttname"><a href="classShader.html#a77c606dadf7b56b825fa02621f13fac3">Shader::set_vec4</a></div><div class="ttdeci">void set_vec4(const char *name, vec4 value)</div><div class="ttdoc">Задати поле шейдеру типу vec4</div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00166">shader.cpp:166</a></div></div>
+<div class="ttc" id="aclassShader_html_a8ab6219e3f760caa7a586061a9894096"><div class="ttname"><a href="classShader.html#a8ab6219e3f760caa7a586061a9894096">Shader::set_vec3f</a></div><div class="ttdeci">void set_vec3f(const char *name, float x, float y, float z)</div><div class="ttdoc">Задати вектор-поле шейдеру типу vec3</div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00161">shader.cpp:161</a></div></div>
+<div class="ttc" id="aclassShader_html_a9c15d92dae60d9bebc5a8e05e7e16771"><div class="ttname"><a href="classShader.html#a9c15d92dae60d9bebc5a8e05e7e16771">Shader::set_vec2f</a></div><div class="ttdeci">void set_vec2f(const char *name, float x, float y)</div><div class="ttdoc">Задати вектор-поле шейдеру типу vec2</div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00151">shader.cpp:151</a></div></div>
+<div class="ttc" id="aclassShader_html_a9d871b7a0436c84096f1b294083a3ed7"><div class="ttname"><a href="classShader.html#a9d871b7a0436c84096f1b294083a3ed7">Shader::set_mat3</a></div><div class="ttdeci">void set_mat3(const char *name, mat3 mat)</div><div class="ttdoc">Задати поле шейдеру типу mat3</div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00181">shader.cpp:181</a></div></div>
+<div class="ttc" id="aclassShader_html_ad3825ce04340dcb4c3fe7eea5a1c46d2"><div class="ttname"><a href="classShader.html#ad3825ce04340dcb4c3fe7eea5a1c46d2">Shader::~Shader</a></div><div class="ttdeci">~Shader() override</div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00120">shader.cpp:120</a></div></div>
+<div class="ttc" id="aclassShader_html_ad4ef4f54ecb6c7950867d4f091ffbec9"><div class="ttname"><a href="classShader.html#ad4ef4f54ecb6c7950867d4f091ffbec9">Shader::_bind</a></div><div class="ttdeci">virtual void _bind(const GLuint id, GLenum target) const override</div><div class="ttdoc">Віртуальний метод, що прив'язує контекст OpenGL до шейдеру.</div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00113">shader.cpp:113</a></div></div>
+<div class="ttc" id="aclassShader_html_aea711ca1659af57fe4124ea318aa59c1"><div class="ttname"><a href="classShader.html#aea711ca1659af57fe4124ea318aa59c1">Shader::create</a></div><div class="ttdeci">static shared_ptr&lt; Shader &gt; create(const shader_map &amp;shaders_paths)</div><div class="ttdoc">Створює об'єкт шейдеру за заданими шляхами файлів шейдерів.</div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00124">shader.cpp:124</a></div></div>
+<div class="ttc" id="aclassShader_html_aec16390e257fd63c173336869cda6488"><div class="ttname"><a href="classShader.html#aec16390e257fd63c173336869cda6488">Shader::set_vec2</a></div><div class="ttdeci">void set_vec2(const char *name, vec2 value)</div><div class="ttdoc">Задати поле шейдеру типу vec2</div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00146">shader.cpp:146</a></div></div>
+<div class="ttc" id="aclassShader_html_af878abbd5ebf1a17e1df35dd9933f4e8"><div class="ttname"><a href="classShader.html#af878abbd5ebf1a17e1df35dd9933f4e8">Shader::Shader</a></div><div class="ttdeci">Shader(const GLuint shader)</div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00118">shader.cpp:118</a></div></div>
+<div class="ttc" id="aconf_8h_html"><div class="ttname"><a href="conf_8h.html">conf.h</a></div><div class="ttdoc">Конфігурація бібліотеки osdo</div></div>
+<div class="ttc" id="aosdo_8h_html_addf5ec070e9499d36b7f2009ce736076"><div class="ttname"><a href="osdo_8h.html#addf5ec070e9499d36b7f2009ce736076">UNUSED</a></div><div class="ttdeci">#define UNUSED</div><div class="ttdef"><b>Definition:</b> <a href="osdo_8h_source.html#l00025">osdo.h:25</a></div></div>
+<div class="ttc" id="ashader_8cpp_html_a0f3ac031e18245c27d4bcdd6731f7520"><div class="ttname"><a href="shader_8cpp.html#a0f3ac031e18245c27d4bcdd6731f7520">compile</a></div><div class="ttdeci">shared_ptr&lt; Shader &gt; compile(vector&lt; shared_ptr&lt; ShaderSource &gt;&gt; shaders)</div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00095">shader.cpp:95</a></div></div>
+<div class="ttc" id="ashader_8cpp_html_a4bfab66f3e39943f6389bb854900e17b"><div class="ttname"><a href="shader_8cpp.html#a4bfab66f3e39943f6389bb854900e17b">readFromFile</a></div><div class="ttdeci">char * readFromFile(const char *path)</div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00021">shader.cpp:21</a></div></div>
+<div class="ttc" id="ashader_8cpp_html_a9ab6260d9d6a7ad27211ba2dde544a8d"><div class="ttname"><a href="shader_8cpp.html#a9ab6260d9d6a7ad27211ba2dde544a8d">check_shader</a></div><div class="ttdeci">bool check_shader(GLuint shader, const int type)</div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00040">shader.cpp:40</a></div></div>
+<div class="ttc" id="ashader_8h_html"><div class="ttname"><a href="shader_8h.html">shader.h</a></div><div class="ttdoc">Задає клас шейдеру.</div></div>
+<div class="ttc" id="ashader_8h_html_a6230e1b9ecbf2d82d10856fd7e1fde46a099050644e08e3ab6619bb1fb8c8164e"><div class="ttname"><a href="shader_8h.html#a6230e1b9ecbf2d82d10856fd7e1fde46a099050644e08e3ab6619bb1fb8c8164e">FRAG_SHADER</a></div><div class="ttdeci">@ FRAG_SHADER</div><div class="ttdef"><b>Definition:</b> <a href="shader_8h_source.html#l00025">shader.h:25</a></div></div>
+<div class="ttc" id="ashader_8h_html_a6230e1b9ecbf2d82d10856fd7e1fde46a40f4e8253f67098f84518f2c9c7a94e8"><div class="ttname"><a href="shader_8h.html#a6230e1b9ecbf2d82d10856fd7e1fde46a40f4e8253f67098f84518f2c9c7a94e8">TESE_SHADER</a></div><div class="ttdeci">@ TESE_SHADER</div><div class="ttdef"><b>Definition:</b> <a href="shader_8h_source.html#l00023">shader.h:23</a></div></div>
+<div class="ttc" id="ashader_8h_html_a6230e1b9ecbf2d82d10856fd7e1fde46a4d347b773747cda93e76787970f93620"><div class="ttname"><a href="shader_8h.html#a6230e1b9ecbf2d82d10856fd7e1fde46a4d347b773747cda93e76787970f93620">GEOM_SHADER</a></div><div class="ttdeci">@ GEOM_SHADER</div><div class="ttdef"><b>Definition:</b> <a href="shader_8h_source.html#l00024">shader.h:24</a></div></div>
+<div class="ttc" id="ashader_8h_html_a6230e1b9ecbf2d82d10856fd7e1fde46a5ba20b6e8c97b8dbd2b240a0a6c62036"><div class="ttname"><a href="shader_8h.html#a6230e1b9ecbf2d82d10856fd7e1fde46a5ba20b6e8c97b8dbd2b240a0a6c62036">VERT_SHADER</a></div><div class="ttdeci">@ VERT_SHADER</div><div class="ttdef"><b>Definition:</b> <a href="shader_8h_source.html#l00021">shader.h:21</a></div></div>
+<div class="ttc" id="ashader_8h_html_a6230e1b9ecbf2d82d10856fd7e1fde46acbfaee266881f615c5ef456a906f51bf"><div class="ttname"><a href="shader_8h.html#a6230e1b9ecbf2d82d10856fd7e1fde46acbfaee266881f615c5ef456a906f51bf">TESC_SHADER</a></div><div class="ttdeci">@ TESC_SHADER</div><div class="ttdef"><b>Definition:</b> <a href="shader_8h_source.html#l00022">shader.h:22</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

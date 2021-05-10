@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Дипломна робота: Файл druidengine/subwindow.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Дипломна робота
+   </div>
+   <div id="projectbrief">студента групи ПА-17-2 Панасенка Єгора Сергійовича</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_949b4dac30c9b4f92191601f9632f3ff.html">druidengine</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Файл subwindow.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;EASTL/algorithm.h&gt;</code><br />
+<code>#include &lt;imgui.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="subwindow_8h_source.html">subwindow.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="conf_8h_source.html">conf.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Діаграма включених заголовочних файлів для subwindow.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="subwindow_8cpp__incl.png" border="0" usemap="#adruidengine_2subwindow_8cpp" alt=""/></div>
+<map name="adruidengine_2subwindow_8cpp" id="adruidengine_2subwindow_8cpp">
+<area shape="rect" title=" " alt="" coords="871,5,1053,32"/>
+<area shape="rect" title=" " alt="" coords="721,80,853,107"/>
+<area shape="rect" title=" " alt="" coords="878,80,942,107"/>
+<area shape="rect" href="subwindow_8h.html" title=" " alt="" coords="967,80,1064,107"/>
+<area shape="rect" href="conf_8h.html" title=" " alt="" coords="1267,379,1326,405"/>
+<area shape="rect" href="camera_8h.html" title=" " alt="" coords="471,304,547,331"/>
+<area shape="rect" href="context_8h.html" title=" " alt="" coords="968,229,1044,256"/>
+<area shape="rect" href="scene_8h.html" title=" " alt="" coords="945,155,1013,181"/>
+<area shape="rect" href="buffer_8h.html" title=" " alt="" coords="246,304,313,331"/>
+<area shape="rect" href="window_8h.html" title=" " alt="" coords="1183,229,1259,256"/>
+<area shape="rect" href="osdo_8h.html" title=" " alt="" coords="626,528,687,555"/>
+<area shape="rect" href="bijective_8h.html" title=" " alt="" coords="469,379,548,405"/>
+<area shape="rect" title=" " alt="" coords="499,603,593,629"/>
+<area shape="rect" title=" " alt="" coords="617,603,697,629"/>
+<area shape="rect" title=" " alt="" coords="721,603,785,629"/>
+<area shape="rect" href="object_8h.html" title=" " alt="" coords="733,304,801,331"/>
+<area shape="rect" title=" " alt="" coords="959,453,1069,480"/>
+<area shape="rect" title=" " alt="" coords="795,453,934,480"/>
+<area shape="rect" title=" " alt="" coords="828,379,968,405"/>
+<area shape="rect" href="model_8h.html" title=" " alt="" coords="588,379,656,405"/>
+<area shape="rect" href="shader_8h.html" title=" " alt="" coords="731,379,803,405"/>
+<area shape="rect" title=" " alt="" coords="505,453,619,480"/>
+<area shape="rect" href="glbindable_8h.html" title=" " alt="" coords="187,453,278,480"/>
+<area shape="rect" href="texture_8h.html" title=" " alt="" coords="5,379,79,405"/>
+<area shape="rect" href="renderbuffer_8h.html" title=" " alt="" coords="103,379,205,405"/>
+<area shape="rect" href="framebuffer_8h.html" title=" " alt="" coords="230,379,329,405"/>
+<area shape="rect" href="vertex_8h.html" title=" " alt="" coords="1297,453,1366,480"/>
+</map>
+</div>
+</div>
+<p><a href="subwindow_8cpp_source.html">Див. вихідні тексти.</a></p>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

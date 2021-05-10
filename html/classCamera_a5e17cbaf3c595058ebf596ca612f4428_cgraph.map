@@ -1,0 +1,4 @@
+<map id="Camera::rotate_all" name="Camera::rotate_all">
+<area shape="rect" id="node1" title="Обернути камеру по всім осям." alt="" coords="5,5,135,32"/>
+<area shape="rect" id="node2" href="$classCamera.html#af2e2e8d296575d210a75c3ca88647a67" title="Обертає камеру по осі незалежно від часу." alt="" coords="183,5,341,32"/>
+</map>

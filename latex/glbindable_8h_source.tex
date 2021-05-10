@@ -1,0 +1,102 @@
+\hypertarget{glbindable_8h_source}{}\doxysubsection{glbindable.\+h}
+\label{glbindable_8h_source}\index{osdo/glbindable.h@{osdo/glbindable.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/**}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * @file glbindable.h}}
+\DoxyCodeLine{00003 \textcolor{comment}{ * @brief Абстрактний клас, який виконує роль генерації та прив'язки об'єктів OpenGL.}}
+\DoxyCodeLine{00004 \textcolor{comment}{ */}}
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#ifndef GLBINDABLE\_H}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#define GLBINDABLE\_H}}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{osdo_8h}{osdo.h}}"{}}}
+\DoxyCodeLine{00009 }
+\DoxyCodeLine{00010 \textcolor{keyword}{class }\mbox{\hyperlink{classGlBinder}{GlBinder}};}
+\DoxyCodeLine{00011 \textcolor{comment}{}}
+\DoxyCodeLine{00012 \textcolor{comment}{/**}}
+\DoxyCodeLine{00013 \textcolor{comment}{ * @brief Абстрактний клас, який виконує роль генерації та прив'язки об'єктів OpenGL.}}
+\DoxyCodeLine{00014 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{glbindable_8h_source_l00015}\mbox{\hyperlink{classGlBindable}{00015}} \textcolor{keyword}{class }\mbox{\hyperlink{classGlBindable}{GlBindable}}}
+\DoxyCodeLine{00016 \{\textcolor{comment}{}}
+\DoxyCodeLine{00017 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00018 \textcolor{comment}{     * @brief Індекс об'єкту OpenGL.}}
+\DoxyCodeLine{00019 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{glbindable_8h_source_l00020}\mbox{\hyperlink{classGlBindable_a299d9182805eb4c6b7e9e8cc9d5b4577}{00020}}     \textcolor{keyword}{const} GLuint \mbox{\hyperlink{classGlBindable_a299d9182805eb4c6b7e9e8cc9d5b4577}{id}};}
+\DoxyCodeLine{00021 \textcolor{keyword}{protected}:\textcolor{comment}{}}
+\DoxyCodeLine{00022 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00023 \textcolor{comment}{     * @brief Віртуальний метод що створює об'єкт.}}
+\DoxyCodeLine{00024 \textcolor{comment}{     * @return індекс об'єкту OpenGL}}
+\DoxyCodeLine{00025 \textcolor{comment}{     */}}
+\DoxyCodeLine{00026     \textcolor{keyword}{virtual} GLuint \mbox{\hyperlink{classGlBindable_adeae77f0e91e38fbd0685df3d45bf240}{\_generate}}() \textcolor{keyword}{const};\textcolor{comment}{}}
+\DoxyCodeLine{00027 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00028 \textcolor{comment}{     * @brief Віртуальний метод, що прив'язує контекст OpenGL до об'єкту.}}
+\DoxyCodeLine{00029 \textcolor{comment}{     * @param id індекс об'єкту OpenGL}}
+\DoxyCodeLine{00030 \textcolor{comment}{     * @param target ціль прив'язки об'єкту}}
+\DoxyCodeLine{00031 \textcolor{comment}{     */}}
+\DoxyCodeLine{00032     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classGlBindable_ae3213a00db0e6f6dfc356a06a5b1e6d6}{\_bind}}(\textcolor{keyword}{const} GLuint \textcolor{keywordtype}{id}, GLenum target) \textcolor{keyword}{const};\textcolor{comment}{}}
+\DoxyCodeLine{00033 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00034 \textcolor{comment}{     * @brief Віртуальний метод, що задає ціль прив'язки за замовчуванням.}}
+\DoxyCodeLine{00035 \textcolor{comment}{     * @return ціль прив'язки за замовчуванням}}
+\DoxyCodeLine{00036 \textcolor{comment}{     */}}
+\DoxyCodeLine{00037     \textcolor{keyword}{virtual} GLenum \mbox{\hyperlink{classGlBindable_a99e6c236fadee7211e721dd8b0d57598}{\_default}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{00038 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00039     \mbox{\hyperlink{classGlBindable_a96cb4e25165880fceb4511f07912ef0e}{GlBindable}}();\textcolor{comment}{}}
+\DoxyCodeLine{00040 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00041 \textcolor{comment}{     * @brief Конструктор з параметром.}}
+\DoxyCodeLine{00042 \textcolor{comment}{     * @param id індекс об'єкту OpenGL}}
+\DoxyCodeLine{00043 \textcolor{comment}{     */}}
+\DoxyCodeLine{00044     \mbox{\hyperlink{classGlBindable_a96cb4e25165880fceb4511f07912ef0e}{GlBindable}}(\textcolor{keyword}{const} GLuint \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00045 \textcolor{keyword}{public}:}
+\DoxyCodeLine{00046     \textcolor{keyword}{virtual} \mbox{\hyperlink{classGlBindable_a7099d57d5e30d61d3dd8c3578bef2369}{\string~GlBindable}}();}
+\DoxyCodeLine{00047 }
+\DoxyCodeLine{\Hypertarget{glbindable_8h_source_l00048}\mbox{\hyperlink{classGlBindable_a480ce669f04f132cdbcc576fcd5d47c3}{00048}}     \mbox{\hyperlink{classGlBindable_a480ce669f04f132cdbcc576fcd5d47c3}{GlBindable}}(\textcolor{keyword}{const} \mbox{\hyperlink{classGlBindable}{GlBindable}}\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{glbindable_8h_source_l00049}\mbox{\hyperlink{classGlBindable_a2a02a06024506fcb207432ac82cc5af7}{00049}}     \mbox{\hyperlink{classGlBindable_a2a02a06024506fcb207432ac82cc5af7}{GlBindable}}(\mbox{\hyperlink{classGlBindable}{GlBindable}}\&\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{glbindable_8h_source_l00050}\mbox{\hyperlink{classGlBindable_a53277dbd34048cff234f9633d8e1b4ac}{00050}}     \mbox{\hyperlink{classGlBindable}{GlBindable}}\& \mbox{\hyperlink{classGlBindable_a53277dbd34048cff234f9633d8e1b4ac}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classGlBindable}{GlBindable}}\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{glbindable_8h_source_l00051}\mbox{\hyperlink{classGlBindable_aa4aa0fada538cc49d5f248ef9693fc18}{00051}}     \mbox{\hyperlink{classGlBindable}{GlBindable}}\& \mbox{\hyperlink{classGlBindable_aa4aa0fada538cc49d5f248ef9693fc18}{operator=}}(\mbox{\hyperlink{classGlBindable}{GlBindable}}\&\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{00052 \textcolor{comment}{}}
+\DoxyCodeLine{00053 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00054 \textcolor{comment}{     * @brief Повертає індекс об'єкту OpenGL.}}
+\DoxyCodeLine{00055 \textcolor{comment}{     * @return індекс об'єкту OpenGL}}
+\DoxyCodeLine{00056 \textcolor{comment}{     */}}
+\DoxyCodeLine{00057     \textcolor{keyword}{const} GLuint\& \mbox{\hyperlink{classGlBindable_a5a7e0bbde3d01e24a83e0f0122402ab7}{get\_id}}() \textcolor{keyword}{const};\textcolor{comment}{}}
+\DoxyCodeLine{00058 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00059 \textcolor{comment}{     * @brief Повертає індекс об'єкту OpenGL у типі `void*`}}
+\DoxyCodeLine{00060 \textcolor{comment}{     * @return індекс об'єкту OpenGL}}
+\DoxyCodeLine{00061 \textcolor{comment}{     */}}
+\DoxyCodeLine{00062     \textcolor{keywordtype}{void}* \mbox{\hyperlink{classGlBindable_a998a690af84360cd283e49f6a32ae4fd}{get\_vid}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{00063 \textcolor{comment}{}}
+\DoxyCodeLine{00064 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00065 \textcolor{comment}{     * @brief Прив'язує контекст до об'єкту із ціллю за замовчуванням.}}
+\DoxyCodeLine{00066 \textcolor{comment}{     */}}
+\DoxyCodeLine{00067     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGlBindable_a221cf1ca728041bc2545f27a5e3004e0}{bind}}() \textcolor{keyword}{const};\textcolor{comment}{}}
+\DoxyCodeLine{00068 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00069 \textcolor{comment}{     * @brief Прив'язує контекст до об'єкту із ціллю `target`}}
+\DoxyCodeLine{00070 \textcolor{comment}{     * @param target ціль прив'язки об'єкту}}
+\DoxyCodeLine{00071 \textcolor{comment}{     */}}
+\DoxyCodeLine{00072     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGlBindable_a221cf1ca728041bc2545f27a5e3004e0}{bind}}(GLenum target) \textcolor{keyword}{const};\textcolor{comment}{}}
+\DoxyCodeLine{00073 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00074 \textcolor{comment}{     * @brief Відв'язує контекст до об'єкту із ціллю за замовчуванням.}}
+\DoxyCodeLine{00075 \textcolor{comment}{     */}}
+\DoxyCodeLine{00076     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGlBindable_a6ddfcf2b3f3b34872005ca281a9573eb}{unbind}}() \textcolor{keyword}{const};\textcolor{comment}{}}
+\DoxyCodeLine{00077 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00078 \textcolor{comment}{     * @brief Відв'язує контекст до об'єкту із ціллю `target`}}
+\DoxyCodeLine{00079 \textcolor{comment}{     * @param target ціль прив'язки об'єкту}}
+\DoxyCodeLine{00080 \textcolor{comment}{     */}}
+\DoxyCodeLine{00081     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGlBindable_a6ddfcf2b3f3b34872005ca281a9573eb}{unbind}}(GLenum target) \textcolor{keyword}{const};}
+\DoxyCodeLine{00082 \textcolor{comment}{}}
+\DoxyCodeLine{00083 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00084 \textcolor{comment}{     * @brief Повертає об'єкт прив'язки контексту із ціллю за замовчуванням}}
+\DoxyCodeLine{00085 \textcolor{comment}{     * @return об'єкт прив'язки контексту із ціллю за замовчуванням}}
+\DoxyCodeLine{00086 \textcolor{comment}{     */}}
+\DoxyCodeLine{00087     \mbox{\hyperlink{classGlBinder}{GlBinder}} \mbox{\hyperlink{classGlBindable_ad3194126ecaf5285842cee0e7d28c951}{binder}}() \textcolor{keyword}{const};\textcolor{comment}{}}
+\DoxyCodeLine{00088 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00089 \textcolor{comment}{     * @brief Повертає об'єкт прив'язки контексту із ціллю `target`}}
+\DoxyCodeLine{00090 \textcolor{comment}{     * @param target ціль прив'язки об'єкту}}
+\DoxyCodeLine{00091 \textcolor{comment}{     * @return об'єкт прив'язки контексту із ціллю `target`}}
+\DoxyCodeLine{00092 \textcolor{comment}{     */}}
+\DoxyCodeLine{00093     \mbox{\hyperlink{classGlBinder}{GlBinder}} \mbox{\hyperlink{classGlBindable_ad3194126ecaf5285842cee0e7d28c951}{binder}}(GLenum target) \textcolor{keyword}{const};}
+\DoxyCodeLine{00094 \};}
+\DoxyCodeLine{00095 }
+\DoxyCodeLine{00096 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// GLBINDABLE\_H}}
+
+\end{DoxyCode}

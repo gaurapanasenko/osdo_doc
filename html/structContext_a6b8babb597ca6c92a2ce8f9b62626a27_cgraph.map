@@ -1,0 +1,8 @@
+<map id="Context::load_shader" name="Context::load_shader">
+<area shape="rect" id="node1" title="Завантажує та компілює шейдер." alt="" coords="5,31,151,57"/>
+<area shape="rect" id="node2" href="$classShader.html#aea711ca1659af57fe4124ea318aa59c1" title="Створює об&#39;єкт шейдеру за заданими шляхами файлів шейдерів." alt="" coords="199,31,305,57"/>
+<area shape="rect" id="node3" href="$classShaderSource.html#a40a8e5a541a0f30dacad32b75b995586" title=" " alt="" coords="353,31,525,57"/>
+<area shape="rect" id="node4" href="$classShaderSource.html#a992c5f061e5448ee1d35bdc272fb5702" title=" " alt="" coords="573,5,721,32"/>
+<area shape="rect" id="node6" href="$shader_8cpp.html#a4bfab66f3e39943f6389bb854900e17b" title=" " alt="" coords="598,56,697,83"/>
+<area shape="rect" id="node5" href="$shader_8cpp.html#a9ab6260d9d6a7ad27211ba2dde544a8d" title=" " alt="" coords="769,5,872,32"/>
+</map>

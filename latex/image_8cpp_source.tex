@@ -1,0 +1,30 @@
+\hypertarget{image_8cpp_source}{}\doxysubsection{image.\+cpp}
+\label{image_8cpp_source}\index{osdo/image.cpp@{osdo/image.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{image_8cpp_source_l00001}\mbox{\hyperlink{image_8cpp_a18372412ad2fc3ce1e3240b3cf0efe78}{00001}} \textcolor{preprocessor}{\#define STB\_IMAGE\_IMPLEMENTATION}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include <stb\_image.h>}}
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#include <EASTL/algorithm.h>}}
+\DoxyCodeLine{00004 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{image_8h}{image.h}}"{}}}
+\DoxyCodeLine{00005 }
+\DoxyCodeLine{00006 \textcolor{keyword}{using} eastl::min;}
+\DoxyCodeLine{00007 \textcolor{keyword}{using} eastl::max;}
+\DoxyCodeLine{00008 }
+\DoxyCodeLine{\Hypertarget{image_8cpp_source_l00009}\mbox{\hyperlink{classImage_ac14349d3c13c9d8181f327cf97586a02}{00009}} \mbox{\hyperlink{classImage_ac14349d3c13c9d8181f327cf97586a02}{Image::Image}}(shared\_ptr<\textcolor{keyword}{const} \mbox{\hyperlink{image_8h_a8e678b6802a89940a89c7343bec499f5}{pixel\_t}}[]> data,}
+\DoxyCodeLine{00010              \textcolor{keyword}{const} \textcolor{keywordtype}{int} width, \textcolor{keyword}{const} \textcolor{keywordtype}{int} height)}
+\DoxyCodeLine{00011     : data(data), width(width), height(height)}
+\DoxyCodeLine{00012 \{}
+\DoxyCodeLine{00013 \}}
+\DoxyCodeLine{00014 }
+\DoxyCodeLine{\Hypertarget{image_8cpp_source_l00015}\mbox{\hyperlink{classImage_ac282669cfe2627b0feeadebeba74c35e}{00015}} \mbox{\hyperlink{classImage}{Image}} \mbox{\hyperlink{classImage_ac282669cfe2627b0feeadebeba74c35e}{Image::fromFile}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *path)}
+\DoxyCodeLine{00016 \{}
+\DoxyCodeLine{00017     \textcolor{keywordtype}{int} \mbox{\hyperlink{classImage_a5be4b15e10ac6609ec9350e79e723246}{width}} = 0, \mbox{\hyperlink{classImage_adf1e0c7ecb8f09929175b5d4229beaad}{height}} = 0;}
+\DoxyCodeLine{00018     \mbox{\hyperlink{image_8h_a8e678b6802a89940a89c7343bec499f5}{pixel\_t}} (*\mbox{\hyperlink{classImage_a0bff7334a9e45a84e0503448af829bbb}{data}})[] = (\mbox{\hyperlink{image_8h_a8e678b6802a89940a89c7343bec499f5}{pixel\_t}} (*)[])stbi\_load(path, \&\mbox{\hyperlink{classImage_a5be4b15e10ac6609ec9350e79e723246}{width}}, \&\mbox{\hyperlink{classImage_adf1e0c7ecb8f09929175b5d4229beaad}{height}}, \textcolor{keyword}{nullptr}, \mbox{\hyperlink{image_8h_a076912543697dbe4c46b79e8e44ad2fb}{COMP}});}
+\DoxyCodeLine{00019     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classImage_a0bff7334a9e45a84e0503448af829bbb}{data}}) \{}
+\DoxyCodeLine{00020         shared\_ptr<pixel\_t[]> ptr(\mbox{\hyperlink{classImage_a0bff7334a9e45a84e0503448af829bbb}{data}}, stbi\_image\_free);}
+\DoxyCodeLine{00021         \textcolor{keywordflow}{return} \{ptr, \mbox{\hyperlink{classImage_a5be4b15e10ac6609ec9350e79e723246}{width}}, \mbox{\hyperlink{classImage_adf1e0c7ecb8f09929175b5d4229beaad}{height}}\};}
+\DoxyCodeLine{00022     \}}
+\DoxyCodeLine{00023     \textcolor{keywordflow}{return} \{\textcolor{keyword}{nullptr}, 0, 0\};}
+\DoxyCodeLine{00024 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Дипломна робота: Текст програми osdo/glbinder.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Дипломна робота
+   </div>
+   <div id="projectbrief">студента групи ПА-17-2 Панасенка Єгора Сергійовича</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e0c7de59e470a6e6d29babac2e4befdd.html">osdo</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">glbinder.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="glbinder_8h.html">Див. документацію.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * @file glbinder.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * @brief Клас який прив&#39;язує контексту до деякого об&#39;єкту OpenGL.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef GLBINDER_H</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define GLBINDER_H</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="osdo_8h.html">osdo.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">class </span><a class="code" href="classGlBindable.html">GlBindable</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * @brief Клас який прив&#39;язує контексту до деякого об&#39;єкту OpenGL.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classGlBinder.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="classGlBinder.html">GlBinder</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{<span class="comment"></span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">     * @brief Об&#39;єкт OpenGL, який прив&#39;язують.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classGlBinder.html#ac48fc077cfe4c91f67b67641447ab560">   20</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="classGlBindable.html">GlBindable</a>&amp; <a class="code" href="classGlBinder.html#ac48fc077cfe4c91f67b67641447ab560">bindable</a>;<span class="comment"></span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">     * @brief Ціль прив&#39;язки.</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classGlBinder.html#a1fad026ca305a1d993cf3fd45d230848">   24</a></span>&#160;    <span class="keyword">const</span> GLenum <a class="code" href="classGlBinder.html#a1fad026ca305a1d993cf3fd45d230848">target</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:<span class="comment"></span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">     * @brief Конструктор із параметром</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">     * @param bindable об&#39;єкт OpenGL, який прив&#39;язують</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">     * @param target ціль прив&#39;язки</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classGlBinder.html#a08572e5ea0ea17c146c1ed90425d13c1">GlBinder</a>(<span class="keyword">const</span> <a class="code" href="classGlBindable.html">GlBindable</a>&amp; <a class="code" href="classGlBinder.html#ac48fc077cfe4c91f67b67641447ab560">bindable</a>, GLenum <a class="code" href="classGlBinder.html#a1fad026ca305a1d993cf3fd45d230848">target</a>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="classGlBinder.html#ae60129365fcbd5c9f20a3c2bb6ca98fa">~GlBinder</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// GLBINDER_H</span></div>
+<div class="ttc" id="aclassGlBindable_html"><div class="ttname"><a href="classGlBindable.html">GlBindable</a></div><div class="ttdoc">Абстрактний клас, який виконує роль генерації та прив'язки об'єктів OpenGL.</div><div class="ttdef"><b>Definition:</b> <a href="glbindable_8h_source.html#l00015">glbindable.h:16</a></div></div>
+<div class="ttc" id="aclassGlBinder_html"><div class="ttname"><a href="classGlBinder.html">GlBinder</a></div><div class="ttdoc">Клас який прив'язує контексту до деякого об'єкту OpenGL.</div><div class="ttdef"><b>Definition:</b> <a href="glbinder_8h_source.html#l00015">glbinder.h:16</a></div></div>
+<div class="ttc" id="aclassGlBinder_html_a08572e5ea0ea17c146c1ed90425d13c1"><div class="ttname"><a href="classGlBinder.html#a08572e5ea0ea17c146c1ed90425d13c1">GlBinder::GlBinder</a></div><div class="ttdeci">GlBinder(const GlBindable &amp;bindable, GLenum target)</div><div class="ttdoc">Конструктор із параметром</div><div class="ttdef"><b>Definition:</b> <a href="glbinder_8cpp_source.html#l00005">glbinder.cpp:5</a></div></div>
+<div class="ttc" id="aclassGlBinder_html_a1fad026ca305a1d993cf3fd45d230848"><div class="ttname"><a href="classGlBinder.html#a1fad026ca305a1d993cf3fd45d230848">GlBinder::target</a></div><div class="ttdeci">const GLenum target</div><div class="ttdoc">Ціль прив'язки.</div><div class="ttdef"><b>Definition:</b> <a href="glbinder_8h_source.html#l00024">glbinder.h:24</a></div></div>
+<div class="ttc" id="aclassGlBinder_html_ac48fc077cfe4c91f67b67641447ab560"><div class="ttname"><a href="classGlBinder.html#ac48fc077cfe4c91f67b67641447ab560">GlBinder::bindable</a></div><div class="ttdeci">const GlBindable &amp; bindable</div><div class="ttdoc">Об'єкт OpenGL, який прив'язують.</div><div class="ttdef"><b>Definition:</b> <a href="glbinder_8h_source.html#l00020">glbinder.h:20</a></div></div>
+<div class="ttc" id="aclassGlBinder_html_ae60129365fcbd5c9f20a3c2bb6ca98fa"><div class="ttname"><a href="classGlBinder.html#ae60129365fcbd5c9f20a3c2bb6ca98fa">GlBinder::~GlBinder</a></div><div class="ttdeci">~GlBinder()</div><div class="ttdef"><b>Definition:</b> <a href="glbinder_8cpp_source.html#l00010">glbinder.cpp:10</a></div></div>
+<div class="ttc" id="aosdo_8h_html"><div class="ttname"><a href="osdo_8h.html">osdo.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

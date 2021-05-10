@@ -1,0 +1,274 @@
+\hypertarget{conf_8h}{}\doxysubsection{Файл osdo/conf.h}
+\label{conf_8h}\index{osdo/conf.h@{osdo/conf.h}}
+
+
+Конфігурація бібліотеки {\ttfamily osdo}  
+
+
+{\ttfamily \#include \char`\"{}osdo.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}vertex.\+h\char`\"{}}\newline
+Діаграма включених заголовочних файлів для conf.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{conf_8h__incl}
+\end{center}
+\end{figure}
+Граф файлів, які включають цей файл\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{conf_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Макровизначення}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{conf_8h_ae71449b1cc6e6250b91f539153a7a0d3}{M\+\_\+\+PI}}~3.\+14159265358979323846
+\begin{DoxyCompactList}\small\item\em Число пі у типі {\ttfamily double} \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{conf_8h_a9c65eada5a68982aff430100c1a35ccf}{M\+\_\+\+RAD}}~\mbox{\hyperlink{conf_8h_ae71449b1cc6e6250b91f539153a7a0d3}{M\+\_\+\+PI}} / 180
+\begin{DoxyCompactList}\small\item\em Коеффіцієнт перетворення у радіани у типі {\ttfamily double} \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{conf_8h_ab9c3c609e1d02430671de0a109410ac8}{M\+\_\+\+PI\+\_\+F}}~3.\+14159265358979323846f
+\item 
+\#define \mbox{\hyperlink{conf_8h_ab01f46e058bbb810a0e6228545950dc6}{M\+\_\+\+RAD\+\_\+F}}~\mbox{\hyperlink{conf_8h_ab9c3c609e1d02430671de0a109410ac8}{M\+\_\+\+PI\+\_\+F}} / 180
+\begin{DoxyCompactList}\small\item\em Число пі у типі {\ttfamily float} \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{conf_8h_a4fc8d0ab577054f447b9d9779c61a97e}{RES\+\_\+\+DIR}}~\char`\"{}../share/osdo\char`\"{}
+\begin{DoxyCompactList}\small\item\em Коеффіцієнт перетворення у радіани у типі {\ttfamily float} \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{conf_8h_aca6c962ce78e3e65d1380575565492c8}{VERTEX\+\_\+\+PATH}}~\mbox{\hyperlink{conf_8h_a4fc8d0ab577054f447b9d9779c61a97e}{RES\+\_\+\+DIR}}\char`\"{}/\%s.\+vert\char`\"{}
+\begin{DoxyCompactList}\small\item\em Паттерн шляху до файлу з вершинним шейдером \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{conf_8h_ab6f0ec5d8551ddbce25d6448a3cac812}{TESC\+\_\+\+PATH}}~\mbox{\hyperlink{conf_8h_a4fc8d0ab577054f447b9d9779c61a97e}{RES\+\_\+\+DIR}}\char`\"{}/\%s.\+tesc\char`\"{}
+\begin{DoxyCompactList}\small\item\em Паттерн шляху до файлу з теселяційним контрольним шейдером \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{conf_8h_a53b04c9d7d0c9171478c06f525098864}{TESE\+\_\+\+PATH}}~\mbox{\hyperlink{conf_8h_a4fc8d0ab577054f447b9d9779c61a97e}{RES\+\_\+\+DIR}}\char`\"{}/\%s.\+tese\char`\"{}
+\begin{DoxyCompactList}\small\item\em Паттерн шляху до файлу з теселяційним обчислювальним шейдером \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{conf_8h_abfaf4edfb83006e945adae251c351781}{GEOMETRY\+\_\+\+PATH}}~\mbox{\hyperlink{conf_8h_a4fc8d0ab577054f447b9d9779c61a97e}{RES\+\_\+\+DIR}}\char`\"{}/\%s.\+geom\char`\"{}
+\begin{DoxyCompactList}\small\item\em Паттерн шляху до файлу з геометричним шейдером \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{conf_8h_a40cefafac4a15acca8875dcdf07c9f8e}{FRAGMENT\+\_\+\+PATH}}~\mbox{\hyperlink{conf_8h_a4fc8d0ab577054f447b9d9779c61a97e}{RES\+\_\+\+DIR}}\char`\"{}/\%s.\+frag\char`\"{}
+\begin{DoxyCompactList}\small\item\em Паттерн шляху до файлу з фрагментним шейдером \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{conf_8h_a3caf02891d20571ad2bc81ce139ed549}{BEZIATOR\+\_\+\+PATH}}~\mbox{\hyperlink{conf_8h_a4fc8d0ab577054f447b9d9779c61a97e}{RES\+\_\+\+DIR}}\char`\"{}/\%s.\+odom\char`\"{}
+\begin{DoxyCompactList}\small\item\em Паттерн шляху до файлу з моделлю \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{conf_8h_aa241b98421197a51c39906e4b36091b8}{MAX\+\_\+\+VERTEX\+\_\+\+BUFFER}}~512 $\ast$ 1024
+\begin{DoxyCompactList}\small\item\em Максимальна кількість вершин \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{conf_8h_a0dad45ec2df924c6dcc218703572a0ad}{MAX\+\_\+\+ELEMENT\+\_\+\+BUFFER}}~128 $\ast$ 1024
+\begin{DoxyCompactList}\small\item\em Максимальна кількість елементів \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{conf_8h_a42b057f37c15a818d862a2da98b88324}{NK\+\_\+\+GLFW\+\_\+\+DOUBLE\+\_\+\+CLICK\+\_\+\+LO}}~0.\+02
+\begin{DoxyCompactList}\small\item\em Нижня границя часу при якому спрацьовує подвійний клік мишою \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{conf_8h_af13bb1926df9718b198163fe1d7b702c}{NK\+\_\+\+GLFW\+\_\+\+DOUBLE\+\_\+\+CLICK\+\_\+\+HI}}~0.\+2
+\begin{DoxyCompactList}\small\item\em Верхня границя часу при якому спрацьовує подвійний клік мишою \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Детальний опис}
+Конфігурація бібліотеки {\ttfamily osdo} 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{conf_8h_source}{conf.\+h}}
+
+
+
+\doxysubsubsection{Опис макровизначень}
+\mbox{\Hypertarget{conf_8h_a3caf02891d20571ad2bc81ce139ed549}\label{conf_8h_a3caf02891d20571ad2bc81ce139ed549}} 
+\index{conf.h@{conf.h}!BEZIATOR\_PATH@{BEZIATOR\_PATH}}
+\index{BEZIATOR\_PATH@{BEZIATOR\_PATH}!conf.h@{conf.h}}
+\doxyparagraph{\texorpdfstring{BEZIATOR\_PATH}{BEZIATOR\_PATH}}
+{\footnotesize\ttfamily \#define BEZIATOR\+\_\+\+PATH~\mbox{\hyperlink{conf_8h_a4fc8d0ab577054f447b9d9779c61a97e}{RES\+\_\+\+DIR}}\char`\"{}/\%s.\+odom\char`\"{}}
+
+
+
+Паттерн шляху до файлу з моделлю 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{conf_8h_source}{conf.\+h}}, рядок \mbox{\hyperlink{conf_8h_source_l00056}{56}}
+
+\mbox{\Hypertarget{conf_8h_a40cefafac4a15acca8875dcdf07c9f8e}\label{conf_8h_a40cefafac4a15acca8875dcdf07c9f8e}} 
+\index{conf.h@{conf.h}!FRAGMENT\_PATH@{FRAGMENT\_PATH}}
+\index{FRAGMENT\_PATH@{FRAGMENT\_PATH}!conf.h@{conf.h}}
+\doxyparagraph{\texorpdfstring{FRAGMENT\_PATH}{FRAGMENT\_PATH}}
+{\footnotesize\ttfamily \#define FRAGMENT\+\_\+\+PATH~\mbox{\hyperlink{conf_8h_a4fc8d0ab577054f447b9d9779c61a97e}{RES\+\_\+\+DIR}}\char`\"{}/\%s.\+frag\char`\"{}}
+
+
+
+Паттерн шляху до файлу з фрагментним шейдером 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{conf_8h_source}{conf.\+h}}, рядок \mbox{\hyperlink{conf_8h_source_l00052}{52}}
+
+\mbox{\Hypertarget{conf_8h_abfaf4edfb83006e945adae251c351781}\label{conf_8h_abfaf4edfb83006e945adae251c351781}} 
+\index{conf.h@{conf.h}!GEOMETRY\_PATH@{GEOMETRY\_PATH}}
+\index{GEOMETRY\_PATH@{GEOMETRY\_PATH}!conf.h@{conf.h}}
+\doxyparagraph{\texorpdfstring{GEOMETRY\_PATH}{GEOMETRY\_PATH}}
+{\footnotesize\ttfamily \#define GEOMETRY\+\_\+\+PATH~\mbox{\hyperlink{conf_8h_a4fc8d0ab577054f447b9d9779c61a97e}{RES\+\_\+\+DIR}}\char`\"{}/\%s.\+geom\char`\"{}}
+
+
+
+Паттерн шляху до файлу з геометричним шейдером 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{conf_8h_source}{conf.\+h}}, рядок \mbox{\hyperlink{conf_8h_source_l00048}{48}}
+
+\mbox{\Hypertarget{conf_8h_ae71449b1cc6e6250b91f539153a7a0d3}\label{conf_8h_ae71449b1cc6e6250b91f539153a7a0d3}} 
+\index{conf.h@{conf.h}!M\_PI@{M\_PI}}
+\index{M\_PI@{M\_PI}!conf.h@{conf.h}}
+\doxyparagraph{\texorpdfstring{M\_PI}{M\_PI}}
+{\footnotesize\ttfamily \#define M\+\_\+\+PI~3.\+14159265358979323846}
+
+
+
+Число пі у типі {\ttfamily double} 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{conf_8h_source}{conf.\+h}}, рядок \mbox{\hyperlink{conf_8h_source_l00014}{14}}
+
+\mbox{\Hypertarget{conf_8h_ab9c3c609e1d02430671de0a109410ac8}\label{conf_8h_ab9c3c609e1d02430671de0a109410ac8}} 
+\index{conf.h@{conf.h}!M\_PI\_F@{M\_PI\_F}}
+\index{M\_PI\_F@{M\_PI\_F}!conf.h@{conf.h}}
+\doxyparagraph{\texorpdfstring{M\_PI\_F}{M\_PI\_F}}
+{\footnotesize\ttfamily \#define M\+\_\+\+PI\+\_\+F~3.\+14159265358979323846f}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{conf_8h_source}{conf.\+h}}, рядок \mbox{\hyperlink{conf_8h_source_l00019}{19}}
+
+\mbox{\Hypertarget{conf_8h_a9c65eada5a68982aff430100c1a35ccf}\label{conf_8h_a9c65eada5a68982aff430100c1a35ccf}} 
+\index{conf.h@{conf.h}!M\_RAD@{M\_RAD}}
+\index{M\_RAD@{M\_RAD}!conf.h@{conf.h}}
+\doxyparagraph{\texorpdfstring{M\_RAD}{M\_RAD}}
+{\footnotesize\ttfamily \#define M\+\_\+\+RAD~\mbox{\hyperlink{conf_8h_ae71449b1cc6e6250b91f539153a7a0d3}{M\+\_\+\+PI}} / 180}
+
+
+
+Коеффіцієнт перетворення у радіани у типі {\ttfamily double} 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{conf_8h_source}{conf.\+h}}, рядок \mbox{\hyperlink{conf_8h_source_l00018}{18}}
+
+\mbox{\Hypertarget{conf_8h_ab01f46e058bbb810a0e6228545950dc6}\label{conf_8h_ab01f46e058bbb810a0e6228545950dc6}} 
+\index{conf.h@{conf.h}!M\_RAD\_F@{M\_RAD\_F}}
+\index{M\_RAD\_F@{M\_RAD\_F}!conf.h@{conf.h}}
+\doxyparagraph{\texorpdfstring{M\_RAD\_F}{M\_RAD\_F}}
+{\footnotesize\ttfamily \#define M\+\_\+\+RAD\+\_\+F~\mbox{\hyperlink{conf_8h_ab9c3c609e1d02430671de0a109410ac8}{M\+\_\+\+PI\+\_\+F}} / 180}
+
+
+
+Число пі у типі {\ttfamily float} 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{conf_8h_source}{conf.\+h}}, рядок \mbox{\hyperlink{conf_8h_source_l00023}{23}}
+
+\mbox{\Hypertarget{conf_8h_a0dad45ec2df924c6dcc218703572a0ad}\label{conf_8h_a0dad45ec2df924c6dcc218703572a0ad}} 
+\index{conf.h@{conf.h}!MAX\_ELEMENT\_BUFFER@{MAX\_ELEMENT\_BUFFER}}
+\index{MAX\_ELEMENT\_BUFFER@{MAX\_ELEMENT\_BUFFER}!conf.h@{conf.h}}
+\doxyparagraph{\texorpdfstring{MAX\_ELEMENT\_BUFFER}{MAX\_ELEMENT\_BUFFER}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+ELEMENT\+\_\+\+BUFFER~128 $\ast$ 1024}
+
+
+
+Максимальна кількість елементів 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{conf_8h_source}{conf.\+h}}, рядок \mbox{\hyperlink{conf_8h_source_l00065}{65}}
+
+\mbox{\Hypertarget{conf_8h_aa241b98421197a51c39906e4b36091b8}\label{conf_8h_aa241b98421197a51c39906e4b36091b8}} 
+\index{conf.h@{conf.h}!MAX\_VERTEX\_BUFFER@{MAX\_VERTEX\_BUFFER}}
+\index{MAX\_VERTEX\_BUFFER@{MAX\_VERTEX\_BUFFER}!conf.h@{conf.h}}
+\doxyparagraph{\texorpdfstring{MAX\_VERTEX\_BUFFER}{MAX\_VERTEX\_BUFFER}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+VERTEX\+\_\+\+BUFFER~512 $\ast$ 1024}
+
+
+
+Максимальна кількість вершин 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{conf_8h_source}{conf.\+h}}, рядок \mbox{\hyperlink{conf_8h_source_l00061}{61}}
+
+\mbox{\Hypertarget{conf_8h_af13bb1926df9718b198163fe1d7b702c}\label{conf_8h_af13bb1926df9718b198163fe1d7b702c}} 
+\index{conf.h@{conf.h}!NK\_GLFW\_DOUBLE\_CLICK\_HI@{NK\_GLFW\_DOUBLE\_CLICK\_HI}}
+\index{NK\_GLFW\_DOUBLE\_CLICK\_HI@{NK\_GLFW\_DOUBLE\_CLICK\_HI}!conf.h@{conf.h}}
+\doxyparagraph{\texorpdfstring{NK\_GLFW\_DOUBLE\_CLICK\_HI}{NK\_GLFW\_DOUBLE\_CLICK\_HI}}
+{\footnotesize\ttfamily \#define NK\+\_\+\+GLFW\+\_\+\+DOUBLE\+\_\+\+CLICK\+\_\+\+HI~0.\+2}
+
+
+
+Верхня границя часу при якому спрацьовує подвійний клік мишою 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{conf_8h_source}{conf.\+h}}, рядок \mbox{\hyperlink{conf_8h_source_l00074}{74}}
+
+\mbox{\Hypertarget{conf_8h_a42b057f37c15a818d862a2da98b88324}\label{conf_8h_a42b057f37c15a818d862a2da98b88324}} 
+\index{conf.h@{conf.h}!NK\_GLFW\_DOUBLE\_CLICK\_LO@{NK\_GLFW\_DOUBLE\_CLICK\_LO}}
+\index{NK\_GLFW\_DOUBLE\_CLICK\_LO@{NK\_GLFW\_DOUBLE\_CLICK\_LO}!conf.h@{conf.h}}
+\doxyparagraph{\texorpdfstring{NK\_GLFW\_DOUBLE\_CLICK\_LO}{NK\_GLFW\_DOUBLE\_CLICK\_LO}}
+{\footnotesize\ttfamily \#define NK\+\_\+\+GLFW\+\_\+\+DOUBLE\+\_\+\+CLICK\+\_\+\+LO~0.\+02}
+
+
+
+Нижня границя часу при якому спрацьовує подвійний клік мишою 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{conf_8h_source}{conf.\+h}}, рядок \mbox{\hyperlink{conf_8h_source_l00070}{70}}
+
+\mbox{\Hypertarget{conf_8h_a4fc8d0ab577054f447b9d9779c61a97e}\label{conf_8h_a4fc8d0ab577054f447b9d9779c61a97e}} 
+\index{conf.h@{conf.h}!RES\_DIR@{RES\_DIR}}
+\index{RES\_DIR@{RES\_DIR}!conf.h@{conf.h}}
+\doxyparagraph{\texorpdfstring{RES\_DIR}{RES\_DIR}}
+{\footnotesize\ttfamily \#define RES\+\_\+\+DIR~\char`\"{}../share/osdo\char`\"{}}
+
+
+
+Коеффіцієнт перетворення у радіани у типі {\ttfamily float} 
+
+Шлях до директорії з ресурсами бібліотеки {\ttfamily osdo} 
+
+Див. визначення в файлі \mbox{\hyperlink{conf_8h_source}{conf.\+h}}, рядок \mbox{\hyperlink{conf_8h_source_l00031}{31}}
+
+\mbox{\Hypertarget{conf_8h_ab6f0ec5d8551ddbce25d6448a3cac812}\label{conf_8h_ab6f0ec5d8551ddbce25d6448a3cac812}} 
+\index{conf.h@{conf.h}!TESC\_PATH@{TESC\_PATH}}
+\index{TESC\_PATH@{TESC\_PATH}!conf.h@{conf.h}}
+\doxyparagraph{\texorpdfstring{TESC\_PATH}{TESC\_PATH}}
+{\footnotesize\ttfamily \#define TESC\+\_\+\+PATH~\mbox{\hyperlink{conf_8h_a4fc8d0ab577054f447b9d9779c61a97e}{RES\+\_\+\+DIR}}\char`\"{}/\%s.\+tesc\char`\"{}}
+
+
+
+Паттерн шляху до файлу з теселяційним контрольним шейдером 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{conf_8h_source}{conf.\+h}}, рядок \mbox{\hyperlink{conf_8h_source_l00040}{40}}
+
+\mbox{\Hypertarget{conf_8h_a53b04c9d7d0c9171478c06f525098864}\label{conf_8h_a53b04c9d7d0c9171478c06f525098864}} 
+\index{conf.h@{conf.h}!TESE\_PATH@{TESE\_PATH}}
+\index{TESE\_PATH@{TESE\_PATH}!conf.h@{conf.h}}
+\doxyparagraph{\texorpdfstring{TESE\_PATH}{TESE\_PATH}}
+{\footnotesize\ttfamily \#define TESE\+\_\+\+PATH~\mbox{\hyperlink{conf_8h_a4fc8d0ab577054f447b9d9779c61a97e}{RES\+\_\+\+DIR}}\char`\"{}/\%s.\+tese\char`\"{}}
+
+
+
+Паттерн шляху до файлу з теселяційним обчислювальним шейдером 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{conf_8h_source}{conf.\+h}}, рядок \mbox{\hyperlink{conf_8h_source_l00044}{44}}
+
+\mbox{\Hypertarget{conf_8h_aca6c962ce78e3e65d1380575565492c8}\label{conf_8h_aca6c962ce78e3e65d1380575565492c8}} 
+\index{conf.h@{conf.h}!VERTEX\_PATH@{VERTEX\_PATH}}
+\index{VERTEX\_PATH@{VERTEX\_PATH}!conf.h@{conf.h}}
+\doxyparagraph{\texorpdfstring{VERTEX\_PATH}{VERTEX\_PATH}}
+{\footnotesize\ttfamily \#define VERTEX\+\_\+\+PATH~\mbox{\hyperlink{conf_8h_a4fc8d0ab577054f447b9d9779c61a97e}{RES\+\_\+\+DIR}}\char`\"{}/\%s.\+vert\char`\"{}}
+
+
+
+Паттерн шляху до файлу з вершинним шейдером 
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{conf_8h_source}{conf.\+h}}, рядок \mbox{\hyperlink{conf_8h_source_l00036}{36}}
+

@@ -1,0 +1,4 @@
+<map id="Shader::create" name="Shader::create">
+<area shape="rect" id="node1" title="Створює об&#39;єкт шейдеру за заданими шляхами файлів шейдерів." alt="" coords="199,5,305,32"/>
+<area shape="rect" id="node2" href="$structContext.html#a6b8babb597ca6c92a2ce8f9b62626a27" title="Завантажує та компілює шейдер." alt="" coords="5,5,151,32"/>
+</map>

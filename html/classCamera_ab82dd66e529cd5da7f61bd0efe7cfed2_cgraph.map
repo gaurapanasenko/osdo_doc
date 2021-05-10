@@ -1,0 +1,4 @@
+<map id="Camera::get_mat4" name="Camera::get_mat4">
+<area shape="rect" id="node1" title="Забирає матрицю лінійних перетворень над камерою." alt="" coords="5,5,136,32"/>
+<area shape="rect" id="node2" href="$classCamera.html#ac88148998eeb829c8ba8143831b7ced0" title="Забирає матрицю обертання камери." alt="" coords="184,5,364,32"/>
+</map>

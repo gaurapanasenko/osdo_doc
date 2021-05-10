@@ -1,0 +1,366 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Дипломна робота: Файл osdo/osdo.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Дипломна робота
+   </div>
+   <div id="projectbrief">студента групи ПА-17-2 Панасенка Єгора Сергійовича</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e0c7de59e470a6e6d29babac2e4befdd.html">osdo</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макровизначення</a> &#124;
+<a href="#enum-members">Переліки</a> &#124;
+<a href="#func-members">Функції</a> &#124;
+<a href="#var-members">Змінні</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл osdo.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;cglm/cglm.h&gt;</code><br />
+<code>#include &lt;GL/glew.h&gt;</code><br />
+<code>#include &lt;GL/gl.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Діаграма включених заголовочних файлів для osdo.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="osdo_8h__incl.png" border="0" usemap="#aosdo_2osdo_8h" alt=""/></div>
+<map name="aosdo_2osdo_8h" id="aosdo_2osdo_8h">
+<area shape="rect" title=" " alt="" coords="116,5,209,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,99,107"/>
+<area shape="rect" title=" " alt="" coords="123,80,203,107"/>
+<area shape="rect" title=" " alt="" coords="227,80,291,107"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлів, які включають цей файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="osdo_8h__dep__incl.png" border="0" usemap="#aosdo_2osdo_8hdep" alt=""/></div>
+<map name="aosdo_2osdo_8hdep" id="aosdo_2osdo_8hdep">
+<area shape="rect" title=" " alt="" coords="815,5,909,32"/>
+<area shape="rect" href="beziator_8h.html" title="Клас який зберігає та оброблює модель утвореню через поверхні Безьє." alt="" coords="5,229,116,256"/>
+<area shape="rect" href="bijective_8h.html" title="Інтерфейс до об&#39;єктів, що можуть можуть бути переміщені та повернуті у просторі." alt="" coords="619,80,729,107"/>
+<area shape="rect" href="camera_8h.html" title="Клас камери, якою можна маніпулювати у сцені." alt="" coords="571,155,679,181"/>
+<area shape="rect" href="object_8h.html" title="Задає клас об&#39;єкту моделі." alt="" coords="769,229,869,256"/>
+<area shape="rect" href="context_8h.html" title="Контекст, який зберігає усі завантажені у пам&#39;ять ресурси." alt="" coords="956,304,1064,331"/>
+<area shape="rect" href="scene_8h.html" title="Задає клас сцени із об&#39;єктами." alt="" coords="773,379,873,405"/>
+<area shape="rect" href="buffer_8h.html" title="Буфер, у якому відбувається рендеринг у текстуру." alt="" coords="1945,229,2043,256"/>
+<area shape="rect" href="conf_8h.html" title="Конфігурація бібліотеки osdo" alt="" coords="266,155,357,181"/>
+<area shape="rect" href="framebuffer_8h.html" title="Буфер кадру, що використовується для рендеренгу." alt="" coords="1751,155,1882,181"/>
+<area shape="rect" href="glbindable_8h.html" title="Абстрактний клас, який виконує роль генерації та прив&#39;язки об&#39;єктів OpenGL." alt="" coords="1158,80,1281,107"/>
+<area shape="rect" href="renderbuffer_8h.html" title="Задає клас буфера рендеренгу (для зберігання кольорів або глибини)." alt="" coords="1592,155,1727,181"/>
+<area shape="rect" href="shader_8h.html" title="Задає клас шейдеру." alt="" coords="855,155,959,181"/>
+<area shape="rect" href="texture_8h.html" title="Задає клас текстури." alt="" coords="1431,155,1536,181"/>
+<area shape="rect" href="glbinder_8h.html" title="Клас який прив&#39;язує контексту до деякого об&#39;єкту OpenGL." alt="" coords="1264,155,1375,181"/>
+<area shape="rect" href="mesh_8h.html" title="Задає клас мешу, який зберігається на відеокарті." alt="" coords="144,155,241,181"/>
+<area shape="rect" href="model_8h.html" title="Задає інтерфейс моделі, яку можна відобразити." alt="" coords="443,80,543,107"/>
+<area shape="rect" href="osdo_8cpp.html" title=" " alt="" coords="1957,80,2063,107"/>
+<area shape="rect" href="vertex_8h.html" title="Задає cтруктуру вершини." alt="" coords="262,80,363,107"/>
+<area shape="rect" href="beziator_8cpp.html" title=" " alt="" coords="87,304,213,331"/>
+<area shape="rect" href="camera_8cpp.html" title=" " alt="" coords="427,229,550,256"/>
+<area shape="rect" href="object_8cpp.html" title=" " alt="" coords="766,304,881,331"/>
+<area shape="rect" href="context_8cpp.html" title=" " alt="" coords="1258,379,1381,405"/>
+<area shape="rect" href="scene_8cpp.html" title=" " alt="" coords="478,453,593,480"/>
+<area shape="rect" href="buffer_8cpp.html" title=" " alt="" coords="1770,304,1882,331"/>
+<area shape="rect" href="mesh_8cpp.html" title=" " alt="" coords="140,229,251,256"/>
+<area shape="rect" href="shader_8cpp.html" title=" " alt="" coords="575,229,693,256"/>
+<area shape="rect" href="framebuffer_8cpp.html" title=" " alt="" coords="1775,229,1920,256"/>
+<area shape="rect" href="glbindable_8cpp.html" title=" " alt="" coords="996,229,1133,256"/>
+<area shape="rect" href="glbinder_8cpp.html" title=" " alt="" coords="1157,229,1281,256"/>
+<area shape="rect" href="renderbuffer_8cpp.html" title=" " alt="" coords="1603,229,1751,256"/>
+<area shape="rect" href="texture_8cpp.html" title=" " alt="" coords="1408,229,1527,256"/>
+<area shape="rect" href="model_8cpp.html" title=" " alt="" coords="381,155,495,181"/>
+</map>
+</div>
+</div>
+<p><a href="osdo_8h_source.html">Див. вихідні тексти.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макровизначення</h2></td></tr>
+<tr class="memitem:addf5ec070e9499d36b7f2009ce736076"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="osdo_8h.html#addf5ec070e9499d36b7f2009ce736076">UNUSED</a></td></tr>
+<tr class="separator:addf5ec070e9499d36b7f2009ce736076"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Переліки</h2></td></tr>
+<tr class="memitem:aaecdceeb081c850edfb088e508fa45ff"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="osdo_8h.html#aaecdceeb081c850edfb088e508fa45ff">coord_enum</a> { <a class="el" href="osdo_8h.html#aaecdceeb081c850edfb088e508fa45ffa58833a3110c570fb05130d40c365d1e4">X</a> = 0
+, <a class="el" href="osdo_8h.html#aaecdceeb081c850edfb088e508fa45ffa5596231eabd6cf29050967d5ac83ad84">Y</a> = 1
+, <a class="el" href="osdo_8h.html#aaecdceeb081c850edfb088e508fa45ffaa70478ce277ffc322f8e1e3418e07355">Z</a> = 2
+ }</td></tr>
+<tr class="memdesc:aaecdceeb081c850edfb088e508fa45ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Координатні осі.  <a href="osdo_8h.html#aaecdceeb081c850edfb088e508fa45ff">Детальніше...</a><br /></td></tr>
+<tr class="separator:aaecdceeb081c850edfb088e508fa45ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функції</h2></td></tr>
+<tr class="memitem:a1ee121cb723768c3ffd5e1a8086bb469"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="osdo_8h.html#a1ee121cb723768c3ffd5e1a8086bb469">operator new[]</a> (size_t size, const char *name, int flags, unsigned debugFlags, const char *file, int line)</td></tr>
+<tr class="memdesc:a1ee121cb723768c3ffd5e1a8086bb469"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перевантажений оператор <code>new</code> для EASTL.  <a href="osdo_8h.html#a1ee121cb723768c3ffd5e1a8086bb469">Детальніше...</a><br /></td></tr>
+<tr class="separator:a1ee121cb723768c3ffd5e1a8086bb469"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9788a255c1634b680a1af61264b2042"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="osdo_8h.html#ad9788a255c1634b680a1af61264b2042">operator new[]</a> (size_t size, size_t alignment, size_t alignmentOffset, const char *pName, int flags, unsigned debugFlags, const char *file, int line)</td></tr>
+<tr class="memdesc:ad9788a255c1634b680a1af61264b2042"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перевантажений оператор <code>new</code> для EASTL.  <a href="osdo_8h.html#ad9788a255c1634b680a1af61264b2042">Детальніше...</a><br /></td></tr>
+<tr class="separator:ad9788a255c1634b680a1af61264b2042"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Змінні</h2></td></tr>
+<tr class="memitem:a8027f0f98c35ea23923f0db84b86c05a"><td class="memItemLeft" align="right" valign="top">vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="osdo_8h.html#a8027f0f98c35ea23923f0db84b86c05a">BASIS0POS</a></td></tr>
+<tr class="memdesc:a8027f0f98c35ea23923f0db84b86c05a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Початкова позиція камери.  <a href="osdo_8h.html#a8027f0f98c35ea23923f0db84b86c05a">Детальніше...</a><br /></td></tr>
+<tr class="separator:a8027f0f98c35ea23923f0db84b86c05a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Опис макровизначень</h2>
+<a id="addf5ec070e9499d36b7f2009ce736076"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addf5ec070e9499d36b7f2009ce736076">&#9670;&nbsp;</a></span>UNUSED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UNUSED</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Див. визначення в файлі <a class="el" href="osdo_8h_source.html">osdo.h</a>, рядок <a class="el" href="osdo_8h_source.html#l00025">25</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Опис переліків</h2>
+<a id="aaecdceeb081c850edfb088e508fa45ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaecdceeb081c850edfb088e508fa45ff">&#9670;&nbsp;</a></span>coord_enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="osdo_8h.html#aaecdceeb081c850edfb088e508fa45ff">coord_enum</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Координатні осі. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Елементи переліків</th></tr><tr><td class="fieldname"><a id="aaecdceeb081c850edfb088e508fa45ffa58833a3110c570fb05130d40c365d1e4"></a>X&#160;</td><td class="fielddoc"><p>Ввісь X </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aaecdceeb081c850edfb088e508fa45ffa5596231eabd6cf29050967d5ac83ad84"></a>Y&#160;</td><td class="fielddoc"><p>Ввісь Y </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aaecdceeb081c850edfb088e508fa45ffaa70478ce277ffc322f8e1e3418e07355"></a>Z&#160;</td><td class="fielddoc"><p>Ввісь Z </p>
+</td></tr>
+</table>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="osdo_8h_source.html">osdo.h</a>, рядок <a class="el" href="osdo_8h_source.html#l00016">16</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Опис функцій</h2>
+<a id="a1ee121cb723768c3ffd5e1a8086bb469"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ee121cb723768c3ffd5e1a8086bb469">&#9670;&nbsp;</a></span>operator new[]() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* operator new[] </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>debugFlags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>line</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Перевантажений оператор <code>new</code> для EASTL. </p>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="osdo_8cpp_source.html">osdo.cpp</a>, рядок <a class="el" href="osdo_8cpp_source.html#l00003">3</a></p>
+
+</div>
+</div>
+<a id="ad9788a255c1634b680a1af61264b2042"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9788a255c1634b680a1af61264b2042">&#9670;&nbsp;</a></span>operator new[]() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* operator new[] </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>alignment</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>alignmentOffset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>debugFlags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>line</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Перевантажений оператор <code>new</code> для EASTL. </p>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="osdo_8cpp_source.html">osdo.cpp</a>, рядок <a class="el" href="osdo_8cpp_source.html#l00008">8</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Опис змінних</h2>
+<a id="a8027f0f98c35ea23923f0db84b86c05a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8027f0f98c35ea23923f0db84b86c05a">&#9670;&nbsp;</a></span>BASIS0POS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vec3 BASIS0POS</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Початкова позиція камери. </p>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="osdo_8cpp_source.html">osdo.cpp</a>, рядок <a class="el" href="osdo_8cpp_source.html#l00012">12</a></p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,257 @@
+\hypertarget{classTexture}{}\doxysubsection{Клас Texture}
+\label{classTexture}\index{Texture@{Texture}}
+
+
+Клас текстури, що зберігаэться у відеокарті.  
+
+
+
+
+{\ttfamily \#include $<$texture.\+h$>$}
+
+
+
+Схема успадкувань для Texture\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{classTexture__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Діаграма зв\textquotesingle{}язків класу Texture\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{classTexture__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Загальнодоступні елементи}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTexture_a6c275e3f186675ff6ed73ccf970e552f}{Texture}} ()
+\item 
+\mbox{\hyperlink{classTexture_ac8942e677bb3b5c06a3be96568d89fa8}{$\sim$\+Texture}} () override
+\item 
+void \mbox{\hyperlink{classTexture_af6e54c3a29e5187163e433217516e8d2}{update}} (const \mbox{\hyperlink{classImage}{Image}} \&image) const
+\begin{DoxyCompactList}\small\item\em Завантажує зображення у текстуру. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTexture_ae40798a49160911e52be2c0329b17565}{make\+\_\+2d\+\_\+multisample}} (GLsizei size\mbox{[}2\mbox{]}) const
+\begin{DoxyCompactList}\small\item\em Створює текстуру з згладжуванням. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTexture_a08252c0058235586ddce388f6ac81b79}{make\+\_\+2d}} (GLsizei size\mbox{[}2\mbox{]}) const
+\begin{DoxyCompactList}\small\item\em Створює текстуру. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Приватні елементи}
+\begin{DoxyCompactItemize}
+\item 
+GLuint \mbox{\hyperlink{classTexture_a04704df51d1b28c3fadbe209755d3217}{\+\_\+generate}} () const override
+\begin{DoxyCompactList}\small\item\em Віртуальний метод що створює текстуру. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTexture_ae0c8fad482833b570de830820c12166a}{\+\_\+bind}} (const GLuint \mbox{\hyperlink{classGlBindable_a299d9182805eb4c6b7e9e8cc9d5b4577}{id}}, GLenum target) const override
+\begin{DoxyCompactList}\small\item\em Віртуальний метод, що прив\textquotesingle{}язує контекст Open\+GL до текстури. \end{DoxyCompactList}\item 
+virtual GLenum \mbox{\hyperlink{classTexture_a0f788e2cad6ef4b1058e1de912658582}{\+\_\+default}} () const override
+\begin{DoxyCompactList}\small\item\em Віртуальний метод, що задає ціль прив\textquotesingle{}язки за замовчуванням. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Додаткові успадковані елементи}
+
+
+\doxysubsubsection{Детальний опис}
+Клас текстури, що зберігаэться у відеокарті. 
+
+Див. визначення в файлі \mbox{\hyperlink{texture_8h_source}{texture.\+h}}, рядок \mbox{\hyperlink{texture_8h_source_l00016}{16}}
+
+
+
+\doxysubsubsection{Конструктор(и)}
+\mbox{\Hypertarget{classTexture_a6c275e3f186675ff6ed73ccf970e552f}\label{classTexture_a6c275e3f186675ff6ed73ccf970e552f}} 
+\index{Texture@{Texture}!Texture@{Texture}}
+\index{Texture@{Texture}!Texture@{Texture}}
+\doxyparagraph{\texorpdfstring{Texture()}{Texture()}}
+{\footnotesize\ttfamily Texture\+::\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{texture_8h_source}{texture.\+h}}, рядок \mbox{\hyperlink{texture_8h_source_l00035}{35}}
+
+\mbox{\Hypertarget{classTexture_ac8942e677bb3b5c06a3be96568d89fa8}\label{classTexture_ac8942e677bb3b5c06a3be96568d89fa8}} 
+\index{Texture@{Texture}!````~Texture@{$\sim$Texture}}
+\index{````~Texture@{$\sim$Texture}!Texture@{Texture}}
+\doxyparagraph{\texorpdfstring{$\sim$Texture()}{~Texture()}}
+{\footnotesize\ttfamily Texture\+::$\sim$\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{texture_8cpp_source}{texture.\+cpp}}, рядок \mbox{\hyperlink{texture_8cpp_source_l00022}{22}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{classTexture_ac8942e677bb3b5c06a3be96568d89fa8_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsubsection{Опис методів компонент}
+\mbox{\Hypertarget{classTexture_ae0c8fad482833b570de830820c12166a}\label{classTexture_ae0c8fad482833b570de830820c12166a}} 
+\index{Texture@{Texture}!\_bind@{\_bind}}
+\index{\_bind@{\_bind}!Texture@{Texture}}
+\doxyparagraph{\texorpdfstring{\_bind()}{\_bind()}}
+{\footnotesize\ttfamily void Texture\+::\+\_\+bind (\begin{DoxyParamCaption}\item[{const GLuint}]{id,  }\item[{GLenum}]{target }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Віртуальний метод, що прив\textquotesingle{}язує контекст Open\+GL до текстури. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em id} & індекс текстури \\
+\hline
+{\em target} & ціль прив\textquotesingle{}язки текстури \\
+\hline
+\end{DoxyParams}
+
+
+Переозначення з \mbox{\hyperlink{classGlBindable_ae3213a00db0e6f6dfc356a06a5b1e6d6}{Gl\+Bindable}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{texture_8cpp_source}{texture.\+cpp}}, рядок \mbox{\hyperlink{texture_8cpp_source_l00012}{12}}
+
+\mbox{\Hypertarget{classTexture_a0f788e2cad6ef4b1058e1de912658582}\label{classTexture_a0f788e2cad6ef4b1058e1de912658582}} 
+\index{Texture@{Texture}!\_default@{\_default}}
+\index{\_default@{\_default}!Texture@{Texture}}
+\doxyparagraph{\texorpdfstring{\_default()}{\_default()}}
+{\footnotesize\ttfamily GLenum Texture\+::\+\_\+default (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Віртуальний метод, що задає ціль прив\textquotesingle{}язки за замовчуванням. 
+
+\begin{DoxyReturn}{Повертає}
+ціль прив\textquotesingle{}язки за замовчуванням 
+\end{DoxyReturn}
+
+
+Переозначення з \mbox{\hyperlink{classGlBindable_a99e6c236fadee7211e721dd8b0d57598}{Gl\+Bindable}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{texture_8cpp_source}{texture.\+cpp}}, рядок \mbox{\hyperlink{texture_8cpp_source_l00017}{17}}
+
+\mbox{\Hypertarget{classTexture_a04704df51d1b28c3fadbe209755d3217}\label{classTexture_a04704df51d1b28c3fadbe209755d3217}} 
+\index{Texture@{Texture}!\_generate@{\_generate}}
+\index{\_generate@{\_generate}!Texture@{Texture}}
+\doxyparagraph{\texorpdfstring{\_generate()}{\_generate()}}
+{\footnotesize\ttfamily GLuint Texture\+::\+\_\+generate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Віртуальний метод що створює текстуру. 
+
+\begin{DoxyReturn}{Повертає}
+індекс текстури 
+\end{DoxyReturn}
+
+
+Переозначення з \mbox{\hyperlink{classGlBindable_adeae77f0e91e38fbd0685df3d45bf240}{Gl\+Bindable}}.
+
+
+
+Див. визначення в файлі \mbox{\hyperlink{texture_8cpp_source}{texture.\+cpp}}, рядок \mbox{\hyperlink{texture_8cpp_source_l00005}{5}}
+
+\mbox{\Hypertarget{classTexture_a08252c0058235586ddce388f6ac81b79}\label{classTexture_a08252c0058235586ddce388f6ac81b79}} 
+\index{Texture@{Texture}!make\_2d@{make\_2d}}
+\index{make\_2d@{make\_2d}!Texture@{Texture}}
+\doxyparagraph{\texorpdfstring{make\_2d()}{make\_2d()}}
+{\footnotesize\ttfamily void Texture\+::make\+\_\+2d (\begin{DoxyParamCaption}\item[{GLsizei}]{size\mbox{[}2\mbox{]} }\end{DoxyParamCaption}) const}
+
+
+
+Створює текстуру. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em size} & ширина та висота кадру \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{texture_8cpp_source}{texture.\+cpp}}, рядок \mbox{\hyperlink{texture_8cpp_source_l00053}{53}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTexture_a08252c0058235586ddce388f6ac81b79_cgraph}
+\end{center}
+\end{figure}
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTexture_a08252c0058235586ddce388f6ac81b79_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTexture_ae40798a49160911e52be2c0329b17565}\label{classTexture_ae40798a49160911e52be2c0329b17565}} 
+\index{Texture@{Texture}!make\_2d\_multisample@{make\_2d\_multisample}}
+\index{make\_2d\_multisample@{make\_2d\_multisample}!Texture@{Texture}}
+\doxyparagraph{\texorpdfstring{make\_2d\_multisample()}{make\_2d\_multisample()}}
+{\footnotesize\ttfamily void Texture\+::make\+\_\+2d\+\_\+multisample (\begin{DoxyParamCaption}\item[{GLsizei}]{size\mbox{[}2\mbox{]} }\end{DoxyParamCaption}) const}
+
+
+
+Створює текстуру з згладжуванням. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em size} & ширина та висота кадру \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{texture_8cpp_source}{texture.\+cpp}}, рядок \mbox{\hyperlink{texture_8cpp_source_l00047}{47}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTexture_ae40798a49160911e52be2c0329b17565_cgraph}
+\end{center}
+\end{figure}
+Граф викликів для цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTexture_ae40798a49160911e52be2c0329b17565_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTexture_af6e54c3a29e5187163e433217516e8d2}\label{classTexture_af6e54c3a29e5187163e433217516e8d2}} 
+\index{Texture@{Texture}!update@{update}}
+\index{update@{update}!Texture@{Texture}}
+\doxyparagraph{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Texture\+::update (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classImage}{Image}} \&}]{image }\end{DoxyParamCaption}) const}
+
+
+
+Завантажує зображення у текстуру. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em image} & зображення \\
+\hline
+\end{DoxyParams}
+
+
+Див. визначення в файлі \mbox{\hyperlink{texture_8cpp_source}{texture.\+cpp}}, рядок \mbox{\hyperlink{texture_8cpp_source_l00043}{43}}
+
+Граф всіх викликів цієї функції\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{classTexture_af6e54c3a29e5187163e433217516e8d2_cgraph}
+\end{center}
+\end{figure}
+
+
+Документація цих класів була створена з файлів\+:\begin{DoxyCompactItemize}
+\item 
+osdo/\mbox{\hyperlink{texture_8h}{texture.\+h}}\item 
+osdo/\mbox{\hyperlink{texture_8cpp}{texture.\+cpp}}\end{DoxyCompactItemize}

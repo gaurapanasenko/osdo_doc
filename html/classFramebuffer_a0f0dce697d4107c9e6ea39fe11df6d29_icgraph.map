@@ -1,0 +1,8 @@
+<map id="Framebuffer::renderbuffer" name="Framebuffer::renderbuffer">
+<area shape="rect" id="node1" title="Підготовлює рендер буфер rb" alt="" coords="379,93,548,120"/>
+<area shape="rect" id="node2" href="$classFramebuffer.html#aa22bed74c24a765257806ed4693e7005" title="Підготовлює рендер буфер для зберігання кольорів." alt="" coords="182,5,329,32"/>
+<area shape="rect" id="node3" href="$classFramebuffer.html#a28bda5ab4a57e13e49280d745dbf35b0" title="Підготовлює рендер буфер з згладжуванням для зберігання кольорів." alt="" coords="182,57,329,98"/>
+<area shape="rect" id="node5" href="$classFramebuffer.html#ac47980bdb179418e6ed3c8ff18d0fb2b" title="Підготовлює глибинний рендер буфер." alt="" coords="180,123,331,149"/>
+<area shape="rect" id="node6" href="$classFramebuffer.html#a3c14a0980ae1369f964c0bc05c3ea4dd" title="Підготовлює глибинний рендер буфер з згладжуванням." alt="" coords="180,174,331,215"/>
+<area shape="rect" id="node4" href="$classBuffer.html#a1fc0873aa0dd87e47da962f32110b03e" title="Підгодовка до рендеренгу." alt="" coords="5,123,132,149"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Texture::make_2d" name="Texture::make_2d">
+<area shape="rect" id="node1" title="Створює текстуру." alt="" coords="373,5,499,32"/>
+<area shape="rect" id="node2" href="$classFramebuffer.html#a2d6e0ef178e7199df8149d53b12d93e0" title="Підготовлює звичайну текстуру" alt="" coords="187,5,325,32"/>
+<area shape="rect" id="node3" href="$classBuffer.html#a2546d46567336e00cb66d53585ebbbd7" title="Генерація текстури з утвореного кадру." alt="" coords="5,5,139,32"/>
+</map>
