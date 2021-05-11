@@ -1,0 +1,59 @@
+\babel@toc {ukrainian}{}
+\ttl@change@i {\z@ }{section}{0pt}{\small }{\thecontentslabel . \uppercase }{\uppercase }{ \titlerule *[1pc]{.}\contentspage \\}\relax 
+\ttl@change@v {section}{}{}{}\relax 
+\contentsline {section}{ВСТУП}{3}{Doc-Start}%
+\contentsline {section}{ПОСТАНОВКА ЗАДАЧІ}{5}{Doc-Start}%
+\contentsline {section}{\numberline {1}Аналітичний огляд літературних джерел}{5}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Математичні моделі поверхонь та об'єктів}{6}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}Математичний опис моделей поверхонь та об’єктів}{6}{subsubsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.2}Опис розташування об'єктів у сцені}{7}{subsubsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.2}Дослідження математичних моделей складних об'єктів}{8}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Сплайни і сплайн-інтерполяція}{8}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}Крива Безьє}{10}{subsubsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.3}Поверхня Безьє}{14}{subsubsection.1.2.3}%
+\contentsline {section}{\numberline {2}Розробка програмного забезпечення щодо створення і редагування гладких об'єктів}{15}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Бібліотека Visualization Library}{16}{subsection.2.1}%
+\contentsline {section}{\numberline {3}Вимоги до розробленого програмного забезпечення}{17}{section.3}%
+\contentsline {section}{\numberline {4}Опис програмного забезпечення}{19}{section.4}%
+\contentsline {section}{\numberline {5}Огляд роботи програми}{21}{section.5}%
+\contentsline {section}{\numberline {6}Основна документація до коду}{24}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Алфавітний покажчик класів}{25}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Класи}{25}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Клас Beziator}{27}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}Детальний опис}{29}{subsubsection.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.2}Опис типів користувача}{29}{subsubsection.6.3.2}%
+\contentsline {paragraph}{surfaces\_vector}{29}{section*.13}%
+\contentsline {subsubsection}{\numberline {6.3.3}Конструктор(и)}{29}{subsubsection.6.3.3}%
+\contentsline {paragraph}{Beziator()}{29}{section*.14}%
+\contentsline {paragraph}{$\sim $Beziator()}{30}{section*.15}%
+\contentsline {subsubsection}{\numberline {6.3.4}Опис методів компонент}{30}{subsubsection.6.3.4}%
+\contentsline {paragraph}{draw()}{30}{section*.16}%
+\contentsline {paragraph}{generate()}{31}{section*.18}%
+\contentsline {paragraph}{get\_vertices()}{32}{section*.20}%
+\contentsline {paragraph}{init()}{32}{section*.21}%
+\contentsline {paragraph}{rotate()}{33}{section*.23}%
+\contentsline {paragraph}{save()}{33}{section*.24}%
+\contentsline {subsubsection}{\numberline {6.3.5}Компонентні дані}{34}{subsubsection.6.3.5}%
+\contentsline {paragraph}{indices}{34}{section*.25}%
+\contentsline {paragraph}{mesh}{34}{section*.26}%
+\contentsline {paragraph}{path}{34}{section*.27}%
+\contentsline {paragraph}{vertices}{35}{section*.28}%
+\contentsline {section}{ВИСНОВКИ}{36}{section*.28}%
+\contentsline {section}{СПИСОК ВИКОРИСТАНОЇ ЛІТЕРАТУРИ}{37}{section*.28}%
+\contentsline {section}{Додаток A. Лістинг програми}{38}{section*.28}%
+\contentsline {subsection}{\numberline {6.4}Файл osdo/beziator.h}{38}{subsection.6.4}%
+\contentsline {subsubsection}{\numberline {6.4.1}Детальний опис}{39}{subsubsection.6.4.1}%
+\contentsline {subsubsection}{\numberline {6.4.2}Опис визначень типів}{39}{subsubsection.6.4.2}%
+\contentsline {paragraph}{surfacei\_t}{39}{section*.33}%
+\contentsline {subsection}{\numberline {6.5}beziator. \GenericWarning {(mathspec) }{Package mathspec Warning: \+ is deprecated, recommend to use\MessageBreak \"..." or "} \eu@plus h}{39}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Файл res/bezier.frag}{40}{subsection.6.6}%
+\contentsline {subsection}{\numberline {6.7}bezier. \GenericWarning {(mathspec) }{Package mathspec Warning: \+ is deprecated, recommend to use\MessageBreak \"..." or "} \eu@plus frag}{41}{subsection.6.7}%
+\contentsline {subsection}{\numberline {6.8}Файл res/bezier.geom}{41}{subsection.6.8}%
+\contentsline {subsection}{\numberline {6.9}bezier. \GenericWarning {(mathspec) }{Package mathspec Warning: \+ is deprecated, recommend to use\MessageBreak \"..." or "} \eu@plus geom}{41}{subsection.6.9}%
+\contentsline {subsection}{\numberline {6.10}Файл res/bezier.tesc}{42}{subsection.6.10}%
+\contentsline {subsection}{\numberline {6.11}bezier. \GenericWarning {(mathspec) }{Package mathspec Warning: \+ is deprecated, recommend to use\MessageBreak \"..." or "} \eu@plus tesc}{42}{subsection.6.11}%
+\contentsline {subsection}{\numberline {6.12}Файл res/bezier.tese}{42}{subsection.6.12}%
+\contentsline {subsection}{\numberline {6.13}bezier. \GenericWarning {(mathspec) }{Package mathspec Warning: \+ is deprecated, recommend to use\MessageBreak \"..." or "} \eu@plus tese}{42}{subsection.6.13}%
+\contentsline {subsection}{\numberline {6.14}Файл res/bezier.vert}{43}{subsection.6.14}%
+\contentsline {subsection}{\numberline {6.15}bezier. \GenericWarning {(mathspec) }{Package mathspec Warning: \+ is deprecated, recommend to use\MessageBreak \"..." or "} \eu@plus vert}{43}{subsection.6.15}%
+\contentsfinish 

@@ -3,10 +3,10 @@
 \contentsline {section}{\numberline {1}GNU LESSER GENERAL PUBLIC LICENSE}{1}{section.1}%
 \contentsline {paragraph}{\numberline {1.0.0.1}0. Additional Definitions.}{1}{paragraph.1.0.0.1}%
 \contentsline {paragraph}{\numberline {1.0.0.2}1. Exception to Section 3 of the GNU GPL.}{1}{paragraph.1.0.0.2}%
-\contentsline {paragraph}{\numberline {1.0.0.3}2. Conveying Modified Versions.}{1}{paragraph.1.0.0.3}%
+\contentsline {paragraph}{\numberline {1.0.0.3}2. Conveying Modified Versions.}{2}{paragraph.1.0.0.3}%
 \contentsline {paragraph}{\numberline {1.0.0.4}3. Object Code Incorporating Material from Library Header Files.}{2}{paragraph.1.0.0.4}%
 \contentsline {paragraph}{\numberline {1.0.0.5}4. Combined Works.}{2}{paragraph.1.0.0.5}%
-\contentsline {paragraph}{\numberline {1.0.0.6}5. Combined Libraries.}{2}{paragraph.1.0.0.6}%
+\contentsline {paragraph}{\numberline {1.0.0.6}5. Combined Libraries.}{3}{paragraph.1.0.0.6}%
 \contentsline {paragraph}{\numberline {1.0.0.7}6. Revised Versions of the GNU Lesser General Public License.}{3}{paragraph.1.0.0.7}%
 \contentsline {section}{\numberline {2}Алфавітний покажчик простору імен}{3}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Простір імен}{3}{subsection.2.1}%
@@ -26,462 +26,462 @@
 \contentsline {paragraph}{\numberline {7.1.2.1}surfaces\_vector}{9}{paragraph.7.1.2.1}%
 \contentsline {subsubsection}{\numberline {7.1.3}Конструктор(и)}{9}{subsubsection.7.1.3}%
 \contentsline {paragraph}{\numberline {7.1.3.1}Beziator()}{9}{paragraph.7.1.3.1}%
-\contentsline {paragraph}{\numberline {7.1.3.2}$\sim $Beziator()}{9}{paragraph.7.1.3.2}%
-\contentsline {subsubsection}{\numberline {7.1.4}Опис методів компонент}{9}{subsubsection.7.1.4}%
+\contentsline {paragraph}{\numberline {7.1.3.2}$\sim $Beziator()}{10}{paragraph.7.1.3.2}%
+\contentsline {subsubsection}{\numberline {7.1.4}Опис методів компонент}{10}{subsubsection.7.1.4}%
 \contentsline {paragraph}{\numberline {7.1.4.1}draw()}{10}{paragraph.7.1.4.1}%
-\contentsline {paragraph}{\numberline {7.1.4.2}generate()}{11}{paragraph.7.1.4.2}%
-\contentsline {paragraph}{\numberline {7.1.4.3}get\_vertices()}{12}{paragraph.7.1.4.3}%
-\contentsline {paragraph}{\numberline {7.1.4.4}init()}{12}{paragraph.7.1.4.4}%
+\contentsline {paragraph}{\numberline {7.1.4.2}generate()}{10}{paragraph.7.1.4.2}%
+\contentsline {paragraph}{\numberline {7.1.4.3}get\_vertices()}{11}{paragraph.7.1.4.3}%
+\contentsline {paragraph}{\numberline {7.1.4.4}init()}{11}{paragraph.7.1.4.4}%
 \contentsline {paragraph}{\numberline {7.1.4.5}rotate()}{12}{paragraph.7.1.4.5}%
-\contentsline {paragraph}{\numberline {7.1.4.6}save()}{13}{paragraph.7.1.4.6}%
-\contentsline {subsubsection}{\numberline {7.1.5}Компонентні дані}{13}{subsubsection.7.1.5}%
-\contentsline {paragraph}{\numberline {7.1.5.1}indices}{13}{paragraph.7.1.5.1}%
-\contentsline {paragraph}{\numberline {7.1.5.2}mesh}{13}{paragraph.7.1.5.2}%
+\contentsline {paragraph}{\numberline {7.1.4.6}save()}{12}{paragraph.7.1.4.6}%
+\contentsline {subsubsection}{\numberline {7.1.5}Компонентні дані}{12}{subsubsection.7.1.5}%
+\contentsline {paragraph}{\numberline {7.1.5.1}indices}{12}{paragraph.7.1.5.1}%
+\contentsline {paragraph}{\numberline {7.1.5.2}mesh}{12}{paragraph.7.1.5.2}%
 \contentsline {paragraph}{\numberline {7.1.5.3}path}{13}{paragraph.7.1.5.3}%
 \contentsline {paragraph}{\numberline {7.1.5.4}vertices}{13}{paragraph.7.1.5.4}%
-\contentsline {subsection}{\numberline {7.2}Клас Bijective}{14}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.2}Клас Bijective}{13}{subsection.7.2}%
 \contentsline {subsubsection}{\numberline {7.2.1}Детальний опис}{14}{subsubsection.7.2.1}%
-\contentsline {subsubsection}{\numberline {7.2.2}Конструктор(и)}{15}{subsubsection.7.2.2}%
-\contentsline {paragraph}{\numberline {7.2.2.1}$\sim $Bijective()}{15}{paragraph.7.2.2.1}%
-\contentsline {subsubsection}{\numberline {7.2.3}Опис методів компонент}{15}{subsubsection.7.2.3}%
-\contentsline {paragraph}{\numberline {7.2.3.1}add\_animation()}{15}{paragraph.7.2.3.1}%
+\contentsline {subsubsection}{\numberline {7.2.2}Конструктор(и)}{14}{subsubsection.7.2.2}%
+\contentsline {paragraph}{\numberline {7.2.2.1}$\sim $Bijective()}{14}{paragraph.7.2.2.1}%
+\contentsline {subsubsection}{\numberline {7.2.3}Опис методів компонент}{14}{subsubsection.7.2.3}%
+\contentsline {paragraph}{\numberline {7.2.3.1}add\_animation()}{14}{paragraph.7.2.3.1}%
 \contentsline {paragraph}{\numberline {7.2.3.2}get\_animation()}{15}{paragraph.7.2.3.2}%
 \contentsline {paragraph}{\numberline {7.2.3.3}get\_mat4()}{15}{paragraph.7.2.3.3}%
-\contentsline {paragraph}{\numberline {7.2.3.4}get\_position()}{16}{paragraph.7.2.3.4}%
+\contentsline {paragraph}{\numberline {7.2.3.4}get\_position()}{15}{paragraph.7.2.3.4}%
 \contentsline {paragraph}{\numberline {7.2.3.5}get\_rotation()}{16}{paragraph.7.2.3.5}%
 \contentsline {paragraph}{\numberline {7.2.3.6}rotate()}{16}{paragraph.7.2.3.6}%
-\contentsline {paragraph}{\numberline {7.2.3.7}rotate\_all()}{17}{paragraph.7.2.3.7}%
+\contentsline {paragraph}{\numberline {7.2.3.7}rotate\_all()}{16}{paragraph.7.2.3.7}%
 \contentsline {paragraph}{\numberline {7.2.3.8}set\_animation()}{17}{paragraph.7.2.3.8}%
 \contentsline {paragraph}{\numberline {7.2.3.9}set\_position()}{17}{paragraph.7.2.3.9}%
-\contentsline {paragraph}{\numberline {7.2.3.10}set\_rotation()}{18}{paragraph.7.2.3.10}%
-\contentsline {paragraph}{\numberline {7.2.3.11}translate()}{18}{paragraph.7.2.3.11}%
+\contentsline {paragraph}{\numberline {7.2.3.10}set\_rotation()}{17}{paragraph.7.2.3.10}%
+\contentsline {paragraph}{\numberline {7.2.3.11}translate()}{17}{paragraph.7.2.3.11}%
 \contentsline {subsection}{\numberline {7.3}Клас Buffer}{18}{subsection.7.3}%
 \contentsline {subsubsection}{\numberline {7.3.1}Детальний опис}{19}{subsubsection.7.3.1}%
-\contentsline {subsubsection}{\numberline {7.3.2}Опис методів компонент}{20}{subsubsection.7.3.2}%
-\contentsline {paragraph}{\numberline {7.3.2.1}get\_tex()}{20}{paragraph.7.3.2.1}%
-\contentsline {paragraph}{\numberline {7.3.2.2}post\_render()}{20}{paragraph.7.3.2.2}%
+\contentsline {subsubsection}{\numberline {7.3.2}Опис методів компонент}{19}{subsubsection.7.3.2}%
+\contentsline {paragraph}{\numberline {7.3.2.1}get\_tex()}{19}{paragraph.7.3.2.1}%
+\contentsline {paragraph}{\numberline {7.3.2.2}post\_render()}{19}{paragraph.7.3.2.2}%
 \contentsline {paragraph}{\numberline {7.3.2.3}pre\_render()}{20}{paragraph.7.3.2.3}%
-\contentsline {subsubsection}{\numberline {7.3.3}Компонентні дані}{21}{subsubsection.7.3.3}%
-\contentsline {paragraph}{\numberline {7.3.3.1}color\_rb}{21}{paragraph.7.3.3.1}%
+\contentsline {subsubsection}{\numberline {7.3.3}Компонентні дані}{20}{subsubsection.7.3.3}%
+\contentsline {paragraph}{\numberline {7.3.3.1}color\_rb}{20}{paragraph.7.3.3.1}%
 \contentsline {paragraph}{\numberline {7.3.3.2}depth\_rb}{21}{paragraph.7.3.3.2}%
 \contentsline {paragraph}{\numberline {7.3.3.3}fb}{21}{paragraph.7.3.3.3}%
 \contentsline {paragraph}{\numberline {7.3.3.4}ms\_fb}{21}{paragraph.7.3.3.4}%
-\contentsline {paragraph}{\numberline {7.3.3.5}tex}{22}{paragraph.7.3.3.5}%
-\contentsline {subsection}{\numberline {7.4}Клас Camera}{22}{subsection.7.4}%
-\contentsline {subsubsection}{\numberline {7.4.1}Детальний опис}{24}{subsubsection.7.4.1}%
-\contentsline {subsubsection}{\numberline {7.4.2}Конструктор(и)}{24}{subsubsection.7.4.2}%
-\contentsline {paragraph}{\numberline {7.4.2.1}Camera()}{24}{paragraph.7.4.2.1}%
-\contentsline {subsubsection}{\numberline {7.4.3}Опис методів компонент}{24}{subsubsection.7.4.3}%
-\contentsline {paragraph}{\numberline {7.4.3.1}add\_animation()}{24}{paragraph.7.4.3.1}%
-\contentsline {paragraph}{\numberline {7.4.3.2}get\_animation()}{24}{paragraph.7.4.3.2}%
-\contentsline {paragraph}{\numberline {7.4.3.3}get\_direction()}{24}{paragraph.7.4.3.3}%
-\contentsline {paragraph}{\numberline {7.4.3.4}get\_mat4()}{25}{paragraph.7.4.3.4}%
-\contentsline {paragraph}{\numberline {7.4.3.5}get\_position()}{25}{paragraph.7.4.3.5}%
-\contentsline {paragraph}{\numberline {7.4.3.6}get\_rotation()}{26}{paragraph.7.4.3.6}%
-\contentsline {paragraph}{\numberline {7.4.3.7}get\_rotation\_inv\_mat4()}{26}{paragraph.7.4.3.7}%
+\contentsline {paragraph}{\numberline {7.3.3.5}tex}{21}{paragraph.7.3.3.5}%
+\contentsline {subsection}{\numberline {7.4}Клас Camera}{21}{subsection.7.4}%
+\contentsline {subsubsection}{\numberline {7.4.1}Детальний опис}{23}{subsubsection.7.4.1}%
+\contentsline {subsubsection}{\numberline {7.4.2}Конструктор(и)}{23}{subsubsection.7.4.2}%
+\contentsline {paragraph}{\numberline {7.4.2.1}Camera()}{23}{paragraph.7.4.2.1}%
+\contentsline {subsubsection}{\numberline {7.4.3}Опис методів компонент}{23}{subsubsection.7.4.3}%
+\contentsline {paragraph}{\numberline {7.4.3.1}add\_animation()}{23}{paragraph.7.4.3.1}%
+\contentsline {paragraph}{\numberline {7.4.3.2}get\_animation()}{23}{paragraph.7.4.3.2}%
+\contentsline {paragraph}{\numberline {7.4.3.3}get\_direction()}{23}{paragraph.7.4.3.3}%
+\contentsline {paragraph}{\numberline {7.4.3.4}get\_mat4()}{24}{paragraph.7.4.3.4}%
+\contentsline {paragraph}{\numberline {7.4.3.5}get\_position()}{24}{paragraph.7.4.3.5}%
+\contentsline {paragraph}{\numberline {7.4.3.6}get\_rotation()}{25}{paragraph.7.4.3.6}%
+\contentsline {paragraph}{\numberline {7.4.3.7}get\_rotation\_inv\_mat4()}{25}{paragraph.7.4.3.7}%
 \contentsline {paragraph}{\numberline {7.4.3.8}get\_rotation\_mat4()}{26}{paragraph.7.4.3.8}%
-\contentsline {paragraph}{\numberline {7.4.3.9}rotate()}{27}{paragraph.7.4.3.9}%
+\contentsline {paragraph}{\numberline {7.4.3.9}rotate()}{26}{paragraph.7.4.3.9}%
 \contentsline {paragraph}{\numberline {7.4.3.10}rotate\_all()}{27}{paragraph.7.4.3.10}%
-\contentsline {paragraph}{\numberline {7.4.3.11}rotate\_all\_camera()}{28}{paragraph.7.4.3.11}%
-\contentsline {paragraph}{\numberline {7.4.3.12}rotate\_all\_inverse()}{29}{paragraph.7.4.3.12}%
-\contentsline {paragraph}{\numberline {7.4.3.13}rotate\_camera()}{29}{paragraph.7.4.3.13}%
-\contentsline {paragraph}{\numberline {7.4.3.14}set\_animation()}{30}{paragraph.7.4.3.14}%
-\contentsline {paragraph}{\numberline {7.4.3.15}set\_position()}{30}{paragraph.7.4.3.15}%
-\contentsline {paragraph}{\numberline {7.4.3.16}set\_rotation()}{30}{paragraph.7.4.3.16}%
-\contentsline {paragraph}{\numberline {7.4.3.17}translate()}{30}{paragraph.7.4.3.17}%
-\contentsline {paragraph}{\numberline {7.4.3.18}translate\_camera()}{31}{paragraph.7.4.3.18}%
-\contentsline {subsubsection}{\numberline {7.4.4}Компонентні дані}{31}{subsubsection.7.4.4}%
-\contentsline {paragraph}{\numberline {7.4.4.1}animation}{31}{paragraph.7.4.4.1}%
-\contentsline {paragraph}{\numberline {7.4.4.2}position}{32}{paragraph.7.4.4.2}%
-\contentsline {paragraph}{\numberline {7.4.4.3}rotation}{32}{paragraph.7.4.4.3}%
-\contentsline {subsection}{\numberline {7.5}Структура Context}{32}{subsection.7.5}%
-\contentsline {subsubsection}{\numberline {7.5.1}Детальний опис}{33}{subsubsection.7.5.1}%
-\contentsline {subsubsection}{\numberline {7.5.2}Опис типів користувача}{33}{subsubsection.7.5.2}%
-\contentsline {paragraph}{\numberline {7.5.2.1}Models}{33}{paragraph.7.5.2.1}%
-\contentsline {paragraph}{\numberline {7.5.2.2}Textures}{33}{paragraph.7.5.2.2}%
-\contentsline {subsubsection}{\numberline {7.5.3}Конструктор(и)}{34}{subsubsection.7.5.3}%
-\contentsline {paragraph}{\numberline {7.5.3.1}Context()}{34}{paragraph.7.5.3.1}%
-\contentsline {subsubsection}{\numberline {7.5.4}Опис методів компонент}{34}{subsubsection.7.5.4}%
-\contentsline {paragraph}{\numberline {7.5.4.1}load\_model()}{34}{paragraph.7.5.4.1}%
-\contentsline {paragraph}{\numberline {7.5.4.2}load\_shader()}{34}{paragraph.7.5.4.2}%
-\contentsline {paragraph}{\numberline {7.5.4.3}load\_texture()}{35}{paragraph.7.5.4.3}%
-\contentsline {paragraph}{\numberline {7.5.4.4}next\_active()}{35}{paragraph.7.5.4.4}%
-\contentsline {subsubsection}{\numberline {7.5.5}Компонентні дані}{35}{subsubsection.7.5.5}%
-\contentsline {paragraph}{\numberline {7.5.5.1}active}{36}{paragraph.7.5.5.1}%
-\contentsline {paragraph}{\numberline {7.5.5.2}active\_texture}{36}{paragraph.7.5.5.2}%
-\contentsline {paragraph}{\numberline {7.5.5.3}models}{36}{paragraph.7.5.5.3}%
-\contentsline {paragraph}{\numberline {7.5.5.4}shaders}{36}{paragraph.7.5.5.4}%
-\contentsline {paragraph}{\numberline {7.5.5.5}textures}{36}{paragraph.7.5.5.5}%
-\contentsline {subsection}{\numberline {7.6}Клас Framebuffer}{37}{subsection.7.6}%
-\contentsline {subsubsection}{\numberline {7.6.1}Детальний опис}{38}{subsubsection.7.6.1}%
-\contentsline {subsubsection}{\numberline {7.6.2}Конструктор(и)}{38}{subsubsection.7.6.2}%
-\contentsline {paragraph}{\numberline {7.6.2.1}Framebuffer()}{38}{paragraph.7.6.2.1}%
-\contentsline {paragraph}{\numberline {7.6.2.2}$\sim $Framebuffer()}{38}{paragraph.7.6.2.2}%
-\contentsline {subsubsection}{\numberline {7.6.3}Опис методів компонент}{39}{subsubsection.7.6.3}%
-\contentsline {paragraph}{\numberline {7.6.3.1}\_bind()}{39}{paragraph.7.6.3.1}%
-\contentsline {paragraph}{\numberline {7.6.3.2}\_default()}{40}{paragraph.7.6.3.2}%
-\contentsline {paragraph}{\numberline {7.6.3.3}\_generate()}{40}{paragraph.7.6.3.3}%
-\contentsline {paragraph}{\numberline {7.6.3.4}check()}{40}{paragraph.7.6.3.4}%
-\contentsline {paragraph}{\numberline {7.6.3.5}rb\_color()}{41}{paragraph.7.6.3.5}%
-\contentsline {paragraph}{\numberline {7.6.3.6}rb\_color\_multisample()}{41}{paragraph.7.6.3.6}%
-\contentsline {paragraph}{\numberline {7.6.3.7}rb\_depth()}{42}{paragraph.7.6.3.7}%
-\contentsline {paragraph}{\numberline {7.6.3.8}rb\_depth\_multisample()}{43}{paragraph.7.6.3.8}%
-\contentsline {paragraph}{\numberline {7.6.3.9}renderbuffer()}{44}{paragraph.7.6.3.9}%
-\contentsline {paragraph}{\numberline {7.6.3.10}tex\_2d()}{44}{paragraph.7.6.3.10}%
-\contentsline {paragraph}{\numberline {7.6.3.11}tex\_2d\_multisample()}{45}{paragraph.7.6.3.11}%
-\contentsline {subsection}{\numberline {7.7}Клас Gl\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Bindable}{46}{subsection.7.7}%
-\contentsline {subsubsection}{\numberline {7.7.1}Детальний опис}{47}{subsubsection.7.7.1}%
-\contentsline {subsubsection}{\numberline {7.7.2}Конструктор(и)}{47}{subsubsection.7.7.2}%
-\contentsline {paragraph}{\numberline {7.7.2.1}GlBindable()\hspace {0.1cm}{\footnotesize \ttfamily [1/4]}}{47}{paragraph.7.7.2.1}%
-\contentsline {paragraph}{\numberline {7.7.2.2}GlBindable()\hspace {0.1cm}{\footnotesize \ttfamily [2/4]}}{47}{paragraph.7.7.2.2}%
-\contentsline {paragraph}{\numberline {7.7.2.3}$\sim $GlBindable()}{48}{paragraph.7.7.2.3}%
-\contentsline {paragraph}{\numberline {7.7.2.4}GlBindable()\hspace {0.1cm}{\footnotesize \ttfamily [3/4]}}{48}{paragraph.7.7.2.4}%
-\contentsline {paragraph}{\numberline {7.7.2.5}GlBindable()\hspace {0.1cm}{\footnotesize \ttfamily [4/4]}}{48}{paragraph.7.7.2.5}%
-\contentsline {subsubsection}{\numberline {7.7.3}Опис методів компонент}{48}{subsubsection.7.7.3}%
-\contentsline {paragraph}{\numberline {7.7.3.1}\_bind()}{48}{paragraph.7.7.3.1}%
-\contentsline {paragraph}{\numberline {7.7.3.2}\_default()}{49}{paragraph.7.7.3.2}%
-\contentsline {paragraph}{\numberline {7.7.3.3}\_generate()}{50}{paragraph.7.7.3.3}%
-\contentsline {paragraph}{\numberline {7.7.3.4}bind()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{50}{paragraph.7.7.3.4}%
-\contentsline {paragraph}{\numberline {7.7.3.5}bind()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{50}{paragraph.7.7.3.5}%
-\contentsline {paragraph}{\numberline {7.7.3.6}binder()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{51}{paragraph.7.7.3.6}%
-\contentsline {paragraph}{\numberline {7.7.3.7}binder()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{52}{paragraph.7.7.3.7}%
-\contentsline {paragraph}{\numberline {7.7.3.8}get\_id()}{52}{paragraph.7.7.3.8}%
-\contentsline {paragraph}{\numberline {7.7.3.9}get\_vid()}{53}{paragraph.7.7.3.9}%
-\contentsline {paragraph}{\numberline {7.7.3.10}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{54}{paragraph.7.7.3.10}%
-\contentsline {paragraph}{\numberline {7.7.3.11}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{54}{paragraph.7.7.3.11}%
-\contentsline {paragraph}{\numberline {7.7.3.12}unbind()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{54}{paragraph.7.7.3.12}%
-\contentsline {paragraph}{\numberline {7.7.3.13}unbind()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{54}{paragraph.7.7.3.13}%
-\contentsline {subsubsection}{\numberline {7.7.4}Компонентні дані}{55}{subsubsection.7.7.4}%
-\contentsline {paragraph}{\numberline {7.7.4.1}id}{55}{paragraph.7.7.4.1}%
-\contentsline {subsection}{\numberline {7.8}Клас Gl\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Binder}{55}{subsection.7.8}%
-\contentsline {subsubsection}{\numberline {7.8.1}Детальний опис}{56}{subsubsection.7.8.1}%
-\contentsline {subsubsection}{\numberline {7.8.2}Конструктор(и)}{56}{subsubsection.7.8.2}%
-\contentsline {paragraph}{\numberline {7.8.2.1}GlBinder()}{56}{paragraph.7.8.2.1}%
-\contentsline {paragraph}{\numberline {7.8.2.2}$\sim $GlBinder()}{57}{paragraph.7.8.2.2}%
-\contentsline {subsubsection}{\numberline {7.8.3}Компонентні дані}{57}{subsubsection.7.8.3}%
-\contentsline {paragraph}{\numberline {7.8.3.1}bindable}{57}{paragraph.7.8.3.1}%
-\contentsline {paragraph}{\numberline {7.8.3.2}target}{57}{paragraph.7.8.3.2}%
-\contentsline {subsection}{\numberline {7.9}Клас Image}{57}{subsection.7.9}%
-\contentsline {subsubsection}{\numberline {7.9.1}Детальний опис}{58}{subsubsection.7.9.1}%
-\contentsline {subsubsection}{\numberline {7.9.2}Конструктор(и)}{58}{subsubsection.7.9.2}%
-\contentsline {paragraph}{\numberline {7.9.2.1}Image()}{58}{paragraph.7.9.2.1}%
-\contentsline {subsubsection}{\numberline {7.9.3}Опис методів компонент}{59}{subsubsection.7.9.3}%
-\contentsline {paragraph}{\numberline {7.9.3.1}fromFile()}{59}{paragraph.7.9.3.1}%
-\contentsline {subsubsection}{\numberline {7.9.4}Компонентні дані}{59}{subsubsection.7.9.4}%
-\contentsline {paragraph}{\numberline {7.9.4.1}data}{59}{paragraph.7.9.4.1}%
-\contentsline {paragraph}{\numberline {7.9.4.2}height}{59}{paragraph.7.9.4.2}%
-\contentsline {paragraph}{\numberline {7.9.4.3}width}{60}{paragraph.7.9.4.3}%
-\contentsline {subsection}{\numberline {7.10}Клас Mesh}{60}{subsection.7.10}%
-\contentsline {subsubsection}{\numberline {7.10.1}Детальний опис}{61}{subsubsection.7.10.1}%
-\contentsline {subsubsection}{\numberline {7.10.2}Конструктор(и)}{61}{subsubsection.7.10.2}%
-\contentsline {paragraph}{\numberline {7.10.2.1}Mesh()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{61}{paragraph.7.10.2.1}%
-\contentsline {paragraph}{\numberline {7.10.2.2}$\sim $Mesh()}{61}{paragraph.7.10.2.2}%
-\contentsline {paragraph}{\numberline {7.10.2.3}Mesh()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{62}{paragraph.7.10.2.3}%
-\contentsline {paragraph}{\numberline {7.10.2.4}Mesh()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{62}{paragraph.7.10.2.4}%
-\contentsline {subsubsection}{\numberline {7.10.3}Опис методів компонент}{62}{subsubsection.7.10.3}%
-\contentsline {paragraph}{\numberline {7.10.3.1}cube\_update()}{62}{paragraph.7.10.3.1}%
-\contentsline {paragraph}{\numberline {7.10.3.2}draw()}{62}{paragraph.7.10.3.2}%
-\contentsline {paragraph}{\numberline {7.10.3.3}draw\_mode()}{63}{paragraph.7.10.3.3}%
-\contentsline {paragraph}{\numberline {7.10.3.4}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{63}{paragraph.7.10.3.4}%
-\contentsline {paragraph}{\numberline {7.10.3.5}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{63}{paragraph.7.10.3.5}%
-\contentsline {paragraph}{\numberline {7.10.3.6}update()}{63}{paragraph.7.10.3.6}%
-\contentsline {subsubsection}{\numberline {7.10.4}Компонентні дані}{64}{subsubsection.7.10.4}%
-\contentsline {paragraph}{\numberline {7.10.4.1}ebo}{64}{paragraph.7.10.4.1}%
-\contentsline {paragraph}{\numberline {7.10.4.2}indices\_size}{64}{paragraph.7.10.4.2}%
-\contentsline {paragraph}{\numberline {7.10.4.3}vao}{64}{paragraph.7.10.4.3}%
-\contentsline {paragraph}{\numberline {7.10.4.4}vbo}{64}{paragraph.7.10.4.4}%
-\contentsline {subsection}{\numberline {7.11}Клас Model}{65}{subsection.7.11}%
-\contentsline {subsubsection}{\numberline {7.11.1}Детальний опис}{65}{subsubsection.7.11.1}%
-\contentsline {subsubsection}{\numberline {7.11.2}Конструктор(и)}{65}{subsubsection.7.11.2}%
-\contentsline {paragraph}{\numberline {7.11.2.1}$\sim $Model()}{65}{paragraph.7.11.2.1}%
-\contentsline {subsubsection}{\numberline {7.11.3}Опис методів компонент}{66}{subsubsection.7.11.3}%
-\contentsline {paragraph}{\numberline {7.11.3.1}draw()}{66}{paragraph.7.11.3.1}%
-\contentsline {paragraph}{\numberline {7.11.3.2}edit\_panel()}{66}{paragraph.7.11.3.2}%
-\contentsline {paragraph}{\numberline {7.11.3.3}generate()}{66}{paragraph.7.11.3.3}%
-\contentsline {paragraph}{\numberline {7.11.3.4}get\_vertices()}{66}{paragraph.7.11.3.4}%
-\contentsline {subsection}{\numberline {7.12}Клас Object}{67}{subsection.7.12}%
-\contentsline {subsubsection}{\numberline {7.12.1}Детальний опис}{69}{subsubsection.7.12.1}%
-\contentsline {subsubsection}{\numberline {7.12.2}Конструктор(и)}{69}{subsubsection.7.12.2}%
-\contentsline {paragraph}{\numberline {7.12.2.1}Object()}{69}{paragraph.7.12.2.1}%
-\contentsline {paragraph}{\numberline {7.12.2.2}$\sim $Object()}{69}{paragraph.7.12.2.2}%
-\contentsline {subsubsection}{\numberline {7.12.3}Опис методів компонент}{69}{subsubsection.7.12.3}%
-\contentsline {paragraph}{\numberline {7.12.3.1}add\_animation()}{69}{paragraph.7.12.3.1}%
-\contentsline {paragraph}{\numberline {7.12.3.2}animate()}{70}{paragraph.7.12.3.2}%
-\contentsline {paragraph}{\numberline {7.12.3.3}draw()}{70}{paragraph.7.12.3.3}%
-\contentsline {paragraph}{\numberline {7.12.3.4}get\_animation()}{71}{paragraph.7.12.3.4}%
-\contentsline {paragraph}{\numberline {7.12.3.5}get\_mat4()}{71}{paragraph.7.12.3.5}%
-\contentsline {paragraph}{\numberline {7.12.3.6}get\_model()}{72}{paragraph.7.12.3.6}%
-\contentsline {paragraph}{\numberline {7.12.3.7}get\_position()}{72}{paragraph.7.12.3.7}%
-\contentsline {paragraph}{\numberline {7.12.3.8}get\_rotation()}{72}{paragraph.7.12.3.8}%
-\contentsline {paragraph}{\numberline {7.12.3.9}get\_transform()}{72}{paragraph.7.12.3.9}%
-\contentsline {paragraph}{\numberline {7.12.3.10}rotate()}{73}{paragraph.7.12.3.10}%
-\contentsline {paragraph}{\numberline {7.12.3.11}rotate\_all()}{73}{paragraph.7.12.3.11}%
-\contentsline {paragraph}{\numberline {7.12.3.12}rotate\_all\_object()}{74}{paragraph.7.12.3.12}%
-\contentsline {paragraph}{\numberline {7.12.3.13}rotate\_object()}{75}{paragraph.7.12.3.13}%
-\contentsline {paragraph}{\numberline {7.12.3.14}scale()}{75}{paragraph.7.12.3.14}%
-\contentsline {paragraph}{\numberline {7.12.3.15}set\_animation()}{76}{paragraph.7.12.3.15}%
-\contentsline {paragraph}{\numberline {7.12.3.16}set\_position()}{76}{paragraph.7.12.3.16}%
-\contentsline {paragraph}{\numberline {7.12.3.17}set\_rotation()}{76}{paragraph.7.12.3.17}%
-\contentsline {paragraph}{\numberline {7.12.3.18}translate()}{76}{paragraph.7.12.3.18}%
-\contentsline {paragraph}{\numberline {7.12.3.19}translate\_object()}{77}{paragraph.7.12.3.19}%
-\contentsline {subsubsection}{\numberline {7.12.4}Компонентні дані}{77}{subsubsection.7.12.4}%
-\contentsline {paragraph}{\numberline {7.12.4.1}animation}{77}{paragraph.7.12.4.1}%
-\contentsline {paragraph}{\numberline {7.12.4.2}model}{77}{paragraph.7.12.4.2}%
-\contentsline {paragraph}{\numberline {7.12.4.3}position}{77}{paragraph.7.12.4.3}%
-\contentsline {paragraph}{\numberline {7.12.4.4}transform}{78}{paragraph.7.12.4.4}%
-\contentsline {subsection}{\numberline {7.13}Клас Renderbuffer}{78}{subsection.7.13}%
-\contentsline {subsubsection}{\numberline {7.13.1}Детальний опис}{79}{subsubsection.7.13.1}%
-\contentsline {subsubsection}{\numberline {7.13.2}Конструктор(и)}{79}{subsubsection.7.13.2}%
-\contentsline {paragraph}{\numberline {7.13.2.1}Renderbuffer()}{79}{paragraph.7.13.2.1}%
-\contentsline {paragraph}{\numberline {7.13.2.2}$\sim $Renderbuffer()}{79}{paragraph.7.13.2.2}%
-\contentsline {subsubsection}{\numberline {7.13.3}Опис методів компонент}{80}{subsubsection.7.13.3}%
-\contentsline {paragraph}{\numberline {7.13.3.1}\_bind()}{80}{paragraph.7.13.3.1}%
-\contentsline {paragraph}{\numberline {7.13.3.2}\_default()}{80}{paragraph.7.13.3.2}%
-\contentsline {paragraph}{\numberline {7.13.3.3}\_generate()}{80}{paragraph.7.13.3.3}%
-\contentsline {paragraph}{\numberline {7.13.3.4}make()}{80}{paragraph.7.13.3.4}%
-\contentsline {paragraph}{\numberline {7.13.3.5}make\_multisample()}{81}{paragraph.7.13.3.5}%
-\contentsline {subsection}{\numberline {7.14}Структура Scene}{82}{subsection.7.14}%
-\contentsline {subsubsection}{\numberline {7.14.1}Детальний опис}{83}{subsubsection.7.14.1}%
-\contentsline {subsubsection}{\numberline {7.14.2}Конструктор(и)}{83}{subsubsection.7.14.2}%
-\contentsline {paragraph}{\numberline {7.14.2.1}Scene()}{83}{paragraph.7.14.2.1}%
-\contentsline {subsubsection}{\numberline {7.14.3}Опис методів компонент}{83}{subsubsection.7.14.3}%
-\contentsline {paragraph}{\numberline {7.14.3.1}create()}{83}{paragraph.7.14.3.1}%
-\contentsline {subsubsection}{\numberline {7.14.4}Компонентні дані}{84}{subsubsection.7.14.4}%
-\contentsline {paragraph}{\numberline {7.14.4.1}objects}{84}{paragraph.7.14.4.1}%
-\contentsline {subsection}{\numberline {7.15}Клас Shader}{84}{subsection.7.15}%
-\contentsline {subsubsection}{\numberline {7.15.1}Детальний опис}{86}{subsubsection.7.15.1}%
-\contentsline {subsubsection}{\numberline {7.15.2}Опис типів користувача}{86}{subsubsection.7.15.2}%
-\contentsline {paragraph}{\numberline {7.15.2.1}shader\_map}{86}{paragraph.7.15.2.1}%
-\contentsline {subsubsection}{\numberline {7.15.3}Конструктор(и)}{86}{subsubsection.7.15.3}%
-\contentsline {paragraph}{\numberline {7.15.3.1}Shader()}{86}{paragraph.7.15.3.1}%
-\contentsline {paragraph}{\numberline {7.15.3.2}$\sim $Shader()}{86}{paragraph.7.15.3.2}%
-\contentsline {subsubsection}{\numberline {7.15.4}Опис методів компонент}{87}{subsubsection.7.15.4}%
-\contentsline {paragraph}{\numberline {7.15.4.1}\_bind()}{87}{paragraph.7.15.4.1}%
-\contentsline {paragraph}{\numberline {7.15.4.2}create()}{87}{paragraph.7.15.4.2}%
-\contentsline {paragraph}{\numberline {7.15.4.3}set\_bool()}{88}{paragraph.7.15.4.3}%
-\contentsline {paragraph}{\numberline {7.15.4.4}set\_float()}{88}{paragraph.7.15.4.4}%
-\contentsline {paragraph}{\numberline {7.15.4.5}set\_int()}{89}{paragraph.7.15.4.5}%
-\contentsline {paragraph}{\numberline {7.15.4.6}set\_mat2()}{89}{paragraph.7.15.4.6}%
-\contentsline {paragraph}{\numberline {7.15.4.7}set\_mat3()}{90}{paragraph.7.15.4.7}%
-\contentsline {paragraph}{\numberline {7.15.4.8}set\_mat4()}{90}{paragraph.7.15.4.8}%
-\contentsline {paragraph}{\numberline {7.15.4.9}set\_vec2()}{91}{paragraph.7.15.4.9}%
-\contentsline {paragraph}{\numberline {7.15.4.10}set\_vec2f()}{92}{paragraph.7.15.4.10}%
-\contentsline {paragraph}{\numberline {7.15.4.11}set\_vec3()}{92}{paragraph.7.15.4.11}%
-\contentsline {paragraph}{\numberline {7.15.4.12}set\_vec3f()}{93}{paragraph.7.15.4.12}%
-\contentsline {paragraph}{\numberline {7.15.4.13}set\_vec4()}{93}{paragraph.7.15.4.13}%
-\contentsline {paragraph}{\numberline {7.15.4.14}set\_vec4f()}{94}{paragraph.7.15.4.14}%
-\contentsline {subsection}{\numberline {7.16}Клас Shader\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Source}{95}{subsection.7.16}%
-\contentsline {subsubsection}{\numberline {7.16.1}Детальний опис}{95}{subsubsection.7.16.1}%
-\contentsline {subsubsection}{\numberline {7.16.2}Конструктор(и)}{95}{subsubsection.7.16.2}%
-\contentsline {paragraph}{\numberline {7.16.2.1}ShaderSource()}{95}{paragraph.7.16.2.1}%
-\contentsline {subsubsection}{\numberline {7.16.3}Опис методів компонент}{95}{subsubsection.7.16.3}%
-\contentsline {paragraph}{\numberline {7.16.3.1}attach()}{95}{paragraph.7.16.3.1}%
-\contentsline {paragraph}{\numberline {7.16.3.2}create()}{96}{paragraph.7.16.3.2}%
-\contentsline {paragraph}{\numberline {7.16.3.3}create\_file()}{96}{paragraph.7.16.3.3}%
-\contentsline {paragraph}{\numberline {7.16.3.4}get\_id()}{97}{paragraph.7.16.3.4}%
-\contentsline {subsubsection}{\numberline {7.16.4}Компонентні дані}{97}{subsubsection.7.16.4}%
-\contentsline {paragraph}{\numberline {7.16.4.1}id}{97}{paragraph.7.16.4.1}%
-\contentsline {subsection}{\numberline {7.17}Клас Texture}{97}{subsection.7.17}%
-\contentsline {subsubsection}{\numberline {7.17.1}Детальний опис}{98}{subsubsection.7.17.1}%
-\contentsline {subsubsection}{\numberline {7.17.2}Конструктор(и)}{98}{subsubsection.7.17.2}%
-\contentsline {paragraph}{\numberline {7.17.2.1}Texture()}{98}{paragraph.7.17.2.1}%
-\contentsline {paragraph}{\numberline {7.17.2.2}$\sim $Texture()}{98}{paragraph.7.17.2.2}%
-\contentsline {subsubsection}{\numberline {7.17.3}Опис методів компонент}{99}{subsubsection.7.17.3}%
-\contentsline {paragraph}{\numberline {7.17.3.1}\_bind()}{99}{paragraph.7.17.3.1}%
-\contentsline {paragraph}{\numberline {7.17.3.2}\_default()}{99}{paragraph.7.17.3.2}%
-\contentsline {paragraph}{\numberline {7.17.3.3}\_generate()}{99}{paragraph.7.17.3.3}%
-\contentsline {paragraph}{\numberline {7.17.3.4}make\_2d()}{99}{paragraph.7.17.3.4}%
-\contentsline {paragraph}{\numberline {7.17.3.5}make\_2d\_multisample()}{100}{paragraph.7.17.3.5}%
-\contentsline {paragraph}{\numberline {7.17.3.6}update()}{101}{paragraph.7.17.3.6}%
-\contentsline {subsection}{\numberline {7.18}Шаблон класу OSDO\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::vector$<$ T $>$}{101}{subsection.7.18}%
-\contentsline {subsubsection}{\numberline {7.18.1}Детальний опис}{102}{subsubsection.7.18.1}%
-\contentsline {subsubsection}{\numberline {7.18.2}Конструктор(и)}{102}{subsubsection.7.18.2}%
-\contentsline {paragraph}{\numberline {7.18.2.1}vector()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{102}{paragraph.7.18.2.1}%
-\contentsline {paragraph}{\numberline {7.18.2.2}vector()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{103}{paragraph.7.18.2.2}%
-\contentsline {paragraph}{\numberline {7.18.2.3}vector()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{104}{paragraph.7.18.2.3}%
-\contentsline {paragraph}{\numberline {7.18.2.4}$\sim $vector()}{104}{paragraph.7.18.2.4}%
-\contentsline {subsubsection}{\numberline {7.18.3}Опис методів компонент}{104}{subsubsection.7.18.3}%
-\contentsline {paragraph}{\numberline {7.18.3.1}\_allocate()}{104}{paragraph.7.18.3.1}%
-\contentsline {paragraph}{\numberline {7.18.3.2}\_copy()}{105}{paragraph.7.18.3.2}%
-\contentsline {paragraph}{\numberline {7.18.3.3}\_free()}{106}{paragraph.7.18.3.3}%
-\contentsline {paragraph}{\numberline {7.18.3.4}\_move()}{106}{paragraph.7.18.3.4}%
-\contentsline {paragraph}{\numberline {7.18.3.5}clear()}{107}{paragraph.7.18.3.5}%
-\contentsline {paragraph}{\numberline {7.18.3.6}data()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{107}{paragraph.7.18.3.6}%
-\contentsline {paragraph}{\numberline {7.18.3.7}data()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{107}{paragraph.7.18.3.7}%
-\contentsline {paragraph}{\numberline {7.18.3.8}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{107}{paragraph.7.18.3.8}%
-\contentsline {paragraph}{\numberline {7.18.3.9}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{108}{paragraph.7.18.3.9}%
-\contentsline {paragraph}{\numberline {7.18.3.10}operator[]()}{108}{paragraph.7.18.3.10}%
-\contentsline {paragraph}{\numberline {7.18.3.11}size()}{108}{paragraph.7.18.3.11}%
-\contentsline {subsubsection}{\numberline {7.18.4}Компонентні дані}{108}{subsubsection.7.18.4}%
-\contentsline {paragraph}{\numberline {7.18.4.1}\_size}{108}{paragraph.7.18.4.1}%
-\contentsline {paragraph}{\numberline {7.18.4.2}arr}{109}{paragraph.7.18.4.2}%
-\contentsline {subsection}{\numberline {7.19}Структура Vertex}{109}{subsection.7.19}%
-\contentsline {subsubsection}{\numberline {7.19.1}Детальний опис}{109}{subsubsection.7.19.1}%
-\contentsline {subsubsection}{\numberline {7.19.2}Компонентні дані}{109}{subsubsection.7.19.2}%
-\contentsline {paragraph}{\numberline {7.19.2.1}color}{109}{paragraph.7.19.2.1}%
-\contentsline {paragraph}{\numberline {7.19.2.2}normal}{110}{paragraph.7.19.2.2}%
-\contentsline {paragraph}{\numberline {7.19.2.3}position}{110}{paragraph.7.19.2.3}%
-\contentsline {paragraph}{\numberline {7.19.2.4}uv}{110}{paragraph.7.19.2.4}%
-\contentsline {section}{\numberline {8}Файли}{110}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Файл LICENSE.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md}{110}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Файл osdo/beziator.cpp}{110}{subsection.8.2}%
-\contentsline {subsubsection}{\numberline {8.2.1}Опис макровизначень}{111}{subsubsection.8.2.1}%
-\contentsline {paragraph}{\numberline {8.2.1.1}BEZIER\_TANGENT\_INIT}{112}{paragraph.8.2.1.1}%
-\contentsline {paragraph}{\numberline {8.2.1.2}ucast}{112}{paragraph.8.2.1.2}%
-\contentsline {subsubsection}{\numberline {8.2.2}Опис визначень типів}{112}{subsubsection.8.2.2}%
-\contentsline {paragraph}{\numberline {8.2.2.1}surface\_t}{112}{paragraph.8.2.2.1}%
-\contentsline {subsubsection}{\numberline {8.2.3}Опис функцій}{112}{subsubsection.8.2.3}%
-\contentsline {paragraph}{\numberline {8.2.3.1}bezier\_curve()}{112}{paragraph.8.2.3.1}%
-\contentsline {paragraph}{\numberline {8.2.3.2}bezier\_curve\_tangent()}{113}{paragraph.8.2.3.2}%
-\contentsline {paragraph}{\numberline {8.2.3.3}bezier\_surface()}{113}{paragraph.8.2.3.3}%
-\contentsline {subsection}{\numberline {8.3}beziator.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{114}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}Файл osdo/beziator.h}{117}{subsection.8.4}%
-\contentsline {subsubsection}{\numberline {8.4.1}Детальний опис}{118}{subsubsection.8.4.1}%
-\contentsline {subsubsection}{\numberline {8.4.2}Опис визначень типів}{118}{subsubsection.8.4.2}%
-\contentsline {paragraph}{\numberline {8.4.2.1}surfacei\_t}{118}{paragraph.8.4.2.1}%
-\contentsline {subsection}{\numberline {8.5}beziator.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{119}{subsection.8.5}%
-\contentsline {subsection}{\numberline {8.6}Файл osdo/bijective.h}{120}{subsection.8.6}%
-\contentsline {subsubsection}{\numberline {8.6.1}Детальний опис}{121}{subsubsection.8.6.1}%
-\contentsline {subsection}{\numberline {8.7}bijective.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{121}{subsection.8.7}%
-\contentsline {subsection}{\numberline {8.8}Файл osdo/buffer.cpp}{122}{subsection.8.8}%
-\contentsline {subsection}{\numberline {8.9}buffer.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{123}{subsection.8.9}%
-\contentsline {subsection}{\numberline {8.10}Файл osdo/buffer.h}{124}{subsection.8.10}%
-\contentsline {subsubsection}{\numberline {8.10.1}Детальний опис}{125}{subsubsection.8.10.1}%
-\contentsline {subsection}{\numberline {8.11}buffer.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{125}{subsection.8.11}%
-\contentsline {subsection}{\numberline {8.12}Файл osdo/camera.cpp}{125}{subsection.8.12}%
-\contentsline {subsubsection}{\numberline {8.12.1}Опис змінних}{126}{subsubsection.8.12.1}%
-\contentsline {paragraph}{\numberline {8.12.1.1}CAMERA\_DIRECTION}{126}{paragraph.8.12.1.1}%
-\contentsline {subsection}{\numberline {8.13}camera.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{126}{subsection.8.13}%
-\contentsline {subsection}{\numberline {8.14}Файл osdo/camera.h}{128}{subsection.8.14}%
-\contentsline {subsubsection}{\numberline {8.14.1}Детальний опис}{129}{subsubsection.8.14.1}%
-\contentsline {subsubsection}{\numberline {8.14.2}Опис макровизначень}{129}{subsubsection.8.14.2}%
-\contentsline {paragraph}{\numberline {8.14.2.1}CAMERA\_DIRECTION\_INIT}{129}{paragraph.8.14.2.1}%
-\contentsline {subsection}{\numberline {8.15}camera.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{130}{subsection.8.15}%
-\contentsline {subsection}{\numberline {8.16}Файл osdo/conf.h}{131}{subsection.8.16}%
-\contentsline {subsubsection}{\numberline {8.16.1}Детальний опис}{133}{subsubsection.8.16.1}%
-\contentsline {subsubsection}{\numberline {8.16.2}Опис макровизначень}{133}{subsubsection.8.16.2}%
-\contentsline {paragraph}{\numberline {8.16.2.1}BEZIATOR\_PATH}{133}{paragraph.8.16.2.1}%
-\contentsline {paragraph}{\numberline {8.16.2.2}FRAGMENT\_PATH}{133}{paragraph.8.16.2.2}%
-\contentsline {paragraph}{\numberline {8.16.2.3}GEOMETRY\_PATH}{133}{paragraph.8.16.2.3}%
-\contentsline {paragraph}{\numberline {8.16.2.4}M\_PI}{134}{paragraph.8.16.2.4}%
-\contentsline {paragraph}{\numberline {8.16.2.5}M\_PI\_F}{134}{paragraph.8.16.2.5}%
-\contentsline {paragraph}{\numberline {8.16.2.6}M\_RAD}{134}{paragraph.8.16.2.6}%
-\contentsline {paragraph}{\numberline {8.16.2.7}M\_RAD\_F}{134}{paragraph.8.16.2.7}%
-\contentsline {paragraph}{\numberline {8.16.2.8}MAX\_ELEMENT\_BUFFER}{134}{paragraph.8.16.2.8}%
-\contentsline {paragraph}{\numberline {8.16.2.9}MAX\_VERTEX\_BUFFER}{134}{paragraph.8.16.2.9}%
-\contentsline {paragraph}{\numberline {8.16.2.10}NK\_GLFW\_DOUBLE\_CLICK\_HI}{134}{paragraph.8.16.2.10}%
-\contentsline {paragraph}{\numberline {8.16.2.11}NK\_GLFW\_DOUBLE\_CLICK\_LO}{135}{paragraph.8.16.2.11}%
-\contentsline {paragraph}{\numberline {8.16.2.12}RES\_DIR}{135}{paragraph.8.16.2.12}%
-\contentsline {paragraph}{\numberline {8.16.2.13}TESC\_PATH}{135}{paragraph.8.16.2.13}%
-\contentsline {paragraph}{\numberline {8.16.2.14}TESE\_PATH}{135}{paragraph.8.16.2.14}%
-\contentsline {paragraph}{\numberline {8.16.2.15}VERTEX\_PATH}{135}{paragraph.8.16.2.15}%
-\contentsline {subsection}{\numberline {8.17}conf.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{136}{subsection.8.17}%
-\contentsline {subsection}{\numberline {8.18}Файл osdo/context.cpp}{138}{subsection.8.18}%
-\contentsline {subsection}{\numberline {8.19}context.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{138}{subsection.8.19}%
-\contentsline {subsection}{\numberline {8.20}Файл osdo/context.h}{138}{subsection.8.20}%
-\contentsline {subsubsection}{\numberline {8.20.1}Детальний опис}{139}{subsubsection.8.20.1}%
-\contentsline {subsection}{\numberline {8.21}context.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{140}{subsection.8.21}%
-\contentsline {subsection}{\numberline {8.22}Файл osdo/easyvector.h}{141}{subsection.8.22}%
-\contentsline {subsubsection}{\numberline {8.22.1}Детальний опис}{141}{subsubsection.8.22.1}%
-\contentsline {subsection}{\numberline {8.23}easyvector.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{142}{subsection.8.23}%
-\contentsline {subsection}{\numberline {8.24}Файл osdo/framebuffer.cpp}{143}{subsection.8.24}%
-\contentsline {subsection}{\numberline {8.25}framebuffer.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{144}{subsection.8.25}%
-\contentsline {subsection}{\numberline {8.26}Файл osdo/framebuffer.h}{144}{subsection.8.26}%
-\contentsline {subsubsection}{\numberline {8.26.1}Детальний опис}{145}{subsubsection.8.26.1}%
-\contentsline {subsection}{\numberline {8.27}framebuffer.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{146}{subsection.8.27}%
-\contentsline {subsection}{\numberline {8.28}Файл osdo/glbindable.cpp}{147}{subsection.8.28}%
-\contentsline {subsection}{\numberline {8.29}glbindable.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{147}{subsection.8.29}%
-\contentsline {subsection}{\numberline {8.30}Файл osdo/glbindable.h}{148}{subsection.8.30}%
-\contentsline {subsubsection}{\numberline {8.30.1}Детальний опис}{149}{subsubsection.8.30.1}%
-\contentsline {subsection}{\numberline {8.31}glbindable.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{149}{subsection.8.31}%
-\contentsline {subsection}{\numberline {8.32}Файл osdo/glbinder.cpp}{150}{subsection.8.32}%
-\contentsline {subsection}{\numberline {8.33}glbinder.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{151}{subsection.8.33}%
-\contentsline {subsection}{\numberline {8.34}Файл osdo/glbinder.h}{151}{subsection.8.34}%
-\contentsline {subsubsection}{\numberline {8.34.1}Детальний опис}{152}{subsubsection.8.34.1}%
-\contentsline {subsection}{\numberline {8.35}glbinder.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{152}{subsection.8.35}%
-\contentsline {subsection}{\numberline {8.36}Файл osdo/image.cpp}{153}{subsection.8.36}%
-\contentsline {subsubsection}{\numberline {8.36.1}Опис макровизначень}{153}{subsubsection.8.36.1}%
-\contentsline {paragraph}{\numberline {8.36.1.1}STB\_IMAGE\_IMPLEMENTATION}{153}{paragraph.8.36.1.1}%
-\contentsline {subsection}{\numberline {8.37}image.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{154}{subsection.8.37}%
-\contentsline {subsection}{\numberline {8.38}Файл osdo/image.h}{154}{subsection.8.38}%
-\contentsline {subsubsection}{\numberline {8.38.1}Детальний опис}{155}{subsubsection.8.38.1}%
-\contentsline {subsubsection}{\numberline {8.38.2}Опис макровизначень}{155}{subsubsection.8.38.2}%
-\contentsline {paragraph}{\numberline {8.38.2.1}COMP}{155}{paragraph.8.38.2.1}%
-\contentsline {subsubsection}{\numberline {8.38.3}Опис визначень типів}{155}{subsubsection.8.38.3}%
-\contentsline {paragraph}{\numberline {8.38.3.1}channel\_t}{155}{paragraph.8.38.3.1}%
-\contentsline {paragraph}{\numberline {8.38.3.2}pixel\_t}{156}{paragraph.8.38.3.2}%
-\contentsline {subsection}{\numberline {8.39}image.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{156}{subsection.8.39}%
-\contentsline {subsection}{\numberline {8.40}Файл osdo/mesh.cpp}{157}{subsection.8.40}%
-\contentsline {subsection}{\numberline {8.41}mesh.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{157}{subsection.8.41}%
-\contentsline {subsection}{\numberline {8.42}Файл osdo/mesh.h}{158}{subsection.8.42}%
-\contentsline {subsubsection}{\numberline {8.42.1}Детальний опис}{159}{subsubsection.8.42.1}%
-\contentsline {subsection}{\numberline {8.43}mesh.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{160}{subsection.8.43}%
-\contentsline {subsection}{\numberline {8.44}Файл osdo/model.cpp}{160}{subsection.8.44}%
-\contentsline {subsection}{\numberline {8.45}model.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{161}{subsection.8.45}%
-\contentsline {subsection}{\numberline {8.46}Файл osdo/model.h}{161}{subsection.8.46}%
-\contentsline {subsubsection}{\numberline {8.46.1}Детальний опис}{162}{subsubsection.8.46.1}%
-\contentsline {subsection}{\numberline {8.47}model.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{163}{subsection.8.47}%
-\contentsline {subsection}{\numberline {8.48}Файл osdo/object.cpp}{163}{subsection.8.48}%
-\contentsline {subsection}{\numberline {8.49}object.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{164}{subsection.8.49}%
-\contentsline {subsection}{\numberline {8.50}Файл osdo/object.h}{165}{subsection.8.50}%
-\contentsline {subsubsection}{\numberline {8.50.1}Детальний опис}{166}{subsubsection.8.50.1}%
-\contentsline {subsection}{\numberline {8.51}object.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{166}{subsection.8.51}%
-\contentsline {subsection}{\numberline {8.52}Файл osdo/osdo.cpp}{168}{subsection.8.52}%
-\contentsline {subsubsection}{\numberline {8.52.1}Опис функцій}{169}{subsubsection.8.52.1}%
-\contentsline {paragraph}{\numberline {8.52.1.1}operator new[]()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{169}{paragraph.8.52.1.1}%
-\contentsline {paragraph}{\numberline {8.52.1.2}operator new[]()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{170}{paragraph.8.52.1.2}%
-\contentsline {subsubsection}{\numberline {8.52.2}Опис змінних}{170}{subsubsection.8.52.2}%
-\contentsline {paragraph}{\numberline {8.52.2.1}BASIS0POS}{170}{paragraph.8.52.2.1}%
-\contentsline {subsection}{\numberline {8.53}osdo.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{170}{subsection.8.53}%
-\contentsline {subsection}{\numberline {8.54}Файл osdo/osdo.h}{170}{subsection.8.54}%
-\contentsline {subsubsection}{\numberline {8.54.1}Опис макровизначень}{172}{subsubsection.8.54.1}%
-\contentsline {paragraph}{\numberline {8.54.1.1}UNUSED}{172}{paragraph.8.54.1.1}%
-\contentsline {subsubsection}{\numberline {8.54.2}Опис переліків}{172}{subsubsection.8.54.2}%
-\contentsline {paragraph}{\numberline {8.54.2.1}coord\_enum}{172}{paragraph.8.54.2.1}%
-\contentsline {subsubsection}{\numberline {8.54.3}Опис функцій}{172}{subsubsection.8.54.3}%
-\contentsline {paragraph}{\numberline {8.54.3.1}operator new[]()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{172}{paragraph.8.54.3.1}%
-\contentsline {paragraph}{\numberline {8.54.3.2}operator new[]()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{173}{paragraph.8.54.3.2}%
-\contentsline {subsubsection}{\numberline {8.54.4}Опис змінних}{173}{subsubsection.8.54.4}%
-\contentsline {paragraph}{\numberline {8.54.4.1}BASIS0POS}{173}{paragraph.8.54.4.1}%
-\contentsline {subsection}{\numberline {8.55}osdo.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{173}{subsection.8.55}%
-\contentsline {subsection}{\numberline {8.56}Файл osdo/renderbuffer.cpp}{174}{subsection.8.56}%
-\contentsline {subsection}{\numberline {8.57}renderbuffer.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{174}{subsection.8.57}%
-\contentsline {subsection}{\numberline {8.58}Файл osdo/renderbuffer.h}{175}{subsection.8.58}%
-\contentsline {subsubsection}{\numberline {8.58.1}Детальний опис}{176}{subsubsection.8.58.1}%
-\contentsline {subsection}{\numberline {8.59}renderbuffer.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{176}{subsection.8.59}%
-\contentsline {subsection}{\numberline {8.60}Файл osdo/scene.cpp}{177}{subsection.8.60}%
-\contentsline {subsection}{\numberline {8.61}scene.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{177}{subsection.8.61}%
-\contentsline {subsection}{\numberline {8.62}Файл osdo/scene.h}{177}{subsection.8.62}%
-\contentsline {subsubsection}{\numberline {8.62.1}Детальний опис}{178}{subsubsection.8.62.1}%
-\contentsline {subsection}{\numberline {8.63}scene.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{179}{subsection.8.63}%
-\contentsline {subsection}{\numberline {8.64}Файл osdo/shader.cpp}{179}{subsection.8.64}%
-\contentsline {subsubsection}{\numberline {8.64.1}Опис функцій}{180}{subsubsection.8.64.1}%
-\contentsline {paragraph}{\numberline {8.64.1.1}check\_shader()}{180}{paragraph.8.64.1.1}%
-\contentsline {paragraph}{\numberline {8.64.1.2}compile()}{180}{paragraph.8.64.1.2}%
-\contentsline {paragraph}{\numberline {8.64.1.3}readFromFile()}{181}{paragraph.8.64.1.3}%
-\contentsline {subsection}{\numberline {8.65}shader.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{181}{subsection.8.65}%
-\contentsline {subsection}{\numberline {8.66}Файл osdo/shader.h}{183}{subsection.8.66}%
-\contentsline {subsubsection}{\numberline {8.66.1}Детальний опис}{184}{subsubsection.8.66.1}%
-\contentsline {subsubsection}{\numberline {8.66.2}Опис переліків}{184}{subsubsection.8.66.2}%
-\contentsline {paragraph}{\numberline {8.66.2.1}ShaderType}{184}{paragraph.8.66.2.1}%
-\contentsline {subsection}{\numberline {8.67}shader.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{185}{subsection.8.67}%
-\contentsline {subsection}{\numberline {8.68}Файл osdo/texture.cpp}{186}{subsection.8.68}%
-\contentsline {subsubsection}{\numberline {8.68.1}Опис функцій}{187}{subsubsection.8.68.1}%
-\contentsline {paragraph}{\numberline {8.68.1.1}LoadTextureFromFile()}{187}{paragraph.8.68.1.1}%
-\contentsline {subsection}{\numberline {8.69}texture.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{188}{subsection.8.69}%
-\contentsline {subsection}{\numberline {8.70}Файл osdo/texture.h}{188}{subsection.8.70}%
-\contentsline {subsubsection}{\numberline {8.70.1}Детальний опис}{189}{subsubsection.8.70.1}%
-\contentsline {subsection}{\numberline {8.71}texture.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{190}{subsection.8.71}%
-\contentsline {subsection}{\numberline {8.72}Файл osdo/vertex.h}{190}{subsection.8.72}%
-\contentsline {subsubsection}{\numberline {8.72.1}Детальний опис}{191}{subsubsection.8.72.1}%
-\contentsline {subsection}{\numberline {8.73}vertex.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{192}{subsection.8.73}%
-\contentsline {subsection}{\numberline {8.74}Файл res/bezier.frag}{192}{subsection.8.74}%
-\contentsline {subsection}{\numberline {8.75}bezier.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}frag}{192}{subsection.8.75}%
-\contentsline {subsection}{\numberline {8.76}Файл res/bezier.geom}{193}{subsection.8.76}%
-\contentsline {subsection}{\numberline {8.77}bezier.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}geom}{193}{subsection.8.77}%
-\contentsline {subsection}{\numberline {8.78}Файл res/bezier.tesc}{193}{subsection.8.78}%
-\contentsline {subsection}{\numberline {8.79}bezier.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}tesc}{193}{subsection.8.79}%
-\contentsline {subsection}{\numberline {8.80}Файл res/bezier.tese}{194}{subsection.8.80}%
-\contentsline {subsection}{\numberline {8.81}bezier.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}tese}{194}{subsection.8.81}%
-\contentsline {subsection}{\numberline {8.82}Файл res/bezier.vert}{195}{subsection.8.82}%
-\contentsline {subsection}{\numberline {8.83}bezier.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}vert}{195}{subsection.8.83}%
+\contentsline {paragraph}{\numberline {7.4.3.11}rotate\_all\_camera()}{27}{paragraph.7.4.3.11}%
+\contentsline {paragraph}{\numberline {7.4.3.12}rotate\_all\_inverse()}{28}{paragraph.7.4.3.12}%
+\contentsline {paragraph}{\numberline {7.4.3.13}rotate\_camera()}{28}{paragraph.7.4.3.13}%
+\contentsline {paragraph}{\numberline {7.4.3.14}set\_animation()}{29}{paragraph.7.4.3.14}%
+\contentsline {paragraph}{\numberline {7.4.3.15}set\_position()}{29}{paragraph.7.4.3.15}%
+\contentsline {paragraph}{\numberline {7.4.3.16}set\_rotation()}{29}{paragraph.7.4.3.16}%
+\contentsline {paragraph}{\numberline {7.4.3.17}translate()}{29}{paragraph.7.4.3.17}%
+\contentsline {paragraph}{\numberline {7.4.3.18}translate\_camera()}{30}{paragraph.7.4.3.18}%
+\contentsline {subsubsection}{\numberline {7.4.4}Компонентні дані}{30}{subsubsection.7.4.4}%
+\contentsline {paragraph}{\numberline {7.4.4.1}animation}{30}{paragraph.7.4.4.1}%
+\contentsline {paragraph}{\numberline {7.4.4.2}position}{30}{paragraph.7.4.4.2}%
+\contentsline {paragraph}{\numberline {7.4.4.3}rotation}{31}{paragraph.7.4.4.3}%
+\contentsline {subsection}{\numberline {7.5}Структура Context}{31}{subsection.7.5}%
+\contentsline {subsubsection}{\numberline {7.5.1}Детальний опис}{32}{subsubsection.7.5.1}%
+\contentsline {subsubsection}{\numberline {7.5.2}Опис типів користувача}{32}{subsubsection.7.5.2}%
+\contentsline {paragraph}{\numberline {7.5.2.1}Models}{32}{paragraph.7.5.2.1}%
+\contentsline {paragraph}{\numberline {7.5.2.2}Textures}{32}{paragraph.7.5.2.2}%
+\contentsline {subsubsection}{\numberline {7.5.3}Конструктор(и)}{32}{subsubsection.7.5.3}%
+\contentsline {paragraph}{\numberline {7.5.3.1}Context()}{32}{paragraph.7.5.3.1}%
+\contentsline {subsubsection}{\numberline {7.5.4}Опис методів компонент}{32}{subsubsection.7.5.4}%
+\contentsline {paragraph}{\numberline {7.5.4.1}load\_model()}{32}{paragraph.7.5.4.1}%
+\contentsline {paragraph}{\numberline {7.5.4.2}load\_shader()}{33}{paragraph.7.5.4.2}%
+\contentsline {paragraph}{\numberline {7.5.4.3}load\_texture()}{33}{paragraph.7.5.4.3}%
+\contentsline {paragraph}{\numberline {7.5.4.4}next\_active()}{34}{paragraph.7.5.4.4}%
+\contentsline {subsubsection}{\numberline {7.5.5}Компонентні дані}{34}{subsubsection.7.5.5}%
+\contentsline {paragraph}{\numberline {7.5.5.1}active}{34}{paragraph.7.5.5.1}%
+\contentsline {paragraph}{\numberline {7.5.5.2}active\_texture}{34}{paragraph.7.5.5.2}%
+\contentsline {paragraph}{\numberline {7.5.5.3}models}{34}{paragraph.7.5.5.3}%
+\contentsline {paragraph}{\numberline {7.5.5.4}shaders}{35}{paragraph.7.5.5.4}%
+\contentsline {paragraph}{\numberline {7.5.5.5}textures}{35}{paragraph.7.5.5.5}%
+\contentsline {subsection}{\numberline {7.6}Клас Framebuffer}{35}{subsection.7.6}%
+\contentsline {subsubsection}{\numberline {7.6.1}Детальний опис}{36}{subsubsection.7.6.1}%
+\contentsline {subsubsection}{\numberline {7.6.2}Конструктор(и)}{36}{subsubsection.7.6.2}%
+\contentsline {paragraph}{\numberline {7.6.2.1}Framebuffer()}{36}{paragraph.7.6.2.1}%
+\contentsline {paragraph}{\numberline {7.6.2.2}$\sim $Framebuffer()}{37}{paragraph.7.6.2.2}%
+\contentsline {subsubsection}{\numberline {7.6.3}Опис методів компонент}{37}{subsubsection.7.6.3}%
+\contentsline {paragraph}{\numberline {7.6.3.1}\_bind()}{37}{paragraph.7.6.3.1}%
+\contentsline {paragraph}{\numberline {7.6.3.2}\_default()}{37}{paragraph.7.6.3.2}%
+\contentsline {paragraph}{\numberline {7.6.3.3}\_generate()}{38}{paragraph.7.6.3.3}%
+\contentsline {paragraph}{\numberline {7.6.3.4}check()}{38}{paragraph.7.6.3.4}%
+\contentsline {paragraph}{\numberline {7.6.3.5}rb\_color()}{38}{paragraph.7.6.3.5}%
+\contentsline {paragraph}{\numberline {7.6.3.6}rb\_color\_multisample()}{39}{paragraph.7.6.3.6}%
+\contentsline {paragraph}{\numberline {7.6.3.7}rb\_depth()}{40}{paragraph.7.6.3.7}%
+\contentsline {paragraph}{\numberline {7.6.3.8}rb\_depth\_multisample()}{40}{paragraph.7.6.3.8}%
+\contentsline {paragraph}{\numberline {7.6.3.9}renderbuffer()}{41}{paragraph.7.6.3.9}%
+\contentsline {paragraph}{\numberline {7.6.3.10}tex\_2d()}{42}{paragraph.7.6.3.10}%
+\contentsline {paragraph}{\numberline {7.6.3.11}tex\_2d\_multisample()}{43}{paragraph.7.6.3.11}%
+\contentsline {subsection}{\numberline {7.7}Клас Gl\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Bindable}{43}{subsection.7.7}%
+\contentsline {subsubsection}{\numberline {7.7.1}Детальний опис}{44}{subsubsection.7.7.1}%
+\contentsline {subsubsection}{\numberline {7.7.2}Конструктор(и)}{44}{subsubsection.7.7.2}%
+\contentsline {paragraph}{\numberline {7.7.2.1}GlBindable()\hspace {0.1cm}{\footnotesize \ttfamily [1/4]}}{45}{paragraph.7.7.2.1}%
+\contentsline {paragraph}{\numberline {7.7.2.2}GlBindable()\hspace {0.1cm}{\footnotesize \ttfamily [2/4]}}{45}{paragraph.7.7.2.2}%
+\contentsline {paragraph}{\numberline {7.7.2.3}$\sim $GlBindable()}{45}{paragraph.7.7.2.3}%
+\contentsline {paragraph}{\numberline {7.7.2.4}GlBindable()\hspace {0.1cm}{\footnotesize \ttfamily [3/4]}}{45}{paragraph.7.7.2.4}%
+\contentsline {paragraph}{\numberline {7.7.2.5}GlBindable()\hspace {0.1cm}{\footnotesize \ttfamily [4/4]}}{45}{paragraph.7.7.2.5}%
+\contentsline {subsubsection}{\numberline {7.7.3}Опис методів компонент}{45}{subsubsection.7.7.3}%
+\contentsline {paragraph}{\numberline {7.7.3.1}\_bind()}{45}{paragraph.7.7.3.1}%
+\contentsline {paragraph}{\numberline {7.7.3.2}\_default()}{46}{paragraph.7.7.3.2}%
+\contentsline {paragraph}{\numberline {7.7.3.3}\_generate()}{47}{paragraph.7.7.3.3}%
+\contentsline {paragraph}{\numberline {7.7.3.4}bind()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{47}{paragraph.7.7.3.4}%
+\contentsline {paragraph}{\numberline {7.7.3.5}bind()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{47}{paragraph.7.7.3.5}%
+\contentsline {paragraph}{\numberline {7.7.3.6}binder()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{48}{paragraph.7.7.3.6}%
+\contentsline {paragraph}{\numberline {7.7.3.7}binder()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{49}{paragraph.7.7.3.7}%
+\contentsline {paragraph}{\numberline {7.7.3.8}get\_id()}{49}{paragraph.7.7.3.8}%
+\contentsline {paragraph}{\numberline {7.7.3.9}get\_vid()}{50}{paragraph.7.7.3.9}%
+\contentsline {paragraph}{\numberline {7.7.3.10}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{51}{paragraph.7.7.3.10}%
+\contentsline {paragraph}{\numberline {7.7.3.11}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{51}{paragraph.7.7.3.11}%
+\contentsline {paragraph}{\numberline {7.7.3.12}unbind()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{51}{paragraph.7.7.3.12}%
+\contentsline {paragraph}{\numberline {7.7.3.13}unbind()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{51}{paragraph.7.7.3.13}%
+\contentsline {subsubsection}{\numberline {7.7.4}Компонентні дані}{52}{subsubsection.7.7.4}%
+\contentsline {paragraph}{\numberline {7.7.4.1}id}{52}{paragraph.7.7.4.1}%
+\contentsline {subsection}{\numberline {7.8}Клас Gl\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Binder}{52}{subsection.7.8}%
+\contentsline {subsubsection}{\numberline {7.8.1}Детальний опис}{53}{subsubsection.7.8.1}%
+\contentsline {subsubsection}{\numberline {7.8.2}Конструктор(и)}{53}{subsubsection.7.8.2}%
+\contentsline {paragraph}{\numberline {7.8.2.1}GlBinder()}{53}{paragraph.7.8.2.1}%
+\contentsline {paragraph}{\numberline {7.8.2.2}$\sim $GlBinder()}{54}{paragraph.7.8.2.2}%
+\contentsline {subsubsection}{\numberline {7.8.3}Компонентні дані}{54}{subsubsection.7.8.3}%
+\contentsline {paragraph}{\numberline {7.8.3.1}bindable}{54}{paragraph.7.8.3.1}%
+\contentsline {paragraph}{\numberline {7.8.3.2}target}{54}{paragraph.7.8.3.2}%
+\contentsline {subsection}{\numberline {7.9}Клас Image}{54}{subsection.7.9}%
+\contentsline {subsubsection}{\numberline {7.9.1}Детальний опис}{55}{subsubsection.7.9.1}%
+\contentsline {subsubsection}{\numberline {7.9.2}Конструктор(и)}{55}{subsubsection.7.9.2}%
+\contentsline {paragraph}{\numberline {7.9.2.1}Image()}{55}{paragraph.7.9.2.1}%
+\contentsline {subsubsection}{\numberline {7.9.3}Опис методів компонент}{55}{subsubsection.7.9.3}%
+\contentsline {paragraph}{\numberline {7.9.3.1}fromFile()}{56}{paragraph.7.9.3.1}%
+\contentsline {subsubsection}{\numberline {7.9.4}Компонентні дані}{56}{subsubsection.7.9.4}%
+\contentsline {paragraph}{\numberline {7.9.4.1}data}{56}{paragraph.7.9.4.1}%
+\contentsline {paragraph}{\numberline {7.9.4.2}height}{56}{paragraph.7.9.4.2}%
+\contentsline {paragraph}{\numberline {7.9.4.3}width}{56}{paragraph.7.9.4.3}%
+\contentsline {subsection}{\numberline {7.10}Клас Mesh}{57}{subsection.7.10}%
+\contentsline {subsubsection}{\numberline {7.10.1}Детальний опис}{58}{subsubsection.7.10.1}%
+\contentsline {subsubsection}{\numberline {7.10.2}Конструктор(и)}{58}{subsubsection.7.10.2}%
+\contentsline {paragraph}{\numberline {7.10.2.1}Mesh()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{58}{paragraph.7.10.2.1}%
+\contentsline {paragraph}{\numberline {7.10.2.2}$\sim $Mesh()}{58}{paragraph.7.10.2.2}%
+\contentsline {paragraph}{\numberline {7.10.2.3}Mesh()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{58}{paragraph.7.10.2.3}%
+\contentsline {paragraph}{\numberline {7.10.2.4}Mesh()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{58}{paragraph.7.10.2.4}%
+\contentsline {subsubsection}{\numberline {7.10.3}Опис методів компонент}{59}{subsubsection.7.10.3}%
+\contentsline {paragraph}{\numberline {7.10.3.1}cube\_update()}{59}{paragraph.7.10.3.1}%
+\contentsline {paragraph}{\numberline {7.10.3.2}draw()}{59}{paragraph.7.10.3.2}%
+\contentsline {paragraph}{\numberline {7.10.3.3}draw\_mode()}{59}{paragraph.7.10.3.3}%
+\contentsline {paragraph}{\numberline {7.10.3.4}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{60}{paragraph.7.10.3.4}%
+\contentsline {paragraph}{\numberline {7.10.3.5}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{60}{paragraph.7.10.3.5}%
+\contentsline {paragraph}{\numberline {7.10.3.6}update()}{60}{paragraph.7.10.3.6}%
+\contentsline {subsubsection}{\numberline {7.10.4}Компонентні дані}{61}{subsubsection.7.10.4}%
+\contentsline {paragraph}{\numberline {7.10.4.1}ebo}{61}{paragraph.7.10.4.1}%
+\contentsline {paragraph}{\numberline {7.10.4.2}indices\_size}{61}{paragraph.7.10.4.2}%
+\contentsline {paragraph}{\numberline {7.10.4.3}vao}{61}{paragraph.7.10.4.3}%
+\contentsline {paragraph}{\numberline {7.10.4.4}vbo}{61}{paragraph.7.10.4.4}%
+\contentsline {subsection}{\numberline {7.11}Клас Model}{62}{subsection.7.11}%
+\contentsline {subsubsection}{\numberline {7.11.1}Детальний опис}{62}{subsubsection.7.11.1}%
+\contentsline {subsubsection}{\numberline {7.11.2}Конструктор(и)}{62}{subsubsection.7.11.2}%
+\contentsline {paragraph}{\numberline {7.11.2.1}$\sim $Model()}{62}{paragraph.7.11.2.1}%
+\contentsline {subsubsection}{\numberline {7.11.3}Опис методів компонент}{63}{subsubsection.7.11.3}%
+\contentsline {paragraph}{\numberline {7.11.3.1}draw()}{63}{paragraph.7.11.3.1}%
+\contentsline {paragraph}{\numberline {7.11.3.2}edit\_panel()}{63}{paragraph.7.11.3.2}%
+\contentsline {paragraph}{\numberline {7.11.3.3}generate()}{63}{paragraph.7.11.3.3}%
+\contentsline {paragraph}{\numberline {7.11.3.4}get\_vertices()}{63}{paragraph.7.11.3.4}%
+\contentsline {subsection}{\numberline {7.12}Клас Object}{64}{subsection.7.12}%
+\contentsline {subsubsection}{\numberline {7.12.1}Детальний опис}{66}{subsubsection.7.12.1}%
+\contentsline {subsubsection}{\numberline {7.12.2}Конструктор(и)}{66}{subsubsection.7.12.2}%
+\contentsline {paragraph}{\numberline {7.12.2.1}Object()}{66}{paragraph.7.12.2.1}%
+\contentsline {paragraph}{\numberline {7.12.2.2}$\sim $Object()}{66}{paragraph.7.12.2.2}%
+\contentsline {subsubsection}{\numberline {7.12.3}Опис методів компонент}{66}{subsubsection.7.12.3}%
+\contentsline {paragraph}{\numberline {7.12.3.1}add\_animation()}{66}{paragraph.7.12.3.1}%
+\contentsline {paragraph}{\numberline {7.12.3.2}animate()}{67}{paragraph.7.12.3.2}%
+\contentsline {paragraph}{\numberline {7.12.3.3}draw()}{68}{paragraph.7.12.3.3}%
+\contentsline {paragraph}{\numberline {7.12.3.4}get\_animation()}{69}{paragraph.7.12.3.4}%
+\contentsline {paragraph}{\numberline {7.12.3.5}get\_mat4()}{69}{paragraph.7.12.3.5}%
+\contentsline {paragraph}{\numberline {7.12.3.6}get\_model()}{70}{paragraph.7.12.3.6}%
+\contentsline {paragraph}{\numberline {7.12.3.7}get\_position()}{70}{paragraph.7.12.3.7}%
+\contentsline {paragraph}{\numberline {7.12.3.8}get\_rotation()}{70}{paragraph.7.12.3.8}%
+\contentsline {paragraph}{\numberline {7.12.3.9}get\_transform()}{70}{paragraph.7.12.3.9}%
+\contentsline {paragraph}{\numberline {7.12.3.10}rotate()}{71}{paragraph.7.12.3.10}%
+\contentsline {paragraph}{\numberline {7.12.3.11}rotate\_all()}{71}{paragraph.7.12.3.11}%
+\contentsline {paragraph}{\numberline {7.12.3.12}rotate\_all\_object()}{72}{paragraph.7.12.3.12}%
+\contentsline {paragraph}{\numberline {7.12.3.13}rotate\_object()}{72}{paragraph.7.12.3.13}%
+\contentsline {paragraph}{\numberline {7.12.3.14}scale()}{73}{paragraph.7.12.3.14}%
+\contentsline {paragraph}{\numberline {7.12.3.15}set\_animation()}{73}{paragraph.7.12.3.15}%
+\contentsline {paragraph}{\numberline {7.12.3.16}set\_position()}{73}{paragraph.7.12.3.16}%
+\contentsline {paragraph}{\numberline {7.12.3.17}set\_rotation()}{74}{paragraph.7.12.3.17}%
+\contentsline {paragraph}{\numberline {7.12.3.18}translate()}{74}{paragraph.7.12.3.18}%
+\contentsline {paragraph}{\numberline {7.12.3.19}translate\_object()}{74}{paragraph.7.12.3.19}%
+\contentsline {subsubsection}{\numberline {7.12.4}Компонентні дані}{75}{subsubsection.7.12.4}%
+\contentsline {paragraph}{\numberline {7.12.4.1}animation}{75}{paragraph.7.12.4.1}%
+\contentsline {paragraph}{\numberline {7.12.4.2}model}{75}{paragraph.7.12.4.2}%
+\contentsline {paragraph}{\numberline {7.12.4.3}position}{75}{paragraph.7.12.4.3}%
+\contentsline {paragraph}{\numberline {7.12.4.4}transform}{75}{paragraph.7.12.4.4}%
+\contentsline {subsection}{\numberline {7.13}Клас Renderbuffer}{76}{subsection.7.13}%
+\contentsline {subsubsection}{\numberline {7.13.1}Детальний опис}{77}{subsubsection.7.13.1}%
+\contentsline {subsubsection}{\numberline {7.13.2}Конструктор(и)}{77}{subsubsection.7.13.2}%
+\contentsline {paragraph}{\numberline {7.13.2.1}Renderbuffer()}{77}{paragraph.7.13.2.1}%
+\contentsline {paragraph}{\numberline {7.13.2.2}$\sim $Renderbuffer()}{77}{paragraph.7.13.2.2}%
+\contentsline {subsubsection}{\numberline {7.13.3}Опис методів компонент}{77}{subsubsection.7.13.3}%
+\contentsline {paragraph}{\numberline {7.13.3.1}\_bind()}{77}{paragraph.7.13.3.1}%
+\contentsline {paragraph}{\numberline {7.13.3.2}\_default()}{78}{paragraph.7.13.3.2}%
+\contentsline {paragraph}{\numberline {7.13.3.3}\_generate()}{78}{paragraph.7.13.3.3}%
+\contentsline {paragraph}{\numberline {7.13.3.4}make()}{78}{paragraph.7.13.3.4}%
+\contentsline {paragraph}{\numberline {7.13.3.5}make\_multisample()}{79}{paragraph.7.13.3.5}%
+\contentsline {subsection}{\numberline {7.14}Структура Scene}{80}{subsection.7.14}%
+\contentsline {subsubsection}{\numberline {7.14.1}Детальний опис}{81}{subsubsection.7.14.1}%
+\contentsline {subsubsection}{\numberline {7.14.2}Конструктор(и)}{81}{subsubsection.7.14.2}%
+\contentsline {paragraph}{\numberline {7.14.2.1}Scene()}{81}{paragraph.7.14.2.1}%
+\contentsline {subsubsection}{\numberline {7.14.3}Опис методів компонент}{81}{subsubsection.7.14.3}%
+\contentsline {paragraph}{\numberline {7.14.3.1}create()}{81}{paragraph.7.14.3.1}%
+\contentsline {subsubsection}{\numberline {7.14.4}Компонентні дані}{81}{subsubsection.7.14.4}%
+\contentsline {paragraph}{\numberline {7.14.4.1}objects}{82}{paragraph.7.14.4.1}%
+\contentsline {subsection}{\numberline {7.15}Клас Shader}{82}{subsection.7.15}%
+\contentsline {subsubsection}{\numberline {7.15.1}Детальний опис}{83}{subsubsection.7.15.1}%
+\contentsline {subsubsection}{\numberline {7.15.2}Опис типів користувача}{84}{subsubsection.7.15.2}%
+\contentsline {paragraph}{\numberline {7.15.2.1}shader\_map}{84}{paragraph.7.15.2.1}%
+\contentsline {subsubsection}{\numberline {7.15.3}Конструктор(и)}{84}{subsubsection.7.15.3}%
+\contentsline {paragraph}{\numberline {7.15.3.1}Shader()}{84}{paragraph.7.15.3.1}%
+\contentsline {paragraph}{\numberline {7.15.3.2}$\sim $Shader()}{84}{paragraph.7.15.3.2}%
+\contentsline {subsubsection}{\numberline {7.15.4}Опис методів компонент}{84}{subsubsection.7.15.4}%
+\contentsline {paragraph}{\numberline {7.15.4.1}\_bind()}{84}{paragraph.7.15.4.1}%
+\contentsline {paragraph}{\numberline {7.15.4.2}create()}{85}{paragraph.7.15.4.2}%
+\contentsline {paragraph}{\numberline {7.15.4.3}set\_bool()}{85}{paragraph.7.15.4.3}%
+\contentsline {paragraph}{\numberline {7.15.4.4}set\_float()}{86}{paragraph.7.15.4.4}%
+\contentsline {paragraph}{\numberline {7.15.4.5}set\_int()}{86}{paragraph.7.15.4.5}%
+\contentsline {paragraph}{\numberline {7.15.4.6}set\_mat2()}{87}{paragraph.7.15.4.6}%
+\contentsline {paragraph}{\numberline {7.15.4.7}set\_mat3()}{87}{paragraph.7.15.4.7}%
+\contentsline {paragraph}{\numberline {7.15.4.8}set\_mat4()}{88}{paragraph.7.15.4.8}%
+\contentsline {paragraph}{\numberline {7.15.4.9}set\_vec2()}{89}{paragraph.7.15.4.9}%
+\contentsline {paragraph}{\numberline {7.15.4.10}set\_vec2f()}{89}{paragraph.7.15.4.10}%
+\contentsline {paragraph}{\numberline {7.15.4.11}set\_vec3()}{90}{paragraph.7.15.4.11}%
+\contentsline {paragraph}{\numberline {7.15.4.12}set\_vec3f()}{90}{paragraph.7.15.4.12}%
+\contentsline {paragraph}{\numberline {7.15.4.13}set\_vec4()}{91}{paragraph.7.15.4.13}%
+\contentsline {paragraph}{\numberline {7.15.4.14}set\_vec4f()}{92}{paragraph.7.15.4.14}%
+\contentsline {subsection}{\numberline {7.16}Клас Shader\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Source}{92}{subsection.7.16}%
+\contentsline {subsubsection}{\numberline {7.16.1}Детальний опис}{93}{subsubsection.7.16.1}%
+\contentsline {subsubsection}{\numberline {7.16.2}Конструктор(и)}{93}{subsubsection.7.16.2}%
+\contentsline {paragraph}{\numberline {7.16.2.1}ShaderSource()}{93}{paragraph.7.16.2.1}%
+\contentsline {subsubsection}{\numberline {7.16.3}Опис методів компонент}{93}{subsubsection.7.16.3}%
+\contentsline {paragraph}{\numberline {7.16.3.1}attach()}{93}{paragraph.7.16.3.1}%
+\contentsline {paragraph}{\numberline {7.16.3.2}create()}{93}{paragraph.7.16.3.2}%
+\contentsline {paragraph}{\numberline {7.16.3.3}create\_file()}{94}{paragraph.7.16.3.3}%
+\contentsline {paragraph}{\numberline {7.16.3.4}get\_id()}{94}{paragraph.7.16.3.4}%
+\contentsline {subsubsection}{\numberline {7.16.4}Компонентні дані}{94}{subsubsection.7.16.4}%
+\contentsline {paragraph}{\numberline {7.16.4.1}id}{94}{paragraph.7.16.4.1}%
+\contentsline {subsection}{\numberline {7.17}Клас Texture}{95}{subsection.7.17}%
+\contentsline {subsubsection}{\numberline {7.17.1}Детальний опис}{96}{subsubsection.7.17.1}%
+\contentsline {subsubsection}{\numberline {7.17.2}Конструктор(и)}{96}{subsubsection.7.17.2}%
+\contentsline {paragraph}{\numberline {7.17.2.1}Texture()}{96}{paragraph.7.17.2.1}%
+\contentsline {paragraph}{\numberline {7.17.2.2}$\sim $Texture()}{96}{paragraph.7.17.2.2}%
+\contentsline {subsubsection}{\numberline {7.17.3}Опис методів компонент}{96}{subsubsection.7.17.3}%
+\contentsline {paragraph}{\numberline {7.17.3.1}\_bind()}{96}{paragraph.7.17.3.1}%
+\contentsline {paragraph}{\numberline {7.17.3.2}\_default()}{97}{paragraph.7.17.3.2}%
+\contentsline {paragraph}{\numberline {7.17.3.3}\_generate()}{97}{paragraph.7.17.3.3}%
+\contentsline {paragraph}{\numberline {7.17.3.4}make\_2d()}{97}{paragraph.7.17.3.4}%
+\contentsline {paragraph}{\numberline {7.17.3.5}make\_2d\_multisample()}{98}{paragraph.7.17.3.5}%
+\contentsline {paragraph}{\numberline {7.17.3.6}update()}{99}{paragraph.7.17.3.6}%
+\contentsline {subsection}{\numberline {7.18}Шаблон класу OSDO\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::vector$<$ T $>$}{99}{subsection.7.18}%
+\contentsline {subsubsection}{\numberline {7.18.1}Детальний опис}{100}{subsubsection.7.18.1}%
+\contentsline {subsubsection}{\numberline {7.18.2}Конструктор(и)}{100}{subsubsection.7.18.2}%
+\contentsline {paragraph}{\numberline {7.18.2.1}vector()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{100}{paragraph.7.18.2.1}%
+\contentsline {paragraph}{\numberline {7.18.2.2}vector()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{101}{paragraph.7.18.2.2}%
+\contentsline {paragraph}{\numberline {7.18.2.3}vector()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{101}{paragraph.7.18.2.3}%
+\contentsline {paragraph}{\numberline {7.18.2.4}$\sim $vector()}{102}{paragraph.7.18.2.4}%
+\contentsline {subsubsection}{\numberline {7.18.3}Опис методів компонент}{102}{subsubsection.7.18.3}%
+\contentsline {paragraph}{\numberline {7.18.3.1}\_allocate()}{102}{paragraph.7.18.3.1}%
+\contentsline {paragraph}{\numberline {7.18.3.2}\_copy()}{103}{paragraph.7.18.3.2}%
+\contentsline {paragraph}{\numberline {7.18.3.3}\_free()}{104}{paragraph.7.18.3.3}%
+\contentsline {paragraph}{\numberline {7.18.3.4}\_move()}{104}{paragraph.7.18.3.4}%
+\contentsline {paragraph}{\numberline {7.18.3.5}clear()}{105}{paragraph.7.18.3.5}%
+\contentsline {paragraph}{\numberline {7.18.3.6}data()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{105}{paragraph.7.18.3.6}%
+\contentsline {paragraph}{\numberline {7.18.3.7}data()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{105}{paragraph.7.18.3.7}%
+\contentsline {paragraph}{\numberline {7.18.3.8}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{105}{paragraph.7.18.3.8}%
+\contentsline {paragraph}{\numberline {7.18.3.9}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{106}{paragraph.7.18.3.9}%
+\contentsline {paragraph}{\numberline {7.18.3.10}operator[]()}{106}{paragraph.7.18.3.10}%
+\contentsline {paragraph}{\numberline {7.18.3.11}size()}{106}{paragraph.7.18.3.11}%
+\contentsline {subsubsection}{\numberline {7.18.4}Компонентні дані}{106}{subsubsection.7.18.4}%
+\contentsline {paragraph}{\numberline {7.18.4.1}\_size}{106}{paragraph.7.18.4.1}%
+\contentsline {paragraph}{\numberline {7.18.4.2}arr}{107}{paragraph.7.18.4.2}%
+\contentsline {subsection}{\numberline {7.19}Структура Vertex}{107}{subsection.7.19}%
+\contentsline {subsubsection}{\numberline {7.19.1}Детальний опис}{107}{subsubsection.7.19.1}%
+\contentsline {subsubsection}{\numberline {7.19.2}Компонентні дані}{107}{subsubsection.7.19.2}%
+\contentsline {paragraph}{\numberline {7.19.2.1}color}{107}{paragraph.7.19.2.1}%
+\contentsline {paragraph}{\numberline {7.19.2.2}normal}{108}{paragraph.7.19.2.2}%
+\contentsline {paragraph}{\numberline {7.19.2.3}position}{108}{paragraph.7.19.2.3}%
+\contentsline {paragraph}{\numberline {7.19.2.4}uv}{108}{paragraph.7.19.2.4}%
+\contentsline {section}{\numberline {8}Файли}{108}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Файл LICENSE.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md}{108}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Файл osdo/beziator.cpp}{108}{subsection.8.2}%
+\contentsline {subsubsection}{\numberline {8.2.1}Опис макровизначень}{109}{subsubsection.8.2.1}%
+\contentsline {paragraph}{\numberline {8.2.1.1}BEZIER\_TANGENT\_INIT}{110}{paragraph.8.2.1.1}%
+\contentsline {paragraph}{\numberline {8.2.1.2}ucast}{110}{paragraph.8.2.1.2}%
+\contentsline {subsubsection}{\numberline {8.2.2}Опис визначень типів}{110}{subsubsection.8.2.2}%
+\contentsline {paragraph}{\numberline {8.2.2.1}surface\_t}{110}{paragraph.8.2.2.1}%
+\contentsline {subsubsection}{\numberline {8.2.3}Опис функцій}{110}{subsubsection.8.2.3}%
+\contentsline {paragraph}{\numberline {8.2.3.1}bezier\_curve()}{110}{paragraph.8.2.3.1}%
+\contentsline {paragraph}{\numberline {8.2.3.2}bezier\_curve\_tangent()}{111}{paragraph.8.2.3.2}%
+\contentsline {paragraph}{\numberline {8.2.3.3}bezier\_surface()}{111}{paragraph.8.2.3.3}%
+\contentsline {subsection}{\numberline {8.3}beziator.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{112}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Файл osdo/beziator.h}{115}{subsection.8.4}%
+\contentsline {subsubsection}{\numberline {8.4.1}Детальний опис}{116}{subsubsection.8.4.1}%
+\contentsline {subsubsection}{\numberline {8.4.2}Опис визначень типів}{116}{subsubsection.8.4.2}%
+\contentsline {paragraph}{\numberline {8.4.2.1}surfacei\_t}{116}{paragraph.8.4.2.1}%
+\contentsline {subsection}{\numberline {8.5}beziator.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{117}{subsection.8.5}%
+\contentsline {subsection}{\numberline {8.6}Файл osdo/bijective.h}{118}{subsection.8.6}%
+\contentsline {subsubsection}{\numberline {8.6.1}Детальний опис}{119}{subsubsection.8.6.1}%
+\contentsline {subsection}{\numberline {8.7}bijective.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{119}{subsection.8.7}%
+\contentsline {subsection}{\numberline {8.8}Файл osdo/buffer.cpp}{120}{subsection.8.8}%
+\contentsline {subsection}{\numberline {8.9}buffer.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{121}{subsection.8.9}%
+\contentsline {subsection}{\numberline {8.10}Файл osdo/buffer.h}{122}{subsection.8.10}%
+\contentsline {subsubsection}{\numberline {8.10.1}Детальний опис}{123}{subsubsection.8.10.1}%
+\contentsline {subsection}{\numberline {8.11}buffer.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{123}{subsection.8.11}%
+\contentsline {subsection}{\numberline {8.12}Файл osdo/camera.cpp}{123}{subsection.8.12}%
+\contentsline {subsubsection}{\numberline {8.12.1}Опис змінних}{124}{subsubsection.8.12.1}%
+\contentsline {paragraph}{\numberline {8.12.1.1}CAMERA\_DIRECTION}{124}{paragraph.8.12.1.1}%
+\contentsline {subsection}{\numberline {8.13}camera.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{124}{subsection.8.13}%
+\contentsline {subsection}{\numberline {8.14}Файл osdo/camera.h}{126}{subsection.8.14}%
+\contentsline {subsubsection}{\numberline {8.14.1}Детальний опис}{127}{subsubsection.8.14.1}%
+\contentsline {subsubsection}{\numberline {8.14.2}Опис макровизначень}{127}{subsubsection.8.14.2}%
+\contentsline {paragraph}{\numberline {8.14.2.1}CAMERA\_DIRECTION\_INIT}{127}{paragraph.8.14.2.1}%
+\contentsline {subsection}{\numberline {8.15}camera.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{128}{subsection.8.15}%
+\contentsline {subsection}{\numberline {8.16}Файл osdo/conf.h}{129}{subsection.8.16}%
+\contentsline {subsubsection}{\numberline {8.16.1}Детальний опис}{131}{subsubsection.8.16.1}%
+\contentsline {subsubsection}{\numberline {8.16.2}Опис макровизначень}{131}{subsubsection.8.16.2}%
+\contentsline {paragraph}{\numberline {8.16.2.1}BEZIATOR\_PATH}{131}{paragraph.8.16.2.1}%
+\contentsline {paragraph}{\numberline {8.16.2.2}FRAGMENT\_PATH}{131}{paragraph.8.16.2.2}%
+\contentsline {paragraph}{\numberline {8.16.2.3}GEOMETRY\_PATH}{131}{paragraph.8.16.2.3}%
+\contentsline {paragraph}{\numberline {8.16.2.4}M\_PI}{132}{paragraph.8.16.2.4}%
+\contentsline {paragraph}{\numberline {8.16.2.5}M\_PI\_F}{132}{paragraph.8.16.2.5}%
+\contentsline {paragraph}{\numberline {8.16.2.6}M\_RAD}{132}{paragraph.8.16.2.6}%
+\contentsline {paragraph}{\numberline {8.16.2.7}M\_RAD\_F}{132}{paragraph.8.16.2.7}%
+\contentsline {paragraph}{\numberline {8.16.2.8}MAX\_ELEMENT\_BUFFER}{132}{paragraph.8.16.2.8}%
+\contentsline {paragraph}{\numberline {8.16.2.9}MAX\_VERTEX\_BUFFER}{132}{paragraph.8.16.2.9}%
+\contentsline {paragraph}{\numberline {8.16.2.10}NK\_GLFW\_DOUBLE\_CLICK\_HI}{132}{paragraph.8.16.2.10}%
+\contentsline {paragraph}{\numberline {8.16.2.11}NK\_GLFW\_DOUBLE\_CLICK\_LO}{133}{paragraph.8.16.2.11}%
+\contentsline {paragraph}{\numberline {8.16.2.12}RES\_DIR}{133}{paragraph.8.16.2.12}%
+\contentsline {paragraph}{\numberline {8.16.2.13}TESC\_PATH}{133}{paragraph.8.16.2.13}%
+\contentsline {paragraph}{\numberline {8.16.2.14}TESE\_PATH}{133}{paragraph.8.16.2.14}%
+\contentsline {paragraph}{\numberline {8.16.2.15}VERTEX\_PATH}{133}{paragraph.8.16.2.15}%
+\contentsline {subsection}{\numberline {8.17}conf.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{134}{subsection.8.17}%
+\contentsline {subsection}{\numberline {8.18}Файл osdo/context.cpp}{136}{subsection.8.18}%
+\contentsline {subsection}{\numberline {8.19}context.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{136}{subsection.8.19}%
+\contentsline {subsection}{\numberline {8.20}Файл osdo/context.h}{136}{subsection.8.20}%
+\contentsline {subsubsection}{\numberline {8.20.1}Детальний опис}{137}{subsubsection.8.20.1}%
+\contentsline {subsection}{\numberline {8.21}context.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{138}{subsection.8.21}%
+\contentsline {subsection}{\numberline {8.22}Файл osdo/easyvector.h}{139}{subsection.8.22}%
+\contentsline {subsubsection}{\numberline {8.22.1}Детальний опис}{139}{subsubsection.8.22.1}%
+\contentsline {subsection}{\numberline {8.23}easyvector.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{140}{subsection.8.23}%
+\contentsline {subsection}{\numberline {8.24}Файл osdo/framebuffer.cpp}{141}{subsection.8.24}%
+\contentsline {subsection}{\numberline {8.25}framebuffer.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{142}{subsection.8.25}%
+\contentsline {subsection}{\numberline {8.26}Файл osdo/framebuffer.h}{142}{subsection.8.26}%
+\contentsline {subsubsection}{\numberline {8.26.1}Детальний опис}{143}{subsubsection.8.26.1}%
+\contentsline {subsection}{\numberline {8.27}framebuffer.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{144}{subsection.8.27}%
+\contentsline {subsection}{\numberline {8.28}Файл osdo/glbindable.cpp}{145}{subsection.8.28}%
+\contentsline {subsection}{\numberline {8.29}glbindable.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{145}{subsection.8.29}%
+\contentsline {subsection}{\numberline {8.30}Файл osdo/glbindable.h}{146}{subsection.8.30}%
+\contentsline {subsubsection}{\numberline {8.30.1}Детальний опис}{147}{subsubsection.8.30.1}%
+\contentsline {subsection}{\numberline {8.31}glbindable.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{147}{subsection.8.31}%
+\contentsline {subsection}{\numberline {8.32}Файл osdo/glbinder.cpp}{148}{subsection.8.32}%
+\contentsline {subsection}{\numberline {8.33}glbinder.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{149}{subsection.8.33}%
+\contentsline {subsection}{\numberline {8.34}Файл osdo/glbinder.h}{149}{subsection.8.34}%
+\contentsline {subsubsection}{\numberline {8.34.1}Детальний опис}{150}{subsubsection.8.34.1}%
+\contentsline {subsection}{\numberline {8.35}glbinder.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{150}{subsection.8.35}%
+\contentsline {subsection}{\numberline {8.36}Файл osdo/image.cpp}{151}{subsection.8.36}%
+\contentsline {subsubsection}{\numberline {8.36.1}Опис макровизначень}{151}{subsubsection.8.36.1}%
+\contentsline {paragraph}{\numberline {8.36.1.1}STB\_IMAGE\_IMPLEMENTATION}{151}{paragraph.8.36.1.1}%
+\contentsline {subsection}{\numberline {8.37}image.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{152}{subsection.8.37}%
+\contentsline {subsection}{\numberline {8.38}Файл osdo/image.h}{152}{subsection.8.38}%
+\contentsline {subsubsection}{\numberline {8.38.1}Детальний опис}{153}{subsubsection.8.38.1}%
+\contentsline {subsubsection}{\numberline {8.38.2}Опис макровизначень}{153}{subsubsection.8.38.2}%
+\contentsline {paragraph}{\numberline {8.38.2.1}COMP}{153}{paragraph.8.38.2.1}%
+\contentsline {subsubsection}{\numberline {8.38.3}Опис визначень типів}{153}{subsubsection.8.38.3}%
+\contentsline {paragraph}{\numberline {8.38.3.1}channel\_t}{153}{paragraph.8.38.3.1}%
+\contentsline {paragraph}{\numberline {8.38.3.2}pixel\_t}{154}{paragraph.8.38.3.2}%
+\contentsline {subsection}{\numberline {8.39}image.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{154}{subsection.8.39}%
+\contentsline {subsection}{\numberline {8.40}Файл osdo/mesh.cpp}{155}{subsection.8.40}%
+\contentsline {subsection}{\numberline {8.41}mesh.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{155}{subsection.8.41}%
+\contentsline {subsection}{\numberline {8.42}Файл osdo/mesh.h}{156}{subsection.8.42}%
+\contentsline {subsubsection}{\numberline {8.42.1}Детальний опис}{157}{subsubsection.8.42.1}%
+\contentsline {subsection}{\numberline {8.43}mesh.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{158}{subsection.8.43}%
+\contentsline {subsection}{\numberline {8.44}Файл osdo/model.cpp}{158}{subsection.8.44}%
+\contentsline {subsection}{\numberline {8.45}model.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{159}{subsection.8.45}%
+\contentsline {subsection}{\numberline {8.46}Файл osdo/model.h}{159}{subsection.8.46}%
+\contentsline {subsubsection}{\numberline {8.46.1}Детальний опис}{160}{subsubsection.8.46.1}%
+\contentsline {subsection}{\numberline {8.47}model.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{161}{subsection.8.47}%
+\contentsline {subsection}{\numberline {8.48}Файл osdo/object.cpp}{161}{subsection.8.48}%
+\contentsline {subsection}{\numberline {8.49}object.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{162}{subsection.8.49}%
+\contentsline {subsection}{\numberline {8.50}Файл osdo/object.h}{163}{subsection.8.50}%
+\contentsline {subsubsection}{\numberline {8.50.1}Детальний опис}{164}{subsubsection.8.50.1}%
+\contentsline {subsection}{\numberline {8.51}object.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{164}{subsection.8.51}%
+\contentsline {subsection}{\numberline {8.52}Файл osdo/osdo.cpp}{166}{subsection.8.52}%
+\contentsline {subsubsection}{\numberline {8.52.1}Опис функцій}{167}{subsubsection.8.52.1}%
+\contentsline {paragraph}{\numberline {8.52.1.1}operator new[]()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{167}{paragraph.8.52.1.1}%
+\contentsline {paragraph}{\numberline {8.52.1.2}operator new[]()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{168}{paragraph.8.52.1.2}%
+\contentsline {subsubsection}{\numberline {8.52.2}Опис змінних}{168}{subsubsection.8.52.2}%
+\contentsline {paragraph}{\numberline {8.52.2.1}BASIS0POS}{168}{paragraph.8.52.2.1}%
+\contentsline {subsection}{\numberline {8.53}osdo.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{168}{subsection.8.53}%
+\contentsline {subsection}{\numberline {8.54}Файл osdo/osdo.h}{168}{subsection.8.54}%
+\contentsline {subsubsection}{\numberline {8.54.1}Опис макровизначень}{169}{subsubsection.8.54.1}%
+\contentsline {paragraph}{\numberline {8.54.1.1}UNUSED}{169}{paragraph.8.54.1.1}%
+\contentsline {subsubsection}{\numberline {8.54.2}Опис переліків}{169}{subsubsection.8.54.2}%
+\contentsline {paragraph}{\numberline {8.54.2.1}coord\_enum}{169}{paragraph.8.54.2.1}%
+\contentsline {subsubsection}{\numberline {8.54.3}Опис функцій}{170}{subsubsection.8.54.3}%
+\contentsline {paragraph}{\numberline {8.54.3.1}operator new[]()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{170}{paragraph.8.54.3.1}%
+\contentsline {paragraph}{\numberline {8.54.3.2}operator new[]()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{170}{paragraph.8.54.3.2}%
+\contentsline {subsubsection}{\numberline {8.54.4}Опис змінних}{170}{subsubsection.8.54.4}%
+\contentsline {paragraph}{\numberline {8.54.4.1}BASIS0POS}{170}{paragraph.8.54.4.1}%
+\contentsline {subsection}{\numberline {8.55}osdo.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{171}{subsection.8.55}%
+\contentsline {subsection}{\numberline {8.56}Файл osdo/renderbuffer.cpp}{171}{subsection.8.56}%
+\contentsline {subsection}{\numberline {8.57}renderbuffer.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{172}{subsection.8.57}%
+\contentsline {subsection}{\numberline {8.58}Файл osdo/renderbuffer.h}{173}{subsection.8.58}%
+\contentsline {subsubsection}{\numberline {8.58.1}Детальний опис}{174}{subsubsection.8.58.1}%
+\contentsline {subsection}{\numberline {8.59}renderbuffer.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{174}{subsection.8.59}%
+\contentsline {subsection}{\numberline {8.60}Файл osdo/scene.cpp}{174}{subsection.8.60}%
+\contentsline {subsection}{\numberline {8.61}scene.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{175}{subsection.8.61}%
+\contentsline {subsection}{\numberline {8.62}Файл osdo/scene.h}{175}{subsection.8.62}%
+\contentsline {subsubsection}{\numberline {8.62.1}Детальний опис}{176}{subsubsection.8.62.1}%
+\contentsline {subsection}{\numberline {8.63}scene.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{176}{subsection.8.63}%
+\contentsline {subsection}{\numberline {8.64}Файл osdo/shader.cpp}{177}{subsection.8.64}%
+\contentsline {subsubsection}{\numberline {8.64.1}Опис функцій}{177}{subsubsection.8.64.1}%
+\contentsline {paragraph}{\numberline {8.64.1.1}check\_shader()}{177}{paragraph.8.64.1.1}%
+\contentsline {paragraph}{\numberline {8.64.1.2}compile()}{178}{paragraph.8.64.1.2}%
+\contentsline {paragraph}{\numberline {8.64.1.3}readFromFile()}{178}{paragraph.8.64.1.3}%
+\contentsline {subsection}{\numberline {8.65}shader.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{178}{subsection.8.65}%
+\contentsline {subsection}{\numberline {8.66}Файл osdo/shader.h}{180}{subsection.8.66}%
+\contentsline {subsubsection}{\numberline {8.66.1}Детальний опис}{182}{subsubsection.8.66.1}%
+\contentsline {subsubsection}{\numberline {8.66.2}Опис переліків}{182}{subsubsection.8.66.2}%
+\contentsline {paragraph}{\numberline {8.66.2.1}ShaderType}{182}{paragraph.8.66.2.1}%
+\contentsline {subsection}{\numberline {8.67}shader.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{182}{subsection.8.67}%
+\contentsline {subsection}{\numberline {8.68}Файл osdo/texture.cpp}{184}{subsection.8.68}%
+\contentsline {subsubsection}{\numberline {8.68.1}Опис функцій}{184}{subsubsection.8.68.1}%
+\contentsline {paragraph}{\numberline {8.68.1.1}LoadTextureFromFile()}{185}{paragraph.8.68.1.1}%
+\contentsline {subsection}{\numberline {8.69}texture.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{185}{subsection.8.69}%
+\contentsline {subsection}{\numberline {8.70}Файл osdo/texture.h}{186}{subsection.8.70}%
+\contentsline {subsubsection}{\numberline {8.70.1}Детальний опис}{187}{subsubsection.8.70.1}%
+\contentsline {subsection}{\numberline {8.71}texture.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{187}{subsection.8.71}%
+\contentsline {subsection}{\numberline {8.72}Файл osdo/vertex.h}{188}{subsection.8.72}%
+\contentsline {subsubsection}{\numberline {8.72.1}Детальний опис}{188}{subsubsection.8.72.1}%
+\contentsline {subsection}{\numberline {8.73}vertex.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{189}{subsection.8.73}%
+\contentsline {subsection}{\numberline {8.74}Файл res/bezier.frag}{189}{subsection.8.74}%
+\contentsline {subsection}{\numberline {8.75}bezier.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}frag}{189}{subsection.8.75}%
+\contentsline {subsection}{\numberline {8.76}Файл res/bezier.geom}{190}{subsection.8.76}%
+\contentsline {subsection}{\numberline {8.77}bezier.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}geom}{190}{subsection.8.77}%
+\contentsline {subsection}{\numberline {8.78}Файл res/bezier.tesc}{190}{subsection.8.78}%
+\contentsline {subsection}{\numberline {8.79}bezier.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}tesc}{190}{subsection.8.79}%
+\contentsline {subsection}{\numberline {8.80}Файл res/bezier.tese}{191}{subsection.8.80}%
+\contentsline {subsection}{\numberline {8.81}bezier.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}tese}{191}{subsection.8.81}%
+\contentsline {subsection}{\numberline {8.82}Файл res/bezier.vert}{192}{subsection.8.82}%
+\contentsline {subsection}{\numberline {8.83}bezier.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}vert}{192}{subsection.8.83}%

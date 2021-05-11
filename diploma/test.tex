@@ -1,0 +1,114 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\let\mypdfximage\pdfximage\def\pdfximage{\immediate\mypdfximage}\documentclass[14pt,a4paper]{extarticle}
+
+\usepackage{ifthen}
+\ifx\requestedLaTeXdate\undefined
+\usepackage{array}
+\else
+\usepackage{array}[=2016-10-06]
+\fi
+% Packages required by doxygen
+\usepackage{fixltx2e}
+\usepackage{doxygen}
+\usepackage{graphicx}
+\usepackage[utf8x]{inputenc}
+\usepackage{makeidx}
+\PassOptionsToPackage{warn}{textcomp}
+\usepackage{textcomp}
+\usepackage[nointegrals]{wasysym}
+\usepackage{ifxetex}
+
+\usepackage{mathtools} % Mathematical tools to use with amsmath
+%\usepackage{amsfonts} % TeX fonts from the American Mathematical Society
+\usepackage{ifxetex}
+\usepackage{indentfirst} % Indent first paragraph after section header
+\ifxetex
+  \usepackage{mathspec} % Specify arbitrary fonts for mathematics in XeTeX
+  \usepackage{fontspec} % Advanced font selection in XeLaTeX and LuaLaTeX
+  \usepackage{polyglossia} % Multilingual support for XeLaTeX
+\else
+  %\usepackage[utf8x]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[ukrainian]{babel}
+\fi
+\usepackage[
+  left=2.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm,
+  headheight=5mm,headsep=5mm,includehead
+]{geometry} % Flexible and complete interface to document dimensions
+\usepackage{makeidx} % Standard LaTeX package for creating indexes
+%\usepackage[
+%  colorlinks=true, allcolors=black,
+%]{hyperref} % Extensive support for hypertext in LaTeX
+\usepackage{titlesec} % Select alternative section titles
+%\usepackage{array} % Extending the array and tabular environments
+\usepackage{amsthm} % Typesetting theorems (AMS style)
+%\usepackage{mathrsfs} % Support for using RSFS fonts in maths
+%\usepackage{amssymb}
+
+%\usepackage{cprotect}% http://ctan.org/pkg/cprotect
+%\usepackage{listings} % Typeset source code listings using LaTeX
+%\usepackage{minted}
+\usepackage{fancyhdr}
+\usepackage{ulem}
+%\usepackage{multicol}
+\usepackage[nottoc]{tocbibind}
+%\usepackage{longtable}
+%\usepackage{pgfplots} % Create normal/logarithmic plots !slow
+\usepackage{titletoc}
+\usepackage{pgf}
+%\usepackage{tikz}
+\usepackage[section]{placeins}
+\usepackage[labelsep=period,bf,textfont=bf]{caption}
+%\usepackage{pst-node, pst-plot, auto-pst-pdf}
+\usepackage{setspace}
+
+% latex
+\pagestyle{myheadings}
+
+\ifxetex
+  % mathspec
+  \setmathsfont(Digits,Latin,Greek){Times New Roman}
+
+  % fontspe
+  \defaultfontfeatures{Mapping=tex-text}
+  \setmainfont{Times New Roman}
+  \newfontfamily\cyrillicfont{Times New Roman}
+  %\setmonofont[Mapping=tex-text]{Fantasque Sans Mono}
+  %\newfontfamily\cyrillicfontsf[Script=Cyrillic]{Fantasque Sans Mono}
+  %\newfontfamily\cyrillicfonttt[Script=Cyrillic]{Fantasque Sans Mono}
+
+  % polyglossia
+  \setdefaultlanguage{ukrainian}
+\fi
+
+\ifpdf
+  \usepackage[pdftex,
+  colorlinks=true, allcolors=black,]{hyperref}
+\else
+  \ifxetex
+    \usepackage[
+  colorlinks=true, allcolors=black,]{hyperref}
+  \else
+    \usepackage[ps2pdf,
+  colorlinks=true, allcolors=black,]{hyperref}
+  \fi
+\fi
+
+%\newcommand{\+}{\discretionary{\mbox{\scriptsize$\hookleftarrow$}}{}{}}
+
+\hypersetup{%
+  colorlinks=true,%
+  linkcolor=blue,%
+  citecolor=blue,%
+  unicode%
+}
+
+\begin{document}
+
+\input{annotated}
+
+\input{classBeziator}
+
+\end{document}
