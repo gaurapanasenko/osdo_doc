@@ -90,14 +90,14 @@
 
 % titlesec
 \titleformat{\section}
-  {\linespread{1.25}\newpage\normalfont\bfseries\centering\MakeUppercase}{\thesection. }{0pt}{}
+  {\linespread{1.25}\newpage\normalfont\centering\MakeUppercase}{\thesection\ }{0pt}{}
 \titleformat{\subsection}
-  {\linespread{1.25}\normalfont\normalfont\bfseries}{\thesubsection. }{0pt}{}
+  {\linespread{1.25}\normalfont\normalfont}{\thesubsection\ }{0pt}{}
 \titleformat{\subsubsection}
-  {\linespread{1.25}\normalfont\bfseries}{\thesubsubsection. }{0pt}{}
-\titlespacing\section{0.0pt}{1em plus 0pt minus 0pt}{1em plus 0pt minus 0pt}
-\titlespacing\subsection{\parindent}{1em plus 0pt minus 0pt}{1em plus 0pt minus 0pt}
-\titlespacing\subsubsection{\parindent}{1em plus 0pt minus 0pt}{1em plus 0pt minus 0pt}
+  {\linespread{1.25}\normalfont}{\thesubsubsection\ }{0pt}{}
+\titlespacing\section{0.0pt}{2em plus 0pt minus 0pt}{2em plus 0pt minus 0pt}
+\titlespacing\subsection{\parindent}{2em plus 0pt minus 0pt}{2em plus 0pt minus 0pt}
+\titlespacing\subsubsection{\parindent}{2em plus 0pt minus 0pt}{2em plus 0pt minus 0pt}
 
 % array
 \def\arraystretch{1.5}
@@ -114,8 +114,8 @@
 %\dottedcontents{section}[1em]{}{1.5em}{1pc}
 %\dottedcontents{subsection}[2.5em]{}{2em}{1pc}
 %\titlecontents*{section}[0cm]{\small}{\thecontentslabel. \uppercase}{\uppercase}{ \titlerule*[1pc]{.}\contentspage\\}[][]
-\titlecontents*{subsection}[0cm]{\small}{\hspace*{1cm}\thecontentslabel. }{}{ \titlerule*[1pc]{.}\contentspage\\}[][]
-\titlecontents*{subsubsection}[0cm]{\small}{\hspace*{2cm}\thecontentslabel. }{}{ \titlerule*[1pc]{.}\contentspage\\}[][]
+\titlecontents*{subsection}[0cm]{\small}{\hspace*{1cm}\thecontentslabel\ }{}{ \titlerule*[1pc]{.}\contentspage\\}[][]
+\titlecontents*{subsubsection}[0cm]{\small}{\hspace*{2cm}\thecontentslabel\ }{}{ \titlerule*[1pc]{.}\contentspage\\}[][]
 
 \makeatletter
 \def\@maketitle{%
@@ -208,19 +208,38 @@
 \includepdf[pages=-]{Титул_2021_диплом_днев_ПА-17-2_1.pdf}
 \includepdf[pages=-]{Завдання_на_дипломну_роботу_дневники_ПА-17-2_Панасенко.pdf}
 
-Дипломна робота складається з~\pageref{lastpage} с., рис., табл., джерел, додатки.
+\thispagestyle{empty}
+\begin{center}
+РЕФЕРАТ
+\end{center}
+
+
+Дипломна робота складається з~\pageref{lastpage} с., 7 рис., 7 джерел, 1 додаток.
 
 Об'єктом дослідження даної дипломної роботи є 3D-моделі об'єктів побудованих за допомогою сплайнів, програмне забезпечення для роботи з 3D-моделями.
 
-Мета роботи: розробка програмного забезпечення для генерація та відображення 3D-моделей об'єктів у комп'ютерних іграх з використанням сплайнів у режимі реального часу.
+Мета роботи: розробка програмного забезпечення для генерації та відображення 3D-моделей об'єктів у комп'ютерних іграх з використанням сплайнів у режимі реального часу.
 
-Методика (метод) дослідження: ???
+Методика (метод) дослідження: порівняльний аналіз  сучасних засобів збереження графічних даних, графічних бібліотек; проведення тестування програмного забезпечення на відомих тестових прикладах
 
-Одержані висновки та їх новизна: ???
+Одержані висновки та їх новизна: У роботі запропоновані підходи до моделювання гладких об'єктів складної форми та розроблено програмне забезпечення для відображення й редагування вказаних об'єктів. Результати досліджень можуть бути використані для створення об'єктів складної форми у системі моделювання, при розробці комп'ютерних ігор.
 
-Результати досліджень можуть бути застосовані при розробці 3D-моделей об'єктів у комп'ютерних іграх з використанням сплайнів.
+Результати досліджень можуть бути застосовані при розробці 3D-моделей об'єктів у комп'ютерних іграх.
 
-Перелік ключових слів: КРИВА БЕЗ'Є, ПОВЕРХНЯ БЕЗ'Є, IMGUI, ТЕСЕЛЯЦІЙНИЙ ШЕЙДЕР, 3D-МОДЕЛІ
+Перелік ключових слів: КРИВА БЕЗ'Є, ПОВЕРХНЯ БЕЗ'Є, IMGUI, ТЕСЕЛЯЦІЙНИЙ ШЕЙДЕР, 3D-МОДЕЛІ.
+
+\newpage
+
+\begin{center}
+ANNOTATION
+\end{center}
+
+The diploma work of the 4th year student Yehor Panasenko (DNU, Faculty of Applied Mathematics, Department of Computer Technology) is devoted to rendering models with Bezier surfaces.
+
+Modeling and rendering of complex shape spatial objects with a large amount of calculated data, as well as the ability to edit them - an important modern task. The problem of visualization arises in industrial design, graphical representation of the results of scientific experiments, virtual reality systems, in the computer game industry. These areas of human activity are constantly expanding and improving, so the relevance of work related to the study of modeling and visualization of complex objects will continue to grow. So in this work it is proposed to solve complex shape objects rendering problem with Bezier surfaces.
+
+\bigskip
+Bibliography – 7, pictures – 7
 
 \thispagestyle{fancy}
 \fancyhf{}% Clear all headers/footers
@@ -228,7 +247,7 @@
 \renewcommand{\footrulewidth}{0pt}% No footer rule
 
 {
-\titlecontents*{section}[0pt]{\small}{\thecontentslabel. \uppercase}{\uppercase}{ \titlerule*[1pc]{.}\contentspage\\}[][]
+\titlecontents*{section}[0pt]{\small}{\thecontentslabel\ \uppercase}{\uppercase}{ \titlerule*[1pc]{.}\contentspage\\}[][]
 \tableofcontents
 }
 \section*{ВСТУП}
@@ -257,7 +276,7 @@
 \section*{ПОСТАНОВКА ЗАДАЧІ}
 \addcontentsline{toc}{section}{ПОСТАНОВКА ЗАДАЧІ}
 
-Метою цієї роботи є розробка програмного забезпечення для генерація та відображення 3D-моделей об'єктів у комп'ютерних іграх з використанням сплайнів у режимі реального часу. У загальному випадку розглядаються 3D-моделі об'єктів створені за допомогою поверхонь Безьє. Для досягнення поставленої мети були поставлені наступні задачі:
+Метою цієї роботи є розробка програмного забезпечення для генерації та відображення 3D-моделей об'єктів у комп'ютерних іграх з використанням сплайнів у режимі реального часу. У загальному випадку розглядаються 3D-моделі об'єктів створені за допомогою поверхонь Безьє. Для досягнення поставленої мети були поставлені наступні задачі:
 
 \begin{itemize}
 \item розширити функціонал розробленого програмного забезпечення, розробленого у курсовій роботі, загалом додати можливість динамічно завантажувати моделі, змінювати деталізацію.
@@ -340,7 +359,7 @@ $S=\left[\begin{array}{c}S_1\\\dots\\\S_n\end{array}\right]\in R^{4n\times3}, U 
 \[B(t)=(1-t)^3P_0+t(1-t)^2P_1+t^2(1-t)P_2+t^3P_3\]
 де t -- параметр, $t \in [0,1]$
 
-Розглянемо графічний спосіб побудови кривої Безьє із застосуванням алгоритму де Кастельє (рис. $\cite{fig:bezier_curve}$).
+Розглянемо графічний спосіб побудови кривої Безьє із застосуванням алгоритму де Кастельє (рис. $\ref{fig:bezier_curve}$).
 
 \begin{figure}[!htb]
     \centering
@@ -455,7 +474,7 @@ p_{3x} & p_{3y} & p_{3z} & 1 \\
 
 \section{Розробка програмного забезпечення щодо створення і редагування гладких об'єктів}
 
-На початку розробки графічного додатку розробник повинен визначитися, з якого рівня починати писати власний програмний код. Програмуванням на рівні графічного обладнання, як правило, займаються лише його виробники. Графічна бібліотека, яка реалізує певний стандарт абстрагування від обладнання, безпосередньо взаємодіє з драйвером. Стандартами абстрагування є, наприклад, бібліотеки OpenGL (відкрита графічна бібліотека для настільних комп'ютерів під керуванням різних ОС), Direct3D (призначена для різних ЕОМ під управлінням Windows і Windows Phone), Metal (для мобільних пристроїв під керуванням iOS). \cite{ryabin}
+На початку розробки графічного додатку розробник повинен визначитися, з якого рівня починати писати власний програмний код. Програмуванням на рівні графічного обладнання, як правило, займаються лише його виробники. Графічна бібліотека, яка реалізує певний стандарт абстрагування від обладнання, безпосередньо взаємодіє з драйвером. Стандартами абстрагування є, наприклад, бібліотеки OpenGL (відкрита графічна бібліотека для настільних комп'ютерів під керуванням різних ОС), Direct3D (призначена для різних ЕОМ під управлінням Windows і Windows Phone), Metal (для мобільних пристроїв під керуванням iOS). \ref{ryabin}
 
 У даній роботі для розробки програмного продукту обрано крос-платформовий програмний інтерфейс OpenGL, що забезпечує незалежність програмного додатку від операційної системи.
 
@@ -527,7 +546,7 @@ p_{3x} & p_{3y} & p_{3z} & 1 \\
 
 \section{Огляд роботи програми}
 
-Для тестування розробленого програмного забезпечення використано відому модель чайник з Юти, за допомогою якої перевіряють відображення складних об'єктів.  Результат генерації моделі продемонстровано на рис \cite{fig:testing-teapot}.
+Для тестування розробленого програмного забезпечення використано відому модель чайник з Юти, за допомогою якої перевіряють відображення складних об'єктів.  Результат генерації моделі продемонстровано на рис \ref{fig:testing-teapot}.
 
 \begin{figure}[!htb]
     \centering

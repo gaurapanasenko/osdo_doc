@@ -1,137 +1,137 @@
 \babel@toc {ukrainian}{}
-\ttl@change@i {\z@ }{section}{0pt}{\small }{\thecontentslabel . \uppercase }{\uppercase }{ \titlerule *[1pc]{.}\contentspage \\}\relax 
+\ttl@change@i {\z@ }{section}{0pt}{\small }{\thecontentslabel \ \uppercase }{\uppercase }{ \titlerule *[1pc]{.}\contentspage \\}\relax 
 \ttl@change@v {section}{}{}{}\relax 
-\contentsline {section}{ВСТУП}{7}{Doc-Start}%
-\contentsline {section}{ПОСТАНОВКА ЗАДАЧІ}{9}{Doc-Start}%
-\contentsline {section}{\numberline {1}Аналітичний огляд літературних джерел}{9}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Математичні моделі поверхонь та об'єктів}{10}{subsection.1.1}%
-\contentsline {subsubsection}{\numberline {1.1.1}Математичний опис моделей поверхонь та об’єктів}{10}{subsubsection.1.1.1}%
-\contentsline {subsubsection}{\numberline {1.1.2}Опис розташування об'єктів у сцені}{11}{subsubsection.1.1.2}%
-\contentsline {subsection}{\numberline {1.2}Дослідження математичних моделей складних об'єктів}{12}{subsection.1.2}%
-\contentsline {subsubsection}{\numberline {1.2.1}Сплайни і сплайн-інтерполяція}{12}{subsubsection.1.2.1}%
-\contentsline {subsubsection}{\numberline {1.2.2}Крива Безьє}{13}{subsubsection.1.2.2}%
-\contentsline {subsubsection}{\numberline {1.2.3}Поверхня Безьє}{17}{subsubsection.1.2.3}%
-\contentsline {section}{\numberline {2}Розробка програмного забезпечення щодо створення і редагування гладких об'єктів}{18}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Бібліотека Visualization Library}{19}{subsection.2.1}%
-\contentsline {section}{\numberline {3}Вимоги до розробленого програмного забезпечення}{20}{section.3}%
-\contentsline {section}{\numberline {4}Опис програмного забезпечення}{22}{section.4}%
-\contentsline {section}{\numberline {5}Огляд роботи програми}{24}{section.5}%
-\contentsline {section}{\numberline {6}Основна документація до коду}{27}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Класи}{28}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Клас Beziator}{30}{subsection.6.2}%
-\contentsline {subsubsection}{\numberline {6.2.1}Детальний опис}{31}{subsubsection.6.2.1}%
-\contentsline {subsubsection}{\numberline {6.2.2}Опис типів користувача}{32}{subsubsection.6.2.2}%
-\contentsline {paragraph}{surfaces\_vector}{32}{section*.10}%
-\contentsline {subsubsection}{\numberline {6.2.3}Конструктор(и)}{32}{subsubsection.6.2.3}%
-\contentsline {paragraph}{Beziator()}{32}{section*.11}%
-\contentsline {paragraph}{$\sim $Beziator()}{32}{section*.12}%
-\contentsline {subsubsection}{\numberline {6.2.4}Опис методів компонент}{32}{subsubsection.6.2.4}%
-\contentsline {paragraph}{draw()}{33}{section*.13}%
-\contentsline {paragraph}{generate()}{33}{section*.15}%
-\contentsline {paragraph}{get\_vertices()}{34}{section*.17}%
-\contentsline {paragraph}{init()}{34}{section*.18}%
-\contentsline {paragraph}{rotate()}{35}{section*.20}%
-\contentsline {paragraph}{save()}{35}{section*.21}%
-\contentsline {subsubsection}{\numberline {6.2.5}Компонентні дані}{36}{subsubsection.6.2.5}%
-\contentsline {paragraph}{indices}{36}{section*.22}%
-\contentsline {paragraph}{mesh}{36}{section*.23}%
-\contentsline {paragraph}{path}{36}{section*.24}%
-\contentsline {paragraph}{vertices}{36}{section*.25}%
-\contentsline {subsection}{\numberline {6.3}Клас Bijective}{37}{subsection.6.3}%
-\contentsline {subsubsection}{\numberline {6.3.1}Детальний опис}{38}{subsubsection.6.3.1}%
-\contentsline {subsubsection}{\numberline {6.3.2}Конструктор(и)}{38}{subsubsection.6.3.2}%
-\contentsline {paragraph}{$\sim $Bijective()}{38}{section*.27}%
-\contentsline {subsubsection}{\numberline {6.3.3}Опис методів компонент}{38}{subsubsection.6.3.3}%
-\contentsline {paragraph}{add\_animation()}{38}{section*.28}%
-\contentsline {paragraph}{get\_animation()}{39}{section*.29}%
-\contentsline {paragraph}{get\_mat4()}{39}{section*.30}%
-\contentsline {paragraph}{get\_position()}{40}{section*.31}%
-\contentsline {paragraph}{get\_rotation()}{40}{section*.32}%
-\contentsline {paragraph}{rotate()}{40}{section*.33}%
-\contentsline {paragraph}{rotate\_all()}{41}{section*.34}%
-\contentsline {paragraph}{set\_animation()}{41}{section*.35}%
-\contentsline {paragraph}{set\_position()}{42}{section*.36}%
-\contentsline {paragraph}{set\_rotation()}{42}{section*.37}%
-\contentsline {paragraph}{translate()}{42}{section*.38}%
-\contentsline {subsection}{\numberline {6.4}Клас Model}{43}{subsection.6.4}%
-\contentsline {subsubsection}{\numberline {6.4.1}Детальний опис}{44}{subsubsection.6.4.1}%
-\contentsline {subsubsection}{\numberline {6.4.2}Конструктор(и)}{44}{subsubsection.6.4.2}%
-\contentsline {paragraph}{$\sim $Model()}{44}{section*.40}%
-\contentsline {subsubsection}{\numberline {6.4.3}Опис методів компонент}{44}{subsubsection.6.4.3}%
-\contentsline {paragraph}{draw()}{44}{section*.41}%
-\contentsline {paragraph}{edit\_panel()}{45}{section*.42}%
-\contentsline {paragraph}{generate()}{45}{section*.43}%
-\contentsline {paragraph}{get\_vertices()}{45}{section*.44}%
-\contentsline {subsection}{\numberline {6.5}Структура Context}{46}{subsection.6.5}%
-\contentsline {subsubsection}{\numberline {6.5.1}Детальний опис}{47}{subsubsection.6.5.1}%
-\contentsline {subsubsection}{\numberline {6.5.2}Опис типів користувача}{47}{subsubsection.6.5.2}%
-\contentsline {paragraph}{Models}{47}{section*.46}%
-\contentsline {paragraph}{Textures}{48}{section*.47}%
-\contentsline {subsubsection}{\numberline {6.5.3}Конструктор(и)}{48}{subsubsection.6.5.3}%
-\contentsline {paragraph}{Context()}{48}{section*.48}%
-\contentsline {subsubsection}{\numberline {6.5.4}Опис методів компонент}{48}{subsubsection.6.5.4}%
-\contentsline {paragraph}{load\_model()}{48}{section*.49}%
-\contentsline {paragraph}{load\_shader()}{48}{section*.50}%
-\contentsline {paragraph}{load\_texture()}{49}{section*.52}%
-\contentsline {paragraph}{next\_active()}{50}{section*.54}%
-\contentsline {subsubsection}{\numberline {6.5.5}Компонентні дані}{50}{subsubsection.6.5.5}%
-\contentsline {paragraph}{active}{50}{section*.55}%
-\contentsline {paragraph}{active\_texture}{50}{section*.56}%
-\contentsline {paragraph}{models}{50}{section*.57}%
-\contentsline {paragraph}{shaders}{51}{section*.58}%
-\contentsline {paragraph}{textures}{51}{section*.59}%
-\contentsline {subsection}{\numberline {6.6}Структура Scene}{51}{subsection.6.6}%
-\contentsline {subsubsection}{\numberline {6.6.1}Детальний опис}{52}{subsubsection.6.6.1}%
-\contentsline {subsubsection}{\numberline {6.6.2}Конструктор(и)}{52}{subsubsection.6.6.2}%
-\contentsline {paragraph}{Scene()}{52}{section*.61}%
-\contentsline {subsubsection}{\numberline {6.6.3}Опис методів компонент}{52}{subsubsection.6.6.3}%
-\contentsline {paragraph}{create()}{53}{section*.62}%
-\contentsline {subsubsection}{\numberline {6.6.4}Компонентні дані}{53}{subsubsection.6.6.4}%
-\contentsline {paragraph}{objects}{53}{section*.63}%
-\contentsline {subsection}{\numberline {6.7}Структура Vertex}{53}{subsection.6.7}%
-\contentsline {subsubsection}{\numberline {6.7.1}Детальний опис}{54}{subsubsection.6.7.1}%
-\contentsline {subsubsection}{\numberline {6.7.2}Компонентні дані}{54}{subsubsection.6.7.2}%
-\contentsline {paragraph}{color}{54}{section*.64}%
-\contentsline {paragraph}{normal}{54}{section*.65}%
-\contentsline {paragraph}{position}{54}{section*.66}%
-\contentsline {paragraph}{uv}{54}{section*.67}%
-\contentsline {section}{ВИСНОВКИ}{56}{section*.67}%
-\contentsline {section}{СПИСОК ВИКОРИСТАНОЇ ЛІТЕРАТУРИ}{57}{section*.67}%
-\contentsline {section}{Додаток A. Лістинг програми}{58}{rtaskno.1}%
-\contentsline {subsection}{\numberline {6.8}Файл osdo/beziator.h}{58}{subsection.6.8}%
-\contentsline {subsubsection}{\numberline {6.8.1}Детальний опис}{59}{subsubsection.6.8.1}%
-\contentsline {subsubsection}{\numberline {6.8.2}Опис визначень типів}{59}{subsubsection.6.8.2}%
-\contentsline {paragraph}{surfacei\_t}{59}{section*.70}%
-\contentsline {subsection}{\numberline {6.9}beziator.\discretionary {\mbox {\relax \fontsize {8}{9.5}\selectfont $\DOTSB \leftarrow \joinrel \rhook $}}{}{}h}{59}{subsection.6.9}%
-\contentsline {subsection}{\numberline {6.10}Файл res/bezier.frag}{61}{subsection.6.10}%
-\contentsline {subsection}{\numberline {6.11}bezier.\discretionary {\mbox {\relax \fontsize {8}{9.5}\selectfont $\DOTSB \leftarrow \joinrel \rhook $}}{}{}frag}{61}{subsection.6.11}%
-\contentsline {subsection}{\numberline {6.12}Файл res/bezier.geom}{61}{subsection.6.12}%
-\contentsline {subsection}{\numberline {6.13}bezier.\discretionary {\mbox {\relax \fontsize {8}{9.5}\selectfont $\DOTSB \leftarrow \joinrel \rhook $}}{}{}geom}{61}{subsection.6.13}%
-\contentsline {subsection}{\numberline {6.14}Файл res/bezier.tesc}{62}{subsection.6.14}%
-\contentsline {subsection}{\numberline {6.15}bezier.\discretionary {\mbox {\relax \fontsize {8}{9.5}\selectfont $\DOTSB \leftarrow \joinrel \rhook $}}{}{}tesc}{62}{subsection.6.15}%
-\contentsline {subsection}{\numberline {6.16}Файл res/bezier.tese}{62}{subsection.6.16}%
-\contentsline {subsection}{\numberline {6.17}bezier.\discretionary {\mbox {\relax \fontsize {8}{9.5}\selectfont $\DOTSB \leftarrow \joinrel \rhook $}}{}{}tese}{62}{subsection.6.17}%
-\contentsline {subsection}{\numberline {6.18}Файл res/bezier.vert}{64}{subsection.6.18}%
-\contentsline {subsection}{\numberline {6.19}bezier.\discretionary {\mbox {\relax \fontsize {8}{9.5}\selectfont $\DOTSB \leftarrow \joinrel \rhook $}}{}{}vert}{64}{subsection.6.19}%
-\contentsline {subsection}{\numberline {6.20}Файл osdo/bijective.h}{64}{subsection.6.20}%
-\contentsline {subsubsection}{\numberline {6.20.1}Детальний опис}{65}{subsubsection.6.20.1}%
-\contentsline {subsection}{\numberline {6.21}bijective.\discretionary {\mbox {\relax \fontsize {8}{9.5}\selectfont $\DOTSB \leftarrow \joinrel \rhook $}}{}{}h}{65}{subsection.6.21}%
-\contentsline {subsection}{\numberline {6.22}Файл osdo/context.h}{66}{subsection.6.22}%
-\contentsline {subsubsection}{\numberline {6.22.1}Детальний опис}{67}{subsubsection.6.22.1}%
-\contentsline {subsection}{\numberline {6.23}context.\discretionary {\mbox {\relax \fontsize {8}{9.5}\selectfont $\DOTSB \leftarrow \joinrel \rhook $}}{}{}h}{68}{subsection.6.23}%
-\contentsline {subsection}{\numberline {6.24}Файл osdo/context.cpp}{69}{subsection.6.24}%
-\contentsline {subsection}{\numberline {6.25}context.\discretionary {\mbox {\relax \fontsize {8}{9.5}\selectfont $\DOTSB \leftarrow \joinrel \rhook $}}{}{}cpp}{69}{subsection.6.25}%
-\contentsline {subsection}{\numberline {6.26}Файл osdo/scene.h}{70}{subsection.6.26}%
-\contentsline {subsubsection}{\numberline {6.26.1}Детальний опис}{71}{subsubsection.6.26.1}%
-\contentsline {subsection}{\numberline {6.27}scene.\discretionary {\mbox {\relax \fontsize {8}{9.5}\selectfont $\DOTSB \leftarrow \joinrel \rhook $}}{}{}h}{71}{subsection.6.27}%
-\contentsline {subsection}{\numberline {6.28}Файл osdo/scene.cpp}{72}{subsection.6.28}%
-\contentsline {subsection}{\numberline {6.29}scene.\discretionary {\mbox {\relax \fontsize {8}{9.5}\selectfont $\DOTSB \leftarrow \joinrel \rhook $}}{}{}cpp}{72}{subsection.6.29}%
-\contentsline {subsection}{\numberline {6.30}Файл osdo/model.h}{72}{subsection.6.30}%
-\contentsline {subsubsection}{\numberline {6.30.1}Детальний опис}{73}{subsubsection.6.30.1}%
-\contentsline {subsection}{\numberline {6.31}model.\discretionary {\mbox {\relax \fontsize {8}{9.5}\selectfont $\DOTSB \leftarrow \joinrel \rhook $}}{}{}h}{74}{subsection.6.31}%
-\contentsline {subsection}{\numberline {6.32}Файл osdo/model.cpp}{74}{subsection.6.32}%
-\contentsline {subsection}{\numberline {6.33}model.\discretionary {\mbox {\relax \fontsize {8}{9.5}\selectfont $\DOTSB \leftarrow \joinrel \rhook $}}{}{}cpp}{75}{subsection.6.33}%
-\contentsline {subsection}{\numberline {6.34}Файл osdo/vertex.h}{75}{subsection.6.34}%
-\contentsline {subsubsection}{\numberline {6.34.1}Детальний опис}{76}{subsubsection.6.34.1}%
-\contentsline {subsection}{\numberline {6.35}vertex.\discretionary {\mbox {\relax \fontsize {8}{9.5}\selectfont $\DOTSB \leftarrow \joinrel \rhook $}}{}{}h}{76}{subsection.6.35}%
+\contentsline {section}{ВСТУП}{8}{Doc-Start}%
+\contentsline {section}{ПОСТАНОВКА ЗАДАЧІ}{10}{Doc-Start}%
+\contentsline {section}{\numberline {1}Аналітичний огляд літературних джерел}{10}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Математичні моделі поверхонь та об'єктів}{11}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}Математичний опис моделей поверхонь та об’єктів}{11}{subsubsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.2}Опис розташування об'єктів у сцені}{12}{subsubsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.2}Дослідження математичних моделей складних об'єктів}{13}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Сплайни і сплайн-інтерполяція}{13}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}Крива Безьє}{15}{subsubsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.3}Поверхня Безьє}{18}{subsubsection.1.2.3}%
+\contentsline {section}{\numberline {2}Розробка програмного забезпечення щодо створення і редагування гладких об'єктів}{19}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Бібліотека Visualization Library}{20}{subsection.2.1}%
+\contentsline {section}{\numberline {3}Вимоги до розробленого програмного забезпечення}{21}{section.3}%
+\contentsline {section}{\numberline {4}Опис програмного забезпечення}{23}{section.4}%
+\contentsline {section}{\numberline {5}Огляд роботи програми}{25}{section.5}%
+\contentsline {section}{\numberline {6}Основна документація до коду}{28}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Класи}{29}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Клас Beziator}{31}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}Детальний опис}{33}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}Опис типів користувача}{33}{subsubsection.6.2.2}%
+\contentsline {paragraph}{surfaces\_vector}{33}{section*.10}%
+\contentsline {subsubsection}{\numberline {6.2.3}Конструктор(и)}{33}{subsubsection.6.2.3}%
+\contentsline {paragraph}{Beziator()}{33}{section*.11}%
+\contentsline {paragraph}{$\sim $Beziator()}{34}{section*.12}%
+\contentsline {subsubsection}{\numberline {6.2.4}Опис методів компонент}{34}{subsubsection.6.2.4}%
+\contentsline {paragraph}{draw()}{34}{section*.13}%
+\contentsline {paragraph}{generate()}{35}{section*.15}%
+\contentsline {paragraph}{get\_vertices()}{36}{section*.17}%
+\contentsline {paragraph}{init()}{36}{section*.18}%
+\contentsline {paragraph}{rotate()}{36}{section*.20}%
+\contentsline {paragraph}{save()}{37}{section*.21}%
+\contentsline {subsubsection}{\numberline {6.2.5}Компонентні дані}{37}{subsubsection.6.2.5}%
+\contentsline {paragraph}{indices}{37}{section*.22}%
+\contentsline {paragraph}{mesh}{37}{section*.23}%
+\contentsline {paragraph}{path}{38}{section*.24}%
+\contentsline {paragraph}{vertices}{38}{section*.25}%
+\contentsline {subsection}{\numberline {6.3}Клас Bijective}{38}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}Детальний опис}{39}{subsubsection.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.2}Конструктор(и)}{40}{subsubsection.6.3.2}%
+\contentsline {paragraph}{$\sim $Bijective()}{40}{section*.27}%
+\contentsline {subsubsection}{\numberline {6.3.3}Опис методів компонент}{40}{subsubsection.6.3.3}%
+\contentsline {paragraph}{add\_animation()}{40}{section*.28}%
+\contentsline {paragraph}{get\_animation()}{40}{section*.29}%
+\contentsline {paragraph}{get\_mat4()}{41}{section*.30}%
+\contentsline {paragraph}{get\_position()}{41}{section*.31}%
+\contentsline {paragraph}{get\_rotation()}{42}{section*.32}%
+\contentsline {paragraph}{rotate()}{42}{section*.33}%
+\contentsline {paragraph}{rotate\_all()}{42}{section*.34}%
+\contentsline {paragraph}{set\_animation()}{43}{section*.35}%
+\contentsline {paragraph}{set\_position()}{43}{section*.36}%
+\contentsline {paragraph}{set\_rotation()}{44}{section*.37}%
+\contentsline {paragraph}{translate()}{44}{section*.38}%
+\contentsline {subsection}{\numberline {6.4}Клас Model}{45}{subsection.6.4}%
+\contentsline {subsubsection}{\numberline {6.4.1}Детальний опис}{46}{subsubsection.6.4.1}%
+\contentsline {subsubsection}{\numberline {6.4.2}Конструктор(и)}{46}{subsubsection.6.4.2}%
+\contentsline {paragraph}{$\sim $Model()}{46}{section*.40}%
+\contentsline {subsubsection}{\numberline {6.4.3}Опис методів компонент}{46}{subsubsection.6.4.3}%
+\contentsline {paragraph}{draw()}{46}{section*.41}%
+\contentsline {paragraph}{edit\_panel()}{47}{section*.42}%
+\contentsline {paragraph}{generate()}{47}{section*.43}%
+\contentsline {paragraph}{get\_vertices()}{47}{section*.44}%
+\contentsline {subsection}{\numberline {6.5}Структура Context}{48}{subsection.6.5}%
+\contentsline {subsubsection}{\numberline {6.5.1}Детальний опис}{50}{subsubsection.6.5.1}%
+\contentsline {subsubsection}{\numberline {6.5.2}Опис типів користувача}{50}{subsubsection.6.5.2}%
+\contentsline {paragraph}{Models}{50}{section*.46}%
+\contentsline {paragraph}{Textures}{50}{section*.47}%
+\contentsline {subsubsection}{\numberline {6.5.3}Конструктор(и)}{50}{subsubsection.6.5.3}%
+\contentsline {paragraph}{Context()}{50}{section*.48}%
+\contentsline {subsubsection}{\numberline {6.5.4}Опис методів компонент}{50}{subsubsection.6.5.4}%
+\contentsline {paragraph}{load\_model()}{50}{section*.49}%
+\contentsline {paragraph}{load\_shader()}{51}{section*.50}%
+\contentsline {paragraph}{load\_texture()}{52}{section*.52}%
+\contentsline {paragraph}{next\_active()}{52}{section*.54}%
+\contentsline {subsubsection}{\numberline {6.5.5}Компонентні дані}{53}{subsubsection.6.5.5}%
+\contentsline {paragraph}{active}{53}{section*.55}%
+\contentsline {paragraph}{active\_texture}{53}{section*.56}%
+\contentsline {paragraph}{models}{53}{section*.57}%
+\contentsline {paragraph}{shaders}{53}{section*.58}%
+\contentsline {paragraph}{textures}{53}{section*.59}%
+\contentsline {subsection}{\numberline {6.6}Структура Scene}{54}{subsection.6.6}%
+\contentsline {subsubsection}{\numberline {6.6.1}Детальний опис}{55}{subsubsection.6.6.1}%
+\contentsline {subsubsection}{\numberline {6.6.2}Конструктор(и)}{55}{subsubsection.6.6.2}%
+\contentsline {paragraph}{Scene()}{55}{section*.61}%
+\contentsline {subsubsection}{\numberline {6.6.3}Опис методів компонент}{55}{subsubsection.6.6.3}%
+\contentsline {paragraph}{create()}{56}{section*.62}%
+\contentsline {subsubsection}{\numberline {6.6.4}Компонентні дані}{56}{subsubsection.6.6.4}%
+\contentsline {paragraph}{objects}{56}{section*.63}%
+\contentsline {subsection}{\numberline {6.7}Структура Vertex}{56}{subsection.6.7}%
+\contentsline {subsubsection}{\numberline {6.7.1}Детальний опис}{57}{subsubsection.6.7.1}%
+\contentsline {subsubsection}{\numberline {6.7.2}Компонентні дані}{57}{subsubsection.6.7.2}%
+\contentsline {paragraph}{color}{57}{section*.64}%
+\contentsline {paragraph}{normal}{57}{section*.65}%
+\contentsline {paragraph}{position}{57}{section*.66}%
+\contentsline {paragraph}{uv}{58}{section*.67}%
+\contentsline {section}{ВИСНОВКИ}{59}{section*.67}%
+\contentsline {section}{СПИСОК ВИКОРИСТАНОЇ ЛІТЕРАТУРИ}{60}{section*.67}%
+\contentsline {section}{Додаток A. Лістинг програми}{61}{rtaskno.1}%
+\contentsline {subsection}{\numberline {6.8}Файл osdo/beziator.h}{61}{subsection.6.8}%
+\contentsline {subsubsection}{\numberline {6.8.1}Детальний опис}{62}{subsubsection.6.8.1}%
+\contentsline {subsubsection}{\numberline {6.8.2}Опис визначень типів}{62}{subsubsection.6.8.2}%
+\contentsline {paragraph}{surfacei\_t}{62}{section*.70}%
+\contentsline {subsection}{\numberline {6.9}beziator.\discretionary {\mbox {\relax \fontsize {8}{9.5}\selectfont $\DOTSB \leftarrow \joinrel \rhook $}}{}{}h}{62}{subsection.6.9}%
+\contentsline {subsection}{\numberline {6.10}Файл res/bezier.frag}{64}{subsection.6.10}%
+\contentsline {subsection}{\numberline {6.11}bezier.\discretionary {\mbox {\relax \fontsize {8}{9.5}\selectfont $\DOTSB \leftarrow \joinrel \rhook $}}{}{}frag}{64}{subsection.6.11}%
+\contentsline {subsection}{\numberline {6.12}Файл res/bezier.geom}{65}{subsection.6.12}%
+\contentsline {subsection}{\numberline {6.13}bezier.\discretionary {\mbox {\relax \fontsize {8}{9.5}\selectfont $\DOTSB \leftarrow \joinrel \rhook $}}{}{}geom}{65}{subsection.6.13}%
+\contentsline {subsection}{\numberline {6.14}Файл res/bezier.tesc}{65}{subsection.6.14}%
+\contentsline {subsection}{\numberline {6.15}bezier.\discretionary {\mbox {\relax \fontsize {8}{9.5}\selectfont $\DOTSB \leftarrow \joinrel \rhook $}}{}{}tesc}{65}{subsection.6.15}%
+\contentsline {subsection}{\numberline {6.16}Файл res/bezier.tese}{66}{subsection.6.16}%
+\contentsline {subsection}{\numberline {6.17}bezier.\discretionary {\mbox {\relax \fontsize {8}{9.5}\selectfont $\DOTSB \leftarrow \joinrel \rhook $}}{}{}tese}{66}{subsection.6.17}%
+\contentsline {subsection}{\numberline {6.18}Файл res/bezier.vert}{67}{subsection.6.18}%
+\contentsline {subsection}{\numberline {6.19}bezier.\discretionary {\mbox {\relax \fontsize {8}{9.5}\selectfont $\DOTSB \leftarrow \joinrel \rhook $}}{}{}vert}{67}{subsection.6.19}%
+\contentsline {subsection}{\numberline {6.20}Файл osdo/bijective.h}{68}{subsection.6.20}%
+\contentsline {subsubsection}{\numberline {6.20.1}Детальний опис}{69}{subsubsection.6.20.1}%
+\contentsline {subsection}{\numberline {6.21}bijective.\discretionary {\mbox {\relax \fontsize {8}{9.5}\selectfont $\DOTSB \leftarrow \joinrel \rhook $}}{}{}h}{69}{subsection.6.21}%
+\contentsline {subsection}{\numberline {6.22}Файл osdo/context.h}{70}{subsection.6.22}%
+\contentsline {subsubsection}{\numberline {6.22.1}Детальний опис}{71}{subsubsection.6.22.1}%
+\contentsline {subsection}{\numberline {6.23}context.\discretionary {\mbox {\relax \fontsize {8}{9.5}\selectfont $\DOTSB \leftarrow \joinrel \rhook $}}{}{}h}{72}{subsection.6.23}%
+\contentsline {subsection}{\numberline {6.24}Файл osdo/context.cpp}{73}{subsection.6.24}%
+\contentsline {subsection}{\numberline {6.25}context.\discretionary {\mbox {\relax \fontsize {8}{9.5}\selectfont $\DOTSB \leftarrow \joinrel \rhook $}}{}{}cpp}{73}{subsection.6.25}%
+\contentsline {subsection}{\numberline {6.26}Файл osdo/scene.h}{74}{subsection.6.26}%
+\contentsline {subsubsection}{\numberline {6.26.1}Детальний опис}{75}{subsubsection.6.26.1}%
+\contentsline {subsection}{\numberline {6.27}scene.\discretionary {\mbox {\relax \fontsize {8}{9.5}\selectfont $\DOTSB \leftarrow \joinrel \rhook $}}{}{}h}{75}{subsection.6.27}%
+\contentsline {subsection}{\numberline {6.28}Файл osdo/scene.cpp}{76}{subsection.6.28}%
+\contentsline {subsection}{\numberline {6.29}scene.\discretionary {\mbox {\relax \fontsize {8}{9.5}\selectfont $\DOTSB \leftarrow \joinrel \rhook $}}{}{}cpp}{76}{subsection.6.29}%
+\contentsline {subsection}{\numberline {6.30}Файл osdo/model.h}{76}{subsection.6.30}%
+\contentsline {subsubsection}{\numberline {6.30.1}Детальний опис}{78}{subsubsection.6.30.1}%
+\contentsline {subsection}{\numberline {6.31}model.\discretionary {\mbox {\relax \fontsize {8}{9.5}\selectfont $\DOTSB \leftarrow \joinrel \rhook $}}{}{}h}{78}{subsection.6.31}%
+\contentsline {subsection}{\numberline {6.32}Файл osdo/model.cpp}{78}{subsection.6.32}%
+\contentsline {subsection}{\numberline {6.33}model.\discretionary {\mbox {\relax \fontsize {8}{9.5}\selectfont $\DOTSB \leftarrow \joinrel \rhook $}}{}{}cpp}{79}{subsection.6.33}%
+\contentsline {subsection}{\numberline {6.34}Файл osdo/vertex.h}{79}{subsection.6.34}%
+\contentsline {subsubsection}{\numberline {6.34.1}Детальний опис}{80}{subsubsection.6.34.1}%
+\contentsline {subsection}{\numberline {6.35}vertex.\discretionary {\mbox {\relax \fontsize {8}{9.5}\selectfont $\DOTSB \leftarrow \joinrel \rhook $}}{}{}h}{81}{subsection.6.35}%
 \contentsfinish 
