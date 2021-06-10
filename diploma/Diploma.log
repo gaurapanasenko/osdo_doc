@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.6.3)  10 JUN 2021 18:47
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.6.3)  10 JUN 2021 21:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1494,7 +1494,7 @@ t line 137.
 \openout6 = `Diploma.toc'.
 
  [7] [8] [9] [10] [11]
-Underfull \hbox (badness 5022) in paragraph at lines 303--304
+Underfull \hbox (badness 5022) in paragraph at lines 308--309
 []\TU/TimesNewRoman(1)/m/n/14.4 Фрактальні – при побудові поверхні використовує
 ться властивість
  []
@@ -1507,30 +1507,30 @@ File: bezier-surface.png Graphic file (type bmp)
 <bezier-surface.png>
  [18] [19]
 
-LaTeX Warning: Reference `ryabin' on page 20 undefined on input line 477.
+LaTeX Warning: Reference `ryabin' on page 20 undefined on input line 482.
 
 
-Underfull \hbox (badness 3849) in paragraph at lines 479--480
+Underfull \hbox (badness 3849) in paragraph at lines 484--485
 []\TU/TimesNewRoman(1)/m/n/14.4 У даній роботі для розробки програмного продукт
 у обрано крос-
  []
 
 [20] [21] [22] [23] [24]
-Underfull \hbox (badness 5008) in paragraph at lines 541--542
+Underfull \hbox (badness 5008) in paragraph at lines 546--547
 []\TU/TimesNewRoman(1)/m/n/14.4 Ресурси програми, які зберігаються у директорії
  “res” (скорочено
  []
 
-[25]
 File: testing-teapot.png Graphic file (type bmp)
 <testing-teapot.png>
+[25]
 File: beginning-interface.png Graphic file (type bmp)
 <beginning-interface.png>
 File: teapot-wireframe.png Graphic file (type bmp)
 <teapot-wireframe.png>
  [26]
 
-LaTeX Warning: Reference `car-view' on page 27 undefined on input line 575.
+LaTeX Warning: Reference `car-view' on page 27 undefined on input line 580.
 
 File: edit-car.png Graphic file (type bmp)
 <edit-car.png>
@@ -5077,13 +5077,13 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Diploma.out' has not changed.
-(rerunfilecheck)             Checksum: 68EAFEFAD4D58B2C2F806DA16CB7B550;9079.
+(rerunfilecheck)             Checksum: C70CB9496EFEA7AB13B7B8CF99246984;9003.
  ) 
 Here is how much of TeX's memory you used:
- 28966 strings out of 476490
- 551663 string characters out of 5789965
- 947449 words of memory out of 5000000
- 48680 multiletter control sequences out of 15000+600000
+ 28967 strings out of 476490
+ 551674 string characters out of 5789965
+ 947349 words of memory out of 5000000
+ 48681 multiletter control sequences out of 15000+600000
  413663 words of font info for 111 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  101i,17n,117p,811b,672s stack positions out of 5000i,500n,10000p,200000b,80000s
