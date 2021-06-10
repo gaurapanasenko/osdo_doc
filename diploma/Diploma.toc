@@ -67,8 +67,8 @@
 \contentsline {paragraph}{get\_vertices()}{43}{section*.59}%
 \contentsline {subsection}{\numberline {4.4}Структура Context}{44}{subsection.4.4}%
 \contentsline {paragraph}{Детальний опис}{45}{paragraph*.61}%
-\contentsline {paragraph}{Опис типів користувача}{45}{paragraph*.62}%
-\contentsline {paragraph}{Models}{45}{section*.63}%
+\contentsline {paragraph}{Опис типів користувача}{46}{paragraph*.62}%
+\contentsline {paragraph}{Models}{46}{section*.63}%
 \contentsline {paragraph}{Textures}{46}{section*.64}%
 \contentsline {paragraph}{Конструктор(и)}{46}{paragraph*.65}%
 \contentsline {paragraph}{Context()}{46}{section*.66}%

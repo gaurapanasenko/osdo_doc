@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.6.3)  11 JUN 2021 00:40
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.6.3)  11 JUN 2021 00:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -5096,12 +5096,12 @@ Package rerunfilecheck Info: File `Diploma.out' has not changed.
 (rerunfilecheck)             Checksum: 2E4DDDF0B4C2F2CA6B69108BFA64DFF9;7741.
  ) 
 Here is how much of TeX's memory you used:
- 28888 strings out of 476490
- 549060 string characters out of 5789965
- 944631 words of memory out of 5000000
- 48624 multiletter control sequences out of 15000+600000
- 411867 words of font info for 100 fonts, out of 8000000 for 9000
+ 28886 strings out of 476490
+ 548978 string characters out of 5789965
+ 944632 words of memory out of 5000000
+ 48623 multiletter control sequences out of 15000+600000
+ 411859 words of font info for 99 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 101i,17n,117p,811b,680s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 101i,17n,117p,811b,672s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on Diploma.pdf (75 pages).
