@@ -2,7 +2,9 @@
 \label{classBeziator}\index{Beziator@{Beziator}}
 
 
-Клас який зберігає та оброблює модель утвореню через поверхні Безьє.  
+Клас який зберігає та оброблює модель утворену через поверхні Безьє. 
+Схему успадкувань можна розглянути на рис.~\ref{fig:classBeziator__inherit__graph}, 
+а діаграму зв'язків на рис.~\ref{fig:classBeziator__coll__graph}.
 
 
 
@@ -11,28 +13,28 @@
 
 
 
-Схема успадкувань для Beziator\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=133pt]{classBeziator__inherit__graph}
+\caption{Схема успадкувань для Beziator}\label{fig:classBeziator__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Діаграма зв\textquotesingle{}язків класу Beziator\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classBeziator__coll__graph}
+\caption{Діаграма зв\textquotesingle{}язків класу Beziator}\label{fig:classBeziator__coll__graph}
 \end{center}
 \end{figure}
-\doxysubsubsection*{Загальнодоступні типи}
+\doxysubsubsection{Загальнодоступні типи}
 \begin{DoxyCompactItemize}
 \item 
 typedef \mbox{\hyperlink{beziator_8h_adc91dd1f882e36615956dace902ac8a2}{surfacei\+\_\+t}} $\ast$ \mbox{\hyperlink{classBeziator_abc19212ee3b33d266c1c2017bf97c738}{surfaces\+\_\+vector}}
 \begin{DoxyCompactList}\small\item\em Тип позначаючий вказівнкик на массив з поверхнями Безьє. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Загальнодоступні елементи}
+\doxysubsubsection{Загальнодоступні елементи}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classBeziator_a2e0cf1c9d9d89ed9772f1b5659845330}{Beziator}} (const string \&\mbox{\hyperlink{classBeziator_a982834e352be2e112b07d1f60a090a98}{path}})
@@ -51,7 +53,7 @@ void \mbox{\hyperlink{classBeziator_a17dc368875dfa7375eda7889c1fbd5e5}{rotate}} 
 \begin{DoxyCompactList}\small\item\em Інвертує порядок індесів поверхні, щоб нормалі дивилися у протилежний бік. \end{DoxyCompactList}\item 
 vector$<$ \mbox{\hyperlink{structVertex}{Vertex}} $>$ $\ast$ \mbox{\hyperlink{classBeziator_a961bc3acb296bbdd3c4b7fdf4c8c5511}{get\+\_\+vertices}} () override
 \begin{DoxyCompactList}\small\item\em Видає список вершин моделі. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Захищені дані}
+\doxysubsubsection{Захищені дані}
 \begin{DoxyCompactItemize}
 \item 
 const string \mbox{\hyperlink{classBeziator_a982834e352be2e112b07d1f60a090a98}{path}}
@@ -72,7 +74,7 @@ vector$<$ GLuint $>$ \mbox{\hyperlink{classBeziator_aa885148677b1b0fd71850f2cd60
 
 
 \doxysubsubsection{Опис типів користувача}
-\mbox{\Hypertarget{classBeziator_abc19212ee3b33d266c1c2017bf97c738}\label{classBeziator_abc19212ee3b33d266c1c2017bf97c738}} 
+%\mbox{\Hypertarget{classBeziator_abc19212ee3b33d266c1c2017bf97c738}\label{classBeziator_abc19212ee3b33d266c1c2017bf97c738}} 
 \index{Beziator@{Beziator}!surfaces\_vector@{surfaces\_vector}}
 \index{surfaces\_vector@{surfaces\_vector}!Beziator@{Beziator}}
 \doxyparagraph{\texorpdfstring{surfaces\_vector}{surfaces\_vector}}
@@ -89,7 +91,7 @@ vector$<$ GLuint $>$ \mbox{\hyperlink{classBeziator_aa885148677b1b0fd71850f2cd60
 
 
 \doxysubsubsection{Конструктор(и)}
-\mbox{\Hypertarget{classBeziator_a2e0cf1c9d9d89ed9772f1b5659845330}\label{classBeziator_a2e0cf1c9d9d89ed9772f1b5659845330}} 
+%\mbox{\Hypertarget{classBeziator_a2e0cf1c9d9d89ed9772f1b5659845330}\label{classBeziator_a2e0cf1c9d9d89ed9772f1b5659845330}} 
 \index{Beziator@{Beziator}!Beziator@{Beziator}}
 \index{Beziator@{Beziator}!Beziator@{Beziator}}
 \doxyparagraph{\texorpdfstring{Beziator()}{Beziator()}}
@@ -102,13 +104,13 @@ vector$<$ GLuint $>$ \mbox{\hyperlink{classBeziator_aa885148677b1b0fd71850f2cd60
 Обов\textquotesingle{}язково потібно запустити метод {\ttfamily \mbox{\hyperlink{classBeziator_aeafb7d3607d064c7dfa7e1c4c6d698cb}{Beziator\+::init}}} для того щоб завантажити модель у пам\textquotesingle{}ять. 
 \begin{DoxyParams}{Аргументи}
 {\em path} & Шлях до файлу у якому зберігається модель. \\
-\hline
+
 \end{DoxyParams}
 
 
 Див. визначення в файлі \mbox{\hyperlink{beziator_8cpp_source}{beziator.\+cpp}}, рядок \mbox{\hyperlink{beziator_8cpp_source_l00018}{18}}
 
-\mbox{\Hypertarget{classBeziator_aec6c4b5d0cf86ae184b435432814fb25}\label{classBeziator_aec6c4b5d0cf86ae184b435432814fb25}} 
+%\mbox{\Hypertarget{classBeziator_aec6c4b5d0cf86ae184b435432814fb25}\label{classBeziator_aec6c4b5d0cf86ae184b435432814fb25}} 
 \index{Beziator@{Beziator}!````~Beziator@{$\sim$Beziator}}
 \index{````~Beziator@{$\sim$Beziator}!Beziator@{Beziator}}
 \doxyparagraph{\texorpdfstring{$\sim$Beziator()}{~Beziator()}}
@@ -121,7 +123,7 @@ vector$<$ GLuint $>$ \mbox{\hyperlink{classBeziator_aa885148677b1b0fd71850f2cd60
 
 
 \doxysubsubsection{Опис методів компонент}
-\mbox{\Hypertarget{classBeziator_a9acccb22776bbbc76b9b886e96aa1d92}\label{classBeziator_a9acccb22776bbbc76b9b886e96aa1d92}} 
+%\mbox{\Hypertarget{classBeziator_a9acccb22776bbbc76b9b886e96aa1d92}\label{classBeziator_a9acccb22776bbbc76b9b886e96aa1d92}} 
 \index{Beziator@{Beziator}!draw@{draw}}
 \index{draw@{draw}!Beziator@{Beziator}}
 \doxyparagraph{\texorpdfstring{draw()}{draw()}}
@@ -134,9 +136,9 @@ vector$<$ GLuint $>$ \mbox{\hyperlink{classBeziator_aa885148677b1b0fd71850f2cd60
 За допомогою флагу {\ttfamily pre\+\_\+generated} можна задати яким чином потібно відображати, якщо задати {\ttfamily false}, то у буде використаний меш із поверхнями Безье 4x4, а якщо задано {\ttfamily true}, то відобразиться сгенерований деталізований меш моделі. 
 \begin{DoxyParams}{Аргументи}
 {\em shader} & Шейдер який використовуєтсья для відображення моделі. \\
-\hline
+
 {\em pre\+\_\+generated} & Флаг, який позначає який з мешів відображати. \\
-\hline
+
 \end{DoxyParams}
 
 
@@ -144,16 +146,16 @@ vector$<$ GLuint $>$ \mbox{\hyperlink{classBeziator_aa885148677b1b0fd71850f2cd60
 
 
 
-Див. визначення в файлі \mbox{\hyperlink{beziator_8cpp_source}{beziator.\+cpp}}, рядок \mbox{\hyperlink{beziator_8cpp_source_l00061}{61}}
+Див. визначення в файлі \mbox{\hyperlink{beziator_8cpp_source}{beziator.\+cpp}}, рядок \mbox{\hyperlink{beziator_8cpp_source_l00061}{61}}, також можна розглянути граф всіх викликів на рис.~\ref{fig:classBeziator_a9acccb22776bbbc76b9b886e96aa1d92_cgraph}
 
-Граф всіх викликів цієї функції\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=293pt]{classBeziator_a9acccb22776bbbc76b9b886e96aa1d92_cgraph}
+\caption{Граф всіх викликів Beziator\+::draw}\label{fig:classBeziator_a9acccb22776bbbc76b9b886e96aa1d92_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classBeziator_a850797d7a346cd6f30405e21b0224a3e}\label{classBeziator_a850797d7a346cd6f30405e21b0224a3e}} 
+%\mbox{\Hypertarget{classBeziator_a850797d7a346cd6f30405e21b0224a3e}\label{classBeziator_a850797d7a346cd6f30405e21b0224a3e}} 
 \index{Beziator@{Beziator}!generate@{generate}}
 \index{generate@{generate}!Beziator@{Beziator}}
 \doxyparagraph{\texorpdfstring{generate()}{generate()}}
@@ -166,7 +168,7 @@ vector$<$ GLuint $>$ \mbox{\hyperlink{classBeziator_aa885148677b1b0fd71850f2cd60
 Ступінь деталізаії {\ttfamily d} позначає скільки вершин буде створено по двом осям, за заммовчанням задано 8, таким чином поверхня буде складатися з 8x8=64 вершини. 
 \begin{DoxyParams}{Аргументи}
 {\em d} & ступінь деталізації. \\
-\hline
+
 \end{DoxyParams}
 
 
@@ -174,16 +176,16 @@ vector$<$ GLuint $>$ \mbox{\hyperlink{classBeziator_aa885148677b1b0fd71850f2cd60
 
 
 
-Див. визначення в файлі \mbox{\hyperlink{beziator_8cpp_source}{beziator.\+cpp}}, рядок \mbox{\hyperlink{beziator_8cpp_source_l00136}{136}}
+Див. визначення в файлі \mbox{\hyperlink{beziator_8cpp_source}{beziator.\+cpp}}, рядок \mbox{\hyperlink{beziator_8cpp_source_l00136}{136}}, також можна розглянути граф всіх викликів на рис.~\ref{fig:classBeziator_a850797d7a346cd6f30405e21b0224a3e_cgraph}
 
-Граф всіх викликів цієї функції\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classBeziator_a850797d7a346cd6f30405e21b0224a3e_cgraph}
+\caption{Граф всіх викликів Beziator\+::generate}\label{fig:classBeziator_a850797d7a346cd6f30405e21b0224a3e_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classBeziator_a961bc3acb296bbdd3c4b7fdf4c8c5511}\label{classBeziator_a961bc3acb296bbdd3c4b7fdf4c8c5511}} 
+%\mbox{\Hypertarget{classBeziator_a961bc3acb296bbdd3c4b7fdf4c8c5511}\label{classBeziator_a961bc3acb296bbdd3c4b7fdf4c8c5511}} 
 \index{Beziator@{Beziator}!get\_vertices@{get\_vertices}}
 \index{get\_vertices@{get\_vertices}!Beziator@{Beziator}}
 \doxyparagraph{\texorpdfstring{get\_vertices()}{get\_vertices()}}
@@ -204,7 +206,7 @@ vector$<$ GLuint $>$ \mbox{\hyperlink{classBeziator_aa885148677b1b0fd71850f2cd60
 
 Див. визначення в файлі \mbox{\hyperlink{beziator_8cpp_source}{beziator.\+cpp}}, рядок \mbox{\hyperlink{beziator_8cpp_source_l00287}{287}}
 
-\mbox{\Hypertarget{classBeziator_aeafb7d3607d064c7dfa7e1c4c6d698cb}\label{classBeziator_aeafb7d3607d064c7dfa7e1c4c6d698cb}} 
+%\mbox{\Hypertarget{classBeziator_aeafb7d3607d064c7dfa7e1c4c6d698cb}\label{classBeziator_aeafb7d3607d064c7dfa7e1c4c6d698cb}} 
 \index{Beziator@{Beziator}!init@{init}}
 \index{init@{init}!Beziator@{Beziator}}
 \doxyparagraph{\texorpdfstring{init()}{init()}}
@@ -219,16 +221,16 @@ vector$<$ GLuint $>$ \mbox{\hyperlink{classBeziator_aa885148677b1b0fd71850f2cd60
 \end{DoxyReturn}
 
 
-Див. визначення в файлі \mbox{\hyperlink{beziator_8cpp_source}{beziator.\+cpp}}, рядок \mbox{\hyperlink{beziator_8cpp_source_l00020}{20}}
+Див. визначення в файлі \mbox{\hyperlink{beziator_8cpp_source}{beziator.\+cpp}}, рядок \mbox{\hyperlink{beziator_8cpp_source_l00020}{20}}, також можна розглянути граф всіх викликів на рис.~\ref{fig:classBeziator_aeafb7d3607d064c7dfa7e1c4c6d698cb_cgraph}
 
-Граф всіх викликів цієї функції\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=263pt]{classBeziator_aeafb7d3607d064c7dfa7e1c4c6d698cb_cgraph}
+\caption{Граф всіх викликів Beziator\+::init}\label{fig:classBeziator_aeafb7d3607d064c7dfa7e1c4c6d698cb_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classBeziator_a17dc368875dfa7375eda7889c1fbd5e5}\label{classBeziator_a17dc368875dfa7375eda7889c1fbd5e5}} 
+%\mbox{\Hypertarget{classBeziator_a17dc368875dfa7375eda7889c1fbd5e5}\label{classBeziator_a17dc368875dfa7375eda7889c1fbd5e5}} 
 \index{Beziator@{Beziator}!rotate@{rotate}}
 \index{rotate@{rotate}!Beziator@{Beziator}}
 \doxyparagraph{\texorpdfstring{rotate()}{rotate()}}
@@ -241,13 +243,13 @@ vector$<$ GLuint $>$ \mbox{\hyperlink{classBeziator_aa885148677b1b0fd71850f2cd60
 
 \begin{DoxyParams}{Аргументи}
 {\em i} & номер поверхні. \\
-\hline
+
 \end{DoxyParams}
 
 
 Див. визначення в файлі \mbox{\hyperlink{beziator_8cpp_source}{beziator.\+cpp}}, рядок \mbox{\hyperlink{beziator_8cpp_source_l00277}{277}}
 
-\mbox{\Hypertarget{classBeziator_af67a38badc29b8747f242bbde8a2ccdf}\label{classBeziator_af67a38badc29b8747f242bbde8a2ccdf}} 
+%\mbox{\Hypertarget{classBeziator_af67a38badc29b8747f242bbde8a2ccdf}\label{classBeziator_af67a38badc29b8747f242bbde8a2ccdf}} 
 \index{Beziator@{Beziator}!save@{save}}
 \index{save@{save}!Beziator@{Beziator}}
 \doxyparagraph{\texorpdfstring{save()}{save()}}
@@ -267,7 +269,7 @@ vector$<$ GLuint $>$ \mbox{\hyperlink{classBeziator_aa885148677b1b0fd71850f2cd60
 
 
 \doxysubsubsection{Компонентні дані}
-\mbox{\Hypertarget{classBeziator_aa885148677b1b0fd71850f2cd604af5e}\label{classBeziator_aa885148677b1b0fd71850f2cd604af5e}} 
+%\mbox{\Hypertarget{classBeziator_aa885148677b1b0fd71850f2cd604af5e}\label{classBeziator_aa885148677b1b0fd71850f2cd604af5e}} 
 \index{Beziator@{Beziator}!indices@{indices}}
 \index{indices@{indices}!Beziator@{Beziator}}
 \doxyparagraph{\texorpdfstring{indices}{indices}}
@@ -283,7 +285,7 @@ vector$<$ GLuint $>$ \mbox{\hyperlink{classBeziator_aa885148677b1b0fd71850f2cd60
 
 Див. визначення в файлі \mbox{\hyperlink{beziator_8h_source}{beziator.\+h}}, рядок \mbox{\hyperlink{beziator_8h_source_l00052}{52}}
 
-\mbox{\Hypertarget{classBeziator_afc2e274334058f3b4c34f025156693f1}\label{classBeziator_afc2e274334058f3b4c34f025156693f1}} 
+%\mbox{\Hypertarget{classBeziator_afc2e274334058f3b4c34f025156693f1}\label{classBeziator_afc2e274334058f3b4c34f025156693f1}} 
 \index{Beziator@{Beziator}!mesh@{mesh}}
 \index{mesh@{mesh}!Beziator@{Beziator}}
 \doxyparagraph{\texorpdfstring{mesh}{mesh}}
@@ -297,7 +299,7 @@ vector$<$ GLuint $>$ \mbox{\hyperlink{classBeziator_aa885148677b1b0fd71850f2cd60
 
 Див. визначення в файлі \mbox{\hyperlink{beziator_8h_source}{beziator.\+h}}, рядок \mbox{\hyperlink{beziator_8h_source_l00036}{36}}
 
-\mbox{\Hypertarget{classBeziator_a982834e352be2e112b07d1f60a090a98}\label{classBeziator_a982834e352be2e112b07d1f60a090a98}} 
+%\mbox{\Hypertarget{classBeziator_a982834e352be2e112b07d1f60a090a98}\label{classBeziator_a982834e352be2e112b07d1f60a090a98}} 
 \index{Beziator@{Beziator}!path@{path}}
 \index{path@{path}!Beziator@{Beziator}}
 \doxyparagraph{\texorpdfstring{path}{path}}
@@ -311,7 +313,7 @@ vector$<$ GLuint $>$ \mbox{\hyperlink{classBeziator_aa885148677b1b0fd71850f2cd60
 
 Див. визначення в файлі \mbox{\hyperlink{beziator_8h_source}{beziator.\+h}}, рядок \mbox{\hyperlink{beziator_8h_source_l00032}{32}}
 
-\mbox{\Hypertarget{classBeziator_ade482f00f5cb1ce4d594b4c132903313}\label{classBeziator_ade482f00f5cb1ce4d594b4c132903313}} 
+%\mbox{\Hypertarget{classBeziator_ade482f00f5cb1ce4d594b4c132903313}\label{classBeziator_ade482f00f5cb1ce4d594b4c132903313}} 
 \index{Beziator@{Beziator}!vertices@{vertices}}
 \index{vertices@{vertices}!Beziator@{Beziator}}
 \doxyparagraph{\texorpdfstring{vertices}{vertices}}

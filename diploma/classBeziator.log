@@ -1,12 +1,12 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.5.11)  11 MAY 2021 12:21
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.6.3)  11 JUN 2021 00:31
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **classBeziator.tex
 (./classBeziator.tex
-LaTeX2e <2020-10-01> patch level 4
-L3 programming layer <2021-05-07>
+LaTeX2e <2021-06-01> pre-release-0 (develop 2021-6-3 branch)
+L3 programming layer <2021-06-01>
 ./classBeziator.tex:1: Undefined control sequence.
 l.1 \hypertarget
                 {classBeziator}{}\doxysubsection{Клас Beziator}
@@ -18,11 +18,11 @@ End of file on the terminal!
 
  
 Here is how much of TeX's memory you used:
- 15 strings out of 476775
- 321 string characters out of 5814101
- 296498 words of memory out of 5000000
- 20263 multiletter control sequences out of 15000+600000
+ 15 strings out of 476490
+ 321 string characters out of 5789965
+ 303159 words of memory out of 5000000
+ 20555 multiletter control sequences out of 15000+600000
  403430 words of font info for 27 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 11i,0n,13p,108b,10s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 12i,0n,12p,108b,10s stack positions out of 5000i,500n,10000p,200000b,80000s
 No pages of output.

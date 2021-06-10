@@ -322,20 +322,19 @@
     \tabulinesep=1mm%
     \par%
     \ifthenelse{\equal{#1}{}}%
-      {\begin{longtabu*}spread 0pt [l]{|X[-1,l]|X[-1,l]|}}% name + description
+      {\begin{longtabu*}spread 0pt [l]{X[-1,l] X[-1,l]}}% name + description
     {\ifthenelse{\equal{#1}{1}}%
-      {\begin{longtabu*}spread 0pt [l]{|X[-1,l]|X[-1,l]|X[-1,l]|}}% in/out + name + desc
-      {\begin{longtabu*}spread 0pt [l]{|X[-1,l]|X[-1,l]|X[-1,l]|X[-1,l]|}}% in/out + type + name + desc
+      {\begin{longtabu*}spread 0pt [l]{X[-1,l] X[-1,l] X[-1,l] }}% in/out + name + desc
+      {\begin{longtabu*}spread 0pt [l]{X[-1,l] X[-1,l] X[-1,l] X[-1,l] }}% in/out + type + name + desc
     }
     \multicolumn{2}{l}{\hspace{-6pt}\bfseries\fontseries{bc}\selectfont\color{darkgray} #2}\\[1ex]%
-    \hline%
+
     \endfirsthead%
     \multicolumn{2}{l}{\hspace{-6pt}\bfseries\fontseries{bc}\selectfont\color{darkgray} #2}\\[1ex]%
-    \hline%
+
     \endhead%
 }{%
     \end{longtabu*}%
-    \vspace{6pt}%
 }
 
 % Used for fields of simple structs
@@ -344,10 +343,10 @@
     \par%
     \begin{longtabu*}spread 0pt [l]{|X[-1,r]|X[-1,l]|X[-1,l]|}%
     \multicolumn{3}{l}{\hspace{-6pt}\bfseries\fontseries{bc}\selectfont\color{darkgray} #1}\\[1ex]%
-    \hline%
+    %
     \endfirsthead%
     \multicolumn{3}{l}{\hspace{-6pt}\bfseries\fontseries{bc}\selectfont\color{darkgray} #1}\\[1ex]%
-    \hline%
+    %
     \endhead%
 }{%
     \end{longtabu*}%
@@ -360,10 +359,10 @@
     \par%
     \begin{longtabu*}spread 0pt [l]{|X[-1,r]|X[-1,l]|}%
     \multicolumn{2}{l}{\hspace{-6pt}\bfseries\fontseries{bc}\selectfont\color{darkgray} #1}\\[1ex]%
-    \hline%
+    %
     \endfirsthead%
     \multicolumn{2}{l}{\hspace{-6pt}\bfseries\fontseries{bc}\selectfont\color{darkgray} #1}\\[1ex]%
-    \hline%
+    %
     \endhead%
 }{%
     \end{longtabu*}%
@@ -382,10 +381,10 @@
     \par%
     \begin{longtabu*}spread 0pt [l]{|X[-1,r]|X[-1,l]|}%
     \multicolumn{2}{l}{\hspace{-6pt}\bfseries\fontseries{bc}\selectfont\color{darkgray} #1}\\[1ex]%
-    \hline%
+    %
     \endfirsthead%
     \multicolumn{2}{l}{\hspace{-6pt}\bfseries\fontseries{bc}\selectfont\color{darkgray} #1}\\[1ex]%
-    \hline%
+    %
     \endhead%
 }{%
     \end{longtabu*}%
@@ -398,10 +397,10 @@
     \par%
     \begin{longtabu*}spread 0pt [l]{|X[-1,r]|X[-1,l]|}%
     \multicolumn{2}{l}{\hspace{-6pt}\bfseries\fontseries{bc}\selectfont\color{darkgray} #1}\\[1ex]%
-    \hline%
+    %
     \endfirsthead%
     \multicolumn{2}{l}{\hspace{-6pt}\bfseries\fontseries{bc}\selectfont\color{darkgray} #1}\\[1ex]%
-    \hline%
+    %
     \endhead%
 }{%
     \end{longtabu*}%
@@ -414,10 +413,10 @@
     \par%
     \begin{longtabu*}spread 0pt [l]{|X[-1,r]|X[-1,l]|}%
     \multicolumn{2}{l}{\hspace{-6pt}\bfseries\fontseries{bc}\selectfont\color{darkgray} #1}\\[1ex]%
-    \hline%
+    %
     \endfirsthead%
     \multicolumn{2}{l}{\hspace{-6pt}\bfseries\fontseries{bc}\selectfont\color{darkgray} #1}\\[1ex]%
-    \hline%
+    %
     \endhead%
 }{%
     \end{longtabu*}%
@@ -560,7 +559,7 @@
                                     %~ {0.0ex}%
                                     %~ {0.0ex}%
                                      %~ {\raggedright\normalfont\normalsize\bfseries}}
-\newcommand\doxysubsubsection{\subsubsection}
+\newcommand\doxysubsubsection{\paragraph}
 \newcommand\doxyparagraph{\@startsection{paragraph}{4}{\z@}%
                                     {0.0ex}%
                                     {-1em}%
