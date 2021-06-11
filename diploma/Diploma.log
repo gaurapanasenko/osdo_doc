@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.6.3)  11 JUN 2021 03:18
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.6.3)  11 JUN 2021 10:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1475,75 +1475,75 @@ t line 125.
 \tf@toc=\write6
 \openout6 = `Diploma.toc'.
 
- [7] [8] [9] [10] [11]
-Underfull \hbox (badness 5022) in paragraph at lines 308--309
+ [7] [8] [9] [10] [11] [12]
+Underfull \hbox (badness 5022) in paragraph at lines 324--325
 []\TU/TimesNewRoman(1)/m/n/14.4 Фрактальні – при побудові поверхні використовує
 ться властивість
  []
 
-[12] [13] [14]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 354
+[13] [14] [15]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 370
 .
 
 (/home/big/tmp/software/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 354
+LaTeX Font Info:    Trying to load font information for U+msb on input line 370
 .
 
 (/home/big/tmp/software/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+wasy on input line 35
-4.
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 37
+0.
 
 (/home/big/tmp/software/texlive/2021/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 )
-[15]
+[16]
 File: bezier-curve.png Graphic file (type bmp)
 <bezier-curve.png>
- [16] [17] [18] [19]
+ [17] [18] [19] [20]
 File: bezier-surface.png Graphic file (type bmp)
 <bezier-surface.png>
- [20] [21]
-Underfull \hbox (badness 3849) in paragraph at lines 502--503
+ [21] [22]
+Underfull \hbox (badness 3849) in paragraph at lines 518--519
 []\TU/TimesNewRoman(1)/m/n/14.4 У даній роботі для розробки програмного продукт
 у обрано крос-
  []
 
-[22] [23] [24]
-Underfull \hbox (badness 5008) in paragraph at lines 552--553
+[23] [24] [25]
+Underfull \hbox (badness 5008) in paragraph at lines 568--569
 []\TU/TimesNewRoman(1)/m/n/14.4 Ресурси програми, які зберігаються у директорії
  “res” (скорочено
  []
 
-[25]
+[26]
 File: testing-teapot.png Graphic file (type bmp)
 <testing-teapot.png>
 File: beginning-interface.png Graphic file (type bmp)
 <beginning-interface.png>
 File: teapot-wireframe.png Graphic file (type bmp)
 <teapot-wireframe.png>
- [26]
+ [27]
 File: edit-car.png Graphic file (type bmp)
 <edit-car.png>
 File: car-view.png Graphic file (type bmp)
 <car-view.png>
- [27] [28] (./classBeziator.tex
+ [28] [29] (./classBeziator.tex
 File: classBeziator__inherit__graph.pdf Graphic file (type pdf)
 <use classBeziator__inherit__graph.pdf>
 File: classBeziator__coll__graph.pdf Graphic file (type pdf)
 <use classBeziator__coll__graph.pdf>
- [29] [30] [31]
+ [30] [31] [32]
 File: classBeziator_a9acccb22776bbbc76b9b886e96aa1d92_cgraph.pdf Graphic file (
 type pdf)
 <use classBeziator_a9acccb22776bbbc76b9b886e96aa1d92_cgraph.pdf>
- [32]
+ [33]
 File: classBeziator_a850797d7a346cd6f30405e21b0224a3e_cgraph.pdf Graphic file (
 type pdf)
 <use classBeziator_a850797d7a346cd6f30405e21b0224a3e_cgraph.pdf>
- [33]
+ [34]
 Underfull \hbox (badness 10000) detected at line 198
 [][][]
  []
@@ -1556,19 +1556,19 @@ Underfull \hbox (badness 10000) detected at line 219
 File: classBeziator_aeafb7d3607d064c7dfa7e1c4c6d698cb_cgraph.pdf Graphic file (
 type pdf)
 <use classBeziator_aeafb7d3607d064c7dfa7e1c4c6d698cb_cgraph.pdf>
-[34]
+[35]
 Underfull \hbox (badness 10000) detected at line 262
 [][][]
  []
 
-[35]) (./classBijective.tex
+[36]) (./classBijective.tex
 File: classBijective__inherit__graph.pdf Graphic file (type pdf)
 <use classBijective__inherit__graph.pdf>
- [36] [37] [38] [39] [40]) (./classModel.tex
+ [37] [38] [39] [40] [41]) (./classModel.tex
 File: classModel__inherit__graph.pdf Graphic file (type pdf)
 <use classModel__inherit__graph.pdf>
 
-[41] [42] [43]
+[42] [43] [44]
 Underfull \hbox (badness 10000) detected at line 131
 [][][]
  []
@@ -1581,12 +1581,12 @@ Underfull \hbox (badness 1014) in paragraph at lines 5--7
 
 File: structContext__coll__graph.pdf Graphic file (type pdf)
 <use structContext__coll__graph.pdf>
-[44] [45]
+[45] [46]
 Underfull \hbox (badness 10000) detected at line 123
 [][][]
  []
 
-[46]
+[47]
 Underfull \hbox (badness 10000) detected at line 143
 [][][]
  []
@@ -1597,20 +1597,20 @@ type pdf)
 File: structContext_ae9498eceb6dd3257ac2e5e8fc904370c_cgraph.pdf Graphic file (
 type pdf)
 <use structContext_ae9498eceb6dd3257ac2e5e8fc904370c_cgraph.pdf>
-[47]
+[48]
 Underfull \hbox (badness 10000) detected at line 193
 [][][]
  []
 
-[48]) (./structScene.tex
+[49]) (./structScene.tex
 File: structScene__coll__graph.pdf Graphic file (type pdf)
 <use structScene__coll__graph.pdf>
- [49] [50]
+ [50] [51]
 Underfull \hbox (badness 10000) detected at line 84
 [][][]
  []
 
-) (./structVertex.tex [51]) (./beziator_8h.tex
+) (./structVertex.tex [52]) (./beziator_8h.tex
 File: beziator_8h__incl.pdf Graphic file (type pdf)
 <use beziator_8h__incl.pdf>
 
@@ -1620,7 +1620,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--19
 
 File: beziator_8h__dep__incl.pdf Graphic file (type pdf)
 <use beziator_8h__dep__incl.pdf>
-[52] [53]) (./bijective_8h.tex
+[53] [54]) (./bijective_8h.tex
 File: bijective_8h__incl.pdf Graphic file (type pdf)
 <use bijective_8h__incl.pdf>
 
@@ -1630,7 +1630,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--17
 
 File: bijective_8h__dep__incl.pdf Graphic file (type pdf)
 <use bijective_8h__dep__incl.pdf>
-[54] [55]) (./context_8h.tex
+[55] [56]) (./context_8h.tex
 File: context_8h__incl.pdf Graphic file (type pdf)
 <use context_8h__incl.pdf>
 
@@ -1640,10 +1640,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--21
 
 File: context_8h__dep__incl.pdf Graphic file (type pdf)
 <use context_8h__dep__incl.pdf>
-[56]) (./context_8cpp.tex
+[57]) (./context_8cpp.tex
 File: context_8cpp__incl.pdf Graphic file (type pdf)
 <use context_8cpp__incl.pdf>
-) (./scene_8h.tex [57]
+) (./scene_8h.tex [58]
 File: scene_8h__incl.pdf Graphic file (type pdf)
 <use scene_8h__incl.pdf>
 
@@ -1653,10 +1653,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--19
 
 File: scene_8h__dep__incl.pdf Graphic file (type pdf)
 <use scene_8h__dep__incl.pdf>
-[58]) (./scene_8cpp.tex
+[59]) (./scene_8cpp.tex
 File: scene_8cpp__incl.pdf Graphic file (type pdf)
 <use scene_8cpp__incl.pdf>
-) (./model_8h.tex [59]
+) (./model_8h.tex [60]
 File: model_8h__incl.pdf Graphic file (type pdf)
 <use model_8h__incl.pdf>
 
@@ -1666,10 +1666,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--18
 
 File: model_8h__dep__incl.pdf Graphic file (type pdf)
 <use model_8h__dep__incl.pdf>
-[60]) (./model_8cpp.tex
+[61]) (./model_8cpp.tex
 File: model_8cpp__incl.pdf Graphic file (type pdf)
 <use model_8cpp__incl.pdf>
- [61]) (./vertex_8h.tex
+ [62]) (./vertex_8h.tex
 File: vertex_8h__incl.pdf Graphic file (type pdf)
 <use vertex_8h__incl.pdf>
 
@@ -1679,13 +1679,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--18
 
 File: vertex_8h__dep__incl.pdf Graphic file (type pdf)
 <use vertex_8h__dep__incl.pdf>
-[62]) [63] [64] [65]
-Underfull \hbox (badness 10000) in paragraph at lines 678--679
+[63]) [64] [65] [66]
+Underfull \hbox (badness 10000) in paragraph at lines 694--695
 []\TU/TimesNewRoman(1)/bc/n/14.4 https://www.visualizationlibrary.org/docs/2.1/
 html/index.html – Visualization
  []
 
-[66] [67] (./beziator_8h_source.tex
+[67] [68] (./beziator_8h_source.tex
 Missing character: There is no К (U+041A) in font [lmmono8-regular]:!
 Missing character: There is no л (U+043B) in font [lmmono8-regular]:!
 Missing character: There is no а (U+0430) in font [lmmono8-regular]:!
@@ -2323,7 +2323,7 @@ Missing character: There is no д (U+0434) in font [lmmono8-regular]:!
 Missing character: There is no е (U+0435) in font [lmmono8-regular]:!
 Missing character: There is no л (U+043B) in font [lmmono8-regular]:!
 Missing character: There is no ь (U+044C) in font [lmmono8-regular]:!
- [68]
+ [69]
 Missing character: There is no В (U+0412) in font [lmmono8-regular]:!
 Missing character: There is no і (U+0456) in font [lmmono8-regular]:!
 Missing character: There is no д (U+0434) in font [lmmono8-regular]:!
@@ -2921,9 +2921,9 @@ Missing character: There is no п (U+043F) in font [lmmono8-regular]:!
 Missing character: There is no о (U+043E) in font [lmmono8-regular]:!
 Missing character: There is no л (U+043B) in font [lmmono8-regular]:!
 Missing character: There is no е (U+0435) in font [lmmono8-regular]:!
-) (./bezier_8frag_source.tex [69])
-(./bezier_8geom_source.tex) (./bezier_8tesc_source.tex [70])
-(./bezier_8tese_source.tex [71]) (./bezier_8vert_source.tex)
+) (./bezier_8frag_source.tex [70])
+(./bezier_8geom_source.tex) (./bezier_8tesc_source.tex [71])
+(./bezier_8tese_source.tex [72]) (./bezier_8vert_source.tex)
 (./bijective_8h_source.tex
 Missing character: There is no І (U+0406) in font [lmmono8-regular]:!
 Missing character: There is no н (U+043D) in font [lmmono8-regular]:!
@@ -3113,7 +3113,7 @@ Missing character: There is no є (U+0454) in font [lmmono8-regular]:!
 Missing character: There is no к (U+043A) in font [lmmono8-regular]:!
 Missing character: There is no т (U+0442) in font [lmmono8-regular]:!
 Missing character: There is no а (U+0430) in font [lmmono8-regular]:!
- [72]
+ [73]
 Missing character: There is no З (U+0417) in font [lmmono8-regular]:!
 Missing character: There is no а (U+0430) in font [lmmono8-regular]:!
 Missing character: There is no д (U+0434) in font [lmmono8-regular]:!
@@ -3931,7 +3931,7 @@ Missing character: There is no у (U+0443) in font [lmmono8-regular]:!
 Missing character: There is no р (U+0440) in font [lmmono8-regular]:!
 Missing character: There is no с (U+0441) in font [lmmono8-regular]:!
 Missing character: There is no и (U+0438) in font [lmmono8-regular]:!
- [73]
+ [74]
 Missing character: There is no К (U+041A) in font [lmmono8-regular]:!
 Missing character: There is no о (U+043E) in font [lmmono8-regular]:!
 Missing character: There is no н (U+043D) in font [lmmono8-regular]:!
@@ -4342,7 +4342,7 @@ Missing character: There is no д (U+0434) in font [lmmono8-regular]:!
 Missing character: There is no е (U+0435) in font [lmmono8-regular]:!
 Missing character: There is no р (U+0440) in font [lmmono8-regular]:!
 Missing character: There is no у (U+0443) in font [lmmono8-regular]:!
- [74]
+ [75]
 Missing character: There is no З (U+0417) in font [lmmono8-regular]:!
 Missing character: There is no а (U+0430) in font [lmmono8-regular]:!
 Missing character: There is no в (U+0432) in font [lmmono8-regular]:!
@@ -4585,7 +4585,7 @@ Missing character: There is no ц (U+0446) in font [lmmono8-regular]:!
 Missing character: There is no е (U+0435) in font [lmmono8-regular]:!
 Missing character: There is no н (U+043D) in font [lmmono8-regular]:!
 Missing character: There is no у (U+0443) in font [lmmono8-regular]:!
- [75]
+ [76]
 Missing character: There is no з (U+0437) in font [lmmono8-regular]:!
 Missing character: There is no а (U+0430) in font [lmmono8-regular]:!
 Missing character: There is no г (U+0433) in font [lmmono8-regular]:!
@@ -4956,7 +4956,7 @@ Missing character: There is no е (U+0435) in font [lmmono8-regular]:!
 Missing character: There is no л (U+043B) in font [lmmono8-regular]:!
 Missing character: There is no і (U+0456) in font [lmmono8-regular]:!
 ) (./model_8cpp_source.tex
-[76]) (./vertex_8h_source.tex
+[77]) (./vertex_8h_source.tex
 Missing character: There is no З (U+0417) in font [lmmono8-regular]:!
 Missing character: There is no а (U+0430) in font [lmmono8-regular]:!
 Missing character: There is no д (U+0434) in font [lmmono8-regular]:!
@@ -5091,7 +5091,7 @@ Missing character: There is no т (U+0442) in font [lmmono8-regular]:!
 Missing character: There is no у (U+0443) in font [lmmono8-regular]:!
 Missing character: There is no р (U+0440) in font [lmmono8-regular]:!
 Missing character: There is no і (U+0456) in font [lmmono8-regular]:!
-) [77] (./Diploma.aux)
+) [78] (./Diploma.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -5099,15 +5099,15 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Diploma.out' has not changed.
-(rerunfilecheck)             Checksum: 48A93E645A8C65F18661D8E18A31A73F;8135.
+(rerunfilecheck)             Checksum: 7E72605582D5C4F28E1B9B3F698FD600;8103.
  ) 
 Here is how much of TeX's memory you used:
  28890 strings out of 476490
  549044 string characters out of 5789965
- 945185 words of memory out of 5000000
+ 945146 words of memory out of 5000000
  48627 multiletter control sequences out of 15000+600000
  411859 words of font info for 99 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  101i,17n,117p,811b,672s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Diploma.pdf (77 pages).
+Output written on Diploma.pdf (78 pages).
