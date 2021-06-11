@@ -8,6 +8,7 @@
 \contentsline {subsubsection}{\numberline {1.1.1}Математичний опис моделей поверхонь та об’єктів}{11}{subsubsection.1.1.1}%
 \contentsline {subsubsection}{\numberline {1.1.2}Опис розташування об'єктів у сцені}{12}{subsubsection.1.1.2}%
 \contentsline {subsection}{\numberline {1.2}Бібліотека Visualization Library}{13}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Програмні інтерфейси для роботи з моделями}{14}{subsection.1.3}%
 \contentsline {section}{\numberline {2}Дослідження математичних моделей складних об'єктів}{14}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Сплайни і сплайн-інтерполяція}{15}{subsection.2.1}%
 \contentsline {subsubsection}{\numberline {2.1.1}Крива Безьє}{16}{subsubsection.2.1.1}%
@@ -119,6 +120,6 @@
 \contentsline {subsection}{\numberline {4.15}Файл osdo/vertex.h}{62}{subsection.4.15}%
 \contentsline {paragraph}{Детальний опис}{63}{paragraph*.119}%
 \contentsline {section}{ВИСНОВКИ}{64}{paragraph*.119}%
-\contentsline {section}{СПИСОК ВИКОРИСТАНОЇ ЛІТЕРАТУРИ}{65}{paragraph*.119}%
-\contentsline {section}{Додаток}{66}{rtaskno.1}%
+\contentsline {section}{СПИСОК ВИКОРИСТАНОЇ ЛІТЕРАТУРИ}{66}{paragraph*.119}%
+\contentsline {section}{Додаток}{68}{rtaskno.1}%
 \contentsfinish 

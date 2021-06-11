@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.6.3)  11 JUN 2021 00:58
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.6.3)  11 JUN 2021 03:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1463,14 +1463,14 @@ type pdf)
 <use Завдання_на_дипломну_роботу_дневники_ПА-17-2_Панасенко.pdf, page 2>
  [3] [4] [5]
 (./Diploma.toc
-Underfull \hbox (badness 10000) in paragraph at lines 4--124
+Underfull \hbox (badness 10000) in paragraph at lines 4--125
  
  []
 
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(1)/m/sl' in size <14.4> not av
 ailable
 (Font)              Font shape `TU/TimesNewRoman(1)/m/it' tried instead on inpu
-t line 124.
+t line 125.
 [6])
 \tf@toc=\write6
 \openout6 = `Diploma.toc'.
@@ -1482,20 +1482,20 @@ Underfull \hbox (badness 5022) in paragraph at lines 308--309
  []
 
 [12] [13] [14]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 348
+LaTeX Font Info:    Trying to load font information for U+msa on input line 354
 .
 
 (/home/big/tmp/software/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 348
+LaTeX Font Info:    Trying to load font information for U+msb on input line 354
 .
 
 (/home/big/tmp/software/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+wasy on input line 34
-8.
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 35
+4.
 
 (/home/big/tmp/software/texlive/2021/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
@@ -1507,13 +1507,13 @@ File: bezier-curve.png Graphic file (type bmp)
 File: bezier-surface.png Graphic file (type bmp)
 <bezier-surface.png>
  [20] [21]
-Underfull \hbox (badness 3849) in paragraph at lines 496--497
+Underfull \hbox (badness 3849) in paragraph at lines 502--503
 []\TU/TimesNewRoman(1)/m/n/14.4 У даній роботі для розробки програмного продукт
 у обрано крос-
  []
 
 [22] [23] [24]
-Underfull \hbox (badness 5008) in paragraph at lines 546--547
+Underfull \hbox (badness 5008) in paragraph at lines 552--553
 []\TU/TimesNewRoman(1)/m/n/14.4 Ресурси програми, які зберігаються у директорії
  “res” (скорочено
  []
@@ -1679,7 +1679,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--18
 
 File: vertex_8h__dep__incl.pdf Graphic file (type pdf)
 <use vertex_8h__dep__incl.pdf>
-[62]) [63] [64] [65] (./beziator_8h_source.tex
+[62]) [63] [64] [65]
+Underfull \hbox (badness 10000) in paragraph at lines 678--679
+[]\TU/TimesNewRoman(1)/bc/n/14.4 https://www.visualizationlibrary.org/docs/2.1/
+html/index.html – Visualization
+ []
+
+[66] [67] (./beziator_8h_source.tex
 Missing character: There is no К (U+041A) in font [lmmono8-regular]:!
 Missing character: There is no л (U+043B) in font [lmmono8-regular]:!
 Missing character: There is no а (U+0430) in font [lmmono8-regular]:!
@@ -2317,7 +2323,7 @@ Missing character: There is no д (U+0434) in font [lmmono8-regular]:!
 Missing character: There is no е (U+0435) in font [lmmono8-regular]:!
 Missing character: There is no л (U+043B) in font [lmmono8-regular]:!
 Missing character: There is no ь (U+044C) in font [lmmono8-regular]:!
- [66]
+ [68]
 Missing character: There is no В (U+0412) in font [lmmono8-regular]:!
 Missing character: There is no і (U+0456) in font [lmmono8-regular]:!
 Missing character: There is no д (U+0434) in font [lmmono8-regular]:!
@@ -2915,9 +2921,9 @@ Missing character: There is no п (U+043F) in font [lmmono8-regular]:!
 Missing character: There is no о (U+043E) in font [lmmono8-regular]:!
 Missing character: There is no л (U+043B) in font [lmmono8-regular]:!
 Missing character: There is no е (U+0435) in font [lmmono8-regular]:!
-) (./bezier_8frag_source.tex [67]) (./bezier_8geom_source.tex) (./bezier_8tesc_
-source.tex [68])
-(./bezier_8tese_source.tex [69]) (./bezier_8vert_source.tex)
+) (./bezier_8frag_source.tex [69])
+(./bezier_8geom_source.tex) (./bezier_8tesc_source.tex [70])
+(./bezier_8tese_source.tex [71]) (./bezier_8vert_source.tex)
 (./bijective_8h_source.tex
 Missing character: There is no І (U+0406) in font [lmmono8-regular]:!
 Missing character: There is no н (U+043D) in font [lmmono8-regular]:!
@@ -3107,7 +3113,7 @@ Missing character: There is no є (U+0454) in font [lmmono8-regular]:!
 Missing character: There is no к (U+043A) in font [lmmono8-regular]:!
 Missing character: There is no т (U+0442) in font [lmmono8-regular]:!
 Missing character: There is no а (U+0430) in font [lmmono8-regular]:!
- [70]
+ [72]
 Missing character: There is no З (U+0417) in font [lmmono8-regular]:!
 Missing character: There is no а (U+0430) in font [lmmono8-regular]:!
 Missing character: There is no д (U+0434) in font [lmmono8-regular]:!
@@ -3925,7 +3931,7 @@ Missing character: There is no у (U+0443) in font [lmmono8-regular]:!
 Missing character: There is no р (U+0440) in font [lmmono8-regular]:!
 Missing character: There is no с (U+0441) in font [lmmono8-regular]:!
 Missing character: There is no и (U+0438) in font [lmmono8-regular]:!
- [71]
+ [73]
 Missing character: There is no К (U+041A) in font [lmmono8-regular]:!
 Missing character: There is no о (U+043E) in font [lmmono8-regular]:!
 Missing character: There is no н (U+043D) in font [lmmono8-regular]:!
@@ -4336,7 +4342,7 @@ Missing character: There is no д (U+0434) in font [lmmono8-regular]:!
 Missing character: There is no е (U+0435) in font [lmmono8-regular]:!
 Missing character: There is no р (U+0440) in font [lmmono8-regular]:!
 Missing character: There is no у (U+0443) in font [lmmono8-regular]:!
- [72]
+ [74]
 Missing character: There is no З (U+0417) in font [lmmono8-regular]:!
 Missing character: There is no а (U+0430) in font [lmmono8-regular]:!
 Missing character: There is no в (U+0432) in font [lmmono8-regular]:!
@@ -4579,7 +4585,7 @@ Missing character: There is no ц (U+0446) in font [lmmono8-regular]:!
 Missing character: There is no е (U+0435) in font [lmmono8-regular]:!
 Missing character: There is no н (U+043D) in font [lmmono8-regular]:!
 Missing character: There is no у (U+0443) in font [lmmono8-regular]:!
- [73]
+ [75]
 Missing character: There is no з (U+0437) in font [lmmono8-regular]:!
 Missing character: There is no а (U+0430) in font [lmmono8-regular]:!
 Missing character: There is no г (U+0433) in font [lmmono8-regular]:!
@@ -4950,7 +4956,7 @@ Missing character: There is no е (U+0435) in font [lmmono8-regular]:!
 Missing character: There is no л (U+043B) in font [lmmono8-regular]:!
 Missing character: There is no і (U+0456) in font [lmmono8-regular]:!
 ) (./model_8cpp_source.tex
-[74]) (./vertex_8h_source.tex
+[76]) (./vertex_8h_source.tex
 Missing character: There is no З (U+0417) in font [lmmono8-regular]:!
 Missing character: There is no а (U+0430) in font [lmmono8-regular]:!
 Missing character: There is no д (U+0434) in font [lmmono8-regular]:!
@@ -5085,7 +5091,7 @@ Missing character: There is no т (U+0442) in font [lmmono8-regular]:!
 Missing character: There is no у (U+0443) in font [lmmono8-regular]:!
 Missing character: There is no р (U+0440) in font [lmmono8-regular]:!
 Missing character: There is no і (U+0456) in font [lmmono8-regular]:!
-) [75] (./Diploma.aux)
+) [77] (./Diploma.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -5093,15 +5099,15 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Diploma.out' has not changed.
-(rerunfilecheck)             Checksum: 2E4DDDF0B4C2F2CA6B69108BFA64DFF9;7741.
+(rerunfilecheck)             Checksum: 48A93E645A8C65F18661D8E18A31A73F;8135.
  ) 
 Here is how much of TeX's memory you used:
- 28886 strings out of 476490
- 548978 string characters out of 5789965
- 944632 words of memory out of 5000000
- 48623 multiletter control sequences out of 15000+600000
+ 28890 strings out of 476490
+ 549044 string characters out of 5789965
+ 945185 words of memory out of 5000000
+ 48627 multiletter control sequences out of 15000+600000
  411859 words of font info for 99 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  101i,17n,117p,811b,672s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Diploma.pdf (75 pages).
+Output written on Diploma.pdf (77 pages).
